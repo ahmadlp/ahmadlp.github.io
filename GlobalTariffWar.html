@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta property="og:title" content="Global Tariff War Risk Heat Map">
+    <meta property="og:description" content="Interactive visualization of GDP losses from global trade conflicts">
+    <meta property="og:type" content="website">
+    <meta name="author" content="Ahmad Lashkaripour">
+    <title>Global Tariff War Risk Heat Map</title>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v4.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Georgia:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #121212;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        header {
+            padding: 20px 0 15px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .title-group {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 700;
+            line-height: 1.1;
+            color: #121212;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: clamp(13px, 1.5vw, 15px);
+            color: #666666;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .header-stats {
+            display: flex;
+            gap: 25px;
+            font-size: 13px;
+        }
+
+        .stat-item {
+            text-align: right;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #121212;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #666666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+        }
+
+        .controls-bar {
+            background: #f7f7f7;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .control-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333333;
+            white-space: nowrap;
+        }
+
+        select {
+            padding: 8px 32px 8px 12px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 16px;
+            color: #121212;
+            background-color: #ffffff;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8.825L1.175 4 2.238 2.938 6 6.7l3.763-3.762L10.825 4z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            min-width: 200px;
+            touch-action: manipulation;
+        }
+
+        select:hover { border-color: #999999; }
+        select:focus {
+            outline: none;
+            border-color: #121212;
+            box-shadow: 0 0 0 2px rgba(18, 18, 18, 0.1);
+        }
+
+        .map-wrapper {
+            position: relative;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            touch-action: pan-x pan-y;
+        }
+
+        #map {
+            width: 100%;
+            height: auto;
+            touch-action: none;
+        }
+
+        #map svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .legend {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .legend-title {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .legend-scale {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 16px;
+            border-radius: 2px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+        }
+
+        .legend-label {
+            font-size: 12px;
+            color: #333333;
+            font-weight: 500;
+        }
+
+        .tooltip {
+            position: absolute;
+            padding: 10px 14px;
+            background: rgba(18, 18, 18, 0.95);
+            color: #ffffff;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.5;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            max-width: 250px;
+        }
+
+        .tooltip-country {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .tooltip-data {
+            font-size: 12px;
+            opacity: 0.95;
+        }
+
+        .country {
+            stroke: #ffffff;
+            stroke-width: 0.5;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .country:hover {
+            stroke: #333333;
+            stroke-width: 1.5;
+            filter: brightness(0.93);
+        }
+
+        .country.no-data {
+            fill: #f0f0f0;
+            stroke: #e0e0e0;
+            cursor: default;
+        }
+
+        .country.no-data:hover {
+            stroke: #e0e0e0;
+            stroke-width: 0.5;
+            filter: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0 30px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .citation {
+            font-size: 13px;
+            color: #666666;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 15px;
+        }
+
+        .citation a {
+            color: #121212;
+            text-decoration: none;
+            border-bottom: 1px solid #d0d0d0;
+            transition: border-color 0.2s;
+        }
+
+        .citation a:hover {
+            border-bottom-color: #121212;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #121212;
+            color: #ffffff;
+            border: 2px solid #121212;
+        }
+
+        .btn-primary:hover {
+            background: #333333;
+            border-color: #333333;
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+            color: #121212;
+            border: 2px solid #121212;
+        }
+
+        .btn-secondary:hover {
+            background: #121212;
+            color: #ffffff;
+        }
+
+        .copyright {
+            font-size: 11px;
+            color: #999999;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666666;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #121212;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+            header { padding: 15px 0 12px; }
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            h1 {
+                font-size: clamp(20px, 5vw, 28px);
+                margin-bottom: 6px;
+            }
+            .subtitle {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            .header-stats {
+                width: 100%;
+                justify-content: space-between;
+                gap: 15px;
+            }
+            .stat-value { font-size: 18px; }
+            .stat-label { font-size: 10px; }
+            .controls-bar {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 12px;
+                gap: 12px;
+            }
+            .control-group {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 6px;
+            }
+            .control-label { font-size: 12px; }
+            select {
+                width: 100%;
+                min-width: 0;
+                font-size: 16px;
+                padding: 10px 32px 10px 12px;
+            }
+            .map-wrapper {
+                padding: 12px;
+                border-radius: 4px;
+            }
+            #map { min-height: 300px; }
+            .legend {
+                position: static;
+                margin-top: 12px;
+                width: 100%;
+                max-width: none;
+            }
+            .legend-title { font-size: 11px; }
+            .legend-label { font-size: 11px; }
+            .action-buttons {
+                flex-direction: column;
+                width: 100%;
+                padding: 0;
+                gap: 10px;
+            }
+            .btn {
+                width: 100%;
+                text-align: center;
+                font-size: 14px;
+                padding: 12px 24px;
+                min-height: 44px;
+            }
+            .citation {
+                font-size: 12px;
+                padding: 0 5px;
+            }
+            footer { padding: 15px 0 25px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 22px; }
+            .subtitle { font-size: 13px; }
+            .map-wrapper { padding: 10px; }
+            .controls-bar { padding: 10px; }
+        }
+
+        @media (max-width: 896px) and (orientation: landscape) {
+            #map { min-height: 250px; }
+            .header-stats { flex-wrap: nowrap; }
+        }
+
+        @media print {
+            .controls-bar, .action-buttons { display: none; }
+            .map-wrapper {
+                box-shadow: none;
+                border: 1px solid #000000;
+            }
+            .legend { background: white; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media (prefers-contrast: high) {
+            .country { stroke-width: 1; }
+            select { border-width: 2px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="title-group">
+                    <h1>The Global Cost of Trade Wars</h1>
+                    <p class="subtitle">Interactive heat map showing projected GDP losses from a global tariff war</p>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="avgLoss">—</div>
+                        <div class="stat-label">Avg Loss</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="maxLoss">—</div>
+                        <div class="stat-label">Max Loss</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="countriesAffected">—</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls-bar">
+            <div class="control-group">
+                <label class="control-label" for="modelSelect">Model:</label>
+                <select id="modelSelect" aria-label="Select economic model">
+                    <option value="integrated model">Integrated Model</option>
+                    <option value="baseline model">Baseline Model</option>
+                    <option value="distorted model">Model with Profit-Shifting</option>
+                    <option value="IO model">Model with Supply Chain Effects</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="yearSelect">Year:</label>
+                <select id="yearSelect" aria-label="Select trade data year">
+                    <!-- Populated by JavaScript -->
+                </select>
+            </div>
+        </div>
+
+        <div id="loadingMessage" class="loading">
+            <div class="spinner"></div>
+            <p>Loading data...</p>
+        </div>
+
+        <div class="map-wrapper" style="display: none;">
+            <div id="map"></div>
+            <div class="legend">
+                <div class="legend-title">GDP Loss (%)</div>
+                <div class="legend-scale" id="legendScale">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="action-buttons">
+                <a href="Tariff_War_Lashkaripour.pdf" class="btn btn-primary" target="_blank" rel="noopener">Read Full Paper</a>
+                <a href="Research.html" class="btn btn-secondary" target="_blank" rel="noopener">More Research</a>
+            </div>
+
+            <div class="citation">
+                <strong>Source:</strong> Lashkaripour, A. (2021).
+                "<a href="https://doi.org/10.1016/j.jinteco.2020.103419" target="_blank" rel="noopener">The Cost of Global Tariff War: A Sufficient Statistics Approach</a>,"
+                <em>Journal of International Economics</em>, 133, 103419.
+            </div>
+
+            <div class="copyright">
+                © 2025 Ahmad Lashkaripour. All Rights Reserved.
+            </div>
+        </footer>
+    </div>
+
+    <div class="tooltip"></div>
+
+    <script>
+        // Global variables
+        let rawData = [];
+        let worldData = null;
+        let selectedModel = 'integrated model';
+        let selectedYear = 2014;
+        let currentData = [];
+
+        // Configuration
+        const config = {
+            colorScale: d3.scaleThreshold()
+                .domain([0, 1, 3, 10, 20, 40])
+                .range(['#FFFFFF', '#FFE5D9', '#FF8C69', '#D64545', '#A61C1C', '#4A0000']),
+            legendItems: [
+                { threshold: 40, color: '#4A0000', label: '40%+' },
+                { threshold: 20, color: '#A61C1C', label: '20%' },
+                { threshold: 10, color: '#D64545', label: '10%' },
+                { threshold: 3, color: '#FF8C69', label: '3%' },
+                { threshold: 1, color: '#FFE5D9', label: '1%' },
+                { threshold: 0, color: '#FFFFFF', label: '0%' }
+            ]
+        };
+
+        // Load data files (uncompressed version - works on all servers)
+        async function loadData() {
+            try {
+                console.log('Attempting to load data files...');
+
+                const [welfareResponse, worldResponse] = await Promise.all([
+                    fetch('data/welfare_data.json'),
+                    fetch('data/world.json')
+                ]);
+
+                console.log('Welfare response status:', welfareResponse.status);
+                console.log('World response status:', worldResponse.status);
+
+                if (!welfareResponse.ok) {
+                    throw new Error(`Failed to load welfare data: ${welfareResponse.status} ${welfareResponse.statusText}`);
+                }
+                if (!worldResponse.ok) {
+                    throw new Error(`Failed to load world data: ${worldResponse.status} ${worldResponse.statusText}`);
+                }
+
+                console.log('Parsing JSON...');
+                rawData = await welfareResponse.json();
+                worldData = await worldResponse.json();
+
+                console.log('Data loaded successfully:', rawData.length, 'records,', worldData.features.length, 'countries');
+
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.querySelector('.map-wrapper').style.display = 'block';
+
+                init();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('loadingMessage').innerHTML = `
+                    <p style="color: #d32f2f; font-weight: bold;">Error loading data</p>
+                    <p style="color: #666; font-size: 14px; margin-top: 10px;">${error.message}</p>
+                    <p style="color: #666; font-size: 13px; margin-top: 10px;">
+                        Check browser console (F12) for details.<br>
+                        Make sure data files are uploaded to: data/welfare_data.json and data/world.json
+                    </p>
+                `;
+            }
+        }
+
+        function init() {
+            populateYearDropdown();
+            setupEventListeners();
+            updateVisualization();
+            createLegend();
+        }
+
+        function populateYearDropdown() {
+            const years = [...new Set(rawData.map(d => d.Year))].sort((a, b) => a - b);
+            const yearSelect = document.getElementById('yearSelect');
+
+            years.forEach(year => {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = `${year} trade levels`;
+                if (year === 2014) option.selected = true;
+                yearSelect.appendChild(option);
+            });
+        }
+
+        function setupEventListeners() {
+            document.getElementById('modelSelect').addEventListener('change', (e) => {
+                selectedModel = e.target.value;
+                updateVisualization();
+            });
+
+            document.getElementById('yearSelect').addEventListener('change', (e) => {
+                selectedYear = parseInt(e.target.value);
+                updateVisualization();
+            });
+        }
+
+        function updateVisualization() {
+            currentData = rawData.filter(d =>
+                d.ModelSpec === selectedModel &&
+                d.Year === selectedYear
+            );
+            updateStats();
+            drawMap();
+        }
+
+        function updateStats() {
+            const losses = currentData.map(d => Math.abs(d.Percent_Change));
+            if (losses.length > 0) {
+                const avgLoss = losses.reduce((a, b) => a + b, 0) / losses.length;
+                const maxLoss = Math.max(...losses);
+                document.getElementById('avgLoss').textContent = avgLoss.toFixed(2) + '%';
+                document.getElementById('maxLoss').textContent = maxLoss.toFixed(2) + '%';
+                document.getElementById('countriesAffected').textContent = currentData.length;
+            }
+        }
+
+        function createLegend() {
+            const legendScale = document.getElementById('legendScale');
+            config.legendItems.forEach(item => {
+                const legendItem = document.createElement('div');
+                legendItem.className = 'legend-item';
+                const colorBox = document.createElement('div');
+                colorBox.className = 'legend-color';
+                colorBox.style.backgroundColor = item.color;
+                const label = document.createElement('div');
+                label.className = 'legend-label';
+                label.textContent = item.label;
+                legendItem.appendChild(colorBox);
+                legendItem.appendChild(label);
+                legendScale.appendChild(legendItem);
+            });
+        }
+
+        function getColor(value) {
+            return config.colorScale(Math.abs(value));
+        }
+
+        function drawMap() {
+            const mapContainer = document.getElementById('map');
+            mapContainer.innerHTML = '';
+
+            const containerWidth = mapContainer.clientWidth || window.innerWidth - 40;
+            const width = Math.min(containerWidth, 1000);
+            const isMobile = window.innerWidth <= 768;
+            const height = isMobile ? Math.min(width * 0.6, 400) : Math.min(width * 0.55, 650);
+
+            const svg = d3.select('#map')
+                .append('svg')
+                .attr('width', '100%')
+                .attr('height', height)
+                .attr('viewBox', `0 0 ${width} ${height}`)
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .style('display', 'block');
+
+            const g = svg.append('g');
+            const projection = d3.geoNaturalEarth1()
+                .scale(width / 5.2)
+                .translate([width / 2.2, height / 2])
+                .rotate([-30, 0, 0]);
+
+            const path = d3.geoPath().projection(projection);
+            const tooltip = d3.select('.tooltip');
+
+            const countries = g.selectAll('path')
+                .data(worldData.features)
+                .enter()
+                .append('path')
+                .attr('class', d => {
+                    const countryData = currentData.find(item => item.Country === d.properties.ISO_A3);
+                    return countryData ? 'country' : 'country no-data';
+                })
+                .attr('d', path)
+                .attr('fill', d => {
+                    const countryData = currentData.find(item => item.Country === d.properties.ISO_A3);
+                    return countryData ? getColor(countryData.Percent_Change) : '#f0f0f0';
+                });
+
+            function showTooltip(event, d) {
+                const countryData = currentData.find(item => item.Country === d.properties.ISO_A3);
+                if (countryData) {
+                    const isTouchDevice = 'ontouchstart' in window;
+                    const x = isTouchDevice ? event.touches?.[0]?.pageX || event.pageX : event.pageX;
+                    const y = isTouchDevice ? event.touches?.[0]?.pageY || event.pageY : event.pageY;
+
+                    tooltip.style('opacity', 1)
+                        .html(`
+                            <div class="tooltip-country">${d.properties.ADMIN}</div>
+                            <div class="tooltip-data">
+                                GDP Loss: <strong>${Math.abs(countryData.Percent_Change).toFixed(2)}%</strong><br>
+                                Value: <strong>$${(Math.abs(countryData.Value_Change) / 1000).toFixed(2)}B</strong>
+                            </div>
+                        `)
+                        .style('left', (x + 15) + 'px')
+                        .style('top', (y - 10) + 'px');
+                }
+            }
+
+            function moveTooltip(event) {
+                const isTouchDevice = 'ontouchstart' in window;
+                const x = isTouchDevice ? event.touches?.[0]?.pageX || event.pageX : event.pageX;
+                const y = isTouchDevice ? event.touches?.[0]?.pageY || event.pageY : event.pageY;
+                tooltip.style('left', (x + 15) + 'px').style('top', (y - 10) + 'px');
+            }
+
+            function hideTooltip() {
+                tooltip.style('opacity', 0);
+            }
+
+            countries
+                .on('mouseover', showTooltip)
+                .on('mousemove', moveTooltip)
+                .on('mouseout', hideTooltip);
+
+            if ('ontouchstart' in window) {
+                countries
+                    .on('touchstart', function(event, d) {
+                        event.preventDefault();
+                        showTooltip(event, d);
+                    })
+                    .on('touchmove', function(event) {
+                        event.preventDefault();
+                        moveTooltip(event);
+                    })
+                    .on('touchend', function() {
+                        setTimeout(hideTooltip, 2000);
+                    });
+            }
+
+            const zoom = d3.zoom()
+                .scaleExtent([1, 8])
+                .filter(function(event) {
+                    if (window.innerWidth <= 768) {
+                        return event.type === 'wheel' || (event.touches && event.touches.length > 1);
+                    }
+                    return true;
+                })
+                .on('zoom', (event) => {
+                    g.attr('transform', event.transform);
+                });
+
+            svg.call(zoom);
+
+            if ('ontouchstart' in window) {
+                let lastTap = 0;
+                svg.on('touchend', function(event) {
+                    const currentTime = new Date().getTime();
+                    const tapLength = currentTime - lastTap;
+                    if (tapLength < 300 && tapLength > 0) {
+                        event.preventDefault();
+                        svg.transition().duration(300).call(zoom.transform, d3.zoomIdentity);
+                    }
+                    lastTap = currentTime;
+                });
+            }
+        }
+
+        let resizeTimer;
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            clearTimeout(resizeTimeout);
+            resizeTimer = setTimeout(() => { drawMap(); }, 150);
+            resizeTimeout = setTimeout(() => { drawMap(); }, 500);
+        });
+
+        document.addEventListener('touchstart', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        }, { passive: false });
+
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+</html>
