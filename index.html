@@ -38,6 +38,23 @@
             Projects.CloseProject();
         });
 </script>
+<script type="text/javascript">
+// Force hard navigation on homepage links to avoid stalled Cargo PJAX transitions.
+document.addEventListener('click', function (event) {
+  var node = event.target;
+  while (node && node !== document) {
+    if (node.tagName === 'A' && node.getAttribute('rel') === 'history') {
+      var href = node.getAttribute('href');
+      if (href && href.charAt(0) !== '#' && href.indexOf('javascript:') !== 0) {
+        event.preventDefault();
+        window.location.assign(href);
+      }
+      return;
+    }
+    node = node.parentNode;
+  }
+}, true);
+</script>
 
 <div style="position: relative; width:900px; margin: auto; top: 105px;">
 <hr color="#000" size="1.5px">
