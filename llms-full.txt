@@ -1,0 +1,34 @@
+# Ahmad Lashkaripour full guide
+
+## Research hub
+- https://alashkar.pages.iu.edu/Research.html
+
+## Topic hubs
+- Climate Clubs and Carbon Border Adjustments: https://alashkar.pages.iu.edu/topics/climate-clubs-and-carbon-border-adjustments.html
+- Industrial Policy: https://alashkar.pages.iu.edu/topics/industrial-policy.html
+- Markups, Scale Economies, and Trade: https://alashkar.pages.iu.edu/topics/markups-scale-economies-and-trade.html
+- Quantitative Trade Models: https://alashkar.pages.iu.edu/topics/quantitative-trade-models.html
+- Tariffs and Retaliation: https://alashkar.pages.iu.edu/topics/tariffs-and-retaliation.html
+- Trade Policy: https://alashkar.pages.iu.edu/topics/trade-policy.html
+- WTO and Trade Agreements: https://alashkar.pages.iu.edu/topics/wto-and-trade-agreements.html
+
+## Paper pages
+- Can Trade Policy Mitigate Climate Change?: https://alashkar.pages.iu.edu/papers/can-trade-policy-mitigate-climate-change.html | PDF: https://alashkar.pages.iu.edu/Farrokhi_Lashkaripour_2025.pdf | Markdown: https://alashkar.pages.iu.edu/sources/can-trade-policy-mitigate-climate-change.md
+- Making America Great Again? The Economic Impacts of Liberation Day Tariffs: https://alashkar.pages.iu.edu/papers/economic-impacts-of-liberation-day-tariffs.html | PDF: https://alashkar.pages.iu.edu/MAGA2025_JIE.pdf | Markdown: https://alashkar.pages.iu.edu/sources/economic-impacts-of-liberation-day-tariffs.md
+- New Industrial Policy: https://alashkar.pages.iu.edu/papers/new-industrial-policy.html | PDF: https://alashkar.pages.iu.edu/New_Industrial_Policy.pdf | Markdown: https://alashkar.pages.iu.edu/sources/new-industrial-policy.md
+- Trade and Technology Adoption in Distorted Economies: https://alashkar.pages.iu.edu/papers/trade-and-technology-adoption-in-distorted-economies.html | PDF: https://alashkar.pages.iu.edu/FLP_2023.pdf | Markdown: https://alashkar.pages.iu.edu/sources/trade-and-technology-adoption-in-distorted-economies.md
+- Profits, Scale Economies, and the Gains from Trade and Industrial Policy: https://alashkar.pages.iu.edu/papers/profits-scale-economies-and-the-gains-from-trade-and-industrial-policy.html | PDF: https://alashkar.pages.iu.edu/Lashkaripour_Lugovskyy_AER_2023.pdf | Markdown: https://alashkar.pages.iu.edu/sources/profits-scale-economies-and-the-gains-from-trade-and-industrial-policy.md
+- Can Trade Taxes be a Major Source of Government Revenue?: https://alashkar.pages.iu.edu/papers/can-trade-taxes-be-a-major-source-of-government-revenue.html | PDF: https://alashkar.pages.iu.edu/TARIFF_REVENUE_Lashkaripour.pdf | Markdown: https://alashkar.pages.iu.edu/sources/can-trade-taxes-be-a-major-source-of-government-revenue.md
+- The Cost of a Global Tariff War: A Sufficient Statistics Approach: https://alashkar.pages.iu.edu/papers/the-cost-of-a-global-tariff-war.html | PDF: https://alashkar.pages.iu.edu/Tariff_War_Lashkaripour.pdf | Markdown: https://alashkar.pages.iu.edu/sources/the-cost-of-a-global-tariff-war.md
+- Weight-Based Quality Specialization: https://alashkar.pages.iu.edu/papers/weight-based-quality-specialization.html | PDF: https://alashkar.pages.iu.edu/Lashkaripour_Weight.pdf | Markdown: https://alashkar.pages.iu.edu/sources/weight-based-quality-specialization.md
+- Discrete Trade: https://alashkar.pages.iu.edu/papers/discrete-trade.html | PDF: https://alashkar.pages.iu.edu/Lashkaripour_Discrete_2020.pdf | Markdown: https://alashkar.pages.iu.edu/sources/discrete-trade.md
+- Within-Industry Specialization and Global Market Power: https://alashkar.pages.iu.edu/papers/within-industry-specialization-and-global-market-power.html | PDF: https://alashkar.pages.iu.edu/Lashkaripour_Market_Power_2020.pdf | Markdown: https://alashkar.pages.iu.edu/sources/within-industry-specialization-and-global-market-power.md
+- Markups as Shadow Tariffs: How Market Power Skews Trade Reciprocity: https://alashkar.pages.iu.edu/papers/markups-as-shadow-tariffs.html | PDF: https://alashkar.pages.iu.edu/DLL2026.pdf | Markdown: https://alashkar.pages.iu.edu/sources/markups-as-shadow-tariffs.md
+- A Framework for Integrating Climate Goals into Trade Agreements: https://alashkar.pages.iu.edu/papers/integrating-climate-goals-into-trade-agreements.html | PDF: https://alashkar.pages.iu.edu/FLT_2025.pdf | Markdown: https://alashkar.pages.iu.edu/sources/integrating-climate-goals-into-trade-agreements.md
+- The Cost of Dissolving the WTO: The Role of Global Value Chains: https://alashkar.pages.iu.edu/papers/the-cost-of-dissolving-the-wto.html | PDF: https://alashkar.pages.iu.edu/BL2020_Production_Networks.pdf | Markdown: https://alashkar.pages.iu.edu/sources/the-cost-of-dissolving-the-wto.md
+- Interdependence of Trade Policies in General Equilibrium: https://alashkar.pages.iu.edu/papers/interdependence-of-trade-policies-in-general-equilibrium.html | PDF: https://alashkar.pages.iu.edu/BL2020_Interdependence.pdf | Markdown: https://alashkar.pages.iu.edu/sources/interdependence-of-trade-policies-in-general-equilibrium.md
+
+## Replication pages
+- Replication files for Discrete Trade: https://alashkar.pages.iu.edu/replication/discrete-trade-replication.html
+- Replication files for Within-Industry Specialization and Global Market Power: https://alashkar.pages.iu.edu/replication/global-market-power-replication.html
+- Replication files for The Cost of a Global Tariff War: https://alashkar.pages.iu.edu/replication/global-tariff-war-replication.html

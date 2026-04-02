@@ -1,0 +1,242 @@
+ 
+/* start css.sty */
+.tex4ht-fragment .pplr8t-x-x-207{font-size:172%;}
+.tex4ht-fragment .pplr8t-x-x-144{font-size:120%;}
+.tex4ht-fragment .pplr8t-x-x-109{font-size:90%;}
+.tex4ht-fragment .pplb8t-x-x-109{font-size:90%;font-weight: bold;}
+.tex4ht-fragment .pplb8t-x-x-109{font-weight: bold;}
+.tex4ht-fragment .pplb8t-x-x-109{font-weight: bold;}
+.tex4ht-fragment .pplri8t-x-x-109{font-size:90%;font-style: italic;}
+.tex4ht-fragment .pplri8t-x-x-109{font-style: italic;}
+.tex4ht-fragment .pplri8t-x-x-109{font-style: italic;}
+.tex4ht-fragment .pplr8t-x-x-172{font-size:143%;}
+.tex4ht-fragment .ec-lmtt-12{ font-family: monospace,monospace;}
+.tex4ht-fragment .ec-lmtt-12{ font-family: monospace,monospace;}
+.tex4ht-fragment .ec-lmtt-12{ font-family: monospace,monospace;}
+.tex4ht-fragment .pplri8t-x-x-120{font-style: italic;}
+.tex4ht-fragment .pplri8t-x-x-120{font-style: italic;}
+.tex4ht-fragment .pplri8t-x-x-120{font-style: italic;}
+.tex4ht-fragment .pplb8t-x-x-120{font-weight: bold;}
+.tex4ht-fragment .pplb8t-x-x-120{font-weight: bold;}
+.tex4ht-fragment .pplb8t-x-x-120{font-weight: bold;}
+.tex4ht-fragment .pplbi8t-x-x-120{font-style: italic; font-weight: bold;}
+.tex4ht-fragment .pplr8t-{font-size:83%;}
+.tex4ht-fragment .zplmr7m-x-x-120{font-style: italic;}
+.tex4ht-fragment .ec-lmtt-10{font-size:83%; font-family: monospace,monospace;}
+.tex4ht-fragment .ec-lmtt-10{ font-family: monospace,monospace;}
+.tex4ht-fragment .ec-lmtt-10{ font-family: monospace,monospace;}
+.tex4ht-fragment .pplri8t-{font-size:83%;font-style: italic;}
+.tex4ht-fragment .pplri8t-{font-style: italic;}
+.tex4ht-fragment .pplri8t-{font-style: italic;}
+.tex4ht-fragment .pplbc8t-x-x-120{ font-weight: bold;}
+.tex4ht-fragment .ec-lmssbx-10x-x-109{font-size:90%; font-family: sans-serif; font-weight: bold;}
+.tex4ht-fragment .ec-lmssbx-10x-x-109{ font-family: sans-serif; font-weight: bold;}
+.tex4ht-fragment .ec-lmssbx-10x-x-109{ font-family: sans-serif; font-weight: bold;}
+.tex4ht-fragment .pplb8t-{font-size:83%;font-weight: bold;}
+.tex4ht-fragment .pplb8t-{font-weight: bold;}
+.tex4ht-fragment .pplb8t-{font-weight: bold;}
+.tex4ht-fragment .pplrc8t-{font-size:83%;}
+.tex4ht-fragment .small-caps{font-variant: small-caps; }
+.tex4ht-fragment p{margin-top:0;margin-bottom:0}
+.tex4ht-fragment p.indent{text-indent:0;}
+.tex4ht-fragment p + p{margin-top:1em;}
+.tex4ht-fragment p + div, .tex4ht-fragment p + pre{margin-top:1em;}
+.tex4ht-fragment div + p, .tex4ht-fragment pre + p{margin-top:1em;}
+.tex4ht-fragment a{ overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+@media print {.tex4ht-fragment div.crosslinks{visibility:hidden;}}
+.tex4ht-fragment table.tabular{border-collapse: collapse; border-spacing: 0;}
+.tex4ht-fragment a img{ border-top: 0; border-left: 0; border-right: 0; }
+.tex4ht-fragment center{ margin-top:1em; margin-bottom:1em; }
+.tex4ht-fragment td center{ margin-top:0em; margin-bottom:0em; }
+.tex4ht-fragment .Canvas{ position:relative; }
+.tex4ht-fragment img.math{vertical-align:middle;}
+.tex4ht-fragment div.par-math-display, .tex4ht-fragment div.math-display{text-align:center;}
+.tex4ht-fragment{ margin:1em auto; max-width:80ch; padding:0 .62em; }
+.tex4ht-fragment h1, .tex4ht-fragment h2, .tex4ht-fragment h3, .tex4ht-fragment h4, .tex4ht-fragment h5{ line-height:1.2; }
+@media print{ .tex4ht-fragment{ max-width:none } }
+.tex4ht-fragment .partHead, .tex4ht-fragment .likepartHead{ font-size: 2em; }
+.tex4ht-fragment .chapterHead, .tex4ht-fragment .likechapterHead{ font-size: 1.7411em; }
+.tex4ht-fragment .sectionHead, .tex4ht-fragment .likesectionHead{ font-size: 1.5157em; }
+.tex4ht-fragment .subsectionHead, .tex4ht-fragment .likesubsectionHead{ font-size: 1.3195em; }
+.tex4ht-fragment .subsubsectionHead, .tex4ht-fragment .likesubsubsectionHead{ font-size: 1.1487em; }
+  
+.tex4ht-fragment li p.indent{ text-indent: 0em }
+.tex4ht-fragment li p:first-child{ margin-top:0em; }
+.tex4ht-fragment li p:last-child, .tex4ht-fragment li div:last-child{ margin-bottom:0.5em; }
+.tex4ht-fragment li p:first-child{ margin-bottom:0; }
+.tex4ht-fragment li p~ul:last-child, .tex4ht-fragment li p~ol:last-child{ margin-bottom:0.5em; }
+.tex4ht-fragment .enumerate1{list-style-type:decimal;}
+.tex4ht-fragment .enumerate2{list-style-type:lower-alpha;}
+.tex4ht-fragment .enumerate3{list-style-type:lower-roman;}
+.tex4ht-fragment .enumerate4{list-style-type:upper-alpha;}
+.tex4ht-fragment div.newtheorem{ margin-bottom: 2em; margin-top: 2em;}
+.tex4ht-fragment div.newtheorem .head{font-weight: bold;}
+.tex4ht-fragment .obeylines-h, .tex4ht-fragment .obeylines-v{white-space: nowrap; }
+.tex4ht-fragment div.obeylines-v p{ margin-top:0; margin-bottom:0; }
+.tex4ht-fragment .overline{ text-decoration:overline; }
+.tex4ht-fragment .overline img{ border-top: 1px solid black; }
+.tex4ht-fragment td.displaylines{text-align:center; white-space:nowrap;}
+.tex4ht-fragment .centerline{text-align:center;}
+.tex4ht-fragment .rightline{text-align:right;}
+.tex4ht-fragment pre.verbatim{font-family: monospace,monospace; text-align:left; clear:both; }
+.tex4ht-fragment .fbox{padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+.tex4ht-fragment div.fbox{display:table}
+.tex4ht-fragment div.center div.fbox{text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+.tex4ht-fragment div.minipage{width:100%;}
+.tex4ht-fragment div.center, .tex4ht-fragment div.center div.center{text-align: center; margin-left:1em; margin-right:1em;}
+.tex4ht-fragment div.center div{text-align: left;}
+.tex4ht-fragment div.flushright, .tex4ht-fragment div.flushright div.flushright{text-align: right;}
+.tex4ht-fragment div.flushright div{text-align: left;}
+.tex4ht-fragment div.flushleft{text-align: left;}
+.tex4ht-fragment .underline{ text-decoration:underline; }
+.tex4ht-fragment .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+.tex4ht-fragment .framebox-c, .tex4ht-fragment .framebox-l, .tex4ht-fragment .framebox-r{ padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+.tex4ht-fragment .framebox-c{text-align:center;}
+.tex4ht-fragment .framebox-l{text-align:left;}
+.tex4ht-fragment .framebox-r{text-align:right;}
+.tex4ht-fragment span.thank-mark{ vertical-align: super }
+.tex4ht-fragment span.footnote-mark sup.textsuperscript, .tex4ht-fragment span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+.tex4ht-fragment code.verb{font-family:monospace,monospace;}
+.tex4ht-fragment div.tabular, .tex4ht-fragment div.center div.tabular{text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+.tex4ht-fragment table.tabular td p{margin-top:0em;}
+.tex4ht-fragment table.tabular{margin-left: auto; margin-right: auto;}
+.tex4ht-fragment td p:first-child{ margin-top:0em; }
+.tex4ht-fragment td p:last-child{ margin-bottom:0em; }
+.tex4ht-fragment div.td00{ margin-left:0pt; margin-right:0pt; }
+.tex4ht-fragment div.td01{ margin-left:0pt; margin-right:5pt; }
+.tex4ht-fragment div.td10{ margin-left:5pt; margin-right:0pt; }
+.tex4ht-fragment div.td11{ margin-left:5pt; margin-right:5pt; }
+.tex4ht-fragment table[rules]{border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+.tex4ht-fragment td.td00{ padding-left:0pt; padding-right:0pt; }
+.tex4ht-fragment td.td01{ padding-left:0pt; padding-right:5pt; }
+.tex4ht-fragment td.td10{ padding-left:5pt; padding-right:0pt; }
+.tex4ht-fragment td.td11{ padding-left:5pt; padding-right:5pt; }
+.tex4ht-fragment table[rules]{border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+.tex4ht-fragment .hline hr, .tex4ht-fragment .cline hr{ height : 0px; margin:0px; }
+.tex4ht-fragment .hline td, .tex4ht-fragment .cline td{ padding: 0; }
+.tex4ht-fragment .hline hr, .tex4ht-fragment .cline hr{border:none;border-top:1px solid black;}
+.tex4ht-fragment .hline{border-top: 1px solid black;}
+.tex4ht-fragment .hline + .vspace:last-child{display:none;}
+.tex4ht-fragment .tabbing-right{text-align:right;}
+.tex4ht-fragment div.float, .tex4ht-fragment div.figure{margin-left: auto; margin-right: auto;}
+.tex4ht-fragment div.float img{text-align:center;}
+.tex4ht-fragment div.figure img{text-align:center;}
+.tex4ht-fragment .marginpar, .tex4ht-fragment .reversemarginpar{width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+.tex4ht-fragment .marginpar p, .tex4ht-fragment .reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+.tex4ht-fragment .reversemarginpar{float:left;}
+.tex4ht-fragment table.equation{width:100%;}
+.tex4ht-fragment .equation td{text-align:center; }
+.tex4ht-fragment td.equation{ margin-top:1em; margin-bottom:1em; } 
+.tex4ht-fragment td.equation-label{ width:5%; text-align:center; }
+.tex4ht-fragment td.eqnarray4{ width:5%; white-space: normal; }
+.tex4ht-fragment td.eqnarray2{ width:5%; }
+.tex4ht-fragment table.eqnarray-star, .tex4ht-fragment table.eqnarray{width:100%;}
+.tex4ht-fragment div.eqnarray{text-align:center;}
+.tex4ht-fragment div.array{text-align:center;}
+.tex4ht-fragment div.pmatrix{text-align:center;}
+.tex4ht-fragment table.pmatrix{width:100%;}
+.tex4ht-fragment span.pmatrix img{vertical-align:middle;}
+.tex4ht-fragment div.pmatrix{text-align:center;}
+.tex4ht-fragment table.pmatrix{width:100%;}
+.tex4ht-fragment span.bar-css{text-decoration:overline;}
+.tex4ht-fragment img.cdots{vertical-align:middle;}
+.tex4ht-fragment .partToc a, .tex4ht-fragment .partToc, .tex4ht-fragment .likepartToc a, .tex4ht-fragment .likepartToc{line-height: 200%; font-weight:bold; font-size:110%;}
+.tex4ht-fragment .index-item, .tex4ht-fragment .index-subitem, .tex4ht-fragment .index-subsubitem{display:block}
+.tex4ht-fragment div.caption{text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+.tex4ht-fragment div.caption span.id{font-weight: bold; white-space: nowrap; }
+.tex4ht-fragment h1.partHead{text-align: center}
+.tex4ht-fragment p.bibitem{ text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+.tex4ht-fragment p.bibitem-p{ text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+.tex4ht-fragment .subsubsectionHead, .tex4ht-fragment .likesubsubsectionHead{ font-size: 1em; }
+.tex4ht-fragment .paragraphHead, .tex4ht-fragment .likeparagraphHead{ margin-top:2em; font-weight: bold;}
+.tex4ht-fragment .subparagraphHead, .tex4ht-fragment .likesubparagraphHead{ font-weight: bold;}
+.tex4ht-fragment .verse{white-space:nowrap; margin-left:2em}
+.tex4ht-fragment div.maketitle{text-align:center;}
+.tex4ht-fragment h2.titleHead{text-align:center;}
+.tex4ht-fragment div.maketitle{ margin-bottom: 2em; }
+.tex4ht-fragment div.author, .tex4ht-fragment div.date{text-align:center;}
+.tex4ht-fragment div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+.tex4ht-fragment div.author{white-space: nowrap;}
+.tex4ht-fragment div.abstract p{margin-left:5%; margin-right:5%;}
+.tex4ht-fragment div.abstract{width:100%;}
+.tex4ht-fragment .abstracttitle{text-align:center;margin-bottom:1em;}
+.tex4ht-fragment .subsectionToc, .tex4ht-fragment .likesubsectionToc{margin-left:1em;}
+.tex4ht-fragment .subsubsectionToc, .tex4ht-fragment .likesubsubsectionToc{margin-left:2em;}
+.tex4ht-fragment .paragraphToc, .tex4ht-fragment .likeparagraphToc{margin-left:3em;}
+.tex4ht-fragment .subparagraphToc, .tex4ht-fragment .likesubparagraphToc{margin-left:4em;}
+.tex4ht-fragment figure.float, .tex4ht-fragment div.figure{margin-left: auto; margin-right: auto;}
+.tex4ht-fragment figure.figure{text-align:center;}
+.tex4ht-fragment figcaption.caption{text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
+.tex4ht-fragment figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
+.tex4ht-fragment p + figcaption, .tex4ht-fragment img + figcaption{margin-top: 1em;}
+.tex4ht-fragment .abstract{margin:1em;}
+.tex4ht-fragment div.verbatiminput{font-family: monospace,monospace; white-space: nowrap; }
+.tex4ht-fragment .equation td{text-align:center; }
+.tex4ht-fragment .equation-star td{text-align:center; }
+.tex4ht-fragment table.equation-star{ width:100%; }
+.tex4ht-fragment table.equation{ width:100%; }
+.tex4ht-fragment table.align, .tex4ht-fragment table.alignat, .tex4ht-fragment table.xalignat, .tex4ht-fragment table.xxalignat, .tex4ht-fragment table.flalign{width:95%; margin-left:5%; white-space: nowrap;}
+.tex4ht-fragment table.align-star, .tex4ht-fragment table.alignat-star, .tex4ht-fragment table.xalignat-star, .tex4ht-fragment table.flalign-star{margin-left:auto; margin-right:auto; white-space: nowrap;}
+.tex4ht-fragment td.align-label{ width:5%; text-align:center; }
+.tex4ht-fragment td.align-odd{ text-align:right; padding-right:0.3em;}
+.tex4ht-fragment td.align-even{ text-align:left; padding-right:0.6em;}
+.tex4ht-fragment table.multline, .tex4ht-fragment table.multline-star{width:100%;}
+.tex4ht-fragment td.gather{text-align:center; }
+.tex4ht-fragment table.gather{width:100%;}
+.tex4ht-fragment div.gather-star{text-align:center;}
+.tex4ht-fragment .rotatebox{display: inline-block;}
+.tex4ht-fragment .textls{letter-spacing:0.05rem;}
+.tex4ht-fragment dl.enumerate-enumitem{display:grid; grid-template-columns: 3ch 1fr; align-items: top; row-gap:1ch;}
+.tex4ht-fragment tr#TBL-2-1-{border-top:0.13159em solid #000;} 
+.tex4ht-fragment td#TBL-2-2-2{border-bottom:0.04933em solid #000}
+.tex4ht-fragment td#TBL-2-3-5{border-bottom:0.04933em solid #000}
+.tex4ht-fragment tr#TBL-2-4-{border-bottom:0.13159em solid #000;} 
+.tex4ht-fragment tr#TBL-2-19-{border-bottom:0.13159em solid #000}
+.tex4ht-fragment tr#TBL-7-1-{border-top:0.13159em solid #000;} 
+.tex4ht-fragment td#TBL-7-2-3{border-bottom:0.04933em solid #000}
+.tex4ht-fragment tr#TBL-7-3-{border-bottom:0.13159em solid #000;} 
+.tex4ht-fragment td#TBL-7-5-3{border-bottom:0.04933em solid #000}
+.tex4ht-fragment tr#TBL-7-8-{border-bottom:0.13159em solid #000;} 
+.tex4ht-fragment td#TBL-7-10-3{border-bottom:0.04933em solid #000}
+.tex4ht-fragment tr#TBL-7-13-{border-bottom:0.13159em solid #000}
+.tex4ht-fragment tr#TBL-8-1-{border-top:0.13159em solid #000;} 
+.tex4ht-fragment tr#TBL-8-1-{border-bottom:0.13159em solid #000;} 
+.tex4ht-fragment td#TBL-8-3-2{border-bottom:0.04933em solid #000}
+.tex4ht-fragment tr#TBL-8-10-{border-bottom:0.13159em solid #000;} 
+.tex4ht-fragment td#TBL-8-12-2{border-bottom:0.04933em solid #000}
+.tex4ht-fragment tr#TBL-8-19-{border-bottom:0.13159em solid #000}
+.tex4ht-fragment tr#TBL-9-1-{border-top:0.13159em solid #000;} 
+.tex4ht-fragment tr#TBL-9-1-{border-bottom:0.13159em solid #000;} 
+.tex4ht-fragment td#TBL-9-3-2{border-bottom:0.04933em solid #000}
+.tex4ht-fragment tr#TBL-9-10-{border-bottom:0.13159em solid #000;} 
+.tex4ht-fragment td#TBL-9-12-2{border-bottom:0.04933em solid #000}
+.tex4ht-fragment tr#TBL-9-19-{border-bottom:0.13159em solid #000}
+.tex4ht-fragment tr#TBL-10-1-{border-top:0.13159em solid #000;} 
+.tex4ht-fragment tr#TBL-10-1-{border-bottom:0.08224em solid #000}
+.tex4ht-fragment tr#TBL-10-20-{border-bottom:0.13159em solid #000}
+.tex4ht-fragment tr#TBL-11-1-{border-top:0.13159em solid #000;} 
+.tex4ht-fragment td#TBL-11-2-2{border-bottom:0.04933em solid #000}
+.tex4ht-fragment td#TBL-11-3-6{border-bottom:0.04933em solid #000}
+.tex4ht-fragment tr#TBL-11-4-{border-bottom:0.13159em solid #000;} 
+.tex4ht-fragment tr#TBL-11-23-{border-bottom:0.13159em solid #000}
+.tex4ht-fragment tr#TBL-12-1-{border-top:0.13159em solid #000;} 
+.tex4ht-fragment tr#TBL-12-1-{border-bottom:0.08224em solid #000}
+.tex4ht-fragment tr#TBL-12-4-{border-bottom:0.13159em solid #000}
+.tex4ht-fragment tr#TBL-13-1-{border-top:0.13159em solid #000;} 
+.tex4ht-fragment tr#TBL-13-3-{border-bottom:0.08224em solid #000}
+.tex4ht-fragment tr#TBL-13-4-{border-bottom:0.08224em solid #000}
+.tex4ht-fragment tr#TBL-13-35-{border-bottom:0.13159em solid #000}
+.tex4ht-fragment tr#TBL-21-1-{border-top:0.13159em solid #000;} 
+.tex4ht-fragment td#TBL-21-2-2{border-bottom:0.04933em solid #000}
+.tex4ht-fragment td#TBL-21-3-6{border-bottom:0.04933em solid #000}
+.tex4ht-fragment tr#TBL-21-4-{border-bottom:0.13159em solid #000;} 
+.tex4ht-fragment tr#TBL-21-23-{border-bottom:0.13159em solid #000}
+.tex4ht-fragment #TBL-22-1{border-left: 1px solid black;}
+.tex4ht-fragment #TBL-22-1{border-right:1px solid black;}
+.tex4ht-fragment #TBL-22-2{border-right:1px solid black;}
+.tex4ht-fragment #TBL-22-3{border-right:1px solid black;}
+.tex4ht-fragment #TBL-22-4{border-right:1px solid black;}
+.tex4ht-fragment tr#TBL-22-1-{border-bottom:0.13159em solid #000;} 
+.tex4ht-fragment tr#TBL-22-37-{border-bottom:0.13159em solid #000}
+/* end css.sty */
+

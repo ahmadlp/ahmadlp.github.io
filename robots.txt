@@ -1,0 +1,18 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: *
+Disallow: /sources/
+Disallow: /paper-reader-data/
+Allow: /
+
+Sitemap: https://alashkar.pages.iu.edu/sitemap.xml

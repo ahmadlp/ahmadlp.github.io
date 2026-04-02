@@ -1,0 +1,567 @@
+/* Supplemental styles for canonical paper pages.
+   Loaded after tufte.css and paper-specific tex4ht.css. */
+
+body.tufte-paper-page {
+  background-color: #fffff8;
+  color: #111;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.tufte-paper-page {
+    background-color: #fffff8;
+    color: #111;
+  }
+}
+
+body.tufte-paper-page .main-content,
+body.tufte-paper-page .page-content {
+  min-height: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.paper-top-nav {
+  width: 55%;
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.paper-top-nav span {
+  margin: 0 0.35rem;
+}
+
+article.paper-article {
+  padding-top: 0.5rem;
+}
+
+article.paper-article h1 {
+  max-width: 80%;
+}
+
+.paper-citation-line,
+.paper-summary-line,
+.paper-links-line,
+.paper-keywords-line {
+  width: 55%;
+}
+
+.paper-summary-line {
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+}
+
+.paper-citation-line {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.paper-links-line {
+  font-size: 1.15rem;
+  line-height: 1.8rem;
+}
+
+.paper-keywords-line {
+  margin-top: -0.9rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.55rem;
+  color: #4d473d;
+}
+
+.paper-keywords-label {
+  margin-right: 0.45rem;
+  color: #4d473d;
+  font-size: 0.95rem;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.08em;
+}
+
+#abstract {
+  width: 55%;
+  margin-top: 2.2rem;
+  margin-bottom: 2.4rem;
+}
+
+#abstract p {
+  font-size: 1.3rem;
+  line-height: 1.85rem;
+}
+
+.paper-body {
+  padding-top: 0.5rem;
+}
+
+.tex4ht-fragment {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.paper-endmatter {
+  margin-top: 2.2rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid #ddd8ca;
+}
+
+.paper-endmatter p {
+  width: 55%;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55rem;
+  color: #595348;
+}
+
+.paper-endmatter-label {
+  margin-right: 0.45rem;
+  color: #4d473d;
+  font-size: 0.95rem;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.08em;
+}
+
+.sidenote .sidenote-paragraph,
+.marginnote .sidenote-paragraph {
+  display: inline;
+}
+
+.sidenote span[class],
+.marginnote span[class] {
+  font-size: inherit !important;
+  line-height: inherit;
+}
+
+.sidenote .sidenote-paragraph + .sidenote-paragraph,
+.marginnote .sidenote-paragraph + .sidenote-paragraph {
+  display: block;
+  margin-top: 0.45rem;
+}
+
+.sidenote .sidenote-math-block,
+.marginnote .sidenote-math-block {
+  display: block;
+  margin-top: 0.45rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.sidenote mjx-container,
+.marginnote mjx-container {
+  font-size: 0.92em !important;
+}
+
+div.center,
+div.minipage {
+  width: 55%;
+}
+
+figure div.center,
+div.center div.minipage {
+  width: 100%;
+}
+
+.tex4ht-fragment .sectionHead,
+.tex4ht-fragment .subsectionHead,
+.tex4ht-fragment .subsubsectionHead,
+.tex4ht-fragment .likeparagraphHead {
+  color: #111;
+  font-weight: 400;
+}
+
+.tex4ht-fragment .sectionHead {
+  font-style: italic;
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-top: 2.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.tex4ht-fragment .subsectionHead {
+  font-style: italic;
+  font-size: 1.7rem;
+  line-height: 1.15;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.tex4ht-fragment .subsubsectionHead,
+.tex4ht-fragment .likeparagraphHead {
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.tex4ht-fragment p,
+.tex4ht-fragment dl,
+.tex4ht-fragment ol,
+.tex4ht-fragment ul,
+.tex4ht-fragment table,
+.tex4ht-fragment .mathjax-block,
+.tex4ht-fragment .mathjax-env,
+.tex4ht-fragment .displaymath,
+.tex4ht-fragment .center,
+.tex4ht-fragment .minipage,
+.tex4ht-footnotes,
+.tex4ht-footnotes p {
+  width: 55%;
+}
+
+.tex4ht-fragment p,
+.tex4ht-fragment li,
+.tex4ht-fragment td,
+.tex4ht-fragment th {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.tex4ht-fragment ol,
+.tex4ht-fragment ul {
+  width: 50%;
+  padding-left: 5%;
+}
+
+.tex4ht-fragment dl.description,
+.tex4ht-fragment dl[class^='list'] {
+  width: 55%;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.tex4ht-fragment dl.description > dt,
+.tex4ht-fragment dl.description > dd,
+.tex4ht-fragment dl[class^='list'] > dt,
+.tex4ht-fragment dl[class^='list'] > dd {
+  display: inline;
+  width: auto;
+}
+
+.tex4ht-fragment dl.description > dd > p,
+.tex4ht-fragment dl[class^='list'] > dd > p {
+  display: inline;
+  width: auto;
+  margin: 0;
+}
+
+.tex4ht-fragment dl.description > dd,
+.tex4ht-fragment dl[class^='list'] > dd {
+  margin-left: 0;
+  margin-inline-start: 0;
+}
+
+.tex4ht-fragment dl.description > dd::after,
+.tex4ht-fragment dl[class^='list'] > dd::after {
+  content: "";
+  display: block;
+  margin-bottom: 0.95rem;
+}
+
+.tex4ht-fragment .newtheorem {
+  width: 55%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.tex4ht-fragment .tcolorbox {
+  width: 55%;
+  max-width: none;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.tex4ht-fragment .tcolorbox .tcolorbox-title,
+.tex4ht-fragment .tcolorbox .tcolorbox-content,
+.tex4ht-fragment .tcolorbox .tcolorbox-title > p,
+.tex4ht-fragment .tcolorbox .tcolorbox-content > p {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tex4ht-fragment .tcolorbox .tcolorbox-title > p,
+.tex4ht-fragment .tcolorbox .tcolorbox-content > p {
+  margin: 0;
+}
+
+.tex4ht-fragment .newtheorem > p,
+.tex4ht-fragment .newtheorem > dl,
+.tex4ht-fragment .newtheorem > ol,
+.tex4ht-fragment .newtheorem > ul,
+.tex4ht-fragment .newtheorem > table,
+.tex4ht-fragment .newtheorem > .mathjax-block,
+.tex4ht-fragment .newtheorem > .mathjax-env,
+.tex4ht-fragment .newtheorem > .displaymath,
+.tex4ht-fragment .newtheorem > .center,
+.tex4ht-fragment .newtheorem > .minipage {
+  width: 100%;
+}
+
+.tex4ht-fragment .newtheorem > span,
+.tex4ht-fragment .newtheorem > a,
+.tex4ht-fragment .newtheorem > .head,
+.tex4ht-fragment .newtheorem span[class*='x-x-'],
+.tex4ht-fragment .newtheorem span[class^='cm'],
+.tex4ht-fragment .newtheorem span[class^='ppl'],
+.tex4ht-fragment .newtheorem span[class^='ptm'] {
+  font-size: inherit !important;
+  line-height: inherit;
+}
+
+.tex4ht-fragment .mathjax-block,
+.tex4ht-fragment .mathjax-env,
+.tex4ht-fragment .displaymath,
+.tex4ht-fragment table.equation,
+.tex4ht-fragment table.equation-star,
+.tex4ht-fragment div.equation,
+.tex4ht-fragment div.equation-star {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.15rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.tex4ht-fragment .mathjax-inline {
+  white-space: normal;
+}
+
+.tex4ht-fragment mjx-container {
+  color: #111 !important;
+}
+
+.tex4ht-fragment .small-caps {
+  display: inline-block;
+  font-variant: normal;
+  font-variant-caps: small-caps;
+  font-size: 0.82em;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  vertical-align: baseline;
+}
+
+.tex4ht-fragment mjx-container[display='true'] {
+  font-size: 1em !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.1rem;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+}
+
+figure img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none;
+}
+
+figure figcaption,
+.tex4ht-fragment figcaption.caption,
+.tex4ht-fragment div.caption {
+  order: -1;
+  float: none;
+  max-width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: center;
+  color: #111;
+}
+
+.tex4ht-fragment div.table {
+  width: 55%;
+  margin: 2rem 0;
+}
+
+.tex4ht-fragment div.table > figure.float {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tex4ht-fragment div.table > figure.float > figcaption.caption {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+  text-indent: 0;
+}
+
+.tex4ht-fragment div.table > figure.float > figcaption.caption::before {
+  content: none;
+}
+
+.tex4ht-fragment div.table > figure.float > .tabular,
+.tex4ht-fragment div.table > figure.float > .center,
+.tex4ht-fragment div.table > figure.float > .ajdustwidth,
+.tex4ht-fragment div.table > figure.float > .adjustwidth {
+  width: 100% !important;
+  max-width: none;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  overflow-x: auto;
+  text-align: left;
+}
+
+.tex4ht-fragment div.table > figure.float > .tabular > table.tabular,
+.tex4ht-fragment div.table > figure.float > .center > .tabular > table.tabular,
+.tex4ht-fragment div.table > figure.float > .ajdustwidth > .tabular > table.tabular,
+.tex4ht-fragment div.table > figure.float > .adjustwidth > .tabular > table.tabular {
+  width: max-content;
+  min-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tex4ht-fragment div.table td table.tabular {
+  width: auto;
+  min-width: 0;
+}
+
+table,
+caption {
+  font-size: 1.25rem;
+}
+
+table {
+  display: block;
+  overflow-x: auto;
+}
+
+.tex4ht-fragment td,
+.tex4ht-fragment th {
+  padding: 0.2rem 0.45rem;
+}
+
+.tex4ht-fragment td.equation-label,
+.tex4ht-fragment td.align-label {
+  min-width: 3.4rem;
+}
+
+.tex4ht-fragment div.thebibliography,
+.tex4ht-fragment dl.thebibliography,
+.tex4ht-fragment .hanging-indent,
+.tex4ht-fragment div.csl-bib-body {
+  width: 55%;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.tex4ht-fragment dl.thebibliography > dt.thebibliography {
+  display: none;
+}
+
+.tex4ht-fragment dl.thebibliography > dd.thebibliography,
+.tex4ht-fragment div.thebibliography > p.bibitem,
+.tex4ht-fragment div.thebibliography > p.bibitem-p,
+.tex4ht-fragment .hanging-indent div.csl-entry {
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+.tex4ht-fragment dl.thebibliography > dd.thebibliography > p,
+.tex4ht-fragment div.thebibliography > p.bibitem,
+.tex4ht-fragment div.thebibliography > p.bibitem-p,
+.tex4ht-fragment div.csl-entry {
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tex4ht-footnotes {
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #d7d3c7;
+}
+
+.tex4ht-footnotes .article-subheading {
+  width: 55%;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 1.15;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.tex4ht-fragment .footnote-text,
+.tex4ht-footnotes .footnote-text p {
+  font-size: 1.1rem;
+  line-height: 1.55;
+  color: #111;
+}
+
+.tex4ht-fragment a,
+.paper-top-nav a,
+.paper-endmatter a,
+.paper-links-line a {
+  text-decoration-thickness: 0.06em;
+}
+
+@media (max-width: 760px) {
+  .paper-top-nav,
+  .paper-citation-line,
+  .paper-summary-line,
+  .paper-links-line,
+  #abstract,
+  .paper-endmatter p,
+  .tex4ht-fragment p,
+  .tex4ht-fragment dl,
+  .tex4ht-fragment ol,
+  .tex4ht-fragment ul,
+  .tex4ht-fragment table,
+  .tex4ht-fragment .mathjax-block,
+  .tex4ht-fragment .mathjax-env,
+  .tex4ht-fragment .displaymath,
+  .tex4ht-fragment .center,
+  .tex4ht-fragment .minipage,
+  .tex4ht-footnotes,
+  .tex4ht-footnotes p,
+  .tex4ht-footnotes .article-subheading,
+  .tex4ht-fragment div.table,
+  .tex4ht-fragment div.thebibliography,
+  .tex4ht-fragment dl.thebibliography,
+  .tex4ht-fragment .hanging-indent,
+  .tex4ht-fragment div.csl-bib-body {
+    width: 100%;
+  }
+
+  article.paper-article h1 {
+    max-width: 100%;
+  }
+
+  .tex4ht-fragment ol,
+  .tex4ht-fragment ul {
+    width: 90%;
+  }
+
+  .tex4ht-fragment div.table > figure.float > .tabular,
+  .tex4ht-fragment div.table > figure.float > .center,
+  .tex4ht-fragment div.table > figure.float > .ajdustwidth,
+  .tex4ht-fragment div.table > figure.float > .adjustwidth {
+    width: 100% !important;
+  }
+
+  figure,
+  .fullwidth {
+    max-width: 100%;
+  }
+}

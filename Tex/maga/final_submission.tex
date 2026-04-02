@@ -1,0 +1,676 @@
+
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage[hmargin=0.9in, vmargin = 1in]{geometry}
+\usepackage[round]{natbib}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning,shapes,calc}
+\usepackage[page]{appendix}
+\usepackage{threeparttable}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{comment}
+\usepackage{diagbox}
+\usepackage{longtable}
+\usepackage{graphicx} 
+%\usepackage[letterpaper]{hyperref}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{SoftBlue}{RGB}{100,140,200}  % adjust if you want it lighter/duller
+    \synctex=1 \hypersetup{backref,colorlinks=true,urlcolor=SoftBlue,linkcolor=black,citecolor=black,filecolor=black}
+    \hypersetup{pdfpagelayout=SinglePage,pdfpagemode=None,pdfstartview=Fit}
+    \hypersetup{pdfauthor={Ina Simonovska}}
+    \hypersetup{pdftitle={MAGA}}
+    \hypersetup{pdfdisplaydoctitle=False}% 
+    \hypersetup{pdfsubject={MAGA}}%
+    \hypersetup{pdfkeywords={MAGA}}
+
+\newcounter{saveeqni}%
+\newcounter{saveeqn01i}%
+\newcommand{\alpheqni}{\setcounter{saveeqni}{\value{section}}%
+%\setcounter{saveeqn01i}{\value{subsectioni}}%
+\renewcommand{\theequation}
+    {\alph{saveeqni}\mbox{.\arabic{equation}}}}%
+\newcommand{\reseteqni}{\setcounter{equation}{\value{saveeqni}}%
+\renewcommand{\theequation}{\arabic{equation}}}%
+
+\newtheorem{prop}{Proposition}
+\newtheorem{crl}{Corollary}
+
+\renewcommand{\appendixpagename}{Appendix} 
+
+\onehalfspacing
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+  % QJE-style fonts (Times New Roman equivalent)
+% Text and math fonts
+\usepackage{kpfonts} 
+% Sans-serif for titles
+\usepackage{helvet}
+\renewcommand{\sfdefault}{phv} % Helvetica
+\usepackage{bm} % Bold math symbols
+\date{\today \  \href{https://alashkar.pages.iu.edu/ILMS_tariff_analysis.pdf}{[Latest version]} } 
+  
+\begin{document}
+
+\title{Making America Great Again? \\ The Economic Impacts of Liberation Day Tariffs\footnote{We thank Costas Arkolakis, Robert Feenstra, Stefania Garetto, Oleg Itskhoki, Andres Rodriguez-Clare, Mike Waugh and two anonymous referees for their comments and suggestions.}}
+
+\author{
+Anna Ignatenko\footnote{Email: Anna.Ignatenko@nhh.no}
+\smallskip{}\\
+Norwegian School of Economics
+ \and 
+Ahmad Lashkaripour \footnote{Email: ahmadlp@gmail.com}
+\smallskip{}\\
+Indiana University, CESIfo
+\and
+Luca Macedoni \footnote{Email: luca.macedoni@unimi.it}
+\smallskip{}\\
+University of Milan, CESIfo 
+\and 
+Ina Simonovska\footnote{Corresponding author email: inasimonovska@ucdavis.edu}
+ \smallskip{}\\
+UC Davis, NBER, CEPR
+\bigskip{}}
+
+
+\maketitle
+\vspace{-15 mm}
+\begin{center}
+\large{First draft: April 9, 2025}
+\end{center}
+
+\onehalfspacing
+
+\vspace{-4 mm}
+
+\begin{abstract}
+\noindent On April 2, 2025, President Trump declared ``Liberation Day,'' announcing broad tariffs to reduce trade deficits and revive U.S. industry. We analyze the long-term economic impacts of these tariffs. If trading partners do not retaliate, the tariffs could decrease the U.S. trade deficit and improve its terms of trade, yielding modest welfare gains when tariff revenues reduce the income tax burden for American workers. However, reciprocal retaliation results in net welfare losses for the U.S. economy. We derive the unilaterally optimal tariff policy and find that the USTR proposed tariffs, based on bilateral trade deficits, diverge markedly from the optimal design. The optimal tariff is 19\%, uniformly applied across all trading partners, and determined solely by the aggregate trade deficit, rather than bilateral imbalances. Under optimal foreign retaliation to the USTR tariffs, U.S. welfare declines by up to 3.38\% when accounting for input-output linkages, while global employment contracts by 0.58\%.
+
+%On April 2, 2025, President Trump announced ``Liberation Day,'' imposing broad tariffs on imports to reduce trade deficits and revive U.S. industry. We analyze the long-term economic impacts of these tariffs. In the unlikely scenario where trading partners do \textit{not} retaliate, the tariffs could decrease the U.S. trade deficit and improve its terms of trade, yielding modest welfare gains when tariff revenues are used to reduce the income tax burden for American workers. However, after reciprocal retaliation, these benefits are reversed, resulting in net welfare losses for the U.S. economy. We derive the unilaterally optimal tariff policy and find that the USTR proposed tariffs, based on bilateral trade deficits, diverge markedly from the optimal design. The optimal tariff is approximately 19\%, uniformly applied across all trading partners, and determined solely by the aggregate trade deficit, rather than bilateral imbalances. Under optimal foreign retaliation to the USTR tariffs, U.S. welfare is projected to decline by up to 3.8 percent when accounting for input-output linkages, while global employment contracts by 1.1 percent.
+
+
+%When trading partners retaliate optimally against the USTR-proposed tariffs, the U.S. experiences a welfare loss of nearly 1\%, while partner countries offset virtually all the initial losses. The resulting tariff war, however, reduces global employment and introduces a net deadweight loss. Although the tariffs do succeed in modestly reducing the U.S. trade deficit, the resulting deadweight losses underscore the inefficiency of using protectionist trade policy as a tool for deficit reduction.
+\end{abstract}
+
+%\vspace{0.4cm}
+
+\indent JEL Classification: F1 
+
+\indent Keywords: tariff, tariff war, deficit, welfare, trade, Trump, Liberation Day, China 
+
+
+%\thispagestyle{empty}\vfill{}
+%\pagebreak{}
+
+%\newpage
+%\setcounter{page}{0}
+%\big{\textbf{Conflict-of-interest disclosure statement}} \\ \\
+
+%\big{\textbf{Felix Gerding
+%}}\\ 
+
+%I have nothing to disclose.\\ 
+
+%\big{\textbf{Espen Henriksen}}\\
+
+%I have nothing to disclose.\\
+
+%\big{\textbf{Ina Simonovska}}\\ 
+
+%I have nothing to disclose.\\
+
+
+\newpage
+%\setcounter{page}{1}
+
+\section{Introduction}
+
+On April 2, 2025, President Donald Trump proclaimed ``Liberation Day,'' implementing tariffs on imports from virtually all countries, with the stated goal of revitalizing American industry and reducing trade deficits. These tariffs include a 10\% baseline on all imports, adjusted to a higher level for countries that run a trade surplus with the U.S., e.g.,  20\% for European Union products and 54\% for Chinese goods (see \href{https://ustr.gov/sites/default/files/files/Issue_Areas/Presidential%20Tariff%20Action/Reciprocal%20Tariff%20Calculations.pdf}{USTR Reciprocal Tariff Calculations}), with exceptions for USMCA trade partners as well as certain products, such as automobiles, steel, aluminum, and smartphones.\footnote{See \href{https://www.whitehouse.gov/fact-sheets/}{The White House Fact Sheets} for official summary of tariff schedules and exemptions. As of April 9, tariffs on all countries (but China) have been reduced to 10\% for 90 days. As of May 12, the reciprocal tariff on China is 10\% in addition to the 20\% fentanyl tariff. As of May 30, the 10\% tariffs on all nations (except USMCA-compliant products and industries subject to Section 232 tariffs) are temporarily in place, as they have been legally challenged.}  While the administration asserts that these measures will bolster domestic manufacturing, protect American jobs and eliminate the U.S. deficit, many economists and industry leaders warn of potential negative consequences. %\footnote{\citet{pujolas2024trade} argue that trade deficits can entice a country to start a trade war.} 
+This article examines the economic implications of the Liberation Day tariffs, analyzing their potential impact on the U.S. and the global economy.
+
+\paragraph{Model and Methods.}
+We develop a quantitative trade model that incorporates three essential elements: tariff pass-through differing from unity, trade imbalances, and employment effects under different tariff-revenue rebate specifications. These features make the model particularly well-suited for analyzing the Liberation Day tariffs, which were designed based on perceived pass-through rates and targeted reductions in bilateral U.S. trade deficits with trade partners. In our framework, trade deficits arise from two sources: (i) exogenous transfers, capturing intertemporal substitution or external factors outside of the model, and (ii) local labor embodied in exports, because export penetration requires local labor services from the destination country. While the former component is unaffected by tariff changes, the latter adjusts endogenously to policy change. We focus on a single-sector model, consistent with the uniform application of Liberation Day tariffs across goods, excluding a few exceptional cases under Section 232. We also conduct robustness checks by introducing multiple sectors and an input-output structure.
+
+%Despite introducing several novel elements, our framework nests a broad class of standard quantitative trade models as special cases. We also present results for these canonical special cases. 
+
+Within our single-sector framework, we derive the theoretical formula for unilaterally optimal tariffs---i.e. tariffs that maximize U.S. welfare---and show that they are non-discriminatory across trading partners, and depend on the variety-adjusted tariff pass-through, the trade elasticity, and the aggregate trade deficit. Crucially, the optimal tariff is independent of bilateral trade imbalances, standing in sharp contrast to the proposed Liberation Day tariffs, which were explicitly designed to vary based on the size of each country's bilateral trade deficit with the U.S. %{We allow for unilaterally optimal retaliation by trade partners, which yields a Nash equilibrium of tariffs. Due to the single-shot nature of the game, countries implement their unilaterally optimal tariffs in equilibrium--- a standard Prisoners' Dilemma result.}
+
+We calibrate our model to bilateral trade and GDP data for 194 countries from 2023, and employ exact hat algebra to simulate the long-term counterfactual impacts of tariffs under various scenarios. Our simulations require information on several structural parameters, most notably the trade elasticity and the tariff pass-through rate. We adopt these values from \cite{simonovska2014elasticity} and \cite{cavallo2021tariff}, both of which are referenced in the Executive Summary of the Reciprocal Tariff Calculations released by the Office of the United States Trade Representative (USTR). In robustness exercises that employ a multi-sector model, we restrict the analysis to 181 countries with sectoral trade and value-added data available for 2019, and estimate sectoral trade elasticities following \citet{fontagne2022tariff}.
+
+\paragraph{Summary of results.}
+
+We find that tariffs imposed by the U.S. could improve its terms of trade and reduce its trade deficit, provided, critically, that trading partners refrain from retaliating. Across various scenarios and model specifications, we estimate that the USTR's proposed tariffs could reduce the trade deficit by approximately 11-19 percent. However, the associated welfare gains are modest and even non-existent once input-output linkages are considered, or if the reduction in income-tax burden due to tariff revenues is excluded. Furthermore, these limited beggar-thy-neighbor benefits to the U.S. come at substantial costs to its trading partners, particularly Canada and Mexico, Ireland and Norway in Europe, and several Southeast Asian economies such as Thailand, Malaysia and Vietnam, for whom exports to the U.S. constitute a significant share of GDP.
+
+The modest welfare gains from the USTR tariffs, even without retaliation, reflect their flawed design. These tariffs are not structured optimally to maximize the terms of trade gains, revenue collection, or deficit reduction. An optimally designed tariff would involve a uniform rate of approximately 19\% applied equally across all trading partners. Such a non-discriminatory tariff would increase the welfare gains for the U.S. by 60\%, while also generating higher revenues and achieving larger reductions in the trade deficit.
+
+Critically, any U.S. welfare gains disappear if trading partners retaliate bilaterally. In this case, the U.S. not only forfeits initial gains, but also ends up significantly worse off. When accounting for input-output linkages, the U.S. suffers a welfare loss of 3.38 percent. Although retaliation mitigates some losses for U.S. trade partners, it does not eliminate them; they still face welfare losses of around 1.17 percent. The resulting tariff war constitutes a Prisoner's Dilemma situation, harming all parties involved. Ultimately, global trade falls by at least 4.9 percent relative to GDP, and global employment drops by up to 0.58 percent.% as a result of the ensuing tariff war.
+
+\paragraph{Relation to the literature.}
+We view our analysis as one that describes the long-run; i.e. an equilibrium in which tariffs are permanent and factor prices fully adjust to their equilibrium levels (see \citet{Alessandria_revenue2025} for effects of temporary vs. permanent tariffs on the deficit and GDP, and \citet{Auclert2025TariffShocks} and \citet{rodriguezclare2025tradewar} for an analysis with nominal rigidities). As such, our analysis abstracts from any frictions, most notably labor/inventory adjustment frictions and supply chain restructuring frictions such as relationship-building costs. These transitional dynamics would further reduce welfare gains. 
+
+Additionally, we do not model any uncertainty regarding the implementation or the persistence of tariffs (\citet{alessandria2025trade}, \href{https://www.wto.org/english/res_e/booksp_e/trade_outlook25_e.pdf}{Global Trade Outlook, April 2025}), nor do we capture intertemporal decisions. Specifically, tariffs can reduce investment and the capital stock (\citet{cunat2024bilateral}, \citet{ NBERw33702}). Furthermore, we abstract from the analysis of financial markets or monetary policy responses (\citet{bianchi,sebnem, monacelli2025tariffs}), so we cannot quantify any losses in income and wealth that may occur due to changes in asset prices (see \citet{oleg_dima_deficit} for asset valuation effects on deficits). Thus, our findings should be interpreted as a lower bound on the potential costs of the Liberation Day tariffs to the U.S. and the rest of the world. 
+
+We view our analysis as a first attempt to quantify the welfare impact of the Liberation Day tariffs.\footnote{A growing literature has examined the consequences of the 2018-2019 U.S.-China trade war (e.g. \citet{amiti2019impact,amiti2020s, flaaen2019disentangling,waugh2019consumption,fajgelbaum2020return,ma2021eye,ma2025tariffs,caliendo2023lessons}.)} Methodologically, we relate to \cite{Ossa} and \cite{Lashkaripour_tariff_war}, who employ quantitative trade models to assess the welfare costs of tariff wars. Our tariff revenue analysis complements recent work, including \cite{Lashkaripour_jeea} and \cite{Alessandria_revenue2025}.
+
+\section{Model}
+We employ a generalized trade model consistent with multiple micro-foundations in the spirit of \citet{demidova2024small}. This framework enables us to characterize global trade in terms of international supply and demand of labor services. 
+
+\paragraph{Demand for Labor Services.}
+There are $N $ countries indexed by $i,j,n = 0,1,\dots,N$. Let $w_i$ and $L_i$ represent the wage and labor supply in country $i$, $A_i$ the constant productivity shifter of country $i$, $d_{ni}$ the ad-valorem trade cost from country $n$ to country $i$, and $t_{ni}$ the ad-valorem tariff imposed by country $i$ on imports from country $n$. Without loss of generality, assume $d_{ii} = 1+t_{ii} = 1$. 
+
+Trade shares are defined as $\lambda_{ni} \equiv X_{ni}/E_i$, where $X_{ni}$ is country $i$'s expenditure on varieties from country $n$, with $E_i=\sum_{j} X_{ji}$ denoting total expenditure. As elaborated in Appendix A, in a Melitz-Pareto model with destination-specific markups, free entry, and fixed costs paid in local labor, trade shares can be specified as:
+\begin{equation} \label{eq: eq_1}
+\lambda_{ni}=\frac{\left(d_{ni}/(A_{n}L_{n}^{\psi})\right)^{-\varepsilon}\,(1+t_{ni})^{-\varphi_i\cdot\varepsilon}\,w_{n}^{-\varepsilon}}{\sum_{j}\left(d_{ji}/(A_{j}L_{j}^{\psi})\right)^{-\varepsilon}\,(1+t_{ji})^{-\varphi_i\cdot\varepsilon}\,w_{j}^{-\varepsilon}}
+\end{equation}
+%The trade share expression above is consistent with a broad spectrum of micro-foundations, extending beyond the Melitz-Pareto framework outlined in Appendix A. It nests standard models, such as Armington, Eaton-Kortum, and Krugman, as special cases, as we will elaborate shortly. 
+This expression also encompasses a range of standard models, such as Armington, Eaton-Kortum, and Krugman, as special cases. The formulation of bilateral trade shares involves three \textit{structural} parameters, defined as follows:
+\begin{enumerate}
+    \item $\varepsilon$: the trade elasticity, i.e., the elasticity of trade flows with respect to trade costs $d_{ni}$;
+    \item     $\psi$: the scale elasticity---the elasticity of aggregate real TFP with respect to employment size, $L_{n}$---capturing the variety gains from firm entry;
+    \item $\varphi_i$: the pass-through of tariffs to the \textit{price index} of imported varieties in destination $i$, which is composed of two components: the firm-level pass-through, denoted by $\tilde{\varphi}_i \leq 1$, and the import variety effect, given by $\varphi_i - \tilde{\varphi}_i \geq 0$.\footnote{We provide a micro-founded definition for $\varphi_i$ in Appendix A and additional discussion in Appendix A.1. %and elucidate the difference between the firm-level pass-through ($\tilde{\varphi}_i$) and the variety-adjusted pass-through ($\varphi_i$) in Appendix A.1.
+    } In general, we focus on the case where the tariff pass-through to firm-level prices is complete (i.e., $\tilde{\varphi}_i = 1$), with overshifting effects on the price index (i.e., $\varphi_i > 1$). However, we also experiment with incomplete firm-level pass-through.   
+\end{enumerate}
+
+%Our framework is consistent with a wide range of micro-foundations, beyond the variant of the Melitz-Pareto model of Appendix A. In some of the models, $\varphi_i=1$  and $\nu_i$ is either zero or uniform across markets, thus eliminating any room for model-consistent trade deficits. Our Melitz-Pareto model, however, allows for the tariff pass-through to diverge from unity and for trade deficits to emerge endogenously, which makes it especially suitable for analyzing tariffs implemented based on policymakers' views about pass-through and aimed at decreasing bilateral trade deficits.
+The total demand for labor services in country $i$ consists of two components: labor for domestic production and labor for fixed costs of firms (domestic and foreign) selling in $i$. Specifically, let $\nu_n$ represent the constant, but \textit{destination-specific}, fraction of sales allotted to fixed cost payments to local labor at the location of sales, $n$. Total demand for labor services in country $i$ is:
+\begin{equation}
+L_{i}^{D}=\frac{1}{w_{i}}\left[\sum_{n}\frac{1-\nu_{n}}{1+t_{in}}\lambda_{in}E_{n}+\nu_{i}\sum_{n}\frac{1}{1+t_{in}}\lambda_{ni}E_{i}\right]
+\end{equation}
+The first term on the right-hand side captures the total labor demand associated with production and entry activities by domestic firms. For each destination $n$, a fraction $1 - \nu_n$ of sales is allocated to domestic labor costs related to these activities, while the remaining share $\nu_n$ covers fixed costs paid to local labor from $n$.\footnote{Fixed cost are paid with variable profits, which are a fraction of sales. Thus, $\nu_n$ is the product of two shares: the share of variable profits in sales times the share of variable profits depleted by fixed costs.}  The second term on the right-hand side, accordingly, represents the demand for country $i$'s labor due to fixed costs incurred by both domestic and foreign firms selling to market $i$. As we demonstrate shortly, the assumption that fixed costs are expensed in destination-country wages yields bilateral deficits that are endogenous. This assumption is not new to the trade literature---\citet{arkolakis_jpe} develops a model where firms incur market access costs composed of domestic and foreign wages, estimating that foreign wages represent 71\% of the total for French firms.\footnote{While these payments should appear as service imports in the data, the \href{https://www.bea.gov/sites/default/files/2018-01/international_itas.pdf}{Bureau of Economic Analysis} recognizes that firms often employ foreign labor services via local affiliates. Thus, such payments to foreign factors are classified as domestic transactions. These payments are ultimately deducted from the profits repatriated to the parent company. So, our formulation effectively features cross-border claims on profits/assets, and is related to the portfolio model in \citet{caliendo2018impact}.}
+
+
+
+Tariffs reduce demand for foreign labor and boost demand for domestic labor by altering trade shares. These effects are captured by the tariff elasticity $\frac{\partial \ln \lambda_{ni}}{\partial \ln(1+t_{ni})} = \varphi_i \cdot \varepsilon$. This elasticity indicates that changes in tariffs impact the import price index with elasticity $\varphi_i$, and the resulting price adjustments affect trade flows with elasticity $\varepsilon$. %As we will discuss shortly, this elasticity is a key determinant of optimal tariffs. 
+As explained below, we can simulate the counterfactual effect of tariffs with information on trade and production, and the parameters listed above, without taking a stance on the remaining parameters, $A_n$ or $d_{ni}$.
+
+
+
+\paragraph{Supply of Labor Services.}
+The representative agent in country $i$ has preferences over consumption and labor given by $
+U = C_i - \frac{\kappa}{\kappa + 1} L_i^{1 + \frac{1}{\kappa}}
+$, where $C_i$  denotes consumption utility, whose maximization yields the equilibrium trade shares specified above. The parameter $\kappa$ represents the labor supply elasticity. Labor supply in country $i$ is, thus, given by
+\begin{equation}L^{S}_i = \left( \frac{(1 - \tau_{i}^L) w_i}{P_i} \right)^{\kappa},
+\end{equation}
+where $\tau_{i}^L$ is the share of labor income that is deducted as income taxation, and $P_i$  is the unit price index of the optimal consumption bundle, $C_i$, which is given by
+\begin{equation}
+\label{eq: eq4}
+P_{i}=\Upsilon_{i}\left[\frac{E_i}{w_{i}}\right]^{1-\varphi_i}\left[\sum_{n}\left(\frac{d_{ni}}{A_{n}L_{n}^{\psi}}\right)^{-\varepsilon}\,(1+t_{ni})^{-\varphi_i\cdot\varepsilon}\,w_{n}^{-\varepsilon}\right]^{-\frac{1}{\varepsilon}}
+\end{equation}
+where $\Upsilon_i$  is a constant formally defined in Appendix A.
+%and $E_i$ denotes total expenditure in country $i$.
+
+\paragraph{General Equilibrium.}
+General equilibrium is a set of wages such that labor supply equals demand 
+\[L^S_i=L^D_i\]and goods' markets clear so that total expenditure in country $i$ is the sum of factor income and tariff revenue. In particular,
+\begin{equation}
+E_i = w_i L_i + R_i+\bar{T}_i,
+\end{equation}
+Following \cite{DEK}, $\bar{T}_i$ is a lump-sum transfer, equal to a constant share of world GDP, with $\sum_i\bar{T}_i=0$ ; and $R_i$ denotes tariff revenues:
+\begin{equation} \label{eq: eq_2}
+R_i = \sum_{n \neq i} \frac{t_{ni}}{1 + t_{ni}} \lambda_{ni} E_i.
+\end{equation}
+
+\paragraph{Trade Deficit.}
+As shown in Appendix B, the trade deficit of country $i$ is given by:
+\begin{equation}
+\label{eq:trade_deficit}
+D_{i}\equiv\sum_{n\neq i}\left(\frac{1}{1+t_{ni}}X_{ni}-\frac{1}{1+t_{in}}X_{in}\right)=\ \bar{T}_{i}+\sum_{n\neq i}\left[\frac{\nu_{i}}{1+t_{ni}}X_{ni}-\frac{\nu_{n}}{1+t_{in}}X_{in}\right].
+\end{equation}
+Two key factors determine $D_i$ in our framework. The first is the exogenous lump-sum transfer $\bar{T}_i$, which captures external mechanisms such as intertemporal substitution that lie beyond our model's scope. Static trade models have traditionally attributed the entire deficit to these transfers \citep{DEK}.  The second source arises endogenously because the proceeds from exports are not fully paid to domestic labor; a portion is instead redirected to foreign labor to cover fixed exporting costs. These fixed costs effectively transfer a share of variable export profits to foreign workers. Since the share of fixed cost payments in sales, $\nu_i$, is \textit{destination-specific}, these transfers are asymmetric. They disproportionately benefit countries with higher market penetration costs, allowing their factor income to exceed sales---see Appendix B for details.
+
+The aggregate deficit is the sum of the bilateral deficits, $D_i = \sum_{n\neq i} D_{ni}$, where the bilateral deficit with partner $n$ is defined as $D_{ni} \equiv \frac{1}{1+t_{ni}}X_{ni}-\frac{1}{1+t_{in}}X_{in}$. The following proposition characterizes the determinants of bilateral deficits. %\footnote{The literature has identified three sources for bilateral trade imbalances: (1) aggregate imbalances due to macroeconomic factors, (2) asymmetric trade costs, and (3) triangular trade; \citep{davis2002mystery, eugster2020bilateral, felbermayr2021theory, cunat2024bilateral, pujolas2024trade}. \citep{cunat2024bilateral} shows that asymmetric trade barriers are the most important driver of bilateral imbalances. Our model explicitly accounts for (1) and (2), but it can also account for (3) with a reinterpretation of $d_{ij}$ as a taste-shifter rather than a cost-shifter.} 
+
+\begin{prop}
+\label{prop_2}
+Trade is bilaterally balanced if and only if the aggregate trade deficit is zero ($D_i=0$  $\forall i$) and trade barriers are reciprocal ($d_{in}=d_{ni}$ and $t_{ni}=t_{in}$, $\forall n, i$).
+\end{prop}
+ 
+Proposition \ref{prop_2}, proven in Appendix C, clarifies that bilateral trade imbalances do not provide meaningful information about the reciprocity of trade barriers, including tariffs, when there are aggregate trade imbalances.\footnote{In principle, asymmetric trade costs can affect \textit{bilateral} trade imbalances without altering \textit{aggregate} imbalances---particularly when aggregate imbalances are driven solely by external transfers ($\bar{T}$). However, in our framework, the endogenous component of the aggregate deficit is sensitive to trade cost asymmetries, which are shown to be empirically significant by \citet{cunat2024bilateral}.} The intuition is straightforward: if a country runs an aggregate trade deficit, whether due to macroeconomic factors captured by $\bar{T}_i$ or the foreign content embedded in overhead costs, then, by accounting identity, its trade must be imbalanced with at least some of its partners.  
+
+\begin{crl}
+If country $i$ runs an aggregate trade deficit ($D_i\neq0$), its trade with some partners will be bilaterally imbalanced, even if trade barriers are reciprocal.
+\end{crl}
+ 
+\paragraph{Tariff Pass-through.}
+In our model, $\varphi_i$  represents the conditional pass-through of tariffs to the price index of imported varieties, holding aggregate wages, trade flows, and labor supply fixed. To clarify this, choose labor in country $i$ as the numeraire. The price index for goods exported from country $n$ to $i$ is
+\[
+P_{ni}=\mathcal{C}_{ni}\times(1+t_{ni})^{\varphi_{i}}\left(w_{n}/w_{i}\right)L_{n}^{-\psi}X_{ni}^{1-\varphi_{i}},
+\]
+where $\mathcal{C}_{ni}$ encompasses all the constant price shifters. The total derivative of prices with respect to tariffs is thus 
+\[
+\frac{d\ln P_{ni}}{d\ln(1+t_{ni})}=\ \varphi_i \ +\quad\underbrace{\frac{d\ln\left(w_{n}/w_{i}\right)}{d\ln(1+t_{ni})}-\psi\frac{d\ln L_{n}}{d\ln(1+t_{ni})} + (1-\varphi_{i})\frac{d\ln X_{ni}}{d\ln(1+t_{ni})}}_{\text{GE effects}}
+\]
+This decomposition separates the conditional pass-through on the price index, holding wages and other aggregate equilibrium values constant, from general equilibrium (GE) adjustments arising primarily through shifts in relative wages. This distinction matters because tariffs can improve a country's terms of trade even if the conditional pass-through exceeds one ($\varphi_i \geq 1$), as tariffs inflate the domestic wage relative to the foreign wages, i.e., $\frac{d\ln\left(w_{n}/w_{i}\right)}{d\ln(1+t_{ni})}<0$, thereby improving the factoral terms of trade.
+
+%The conditional pass-through $\varphi_i$ itself consists of two parts: the firm-level pass-through, denoted by $\tilde{\varphi}_i \leq 1$, and the product variety effect, defined as $\varphi_i - \tilde{\varphi}_i \geq 0$ (see Appendix A.1). The firm-level pass-through is typically what researchers estimate using panel data on firm prices with design-based causal methods. The variety effect arises because tariffs decrease the number of firms exporting to the market imposing the tariff, which can raise the consumer price index even if the pass-through at the firm level is incomplete.
+
+%\paragraph{Intermediate inputs.}
+%In Appendix A.3, we introduce intermediate inputs in the form of a round-about production. Letting $\beta$ denote the share of labor in production, the trade shares become
+%However, fixed costs are paid in terms of only labor.
+% \[
+%\lambda_{ni}=\frac{(1+t_{ni})^{-\varphi_{i}\varepsilon}\left(d_{ni}w_{n}^{1-(1-\beta)(1+\psi)}P_{n}^{(1-\beta)(1+\psi)}/A_{n}L_{n}^{\psi}\right)^{-\varepsilon}}{\sum_{j}(1+t_{ji})^{-\varphi_{i}\varepsilon}\left(d_{ji}w_{j}^{1-(1-\beta)(1+\psi)}P_{j}^{(1-\beta)(1+\psi)}/A_{j}L_{j}^{\psi}\right)^{-\varepsilon}}
+% \]
+%where $t_{ni}$  is a blanket tariff on all goods from $n$, independent of the intended use. 
+%The consumer price index is
+%\[
+%P_{i}=\Upsilon_{i}\left[\frac{E_{i}}{w_{i}}\right]^{\varphi_{i}-1}\left[\sum_{j}\left(\frac{d_{ji}}{A_{j}L_{j}^{\psi}}\right)^{-\varepsilon}\, (1+t_{ji})^{-\varphi_{i}\cdot\varepsilon}\left(w_{j}^{1-(1-\beta)(1+\psi)}P_{j}^{(1-\beta)(1+\psi)}\right)^{-\varepsilon}\,\right]^{-\frac{1}{\varepsilon}}
+%\]
+
+%The goods and labor market clearing conditions are modified to account for intermediate inputs in production. 
+
+\paragraph{Extensions.} In Appendix A.3, we introduce intermediate inputs in the form of round-about production and a blanket tariff applied to all goods imported from a given origin, regardless of intended use. In Appendix A.4, we introduce multiple sectors with sector-specific trade elasticities, with and without input-output linkages. 
+
+
+%\paragraph{Multiple Sectors.}
+%In Appendix A.4, we introduce multiple sectors and Cobb-Douglas preferences over sectors, with $e_{i,k}$ share of expenditures on sector $k$ goods in country $i$. Without input-output (IO) linkages, sector-level trade shares are
+%\[
+%\lambda_{ni,k}=\frac{\left(d_{ni,k}/(A_{n,k}L_{n,k}^{\psi})\right)^{-\varepsilon_{k}}\,(1+t_{ni,k})^{-\varphi_{i}\cdot\varepsilon_{k}}\,w_{n}^{-\varepsilon_{k}}}{\sum_{j}\left(d_{ji,k}/(A_{j,k}L_{j,k}^{\psi})\right)^{-\varepsilon_{k}}\,(1+t_{ji,k})^{-\varphi_{i}\cdot\varepsilon}\,w_{j}^{-\varepsilon_{k}}},
+%\]
+%where all variables are sector-specific. Adding IO linkages changes the trade shares to:
+%\[
+%\lambda_{ni,k}=\frac{(1+t_{ni,k})^{-\varphi_{i}\varepsilon_{k}}\left(d_{ni,k}w_{n}^{1-(1-\beta_{k})(1+\psi)}P_{n}^{(1-\beta_{k})(1+\psi)}/A_{n}L_{n}^{\psi}\right)^{-\varepsilon_{k}}}{\sum_{j}(1+t_{ji,k})^{-\varphi_{i}\varepsilon_{k}}\left(d_{ji,k}w_{j}^{1-(1-\beta_{k})(1+\psi)}P_{j}^{(1-\beta_{k})(1+\psi)}/A_{j}L_{j}^{\psi}\right)^{-\varepsilon_{k}}},
+%\]
+%where the aggregate price index satisfies:
+%\[
+%P_{i}=\Upsilon_{i}\left[\frac{E_{i}}{w_{i}}\right]^{1-\varphi_{i}}\prod_{k}\left[\sum_{j}\left(\frac{d_{ji,k}}{A_{j,k}L_{j,k}^{\psi}}\right)^{-\varepsilon_{k}}\,(1+t_{ji,k})^{-\varphi_{i}\cdot\varepsilon_{k}}\left(w_{j}^{1-(1-\beta_{k})(1+\psi)}P_{j}^{(1-\beta_{k})(1+\psi)}\right)^{-\varepsilon_{k}}\,\right]^{-\frac{e_{n,k}}{\varepsilon_{k}}}.
+%\]
+%The price indexes and market clearing conditions are modified to account for multiple sectors and IO linkages.
+
+\subsection{Unilaterally-Optimal Tariff Under Trade Imbalances}
+As an intermediate step, we characterize the unilaterally optimal tariff under trade imbalances. The optimal tariffs for country $i$ solve the following planning problem, taking policy choices in the rest of the world as given:
+\[
+\max_{\{t_{ni}\}}\ \ U_{i}({t_{ni}})\quad s.t.\quad\text{Equilibrium constraints } ( \ref{eq: eq_1}-  \ref{eq: eq_2})
+\]
+We assume that other countries operate under laissez-faire. As proven in Appendix D, the optimal tariff for country $i$ is different from the standard formula without imbalances and firm-selection effects, which equates the tariff to the inverse trade elasticity, $\varepsilon$. The following proposition summarizes this result. 
+
+\begin{prop}
+The optimal tariff for country $i$ is uniform across partners and given by
+\[
+t_{ni}^{*}=t^*_i=\frac{1}{\left(1+\mathscr{E}_{i}\right)\varphi_{i}-1} \qquad \qquad \forall (n)
+\]
+where $\mathscr{E}_{i}\equiv\sum_{n\neq i}\left[\frac{(1-\nu_{n})X_{in}}{\left(1-\nu_{i}\right)\sum_{n\neq i}X_{ni}}(1-\lambda_{in})\right]\varepsilon$.
+
+\end{prop}
+The proposition above asserts that while aggregate trade imbalances matter for the optimal tariff design, bilateral imbalances are irrelevant. To see this, consider a small open economy for which $\lambda_{in} \rightarrow 0$, implying an optimal tariff:
+\[
+t_{ni}^{*}=\frac{1}{(1+\varepsilon)\varphi_{i}-1-\frac{\varphi_{i}\varepsilon\bar{T}_{i}/E_{i}}{(1-\lambda_{ii})(1-\nu_{i})}},\qquad \qquad \forall (n,i)
+\]
+Without fixed transfers, i.e., $\bar{T}_i=0$, this expression reduces to the optimal tariff derived for a small open economy without trade imbalances in \cite{CALIENDO_FEENSTRA_JIE}  and \citet{demidova2024small}.
+
+The formula shows that countries with aggregate trade deficits ($\bar{T}_i>0$) set higher optimal tariffs. The intuition is that tariffs exploit a country's monopoly power over its differentiated labor services by curbing demand for foreign labor and raising domestic wages relative to foreign ones. As such, they allow the government to elicit an optimal markup on the international price of its labor services. With trade deficits, a larger import reduction is needed to achieve the optimal domestic wage inflation.\footnote{\cite{pujolas2024trade} make a similar point in a two-country endowment economy.} However, \textit{bilateral} trade imbalances do not affect optimal tariffs: from a pure terms-of-trade perspective, there is no basis for adjusting tariffs based on bilateral deficits. The following corollary formalizes this insight.
+
+\begin{crl}
+The optimal tariff is increasing in the aggregate trade deficit, but is independent of the bilateral deficits. 
+\end{crl}
+
+\section{Simulating the Impact of Tariffs}\label{sec: simulation}
+We simulate several counterfactual outcomes, beginning with the U.S. ($i=US$) imposing the ``reciprocal'' Liberation Day tariff, raising tariffs from zero under the USTR formula (see \href{https://tariffs.inasimonovska.com/}{USTR Tariff Calculator} and Appendix F.3). 
+%\begin{equation}
+%    \tilde{t}_{ni}=\frac{D_{in}}{\varepsilon\times\varphi\times X_{ni}},\qquad \text{with} \qquad D_{in}\equiv X_{in}-X_{ni}
+%\end{equation}
+%The tariff rate is 10\%  for partners that run a trade deficit or a low surplus vis-\`{a}-vis the U.S., and is equal to the rate implied by the USTR formula otherwise:
+%\begin{equation} \label{eq: LD} t_{ni}\times 100=\max\left\{-\frac{1}{2}\tilde{t}_{ni}\times 100,\,10\%\right\}
+%\end{equation}
+%These calculations reproduce the tariff rates announced on Liberation Day, with a few exceptions. 
+For Canada and Mexico, we apply a 10\% rate, corresponding to the lower bound reported by the USTR, which falls between the fentanyl tariff rates and the duty-free rate for USMCA-compliant goods. We retain embargo-level tariffs on Russia, since our analysis uses 2023 data. For China, we assume a 54\% effective tariff, which sums the fentanyl and Liberation Day reciprocal tariff.%Since Canada and Mexico incur zero duties on USMCA-compliant products, which account for 40-50\% of U.S. imports from these countries, we set the tariff rate for Canada and Mexico to 10\%, which corresponds to the lower bound of tariffs reported by the USTR. Furthermore, since our analysis uses 2023 data, we maintain tariff levels consistent with an embargo on Russia. Finally, since the tariff on Chinese imports increased by 10\% during the months of February and March of 2025, respectively (see timeline of events by \href{https://www.cnn.com/2025/04/12/business/us-china-tariffs-trump-timeline-dg/index.html}{CNN}), we assume that the effective tariff increase as of Liberation Day is 20+34=54\% (see \href{https://www.whitehouse.gov/presidential-actions/2025/04/regulating-imports-with-a-reciprocal-tariff-to-rectify-trade-practices-that-contribute-to-large-and-persistent-annual-united-states-goods-trade-deficits/}{Executive Order as of April 2, 2025}).
+%
+%We want to compute the impacts of a tariff change starting from tariffs that are universally nearly zero to the reciprocal tariffs applied based on the above formula.\footnote{Since we calibrate the model to bilateral trade data from 2023, observed trade shares implicitly reflect baseline-year trade costs and tariffs. Following  \cite{costinot2014trade}, we assume tariff revenues are negligible relative to GDP for accounting purposes.}
+
+%To assess the impacts of a tariff change, we compute counterfactual changes in equilibrium outcomes, using exact hat algebra, as detailed in Appendix 
+% E.\footnote{Since we calibrate the model to bilateral trade data from 2023, observed trade shares implicitly reflect baseline-year trade costs and tariffs. Following  \cite{costinot2014trade}, we assume tariff revenues are negligible relative to GDP for accounting purposes.} %where the change in trade shares is given by
+%\begin{equation}\label{eq: hat_algebra_1}
+%\hat{\lambda}_{ni}=\frac{\hat{L}_{n}^{-\psi\varepsilon}\,(1+t_{ni})^{-\varphi_i\cdot\varepsilon}\,\hat{w}_{n}^{-\varepsilon}}%%{\sum_{j}\lambda_{ji}\,\hat{L}_{j}^{-\psi\varepsilon}\,(1+t_{ji})^{-\varphi_i\cdot\varepsilon}\,\hat{w}_{j}^{-\varepsilon}}.
+%\end{equation}
+%The labor market clearing condition in changes can be expressed as
+%\begin{equation}
+%\hat{w}_{i}\hat{L}_{i}w_{i}L_{i}=\sum_{j}\frac{1-\nu_{j}}{1+t_{ij}}\hat{\lambda}_{ij}\lambda_{ij}\hat{E}_{j}E_{j}+\sum_{j}\frac{\nu_{i}}%{1+t_{ji}}\hat{\lambda}_{ji}\lambda_{ji}\hat{E}_{i}E_{i},
+%\end{equation}
+ %   where  the change in labor supply is    \[   \hat{L}_{i}=\left[(\widehat{1-\tau_{i}})\frac{\hat{w}_{i}}{\hat{P}_{i}}\right]^{\kappa},    
+%    \]
+%and the resulting change in the consumer price index is given by
+%\begin{equation}
+%\hat{P}_{i}=\left[\frac{\hat{E}_{i}}{\hat{w}_{i}}\right]^{\varphi_i-1}\left[\sum_{j}\lambda_{ji}\,\hat{L}_{j}^{\psi\varepsilon}\,(1+t_{ji})^{-%\varphi_i\cdot\varepsilon}\,\hat{w}_{j}^{-\varepsilon}\right].
+%\end{equation}
+%Lastly, the balanced budget condition for each country can be specified as
+%
+%\begin{equation}\label{eq: hat_algebra_2}
+%\hat{E}_{i}E_{i}=\hat{w}_{i}\hat{L}_{i}Y_{i} + \bar{T}_i +  \underbrace{\sum_{j\neq i}\frac{t_{ji}}{1+t_{ji}}\hat{\lambda}_{ji}\lambda_{ji}\hat{E}_{i}E_{i}}_{R_{i}^{'}}, 
+%\end{equation}
+%where $Y_i=w_i L_i$. As a baseline, we take the optimistic approach where tariffs can fully substitute for income tax revenues. Specifically, $\tau_{i}Y_{i}=R_{i}$, which implies that the change in the share of labor income that is deducted for income tax purposes changes after tariff imposition as $(\widehat{1-\tau_{i}})=1/(1-R_{i}/Y_{i})$. The system specified by Equations  \ref{eq: hat_algebra_1}--\ref{eq: hat_algebra_2} solves for the two independent unknowns $\{\hat{w}_i\}_i$ and $\{\hat{E}_i\}_i$, from which we can calculate the policy impacts:
+%\begin{itemize}
+ %   \item change in welfare is $\hat{U}_{i}=\delta_{i}\frac{\hat{E}_{i}}{P_{i}}+(1-\delta_{i})\frac{\hat{w}_{i}}{\hat{P}_{i}}$, where  $\delta_{i}\equiv \frac{E_{i}}{E_{i}-\frac{\kappa}{1+\kappa}(1-\delta_{i})Y_{i}}$
+%\item change in  gross exports is $\frac{\sum_{n\neq i}\hat{\lambda}_{in}\lambda_{in}\hat{E}_{n}E_{n}}{\sum_{n}\lambda_{in}E_{n}}$
+%\item change in gross imports is $\frac{\sum_{n\neq i}\hat{\lambda}_{ni}\lambda_{ni}\hat{E_i}E_{i}}{\sum_{n\neq i}\lambda_{ni}E_{i}}$
+%\item change in deficit is $\hat{D}_{i}=D_{i}^{'}/D_{i}$, where $D_{i}^{'}=\sum_{n\neq i}\left[\frac{1}{1+t_{ni}}\hat{\lambda}_{ni}\lambda_{ni}\hat{E}_{i}E_{i}-\frac{1}{1+t_{in}}\hat{\lambda}_{in}\lambda_{in}\hat{E}_{n}E_{n}\right] $
+%\item change in employment is $\hat{L}_i$
+%\item change in real consumer prices is $\hat{P}_i$
+%\end{itemize}
+%We consider the policy impacts on welfare, gross exports, gross imports, deficit, employment, and real consumer prices.
+
+Using exact hat algebra, we compute counterfactual changes in equilibrium outcomes to assess the policy impacts on welfare, exports, imports, deficit, employment, and real consumer prices, with details provided in Appendix E.\footnote{Since we calibrate the model to bilateral trade data from 2023, observed trade shares implicitly reflect baseline-year trade costs and tariffs. Following  \cite{costinot2014trade}, we assume tariff revenues are negligible relative to GDP for accounting purposes.} 
+ 
+\section{Data and Calibration}
+
+To perform counterfactual analyses using our baseline model, we need data on aggregate output ($Y_i$ in the model), trade shares ($\lambda_{ni}$), fixed cost margins ($\nu_i$) that regulate deficits,  as well as estimates of the elasticity parameters. 
+
+\paragraph{National Accounts.} First, we note that national expenditure,  $E_i = \text{GDP}_i + \bar{T}_i$, is the sum of GDP and fixed transfers, where GDP represents net factor income:  $Y_i = w_i L_i = \text{GDP}_i$. Second, to allocate the deficit between overhead cost payments and exogenous transfers ($\bar{T}_i$), we use the following accounting property:
+\begin{equation}
+\mathbf{\bar T}=(\mathbf{X}^{T}-\mathbf{X})(\mathbf{1}-\boldsymbol{\nu})
+\end{equation}
+where $\mathbf{X}$ is a trade matrix and $\boldsymbol{\nu}$ is set to match the share of \textit{Sales, general \& administrative expenses} in total sales of manufacturing firms in the U.S. and the rest of the world (see Appendix F.4 for details). For completeness, we experiment with alternative micro-foundations, in which $\mathbf{\nu} = \mathbf{0}$. The latter parameter choice allocates the entire deficit to factors outside of the model: $\bar{T}_i = \sum_{j\neq i} X_{ji} - \sum_{j\neq i} X_{ij}$, which corresponds to the specification in \citet{DEK}---see Appendix H.
+
+ 
+
+
+%Second, we must allocate the deficit between overhead cost payments and exogenous transfers ($\bar{T}_i$). To this end, we use firm-level balance sheet data. We calibrate the margin $\nu_{US}$  for the U.S. and $\nu_{RoW}$ for the rest of the world to match the share of \textit{Sales, general \& administrative expenses} in total sales in each region. The share is 24\% for U.S. manufacturing firms (COMPUSTAT) and 13\% for other countries (WORLDSCOPE). We can then recover $\mathbf{T}$ using  the values assigned to  $\nu_i$  and the following accounting property:
+%\begin{equation}
+%\mathbf{T}=(\mathbf{X}^{T}-\mathbf{X})(\mathbf{1}-\boldsymbol{\nu})
+%\end{equation}
+
+
+%then Nextto its two sources: overhead cost payments and exogenous transfers, where the latter are denoted by turn toFor the U.S., this share is 24\%  based on the sample of manufacturing firms in COMPUSTAT. For other countries, this share is 13\%, based on the sample of manufacturing firms in WORLDSCOPE.
+
+
+\paragraph{Trade Shares.} Given trade and expenditure data, we compute the share, $\lambda_{ni}$, as
+\begin{equation}
+\lambda_{ni} = \frac{X_{ni}}{E_i}\end{equation}
+where  $X_{ni}$ denotes exports from country $n$ to country $i$, and $E_i$ is country $i$'s expenditures.  We infer domestic absorption as $X_{ii} = E_i-\sum_{n\neq i}X_{ni} $. 
+%from the trade and expenditure data.
+
+\paragraph{Data Sources.}
+We source GDP data (current USD) for 2023 or latest available year from World Bank's WDI, and bilateral goods trade data (excluding services) from CEPII's 2023 BACI dataset \citep{Baci}. We use balance sheet data for manufacturing firms in COMPUSTAT and WORLDSCOPE for year 2020 to calibrate $\nu$ for the US and other markets. We estimate $\nu_{\text{US}}=0.27$ for the U.S. market, and $\nu_{\text{non-US}}=0.11$ for other markets (see Appendix F for details). Together, these data allow us to calibrate a model for 194 countries, which account for 96.5\% of global trade.\footnote{We treat EU members as independent tariff setters.} 
+
+
+
+\paragraph{Structural Parameters.}
+We set the following elasticity parameters from the literature:
+\begin{itemize}
+    \item $\varepsilon = 4$  \citep{simonovska2014elasticity,
+    NBERw20495}, see Appendix F.1.2 for discussion 
+    \item $\kappa =0.5$  \citep{chetty2011micro}
+    \item $\varepsilon\cdot \psi = 0.67$  \citep{lashkaripour2023profits}  
+\end{itemize}
+Following the evidence in \cite{amiti2019impact}, \cite{cavallo2021tariff}, and \cite{fajgelbaum2020return}, we assume that the firm-level pass-through is complete (i.e., $\tilde{\varphi}=1$) and infer the variety-adjusted pass-through as
+%{\[\varphi_{i}= \tilde \varphi +\frac{1+\psi}{(1-\nu_{i})\varepsilon}-\psi\]
+\[
+\varphi_{i} = \tilde{\varphi}_{i}+\frac{\nu_{i}}{1-\nu_{i}}(1+\psi)
+\]
+%The variety-adjusted pass-through depends on $\nu_i$, which is disciplined to match the share of overhead costs in sales, as discussed earlier. 
+This expression clarifies that, when the firm-level pass-through is complete, there is \textit{overshifting} at the aggregate price index level due to product variety effects.  For robustness, in Appendix H, we also experiment with an incomplete firm-level passthrough of $\tilde{\varphi} =0.25$, based on the USTR's report on reciprocal tariff calculations.\footnote{We interpret the USTR passthrough of 0.25 as firm-level passthrough estimated in \cite{cavallo2021tariff}.}
+%\footnote{USTR used a value of 0.25, but then divided the resulting tariffs by 2, thus effectively using a value of 0.5, for a fixed trade elasticity.} 
+
+\paragraph{I-O Linkages and Multiple Sectors.}
+We use bilateral trade flows by sector from the International Trade and Production Database for Simulation (ITPD-S) \citep{borchert2024globalization}. We aggregate sectors into four broad categories: Agriculture, Manufacturing, Mining, and Services. Sector-level value-added shares are drawn from the OECD Inter-Country Input-Output (ICIO) database for year 2019. We estimate sector-specific trade elasticities following \citet{fontagne2022tariff}, using tariff data from \citet{teti2024missing}, and standard gravity controls from the Dynamic Gravity Dataset \citep{gurevich2018dynamic}, as detailed in Appendix F.
+%\footnote{In the single-sector model, we set $\beta = 0.48$ based on the global average labor share in the 2020 ICIO, consistent with \cite{CALIENDO_JIE_tariff}, who report a sectoral average of 0.45 using 2023 EORA data.%We set $\beta=0.48$ based on the global average of labor input shares in the 2020 ICIO database. This number aligns with the labor share reported by \cite{CALIENDO_JIE_tariff} based on the 2023 EORA dataset, which has a sectoral average of $\beta=0.45$.
+%}
+
+\section{Results}
+\label{sec:results}
+
+This section reports the simulated impacts of the USTR-proposed reciprocal tariffs under various scenarios, comparing them to outcomes attainable under optimal tariffs. 
+
+\subsection{Tariff Outcomes \textit{without} Retaliation}
+
+Table \ref{tab: T1} presents the pre-retaliation effects of Liberation Day tariffs under two distinct uses of tariff revenue: (1) income-tax burden relief, (2) lump-sum rebate.
+
+
+%(3) the Eaton-Kortum-Krugman model specification ($\tilde{\varphi}=\varphi=1$ and $\nu=0$), and (4) a scenario where tariff revenues are rebated lump-sum rather than reducing income tax burden. It is important to note that in cases (1) and (2), the tariff passthrough to the price index exceeds the firm-level passthrough ($\varphi>\tilde{\varphi}$), while in specification (3), trade imbalances are generated exclusively by fixed transfers that constitute a constant fraction of global GDP, following the approach in \cite{DEK}.
+
+\begin{table}[htb]
+\caption{The simulated impacts of Liberation Day tariffs}\label{tab: T1}
+\centering
+\begin{tabular}{lcccccccc}
+\toprule
+\multicolumn{6}{l}{\textbf{Case 1: USTR tariffs + income tax relief + no retaliation}}  \\
+\midrule
+Country &
+\specialcell{$\Delta$ welfare} &
+\specialcell{$\Delta$ deficit} &
+\specialcell{$\Delta$ $\frac{\textrm{exports}}{\textrm{GDP}}$} & 
+\specialcell{$\Delta$ $\frac{\textrm{imports}}{\textrm{GDP}}$} &
+\specialcell{$\Delta$ employment} &
+\specialcell{$\Delta$ prices} \\
+\midrule
+USA & 1.13\% & -18.1\% & -52.7\% &-43.6\% & 0.32\% & 12.8\% \\  \addlinespace[3pt]
+non-US (average) & -0.58\%  & 11.6\% & -3.2\% & -3.3\% & -0.14\% & -4.7\% \\ \midrule
+\addlinespace[10pt]
+\multicolumn{6}{l}{\textbf{Case 2: USTR tariffs + lump-sum rebate + no retaliation}} \\ 
+\midrule
+USA & -0.01\% & -18.4\% & -52.5\% &-43.3\% & -0.41\% & 13.1\% \\  \addlinespace[3pt]
+non-US (average) & -0.57\%  & 11.7\% & -3.3\% & -3.4\% & -0.14\% & -4.8\% \\ \midrule
+\addlinespace[10pt]
+\multicolumn{6}{l}{\textbf{Case 3: optimal US tariffs + income tax relief + no retaliation}} \\ 
+\midrule
+USA & 1.79\% & -19.1\% & -55.3\% &-45.6\% & 0.51\% & 12.6\% \\  \addlinespace[3pt]
+non-US (average) & -0.61\%  & 17.1\% & -4.2\% & -3.7\% & -0.16\% & -4.6\% \\  \bottomrule
+\end{tabular}
+\vspace{-10pt}
+\begin{flushleft}
+\footnotesize{\textit{Notes}: This table reports changes in economic variables (relative to pre-Liberation Day) if partners do not retaliate against the USTR tariffs. The ``non-US (average)'' reflects GDP-weighted averages across non-U.S. countries. In scenarios (1) and (3), tariff revenues are used to reduce income taxes, while in scenario (2) they are rebated lump-sum without lowering the income tax. The change in ``prices'' represents the change in the country's CES price index $P_i$ relative to the global GDP-weighted average price index.}
+\end{flushleft}
+\end{table}
+
+Without retaliation, U.S. welfare would increase by 1.13 percent, accompanied by an 18 percent contraction in the trade deficit and a modest 0.32 percent expansion in U.S. employment. The trade deficit reduction manifests primarily through sizable contractions in both exports and imports. The simultaneous decline in exports and imports resonates with the Lerner symmetry, whereby an import tariff functions effectively as an implicit tax on exports. Importantly, domestic wage growth leads to a staggering 13 percent increase in real consumer prices, relative to a global GDP-weighted price index, although reduced product variety and elevated import prices also contribute to price growth.
+
+The welfare gains for the U.S. stem from improvements in factoral terms of trade and reductions in income taxes. To clarify the first channel, unilateral U.S. tariffs raise domestic wages relative to foreign wages:
+\[
+\left\{ \frac{w_{US}}{w_{1}},\frac{w_{US}}{w_{2}},\cdots,\frac{w_{US}}{w_{N}}\right\} \uparrow
+\]
+Thus, even if tariffs are fully passed through to import prices (holding aggregate wages fixed), imports effectively become cheaper because foreign wages fall or U.S. wages rise. These terms of trade gains are further amplified by the efficiency gains from income tax reduction. For the USTR tariffs, these two effects collectively outweigh the efficiency losses from reduced trade, resulting in net welfare gains without retaliation.
+
+Without the efficiency gains from income tax cuts, USTR tariffs yield no net benefit for the U.S. economy, highlighting their flawed design.
+The second panel of Table \ref{tab: T1} shows results for a scenario where tariff revenues are rebated lump-sum rather than used to cut income taxes. In this scenario, welfare gains vanish, as the benefits from lower income taxes are lost (see \citet{Alessandria_revenue2025} for a similar argument). Additionally, the employment gains that previously arose from increased labor supply due to lower income taxes are reversed.
+
+Other countries typically experience welfare losses averaging 0.6 percent, although, as we elaborate later, the losses are substantial for some countries. The rest of the world's trade deficit grows due to significant reductions in exports and imports to and from the U.S. Additionally, foreign employment declines modestly, accompanied by a pronounced drop in real prices due to downward pressure on foreign wages. 
+
+\paragraph{Optimal U.S. tariffs.}
+The last panel in Table  \ref{tab: T1}  displays results under the optimal tariff design without retaliation. As demonstrated by Proposition \ref{prop_2}, optimal tariffs are uniform and independent of bilateral trade imbalances. For the U.S., the optimal tariff equals 19 percent, contrasting markedly with the reciprocity-based tariffs proposed by the USTR. The optimal tariff generates superior welfare gains for the U.S. (1.8 percent), a greater reduction in the trade deficit (19 percent), and more favorable employment outcomes with nearly identical aggregate price-level changes.
+
+%{Panel 3 in Table \ref{tab: T1} shows that the U.S. welfare gains from USTR tariffs are magnified under the Eaton-Kortum-Krugman interpretation of the model, where $\nu=0$. This amplification stems from the aggregate trade deficit remaining essentially constant under this specification. The negligible reduction in the deficit is attributable to $\bar{T}_i$ constituting a fixed proportion of global GDP, which modestly contracts in response to tariff implementation. As \cite{Ossa} elucidates, the consumption gains from fixed transfers are magnified when tariffs increase, which artificially elevates the welfare gains from tariffs.}
+
+%Overall, these results suggest that while USTR tariffs may potentially improve U.S. welfare at the expense of trading partners, they are not optimally designed, neither from a welfare perspective nor from the standpoint of deficit reduction. It is important to reiterate that tariffs are inherently inefficient, as they diminish global aggregate welfare. More critically, unilateral tariffs inevitably provoke retaliatory measures from trading partners, ultimately erasing any initial welfare gains and placing all parties in a Prisoner's Dilemma situation. We explore these consequences in the following section.
+
+\paragraph{Trade Deficit Treatment.} Our calibration targets the higher share of overhead fixed costs among U.S. firms compared to the rest of the world.  Since the majority of firm sales are domestic, this target implies that  $\nu_{\text{US}} > \nu_{\text{non-US}}$. Consequently, in our calibrated model, the trade deficit has an endogenous component (represented by the second term in Equation (\ref{eq:trade_deficit})) that responds to tariff changes. However, if fixed-cost shares, and hence the $\nu$ parameters, were identical across countries, this endogenous term would cancel out entirely. A clear illustration of this is the conventional \citet{DEK} framework, which assumes zero fixed costs and no firm-selection effects ($\nu_i = 0$, $\varphi = 1$). In that setup, the trade deficit is solely driven by fixed transfers that do not adjust with tariff changes.
+
+We report the results from this conventional specification in the top panel of Table 6 in Appendix H. Compared to our baseline model, the fixed-deficit framework generates larger welfare gains for the U.S. in response to the USTR tariffs. The intuition is that improvements to the terms-of-trade through trade contraction no longer entail a corresponding loss in consumption expenditure through deficit reduction. These results reveal that deficit reduction attenuates the welfare gains from unilateral tariffs, highlighting that the objective of narrowing the deficit conflicts with terms of trade objectives.
+
+An alternative approach for handling trade deficits in static frameworks is employed by \citet{Ossa}, who removes the trade imbalances from the data prior to conducting counterfactual policy simulations. As shown in Appendix H, the balanced-trade approach implies smaller U.S. welfare gains from USTR tariffs compared to the  \citet{DEK}  approach.
+
+Ultimately, our predictions about the trade deficit should be viewed with care. Our static framework treats international transfers, $\bar{T}_i$, as exogenously fixed. But in reality, these transfers are shaped by deeper macroeconomic forces and emerge endogenously in equilibrium. Capturing these forces requires a dynamic model as in a growing body of literature exemplified by \citet{Costinot_werning_deficits} and \citet{NBERw33702}. In this vein, \citet{cunatsoe} show small effects of tariffs on deficits for relatively closed countries such as the USA using a small-open economy model with an overlapping-generations structure; whereas, relative to our findings, \citet{caliendo2025} predict nearly double the reduction in the U.S. deficit employing an infinite-horizon Eaton-Kortum framework with aggregate uncertainty and complete markets. 
+
+\subsection{The Consequences of Global Retaliation}
+%Previously, we assumed that the United States imposed tariffs while other countries remained passive and did not retaliate. 
+Table \ref{tab: T2} presents the outcomes when other nations respond with retaliatory tariffs. We assume that these retaliatory measures target only the U.S. and do not escalate into a broader global trade war.
+
+
+\begin{table}[htb]
+\caption{Impact of retaliatory tariffs}\label{tab: T2}
+\centering
+\begin{tabular}{lccccc}
+\toprule
+\multicolumn{5}{l}{\textbf{(1) USTR tariff + reciprocal retaliation}} \\
+\midrule
+Country &
+$\Delta$ welfare &
+$\Delta$ deficit &
+$\Delta$ employment &
+$\Delta$ prices \\
+\midrule
+USA & -0.36\% & -26.7\% & -0.18\% & 7.5\% \\  \addlinespace[3pt]
+CHN & -0.82\% & 6.2\% & -0.16\% & -3.7\% \\  \addlinespace[3pt]
+EU & -0.22\%  & 15.4\% & -0.09\% & -2.6\% \\  \addlinespace[3pt]
+non-US (average) & -0.46\%  & 19.8\% & -0.13\% & -2.7\% \\ \bottomrule
+\addlinespace[15pt]
+\multicolumn{5}{l}{\textbf{(2) USTR tariff + optimal retaliation}}  \\ 
+\midrule
+USA & -0.75\% & -29.0\% & -0.32\% & 6.0\% \\  \addlinespace[3pt]
+CHN & -0.65\% & 6.3\% & -0.13\% & -3.3\% \\  \addlinespace[3pt]
+EU & -0.23\%  & 16.6\% & -0.09\% & -2.1\% \\  \addlinespace[3pt]
+non-US (average) & -0.43\%  & 22.4\% & -0.13\% & -2.2\% \\ \bottomrule
+\addlinespace[15pt]
+\multicolumn{5}{l}{\textbf{(3) optimal tariff + optimal retaliation}}  \\ 
+\midrule
+USA & -0.32\% & -28.4\% & -0.20\% & 4.2\% \\  \addlinespace[3pt]
+CHN & -0.36\% & 4.2\% & -0.08\% & -2.1\% \\  \addlinespace[3pt]
+EU & -0.23\%  & 16.9\% & -0.09\% & -1.5\% \\  \addlinespace[3pt]
+non-US (average) & -0.39\%  & 25.1\% & -0.13\% & -1.5\% \\  \bottomrule
+\end{tabular}
+\vspace{-5pt}
+\begin{flushleft}
+\footnotesize{\textit{Notes}: This table reports changes in economic variables (relative to pre-Liberation Day) after partners retaliate against the USTR tariffs. The ``non-US (average)'' reflects GDP-weighted averages across non-U.S. countries. In all scenarios, tariff revenues are used to reduce income taxes. The change in ``prices'' represents the change in the CES price index $P_i$ relative to the global GDP-weighted average price index.}
+\end{flushleft}
+\end{table}
+
+We analyze three scenarios: (1) reciprocal retaliation against USTR tariffs, consistent with the WTO's reciprocity principle, (2) optimal retaliation against USTR tariffs, and (3) optimal retaliation against optimal U.S. tariffs. For each scenario, we present results for the U.S., EU, China, as well as the non-U.S. average.
+
+Table \ref{tab: T2} paints a clear picture: the tariff gains are fully reversed once retaliation occurs. Under all scenarios, U.S. welfare falls below pre-Liberation Day levels, and all employment gains are undone. Retaliation also curbs real consumer price growth in the U.S., primarily due to downward pressure on domestic wages. As expected, the losses for the U.S. are even more pronounced when other countries retaliate optimally rather than reciprocally.
+
+While the rest of the world manages to recover some of the initial losses caused by the USTR tariffs, it is unable to fully offset them, even under optimal retaliation. Ultimately, the post-retaliation equilibrium resembles a Prisoner's Dilemma: all parties are strictly worse off compared to the pre-Liberation Day tariffs. In cases (1) and (3), China appears to suffer the most severe losses among the three major economies.
+
+Overall, these findings highlight the pitfalls of unilateral tariffs. Although the U.S. may achieve short-term gains in welfare and employment, these benefits are completely erased once trading partners retaliate. While the U.S. deficit may decline by more than 25\%, this reduction comes with a significant loss in consumer welfare, even after accounting for the income tax reductions enabled by tariff revenues.
+
+\paragraph{Localized Tariff War between the U.S., EU, and China.}
+Appendix G analyzes a scenario in which the United States reaches a trade truce with most countries (i.e. 10\% bilateral tariff), apart from the EU and China. %In this case, the US imposes USTR tariffs on imports from the EU and China, which triggers reciprocal retaliation, while tariffs on all other countries revert to their 2023 baselines. 
+Compared to a full-scale tariff war, where all countries face USTR tariffs and retaliate, this partial truce leads to smaller welfare losses for the U.S., China, and the rest of the world, and marginally larger losses for the EU---see Appendix Table 4. This outcome is driven by reduced trade diversion benefits for certain EU countries. China's smaller welfare losses stem from the lifting of tariffs on Southeast Asian countries, which raises wages in these economies and mitigates some of China's loss of market access. Appendix G also explores a ``peace'' scenario in which the U.S. lifts tariffs on the EU but not on China, reducing losses for the U.S. and EU, while China continues to face steep costs. Further escalations in the trade war with China (i.e. bilateral tariffs of 108\%), however, reduce U.S. welfare marginally faster than Chinese welfare. %We find that China's marginal losses from US tariffs diminish rapidly, with the cost to China increasing by only 0.1 percentage point when Chinese tariffs are doubled from 54\% to 108\%.
+
+%\paragraph{Alternative Deficit Treatment}
+%Appendix H reports outcomes under alternative treatments of the trade deficit. We experiment with two widely used but contrasting approaches: (1) treating the trade deficit as fixed relative to global GDP as in \cite{DEK}, and (2) removing the deficit from data before counterfactual policy simulations \`a la \cite{Ossa}. The fixed-deficit specification predicts more favorable outcomes for the U.S., implying welfare gains of 1.24\% before retaliation and modestly positive effects even after retaliation. In contrast, the balanced-trade approach yields less favorable outcomes, with U.S. welfare gains prior to retaliation standing at just 0.92\%.
+
+
+\subsection{How Big are the Resulting Tariff Revenues?}
+This section examines the extent to which the USTR tariffs can generate revenues. %In this section, we examine the effectiveness of USTR tariffs in raising fiscal revenues and substituting for income taxes. 
+To put this exercise into context, the Congressional Budget Office estimates an increase in the deficit over the next decade due to the One Big Beautiful Bill Act of \$2.8 trillion.\footnote{See official estimates \href{https://www.cbo.gov/publication/61486\#data-supplemental}{here}.} Table \ref{tab: T3} presents tariff revenues across several scenarios, expressed both as a share of GDP and as a share of the U.S. federal budget, which accounts for 23\% of GDP (as reported by \href{https://fred.stlouisfed.org/series/FYONGDA188S}{St. Louis Fed}). The results clearly illustrate the limited fiscal role of tariffs in the U.S. economy.
+
+\begin{table}[htb]
+\caption{Tariff Revenue as Share of GDP and Federal Budget}\label{tab: T3}
+\centering
+\begin{tabular}{lccccc}
+\toprule
+& & & \multicolumn{2}{c}{retaliation to USTR tariff} \\
+\cmidrule(lr){4-5}
+& USTR tariff & optimal tariff &  optimal & reciprocal \\
+\midrule
+\% of GDP &1.14\% & 1.35\% &0.74\% & 0.82\% \\ \% of Federal Budget &4.95\% & 5.88\% &3.24\% & 3.57\% \\  \addlinespace[3pt]
+ \bottomrule
+\end{tabular}
+\vspace{-5pt}
+\begin{flushleft}
+\footnotesize{\textit{Notes}: The ``retaliation'' scenario reports outcomes when the U.S. applies the USTR tariffs and all partners respond with reciprocal or optimal retaliatory tariffs.}
+\end{flushleft}
+\end{table}
+
+Before retaliation, revenues from USTR tariffs amount to 1.1 percent of GDP, or approximately 5 percent of the federal budget. Hence, tariff revenue can cover at most 12 percent of the projected funding gap from the proposed bill above. These figures improve under optimal tariffs, which could replace nearly 6 percent of the income tax revenues used to finance the federal budget. Retaliation by trading partners dilutes the tariff revenues as it shrinks the tariff base. Under optimal retaliation, revenues fall to 0.7 percent of GDP or 3.2 percent of the federal budget. Under reciprocal retaliation, the drop is similar, but marginally smaller. These results are consistent with findings by \citet{Lashkaripour_jeea}.%\footnote{These results resonate with the findings of \citet{Lashkaripour_jeea}, who shows that even tariffs optimized for maximum revenue generation are largely ineffective. More recently, \citet{Alessandria_revenue2025} have revisited this issue, examining various scenarios of tariff revenue usage and their implications for GDP growth.} 
+
+
+\subsection{Unpacking Global Impacts}
+
+Figure \ref{fig:F1} shows the USTR tariff impacts by country: without retaliation (top panel), and with optimal retaliation by trading partners (bottom panel). %Figure \ref{fig:F1} offers a detailed breakdown of the tariff impacts on individual countries.  The top panel illustrates the outcomes of the USTR tariff without retaliation by trading partners, while the bottom panel presents the effects following optimal retaliatory measures by those partners.
+
+
+
+\begin{figure}[htbp!]
+    \centering
+            \caption{The projected global welfare impacts of USTR tariffs}
+        \label{fig:F1}
+        \includegraphics[width=1\linewidth]{figure_1.png}
+        \vspace{-22.5pt}
+\begin{flushleft}
+\footnotesize{\textit{Notes}: This map displays changes in welfare relative to pre-Liberation Day levels. In both scenarios, the U.S. implements the USTR tariffs. The ``After Retaliation'' scenario corresponds to optimal retaliatory tariffs by other countries.}
+\end{flushleft}
+    \end{figure}
+
+Smaller countries such as Mexico, Ireland, and several Southeast Asian nations, whose exports to the U.S. represent a significant share of their GDP, are the most adversely affected by the USTR tariffs. Some countries with limited trade ties to the U.S. benefit from these tariffs, primarily due to trade diversion and downward pressure on labor wages outside of the U.S. However, after retaliation, both the losses and gains become more muted, ultimately leaving the United States and most other countries worse off.\footnote{Some countries (e.g., Greece, Portugal) see lower welfare gains post-retaliation, as collective retaliation leads to trade diversion and wage suppression despite their optimal unilateral response.%Note that some countries (ex. Greece, Portugal) experience lower welfare gains in the post- than the pre-retaliation equilibrium. Even though these countries unilaterally optimally retaliate, the collective retaliation by all countries dampens these countries' welfare due to trade diversion and wage suppression.
+}
+
+%However, these effects are not due to their own retaliatory measures, but rather to the retaliatory measures of other countries, which dampen the benefits from trade diversion and wage suppression.}
+
+\subsection{Accounting for Input-Output Linkages}
+
+Table \ref{tab: T4} shows the counterfactual results under input-output linkages, using the augmented single-sector model detailed in Appendix A.3 and multi-sector model outlined in A.4.
+%\footnote{In the single-sector model, we set $\beta = 0.48$ based on the global average labor share in the 2020 ICIO, consistent with \cite{CALIENDO_JIE_tariff}, who report a sectoral average of 0.45 using 2023 EORA data.%We set $\beta=0.48$ based on the global average of labor input shares in the 2020 ICIO database. This number aligns with the labor share reported by \cite{CALIENDO_JIE_tariff} based on the 2023 EORA dataset, which has a sectoral average of $\beta=0.45$.
+%} %Table \ref{tab: T4} presents these results. 
+The first panel shows that accounting for input-output effects greatly reduces the unilateral gains from the USTR-proposed tariffs before retaliation. This is because the USTR tariffs, which average around 25\% (on a trade-weighted basis), greatly exceed the U.S. unilaterally optimal rate of 12.5\% that arises in the presence of input-output linkages. These elevated tariff levels lead to inefficient trade contractions, with the associated costs amplified through input-output linkages.
+
+
+\begin{table}[htbp]
+\caption{Tariff Impacts under Input-Output Linkages}\label{tab: T4}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lrrrrrr}
+\toprule
+&
+\specialcell{$\Delta$ welfare} &
+\specialcell{$\Delta$ deficit} &
+\specialcell{$\Delta$$\frac{\textrm{exports}}{\textrm{GDP}}$} & 
+\specialcell{$\Delta$$\frac{\textrm{imports}}{\textrm{GDP}}$} &
+\specialcell{$\Delta$ emp} &
+\specialcell{$\Delta$ prices} \\
+\addlinespace[-8pt]
+\multicolumn{7}{l}{\textbf{Pre-Retaliation Scenarios}} \\
+\midrule
+\addlinespace[5pt]
+\textbf{(1)} \textit{USTR tariffs + one sector} \\
+\cmidrule(lr){1-1}
+\addlinespace[3pt]
+USA & 0.86\% & -18.4\% & -53.9\% &-44.4\% & 0.24\% & 12.7\% \\  \addlinespace[3pt]
+non-US (average) & -1.31\%  & 12.0\% & -3.5\% & -4.0\% & -0.29\% & -5.0\% \\ \midrule
+\addlinespace[10pt]
+\textbf{(2)}  \textit{Optimal tariff + one sector} \\
+\cmidrule(lr){1-1}
+\addlinespace[3pt]
+USA & 2.15\% & -13.0\% & -39.2\% &-32.1\% & 0.65\% & 6.9\% \\  \addlinespace[3pt]
+non-US (average) & -0.87\%  & 11.7\% & -3.0\% & -2.9\% & -0.22\% & -2.9\% \\ \midrule
+\addlinespace[10pt]
+\textbf{(3)}  \textit{USTR tariffs + multiple sectors} \\
+\cmidrule(lr){1-1}
+\addlinespace[3pt]
+USA & 0.60\% & -13.4\% & -24.2\% &-22.6\% & 0.01\% & 7.1\% \\  \addlinespace[3pt]
+non-US (average) & -1.38\%  & 4.2\% & -2.2\% & -2.2\% & -0.12\% & -1.5\% \\ \midrule
+\addlinespace[10pt]
+\multicolumn{7}{l}{\textbf{Post-Retaliation Scenarios}} \\
+\midrule
+\addlinespace[5pt]
+\textbf{(1)}  \textit{reciprocal retaliation + one sector} \\
+\cmidrule(lr){1-1}
+\addlinespace[3pt]
+USA & -3.38\% & -27.1\% & -71.4\% &-56.6\% & -1.20\% & 9.3\% \\  \addlinespace[3pt]
+non-US (average) & -1.17\%  & 20.1\% & -6.5\% & -6.3\% & -0.32\% & -2.0\% \\ \midrule
+\addlinespace[5pt]
+\textbf{(2)}  \textit{optimal retaliation + one sector} \\
+\cmidrule(lr){1-1}
+\addlinespace[3pt]
+USA & -5.26\% & -30.9\% & -79.9\% &-62.5\% & -1.86\% & 7.5\% \\  \addlinespace[3pt]
+non-US (average) & -1.13\%  & 24.2\% & -7.7\% & -7.0\% & -0.34\% & -0.5\% \\ \midrule
+\addlinespace[5pt]
+\textbf{(3)}  \textit{reciprocal retaliation + multiple sectors}  \\
+\cmidrule(lr){1-1}
+USA & -1.02\% & -21.3\% & -32.6\% &-30.1\% & -0.55\% & 4.4\% \\  \addlinespace[3pt]
+non-US (average) & -0.71\%  & 7.8\% & -3.8\% & -3.5\% & -0.15\% & 0.1\% \\  \bottomrule
+\end{tabular}}
+\vspace{-10pt}
+\begin{flushleft}
+\footnotesize{\textit{Notes}: This table reports changes in economic variables (relative to pre-Liberation Day) under input-output linkages. The ``non-US (average)'' reflects GDP-weighted averages across non-U.S. countries. In all scenarios, tariff revenues are used to reduce income taxes. The change in ``prices'' represents the change in the country's CES price index $P_i$ relative to the global GDP-weighted average price index.}
+\end{flushleft}
+\end{table}
+
+The second panel shows that the gains from optimal tariffs remain similar to our baseline model, underscoring that the USTR tariffs deviate even more from optimal design once input-output linkages are considered. The reason why input-output connections have minimal impact on the gains from optimal tariffs can be intuitively explained. First, since imports contain domestic labor content, tariffs become a less effective tool for increasing the relative demand for domestic labor and raising local wages, which reduces the gains. Conversely, the same relative wage increase leads to larger welfare improvements when input-output effects are present. Ultimately, these two contrasting forces counterbalance each other, leaving the gains from optimal tariffs largely unaffected.
+
+However, under input-output effects, the negative terms-of-trade externalities of tariffs on trading partners and the welfare costs of retaliation are markedly magnified. Reciprocal retaliation against USTR tariffs would reduce U.S. welfare by 3.4\% in the single-sector model with IO linkages compared to the baseline model analyzed in Table \ref{tab: T2}. Losses would be larger under optimal retaliation but smaller in a multi-sector setting.\footnote{The multi-sector model predicts smaller U.S. losses from retaliation compared to the single-sector model, possibly because it exempts services--an important component of U.S. exports--from retaliatory tariffs. However, differences in underlying data and parameters complicate direct comparisons between models.} That said, the incentive to retaliate is also greater in the multi-sector model, where partners can cut their welfare losses by nearly half. The trade war would also reduce global employment by up to 0.6\%, as shown in Table 7 of Appendix I.
+
+\section{Conclusion}
+
+We provide an initial assessment of the long-term effects of the Liberation Day tariffs on the U.S. and its trading partners. While these tariffs temporarily improve the U.S.'s terms of trade and reduce its trade deficit, any welfare gains are offset by losses if trading partners retaliate. Even without retaliation, U.S. welfare gains are limited due to the tariffs' flawed design, while trading partners face significant negative impacts. In the end, the U.S. may modestly decrease its trade deficit following the tariff war, but only at a high economic cost to itself and its partners.
+
+\bibliographystyle{ecta}
+\bibliography{maga_bib}
+
+\end{document}

@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "can-trade-policy-mitigate-climate-change",
+    "status": "success",
+    "notes": [
+      "Disabled external appendix cross-references for HTML compilation.",
+      "Rewrote external include for Table_Industry_SumStat to local Tables/Table_Industry_SumStat.tex.",
+      "Rewrote external include for Table_Country_SumStat to local Tables/Table_Country_SumStat.tex.",
+      "Rewrote external include for Table_CRS_3panels to local Tables/Table_CRS_3panels.tex.",
+      "Rewrote external include for ClimateClub_Table_scenario2 to local Tables/ClimateClub_Table_scenario2.tex.",
+      "Rewrote external include for ClimateClub_summary to local Tables/ClimateClub_summary.tex.",
+      "Ran biber for bibliography resolution."
+    ],
+    "asset_count": 0,
+    "footnote_count": 56,
+    "cache_used": false
+  },
+  {
+    "slug": "can-trade-taxes-be-a-major-source-of-government-revenue",
+    "status": "success",
+    "notes": [
+      "Replaced JEEA class with article for HTML compilation stability.",
+      "Replaced JEEA Author macro with article author command.",
+      "Replaced JEEA Abstract macro with standard abstract environment."
+    ],
+    "asset_count": 5,
+    "footnote_count": 28,
+    "cache_used": false
+  },
+  {
+    "slug": "discrete-trade",
+    "status": "success",
+    "notes": [
+      "Removed PDF/backend-specific driver options from documentclass for HTML compilation.",
+      "Simplified hyperref package options for HTML compilation.",
+      "Disabled dcolumn package for HTML compilation.",
+      "Replaced dcolumn alignment specs with right-aligned columns for HTML compilation.",
+      "make4ht reported errors during the first pass; attempting to use any generated TeX4ht outputs.",
+      "Ran bibtex for bibliography resolution.",
+      "make4ht reported errors during the second pass; attempting to use any generated HTML/CSS outputs."
+    ],
+    "asset_count": 0,
+    "footnote_count": 59,
+    "cache_used": false,
+    "keywords_text": null
+  },
+  {
+    "slug": "economic-impacts-of-liberation-day-tariffs",
+    "status": "success",
+    "notes": [],
+    "asset_count": 1,
+    "footnote_count": 13,
+    "cache_used": false
+  },
+  {
+    "slug": "new-industrial-policy",
+    "status": "success",
+    "notes": [
+      "Ran biber for bibliography resolution."
+    ],
+    "asset_count": 2,
+    "footnote_count": 0,
+    "cache_used": false
+  },
+  {
+    "slug": "profits-scale-economies-and-the-gains-from-trade-and-industrial-policy",
+    "status": "success",
+    "notes": [
+      "Injected vendored AEA template files into the temp build.",
+      "Replaced AEA class with article for HTML compilation stability.",
+      "Disabled xr package for HTML compilation.",
+      "Disabled external appendix cross-references for HTML compilation.",
+      "Disabled strictpagecheck for HTML compilation."
+    ],
+    "asset_count": 5,
+    "footnote_count": 63,
+    "cache_used": false
+  },
+  {
+    "slug": "the-cost-of-a-global-tariff-war",
+    "status": "success",
+    "notes": [
+      "Disabled strictpagecheck for HTML compilation.",
+      "make4ht reported errors during the first pass; attempting to use any generated TeX4ht outputs."
+    ],
+    "asset_count": 7,
+    "footnote_count": 44,
+    "cache_used": false
+  },
+  {
+    "slug": "trade-and-technology-adoption-in-distorted-economies",
+    "status": "success",
+    "notes": [
+      "make4ht reported errors during the first pass; attempting to use any generated TeX4ht outputs.",
+      "Ran bibtex for bibliography resolution.",
+      "make4ht reported errors during the second pass; attempting to use any generated HTML/CSS outputs."
+    ],
+    "asset_count": 26,
+    "footnote_count": 37,
+    "cache_used": false
+  }
+]

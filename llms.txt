@@ -1,0 +1,18 @@
+# Ahmad Lashkaripour
+
+> Personal research site for Ahmad Lashkaripour, Associate Professor of Economics at Indiana University.
+> Main topics: trade policy, tariffs, industrial policy, climate clubs, WTO, trade agreements, markups, scale economies, and quantitative trade models.
+
+## Key entry points
+- Research hub: https://alashkar.pages.iu.edu/Research.html
+- About page: https://alashkar.pages.iu.edu/About.html
+- Teaching page: https://alashkar.pages.iu.edu/Teaching.html
+
+## Topic hubs
+- Climate Clubs and Carbon Border Adjustments: https://alashkar.pages.iu.edu/topics/climate-clubs-and-carbon-border-adjustments.html
+- Industrial Policy: https://alashkar.pages.iu.edu/topics/industrial-policy.html
+- Markups, Scale Economies, and Trade: https://alashkar.pages.iu.edu/topics/markups-scale-economies-and-trade.html
+- Quantitative Trade Models: https://alashkar.pages.iu.edu/topics/quantitative-trade-models.html
+- Tariffs and Retaliation: https://alashkar.pages.iu.edu/topics/tariffs-and-retaliation.html
+- Trade Policy: https://alashkar.pages.iu.edu/topics/trade-policy.html
+- WTO and Trade Agreements: https://alashkar.pages.iu.edu/topics/wto-and-trade-agreements.html

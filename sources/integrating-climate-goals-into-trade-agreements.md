@@ -1,0 +1,2346 @@
+---
+title: A Framework for Integrating Climate Goals into Trade Agreements
+slug: integrating-climate-goals-into-trade-agreements
+status: working-paper
+date: '2025-03-01'
+display_date: March 2025
+venue: Working paper
+authors:
+- Farid Farrokhi
+- Ahmad Lashkaripour
+- Homa Taheri
+coauthors:
+- Farid Farrokhi
+- Homa Taheri
+abstract: 'This paper develops a framework for integrating carbon pricing into existing
+  international trade agreements, which traditionally have overlooked climate concerns.
+  We start by showing that: (i) Countries benefiting most from trade agreements also
+  generate higher trade-related emissions. (ii) National-level carbon taxes create
+  pecuniary terms-of-trade externalities, causing the burden of carbon taxes imposed
+  in one country to fall onto consumers elsewhere. Finding (i) indicates that contingent
+  trade reforms that link market access to carbon pricing could effectively reduce
+  emissions. However, due to the pecuniary externalities described by (ii), a redistribution
+  mechanism may be necessary to equalize the tax burden internationally. To address
+  this, we propose a Global Climate Fund to redistribute border-related carbon tax
+  revenues. Quantitative analysis reveals that even a simple fund allocation mechanism
+  could incorporate carbon pricing of up to $119 per ton of CO2 within current trade
+  regimes, achieving a 50% reduction in global emissions.'
+summary: This paper develops a framework for embedding carbon pricing into existing
+  trade agreements. It highlights why climate-compatible trade integration may require
+  both contingent market access rules and international redistribution.
+keywords:
+- trade agreements
+- climate goals
+- carbon pricing
+- global climate fund
+- trade policy
+topics:
+- climate-clubs-and-carbon-border-adjustments
+- wto-and-trade-agreements
+- trade-policy
+pdf_url: FLT_2025.pdf
+markdown_url: sources/integrating-climate-goals-into-trade-agreements.md
+canonical_url: https://alashkar.pages.iu.edu/papers/integrating-climate-goals-into-trade-agreements.html
+updated_at: '2026-04-01'
+sort_order: 2
+published_url: null
+slides_url: BL_Slides_ASSA_2022.pdf
+working_paper_url: null
+online_appendix_url: null
+dashboard_url: null
+replication_slug: null
+raw_replication_url: null
+---
+
+## Machine-readable full text
+
+This section was extracted with OpenDataLoader PDF from the hosted PDF so the full text is accessible in HTML and Markdown.
+
+## Abstract
+
+This paper develops a framework for integrating carbon pricing into existing international trade agreements, which traditionally have overlooked climate concerns. We start by showing that: (i) Countries bene ting most from trade agreements also generate higher trade-related emissions. (ii) National-level carbon taxes create pecuniary terms-of-trade externalities, causing the burden of carbon taxes imposed in one country to fall onto consumers elsewhere. Finding (i) indicates that contingent trade reforms that link market access to carbon pricing could e ectively reduce emissions. However, due to the pecuniary externalities described by (ii), a redistribution mechanism may be necessary to equalize the tax burden internationally. To address this, we propose a Global Climate Fund to redistribute border-related carbon tax revenues. Quantitative analysis reveals that even a simple fund allocation mechanism could incorporate carbon pricing of up to $    per ton of CO within current trade regimes, achieving a   % reduction in global emissions.
+
+## Introduction
+
+International trade agreements, such as the World Trade Organization (WTO), have historically evolved with little consideration of climate change. Likewise, international climate agreements, such as the Paris Climate Accord, have largely excluded trade policy from their scope. This disconnect poses a signi cant dilemma as trade agreements can increase carbon emissions and exacerbate climate externalities, and climate mitigation policies such as carbon pricing may create pecuniary terms-of-trade externalities. An old literature on issue linkages in trade agreements explores these challenges through theoretical models (Maggi, ). However, it provides limited guidance on measurement and practical pathways for integrating climate policies into existing trade agreements. Key questions remain unresolved:
+
+( ) How large are the cross-externalities between trade and climate empirically?
+
+*Email: farid.farrokhi@bc.edu, alashkar@iu.edu, and htaheri@iu.edu.
+
+( ) What institutional framework could e ectively incorporate carbon pricing into existing trade
+
+agreements?
+
+To address these questions, we use a rich quantitative trade model with empirically-estimated gravityparameterstoevaluatepotentialoutcomesundercounterfactualtradeandclimateregimes. Our model features multiple industries and countries connected through  nal and intermediate input trade, explicitly incorporating fossil fuel supply chains via input-output linkages. Carbon emissions arise from fossil fuel combustion, either as intermediate inputs in industrial productionoras nalconsumptionbyhouseholds. Thesefeaturesallowustoassessthetradeandclimate externalities associated with trade policies and carbon pricing reforms in a uni ed framework.
+
+Using this framework, we assess how trade agreements and carbon pricing a ect real consumption and carbon emissions across countries. We begin with a theoretical analysis, formalizing the general equilibrium mechanisms that shape the interaction between trade and climate policies. Our analysis revealsthat the cross-externalities between trade and climate possess inherentpropertiesthatmakethemwell-suitedforpolicylinkage. However, theempiricalmagnitudeof these cross-externalities is crucial for e ective policy design, necessitating a rigorous quantitative analysis. We conduct this analysis in three steps.
+
+First, we analyze how existing trade agreements, such as the WTO and regional trade agreements (RTAs) have contributed to carbon emissions. These agreements have been instrumental in boosting global consumption. However, our estimates indicate that the consumption gains facilitated by trade agreements are closely associated with higher trade-related emissions. At the global level, dissolving the WTO and RTAs would result in a  . % decline in real consumption and a  . % reduction in carbon emissions. Across countries, we  nd a strong positive correlation between economic losses from dissolving these agreements and the resulting emission reductions. This suggests that tying international market access to carbon pricing presents a promising path to cutting emissions. Countries that stand to lose the most from taxing trade-related emissions, and might be tempted to withdraw, are also the ones that bene t the most from global market access and would su er more from withdrawal.
+
+Second, weexaminehowcarbonpricing, withinthecurrentnexusoftradeagreements, a ects real consumption across countries. Existing climate policies, such as the EU's Emission Trading System, regulate carbon emissions through demand-side taxes or emission caps. Our  ndings indicate that these policies reduce energy demand, lowering international energy prices and generating terms-of-trade transfers from energy-exporting to energy-importing countries. In contrast, supply-side carbon taxes that limit fossil fuel extraction, such as crude oil or coal, have the opposite e ect: they raise global energy prices and cause terms-of-trade transfers from energyimporting to energy-exporting countries. While both approaches can achieve global e ciency, they di er in their international tax incidence and distributional consequences.
+
+Our analysis reveals that the terms-of-trade bene ts from carbon pricing can be substantial
+
+Speci cally, we use gravity estimation to identify the impact of WTO membership and regional trade agreements on trade barriers.
+
+enough to o set the entire carbon tax burden on the domestic economy. For instance, if all countries implement a uniform demand-side carbon tax, those heavily reliant on imported fossil fuel energy may experience real consumption gains. These gains are in addition to the climate bene ts that accrue to all nations. They occur because terms-of-trade transfers more than compensate for the negative impact of carbon taxes on real consumption. Notably, there is a strong correlation between these real consumption bene ts and a country's dependence on primary energy imports. For a nation that relies entirely on imported energy, a demand-side carbon tax functions similarly to an import tari  on fossil fuels, yielding welfare gains consistent with the optimal tari  argument. However, these gains for energy importers come at the expense of energy exporters. Therefore, e orts to coordinate international carbon pricing must address these terms-of-trade externalities, much like traditional trade agreements do.
+
+In our third and  nal step, we explore ways to integrate carbon pricing into existing trade agreements. The aim is to incorporate carbon-pricing schemes into these agreements in a manner that prevents countries from withdrawing. For this to work, the cost of carbon pricing should not exceed the bene ts of market access obtained through trade agreements. To assess this, we examine each country's welfare gains when moving from a counterfactual without trade agreements (the breaking point) to an equilibrium that includes trade agreements with carbon pricing requirements. We consider two scenarios for the breaking point. The  rst is an across the board breakdown of trade cooperation, in which trade barriers increase multilaterally for all countries. The second is a scenario where a country unilaterally withdraws from the agreements. In each scenario, the agreement is sustainable only if the move from the breaking point to agreement is Pareto improving, meaning it increases the welfare of every participating country.
+
+Before conducting our main analysis, we  rst highlight further considerations in our policy design by examining a naive reform approach. In this scenario, countries would be required to raise their carbon taxes until the cost of carbon pricing o sets   % of the gains from trade agreements. Since countries bene t unevenly from these agreements, this approach results in widely varying carbon tax requirements, revealing two fundamental design challenges. First, discriminatory tax requirements are ine cient. Uneven carbon tax rates across countries cause carbon leakage, reducing the policy's e ectiveness. Additionally, since abatement costs are convex, the marginal returns to carbon taxation diminish within each region. This suggests that an optimal pricing system should aim to minimize tax discrepancies across countries. Second, political feasibility presents a signi cant obstacle. This naive reform would require some countries to impose extremely high carbon taxes, which may be politically di cult to implement. Similar challenges emerge with policies involving unrestricted, direct monetary transfers between countries.
+
+The  rst scenario resembles an N-player Nash bargaining game, where the disagreement point corresponds to the complete dissolution of the agreement. The second scenario re ects a non-cooperative game, in which trade agreements represent a Nash coalition of all participating countries, with no individual country having an incentive to deviate. In both cases, a country faces a binary decision: either agree to the carbon pricing requirement or reject it, resulting in the breaking point outcome. The outcomes under the breaking point are evaluated using two approaches. First, by estimating the impact of trade agreements on trade costs through gravity estimation (as our main speci cation). Second, by computing strategically optimal tari s in the non-cooperative equilibrium (as a robustness check).
+
+While some transfer schemes can achieve a Pareto improvement, making all countries better o  relative to the
+
+To address these challenges, we propose a system that combines carbon taxes with a Global Climate Fund, which collects revenues generated from border-related taxes. Under a demandside tax, each country contributes to the Fund an amount equal to its carbon tax multiplied by the carbon content of its imports. This design is motivated by our observation that under a supplyside tax, these revenues would be captured by exporters rather than importing countries. The Fund instead splits the collected revenues between exporters and importers according to a simple allocation rule, mitigating the uneven burden of carbon taxes across countries.
+
+We explore various allocation rules, each designed to compensate countries that either bene t less from trade agreements or bear higher costs due to carbon pricing. For example, we consider allocations based on a country's domestic expenditure share, which is a proxy for the gains from trade agreements. We also analyze alternative formulas tied to a country's expenditure on energy or it's share of global energy exports—both of which act as proxies for terms-of-trade losses caused by demand-side carbon pricing. In each case, we calculate the maximum uniform carbon tax level under which the agreement, with the speci ed redistribution scheme, is Pareto-improving.
+
+We  nd that incorporating side payments to compensate energy exporters signi cantly enhances the e ectiveness of climate agreements in reducing carbon emissions. In a multilateral breaking point scenario without side payments, the highest Pareto-improving carbon price is limited to $   per ton of CO , resulting in a   . % reduction in global emissions. This means that all countries are willing to bear a $   tax burden to prevent the collapse of global trade cooperation. However, when side payments are introduced—allocated based on each country's domestic fossil fuel energy expenditure—the maximum carbon price rises to $    per ton of CO , leading to a   . % reduction in global emissions. Similar patterns emerge under unilateral breaking point scenarios. These reductions are substantial, addressing nearly the entire climate externality associated with carbon emissions, which is estimated at $    per ton based on recent social cost of carbon estimates.
+
+Related Literature. This paper contributes to several strands of literature. First, it complements studies on the design of international agreements where free trade is contingent on environmental action. Barrett ( ) is a pioneering study on the use of trade penalties as a mechanism to enforce international environmental agreements. In Nordhaus ( )'s climate club proposal, import tari s function as penalties to incentivize reluctant governments to join the club, which requires them to raise their local carbon taxes. Farrokhi and Lashkaripour ( ) advances this line of research by characterizing optimal trade penalties in a general equilibrium trade model to examine climate clubs using a framework calibrated to multi-country, multi-industry data. This paper complements these studies in three key ways. First, climate clubs use trade taxes as an
+
+trade agreement breaking point, they may be impractical to implement without a supporting mechanism. Therefore, our goal is to design a mechanism within international agreements that ensures Pareto improvements while addressing the political feasibility challenges of unrestricted transfers.
+
+In addition, see Ederington ( ) for a discussion on incorporating environmental policy into trade agreements, Maggi ( ) for a review of issue linkage in international cooperation, and Harstad ( ) for how contingent trade taxes can help preserve transboundary environmental resources.
+
+enforcing tool for promoting global climate action, a task that may require an overhaul of the existing world trade system. Instead, we here explore how climate policy can be integrated into existing set of trade agreements. In this context, we particularly highlight the role of the WTO and regional trade agreements in reducing non-tari  trade barriers, which represent a substantial share of trade costs. Second, we propose mechanisms that incorporate side payments into international agreements, showing that such transfers signi cantly enhance their e ectiveness. In doing so, we leverage di erences in the international incidence of supply-side versus demandside carbon taxes. Third, our analysis is based on a more detailed speci cation of global fossil fuel supply chains, which is central to tracing the international consequences of carbon taxation.
+
+Additionally, our work engages with the expanding research on trade and the environment. One strand of this literature investigates how trade and trade policy in uence environmental outcomes, ranging from local air pollution to global carbon emissions to the depletion of natural resources such as forests, e.g., Antweiler, Copeland, and Taylor ( ), Cristea et al. ( ), Shapiro ( ), Shapiro and Walker ( ), and Farrokhi et al. ( ) among others. Another strand examines the implications of environmental and energy policies in open economies, e.g., Larch and Wanner ( ), Böhringer, Carbone, and Rutherford ( ), Farrokhi ( ), Shapiro ( ), and Ritel et al. ( ) among others. Additionally, see Copeland, Shapiro, and Taylor ( ); Desmet and Rossi-Hansberg ( ) for recent reviews of the literature on trade and the environment. Our work contributes to these literatures by highlighting the cross-externalities between the domains of trade and climate—that trade agreements amplify carbon emissions, while carbon pricing creates terms-of-trade externalities. We explore designs for international agreements that address these cross-externalities, o ering pathways to integrate trade and climate objectives into a uni ed framework.
+
+## Theoretical Framework
+
+The global economy consists of multiple countries, indexed by i,j ∈ N = {1,...,N}, and multiple industries divided into primary energy industries k ∈ E1 (such as crude oil, natural gas, and coal), secondary energy industries k ∈ E2 (such as re ned petroleum and electricity), and non-energy industries k ∈ F (such as chemicals, electronics, and transportation) with E ≡ E1∪E2 denoting all energy industries and G ≡ E ∪ F denoting the entire set of industries. Each country i is endowed by exogenously-given Li workers and {Ri,k}k∈E
+
+energy reserves, where Ri,k is the speci c input required in the production of primary energy k ∈ E1. Workers are perfectly mobile across industries but immobile across countries and each worker supplies one unit of labor inelastically. All industries are tradeable. CO2 emissions are generated by the combustion of primary or secondary energy when they are used as intermediate inputs in industrial production, or when consumed as  nal goods by households.
+
+1
+
+Byexaminingglobal agreements, ouranalysisalsocontributestotheliteratureonthereachofunilateral tradepolicy in achieving environmental objectives, such as Markusen ( ) and Kortum and Weisbach ( ).
+
+Consumers and producers are in nitesimal and so they do not internalize the impact of their consumption or production decisions on climate change.
+
+Households. A representative household in country i has the following utility function that combines the disutility from global carbon emissions with the utility derived from consumption:
+
+Ui = Ci − ∆i Z(global) , Ci = Ci Ci,k(H)
+
+( )
+
+k∈G
+
+Here, Ci iscountryi'srealconsumption, whichaggregatesoverhouseholdconsumptionquantities Ci,k(H) of each good k ∈ G, and ∆i (.) is country i's climate-change damage function, which measures the loss from a marginal increase in global carbon emissions, Z(global). Utility maximization delivers household's expenditure share on industry k by
+
+βi,k = bi,k P ̃i,k
+
+,Ei ( )
+
+k∈G
+
+satisfying k∈G βi,k = 1, where P ̃i,k is the consumer price of good k in country i (the tilde notation di erentiates them from producer prices), and total expenditure is given by:
+
+P ̃i,kCi,k(H) ( )
+
+Ei =
+
+k∈G
+
+Supply of Primary Energy. Each primary energy industry (k ∈ E1) employs energy reserves, Ri,k, as speci c input, as well as labor, Li,k, and intermediate inputs from various industries g ∈ G,
+
+Ci,gk(I)
+
+, as variable inputs:
+
+g∈G
+
+Qi,k = φi,kFi,k Ri,k,Li,k, Ci,gk(I)
+
+g∈G
+
+, k ∈ E1 ( )
+
+where Qi,k is country i's supply of primary energy k ∈ E1, and φi,k is an exogenous productivity parameter. De ne the output elasticity with respect to each input as
+
+∂ lnFi,k (.) ∂ lnRi,k
+
+∂ lnFi,k (.) ∂ lnLi,k
+
+∂ lnFi,k (.) ∂ lnCi,gk
+
+αi,kR ≡
+
+, αi,kL ≡
+
+, αi,gkI ≡
+
+The production function Fi,k (.) is homogeneous of degree one ensuring constant-returns to scale: αi,kL + αi,kR + g αi,gkI = 1.
+
+Producers are perfectly competitive. Cost minimization given the wage rate wi, rental rate ri for energy-speci c reserves, and consumer prices of intermediate goods P ̃i,g
+
+entail that the producer price of the energy variety k produced in origin i and shipped to destination j is
+
+g∈G
+
+ci,k φi,k
+
+Pij,k = dij,k
+
+, with ci,k = ci,k ri,k,wi, P ̃i,g
+
+g∈G
+
+, k ∈ E1 ( )
+
+Here, ci,k(.) is a homogeneous-of-degree-one cost function associated with the production function Fi,k (.) and dij,k ≥ 1 denotes iceberg trade costs. Per cost minimization, the cost share of each input (provided that it is non-zero) is equal to its corresponding output elasticity, αi,kR ,αi,kL , or αi,gkI .
+
+Supply of Secondary Energy and Non-energy Industries. Production in the secondary energy or non-energy industry di ers from primary in that only uses labor and intermediate inputs. Each secondary energy or non-energy industry k ∈ E2 ∪ F in origin i is served by symmetric competitive  rms that employ labor and intermediate inputs. Aggregate supply from each industry is represented by a constant-reruns-to-scale production function Fi,k(.),
+
+Qi,k = φi,kFi,k Li,k, Ci,gk(I)
+
+g∈G
+
+, k ∈ E2 ∪ F, ( )
+
+where φi,k is total factor productivity, Li,k is labor employment, and Ci,kg(I) denotes industry k's use of intermediate good g ∈ G—including all forms of energy, primary or secondary, and non-energy
+
+goods. As before αi,kL and αi,gkI denote the output elasticity with respect to labor and intermediate inputs, with αi,kL + g αi,gk = 1 for all k ∈ E2 ∪ F.
+
+Faced by the wage rate wi and consumer prices of intermediate goods P ̃i,g
+
+, cost minimization and perfect competition imply the producer price of the variety of industry k that is produced in origin i and shipped to destination j,
+
+g∈G
+
+Pij,k =
+
+ci,k φi,k
+
+dij,k, where ci,k = ci,k wi, P ̃i,g
+
+g∈G
+
+, k ∈ E2 ∪ F, ( )
+
+where ci,k(.) is a homogeneous-of-degree-one cost function associated with the production function Fi,k (.) and dij,k ≥ 1 denotes iceberg trade costs. Cost minimization equalizes the cost share of each input with its output elasticity.
+
+Policy Wedges. Carbon Policy Wedges. Country i's government has access to (i) production taxes, t(i,kp), applied in country i to outputs of industry k regardless of destination markets; and (ii) consumption taxes, t(i,kc), applied in country i to the consumption of good k regardless of the origin countries.
+
+In our applications, we focus on production and consumption taxes that target carbon emissions. Speci cally, production-side carbon taxes target carbon emission content of primary energy at the location of extraction, e.g., taxes on coal extraction; and, consumption-side carbon taxes target carbon emission content of primary or secondary energy at the location of intermediate use or  nal consumption, e.g., taxes on coal when used in electricity production.
+
+Considering the role of fossil fuel energy along the supply chain, the cost share of primary energy is understood to be empirically large in secondary energy industries, e.g., the cost share of crude oil in the re ned petroleum industry and those of natural gas and coal in the electricity industry. In turn, downstream industries such as textiles or transportation typically purchase energy in the form of secondary energy.
+
+Our analysis accommodates di erent consumption taxes for di erent end-users or di erent production taxes for
+
+Trade Policy Wedges. As detailed in Section  . , we specify iceberg trade costs, dij,k, as a combination of policy and non-policy components. Joining trade agreements reduces the policy component, which we interpret as non-tari  trade barriers that do not generate revenue. In Section  . , we also consider an alternative speci cation that explicitly includes trade taxes, where changes in trade barriers re ect the di erence between cooperative and non-cooperative levels of import tari s. In the interest of exposition, we present the model without trade taxes here, with the speci cation including trade taxes detailed in Appendix B.
+
+Trade and Price Aggregation. There is a representative distributor in each country i that procures international varieties {Cji,k}i, at a er-production-tax prices 1 + t(j,kp) Pji,k
+
+, from suppliers j = 1,..,N. The distributor aggregates these varieties into a composite bundle using a CES technology,
+
+j
+
+ 
+
+ 
+
+σk σk−1
+
+N
+
+σk−1 σk
+
+1 σk
+
+##### , k ∈ G, ( )
+
+Ci,k =
+
+b
+
+ji,kC
+
+ji,k
+
+j=1
+
+where bji,k is a demand shi er and σk is the elasticity of substitution between national varieties within industry k. The distributor's demand pins down the within-industry expenditure share on variety ji,k (origin j–destination i–industry k), λji,k,
+
+ 
+
+ 
+
+1 + t(j,kp) Pji,kCji,k n 1 + t(n,kp) Pni,kCni,k
+
+1 + t(j,kp) Pji,k Pi,k
+
+λji,k ≡
+
+= bji,k
+
+where the price of the composite bundle, Pi,k, is given by:
+
+1−σk
+
+, k ∈ G. ( )
+
+ 
+
+ 
+
+1 1−σk
+
+1−σk
+
+bji,k 1 + t(j,kp) Pji,k
+
+##### , k ∈ G. (  )
+
+Pi,k =
+
+j
+
+The composite bundle is sold to domestic producers as intermediate input and households as  nal consumptionwiththeadditionofaconsumptiontax, ti,k(c), resultinginthefollowingconsumerprice,
+
+##### P ̃i,k = 1 + t(i,kc) Pi,k, k ∈ G. (  )
+
+Total Output and Consumption. Country i's aggregate output in industry k, Qi,k, given by Equation ( ) for primary energy and ( ) for other industries, equals its corresponding global demand:
+
+##### Qi,k =
+
+j
+
+##### dij,kCij,k, (  )
+
+di erent producers. Note that, even uniform carbon prices translate to non-uniform tax rates because carbon intensity varies across goods. We have adopted simpler notation to maintain clarity in our exposition.
+
+where Cij,k is the consumption of the variety from country i–industry k in market j. In turn, the composite consumption bundle, Ci,k, that aggregates over {Cji,k}j according to Equation ( ), equals the sum of intermediate use by industries and  nal consumption by households:
+
+Ci,k = Ci,k(H) +
+
+g
+
+##### Ci,kg(I) (  )
+
+CO2 Emissions. The use of primary and secondary energy k ∈ E ≡ E1 ∪ E2 by households and industries generates CO2 emissions, which are proportional to the amount of their energy combustion governed by technical coe cients, v, as the emission per unit of energy use, which we treat as exogenous parameters. Speci cally, CO2 emissions associated with energy k ∈ E used by  nal consumers and for producing good g ∈ G in country i equal:
+
+ 
+
+Zi,k(H) = vi,k(H)Ci,k(H), Ci,k(H) = βPi,k ̃ Ei
+
+, for energy k ∈ E (  )
+
+i,k
+
+I i,kgPii,gQi,g
+
+Zi,kg(I) = vi,kg(I) Ci,kg(I) , Ci,kg(I) = α
+
+
+
+P ̃i,k
+
+By aggregation, national and global emissions are given by:
+
+Zi =
+
+k∈E
+
+Zi,k(H) +
+
+k∈E g
+
+Zi,kg(I) , Z(global) =
+
+Zi (  )
+
+i∈N
+
+Tax revenues and the balance of budget. The government of country i collects a total tax revenue, Ti, derived from taxes on production and consumption:
+
+Ti =
+
+k
+
+t(i,kp)Pii,kQi,k +
+
+k
+
+ti,k(c) 1 + ti,k(c)
+
+βi,kEi +
+
+g
+
+##### αi,kgI Pii,gQi,g (  )
+
+Assuming that trade is balanced and tax revenues are rebated to households, the balance of budget holds when national expenditure equals national income as the sum of tax revenues plus factor rewards:
+
+[ri,kRi,k] (  )
+
+Ei = Yi ≡ Ti + wiLi +
+
+k∈E1
+
+General Equilibrium. For a given set of taxes t(i,kp),t(i,kc) , a general equilibrium is a vector of wage rates {wi}i and rental rates on energy reserves {ri,k}i,k∈E
+
+such that consumption and production
+
+1
+
+quantities Ci,Ci,k,Cij,k,Ci,k(H),Ci,gk(I) ,Qi,k , prices Pij,k,Pi,k,P ̃i,k , CO2 emissions Zi,k(H),Zi,gk(I) ,Zi,Z(world) , and aggregate expenditure, income and tax revenues {Ei,Yi,Ti} are satis ed according to Equations - ; labor markets clear,
+
+wiLi =
+
+k
+
+αi,kL
+
+j
+
+  λij,k
+
+1 + t(j,kc)
+
+βj,kEj +
+
+g
+
+αj,kgI Pjj,gQj,g
+
+ , (i ∈ N); (  )
+
+and markets of energy reserves clear,
+
+ri,kRi,k = αi,kR
+
+j
+
+  λij,k
+
+1 + t(j,kc)
+
+βj,kEj +
+
+g
+
+αj,kgI Pjj,gQj,g
+
+ , (i ∈ N,k ∈ E1). (  )
+
+## Theoretical Analysis of Trade and Carbon Policy Reforms
+
+In this section, we begin by analyzing the impact of trade and carbon policies on emission and consumption. We then explore the mechanisms through which trade policies create climate externalities and carbon policies lead to terms-of-trade externalities.
+
+###  .  Emission and Consumption E ects of Trade and Carbon Policies
+
+We assume that the production functions, denoted by Fi,k(.), follow a Cobb-Douglas speci cation, which allows for closed-form analytical solutions. Speci cally, output in industry k in country i is given by:
+
+ 
+
+ 
+
+αIi,gk
+
+αLi,k Ri,k αi,kR
+
+αRi,k
+
+Ci,gk(I) αi,gkI
+
+Li,k αi,kL
+
+Qi,k = φi,k
+
+##### ,
+
+g∈G
+
+where αi,kL + αi,kR + g∈G αi,gkI = 1. Similarly, household consumption is governed by a CobbDouglas utility aggregator across industries:
+
+ 
+
+ 
+
+βi,k
+
+Ci,k(H) βi,k
+
+, with
+
+βi,k = 1
+
+Ci =
+
+k∈G
+
+k∈G
+
+Our analysis focuses on two key policy changes: (i) trade liberalization and (ii) carbon pricing policies. We model carbon policy changes as modi cations to either demand-side or output taxes on energy goods. Using the hat-algebra notation, the policy shocks of interest are de ned as:
+
+1 + t(i,kp)
+
+, 1 + t(i,kc),
+
+i, k∈E1
+
+∼ carbon policy shock dˆin,g
+
+i, k∈E1∪E2
+
+∼ trade policy shock
+
+i,n,g
+
+The change in country i's emissions in response to these policy shocks follows the accounting identity:
+
+zi,g(H)Zˆi,g(H) +
+
+zi,gk(I) Zˆi,gk(I) , (  )
+
+Zˆi =
+
+g∈E
+
+k∈G
+
+(I) i,gk
+
+(H) i,g
+
+where zi,gk(I) ≡ Z
+
+Zi and zi,g(H) ≡ Z
+
+Zi represent baseline emission shares. The  rst summation, indexed over g ∈ E, re ects that emissions arise solely from energy use, whether primary or
+
+secondary. The second summation, indexed over k ∈ G , captures the fact that all industries consume energy inputs. Aggregating across countries, the change in global emissions is given by the weighted sum of national emission changes:
+
+Zˆ(global) =
+
+ziZˆi where zi ≡ Zi/Z(global)
+
+i∈N
+
+Next, we characterize the change in emissions for each energy type and country starting from industrial emissions.
+
+Change in Industrial Emissions. To characterize the change in industrial emissions, Zˆi,gk(I) , we appeal to the proportionality condition, Zi,gk = vi,gkCi,gk, which links emissions for each energy transaction to the quantity of energy inputs, where the conversion factor, vi,gk, is an engineering constant. Considering the Cobb-Douglas production function with country and industry-speci c weights, we can specify the unit input cost as
+
+L i,k
+
+R i,k
+
+ci,k = wα
+
+i rα
+
+i,k
+
+g∈G
+
+I i,gk
+
+P ̃α
+
+i,g ,
+
+Note that the share of reserves in production is only non-zero in primary energy sectors and zero otherwise, i.e., αi,kR > 0 if k ∈ E1 and αi,kR = 0 for all k ∈/ E1. The intermediate input price index, P ̃i,g = 1 + t(i,gc) Pi,g, is the a er-tax price of input bundle g, where the tax ti,g(c) is revised only for energy inputs (g ∈ E). Base on cost minimization,
+
+αi,gk(I) P ̃i,g
+
+wi i,kLi αi,k(L)
+
+Zi,gk(I) = vi,gk(I) Ci,gk(I) = vi,gk
+
+.
+
+Given the constancy of vi,gk(I) , αi,gk(I) , αi,k(L), and Li, we can use the above equation to specify he change in industrial emissions as
+
+Zˆi,gk(I) = Cˆi,gk(I) = ˆi,k
+
+Pˆ ̃i,g wˆi
+
+−1
+
+, (∀g ∈ E, k ∈ K)
+
+The above equation equates the change in emissions associated with energy use in a given industry with the changes in the relative price of energy to labor inputs, Pˆ ̃i,g/wˆi, and the change in employment ˆi,k.
+
+Next, we must characterize the change in the relative price of labor-to-energy in terms of changes in observable share variables. Invoking the constant elasticity import demand system, λii,k = 1 + t(i,kp) Pii,k/Pi,k
+
+1−σk
+
+, wecanwritethechangeinthea er-taxpriceP ̃i,k = 1 + t(i,kc) Pi,k of the industry-level composite as
+
+1 1−σk
+
+Pˆ ̃i,k = (1 + ti,k(p))(1 + t(i,kc))Pˆii,kλˆ
+
+ii,k
+
+Considering our parametric speci cation for ci,k, the change in the producer price of the variety (i,i,k) in response to the policy shocks is
+
+L i,k
+
+R i,k
+
+I i,gk
+
+Pˆii,k = cˆi,k = wˆα
+
+i rˆα
+
+Pˆ ̃α
+
+i
+
+i,g
+
+g∈G
+
+(αLi,k+αRi,k) i ˆαRi,k
+
+= wˆ
+
+i,k
+
+g∈G
+
+I i,gk
+
+Pˆ ̃α
+
+i,g ,
+
+where the last line follows from cost minimization, whereby ri,kRi,k = αi,kR wi i,kLi/αi,kL , which yields rˆi,k = wˆiˆi,k given the constancy of αi,kR ,αi,kL , and Ri,k. To make the notation more compact, we integrate the carbon policy change, which channels through changes to energy-speci c consumption and production taxes as
+
+##### τˆi,k ≡ (1 + ti,k(p))(1 + t(i,kc))
+
+Appealing to the expression for Pˆii,k and using the compact notation for energy taxes, we can specify the change in the a er-tax price of composite energy input k ∈ E as
+
+1 1−σk
+
+(αLi,k+αRi,k) i ˆαRi,k
+
+Pˆ ̃i,k = τˆi,k wˆ
+
+i λˆ
+
+ii,k
+
+I i,gk
+
+Pˆ ̃α
+
+i,g .
+
+g∈G
+
+Thesystemofequationsspeci edaboveimplicitlydetermines Pˆ ̃i,k
+
+intermsof wˆi,rˆi,τˆi,k, ˆi,k,λˆii,k . Inverting this system and performing some algebraic simpli cations yields
+
+k
+
+Pˆ ̃i,k = wˆi ×
+
+g∈G
+
+ai,gk 1−σg
+
+λˆ
+
+ii,g ×
+
+k ∈E
+
+τˆi,kai,k k ×
+
+k ∈E1
+
+R i,k ai,k k
+
+ˆα
+
+i,k
+
+Rearranging the above equation speci ed the Pˆ ̃i,k/wi for each energy variety, which when plugged back into our initial expression for Zˆi,gk(I) , yields
+
+ai,kg 1−σk
+
+Zˆi,gk(I) = ˆi,k ×
+
+λˆ
+
+×
+
+ii,k
+
+k∈G
+
+trade-related e ects
+
+domestic economy adjsutments
+
+R i,k ai,k g
+
+ˆ−α
+
+τˆi,k−ai,k g
+
+×
+
+i,k
+
+k ∈E1
+
+k ∈E
+
+carbon policy
+
+extraction price
+
+##### (∀g ∈ E) (  )
+
+To give intuition, the term labelled as "trade-related e ects" encompasses the information about howtradeimpactstherelativepriceoflabor-to-energyinputsviathedomesticexpenditureshares. The remaining three terms represent adjustments to domestic variables. All these e ects are adjusted by the role of input-output linkages. Also note that since energy production uses nonenergy inputs, adjustment to non-energy prices in uence the price of energy inputs.
+
+ChangeinHouseholdEmissions. Householdemissionsaredeterminedbyhouseholddirectconsumption, Ci,k(H) of energy goods, k ∈ E as shown by Equation , resulting in:
+
+wˆi Pˆ ̃i,k
+
+Zˆi,k(H) = κˆi
+
+Yˆi wˆi
+
+, with κˆi ≡
+
+We can specify the change in income-to-wage ration by invoking the balanced budget condition and assuming zero taxes in the baseline equilibrium, which yields
+
+(c) i,g
+
+αi,gkI i,kαLˆi,k
+
+1 + k αi,kR + t(i,kp) + g∈E t
+
+1+t(i,gc)
+
+i,k
+
+. (  )
+
+κˆi =
+
+t(i,kc) 1+ti,k(c)
+
+R i,k
+
+1 + k∈E α
+
+αLi,k i,k 1 − k∈E
+
+βi,k
+
+We can draw on our previously-derived expression for wˆi/Pˆi,k to obtain the following expressions for emissions changes associated with household consumption of energy type k ∈ E:
+
+Zˆi,k(H) = κˆi
+
+g∈G
+
+ai,gk 1−σg
+
+λˆ
+
+ii,g ×
+
+g ∈E
+
+τˆi,k−ai,k k ×
+
+g ∈E1
+
+R i,k ai,k k
+
+ˆ−α
+
+i,k (  )
+
+Intuitively, the above expression suggests that household energy consumption rises when energy prices decrease more signi cantly than household income. Trade liberalization policies can contribute to this e ect by providing households with access to cheaper international energy varieties and improving energy production e ciency through better access to traded intermediate inputs. Conversely, carbon taxes typically have the opposite impact, making energy more expensive and thereby reducing consumption.
+
+Change in Total Emissions. The change in total emissions can be characterized by summing over the changes in industrial and household emissions, as de ned by Equation The components of this change, industrial and household emissions, are given by Equations and , respectively. This decomposition yields our  rst proposition, which characterizes how total emissions respond to trade and carbon policy shocks.
+
+Proposition  . The change in emissions due to a carbon and trade policy reform, τˆi,g,dˆin,g
+
+, is
+
+i,n,g
+
+ 
+
+  zi,g(H)κˆi + zi,gk(I) ˆi,k ×
+
+ai,k g 1−σk
+
+R i,g ai,g g
+
+ˆ−α
+
+τˆi,g−ai,g g
+
+λˆ
+
+Zˆi =
+
+ii,k
+
+i,g
+
+k∈G g∈E
+
+g ∈E
+
+g ∈E0
+
+k ∈G
+
+where ˆi,k and λˆii,k denote the policy-led change in industry-level labor shares and domestic expenditure shares. κˆi = Yˆi/wˆi is determined by Equation in terms of policy change, changes in labor shares, and
+
+baseline share variables. The global emissions change is then given by:
+
+Zˆ(global) =
+
+i
+
+ziZˆi,
+
+which weights each country's emissions change by its initial emissions share zi. Tointerprettheseresults, notethattheaboveequationexpressesemissionschangesasaweighted
+
+sum of changes in the energy-to-labor input price ratios, Pˆi,g/wi, with g ∈ E. Intuitively, trade and carbon policy reforms modify the relative price of energy to labor inputs, prompting  rms to adjust their energy use and associated carbon emissions. The change in energy to labor input prices can be decomposed into three di erent e ects:
+
+ai,k g 1−σk
+
+ . k ∈G λˆ
+
+ii,k captures the e ciency gains from trade liberalization in primary and secondary energy production. The energy sector relies on traded intermediate inputs, and a lower λii,k signi es reduced input costs from industry k ∈ G. The signi cance of each input k is determined by its backward linkages to energy type g ∈ E, as re ected in the elements ai,k g of the inverse Leontief matrix.
+
+ . g ∈E τˆi,g−ai,g g represents the direct e ect of carbon taxes on energy prices and use. This e ect extends through input-output linkages, as energy type g ∈ E may use energy type g ∈ E as an intermediate input.
+
+r i,g ai,g g
+
+ˆ−α
+
+ . g ∈E
+
+i,g re ects how changes in the scale of domestic energy extraction in uence domestic energy prices. In particular, an increase in primary energy extractionre ected in higher employment shares—coincides with rising energy prices due to rising cost of reserves. These e ects can compound due to input-output linkages within the primary energy sector.
+
+0
+
+Scale, Technique and Composition E ects. A trade liberalizing policy shock, (dˆin,k < 1), a ects emissions through two mechanisms: (i) it reallocates labor (and thus value added) across industries, and (ii) it increases emission intensity by lowering the relative cost of energy to labor inputs. In the notation of Copeland and Taylor ( ) for the decomposing aggregate emissions, the  rst mechanism re ects the composition e ect, and the second represents the combined e ects of scale and technique e ects. While our formula does not identify a clear direction for the contribution of the composition e ect, it highlights an unambiguous role for scale and technique e ects. Speci cally, holding carbon policy and labor allocation ( )  xed, trade liberalization reduces the relative price of energy to labor inputs across all sectors, leading to greater energy consumption. Since domestic expenditure shares fall (λˆii,k < 1) in response to trade liberalization, Proposition   implies that:
+
+ai,k g 1−σk
+
+zi,g(H) + zi,gk(I)
+
+λˆ
+
+Zˆ(global) | =
+
+##### ii,k > 1.
+
+i k∈G g∈E
+
+k ∈G
+
+This result suggests that trade liberalization exacerbates climate externalities by improving the e ciency and availability of energy inputs. However, these potential adverse environmental e ects must be weighed against the associated consumption gains. From a policy perspective, the positive e ects on consumption also provide an opportunity to design policies that link the bene ts of trade to carbon pricing. The next section formalizes the consumption gains from trade liberalization, setting the foundation for the subsequent policy discussion.
+
+ChangesinRealConsumption. UndertheCobb-Douglasparametrizationintroducedearlier, the change in real consumption for country i is given by:
+
+Yˆi Pˆ ̃i
+
+Cˆi =
+
+= κˆi
+
+k∈G
+
+wˆi Pˆ ̃i,k
+
+βi,k
+
+Drawing on previous derivations for wˆi/Pˆ ̃i,g and κˆi, we characterize Cˆi in the following proposition.
+
+Proposition . Thechange incountry i'sreal consumptioninresponse toaglobal energyandtrade policy shock, τˆi,g,dˆin,g
+
+, is given by
+
+i,n,g
+
+ 
+
+ 
+
+βi,k
+
+ai,k k 1−σk
+
+R i,g ai,g k
+
+ˆ−α
+
+τˆi,g−ai,g k
+
+λˆ
+
+Cˆi = κˆi ×
+
+ii,k
+
+i,g
+
+k∈G
+
+g ∈E
+
+g ∈E0
+
+k ∈G
+
+where κˆi ≡ Yˆi/wˆi represents the change in the ratio of net income to wage income in country i, which is given by Equation .
+
+The above formulation extends the ACR formula by incorporating additional terms that re ect the e ects of energy policy, income changes, and price adjustments to  xed inputs in primary energy extraction. A key insight from this result is that the same mechanisms that reduce the relative price of consumption goods—thereby increasing real consumption—also lower the relative price of energy inputs. This is why trade stimulates greater energy use and emissions while raising real consumption. The next section formally establishes this relationship, exploring its implication for trade and carbon policy reform.
+
+###  .  Cross-Externalities Between Trade and Climate
+
+The genesis of this paper lies in the observation that trade policy generates climate externalities, while climate policy, in turn, produces trade externalities. Understanding the structure and magnitude of these cross-externalities is essential for designing climate policy reforms that can be e ectively integrated into existing trade agreements. In the analysis that follows, we identify two systematic features of these cross-externalities.
+
+#### Link between the consumption gains from trade and trade-related emissions
+
+Comparison of Propositions and reveals a systematic relationship between a country's consumption gains from trade and its trade-related emissions. To illustrate this connection, consider a simpli ed setting with a single composite energy input, indexed by  , which is exclusively used for production. Also, suppose that the labor share, αi,k(L), and engineering constant vi,k that converts energy quantity to emission is the same across all activities. Under these simplifying assumptions, the propositions imply that the change in emissions and real consumption following a trade policy shock are given by
+
+ 
+
+ 
+
+βi,k
+
+ai,gk 1−σg ii,g ˆ−αRi,0ai,0k
+
+ai,g0 1−σg ii,g ˆ−αRi,0ai,00
+
+λˆ
+
+λˆ
+
+Zˆi =
+
+i,0 , Cˆi =
+
+i,0
+
+g∈G
+
+g∈G
+
+k∈G
+
+These equations indicate that consumption gains from trade can be expressed as a function of trade-related emissions:
+
+Cˆi =
+
+k=0 g
+
+ai,gk−ai,g0 1−σg
+
+ii,g ˆ−αri,0(ai,0k−ai,00)
+
+λˆ
+
+i,0
+
+βi,k
+
+Zˆi
+
+This formulation implies that higher consumption gains from trade are systematically linked to trade-related emissions. Moreover, this association is stronger when the gains from energy trade closely resemble those from trade in other industries.
+
+The intuition behind this result is straightforward: forces reducing the cost of producing consumer goods also lower the cost of energy production. The reduced cost of consumer goods raises welfare by increasing consumption, whereas cheaper energy production raises emissions by encouraging energy use. The term in bracket captures how consumer goods and energy production di er in their reliance on trade-driven intermediate inputs. This term is di erent from one in all cases, with deviations diminishing as the input-output structure becomes more symmetric.
+
+The above relationship has important implications for the linkage between trade and climate agreements. The rationale for issue linkage is to condition the consumption gains from trade liberalization, Cˆi, on a government's commitment to mitigating emissions, Zi. Since countries with higher trade-related emissions are also among the primary bene ciaries of trade liberalization, making market access contingent on emissions reductions presents a potentially e ective reform path. In other words, the systematic link between trade-related emissions and consumption gains strengthens the case for integrating environmental commitments into trade agreements.
+
+That said, it is important to clarify a crucial nuance. If trade agreements are incomplete, targeting solely on non-energy goods, they can lead to a decoupling between trade-related emissions
+
+ai,g0 1−σg
+
+ˆ−αRi,0ai,00
+
+λˆ
+
+More speci cally, not that Zˆi = k∈G zi,kˆi,k
+
+i,0 , where k∈G zi,kˆi,k = 1 given that αi,k(L) and vi,k are uniform across industries indicating that zi,k = i,k.
+
+g∈G
+
+ii,k
+
+and consumption. This point can be illustrated with a simple multi-industry model where production for each good relies exclusively on labor. In such a scenario, the change in emissions is expressed as Zˆi = λˆ1ii,/0(1−σ0), while the change in real consumption is given by Cˆi = k λˆβii,ki,k/(1−σk). It becomes clear that an agreement liberalizing non-energy trade boosts real consumption by reducing λii,k for k = 0. At the same time, due to de ationary wage e ects, domestic energy expenditure increases (λˆii,0 > 1), which lowers emissions. Thus, two mechanisms shape the relationship between Zˆi and Cˆi. First, intermediate input trade liberalization enhances both consumption and energy production, resulting in a positive correlation between consumption gains and traderelated emissions. Second, the degree of liberalization across sectors determines the magnitude of increases in both energy use and consumption. Consequently, incomplete agreements targeting only non-energy sectors can lead to a decoupling between trade-related consumption bene ts and emissions. These points would become more clear in our forthcoming quantitive analysis.
+
+#### Terms of trade externalities from carbon pricing
+
+We demonstrate that carbon pricing in an open economy generates two distinct international externalities: ( ) a positive non-pecuniary climate externality and ( ) a pecuniary terms-of-trade externality. To illustrate this, consider a reform in carbon policy that raises taxes on energy inputs,
+
+∆ln 1 + t(i,kp) ,∆ln 1 + t(i,kc)
+
+,
+
+k∈E
+
+Starting from an initial equilibrium with no carbon policy (t = 0), in a closed economy, such a reform has no  rst-order e ects on consumption:
+
+∆lnCi(closed) |t=0= 0
+
+The intuition is straightforward: absent climate externalities, resource allocation in a closed economy is e cient. Consequently, carbon pricing primarily involves weighing the climate bene ts of reduced energy use against the e ciency losses from resource reallocation. In an open economy, however, the e ect on real consumption is nontrivial and can be expressed as
+
+Xi,g Yi
+
+ai,kgβi,g 1 − σg
+
+∆lnCi |t=0=
+
+∆lnλii,g +
+
+k∈G g∈G
+
+k∈E g∈G
+
+where Xi,g denotes net exports in industry g ∈ G:
+
+ai,kg∆ln(1 + t(i,kp)) +  ̃ai,kg∆ln(1 + t(i,kc)) ,
+
+Xi,g ≡ Pii,gQi,g − Pi,gCi,g [net exports]
+
+The  rst term re ects how energy taxation in uences the gains from trade, closely paralleling the ACR formula (Arkolakis, Costinot, and Rodríguez-Clare, ). When energy taxes increase the domestic expenditure share in industries with low elasticity of substitution (σ) and strong input-
+
+See Appendix A for derivations.
+
+output centrality, captured by the ai,kg, they e ectively reduce the gains from trade. However, the ACRformulasaloneisinsu cienthere. Itabstractsfrom both the  scal revenue e ects of taxation and the incidence of energy taxes across international buyers, necessitating a second term.
+
+This second term accounts for international tax burden: a portion of the carbon tax burden falls on foreign consumers via exports. Since energy input k is used across multiple industries, the degree to which the tax is transmitted internationally depends on input-output linkages, ai,kg and a ̃i,kg. In export-oriented sectors (Xi,g > 0), the energy tax embedded in exports is paid by foreign buyers, shi ing the tax burden partially onto foreigners. These payments constitute a pure transfer from foreign economies to the home government. In contrast, for import-competing industries, the standard ACR term tends to overstate the welfare gains from higher imports by treating them as if they stemmed from foreign productivity growth or export subsidies. In reality, part of the observed increase in imports (or the decline in λii,g) is due to domestic energy taxation rather than improved terms of trade. Unlike a pure terms-of-trade shi , which the ACR framework captures, these tax e ects represent an internal redistribution from domestic energy users to the government. The non-ACR term adjusts the gains implied by the ACR formula, making it compatible with these intra-national transfers.
+
+Given these e ects, unilateral carbon policies can be appealing even when governments prioritize maximizing real consumption with no care for climate change. The optimal design of such policies, however, depends on whether taxation is applied at the supply or demand side of energy markets. Resource-rich countries, whose exports are heavily tied to primary energy, bene t most from taxing primary energy at the extraction stage, as this approach maximizes revenue extraction from foreign buyers. In contrast, countries that import primary energy but export goods with high secondary energy content gain more from demand-side taxes on primary or secondary energy. These bene ts arise from two key mechanisms. First, demand-side taxes exert downward pressure on the prices of imported primary energy. Second, the tax burden on secondary energy is partially passed on to foreign consumers who purchase goods manufactured using these energy inputs.
+
+To summarize, the incidence of carbon pricing in country i is not borne exclusively by domestic agents but is partially shared with foreign  rms and households through trade. Extending this logic, a globally uniform carbon or energy tax would generate asymmetric bene ts, disproportionately favoring countries that collect the majority of tax revenues. The design of the carbon tax isthereforeakeydeterminantofitstaxincidence. Ifappliedatthepointofextraction, theprimary bene ciaries would be major fossil fuel-exporting economies, as they would create terms-of-trade transfers from energy-importing countries to their national economies. Conversely, if the tax is leviedatthepointofdemand, thebene tswouldaccruedisproportionallytoindustrialeconomies that import fossil fuel energy and utilize it in the production of traded goods.
+
+The aforementioned asymmetries underscore the necessity of incorporating transfer mecha-
+
+Speci cally, let Ai = αi,gkI k,g denote the K × K input-output matrix. Then, ai,kg is the element (k, g) of the inverse Leontief (I − Ai)−1 and a ̃i,kg is the element (k, g) of the matrix (I − Ai)−1 Ai.
+
+nisms into international carbon agreements to mitigate disparities in tax incidence. If an agreement mandates supply-side carbon taxation, compensatory transfers are required to o set the redistribution from primary energy importers to exporters. Conversely, under a demand-side taxation scheme, transfers must compensate net importers of energy-intensive goods, ensuring that tax revenues are redistributed to countries whose resident's bear a signi cant share of the tax burden.
+
+## Taking the Model to Data
+
+We are primarily interested in counterfactual equilibrium outcomes in response to trade and carbon policy. Below, we describe how we take our model to data in order to perform such quantitative policy analyses.
+
+###  .  Data and Parameters
+
+Quantitative Strategy. Employing the method of exact hat algebra, the set of data and parameters required to calculate counterfactual outcomes are: (i) Baseline shares consisting of cost share of labor, energy reserves, and intermediate inputs, αi,kL , αi,kR and αi,gkI for all industries k ∈ G; households' expenditure shares, βi,k, and international trade shares, λij,k; (ii) Baseline aggregates consisting of national expenditure Ei, industry-level sales and expenditures, Yi,g and Xi,g, nationallevel wage bills (wiLi,k), rents collected from energy reserves (ri,kRi,k), carbon emissions at the level of industry and households Zi,gk(I) , Zi,k(H)—which, by aggregation, imply the national and global emissions; (iii) baseline taxes; (iv) and trade elasticity parameters (σk − 1).
+
+Appendix B presents the system of equations that specify equilibrium changes in response to trade and carbon pricing policies. For each policy, the solution to this system determines changes in all equilibrium values, taking in as input the above set of data and parameters.
+
+Parametric Assumptions. In our main speci cation, we opt for a simple parameterization of our model. Speci cally, we adopt a Cobb-Douglas functional form for the demand aggregator Ci(.) and production functions Fi,k(.). In addition, we set the trade elasticity (σk − 1) = 4 across all industries. In Section  , we provide robustness checks using alternative values for parameters of trade elasticity and energy demand elasticity.
+
+Data on Production, Trade and Expenditures. We take information on bilateral trade, gross output and value added, expenditures on intermediate goods and  nal consumption from the Global Trade Analysis Project (GTAP) database (Aguiar et al., ), which reports the global matrix of  ows from any origin country-industry pair to any destination country-industry or countryhousehold pair in the year     . Our sample covers the largest    countries in terms of GDP plus six aggregate regions, each encompassing multiple neighboring countries. Together, our sample covers the global  ows of production and trade in their entirety. We divide the space of goods into industries, out of which are primary energy (Coal, Crude Oil, and Natural Gas), are secondary energy (Re ned Petroleum, Electricity, and Gas Manufacturing & Distribution), with
+
+the remaining    industries consisting of Agriculture, Other Mining (aggregation of mining net of primary energy),    Manufacturing industries, and   Service industries. Tables and report the list of industries and countries along with some of their key characteristics.
+
+Table  : Summary of Statistics by Industries
+
+Share from World Exports to Energy CO2 Emission Industry CO2 Emission Output Exports Output Ratio Cost Share per Output
+
+Coal  . %  . %  . %  .    .    .   Crude Oil  . %  . %  . %  .    .    .   Natural Gas  . %  . %  . %  .    .    .   Re ned Petroleum  . %  . %  . %  .    .    .   Electricity   . %  . %  . %  .    .    .   Gas Mfg and Dist  . %  . %  . %  .    .    .   Agriculture  . %  . %  . %  .    .    .   Other Mining  . %  . %  . %  .    .    .   Food  . %  . %  . %  .    .    .   Textile  . %  . %  . %  .    .    .   Wood  . %  . %  . %  .    .    .   Paper  . %  . %  . %  .    .    .   Chemicals  . %  . %   . %  .    .    .   Plastics  . %  . %  . %  .    .    .   Nonmetallic Minerals  . %  . %  . %  .    .    .   Metals  . %  . %  . %  .    .    .   Electronics and Machinery  . %  . %   . %  .    .    .   Motor Vehicles  . %  . %  . %  .    .    .   Other Manufacturing  . %  . %  . %  .    .    .   Construction  . %  . %  . %  .    .    .   Wholesale and Retail  . %  . %  . %  .    .    .   Transportation   . %  . %  . %  .    .    .   Other Services  . %   . %   . %  .    .    .
+
+Note: This table reports for every primary energy, secondary energy, and non-energy industries the share from world industrial CO2 emission (excluding household-level emission), output and exports, as well as their global exports to output ratio, energy cost shares (total use of primary and secondary energy divided by output), and global CO2 emission to output ratio (     tCO2 per dollar of output). Reported CO2 emissions correspond to direct emissions from combustion of primary and secondary fossil fuel energy.
+
+The GTAP database provides international trade shares, expenditure shares by households, as well as the cost share of labor and intermediate goods (including primary and secondary forms of energy)foreachindustry. Weadditionallyobservethevalueaddedpaidbyeachindustrytonatural resources, which are positive for primary energy industries and zero elsewhere. Accordingly, we calibrate the cost share of energy reserves in each primary energy industry k ∈ E1, αi,kR , as the value added paid to natural resources divided by total gross output—which imply inverse energy supply elasticities corresponding to ρi,k ≡ αi,kR /(1−αi,kR ). To avoid potential mis-measurements at the level of individual countries, we set αi,kR = αkR as a common value for all countries i ∈ N, based on global averages of the cost share of natural resources. The calibrated values of αkR are  .  ,  .  ,
+
+Table  : Summary of Statistics by Countries
+
+Share from World CO2 Emission Energy Cost Country CO2 Emission Output Population per Output per Capita Share
+
+United Arab Emirates  . %  . %  . %    .     .   .   Argentina  . %  . %  . %    .    .   .   Australia  . %  . %  . %   .    .   .   Austria  . %  . %  . %   .    .   .   Belgium  . %  . %  . %   .    .   .   Brazil  . %  . %  . %   .    .   .   Canada  . %  . %  . %    .    .   .   Switzerland  . %  . %  . %   .    .   .   Chile  . %  . %  . %   .    .   .   China   . %   . %   . %    .    .   .   Colombia  . %  . %  . %   .   .   .   Czech Republic  . %  . %  . %    .    .   .   Germany  . %  . %  . %   .    .   .   Denmark  . %  . %  . %   .    .   .   Egypt, Arab Rep.  . %  . %  . %    .    .   .   Spain  . %  . %  . %   .    .   .   Finland  . %  . %  . %   .    .   .   France  . %  . %  . %   .    .   .   United Kingdom  . %  . %  . %   .    .   .   Indonesia  . %  . %  . %    .    .   .   India  . %  . %   . %    .   .   .   Ireland  . %  . %  . %   .    .   .   Iran, Islamic Rep.  . %  . %  . %    .    .   .   Israel  . %  . %  . %   .    .   .   Italy  . %  . %  . %   .    .   .   Japan  . %  . %  . %   .    .   .   Kazakhstan  . %  . %  . %    .    .   .   Korea, Rep.  . %  . %  . %   .    .   .   Mexico  . %  . %  . %    .    .   .   Malaysia  . %  . %  . %    .    .   .   Nigeria  . %  . %  . %   .   .   .   Netherlands  . %  . %  . %   .    .   .   Norway  . %  . %  . %   .    .   .   New Zealand  . %  . %  . %   .    .   .   Pakistan  . %  . %  . %    .   .   .   Peru  . %  . %  . %   .    .   .   Philippines  . %  . %  . %    .   .   .   Poland  . %  . %  . %    .    .   .   Portugal  . %  . %  . %   .    .   .   Qatar  . %  . %  . %    .     .   .   Romania  . %  . %  . %    .    .   .   Russian Federation  . %  . %  . %    .    .   .   Saudi Arabia  . %  . %  . %    .    .   .   Sweden  . %  . %  . %   .    .   .   Thailand  . %  . %  . %    .    .   .   Turkey  . %  . %  . %    .    .   .   United States   . %   . %  . %    .     .   .   Venezuela, RB  . %  . %  . %    .    .   .   Vietnam  . %  . %  . %    .   .   .   South Africa  . %  . %  . %    .    .   .   RO Africa  . %  . %   . %    .   .   .   RO Americas  . %  . %  . %    .    .   .   RO Asia and Oceania  . %  . %  . %   .    .   .   RO EU  . %  . %  . %    .    .   .   RO Eurasia  . %  . %  . %    .    .   .   RO Middle East  . %  . %  . %    .    .   .
+
+Note: This table reports for every country the share from world CO2 emissions, output and population; and CO2 emissions per capita and per output (each normalized to for the United States), as well as average energy cost share in production (total use of primary and secondary energy divided by output). Reported CO2 emissions correspond to direct emissions from combustion of primary and secondary fossil fuel energy.
+
+and  .   respectively for Coal, Crude Oil, and Natural Gas. These values correspond to inverse supply elasticities of  .  ,  .  , and  .  , which are close to the inverse supply elasticity estimate of  .   for aggregate fossil fuel supply estimated by the work-in-progress of Garcia-Lembergman, Ramondo, Rodriguez-Clare, and Shapiro based on data on marginal costs and production of fossil fuels.
+
+Data on CO2 Emissions. We additionally take from the GTAP database information on CO2 emissions, associated with the use of each of the six energy goods (primary or secondary) by industries or households. The accounting of the emission  ows in the data ensures there is no double counting. These emissions are classi ed as "direct emissions," meaning they represent emissions generated from burning fossil fuels and not necessarily their use during the production process. For instance, only a small portion of crude oil is combusted during the production of re ned petroleum, while the majority of the carbon content of petroleum is eventually burned intheformofre nedpetroleumproductsindownstream industries likeChemicals or Transportation.
+
+Baseline Taxes. Lastly, we set the value of all baseline taxes to zero. In the year     , carbon prices were zero in most countries and at a minimal value in regions with carbon pricing even in the EU.
+
+###  .  Estimates of the Impact of Trade Agreements
+
+Our quantitative analysis seeks to integrate carbon pricing policies into existing trade agreements. To achieve this, we  rst need reliable estimates of how trade agreements in uence trade barriers. In our primary speci cation, we use the estimated e ects of regional trade agreements (RTAs) and membership in GATT/WTO on trade barriers, as detailed below.
+
+To estimate the impact of RTAs and GATT/WTO membership on trade barriers, we incorporate additional data on trade  ows and trade agreements spanning the period from      to     . Specifically, we utilize the International Trade and Production Database (Borchert et al., ), which provides industry-level international trade data, along with the Dynamic Gravity Dataset (Gurevich and Herman, ), which includes trade policy indicators and standard gravity variables.
+
+Using a time subscript to leverage the panel structure of data, we specify the trade cost parameter (dij,k) to incorporate policy non-policy components:
+
+lndij,k,t = δk(WTO)WTOij,t + δk(RTAs)RTAsij,t
+
+##### + δ(kgravity)X(ijgravity) + uij,k,t
+
+Policy
+
+Non-Policy
+
+(  )
+
+Here, the  rst two terms capture the impact of international trade agreements, while the second two terms account for non-policy variables. The binary variable WTOij,t indicates whether both exporter i and importer j were members of the GATT/WTO in year t. Similarly, the binary variable RTAsij,t indicates whether, in year t, both i and j were members of any regional trade agreement (RTA), including customs unions, preferential trade agreements, free trade agreements, economic
+
+Table  : Estimates of the Impact of RTAs/WTO
+
+Industry RTAs WTO/GATT Agriculture and Food  .    .
+
+( .  ) ( .  ) Textile and Wood  .    .
+
+( .  ) ( .  ) Paper, Chemicals and Plastics  .    .
+
+( .  ) ( .  ) Minerals and Metals  .    .
+
+( .  ) ( .  ) Electronics, Machinery and Auto  .    .
+
+( .  ) ( .  ) Primary and Seconary Energy  .   -
+
+( .  ) (-)
+
+Note: This table shows the PPML estimates of the impact of regional trade agreements, RTAs, and WTO based on the gravity equation ( ). All regressions include importer-industry-year and exporter-industry-year  xed e ects as well as gravity controls of distance, shared language and common border. Standard errors are clustered by importer-exporterindustry and reported in parentheses. The corresponding impact on log of trade costs, ln dij,k, is βˆk(RTAs)/(σk −1) when both exporter and importer, i and j, are in an RTA; and βˆk(WTO)/(σk −1) when they are both members of the GATT/WTO.
+
+integration agreements, or partial scope agreements. We control for usual gravity variables such as log of the distance between the importer and exporter, as well as indicators for shared border and common language. We let uij,k,t capture unobserved trade costs when allowing the e ects of international trade agreements and gravity variables to vary by sector.
+
+By substituting the trade cost speci cation ( ) into the CES demand function for international varieties in each industry, we derive the following estimable gravity equation:
+
+##### Xij,k,t = exp βk(WTO)WTOij + βk(RTAs)RTAsij + β(kgravity)X(ijgravity) + δi,kt + δj,kt + εij,k,t (  )
+
+where βk(WTO) = (1−σk)δk(WTO), βk(RTAs) = (1−σk)δk(RTAs), β(kgravity) = (1−σk)δ(kgravity). The exporterindustry-year  xed e ects (δi,kt) absorb the impact of producer price at the location of exporter whereas the importer-industry-year  xed e ects (δj,kt) capture the impact of consumer price indices in import markets. Our identi cation assumption is that, controlling for the  xed e ects and gravity variables, the residual εij,k,t, which absorbs unobserved trade costs, is uncorrelated
+
+Our industry classi cation is designed to account for heterogeneous treatment e ects by grouping sectors based on di erences in production processes, regulatory standards, and trade policy instruments. For example, Agriculture and Food industries frequently face steep subsidies and strict sanitary measures that greatly in uence market access, while labor-heavy  elds such as Textile and Wood have historically been subject to high tari s and strict import licensing and quality compliance measures. On a di erent note, Paper, Chemicals, and Plastics involve extensive processing and value-added activities, whereas Minerals and Metals depend heavily on global commodity prices. Electronics, Machinery, and Auto industries, meanwhile, are commonly linked to complex supply chains and have been governed by rules of origin policies. Lastly, provisions for trade in the energy sector are shaped by its critical importance to national security and the need for specialized infrastructure.
+
+with the WTO and RTAs membership. We estimate Equation using Poisson pseudo-maximum likelihood (PPML) to account for the presence of zeros in trade  ows.
+
+Table reports the estimation results. All estimates are statistically signi cant, with the exception of the impact of WTO membership on trade in the energy sector. The combined e ects of RTAs and WTO membership vary signi cantly across industries, with the largest impacts observed in manufacturing and the smallest in the energy sector. In manufacturing and agriculture, the impact of WTO membership is, on average,  ve times greater than that of RTAs. To calculate the impact on trade costs, these estimates must be divided by the trade elasticity, which is set at (σk − 1) = 4. On average, the combined e ects of RTAs and WTO membership reduce trade costs by   %.
+
+## Quantitative Policy Analyses: Integrating Trade and Climate Policy
+
+In this section, we apply our calibrated model to assess how international trade agreements can integrate carbon pricing policies. Speci cally, we analyze equilibrium changes from a baseline scenario, where existing trade agreements are in place but carbon pricing is absent, to two counterfactual scenarios:
+
+- (a) an equilibrium with no trade agreements and no carbon pricing;
+- (b) an equilibrium that incorporates additional carbon pricing requirements into existing trade agreements.
+
+
+Counterfactual (a) quanti es the economic cost of withdrawing from trade agreements, while counterfactual (b) determines the cost of additional carbon pricing concessions.
+
+The key question we address is how to embed carbon pricing within existing trade agreements in a way that constitutes a Pareto improvement. In other words, we want to identify a transition from (a) to (b) that aligns with the national interests of all countries involved. We approach this in three steps. First, we calculate counterfactual equilibrium (a) by increasing trade barriers from their current level to a scenario without trade agreements. Second, we analyze counterfactual equilibrium (b) by introducing carbon pricing for countries involves in existing trade agreements, while maintaining existing trade barriers established by these agreements. Analysis (a) measures the climate externalities caused by trade agreements by computing emissions reductions if these agreements were removed. Analysis (b) identi es the size of the pecuniary terms-of-trade externalities resulting from carbon pricing.
+
+These intermediate steps lay the groundwork for our  nal step, which examines the conditions under which the transition from (a) to (b) is Pareto-improving—that is, it results in net gains for every country. This step, thus, uncovers institutional pathways for integrating carbon pricing into trade agreements.
+
+Governments' Policy Objective. In our analysis, we consider real consumption, Ci, rather than
+
+climate-adjusted utility, Ui = Ci − ∆i Z(global) , as the metric for evaluating policy outcomes. Within our framework, individual producers and consumers are in nitesimal and unable to in uence aggregate emissions. Only governments have the capacity to a ect emissions through centralized pricing. From a policy perspective, the disutility from climate damage must be interpreted as the costs perceived by governments, which may not align with the actual costs of climate change. The challenge lies in calibrating this perceived cost, especially since we cannot rely on estimates of the social cost of carbon. One approach is to infer governmental valuations from existing climate policies. However, these policies o en re ect multiple objectives and various constraints on policy space. Additionally, carbon pricing is either absent or set at very low levels in most countries, with European nations being an exception. Given this context, we adopt a pessimistic but practical approach, assuming that governments do not factor the disutility of climate damage into their objective functions. Instead, they assess policies solely based on their impact on real consumption. If this pessimistic approach implies an e ective path to carbon pricing integration, then the realistic outcome is presumably even better.
+
+###  .  (a) The Cost of Withdrawing from Trade Agreements
+
+Speci cation. This section examines the welfare and emissions consequences if countries withdraw from trade agreements and face higher trade barriers. This exercise serves two purposes. First, it quanti es the contributions of existing trade agreements to welfare and global emissions. Second, it assesses the potential losses governments may incur if they refuse to comply with additional carbon pricing requirements.
+
+To simulate counterfactual scenarios, our primary speci cation utilizes the estimated e ects of GATT/WTO and regional trade agreements (RTAs) on trade costs, as detailed in Section  . . These estimates reveal the trade costs that countries would encounter without participation in the current agreements. Additionally, in Section  . , we explore an alternative scenario where, upon withdrawing from trade agreements, governments strategically elevate their trade taxes to non-cooperative levels.
+
+Another key aspect of our analysis is how to conceptualize the withdrawal from trade agreements. We consider two stylized scenarios that capture two polar ways in which countries might deviate from a global agreement:
+
+• Multilateral Withdrawal. Trade cooperation collapses entirely, leading to the complete dissolution of trade agreements. As a result, trade barriers increase across all countries on a multilateral scale.
+
+Future versions of the paper will include robustness exercises using alternative speci cations that incorporate climate damage concerns into governments' objective functions. It is worth noting that our results readily remain robust when the climate damage disutility is included in the objective functions of European countries, where concerns about climate change are signi cantly more pronounced. This is because, in all the cases where we examine global agreements, no European country emerges as a marginal player that is indi erent between joining or withdrawing from the agreement. Consequently, if a European country  nds it bene cial to remain in the agreement under our current speci cation, it would also  nd it bene cial if its climate change concerns were explicitly accounted for.
+
+• Unilateral Withdrawal. Individual countries exit the global agreement independently, assumingthatothernationscontinuetoupholdit. Consequently, tradebarriersriseselectively, a ecting only the withdrawing country.
+
+Each of the above scenarios identi es a breaking point in strategic game. The Multilateral scenario can be interpreted as an N-player Nash bargaining game, where the disagreement point is the complete dissolution of the agreement. In contrast, the Unilateral scenario relates to the Nash equilibrium of a non-cooperative game. In particular, the grand coalition of all countries constitutes a Nash equilibrium if no individual country  nds it in its national interest to deviate from the agreement. In both breaking-point scenarios, a government's strategy is a binary choice: to join or not to join the agreement. This choice is made under full information about the general equilibrium welfare changes that would result from changes in trade barriers under each corresponding deviation.
+
+Quantitative outcomes. Figure illustrates the real consumption losses and carbon emission changes across countries under both the multilateral and unilateral scenarios for the breakdown of trade agreements. In the multilateral scenario, where trade costs are raised for all countries to the counterfactual levels of no RTAs/WTO, global average real consumption declines by  . %, while global carbon emissions decrease by  . %. In the unilateral scenario, we conduct N = 56 counterfactuals, with each counterfactual representing one country unilaterally deviating from the global agreement. When country i deviates, its bilateral trade costs with all other countries, {dij,k,dji,k}k,j=i, are raised to the counterfactual levels corresponding to country i withdrawing from theWTO andRTAs. Panel (b)overlays theresults of all    counterfactuals into a single scatter plot, with each dot showing the outcome for its corresponding deviating country.
+
+A decomposition following the approach of Copeland and Taylor ( ) shows that trade agreements contribute to global emissions by increasing the "scale" of global output and through the "technique" e ect, which raises the emission intensity at the level of country-industry. This  nding is consistent with our related discussion following Proposition   in Section  . . However, these increases are partially o set by the "composition" e ect, as the reallocation of output across countries and industries reduce emissions by a non-negligible amount.
+
+Inbothscenarios,countrieswithlargerconsumptionlossesfromthedissolutionoftradeagreements, located in the lower le  of each panel, experience signi cant reductions in carbon emissions. Conversely, countries with relatively smaller consumption losses from the removal of trade agreements, positioned in the upper right of each panel—tend to see smaller declines in emissions or, in some cases, even a notable increase in carbon emissions. The correlation between trade-induced changes in real consumption and carbon emissions is statistically signi cant in both cases, with a correlation coe cient of  .   in the multilateral scenario and  .   in the unilateral scenario.
+
+When all trade costs are increased due to the removal of WTO/RTAs, global emissions from industrial production decrease by  .  %. This reduction can be decomposed into a  .  % decrease from the scale e ect, a  .  % decrease fromthetechniquee ect, anda .  %increasefromthecompositione ect. Notethatthenear-completeo setbetween the technique and composition e ects is coincidental.
+
+Figure  : Consumption and Emission Impacts of Dissolving RTAs/WTO
+
+- (a) Multilateral Breaking Point
+
+- (b) Unilateral Breaking Points
+
+
+Note: This  gure shows the percentage change in real consumption and carbon emissions across countries resulting from the dissolution of RTAs/WTO. In Panel (a), trade costs are increased multilaterally for all countries, based on the estimated impacts of RTAs/WTO. In Panel (b), trade costs are raised for each country one at a time, with the scatter plot overlaying the outcomes for each deviating country.
+
+The main takeaway from these results is that countries that bene t more from trade agreements contribute more to carbon emissions. This result holds also when we consider a move to autarky, as shown by Appendix Figure A.  or using an alternative speci cation in which the removal of trade agreements raises import tari s to non-cooperative levels, as illustrated in Appendix Figure A. .
+
+Thepositiveassociationbetweengainsfromtradeagreementsandtrade-inducedcarbonemissions creates an opportunity to make bene ts from market access contingent on carbon pricing. Before building on this insight, we  rst examine the impact of carbon pricing policies. In Section  . , we then combine the  ndings from our analysis of trade agreements with those of carbon pricing to incorporate carbon pricing policies into trade agreements.
+
+###  .  (b) Carbon Pricing
+
+We begin our analysis of carbon pricing by evaluating the real consumption e ects of a global uniform carbon tax set at the social cost of carbon, ($/tCO2). This policy represents what many economists deem the  rst-best solution to mitigating climate change. In this subsection, our aim is to quantitatively demonstrate that real consumption losses across countries are heavily in uenced by whether these carbon taxes are applied to the demand side or the supply side of fossil fuel energy markets.
+
+A consumption-based carbon tax imposes a price on the carbon content of both primary and secondary energy when consumed by households or used as inputs by producers at the point of energy demand. In contrast, a production-based carbon tax applies this price to the carbon content of primary energy at the point of extraction. Given international trade, the tax burden can shi  to foreign countries, while revenues are collected locally. Under a consumption-based system, nations with signi cant industrial production and high energy usage collect more revenue. Conversely, under a production-based system, energy-exporting countries gather the revenues. Therefore, the incidence of the tax varies among countries depending on the chosen taxation scheme.
+
+The results from our quantitative exercise are illustrated by Figure , which plots the percentage change in real consumption across countries against their domestic expenditure share in the primary energy sector (aggregated over coal, crude oil, and natural gas). Panel (a) presents the results for consumption-side carbon taxes, while Panel (b) shows the results for production-side carbon taxes.
+
+Both consumption-side and production-side carbon taxes, when targeting emissions at a uniform carbon price, can achieve the same level of global emission reduction. However, the distributional e ects that would result from these two policies di er substantially.
+
+In Panel (a), countries like Japan and Sweden, which have near-zero domestic expenditure shares (DES) in primary energy, not only avoid losses but actually gain from consumption-side carbon taxes. In contrast, countries such as Norway and Saudi Arabia, with near-unity DES in primary energy, experience the largest losses. These results are reversed under production-side carbon taxes, as shown in Panel (b). In this case, countries like Japan and Sweden face the largest lossesfromcarbontaxation, whilecountriessuchasSaudiArabiaandNorwaylargelybene tfrom production-side carbon taxes. The correlation between changes in real consumption and DES in
+
+We have set the value of the social cost of carbon based on the most recent release of the U.S. Environmental Protection Agency (EPA)'s Report on the Social Cost of Greenhouse Gases.
+
+In other words, a central planner can achieve the same level of global e ciency using either policy, balancing the marginal loss in real consumption with the marginal bene t of mitigating climate damage caused by carbon emissions. Speci cally, with climate-adjusted welfare speci ed as Ui = Ci − δi × Z(global), suppose the central planner maximizes i ωi ln Ui, where ωi represents the weight assigned to country i. In this case, the globally  rst best can be implemented by: (i) a uniform consumption-side carbon tax given by τ∗ = i δ ̃i, where δ ̃i = P ̃i × δi represents the CPI-adjusted disutility from carbon emissions for each country i and the sum i δ ̃i corresponds to the social cost of carbon; paired with (ii) international transfers that depend on the vector of weights (See Farrokhi and Lashkaripour,
+
+). Alternatively, the globally  rst-best outcome can be achieved by implementing a uniform carbon tax at the points of extraction coupled with transfers that di er from those under consumption-based taxes.
+
+Figure  : Global Carbon Tax
+
+(a) Consumption-side
+
+(b) Production-side
+
+Note: This  gure shows the percentage change in real consumption across countries against their baseline domestic share of expenditure on primary energy, in response to global uniform carbon pricing. Panel (a) shows the results for carbon taxes implemented on the consumption side of energy markets, while Panel (b) presents the results for carbon taxes applied on the production (extraction) side.
+
+primary energy is strong in both cases, being negative in Panel (a) and positive in Panel (b).
+
+As previously discussed, the global impact of a carbon tax depends on whether it is applied to energy consumption or production. A consumption-based carbon tax favors nations with signi cantindustrialoutputintwoways. First, whencountrieswithhighenergyusageimplementsucha tax, the burden ultimately falls on global consumers who purchase goods produced with the taxed energy, while the revenue is collected locally at the point of industrial production. Second, by reducing energy demand, a consumption-side tax leads to lower international energy prices. Both e ects result in terms-of-trade transfers from energy-exporting to energy-importing countries. In contrast, a production-based carbon tax is partially passed on to energy importers, while the revenue is collected at the point of extraction. Additionally, by restricting energy supply, this type
+
+Figure  : Unilateral Carbon Tax
+
+(a) Consumption-side: Saudi Arabia (b) Consumption-side: Sweden
+
+(c) Production-side: Saudi Arabia (d) Production-side: Sweden
+
+Note: This  gure shows the percentage change in real consumption for Saudi Arabia, as a net energy exporter, and Sweden, asanet energyimporter, resulting from unilaterally raising their carbon taxes to di erent levels, implemented either on the consumption side or the production side.
+
+of tax drives up global energy prices. These e ects create terms-of-trade transfers in the opposite direction, bene ting energy-exporting countries at the expense of energy importers.
+
+To further examine these pecuniary terms-of-trade externalities, it is useful to evaluate the effects of unilateral carbon taxes—when a country sets carbon taxes unilaterally and other countries remain passive. Figure illustrates the impact of unilateral carbon taxation for Saudi Arabia, a large net energy exporter, and Sweden, a net energy importer.
+
+Anetenergyimporter, suchasSweden, canbene tfromimplementingunilateralconsumption-
+
+side carbon pricing. To see this, consider a hypothetical case where all use of fossil fuel energy is obtained through imports, and the only policy instrument a orded to the government is a consumption-side local carbon tax applied uniformly to domestic producers and households. In this case, a consumption-side carbon tax functions as an import tari  on energy. Since the unilaterally optimal import tari  is positive, this policy enables the importing country to improve its terms of trade by reducing energy demand and lowering the price of imported energy, thereby
+
+ThisisahypotheticalcasebecausealthoughdomesticexpendituresharesarenearlyzeroforSwedenintheprimary energy sector, it is substantially larger than zero in secondary energy sector.
+
+generating real consumption gains.
+
+Conversely, for net energy exporters like Saudi Arabia, a similar logic applies to productionside carbon taxes, which can improve the terms of trade for the exporting country by restricting the supply of primary energy. This restriction raises energy prices and shi s the tax burden onto foreign consumers.
+
+The key takeaway is that, while both consumption-side and production-side carbon taxes can achieve the same level of e ciency (or targeted level of global emissions), their cross-country distributional consequences are markedly di erent. A consumption-side tax shi s the economic burden onto energy-exporting countries, whereas a production-side tax places the burden on energy-importing countries. These contrasting e ects highlight the importance of designing international climate policies that include mechanisms to compensate countries experiencing disproportionate losses from the terms-of-trade e ects of global carbon pricing.
+
+###  .  Linking Carbon Policy with Trade Agreements
+
+In this section, we build on our  ndings regarding the climate externalities caused by trade agreements (Section  . ) and the pecuniary terms-of-trade externalities induced by carbon taxes (Section  . ). Leveraging these insights, we examine how carbon pricing can be integrated into trade agreements.
+
+To begin, it is important to note that most existing climate policies implement carbon taxes (or emissions trading systems) as consumption-side carbon pricing. This approach is largely shaped by the European Union's leadership in climate policy. As a major net energy importer, the EU primarily relies on demand-side carbon taxation to curb emissions. Given that these climate policy frameworks are already established, it is conceivable that they could be extended from a regional to a global scale. For this reason, our analysis in this section focuses on consumption-side carbon taxes. However, as previously discussed, we recognize that a global agreement centered on consumption-side carbon pricing must address the potential losses faced by other economies, particularly energy-exporting countries.
+
+A Naive Design. Before presenting our proposed framework, it is useful to consider a naive design in linking carbon pricing and trade policy. Speci cally, consider a design in which countries raise their local carbon taxes to the point where the cost of carbon pricing matches a  xed fraction of their consumption gains from trade agreements. This approach, on the surface, is attractive for tworeasons. First, itguaranteesthatallcountrieswouldbene tfromcarbonpricingrelativetothe breaking point of trade agreements. Second, it places a greater burden on countries with higher consumption gains from trade agreements.
+
+Note that this policy is similar to the impact of OPEC's strategy of restricting crude oil supply particularly in a historical context when such measures were coordinated and implemented e ectively. The key di erence, however, is that OPEC's actions are explicitly driven by the desire to exercise market power, whereas a similar outcome may arise as the pecuniary terms-of-trade externality generated by production-side carbon taxation.
+
+Figure A.  in the appendix illustrates carbon prices designed to o set   % of each country's real consumption gains from RTAs/WTO. As expected, these carbon prices generally rise with countries' gains from trade agreements. However, this approach may be considered "naive" due to twomajorlimitations. First, itrequiresextremelyhighcarbontaxesinsomecountries, withprices surpassing $    per ton of CO2 in most European nations. Such high carbon taxes are politically infeasible and unlikely to gain the necessary support for implementation.
+
+Second, relying on heterogeneous carbon taxes is an ine cient method for reducing global emissions. The cost of emission reductions is inherently convex, as the marginal cost of abatement (switching from fossil fuel energy to labor or less carbon intensive intermediate inputs) rises
+
+- as emissions are reduced further. Since approximately two-thirds of global carbon emissions are generated in developing countries, it is essential from an e ciency standpoint to ensure that carbon taxes are also increased in these regions. Without su cient abatement in these regions, the overall cost of achieving global emission reductions would be unnecessarily high.
+
+To avoid the limitations of this naive design, we propose a framework that is built on uniform carbon taxes while including side payments to compensate countries that su er disproportionately greater losses.
+
+A Framework for integrating carbon policy into trade agreements. To clarify our objective, it is useful to recall that the globally  rst-best solution for reducing emissions involves uniform carbon taxes combined with international transfers. While a certain subset of such transfer schemes result in a Pareto-improving outcome relative to the breaking point of trade agreements, political and institutional barriers may render their implementation infeasible. Our goal is to design a mechanism within international agreements that enables a Pareto-improving outcome while acknowledging that unconstrained transfers are political infeasible.
+
+Our proposal is to establish a Global Climate Fund for the agreement on trade and climate. All participating countries would be required to implement a uniform consumption-side carbon tax
+
+- at a speci ed level. The Fund would collect the border-related portion of tax revenues generated from these carbon taxes. For example, when a country imports fossil fuel energy that leads to emissions in its local economy, the tax revenues from the corresponding carbon emissions would be collected through local consumption taxes. If the system instead relied on production-side taxes, these revenues would be collected by the exporting country rather than the importer. This serves as the motivation for using the border-related portion of carbon taxes as contributions to the Fund, which equals its carbon price multiplied by the carbon content of its imports. The collected revenues would then be allocated to provide  nancial transfers to participating countries within the agreement. Speci cally, the in ows to the Fund (contributions), and the out ows from
+
+
+the Fund (allocations) satisfy the following balance of budget:
+
+Fund =
+
+where (contribution)i = (carbon tax)i ×
+
+(contribution)i =
+
+(allocation)i
+
+i
+
+i
+
+(imported share of exp)i,k × Zi,k .
+
+k∈E1∪E2
+
+Here, Zi,k is country i's carbon emissions associated with the use of primary or secondary energy k ∈ E1 ∪ E2, and (allocation)i must be determined using a formula designed to compensate countries that incur larger losses.
+
+Beforeproceeding, letusplacethecontributionsinaquantitativecontext. Atauniform(consumption-
+
+side) carbon tax of    ($/tCO2), only   . % of the global carbon tax receipts are border-related and contribute to the Fund. Across countries, the ratio of contributions to total carbon tax receipts ranges from  . % to   . %—See Figure A.  in the appendix. Even for countries with an almost zero domestic expenditure share in primary energy, this ratio remains well below one. For instance, in Sweden, the ratio is   . %. This is because a substantial portion of carbon taxes are applied to secondary energy goods, which can be primarily consumed domestically.
+
+Our goal is to develop a straightforward formula for allocating the Fund among participating countries. Such a formula should be measurable using standard methods and transparent enough for all participating countries to monitor. To encourage broad participation in the agreement at any level of carbon pricing, more allocations need to be directed to:
+
+- (i) countries that gain less from trade agreements;
+- (ii) countries that su er more from carbon pricing.
+
+
+For (i), the literature following Arkolakis, Costinot, and Rodríguez-Clare ( ) suggests that countries with a higher domestic expenditure share (DES) tend to gain less from trade relative to autarky. While this metric is an imperfect measure for our purpose, we will use it as a proxy for a country's gains from trade agreements. Based on this consideration, our  rst formula allocates the Fund's resources between countries in proportion to their aggregate DES.
+
+For(ii), aspreviouslydiscussed, netexportersofenergyexperiencegreaterlossesfromdemand-
+
+side carbon pricing. To compensate these countries, one formula is to allocate resources in proportion to the DES in the energy sector, which implies that energy-exporting countries receive a larger share. This allocation can be based on the DES in the entire energy sector (encompassing both primary and secondary energy industries) or limited only to primary energy. In the same vein, we consider another formula where allocations are determined by each country's share from global energy exports.
+
+Alternatively, to account for the disproportionate burden on energy exporters under carbon pricing, yet another formula could involve directing the border-related portion of carbon tax revenues to energy exporters. Speci cally, the tax revenues generated in country i from emissions associatedwithitsimportsoffossilfuelenergyk ∈ E1∪E2 fromexporterj, calculatedas(carbon tax)i×
+
+λji,k × Zi,k, would be allocated to exporter j rather than collected by importer i.
+
+For each of the above allocation schemes, we  nd the maximum carbon tax at which the move from the breaking point of trade agreements to the counterfactual equilibrium under that carbon tax makes all countries better o . In other words, this outcome corresponds to an international agreement on trade and climate that includes all nations as members.
+
+Resultsunderamultilateralbreakingpointscenario. Table presents the results under a multilateral breaking point where trade costs are raised based on the dissolution of RTAs/WTO for all countries. To illustrate the role of the Fund's allocations in enhancing the outcomes, we  rst reportthemaximumcarbontaxthatresultsinaParetoimprovementintheabsenceofanytransfers. This tax equals $  /tCO2, leading to a   . % reduction in global emissions.
+
+Table  : Fund's Outcomes—Multilateral Breaking Point from Dissolution of RTAs/WTO
+
+Max Carbon Reduction in Price ($/tCO ) Global Emission No Side Payments   . % Side Payments: Allocations from the Fund
+
+- (a) Exporters Receive Border-related   . % Portion of Carbon Taxes
+- (b) Share of Global Primary Energy Exports   . %
+- (c) Prop to DES   . %
+- (d) Prop to DES in All Energy   . %
+- (e) Prop to DES in Primary Energy   . %
+
+
+Note: This table reports, for each speci ed allocation scheme, the maximum carbon tax at which all countries bene t to stay in the agreement relative to the multilateral breaking point of the agreement.
+
+When the Fund is introduced, the outcomes vary depending on the allocation formula. If exporters collect the border-related portion of carbon taxes, the maximum tax increases to $  , with emissions reduced by   . %. Allocating funds proportional to aggregate DES raises the maximum tax to $  , with a   . % reduction in emissions. The most e ective results are achieved when allocations are based on DES in energy, particularly in primary energy. In this case, the maximum tax reaches $   , with global emissions reduced by   %.
+
+Results under unilateral deviations: Climate clubs with side payments. We now turn to examining the outcomes under country-speci c breaking points from trade agreements. Speci cally, we examine the case where each country evaluates the consequences of withdrawing unilaterally from the global agreement, taking as given that all other countries remain in the agreement.
+
+To put this scenario into context, we note that it resembles the "climate club" proposal introduced by Nordhaus ( ) and further analyzed by Farrokhi and Lashkaripour ( ). Speci cally, it represents a non-cooperative game where the grand coalition of all countries forms a Nash
+
+In Section  . , we discuss alternative policy designs that build on similar insights drawn from Sections  .  and  . .
+
+equilibrium—meaning no individual country would  nd it in its national interest to deviate from the agreement taking into account that other countries remain in the agreement. In this case, bilateral trade barriers between the deviating country and all other countries increase based on the estimated impact of RTAs/WTO.
+
+Table  : Fund's Outcomes—Unilateral Breaking Point from Dissolution of RTAs/WTO
+
+Max Carbon Reduction in Price ($/tCO ) Global Emission No Side Payments   . % Side Payments: Allocations from the Fund
+
+- (a) Exporters Receive Border-related   . % Portion of Carbon Taxes
+- (b) Share of Global Primary Energy Exports   . %
+- (c) Prop to DES   . %
+- (d) Prop to DES in All Energy   . %
+- (e) Prop to DES in Primary Energy   . %
+
+
+Note: This table reports, for each speci ed allocation scheme, the maximum carbon tax at which all countries bene t to stay in the agreement versus deviating unilaterally.
+
+Our analysis complements studies of climate clubs, including our own previous work, in three key ways. First, climate clubs, as currently conceived, o en require a complete overhaul of the existing global trade system. In contrast, our approach in this paper aims to integrate carbon pricing policies into existing trade agreements. Along the same lines, we account for the impact of trade agreements non-tari  trade barriers, which, as highlighted in the literature, represent a signi cant portion of trade costs beyond trade taxes. Second, we introduce side payments through the structure of the Fund, a feature that has been absent in prior studies of climate clubs. Third, we adopt a more comprehensive model of the global economy, incorporating a larger sample of countries and a detailed representation of the fossil fuel supply chain within the input-output structure of global trade
+
+Tables report the maximum carbon tax and the resulting reduction in global emissions under the allocation formulas which we examine. Compared to the multilateral breaking point scenarios we studied earlier, two key observations emerge. First, the allocation formula based on the DES in primary energy still remains the most e ective method for reducing global emissions.
+
+Second, at any given level of carbon tax, unilateral deviations result in larger net losses to each country compared to multilateral deviations. That is, the cost imposed on an individual deviating country is greater when all other countries remain in the agreement than when the agreement breaks apart for everyone. This is because trade diversion imposes a greater loss on any deviating countryinthecaseofmultilateralratherunilateralbreakingpointscenario. Asaresult, ourearlier study under multilateral breaking point scenarios can be regarded as more conservative.
+
+However, unlike our earlier work, we do not explore strategic aspects such as sequential games or coalition-proof equilibria. Instead, we focus on whether a club of all nations with side payments constitutes a Nash equilibrium.
+
+Lastly, let us put our results into context using the available estimates of the social cost of carbon (SCC). According to the most recent estimates by the EPA, the climate externality associated with carbon emissions is valued at $    per ton of CO2. Accordingly, the emission reductions achieved in our framework address the bulk of the climate externality tied to carbon emissions.
+
+## Discussions
+
+In this section, we examine the robustness of our results by considering alternative parameterizations, explore an alternative speci cation based on non-cooperative taxes, and discuss alternative designs for the agreements.
+
+###  .  Sensitivity Analysis
+
+We redo our analysis under an alternative parameterization of trade elasticity and energy demand elasticity. Speci cally, we gather industry-speci c estimates of trade elasticity parameters from  ve recent studies that use di erent estimation methods within models featuring a gravity structure comparable to ours. We then calculate the average of these estimates which we use as our trade elasticities. Table A.  in the appendix presents these estimates and their average values by industry. The main di erence relative to our main speci cation is that trade elasticities tend to be larger in the energy sector.
+
+In our main speci cation, the Cobb-Douglas form implies an energy demand elasticity of one. Here, we allow the production and consumption aggregators to take a CES form between the energy bundle and the non-energy bundle, while maintaining a Cobb-Douglas structure within each bundle. We set the substitution elasticity between energy and non-energy bundles to  .  , based on the average long-run energy demand elasticity estimates reported in the meta-analysis by Labandeira, Labeaga, and López-Otero ( ).
+
+Tables A.  and A.  in the appendix show that the results remain largely similar to those from our main speci cation under these alternative parameter values of trade and energy demand elasticities.
+
+###  .  Noncooperative Trade Taxes
+
+We examine an alternative speci cation of counterfactual trade costs in the event that trade agreements are dissolved. Rather than relying on our estimates of the impact of RTAs/WTO on iceberg trade costs, we assume that governments would raise their trade taxes to non-cooperative levels if they withdraw from RTAs/WTO. In this case, the multilateral breaking point represents a scenario where all countries engage in a global trade war by adopting non-cooperative trade taxes. Meanwhile, the unilateral breaking point occurs for a country when it opts out of the agreement, imposing non-cooperative trade taxes on member countries in the agreement, which then respond by imposing non-cooperative trade taxes against the withdrawing country.
+
+To study this speci cation, we introduce ad valorem import tax rates (tmij,k) and export tax rates (txij,k) to each international market corresponding to exporter i−importer j−industry k, where by structure, tmii,k = txii,k = 0. Assuming that countries operate as small open economies, unilaterallyoptimal trade taxes can be determined using the following formula:
+
+ 
+
+1 + t(ji,km) = (1 + ai) (import tari ) 1 + t(ij,kx) = (1 + ai)−1 σσk
+
+
+
+k−1 (export tax)
+
+where (1 + ai) is an arbitrary shi er due to Lerner symmetry. When σk = 5 and under the small open economy assumption, the non-cooperative trade taxes can be implemented by zero export taxes and uniform import tari s of   % across all markets.
+
+Tables A.  and A.  in the appendix present results similar to those in Section  .  but under non-cooperative trade taxes, as speci ed above. In the multilateral breaking-point scenario, the maximum carbon tax reaches $   per ton of CO2 when no side payments are allowed. Allocation schemes using the Fund increase the maximum carbon tax, but their e ectiveness is generally weaker compared to those under non-tari  trade barriers. The most e ective outcome is achieved when allocations are based on DES in primary energy, raising the maximum carbon tax to $   and resulting in a   . % reduction in global emissions. In the unilateral breaking-point scenario, the maximum carbon tax without side payments is $  . The most e ective outcome is again achieved with allocations proportional to DES in primary energy, where the maximum carbon tax rises to $  .
+
+###  .  Alternative Designs
+
+Our proposed framework in Section  .  is not the only way to build on the  ndings in Sections  .  and . . Here, webrie youtlinetwoalternativeapproachesthathasthepotentialtooperationalize the same insight to integrate carbon pricing policies with trade agreements.
+
+First, our focus on consumption-side carbon taxes is motivated by the fact that such mechanisms already exist in some parts of the world, including (but not limited to) the European Union. However, fromatheoreticalperspective, theagreementcouldinsteadbedesignedaroundproductionside carbon taxes, while incorporating side payments to compensate energy-importing countries. This approach would parallel our discussion of the Fund in Section  .  but would shi  the focus to taxing carbon at the point of extraction with net transfers directed to energy importers.
+
+Second, one might argue that while implementing one-sided carbon taxes is relatively straightforward, securing political support for international transfers is more challenging than reaching an agreement that excludes side payments but allows for two-sided carbon taxation. Although in-
+
+Our de nition of a small open economy, in the spirit of Lucas and Alvarez, requires international trade shares
+
+(λij,k = Xij,k/ i Xij,k) and sales shares (ρij,k = Xij,k/ j Xij,k) to approach zero. The formula is obtained from Theorem in Lashkaripour and Lugovskyy ( ), that allows for input-output linkages, where additionally we have
+
+imposed the small open economy by setting λij,k ≈ ρij,k ≈ 0. The inclusion of input-output linkages does not alter the formula in the case of small open economies, leaving it identical to the expression in Bartelme et al. ( ).
+
+ternational  nancial transfers in climate agreements have partly proven feasible—evidenced by ongoing transfers from developed to developing countries under the agreement established at the most recent UN Climate Change Conference (COP   )—an alternative design could exclude side payments. In such a case, countries could agree to implement a combination of supply-side and demand-side carbon taxes. This approach would help balance the terms-of-trade e ects, ensuring neither energy exporters nor energy importers are disproportionately favored.
+
+We leave the exploration of these alternative designs to future versions of our paper.
+
+## Conclusions
+
+International trade and climate agreements have traditionally evolved separately. However, trade agreements mayincreaseemissions, creatingclimateexternalities, whileclimate policieslike carbon pricing can result in pecuniary terms-of-trade externalities. To assess the magnitude of these cross-externalities, we use a quantitative trade model with a detailed speci cation of fossil fuel supply chains. We begin with highlighting two key  ndings:  rst, countries that bene t most from trade agreements also generate higher trade-related emissions; and second, demand-side carbon taxes create terms-of-trade transfers from energy-exporting to energy-importing countries. The  rst  nding suggests that linking market access to carbon pricing through contingent trade reforms could e ectively reduce emissions. However, addressing the pecuniary terms-of-trade externalities identi ed in the second  nding requires a redistribution mechanism to balance the global tax burden.
+
+We, hence, propose a Global Climate Fund to redistribute revenues from border-related portion of carbon taxes. Our quantitative analysis demonstrates that simple allocation rules designed to compensate countries facing disproportionate losses can substantially enhance the e ectiveness of these agreements, addressing nearly all climate externalities associated with carbon emissions.
+
+## References
+
+Aguiar, Angel, Maksym Chepeliev, Erwin L Corong, Robert McDougall, and Dominique Van Der Mensbrugghe.     . "The GTAP data base: version   ." Journal of global economic analysis   ( ): –  .
+
+Antweiler, Werner, Brian R Copeland, and M Scott Taylor.     . "Is free trade good for the environment?" American economic review    ( ):   –   .
+
+Arkolakis, Costas, Arnaud Costinot, and Andrés Rodríguez-Clare.     . "New trade models, same old gains?" American Economic Review     ( ):  –   .
+
+Bagwell, Kyle, RobertWStaiger, andAliYurukoglu.    . "Quantitativeanalysisofmultipartytari  negotiations." Econometrica    ( ):    –    .
+
+Barrett, Scott.     . "The strategy of trade sanctions in international environmental agreements." Resource and Energy Economics    ( ):   –   .
+
+Bartelme, Dominick, Arnaud Costinot, Dave J Donaldson, and Andres Rodriguez-Clare.     . "The textbook case for industrial policy: Theory meets data." Forthcoming at Journal of Political Economy .
+
+Böhringer, Christoph, Jared C Carbone, and Thomas F Rutherford.     . "The strategic value of carbon tari s." American Economic Journal: Economic Policy   ( ):  –  .
+
+Borchert, Ingo, Mario Larch, Serge Shikher, and Yoto V Yotov.     . The international trade and production Database for Estimation-Release  . USITC Working Paper     –  –A.
+
+Copeland, Brian R., Joseph S. Shapiro, and M. Scott Taylor.     . "Globalization and the Environment." Tech. rep., Working paper prepared for the Handbook of International Economics, Volume V.
+
+Copeland, Brian R and M Scott Taylor.     . "Trade, growth, and the environment." Journal of Economic literature    ( ): –  .
+
+Cristea, Anca, David Hummels, Laura Puzzello, and Misak Avetisyan.     . "Trade and the greenhouse gas emissions from international freight transport." Journal of environmental economics and management    ( ):   –   .
+
+Desmet, Klaus and Esteban Rossi-Hansberg.     . "Climate Change Economics over Time and
+
+Space." . Ederington, Josh.     . "Should trade agreements include environmental policy?" Farrokhi, Farid.     . "Global sourcing in oil markets." Journal of International Economics
+
+   :      . Farrokhi, Farid, Elliot Kang, Heitor S Pellegrina, and Sebastian Sotelo.     . "Deforestation: A Global and Dynamic Perspective." . Farrokhi, Farid and Ahmad Lashkaripour.     . "Can trade policy mitigate climate change?" Working Paper . Giri, Rahul, Kei-Mu Yi, and Hakan Yilmazkuday.     . "Gains from trade: Does sectoral heterogeneity matter?" Journal of International Economics    :      . Gurevich, Tamara and Peter Herman.     . "The dynamic gravity dataset:     –    ." USITC Working Paper,     –  –A .
+
+Harstad, Bård.     . "Trade and trees." American Economic Review: Insights   ( ):   –   . Kortum, Samuel S and David A Weisbach.     . "Optimal unilateral carbon policy." . Labandeira, Xavier, José M Labeaga, and Xiral López-Otero.     . "A meta-analysis on the price
+
+elasticity of energy demand." Energy policy    :   –   . Larch, Mario and Joschka Wanner.     . "Carbon tari s: An analysis of the trade, welfare, and emission e ects." Journal of International Economics    :   –   . Lashkaripour, Ahmad and Volodymyr Lugovskyy.     . "Pro ts, scale economies, and the gains from trade and industrial policy." American Economic Review     (  ):    –    .
+
+Maggi, Giovanni.     . "Issue linkage." In Handbook of commercial policy, vol.  . Elsevier,    –   . Markusen, James R.     . "International externalities and optimal tax structures." Journal of in-
+
+ternational economics   ( ):  –  . Nordhaus, William.     . "Climate clubs: Overcoming free-riding in international climate policy." American Economic Review     ( ):    –  . Ritel, Marcos, Dora Simon, Simon Lepot, and Mathilde Le Moigne.     . "The Distributional Effects of Carbon Pricing Across Countries." Available at SSRN         . Shapiro, Joseph S.     . "Trade costs, CO  , and the environment." American Economic Journal: Economic Policy   ( ):   –  .
+
+———.     . "The environmental bias of trade policy." The Quarterly Journal of Economics     ( ):   –   .
+
+Shapiro, Joseph S and Reed Walker.     . "Why is pollution from US manufacturing declining? The roles of environmental regulation, productivity, and trade." American Economic Review     (  ):    –  .
+
+## Appendix
+
+## A Proofs and Derivations
+
+Changes in Aggregate Price Indexes Recall from Section  , the expression for the price index of the industry k composite:
+
+(αLi,k+αRi,k) i ˆα
+
+Pˆ ̃i,k = τˆi,k wˆ
+
+R i,k
+
+i,k
+
+1 1−σk
+
+λˆ
+
+ii,k
+
+Pˆ ̃α
+
+I i,gk
+
+i,g .
+
+g∈G
+
+Taking logs from the above equation and writing it in vector notation, yields
+
+lnPˆ ̃ i = lnτˆi + (I − Ai) lnwi + Bi + Ai lnPˆ ̃ i
+
+whereAi = αi,gkI k,g is theK×K input-output matrix; Bi ≡ αi,kR ln ˆi,k + 1−1σ
+
+is aK×1vector; and and I are respectively K × 1 column vector of ones and the K × K identity matrix. Inverting the above equation, delivers:
+
+lnλii,k
+
+k
+
+k
+
+##### lnPˆ ̃ i = lnwi + (I − Ai)−1 [lnτˆi + Bi]
+
+Letting ai,gk denotes the entry (k,g) of the inverse Leontief matrix, the above equation delivers the following expression for the change in the industry-level price index:
+
+Pˆ ̃i,k = wˆi ×
+
+g∈G
+
+ai,gk 1−σg
+
+λˆ
+
+ii,g ×
+
+k ∈E
+
+τˆa
+
+i,k k
+
+i,k ×
+
+k ∈E1
+
+R i,k ai,k k
+
+ˆα
+
+i,k
+
+Changes in Income to Wage Ratio Total income in country i is the sun of primary factor rewards and energy tax revenues. Namely,
+
+Yi = wiLi +
+
+k
+
+##### ri,kRi,k +
+
+k
+
+t(i,kp)Pii,kQi,k +
+
+k
+
+t(i,kc) 1 + t(i,kc)
+
+βi,kYi +
+
+g
+
+αi,kgI Pii,gQi,g
+
+Rearranging the above equation yields
+
+(c) i,k
+
+wiLi + k ri,kRi,k + k t(i,kp)Pii,kQi,k + k t
+
+1+t(i,kc) g αi,kgI Pii,gQi,g 1 − k
+
+Yi =
+
+t(i,kc)
+
+1+t(i,kc) βi,k
+
+Next we specify industry-wide sales in terms of wage payments, by noting that
+
+ri,kRi,k =
+
+αi,kR αi,kL
+
+wi i,kLi, Pii,kQi,k =
+
+1 αi,kL
+
+wi i,kLi.
+
+Based on the above equation, we can express the payments to energy reserves as
+
+and the energy tax income as
+
+k
+
+##### ri,kRi,k =
+
+k
+
+αi,kR αi,kL i,k
+
+wiLi
+
+k
+
+t(i,kp)Pii,kQi,k +
+
+k
+
+t(i,kc) 1 + t(i,kc) g
+
+αi,kgI Pii,gQi,g =
+
+k
+
+t(i,kp) i,k αi,kL
+
++
+
+k
+
+t(i,kc) 1 + t(i,kc) g
+
+αi,kgI i,g αi,gL
+
+Plugging the above equations back into our last expression for Yi yields
+
+wiLi.
+
+(c) i,k
+
+R i,k
+
+αLi,k + t
+
+1 + k α
+
+αLi,k i,k + t(i,kp)
+
+1+t(i,kc) g αi,kgI
+
+i,k
+
+i,g
+
+##### αLi,g 1 − k
+
+Yi =
+
+wiLi,
+
+t(i,kc)
+
+1+t(i,kc) βi,k
+
+which immediately implies the expression for the income to wage ration presented in the main text:
+
+(c) i,g
+
+1 + k αi,kR + t(i,kp) + g t
+
+1+t(i,gc)αi,gkI
+
+i,k
+
+##### αLi,k 1 − k
+
+Yi wiLi
+
+κi ≡
+
+=
+
+.
+
+t(i,kc)
+
+1+t(i,kc) βi,k
+
+The change in the income-to-wage ratio starting from a baseline of zero taxes, follows immediately from the fact that αi,kR , αi,kL , and βi,k are constant implying that
+
+(c) i,g
+
+i,kˆi,k
+
+1 + k αi,kR + t(i,kp) + g t
+
+1+t(i,gc)αi,gkI
+
+##### αLi,k 1 − k
+
+, κi |t=0= 1 +
+
+κi =
+
+t(i,kc)
+
+1+t(i,kc) βi,k
+
+which in turn delivers the expression for κˆi presented in the main text:
+
+αi,kR αi,kL i,k
+
+,
+
+(c) i,g
+
+i,kˆi,k
+
+1 + k αi,kR + t(i,kp) + g t
+
+1+t(i,gc)αi,gkI
+
+αLi,k 1 + α
+
+κi κi
+
+κˆi ≡
+
+=
+
+t(i,kc)
+
+R i,k
+
+αLi,k i,k 1 − k
+
+1+t(i,kc) βi,k
+
+#### Consumption E ects of Carbon Pricing Reform
+
+Our goal is to characterize the e ect of the carbon tax shock, dln 1 + tci,k ,dln 1 + tpi,k k, on real consumption Ci = Vi Yi,P ̃ i . Here, Yi denotes income, which is the sum of factor rewards and tax revenues. In particular,
+
+t(i,kp)Pii,kQi,k +
+
+t(i,kc)Pi,kCi,k (A. )
+
+Yi = w ̃iLi +
+
+k
+
+k
+
+where Ci,k ≡ Ci,k(H) + g Ci,kg(I) and w ̃iLi is a short-hand for primary factor compensation, which includes labor and energy reserves. Taking derivatives from Ci = Vi Yi,P ̃ i , yields
+
+∂Vi (.) ∂Yi
+
+dCi =
+
+dYi +
+
+k n
+
+∂Vi (.) ∂ lnP ̃ni,k
+
+dlnP ̃ni,k,
+
+Since 1 + t(i,kc) is applied to all demanded goods in industry k, the change in the variety-speci c price dlnP ̃ni,k can be expressed as
+
+dlnP ̃ni,k = dln(1 + t(i,kc)) + dlnPni,k. Plugging he above equation back into the welfare expression, delivers
+
+∂Vi (.) ∂Yi
+
+dCi =
+
+dYi +
+
+k n
+
+∂Vi (.) ∂ lnP ̃ni,k
+
+dln(1 + t(i,kc)) + dlnPni,k .
+
+We can invoke Roy's identity ∂V
+
+∂P ̃ni,k = ∂V
+
+∂Yi Cni,k(H) to simplify this equation as
+
+i(.)
+
+i(.)
+
+∂Vi (.) ∂Yi
+
+dCi =
+
+∂Vi (.) ∂Yi
+
+=
+
+dYi −
+
+k n
+
+dYi − Yi
+
+Pni,kCni,k(H) dln(1 + t(i,kc)) + dlnPni,k
+
+k n
+
+##### βi,kλni,k dln(1 + t(i,kc)) + dlnP ̃ni,k
+
+To further simplify the above equation, we note that dlnPni,k = dlnP ̃ii,k + σ 1
+
+k−1 (dlnλni,k − dlnλii,k), and follow the ACR logic to write the above equation as
+
+∂Vi (.) ∂Yi
+
+dCi =
+
+dYi − Yi
+
+k
+
+1 σk − 1
+
+βi,k dln(1 + t(i,kc)) + dlnP ̃ii,k +
+
+dlnλii,k (A. )
+
+Noting that P ̃ii,k = 1 + t(i,kp) Pii,k, we can specify domestic price changes as as
+
+##### dlnP ̃ii,k = dln(1 + t(i,kp)) + αi,k(L ̃)dlnw ̃i +
+
+g
+
+αi,gk(I) P ̃i,g,
+
+where αi,k(L ̃) ≡ 1 − g αi,gk(I) denotes the primary factor input share. Considering that P ̃i,g = (1 + t(i,gc))P ̃ii,gλ
+
+1 σk−1
+
+ii,k can be reformulated as
+
+##### dlnP ̃ii,k = dln 1 + t(i,kp) + αi,k(L ̃)dlnw ̃i +
+
+g
+
+1 σg − 1
+
+αi,gk(I) dln(1 + t(i,gc)) + dlnP ̃ii,g +
+
+dlnλii,g
+
+The above equation can be alternatively represented in vector notation as
+
+1 σ − 1 ◦ dlnλii
+
+dlnP ̃ ii = dln 1 + t(ip) + (I − Ai) dlnw ̃i + Ai dln(1 + t(ic)) + dlnP ̃ ii +
+
+Inverting the above system we get
+
+##### dlnP ̃ii,k = dlnw ̃i +
+
+g
+
+##### ai,kgdln 1 + t(i,gp) +
+
+g
+
+1 σg − 1
+
+a ̃i,kg dln 1 + t(i,gc) +
+
+dlnλii,g (A. )
+
+where ai,kg is the element (k,g) of the inverse Leontief (I − Ai)−1 and a ̃i,kg is the element (k,g) of the matrix (I − Ai)−1 Ai. Noting that (I − Ai)−1 Ai = (I − Ai)−1 − I, we get
+
+ 
+
+ai,kg − 1 k = g ai,kg k = g
+
+,
+
+a ̃i,kg =
+
+
+
+Considering the above equation, we can plug Equation A.  into Equation A.  to obtain:
+
+∂Vi (.) ∂Yi
+
+1 σg − 1
+
+ai,kgβi,g dln 1 + t(i,gp) + dln 1 + t(i,gc) +
+
+dCi =
+
+dYi − Yi dlnw ̃i +
+
+dlnλii,g .
+
+k g
+
+(A. ) Next we characterize the change in income by taking derivative from Equation A. , which delivers
+
+ (1 + t(i,kp))Pii,kQi,k + t(i,kp)
+
+ dln(1 + t(i,kp))
+
+∂ (Pii,kQi,k) ∂ ln 1 + t(i,kp)
+
+##### dYi = w ̃iLidlnwi +
+
+k∈E
+
+ (1 + t(i,kc))Pi,kCi,k + t(i,kc)
+
+ dln(1 + t(i,kc))
+
+∂ (Pi,kCi,k) ∂ ln 1 + t(i,kp)
+
++
+
+k∈E
+
+In the neighborhood of t = 0, the above equation simpli es to
+
+##### dYi |t=0= Yidlnwi +
+
+k∈E
+
+##### Pii,kQi,kdln(1 + t(i,kp)) +
+
+k∈E
+
+##### Pii,kCi,kdln(1 + t(i,kc))
+
+To evaluate the above equation, we use the market clearing condition whereby total expenditure on good k equals the  nal demand expenditure Pi,kCi,kH = βi,kYi and the intermediate input expenditure. Namely,
+
+##### Pi,kCi,k = βi,kYi +
+
+g
+
+αi,kg(I) Pii,kQi,k
+
+In a closed economy, the sales equals expenditure per industry, Pii,kQi,k = Pi,kCi,k. Hence, we can write the above equation in vector notation as Pii◦Qi = βiYi+AiPii◦Qi, which a er basic inversion implies:
+
+Pii,kQi,k Yi
+
+Pi,kCi,k Yi
+
+=
+
+##### =
+
+g
+
+ai,kgβi,g [closed economy]
+
+The open economy counterpart of this equation can be stated as
+
+##### Pi,kCi,k = βi,kYi +
+
+g
+
+αi,kg(I) Pi,kCi,k +
+
+g
+
+αi,kg(I) χi,g
+
+where Xi,k ≡ Pii,kQi,k −Pi,kCi,k is net exports in industry k. In vector notation, Pi ◦Ci = βiYi +AiPi ◦ Ci + AiXi, which a er inversion yields:
+
+Pi,kCi,k Yi
+
+=
+
+g
+
+ai,kgβi,g +
+
+g
+
+a ̃i,kg Xi,g Yi
+
+Alternatively, we can write the accounting equation as Pi,kQii,k = χi,k +βi,kYi + g αi,kg(I) Pii,kQi,k, which a er inversion delivers
+
+ai,kg Xi,g Yi
+
+Pi,kQii,k Yi
+
+=
+
+ai,kgβi,g +
+
+.
+
+g
+
+g
+
+Plugging the expressions for P
+
+i,kCi,k
+
+Yi and P
+
+i,kQii,k
+
+Yi into the equation representing dYi |t=0, we obtain:
+
+dYi |t=0= Yi dlnwi +
+
+k∈E g
+
+ai,kgβi,g + ai,kg Xi,g Yi
+
+dln(1 + t(i,kp)) + ai,kgβi,g +  ̃ai,kg Xi,g Yi
+
+Plugging the above expression for dYi into the Equation A.  delivers:
+
+dln(1 + t(i,kc))
+
+Xi,g Yi
+
+dCi |t=0=
+
+k∈E g∈G
+
+ai,kgβi,g σg − 1
+
+ai,kgdln(1 + t(i,kp)) +  ̃ai,kgdln(1 + t(i,kc)) +
+
+dlnλii,g
+
+g∈G k∈G
+
+## B Equilibrium in Changes
+
+This section introduces the system of equations used to solve equilibrium changes in response to trade or carbon policy shocks. Trade shocks can arise from changes in iceberg trade costs, denoted as dij,k, or from adjustments to trade taxes, import tari s (t(ij,km)) or export taxes (t(ij,km)). Carbon policy shocks, on the other hand, involve changes to production taxes (t(i,kp)) that target carbon emissions at the point of primary energy extraction k ∈ E1, and/or consumption taxes that target carbon emissions at the consumption location of primary or secondary energy g ∈ E1 ∪ E2. These consumption taxes are applied to industries (t(i,kgc,I)) or households (t(i,gc,H)). Note that in the main body of the paper we adopted a simpli ed notation t(i,kgc,I) = t(i,gc,H) = t(i,gc).
+
+To maintain generality in the model speci cation, below we assume that the household consumption aggregatorfollowsaCESstructurebetweenenergy(E)andnon-energy(N)goodswithsubstitutionelasticity ηH, with a Cobb-Douglas structure within the energy and non-energy categories. Similarly, production technologies are modeled as CES between energy (E) and non-energy (N) with substitution elasticity ηI, with Cobb-Douglas structures within each category. In our notation below, the cost share parameter of natural resources, αi,kR , is non-zero in the primary energy industries and zero in all other industries.
+
+We adopt the exact hat algebra notation. For any generic variable z that denotes the value of z in the status quo equilibrium, we use z to denote its value in the counterfactual equilibrium, with zˆ ≡ z /z
+
+representing the change from status quo to the counterfactual value.
+
+Pricesalong thesupplychainincludeproducerpricesatthelocation ofsupply, landed pricesinclusive of production, export, and import taxes, distribution-level prices that aggregate over landed price in each destination, and consumer prices that additionally include consumption taxes. The changes to these prices are as follows:
+
+
+
+Pij,k = dij,kci,k a) producer price
+
+1−αR
+
+i,k 1−ηI
+
+1−ηI
+
+1−ηI
+
+##### + 1 − sei,k Pˆ ̃i,kN
+
+i,k sei,k Pˆ ̃i,kE
+
+R i,k
+
+##### ci,k = rα
+
+b) marginal cost
+
+
+
+##### Pˆ ̃α
+
+##### Pˆ ̃i,kE = g∈E Pˆ ̃α
+
+##### i,kg , Pˆ ̃i,kN = wˆα
+
+I i,kg
+
+I i,kg
+
+L i,k
+
+i g∈F
+
+i,kg P ̃ji,k = 1 + t(ji,km) 1 + t(j,kp) 1 + tji,k(x) Pji,k c) landed price P ̃i,k = n λnj,kPˆ ̃1−σ
+
+1 1−σk
+
+d) distribution-level price
+
+k
+
+nj,k
+
+(H) i,g = 1 + ti,g(c,H) P ̃i,g e) consumer price
+
+(I) i,kg = 1 + t(i,kgc,I) P ̃i,g, P ̃
+
+
+
+##### P ̃
+
+The change to international expenditure shares follow from the CES gravity structure:
+
+(B. )
+
+##### λij,k = P ̃ij,k P ̃j,k
+
+1−σk
+
+(B. )
+
+On the side of factor employment and intermediate input use, industries' input cost shares are as follows:
+
+ 
+
+1−ηI
+
+Pˆ ̃i,kN ci,k
+
+αˆi,kN =
+
+1−ηI (B. )
+
+Pˆ ̃i,kE ci,k
+
+
+
+##### αˆi,kE =
+
+On the  nal consumption side, households'  nal expenditure shares are given by:
+
+ 
+
+##### 1−ηH Pˆ ̃iN = k∈F Pˆ ̃i,k
+
+βi,k|N
+
+Pˆ ̃iN P ̃i
+
+##### βˆiN=
+
+βi,k|E (B. )
+
+##### 1−ηH Pˆ ̃iE = k∈E Pˆ ̃i,k
+
+Pˆ ̃iE P ̃i
+
+
+
+##### βˆiE =
+
+Changes to total sales, Yi,k = Pii,kQi,k, in primary energy industries and secondary and non-energy industries can be express as:
+
+ 
+
+ri,k k ∈ E1 Yi,k = αˆ1
+
+Yi,k = αˆ1
+
+L i,k
+
+(B. )
+
+
+
+##### i,kwi k ∈ E2 ∪ F
+
+L i,k
+
+where i,k = Li,k/Li denotes the employment share of industry k in country i. In the post-policy equilib-
+
+rium, total expenditures, inclusive or net of production and trade taxes, are equal to:
+
+
+
+##### βˆi,kβi,kEiEi + g∈E
+
+X ̃i,k = 1+t1
+
+1
+
+1+ti,kg(c,I)αˆi,gkI αi,gkI Yi,gYi,g,
+
+2∪F
+
+(c,H) i,k
+
+
+
+##### X ̃ ij,k = P ̃ij,kCij,k = λˆij,kλij,kX ̃i,k Xij,k = Pij,kCij,k = X ̃
+
+(B. )
+
+ij,k
+
+1+t(ij,km) 1+ti,k(p) 1+t(ij,kx) Xj,k = i Xij,k
+
+
+
+Using the changes in sales, expenditures, and prices, we can write the changes in carbon emissions that correspond to changes in the quantity of energy consumed by households and the intermediate use of energy by industries. Speci cally, emission changes at di erent levels of aggregation are as follows:
+
+
+
+I i,kgYˆi,k
+
+Zi,gk(I) = αˆ
+
+a) industry emission (i,k; g ∈ E) Zi,g(H) = βˆ
+
+Pˆ ̃i,gk(I)
+
+i,gEˆi Pˆ ̃i,g(H)
+
+b) household emission (i; g ∈ E)
+
+
+
+Zi(I) = Z1
+
+##### k g∈E Zi,gk(I) Zi,gk(I) c) industrial emission, (i) Zi(H) = Z1
+
+(I) i
+
+##### g∈E Zi,g(H)Zi,g(H) d) household emission, (i) Zi = Z1
+
+(H) i
+
+##### Zi(I)Zi(I) + Zi(H)Zi(H) e) national emission Z(global) = Ni=1 Zi/Z(global) × Zi f) global carbon emission
+
+i
+
+
+
+Labor market clearing conditions equate the demand and supply of labor at both the industry level and the national level, expressed in terms of post-policy equilibrium values:
+
+ 
+
+##### ˆi,k i,kwiL ̄i = αˆi,kL αi,kL j Xij,k a) LMC (i,k ∈ K) K k=1
+
+
+
+ˆi,k i,k = 1 b) National LMC (i)
+
+(B. )
+
+##### rˆi,kri,kR ̄i,k = 1 − αˆi,kl αi,kl
+
+j
+
+##### Xij,k, (i,k ∈ E1) (B. )
+
+Lastly, the balance of budget requires that total  nal expenditure equals the payments to factors of production plus the taxes that are rebated to households:
+
+##### EiEi = YiYi + Ti, YiYi = wiwiLi +
+
+k∈E1
+
+ri,kri,kR ̄i,k
+
+where taxes consist of taxes at the points of production, exports, imports, and consumption:
+
+T (iconsumption) =
+
+k∈E1∪E2
+
+ 
+
+ 
+
+t(i,kgc,I) 1 + t(i,kgc,I)
+
+ti,k(c,H) 1 + ti,k(c,H)
+
+##### βˆi,kβi,kEiEi +
+
+αˆi,gk αi,gk Yi,gYi,g
+
+g∈E2∪F
+
+T (iimports) =
+
+T (iexportds, production) =
+
+k n
+
+ 
+
+t(ni,km) 1 + t(ni,km)
+
+X ̃ni,k
+
+k n=i
+
+ 
+
+1 + t(i,kp) 1 + tin,k(x) − 1 1 + t(i,kp) 1 + t(in,kx) 1 + tin,k(m)
+
+X ̃in,k
+
+Ti =T (iconsumption) + T (iimports) + T (iexports, production) (B. )
+
+## C Additional Tables and Figures
+
+Table A. : Estimates of σ (trade elasticity plus one)
+
+Industry Name S-   BSY-   GYY-   LL-   FL-   Mean Coal  .    .     .    .   Crude Oil  .    .     .    .   Natural Gas  .    .     .    .   Re ned Petroleum  .    .    .     .    .   Electricity   .     .   Gas Mfg and Dist  .   Agriculture  .    .    .    .    .   Other Mining  .    .     .    .   Food  .    .    .    .    .    .   Textile  .    .    .    .    .    .   Wood  .    .    .    .    .    .   Paper  .    .    .    .    .    .   Chemicals  .    .    .    .    .    .   Plastics  .    .    .    .    .    .   Nonmetallic Minerals  .    .    .    .    .    .   Metals  .    .    .    .    .    .   Electronics and Machinery  .    .    .    .    .    .   Motor Vehicles  .    .    .    .    .    .   Other Manufacturing  .    .    .    .    .
+
+Note: This table shows the estimates of σ (as one plus trade elasticity) for each industry from Table  -Column   in Shapiro ( ) (S-  ), Table   in Bagwell, Staiger, and Yurukoglu ( ) (BSY-  ), Table   in Giri, Yi, and Yilmazkuday ( ) (GYY-  ), Table   in Lashkaripour and Lugovskyy ( ) (LL-  ), and Table   in Farrokhi and Lashkaripour ( ) (FL-  ), as well as their average per industry across the reported estimates. When multiple industries from the sample of any of these papers correspond to a single industry in our sample, we calculate the average. For services, we use the average of the agriculture and manufacturing industries from the last column, resulting in a value of  .  .
+
+Table A. : Fund's Outcomes—Multilateral Breaking Point (alternative parameterization)
+
+Max Carbon Reduction in Price ($/tCO ) Global Emission No Side Payments   . % Side Payments: Allocations from the Fund
+
+- (a) Exporters Receive Border-related   . % Portion of Carbon Taxes
+- (b) Prop to DES   . %
+- (c) Prop to DES in All Energy   . %
+- (d) Prop to DES in Primary Energy   . %
+
+
+Table A. : Fund's Outcomes—Unilateral Breaking Point (alternative parameterization)
+
+Max Carbon Reduction in Price ($/tCO ) Global Emission No Side Payments   . % Side Payments: Allocations from the Fund
+
+- (a) Exporters Receive Border-related   . % Portion of Carbon Taxes
+- (b) Prop to DES   . %
+- (c) Prop to DES in All Energy   . %
+- (d) Prop to DES in Primary Energy   . %
+
+
+Table A. : Fund's Outcomes—Multilateral Breaking Point (Noncoop. trade taxes)
+
+Max Carbon Reduction in Price ($/tCO ) Global Emission No Side Payments   . % Side Payments: Allocations from the Fund
+
+- (a) Exporters Receive Border-related   . % Portion of Carbon Taxes
+- (b) Share of Global Primary Energy Exports   . %
+- (c) Prop to DES   . %
+- (d) Prop to DES in All Energy   . %
+- (e) Prop to DES in Primary Energy   . %
+
+
+Table A. : Fund's Outcomes—Unilateral Breaking Point (Noncoop. Trade Taxes)
+
+Max Carbon Reduction in Price ($/tCO ) Global Emission No Side Payments   . % Side Payments: Allocations from the Fund
+
+- (a) Exporters Receive Border-related   . % Portion of Carbon Taxes
+- (b) Share of Global Primary Energy Exports   . %
+- (c) Prop to DES   . %
+- (d) Prop to DES in All Energy   . %
+- (e) Prop to DES in Primary Energy   . %
+
+
+Figure A. : Consumption and Emission Impacts of Moving to Autarky
+
+Note: This  gure shows the impact of moving to autarky on real consumption and emissions across countries. Global emissions reduce by   . % and real consumption falls on average by   . %. The correlation between changes in emission and real consumption across countries is  .  .
+
+Figure A. : Consumption and Emission Impacts of Dissolving Trade Agreements (non-coop. trade taxes)
+
+- (a) Multilateral Breaking Point
+
+- (b) Unilateral Breaking Point
+
+
+Figure A. : Heterogenous Carbon Taxes against Gains from WTO/RTAs
+
+Note: This  gure shows carbon taxes across countries such that each country's losses from carbon pricing equal   % of its gains from WTO/RTAs. The minimum carbon tax is set at   ($/tCO ).
+
+Figure A. : Ratio of Contributions to the Fun Relative to Carbon Tax Receipts
+
+Note: This  gure plots the ratio of each country's contribution to the Fund relative to its total carbon tax receipts on the y-axis, against the domestic expenditure share in primary and secondary energy on the x-axis. The calculations are based on a uniform consumption-side carbon price of $  /tCO .

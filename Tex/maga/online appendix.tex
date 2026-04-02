@@ -1,0 +1,1013 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage[hmargin=0.9in, vmargin = 1in]{geometry}
+\usepackage[round]{natbib}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning,shapes,calc}
+\usepackage[page]{appendix}
+\usepackage{threeparttable}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{comment}
+\usepackage{diagbox}
+\usepackage{longtable}
+\usepackage{graphicx} 
+%\usepackage[letterpaper]{hyperref}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{SoftBlue}{RGB}{100,140,200}  % adjust if you want it lighter/duller
+    \synctex=1 \hypersetup{backref,colorlinks=true,urlcolor=SoftBlue,linkcolor=black,citecolor=black,filecolor=black}
+    \hypersetup{pdfpagelayout=SinglePage,pdfpagemode=None,pdfstartview=Fit}
+    \hypersetup{pdfauthor={Ina Simonovska}}
+    \hypersetup{pdftitle={MAGA}}
+    \hypersetup{pdfdisplaydoctitle=False}% 
+    \hypersetup{pdfsubject={MAGA}}%
+    \hypersetup{pdfkeywords={MAGA}}
+
+\newcounter{saveeqni}%
+\newcounter{saveeqn01i}%
+\newcommand{\alpheqni}{\setcounter{saveeqni}{\value{section}}%
+%\setcounter{saveeqn01i}{\value{subsectioni}}%
+\renewcommand{\theequation}
+    {\alph{saveeqni}\mbox{.\arabic{equation}}}}%
+\newcommand{\reseteqni}{\setcounter{equation}{\value{saveeqni}}%
+\renewcommand{\theequation}{\arabic{equation}}}%
+
+\newtheorem{prop}{Proposition}
+\newtheorem{crl}{Corollary}
+
+\renewcommand{\appendixpagename}{Appendix} 
+
+\onehalfspacing
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+  % QJE-style fonts (Times New Roman equivalent)
+% Text and math fonts
+\usepackage{kpfonts} 
+% Sans-serif for titles
+\usepackage{helvet}
+\renewcommand{\sfdefault}{phv} % Helvetica
+\usepackage{bm} % Bold math symbols
+\date{}
+
+  
+\begin{document}
+\appendices
+\title{Online Appendix for \\``Making America Great Again? \\ The Economic Impacts of Liberation Day Tariffs''}
+
+\author{
+Anna Ignatenko\footnote{Email: Anna.Ignatenko@nhh.no}
+\smallskip{}\\
+Norwegian School of Economics
+ \and 
+Ahmad Lashkaripour \footnote{Email: ahmadlp@gmail.com}
+\smallskip{}\\
+Indiana University, CESIfo
+\and
+Luca Macedoni \footnote{Email: luca.macedoni@unimi.it}
+\smallskip{}\\
+University of Milan, CESIfo 
+\and 
+Ina Simonovska\footnote{Corresponding author email: inasimonovska@ucdavis.edu}
+ \smallskip{}\\
+UC Davis, NBER, CEPR
+\bigskip{}}
+
+
+\maketitle
+
+
+\onehalfspacing
+
+\section{Micro-Foundation}
+\label{app:microfoundation}
+This appendix provides the micro-foundation for our model. We begin by constructing consumption indices. Varieties originating from each source \( n \) are aggregated using a Constant Elasticity of Substitution (CES) function with elasticity \( \sigma_i \) to form a bilateral consumption composite \( C_{ni} \). These bilateral composites are then aggregated by another CES function with elasticity \( \eta_i > 1 \) to yield the overall consumption utility \( C_i \). We assume that the difference between the cross-national and within-national elasticities is constant, so that $\frac{1}{\eta_i-1} = \frac{1}{\sigma_i-1} + \varsigma,$ with \(\varsigma \ge 0\). This assumption is without much loss of generality, but allows us to get more compact expressions for equilibrium variables. Notice that in the traditional non-nested Melitz framework,  $\varsigma=0$, by assumption, which is a special case of the restriction we are imposing.
+
+To make the notation concise, define $\tau_{ni}\equiv1+t_{ni}$, where $t_{ni}$ is the tariff rate imposed by country $i$ on goods from $n$.%\footnote{Note that $\tau_{ni}$ should not be confused with the income tax rate $\tau_{i}^L$.} 
+Under monopolistic competition, firms maximize profits by setting destination-specific prices with a markup over marginal cost.\footnote{In our model, mark-ups are destination-specific but invariant across firms from a given source to a given destination. Destination-specific mark-ups that also vary in firm characteristics would arise in a model with \citet{kimball} preferences, homothetic translog preferences as in \citet{bergin_feenstra} and  \citet{feenstra2017globalization}, homothetic preferences that satisfy the quadratic mean of order r (QMOR) expenditure function as in \citet{FEENSTRA201816}, and homothetic preferences beyond CES outlined in \citet{matsuyama2017beyond}. Alternatively, one can specify non-homothetic preferences (see ex. \citet{10.1111/j.1467-937X.2007.00463.x}, \citet{saure2012bounded}, \citet{https://doi.org/10.3982/ECTA9986},  \citet{BEHRENS2012703}, \citet{behrens2014trade}, \citet{simonovska2015}, \citet{10.1257/mic.20160382}, \citet{jsw2019}, \citet{dhingra2019monopolistic}, and \citet{macedoni2025international} among others). Since we focus on aggregate, rather than firm-level, predictions in this model, we opt for the simplest possible variable-mark-up specification.} In particular, the price charged by a firm with productivity \(\phi\) in market \(i\) is given by
+\[
+p_{ni}(\phi) = \mu_i\,\frac{\tau_{ni} \tilde{d}_{ni} w_n}{\phi}, \qquad\text{with}\qquad \mu_i \equiv \frac{\sigma_i}{\sigma_i - 1}.
+\]
+where $\tilde{d}_{ij}$ represents iceberg trade costs from $n$ to $i$ and $w_n$ is the wage in country $n$. The zero-profit condition requires that
+\[
+\pi_{ni}(\phi) = \frac{1}{\sigma_i}\frac{1}{\tau_{ni}}\, p_{ni}(\phi)\, c_{ni}(\phi) - w_i f_{ni} = 0.
+\]
+where $c_{ni}(\phi)$ is the quantity sold by a firm with productivity \(\phi\) in market \(i\) and $f_{ni}$ denotes the fixed cost of exporting from $n$ to $i$, expressed in destination labor units. This condition implies a cutoff productivity level given by
+\begin{equation} \label{eq: phi_ij}
+\phi_{ni} = \mu_i \,\tau_{ni}^{\frac{\sigma_j}{\sigma_i-1}}\,\frac{\tilde{d}_{ni} w_n}{P_{ni}}\left(\frac{X_{ni}}{\sigma_i w_i f_{ni}}\right)^{-\frac{1}{\sigma_i-1}}.
+\end{equation}
+where $X_{ni}$ are the value of exports from $n$ to $i$. $P_{ni}$ is the price index defined as
+\[
+P_{ni} = \left[ \int_{\phi_{ni}}^{\infty} p_{ni}(\phi)^{1-\sigma_i}\, dG_n(\phi) \right]^{\frac{1}{1-\sigma_i}},
+\]
+and $G_n(\phi)$ is the productivity distribution. Assume now that $G_n(\phi)$ takes the following Pareto form
+\[
+G_n(\phi) = 1 - \left(\frac{b_n}{\phi}\right)^{\theta}.
+\]
+where $b_n$ is the shift parameter and $\theta$ is the shape parameter.
+After plugging firm-level prices into the definition of $P_{ni}$ and integrating, the price index can be expressed as
+\begin{equation} \label{eq: P_ij}
+P_{ni} =\mu_i \  \left(\frac{\theta - (\sigma_i-1)}{\theta}\right)^{\frac{1}{\sigma_i-1}} \tau_{ni} \tilde{d}_{ni} w_n\, b_n^{-\frac{\theta}{\sigma_i-1}} \left[M_n^e\right]^{\frac{-1}{\sigma_i-1}} \phi_{ni}^{\frac{\theta - (\sigma_i-1)}{\sigma_i-1}},
+\end{equation}
+where $M_n^e$ is the mass of entrants in country $n$. Substituting this expression into the cutoff condition (Equation \ref{eq: phi_ij}) and solving for \(\phi_{ij}\) yields
+\[
+\left(\frac{\phi_{ni}}{b_n}\right)^{-\theta} = \frac{\theta - (\sigma_i-1)}{\theta \sigma_i}\,\frac{1}{M_n^e}\,\frac{X_{ni}/\tau_{ni}}{w_i f_{ni}}.
+\]
+The mass of firms from country \(n\) serving destination \(i\) is obtained by
+\[
+M_{ni} = \left[1 - G_n(\phi_{ni})\right] M_n^e = \left(\frac{\phi_{ni}}{b_n}\right)^{-\theta} M_n^e = \frac{\theta - (\sigma_i-1)}{\theta \sigma_i}\,\frac{X_{ni}/\tau_{ni}}{w_n f_{ni}}.
+\]
+Total profit margins in market \(i\) from origin \(n\) are given by
+\[
+\frac{X_{ni}}{\sigma_i \tau_{ni}} - w_i f_{ni} M_{ni} = \frac{\sigma_i-1}{\theta\sigma_i}\,\frac{X_{ni}}{\tau_{ni}}.
+\]
+The free entry condition equates the cost of entry with the net profits across all destinations. That is,
+\[
+M_n^e f_n^e = \sum_i \frac{\sigma_i-1}{\theta\sigma_i}\,\frac{X_{ni}/\tau_{ni}}{w_n} = \sum_i  (1-\nu_i) \frac{X_{ni}}{\tau_{ni}},
+\]with the destination-absorbed profit margin defined as
+\[\nu_i \equiv \frac{\theta - (\sigma_i-1)}{\theta\sigma_i},
+\]
+and with $f_n^e$ denoting the fixed cost of entry. Thus, the free entry condition may be rewritten as
+\[
+M_n^e = \sum_i \left[(1-\nu_i) \,\rho_{ni}\right]\frac{L_n}{f_n^e},
+\]
+where $\rho_{ni}\equiv\frac{X_{ni}/\tau_{ni}}{w_{n}L_{n}}$ is the Domar weight of good $(n,i)$ in country $n$'s economy and $L_n$ is the mass of workers in $n$. We further assume that there are congestion effects in the barriers to entry, such that the entry cost increases when the country collects more profits from imported content\footnote{This assumption is made for tractability and ensures that the mass of entrants is proportional to the size of the labor force, as is standard in models with Pareto-distributed firm heterogeneity. This simplification has negligible quantitative impact in our setting: the parameter~$\nu$ takes only two values (U.S. vs. non-U.S.) in the calibration, and because U.S. import penetration is modest, changes in expenditure shares have only a limited effect on the average~$1 - \nu$ that determines entry.}: $
+f_n^e\left(\rho_{n}; \nu\right) = \theta \bar{f}^e \left[\sum_{i}(1-\nu_{i})\rho_{ni}\right]^{-1}.$ Under this assumption, the aggregate number of firms in country \(n\) is given by
+\[M^{e}_n = \frac{L_n}{\theta \bar{f}^e}.\]
+Let $P_i$ denote the price index in $i$ and $E_i$ aggregate expenditures in $i$. Plugging Equation (\ref{eq: phi_ij}) into Equation (\ref{eq: P_ij}), and invoking the CES import demand specification, $X_{ni}=(P_{ni}/P_{i})^{1-\eta_n}E_{n}$, yields the following expression for the  price index
+\[
+P_{ni}^{1-\eta_i} = \Upsilon_i^{-\varepsilon} \left(\frac{P_i^{\eta_i-1} E_i}{w_i}\right)^{(\varphi_i-1)\varepsilon} \left(\frac{ d_{ni}w_n}{A_nL_n^\psi}\right)^{-\varepsilon}\left(1+t_{ni}\right)^{-\varphi_i\varepsilon},
+\]
+where $\Upsilon_{i}\equiv  \mu_i \left[\theta(\sigma_{i}-1)(\varphi_{i}-1)\right]^{\psi}(\sigma_{i}f_{ii})^{\varphi_{i}-1}$ is a constant price shifter, $A_n=b_n [f^e]^{-\psi}$ is variety-adjusted productivity,  $d_{ni}\equiv(f_{ni}/f_{ii})^{\varphi_i-1} \tilde{d}_{ni}$  is the composite trade cost, and the structural elasticities are defined as
+\[
+\varepsilon \equiv \frac{\theta}{1+\varsigma\theta},\qquad \varphi_i \equiv \frac{\sigma_i}{\sigma_i-1} - \frac{1}{\theta},\qquad \psi \equiv \frac{1}{\theta}.
+\]
+Combining this result with the CES import demand function gives
+\[
+\lambda_{ni}=\left(\frac{P_{ni}}{P_{i}}\right)^{1-\eta_{i}}=\frac{(1+t_{ni})^{-\varphi_{i}\varepsilon}\left( d_{ni}w_{n}/A_{n}L_{n}^{\psi}\right)^{-\varepsilon}}{\sum_{j}(1+t_{ji})^{-\varphi_{i}\varepsilon}\left( d_{ji}w_{j}/A_{j}L_{j}^{\psi}\right)^{-\varepsilon}}.
+\]
+Substituting the expression for $P_{ni}^{1-\eta_i}$ into $P_{i}^{1-\eta_{i}}=\sum_j P_{ji}^{1-\eta_{i}}$ and solving for $P_{i}$, we get the following expression for the consumer price index:
+\[
+P_{i}=\Upsilon_{i}\left[\frac{E_{i}}{w_{i}}\right]^{1-\varphi_{i}}\left[\sum_{j}\left(\frac{ d_{ji}}{A_{j}L_{j}^{\psi}}\right)^{-\varepsilon}\,(1+t_{ji})^{-\varphi_{i}\cdot\varepsilon}\,w_{j}^{-\varepsilon}\right]^{-\frac{1}{\varepsilon}}.
+\]
+%{Invoking the balanced budget condition for country $j$, namely, $E_{j}=w_{i}L_{i}+\sum\frac{t_{ij}}{1+t_{ij}}\lambda_{ij}E_{j}$, we get \[E_{j}=\frac{w_{i}L_{i}}{1-\sum\frac{t_{ij}}{1+t_{ij}}\lambda_{ij}}=\frac{w_{i}L_{i}}{\sum\frac{1}{1+t_{ij}}\lambda_{ij}},\] which simplifies the first term in the price index as $\frac{E_{j}}{w_{j}}=\left(\sum_{i}\frac{\lambda_{ij}/(1+t_{ij})}{L_{j}}\right)$}
+
+
+\subsection{More general pass-through specification}
+\label{app:passthrough}
+In the baseline model, the pass-through of tariffs to firm-level prices is complete. However, the aggregate tariff pass-through deviates from unity, as tariffs affect the price index through extensive margin adjustments or firm-selection effects. To see this, note that the price of a firm variety $\omega$ is determined by firm productivity $\phi$. Specifically, we have: $p_{ni}(\phi) = \mu_i\,\frac{\tau_{ni} \tilde{d}_{ni} w_n}{\phi}$, where $\tau_{ni} \equiv 1 + t_{ni}$ denotes the tariff in a compact form. Under this specification, the pass-through at the firm level is complete---i.e., $\frac{\partial\ln p_{ni}(\omega)}{\partial\ln\tau_{ni}}=1$.
+
+We can, however, generalize the model to allow for incomplete pass-through at the firm level. In this more flexible framework, prices are given by:
+\[
+p_{ni}(\phi) = \mu_i\,\frac{(\tau_{ni} \tilde{d}_{ni})^{\tilde{\varphi_i}} w_n}{\phi},
+\]
+where the exponent $\tilde{\varphi}_i$ serves as a reduced-form parameter that captures curvature in the cost function, arising from the presence of quasi-fixed inputs. The key idea is that firms utilize destination-specific factors in production, leading to a non-finite elasticity of transformation between varieties sold in different markets, in the spirit of \cite{BAIER20011}. A higher tariff exerts downward pressure on the price of (quasi-fixed) specific factors, and this specification provides a tractable reduced-form representation of these effects.\footnote{Incomplete pass-through at the firm-level can also be explained by additive local distribution costs \citep{burstein2003distribution, corsetti2005macroeconomic, nakamura2010accounting}. Such costs result in heterogeneous pass-through rates across firms that differ in their productivity (as in \cite{berman2012different}). To focus on the aggregate rather than firm-level implications of the incomplete pass-through, we assume it is driven by quasi-fixed inputs, which imply an incomplete pass-through that is common across firms.} In this generalized setting, the equilibrium has the same macro-level representation, with a revised pass-through formulation:
+\[
+\varphi_{i}=\tilde{\varphi}_{i}+\frac{1}{\sigma_{i}-1}+\frac{1}{\theta}
+\] and an aggregate price index given by $P_{i}=\Upsilon_{j}\left[\frac{E_{i}}{w_{i}}\right]^{\varphi_{i}-\tilde{\varphi}_i}\left[\sum_{j}\left(\frac{ d_{ji}}{A_{j}L_{j}^{\psi}}\right)^{-\varepsilon}\,(1+t_{ji})^{-\varphi_{i}\cdot\varepsilon}\,w_{j}^{-\varepsilon}\right]^{-\frac{1}{\varepsilon}}$, where the bilateral non-tariff barriers are now given by $d_{ji}\equiv(f_{ji}/ f_{ii})^{\varphi_i-\tilde{\varphi}_{i}} \tilde{d}_{ji}^{\tilde{\varphi}_{i}}$.
+
+\subsection{Alternative Micro-foundations}
+Our preferred microfoundation, detailed above, allows for tariff pass-through to the price index to deviate from unity and allows trade imbalances to respond endogenously to tariff changes. Nonetheless, our framework is sufficiently flexible to encompass a broad class of microfoundations commonly used in the trade literature. Specifically, it nests the following canonical models:
+\begin{enumerate}
+    \item Eaton-Kortum model with external economies of scale: In this case, $\varepsilon$ denotes the shape parameter of the Fr\'echet distribution in the Eaton-Kortum framework, while $\psi$ captures the scale elasticity driven by Marshallian externalities. The tariff pass-through to the price index is one ($\varphi_i = 1$), and trade imbalances are driven entirely by fixed transfers determined outside of the model, since $\nu_i = 0$ for all $i$.
+
+    \item The Krugman model: in this interpretation, $\varepsilon$ represents the cross-national elasticity of substitution, and $\psi$ reflects the degree of love for variety. As with the previous case, the tariff pass-through to the price index is one ($\varphi_i = 1$), and trade imbalances are driven entirely by fixed transfers determined outside of the model, as $\nu_i = 0$ for all $i$.
+\end{enumerate}
+The key advantage of our Melitz-Pareto microfoundation is that it generates trade imbalances endogenously, allowing those imbalances to adjust in response to tariff changes. In contrast, the other microfoundations do not admit trade imbalances and allot the entire imbalance to fixed factors outside of the model. Hence, performing counterfactual analyses under those models necessitates additional assumptions regarding the scaling of fixed transfers, which we examine in Appendix  \ref{section: alt models}.
+
+ 
+
+\subsection{Input-Output Linkages}
+\label{app:io}
+We introduce input-output linkages by assuming a round-about production structure, which employs labor and a composite input bundle with the same aggregation and price index as the final good.  Hence, the price of the goods supplied by a firm with productivity $\phi$  in location $n$  selling to destination $i$  is given by
+\[
+p_{ni}(\phi)=\mu_{i}\frac{\tau_{ni}\ \tilde{d}_{ni}}{\phi}w_{n}^{\beta}P_{n}^{1-\beta}
+\]
+where $\beta$ is the share of labor. Assuming that fixed overhead costs are paid in terms of only labor in the destination country, we can follow the same steps as in the main model to obtain the following expression for the price  index of exported varieties from location $n$  to destination $i$:
+\[
+P_{ni}=\frac{\mu_i}{b_{n}}\left(\frac{\theta-(\sigma_{i}-1)}{\theta}\right)^{\psi}\left(\frac{1}{\sigma_{i}}\right)^{1-\varphi_{i}}\tilde{d}_{ni}f_{ni}^{(\varphi_{i}-1)}\tau_{ni}^{\varphi_{i}}w_{n}^{\beta}P_{n}^{1-\beta}\left(\frac{X_{ni}}{w_{i}}\right)^{1-\varphi_{i}}\left[M_{n}^{e}\right]^{\psi}.
+\]
+We can deduce from the past derivation that a constant fraction $\nu_i$  of sales in country $i$  is absorbed by the overhead costs paid in terms of labor in that country, which implies the free-entry condition:
+\[
+M_{n}^{e}f_{n}^{e}w_{n}^{\beta}P_{n}^{1-\beta}=\sum_{j}\left[\nu_{j}\rho_{nj}\right]w_{n}L_{n},
+\]
+ where $\rho_{nj}\equiv\frac{X_{nj}/\tau_{nj}}{w_{n}L_{n}}$ is the Domar weight. Assuming the same congestion effect in entry as before, the above condition yields:
+ \[
+ M_{n}^{e}=\left(\frac{w_{n}}{P_{n}}\right)^{1-\beta}\frac{L_{n}}{\theta\bar{f}^{e}}.
+ \]
+ Plugging the expression for $M_{i}^{e}$ back into our earlier expression for the origin-specific price index, and leveraging the CES demand system, where $X_{ni}=(P_{ni}/P_{i})^{1-\eta_{i}}E_{i}$ and $P_{i}^{1-\eta_{i}}=\sum_{j}P_{ji}^{1-\eta_{i}}$, we obtain the following expression for trade shares
+ \[
+\lambda_{ni}=\frac{(1+t_{ni})^{-\varphi_{i}\varepsilon}\left(d_{ni}w_{n}^{1-(1-\beta)(1+\psi)}P_{n}^{(1-\beta)(1+\psi)}/A_{n}L_{n}^{\psi}\right)^{-\varepsilon}}{\sum_{j}(1+t_{ji})^{-\varphi_{i}\varepsilon}\left(d_{ji}w_{j}^{1-(1-\beta)(1+\psi)}P_{j}^{(1-\beta)(1+\psi)}/A_{j}L_{j}^{\psi}\right)^{-\varepsilon}}
+ \]
+ and the following expression for the aggregate price index in market $i$:
+ \[
+P_{i}=\Upsilon_{i}\left[\frac{E_{i}}{w_{i}}\right]^{1-\varphi_{i}}\left[\sum_{j}\left(\frac{d_{ji}}{A_{j}L_{j}^{\psi}}\right)^{-\varepsilon}\,(1+t_{ji})^{-\varphi_{i}\cdot\varepsilon}\left(w_{j}^{1-(1-\beta)(1+\psi)}P_{j}^{(1-\beta)(1+\psi)}\right)^{-\varepsilon}\,\right]^{-\frac{1}{\varepsilon}}.
+ \]
+ The national-level budget constraint is now given by
+ \[
+ E_{i}=w_{i}L_{i}+\left(1-\beta \right)\sum_{n}\frac{1-\nu_{n}}{1+t_{in}}\lambda_{in}E_{n}+R_{i}+\bar{T}_i,
+ \]
+ where the second term on the right-hand side denotes total expenditure on intermediate inputs, which is a fraction $1-\beta$ of sales net of overhead, per cost minimization. The labor market clearing condition is
+ \[
+ L_{i}^{D}=\frac{1}{w_{i}}\left[\beta\sum_{n}\frac{1-\nu_{n}}{1+t_{in}}\lambda_{in}E_{n}+\sum_{n}\frac{\nu_{i}}{1+t_{ni}}\lambda_{ni}E_{i}\right],
+ \]
+ where the first term on the right-hand side represents labor demand for production and entry, with the second term representing labor demand for overhead cost payments.
+
+
+\subsection{ Multiple Sectors}
+\label{app:multisectors}
+We further extend our baseline model to incorporate multiple sectors, where the economy consists of sectors indexed by $k=1,...,K$ sectors. Preferences  across sectors are represented by a Cobb-Douglas utility aggregator, with $e_{i,k}$ denoting the constant share of expenditure on sector $k$ goods in country $i$. We present the multi-sector extension in two stages: first, the version without input-output (IO) linkages, followed by the version including IO linkages. 
+\paragraph{Multi-Sector Model without IO linkages.}
+The trade shares in industry $k$ are given by
+
+\[
+\lambda_{ni,k}=\frac{\left(d_{ni,k}/(A_{n,k}L_{n,k}^{\psi})\right)^{-\varepsilon_{k}}\,(1+t_{ni,k})^{-\varphi_{i}\cdot\varepsilon_{k}}\,w_{n}^{-\varepsilon_{k}}}{\sum_{j}\left(d_{ji,k}/(A_{j,k}L_{j,k}^{\psi})\right)^{-\varepsilon_{k}}\,(1+t_{ji,k})^{-\varphi_{i}\cdot\varepsilon}\,w_{j}^{-\varepsilon_{k}}}
+\]
+where $\varepsilon_k$ is the sector-level trade elasticity. Total demand for country $i$'s labor services sums over demand from all countries in all sectors:
+\[
+L_{i}^{D}=\frac{1}{w_{i}}\left[\sum_{n}\sum_{k}\frac{1-\nu_{n}}{1+t_{in,k}}\lambda_{in,k}e_{n,k}E_{n}+\nu_{i}\sum_{n}\sum_{k}\frac{1}{1+t_{in,k}}\lambda_{ni,k}e_{i,k}E_{i}\right]
+\]
+Labor supply is $L_{i}^{S}=\left(\frac{(1-\tau_{i}^L)w_{i}}{P_{i}}\right)^{\kappa}$, where the aggregate price index is 
+\[
+P_{i}=\Upsilon_{i}\left[\frac{E_{i}}{w_{i}}\right]^{1-\varphi_{i}}\prod_{k}\left[\sum_{n}\left(\frac{d_{ni,k}}{A_{n,k}L_{n,k}^{\psi}}\right)^{-\varepsilon_k}\,(1+t_{ni,k})^{-\varphi_{i}\cdot\varepsilon_{k}}\,w_{n}^{-\varepsilon_{k}}\right]^{-\frac{e_{i,k}}{\varepsilon_{k}}}
+\]
+The labor market clearing condition equates labor supply with demand across all sectors, $L_{i}^{D}=L_{i}^{S}$, and the balanced budget condition equates total expenditure with factor income, tariff revenues, and fixed transfers, $E_{i}=w_{i}L_{i}+R_{i}+\bar{T}_{i}$. Tariff revenues are the sum of revenues across all partners and sectors:
+\[
+R_{i}=\sum_{n\neq i}\sum_{k}\frac{t_{ni,k}}{1+t_{ni,k}}\lambda_{ni,k}e_{i,k}E_{i}.
+\]
+
+ \paragraph{Multi-Sector Model with IO linkages.}
+Next, we present the multi-sector model with IO linkages. We assume that the value-added share $\beta_k$ is sector-specific but common across countries. As before the trade elasticity is also sector-specific, but the scale elasticity is common across sectors and the tariff pass-through onto the price index is destination-specific but sector blind.  Interpolating from the IO model in the single-sector case, the sector-level trade shares are
+ \[
+\lambda_{ni,k}=\frac{(1+t_{ni,k})^{-\varphi_{i}\varepsilon_{k}}\left(d_{ni,k}w_{i}^{1-(1-\beta_{k})(1+\psi)}P_{n}^{(1-\beta_{k})(1+\psi)}/A_{n}L_{n}^{\psi}\right)^{-\varepsilon_{k}}}{\sum_{j}(1+t_{ji,k})^{-\varphi_{i}\varepsilon_{k}}\left(d_{ji,k}w_{j}^{1-(1-\beta_{k})(1+\psi)}P_{j}^{(1-\beta_{k})(1+\psi)}/A_{j}L_{j}^{\psi}\right)^{-\varepsilon_{k}}}.
+\]
+
+The aggregate price index in market $i$  is given by:
+\[
+P_{i}=\Upsilon_{i}\left[\frac{E_{i}}{w_{i}}\right]^{1-\varphi_{i}}\prod_{k}\left[\sum_{n}\left(\frac{d_{ni,k}}{A_{n,k}L_{n,k}^{\psi}}\right)^{-\varepsilon_{k}}\,(1+t_{ni,k})^{-\varphi_{i}\cdot\varepsilon_{k}}\left(w_{n}^{1-(1-\beta_{k})(1+\psi)}P_{n}^{(1-\beta_{k})(1+\psi)}\right)^{-\varepsilon_{k}}\,\right]^{-\frac{e_{i,k}}{\varepsilon_{k}}}.
+\]
+
+where $e_{i,k}$ denotes the expenditure share on industry $k$ goods, which is the same share for consumption and intermediate expenditure, given our simple roundabout production framework. 
+
+The national-level budget constraint is now given by
+
+\[
+E_{i}=w_{i}L_{i}+\sum_{k}\sum_{n}\left(1-\beta_{k}\right)\frac{1-\nu_{n}}{1+t_{ni,k}}\lambda_{ni,k}e_{i,k}E_{n}+R_{i}+ \bar{T}_{i},
+\]
+
+where the second term on the right-hand side denotes total expenditure
+on intermediate inputs, which is a fraction $1-\beta_k$
+of sales net of overhead in each sector per cost minimization. The labor market
+clearing condition is
+
+\[
+L_{i}^{D}=\frac{1}{w_{i}}\left[\sum_{k}\sum_{n}\beta_{k}\frac{1-\nu_{n}}{1+t_{in,k}}\lambda_{in,k}e_{n,k}E_{n}+\sum_{n}\frac{\nu_{i}}{1+t_{ni,k}}\lambda_{ni,k}e_{i,k}E_{i}\right],
+\]
+where the first term on the right-hand side represents labor demand
+for production and entry, with the second term representing labor
+demand for overhead cost payments.
+
+We do not provide a formal characterization of optimal tariffs under multiple sectors and IO linkages. We only compute the optimal tariffs in a single sector model with IO linkages and find that they are lower than in our baseline model. In the multi-sector case, optimal tariffs may display additional cross-product heterogeneity. More specifically, optimal tariffs would likely discriminate across goods or sectors, depending on the domestic content of imported goods. \citet{blanchard2016global} demonstrate that such considerations lead to non-trivial variation in optimal tariffs across goods in a setting with sector-specific factors and upward-sloping supply curves. Closer to our framework, \citet{lashkaripour2023profits} show that trade taxes vary with the domestic content of taxed goods in a multi-sector quantitative trade model featuring IO linkages.
+
+Setting aside the issue of optimality, the welfare gains from \emph{unilateral} tariffs in the presence of IO linkages may be either amplified or dampened due to two countervailing effects. On the one hand, tariffs are less effective at precisely targeting the demand for foreign labor services, since imports contain domestic labor content and tariffed intermediate goods complement domestic labor in production. As a result, tariffs are less capable of reducing the relative demand for foreign labor and depressing relative foreign wages---a mechanism that underpins the terms-of-trade gains. On the other hand, a given reduction in relative foreign wages results in greater welfare gains due to input-output amplification effects. The net impact depends on the relative strength of these opposing forces. In our quantitative analysis (Table \ref{tab: T4}), we find that these effects largely offset each other, leaving the overall welfare gain similar to that observed in the baseline model.
+
+\section{National Budget and Deficit Accounting}\label{app:deficit}
+
+This appendix formalizes the national accounting relationships and elucidates how trade imbalances can arise even when the national budget is balanced.
+
+\paragraph{Definitions.}
+Let $X_{in}$ denote total sales by country $i$'s firms to market $n$. Define the following aggregate variables:
+\begin{itemize}
+    \item   (tariff-adjusted sales)  $\; X_i \; \equiv \; \sum_{n} \frac{1}{1+t_{in}} X_{in}$
+    \item (expenditure) $\; E_i \; \equiv \; \sum_{n} X_{ni}$
+    \item (factor income) $\; Y_i \; \equiv \; w_i L_i$
+\end{itemize}
+
+\paragraph{National-level budget constraint.}
+Accounting for fixed transfers $\bar T_i$, country $i$'s representative consumer's budget constraint is
+\begin{equation}
+    E_i \;=\; Y_i + R_i + \bar T_i, 
+    \label{eq:HH_budget}
+\end{equation}
+where $\sum_i \bar T_i = 0$ and the tariff revenues are $R_{i}=\sum_{n}\frac{t_{ni}}{1+t_{ni}}X_{ni}$, with $t_{ii}=0$ by construction.
+\paragraph{Allocating proceeds from sales to production factors.}
+Next, we allocate the revenues from sales by country $i$'s firms to factors employed at various stages. First, aggregate sales can be decomposed into variable profits plus production wage payments:
+\begin{equation}
+    X_i \;=\; \Pi_i \;+\; w_i L_i^{(p)},
+    \label{eq:sales_split}
+\end{equation}
+where 
+\begin{itemize}
+    \item $\Pi_{i}$ denotes variable profits which are a constant fraction of sales
+    \item $L_{i}^{(p)}$ denotes the labor used for production.
+\end{itemize}
+Variable profits cover (1) the sunk entry cost paid in terms of domestic wages, and (2) fixed overhead costs paid in terms of the local wages in the market being served. Namely,
+\begin{equation}
+    \Pi_i \;=\; w_i L_i^{(e)} \;+\; \sum_{n} w_n L_{ni}^{(f)},
+    \label{eq:profits_split}
+\end{equation}
+where: 
+\begin{itemize}
+    \item $L_i^{(e)}$ represents labor used for entry
+    \item $L_{ni}^{(f)}$ is the labor employed in market $n$ to cover the fixed cost in that market. 
+\end{itemize}
+Because fixed costs constitute a constant fraction $\nu_n\in(0,1)$ of sales in destination $n$, we have
+\begin{equation}
+    \sum_{n} w_n L_{ni}^{(f)} \;=\; \sum_{n} \nu_n X_{in}.
+    \label{eq:fixedcost_prop}
+\end{equation}
+
+\paragraph{Factor Income $\neq$ Total Sales.}
+
+Total factor income in country $i$ is the sum of labor payments for production and entry activity by domestic firms plus fixed cost payments by foreign and domestic firms serving market $i$:
+\begin{align}
+    Y_i \equiv w_i L_i 
+    &= w_i\bigl(L_i^{(p)} + L_i^{(e)}\bigr) + w_i \sum_{n} L_{in}^{(f)}       \nonumber\\[2pt]
+    &= \sum_{n}(1-\nu_n)X_{in}  \;+\; \nu_i \sum_{n} X_{ni}.
+    \label{eq:income_breakdown}
+\end{align}
+One can immediately see that unless $\nu_i=\nu_n$ for all $n$, then sales are not equal to factor income (i.e., $Y_i \neq \sum_{n} X_{in}$). In fact, if $\bar T_i=0$, it is straightforward to verify that
+\begin{equation}
+\begin{cases}
+    \nu_i > \nu_n \ \forall n\neq i &\Longrightarrow\quad  Y_i > X_i, \\[4pt]
+    \nu_i < \nu_n \ \forall n\neq i &\Longrightarrow\quad  Y_i < X_i.
+\end{cases}
+\label{eq:divergence_cases}
+\end{equation}
+Hence, even in the absence of explicit transfers, factor income can exceed, or fall short of, national sales due to cross-border fixed cost payments.
+
+\paragraph{Endogenous Deficit.}
+
+The fact that factor income can diverge from sales leads to trade deficits in equilibrium. To see this, combine Equation (\ref{eq:HH_budget}) (the budget constraint) with Equation (\ref{eq:income_breakdown}) to obtain
+\[
+\sum_{n}X_{ni}=\underbrace{\sum_{n}(1-\nu_{n})X_{in}+\nu_{i}\sum_{n}X_{ni}}_{w_{i}L_{i}}\;+\;\sum_{n}\frac{t_{ni}}{1+t_{ni}}X_{ni}+\bar{T}_{i}.
+\]
+Next, note that the trade deficit is the difference between net expenditure and sales:
+\[
+D_{i}\equiv (E_{i} - R_i) -X_{i}	=\sum_{n\neq i} \frac{1}{1+t_{ni}}X_{ni}- \frac{1}{1+t_{in}}X_{in}.
+\]
+Appealing to this definition, we can combine and rearrange the above equations to specify the trade deficit as
+\[
+D_{i}=\bar{T}_{i}+\sum_{n\neq i}\left[\frac{\nu_{i}}{1+t_{ni}}X_{ni}-\frac{\nu_{n}}{1+t_{in}}X_{in}\right].   
+\]
+The summation term in the above expression is endogenous. This term would collapse to zero if $\nu_i=\nu_n$ for all $n$, but is generally different from zero when the $\nu$ parameters are \textit{not} internationally symmetric. Without fixed transfers ( $\bar T_i=0$), total expenditure net of tariffs equals factor income (i.e., $E_i - R_i=Y_i$), implying immediately per relationship (\ref{eq:divergence_cases}) that
+\begin{equation}
+\begin{cases}
+    \nu_i > \nu_n \ \forall n\neq i &\Longrightarrow\quad  D_i > 0, \\[4pt]
+    \nu_i < \nu_n \ \forall n\neq i &\Longrightarrow\quad  D_i < 0.
+\end{cases}
+\label{eq:deficit_cases}
+\end{equation}
+It is important to note that while trade imbalances in our framework can arise endogenously from asymmetric fixed cost payments, these asymmetries explain only a fraction of the deficit in practice. We revisit the issue of measurement in Appendix \ref{app:data}.
+
+\subsection{Deficit Adjustment in Response to Tariffs }
+Next, we elucidate how the deficit shrinks in response to tariffs. To this end, consider a setting where country $i$  has a greater fixed cost margin, $\nu_i$, than its partners. Moreover, suppose all of country $i$'s partners have a common $\nu$ parameter, denoted by $\nu_{-i}<\nu_i$. Define country $i$'s total imports adjusted for tariffs as
+\[
+M_{i}\equiv\sum_{n\neq i}\frac{1}{1+t_{ni}}X_{ni}
+\]
+and its total exports adjusted for tariffs as
+\[
+M_{-i}\equiv\sum_{n\neq i}\frac{1}{1+t_{in}}X_{in}
+\]
+Appealing to these definitions and our earlier expression for the deficit, country $i$'s trade deficit can be represented as
+\[
+D_{i}=\bar{T}_{i}+\left(\nu_{i}M_{i}-\nu_{-i}M_{-i}\right)
+\]
+Taking derivatives from the above equation \textit{w.r.t.} a tariff instrument, $t$ , yields
+
+\[
+\frac{\partial D_{i}}{\partial(1+t)}=\nu_{i}\frac{\partial M_{i}}{\partial(1+t)}-\nu_{-i}\frac{\partial M_{-i}}{\partial(1+t)}
+\]
+Note that the balanced budget condition, $(1-v_{i})M_{i}=(1-\nu_{-i})M_{-i}$ requires that $\frac{\partial M_{-i}}{\partial(1+t)}=\frac{1-\nu_{i}}{1-\nu_{-i}}\frac{\partial M_{i}}{\partial(1+t)}$. Plugging this expression into the above equation delivers
+\[
+\frac{\partial D_{i}}{\partial(1+t)}=\left[\nu_{i}-\frac{(1-\nu_{i})}{(1-\nu_{-i})}\nu_{-i}\right]\frac{\partial M_{i}}{\partial(1+t)}
+\]
+One can immediately check that, if $\nu_i>\nu_{-i}$, and tariffs shrink imports, $\frac{\partial M_{i}}{\partial(1+t)}<0$, then they also shrink the deficit for country $i$: $\frac{\partial D_{i}}{\partial(1+t)}<0$.
+ %\footnote {The literature has identified three sources for bilateral trade imbalances: (1) aggregate imbalances due to macroeconomic factors, (2) asymmetric trade costs, and (3) triangular trade; \citep{davis2002mystery, eugster2020bilateral, felbermayr2021theory, cunat2024bilateral, pujolas2024trade}. \citet{cunat2024bilateral} show that asymmetric trade barriers are the most important driver of bilateral imbalances. Our model explicitly accounts for (1) and (2), but it can also account for (3) with a reinterpretation of $d_{ij}$ as a taste-shifter rather than a cost-shifter.}
+\section{Proof of Proposition 1}\label{proof1}
+First, we prove that if trade is balanced and trade frictions are reciprocal, then trade is bilaterally balanced. For trade to be balanced, it must be the case that $\nu$ is common across destinations and $\bar{T}_{i}=0$ for all $i$. Appealing to the separability of the gravity equation, we can specify trade flows as
+%\[
+%\frac{1}{1+t_{ni}}X_{ni}=\Phi_{n}\Omega_{i}\delta_{ni},
+%\]
+\[
+X_{ni}=\Phi_{n}\Omega_{i}\delta_{ni},
+\]
+where $\Phi_n$ and $\Omega_i$ are exporter and importer fixed effects using the language of the gravity literature:
+\[
+\Phi_{n}\equiv\left(w_{n}/(A_{n}L_{n}^{\psi})\right)^{-\varepsilon},\qquad\qquad\Omega_{i}\equiv\frac{E_{i}}{\sum_{j}\left(d_{ji}/(A_{j}L_{j}^{-\psi})\right)^{-\varepsilon}(1+t_{ji})^{-\varphi_{i}\cdot\varepsilon}w_{j}^{-\varepsilon}}
+\]
+and $\delta_{ni}\equiv d_{ni}^{-\varepsilon}\,(1+t_{ni})^{-\varphi_{i}\cdot\varepsilon}$ is the bilateral friction, which satisfies $\delta_{ni}=\delta_{in}$ under reciprocal barriers. The labor market clearing constraint implies that
+\[
+\left(1-\nu\right)\Phi_{i}\sum_{n}\Omega_{n}\delta_{ni}+\nu\Omega_{i}\sum_{n}\Phi_{n}\delta_{ni}=Y_{i}
+\]
+and the budget constraint can be specified as
+\[
+\Omega_{i}\sum_{n}\Phi_{n}\delta_{in}=Y_{i},
+\]
+which together imply the following system of equations
+\[
+\begin{cases}
+\Phi_{i}\sum_{n}\Omega_{n}\delta_{in}=Y_{i} & \left(\forall i\right)\\
+\Omega_{i}\sum_{n}\Phi_{n}\delta_{in}=Y_{i} & \left(\forall i\right),
+\end{cases}
+\]
+where $Y_{i}$ and $\delta_{in}$ are strictly positive. Define
+\begin{equation} \label{eq:system}
+    x_{i}\equiv\frac{\Phi_{i}}{\Omega_{i}}=\frac{\sum_{n}\Phi_{n}\delta_{in}}{\sum_{n}\Omega_{n}\delta_{in}}=\frac{\sum_{n}x_{n}\Omega_{n}\delta_{in}}{\sum_{n}\Omega_{n}\delta_{in}}=\sum_{n}\omega_{in}x_{n},
+\end{equation} 
+where $\omega_{in}\equiv\frac{\Omega_{n}\delta_{in}}{\sum_{n}\Omega_{n}\delta_{in}}\in(0,1)$ with $\sum_{n}\omega_{in}=1$. Define the matrix, $W \equiv [w_{ij}]_{i,j}$. Since every entry of \(W\) is strictly positive and each row sums to 1, \(W\) is a positive stochastic matrix. In vector notation, equation \eqref{eq:system} becomes
+\[
+W\,x = x.
+\]
+Thus, \(x\) is an eigenvector of \(W\) corresponding to the eigenvalue \(1\). By the Perron-Frobenius theorem for positive (and irreducible) matrices, we know that (1) the spectral radius of \(W\) is \(1\), and this eigenvalue is simple, and (2) any positive eigenvector corresponding to the eigenvalue \(1\) is unique up to multiplication by a positive scalar. The constant vector \(\mathbf{1}\) is a positive eigenvector corresponding to the eigenvalue \(1\). By the uniqueness stated in the Perron-Frobenius theorem, any positive solution to $W\,x = x$ must be a scalar multiple of \(\mathbf{1}\). It thus trivially follows that all entries \(x_i\) must be equal. That is, we have $\Omega_i=\Phi_i$ for all $i$, which in turn implies bilateral trade balance:
+%\[
+%X_{ni}=\Phi_{n}\Phi_{i}d_{ni}=\Phi_{i}\Phi_{n}d_{ni}=X_{in}.
+%\]
+\[
+X_{ni}=\Phi_{n}\Omega_{i}\delta_{ni}=\Omega_{n}\Phi_{i}\delta_{in}=X_{in}.
+\]
+Next, we must show that if the aggregate trade deficit is not zero and trade costs are not reciprocal, then trade is bilaterally imbalanced. The proof for this follows trivially from the adding up condition, $D_i=\sum_{n\neq i} D_{ni}$, which asserts that if $D_i\neq 0$, then it must be the case that $D_{ni}\neq 0$ for at least some $n\neq i$.
+\section{Proof of Proposition 2\label{sec: A1}}
+
+To make the notation concise, define $\tau_{ni}\equiv1+t_{ni}$. Appealing to the optimal labor supply decision, the representative utility can be formulated as
+\[
+U_{i}=\frac{1}{1+\kappa}\left(\frac{w_{i}}{P_{i}}\right)^{1+\kappa}+\frac{T_{i}}{P_{i}},
+\]
+where $T_i$  denotes tariff revenues:
+\[
+T_{i}=\sum_{n}\left(\tau_{ni}-1\right)X_{ni},
+ \]
+and $\kappa$ is the labor supply elasticity. We can write the first-order condition \emph{w.r.t.} $\tau_{ni}\equiv1+t_{ni}$ as
+\[
+\frac{dU_{i}}{d\ln\tau_{ni}}=\left[\frac{d\ln w_{i}}{d\ln\tau_{ni}}-\frac{d\ln P_{i}}{d\ln n}\right]\left(\frac{w_{i}}{P_{i}}\right)^{1+\kappa}+\frac{T_{i}}{P_{i}}\left(\frac{d\ln T_{i}}{d\ln\tau_{ni}}-\frac{d\ln P_{i}}{d\ln\tau_{ni}}\right),
+\]
+where $\left(\frac{w_{i}}{P_{i}}\right)^{1+\kappa}=\frac{w_{i}L_{i}}{P_{i}}$. Following \citet{lashkaripour2023profits} and \citet{FL2025}, we assume that country~$i$ derives no first-order gains from distorting relative wages abroad. This holds trivially in two-country models, and it is also virtually satisfied in multi-country settings, since any single country has limited influence on foreign relative wages. Moreover, such wage changes typically result in factoral terms-of-trade transfers between two foreign countries, with negligible impact on the home country's welfare. We can now plug these values back into the first-order condition to obtain:
+\[
+\frac{1}{P_{i}}\left(w_{i}L_{i}\frac{d\ln w_{i}}{d\ln\tau_{ni}}+\frac{d T_{i}}{d\ln\tau_{ni}}-E_{i}\frac{d\ln P_{i}}{d\ln\tau_{ni}}\right)=0.
+\]
+Next, we will write the price index as, $P_{i}=\Upsilon_{i}\left(\frac{E_{i}}{w_{i}}\right)^{1-\varphi_{i}}\tilde{P}_{i}$, where $\tilde{P}_{i}$ is the price index net of the extensive margin adjustment. Hence, we can write $\frac{d\ln P_{i}}{d\ln\tau_{ni}}$ as
+\[ \frac{d\ln P_{i}}{d\ln\tau_{ni}}=\frac{d\ln\tilde{P}_{i}}{d\ln\tau_{ni}}+\left(1-\varphi_{i}\right)\left[\frac{d\ln E_{i}}{d\ln\tau_{ni}}-\frac{d\ln w_{i}}{d\ln\tau_{ni}}\right],
+\]
+where the price derivative can be decomposed as
+\[
+\frac{d\ln \tilde{P}_{i}}{d\ln\tau_{ni}}=\frac{\partial\ln \tilde{P}_{i}}{\partial\ln\tau_{ni}}+\frac{\partial\ln \tilde{P}_{i}}{\partial\ln w_{i}}\frac{d\ln w_{i}}{d\ln\tau_{ni}}.
+\]
+Taking derivatives from the price index equation yields:
+\[
+\frac{\partial\ln \tilde{P}_{i}}{\partial\ln\tau_{ni}}=\lambda_{ni}\varphi_{i},\qquad\qquad\frac{\partial\ln \tilde{P}_{i}}{\partial\ln w_{i}}=\lambda_{ii}.
+\]
+Plugging the expression for $\frac{d\ln P_{i}}{d\ln\tau_{ni}}$ back into the first-order condition yields the updated first-order condition:
+\[
+\frac{1}{P_{i}}\left(\left(\varphi_{i}w_{i}L_{i}+(\varphi_{i}-1)E_{i}\right)\frac{d\ln w_{i}}{d\ln\tau_{ni}}+\varphi_{i}\frac{\partial T_{i}}{\partial\ln\tau_{ni}}-E_{i}\frac{d\ln\tilde{P}_{i}}{d\ln\tau_{ni}}\right)=0.
+\]
+The derivative of  tariff revenues can be unpacked as follows:
+\[
+\frac{\partial T_{i}}{\partial\ln\tau_{ni}}=\tau_{ni}X_{ni}\varphi_i+\sum_{j}\left(\tau_{ji}-1\right)\frac{d X_{ji}}{d\ln\tau_{ni}}.
+\]
+The price derivative can also be unpacked using the intermediate derivative presented above:
+\[
+E_{i}\frac{d\ln \tilde{P}_{i}}{d\ln\tau_{ni}}=\lambda_{ni}\varphi_iE_{i}+\lambda_{ii}E_{i}\frac{d\ln w_{i}}{d\ln\tau_{ni}}=\tau_{ni}X_{ni}\varphi_i+X_{ii}\frac{d\ln w_{i}}{d\ln\tau_{ni}}.
+\]
+Putting it altogether, we get
+\begin{equation} \label{eq: E1 (app)}
+\left(w_{i}L_{i}-X_{ii}-(\varphi_{i}-1)\sum_{l}t_{li}X_{li}\right)\frac{d\ln w_{i}}{d\ln\tau_{ni}}+\varphi_{i}\sum_{j}t_{ji}\frac{dX_{ji}}{d\ln\tau_{ni}}=0.
+\end{equation}
+Next we must characterize the wage derivative, which can be done by appealing to the labor market clearing condition, $w_{i}L_{i}=\sum_{j}(1-\nu_{j})X_{ij}+\sum_{j}\nu_{i}X_{ji}$, which can be written alternatively as
+\[
+\sum_{j}(1-\nu_{i})X_{ji}=\sum_{j}(1-\nu_{j})X_{ij}.
+\]
+Taking derivatives from the above equation yields
+\begin{equation} \label{eq: E2 (app)}
+    \left[\sum_{n\neq i}(1-\nu_{n})X_{in}\frac{d\ln X_{in}}{d\ln w_{i}}\right]\frac{d\ln w_{i}}{d\ln\tau_{ni}}-\sum_{j\neq i}(1-\nu_{i})\frac{dX_{ji}}{\partial\ln\tau_{ni}}.
+\end{equation}
+Assuming that country $i$'s tariffs do not change, relative wages among countries in the rest of the world, the derivative of export sales \textit{w.r.t.} the country $i$'s wage rate is
+\[\frac{d\ln X_{in}}{d\ln w_{i}}=\frac{d\ln\lambda_{in}}{d\ln w_{i}}=\varepsilon\left(1-\lambda_{in}\right).
+\]
+Plugging this expression back into Equation \ref{eq: E2 (app)}, yields the following
+\[
+\left(w_{i}L_{i}-X_{ii}\right)\frac{d\ln w_{i}}{d\ln\tau_{ni}}=\frac{1}{\mathscr{E}_{i}}\sum_{j\neq i}\frac{d X_{ji}}{d \ln d_{ni}},\qquad with\qquad\mathscr{E}_{i}\equiv\frac{\varepsilon}{1-\nu_{i}}\sum_{n\neq i}\left[(1-\nu_{n})\left(1-\lambda_{in}\right)\frac{X_{in}}{\sum_{n\neq i}X_{in}+D_{i}}\right],
+\]
+where the derivation uses $w_{i}L_{i}-X_{ii}=\sum_{j\neq i}X_{ij}+D_{i}=\sum_{j\neq i}X_{ji}$.  Plugging the above equation back into the equation (\ref{eq: E1 (app)}), we get the following first-order conditions
+\[
+\frac{1}{\sum_{l\neq i}X_{li}}\left(\sum_{l\neq i}X_{li}-(\varphi_{i}-1)\sum_{l}t_{li}X_{li}\right)\frac{1}{\mathscr{E}_{i}}\sum_{l\neq i}\frac{dX_{li}}{d\tau_{ni}}+\varphi_{i}\sum_{l \neq i}t_{li}\frac{dX_{li}}{d\tau_{ni}} =0. 
+\]
+The above equation immediately implies that the solution to the above system is a uniform tariff $t_{ni}=t_i$, which after defining total imports as $X_{-ii}=\sum_{l\neq i}X_{li}$, allows us to simplify the first-order condition to
+\[
+\frac{1}{X_{-ii}}\left(X_{-ii}-(\varphi_{i}-1)t_{i}X_{-ii}\right)\frac{1}{\mathscr{E}_{i}}\frac{dX_{-ii}}{d\tau_{ni}}+\varphi_{i}t_{i}\frac{dX_{-ii}}{d\tau_{ni}}=0,
+\]
+which, after rearranging, yields the following optimal tariff formula
+\[
+t_{ni}^{*}=t^*_i=\frac{1}{\left(1+\mathscr{E}_{i}\right)\varphi_{i}-1}.
+\]
+
+
+\section{Exact Hat Algebra}\label{exacthat_algebra}
+Using exact hat algebra, we derive the change in trade shares as
+\begin{equation}\label{eq: hat_algebra_1}
+\hat{\lambda}_{ni}=\frac{\hat{L}_{n}^{-\psi\varepsilon}\,(1+t_{ni})^{-\varphi_i\cdot\varepsilon}\,\hat{w}_{n}^{-\varepsilon}}{\sum_{j}\lambda_{ji}\,\hat{L}_{j}^{-\psi\varepsilon}\,(1+t_{ji})^{-\varphi_i\cdot\varepsilon}\,\hat{w}_{j}^{-\varepsilon}}.
+\end{equation}
+The labor market clearing condition in changes can be expressed as\begin{equation}
+\hat{w}_{i}\hat{L}_{i}w_{i}L_{i}=\sum_{j}\frac{1-\nu_{j}}{1+t_{ij}}\hat{\lambda}_{ij}\lambda_{ij}\hat{E}_{j}E_{j}+\sum_{j}\frac{\nu_{i}}{1+t_{ji}}\hat{\lambda}_{ji}\lambda_{ji}\hat{E}_{i}E_{i},
+\end{equation}
+    where  the change in labor supply is    \[   \hat{L}_{i}=\left[(\widehat{1-\tau_{i}^L})\frac{\hat{w}_{i}}{\hat{P}_{i}}\right]^{\kappa},    
+    \]
+and the resulting change in the consumer price index is given by\begin{equation}
+\hat{P}_{i}=\left[\frac{\hat{E}_{i}}{\hat{w}_{i}}\right]^{\varphi_i-1}\left[\sum_{j}\lambda_{ji}\,\hat{L}_{j}^{\psi\varepsilon}\,(1+t_{ji})^{-\varphi_i\cdot\varepsilon}\,\hat{w}_{j}^{-\varepsilon}\right].
+\end{equation}
+Lastly, the balanced budget condition for each country can be specified as
+\begin{equation}\label{eq: hat_algebra_2}
+\hat{E}_{i}E_{i}=\hat{w}_{i}\hat{L}_{i}Y_{i} + \bar{T}'_i +  \underbrace{\sum_{j\neq i}\frac{t_{ji}}{1+t_{ji}}\hat{\lambda}_{ji}\lambda_{ji}\hat{E}_{i}E_{i}}_{R_{i}^{'}}, 
+\end{equation}
+where $Y_i=w_i L_i$.  Following \cite{DEK}, we assume that fixed transfers are proportional to global GDP, $Y = \sum_n Y_n$, so that $\bar{T}'_i = \bar{T}_i \times \hat{Y} , Y$. Our baseline treatment of tariff rebates takes the optimistic approach that tariff revenues fully substitute for income tax revenues. Specifically, $\tau_{i}^LY_{i}=R'_{i}$, which implies a reduction in the income tax specified by $(\widehat{1-\tau_{i}^L})=1/(1-R'_{i}/Y_{i})$.\footnote{Income tax revenues finance public expenditure. More formally, we can decompose total expenditure as  \[
+E_{i}=\underbrace{\bar{T}_i + (1-\tau_{i}^L)w_{i}L_{i}}_{\text{private}}\; +\; \underbrace{\tau_{i}^Lw_{i}L_{i}+R_{i}}_{\text{public}},
+\] where the public component is the sum of income tax and tariff revenues. We assume that higher tariff revenues allow for lower income taxes, holding total public spending constant.} 
+
+The system specified by Equations  \ref{eq: hat_algebra_1}--\ref{eq: hat_algebra_2} solves for the two independent unknowns $\{\hat{w}_i\}_i$ and $\{\hat{E}_i\}_i$, from which we can calculate the policy impacts:
+\begin{itemize}
+    \item change in welfare is $\hat{U}_{i}=\delta_{i}\frac{\hat{E}_{i}}{P_{i}}+(1-\delta_{i})\frac{\hat{w}_{i}}{\hat{P}_{i}}$, where  $\delta_{i}\equiv \frac{E_{i}}{E_{i}-\frac{\kappa}{1+\kappa}(1-\delta_{i})Y_{i}}$
+\item change in  gross exports is $\frac{\sum_{n\neq i}\hat{\lambda}_{in}\lambda_{in}\hat{E}_{n}E_{n}}{\sum_{n}\lambda_{in}E_{n}}$
+\item change in gross imports is $\frac{\sum_{n\neq i}\hat{\lambda}_{ni}\lambda_{ni}\hat{E_i}E_{i}}{\sum_{n\neq i}\lambda_{ni}E_{i}}$
+\item change in deficit is $\hat{D}_{i}=D_{i}^{'}/D_{i}$, where $D_{i}^{'}=\sum_{n\neq i}\left[\frac{1}{1+t_{ni}}\hat{\lambda}_{ni}\lambda_{ni}\hat{E}_{i}E_{i}-\frac{1}{1+t_{in}}\hat{\lambda}_{in}\lambda_{in}\hat{E}_{n}E_{n}\right] $
+\item change in employment is $\hat{L}_i$
+\item change in real consumer prices is $\hat{P}_i$.
+\end{itemize}
+
+
+
+\section{Data and Calibration} 
+\label{app:data}
+\subsection{Single-sector analysis}
+\subsubsection{Data}
+GDP data (current USD) are sourced from the World Bank's World Development Indicators (WDI), using figures for the year 2023 or the latest available year. Bilateral trade data are obtained from the 2023 BACI dataset provided by CEPII \citep{Baci}, covering goods trade exclusively and excluding services.
+
+The final merged dataset comprises bilateral trade flows among 194 countries, representing 96.5\% of global trade. This includes all 169 countries initially listed in the Liberation Day tariffs, except for four territories (Cook Islands, Saint Pierre and Miquelon, Wallis and Futuna, and Taiwan), which lack GDP or trade data. Additionally, the dataset includes 27 European Union countries, Russia, and the United States, resulting in a total of 194 countries (169 original countries minus 4 exclusions, plus 27 EU countries and 2 additional countries). Table \ref{tab:countries} provides the list of countries.
+
+To align GDP data with the aggregation scheme used by CEPII, several country aggregates were implemented:
+\begin{enumerate}
+    \item Monaco was combined with France;
+    \item Liechtenstein was combined with Switzerland;
+    \item U.S. territories, specifically Puerto Rico and the U.S. Virgin Islands, were combined with the United States.
+\end{enumerate}
+
+We treat EU member states as independent tariff setters. While this may understate the EU's collective market power and the cost of U.S. retaliation \citep{Lashkaripour_tariff_war}, full coordination would require strong intra-EU transfer mechanisms, which are unlikely in practice. Modeling countries separately also allows us to measure each member's individual exposure to U.S. tariffs. Given these trade-offs, we assign tariff autonomy to EU members, acknowledging the limitations.
+
+\begin{table}[htbp]
+\centering
+\caption{List of Countries}
+\label{tab:countries}
+\footnotesize
+\begin{tabular}{|l|l|l|l|}
+\hline
+Afghanistan & Denmark & Laos & Rwanda \\
+\hline
+Albania & Djibouti & Latvia & Saudi Arabia \\
+\hline
+Algeria & Dominica & Lebanon & Senegal \\
+\hline
+Angola & Dominican Republic & Lesotho & Serbia \\
+\hline
+Antigua and Barbuda & East Timor & Liberia & Seychelles \\
+\hline
+Argentina & Ecuador & Libya & Sierra Leone \\
+\hline
+Armenia & Egypt & Lithuania & Singapore \\
+\hline
+Aruba & El Salvador & Luxembourg & Sint Maarten \\
+\hline
+Australia & Equatorial Guinea & Macau & Slovak Republic \\
+\hline
+Austria & Eritrea & Madagascar & Slovenia \\
+\hline
+Azerbaijan & Estonia & Malawi & Solomon Islands \\
+\hline
+Bahamas & Eswatini & Malaysia & Somalia \\
+\hline
+Bahrain & Ethiopia & Maldives & South Africa \\
+\hline
+Bangladesh & Fiji & Mali & South Korea \\
+\hline
+Barbados & Finland & Malta & South Sudan \\
+\hline
+Belarus & France & Marshall Islands & Spain \\
+\hline
+Belgium & French Polynesia & Mauritania & Sri Lanka \\
+\hline
+Belize & Gabon & Mauritius & St Kitts and Nevis \\
+\hline
+Benin & Gambia & Mexico & St Lucia \\
+\hline
+Bermuda & Georgia & Micronesia & St Vincent and the Grenadines \\
+\hline
+Bhutan & Germany & Moldova & Sudan \\
+\hline
+Bolivia & Ghana & Mongolia & Suriname \\
+\hline
+Bosnia and Herzegovina & Greece & Montenegro & Sweden \\
+\hline
+Botswana & Greenland & Morocco & Switzerland \\
+\hline
+Brazil & Grenada & Mozambique & Syria \\
+\hline
+Brunei & Guatemala & Namibia & Tajikistan \\
+\hline
+Bulgaria & Guinea & Nepal & Tanzania \\
+\hline
+Burkina Faso & Guinea-Bissau & Netherlands & Thailand \\
+\hline
+Burma & Guyana & New Caledonia & Togo \\
+\hline
+Burundi & Haiti & New Zealand & Tonga \\
+\hline
+Cabo Verde & Honduras & Nicaragua & Trinidad and Tobago \\
+\hline
+Cambodia & Hong Kong & Niger & Tunisia \\
+\hline
+Cameroon & Hungary & Nigeria & Turkey \\
+\hline
+Canada & Iceland & North Macedonia & Turkmenistan \\
+\hline
+Cayman Islands & India & Norway & Turks and Caicos Islands \\
+\hline
+Central African Republic & Indonesia & Oman & Uganda \\
+\hline
+Chad & Iran & Pakistan & Ukraine \\
+\hline
+Chile & Iraq & Palau & United Arab Emirates \\
+\hline
+China & Ireland & Panama & United Kingdom \\
+\hline
+Colombia & Israel & Papua New Guinea & United States \\
+\hline
+Comoros & Italy & Paraguay & Uruguay \\
+\hline
+Congo (Brazzaville) & Jamaica & Peru & Uzbekistan \\
+\hline
+Congo (Kinshasa) & Japan & Philippines & Vanuatu \\
+\hline
+Costa Rica & Jordan & Poland & Venezuela \\
+\hline
+Cote d'Ivoire & Kazakhstan & Portugal & Vietnam \\
+\hline
+Croatia & Kenya & Qatar & Zambia \\
+\hline
+Curacao & Kiribati & Republic of Yemen & Zimbabwe \\
+\hline
+Cyprus & Kuwait & Romania &  \\
+\hline
+Czechia & Kyrgyzstan & Russian Federation &  \\
+\hline
+\end{tabular}
+\vspace{-10pt}
+\begin{flushleft}
+\footnotesize{\textit{Notes}: This table reports countries included in the baseline counterfactual analysis.}
+\end{flushleft}
+\end{table}
+
+\subsubsection{The Elasticity of Trade in a Single-Sector Model}\label{sec:epsilon}
+To calibrate the key trade elasticity parameter, $\varepsilon$, we draw on estimates for the Melitz-Pareto model reported by \citet{NBERw20495}. We demonstrate below that our model generates nearly identical estimating equations to the Melitz-Pareto model, and we discuss possible differences that may arise in parameter estimates.
+
+\citet{NBERw20495} build on the methodology developed by \citet{simonovska2014elasticity} for the Eaton-Kortum model and they estimate the trade elasticity for several canonical models used by the trade literature, including the Melitz-Pareto model. The methodology relies on inferring bilateral trade costs from moments derived from the distribution of observed price gaps for identical goods across countries, combined with a standard gravity equation of trade, which relates bilateral trade shares to bilateral trade costs and country-specific objects that summarize technological parameters, wages, mark-ups, and fixed costs of production. 
+
+Specifically, \citet{NBERw20495} estimate the following expression:
+\begin{align}
+\label{ina_mike}
+\log\left(\frac{\lambda_{ni}}{\lambda_{nn}}\right)=-\varepsilon \log \tilde d_{ni} + FE_i-FE_n,
+\end{align}
+where $\lambda_{ni}$ represents the bilateral trade share as in the present paper, $\varepsilon$ is the key elasticity of interest, and $FE_n$ $(FE_i)$ represents a fixed effect for country $n$ ($i$). Furthermore, $\tilde d_{ni}$, which corresponds to the bilateral iceberg trade cost in the model, is recovered from moments from the distribution of relative prices of identical goods between countries $n$ and $i$, and uses the micro-structure of the model to generate these moments for each particular framework. 
+
+To see how our model maps into this framework, assume the following functional form for fixed entry costs: $f_{ni}=F\cdot f_{ii}$, where $F\geq 1$. Hence, we impose that market access costs are destination-specific but not source-country specific.\footnote{Since we do not examine the extensive margin predictions of this model and we focus on aggregate outcomes alone, we believe that this assumption is not very limiting to the analysis. Moreover, the goal of this section is to derive a mapping between our model and models in the existing literature for the purpose of justifying our choice of the trade elasticity. We report robustness exercises that vary the trade elasticity parameter in Appendix \ref{section: alt models}.} To derive the estimating equation, combine equations (\ref{eq: eq_1}) and (\ref{eq: eq4}), which yield the following expression for
+$\log\left(\frac{\lambda_{ni}}{\lambda_{ni}}\right)$,
+\begin{align}
+\label{ina_mike_new}
+\log\left(\frac{\lambda_{ni}}{\lambda_{nn}}\right)=-\varepsilon  \varphi_i\log(1+t_{ni}) - \varepsilon \log \tilde d_{ni} + FE_i-FE_n,
+\end{align}
+where 
+\begin{align}
+    &FE_i\equiv \varepsilon\log P_i-\varepsilon\log\Upsilon_i-\varepsilon(\varphi_i-1)\log(E_i/w_i)-\varepsilon(\varphi_i-1)\log F,\notag\\
+    &FE_n\equiv \varepsilon\log P_n-\varepsilon\log\Upsilon_n-\varepsilon(\varphi_n-1)\log(E_n/w_n).
+\end{align}
+It is very easy to demonstrate that a similar argument applies to the variant of our model that includes a more general pass-through specification as well as input-output linkages.
+
+Furthermore, for ease of exposition, applying the exactly-identified estimation methodology of \citet{NBERw20495} to estimate $\log \tilde d_{ni}$, the expression becomes
+\begin{align}
+    \log \hat d_{ni}\equiv\max_{l}(\log p_i(l)-\log p_n(l))=\log(\mu_i)-\log(\mu_n) +\log (1+t_{ni})+\log\tilde d_{ni}
+\end{align}
+A few observations are in order. First, notice that the log mark-up terms can be absorbed by the fixed effects, so they do not bias the estimation.\footnote{The argument holds true for any other moment from the logged relative price distribution as mark-ups are not firm specific in this model and are multiplicative of variable costs.} Second, logged tariffs, $t_{ni}$, affect both the estimate of $\log \tilde d_{ni}$ and also appear in the estimating equation (\ref{ina_mike_new}). This is the key difference between the estimating equation predicted by our model versus the simple Melitz-Pareto model estimated in \citet{NBERw20495}, which does not explicitly account for tariffs. The variable $\log(1+t_{ni})$ can be interpreted as measurement error in the estimation procedure. \citet{simonovska2014elasticity} and \citet{NBERw20495} perform several robustness exercises that demonstrate that the measurement error in the relative price moment is small, as trade costs estimated from relative prices yield elasticities with respect to standard gravity variables (border and distance) that are very much in line with the existing literature. Finally, the first term in expression (\ref{ina_mike_new}) does not affect the estimates of $\varepsilon$. \citet{NBERw20495} show that, when both tariff and relative-price moments are used to estimate the trade elasticity from bilateral trade flows, the elasticity estimates are identical to the ones obtained using the relative-price moments alone.   
+
+The above discussion suggests that the elasticity estimates for the Melitz-Pareto model from \citet{NBERw20495} are applicable to our model. Since the parameter estimate of 4 falls within the range of estimates that \citet{NBERw20495} obtain for the Melitz-Pareto model, and since this estimate was used by the USTR to compute the "reciprocal tariffs", we opt for this parameter value in our benchmark exercise. 
+
+
+\subsection{Multi-Sector Analysis}
+\subsubsection{Data}
+We use the International Trade and Production Database for Simulation (ITPD-S) as our primary source of bilateral trade flows by sector \citep{borchert2024globalization}. This database provides harmonized data on international and domestic trade across 170 industries in 265 countries, covering the period from 1986 to 2019. Most observations are based on administrative records, while the remainder are estimated using the methodology described in the technical documentation. 
+
+
+To improve tractability and reduce the incidence of missing data, we aggregate the detailed sectors into four broad categories: Agriculture, Manufacturing, Mining, and Services. For our counterfactuals, we use the sector-specific trade shares computed for the year 2019.
+
+
+Sector-level value-added shares are drawn from the OECD Inter-Country Input-Output (ICIO) database for the year 2019. These shares are calculated as output-weighted averages across countries. The resulting value-added shares in gross output are 0.51 for agriculture, 0.32 for manufacturing, 0.49 for mining, and 0.56 for services.\footnote{In the single-sector model, we set $\beta = 0.48$ based on the global average labor share in the 2020 ICIO, consistent with \cite{CALIENDO_JIE_tariff}, who report a sectoral average of 0.45 using 2023 EORA data.%We set $\beta=0.48$ based on the global average of labor input shares in the 2020 ICIO database. This number aligns with the labor share reported by \cite{CALIENDO_JIE_tariff} based on the 2023 EORA dataset, which has a sectoral average of $\beta=0.45$.
+}
+
+Due to data limitations, 13 countries are excluded from the analysis because of missing trade or production data in at least one of these four sectors. These are: Aruba, Comoros, Curacao, Djibouti, Greenland, Kiribati, Marshall Islands, Micronesia, Palau, Solomon Islands, Somalia, Sint Maarten, and Turks and Caicos Islands.
+
+\subsubsection{The Sectoral Elasticities of Trade in a Multi-Sector Model}
+The simulation requires estimates of sector-specific trade elasticities. Following \citet{fontagne2022tariff}, we estimate trade elasticities for agriculture, manufacturing, and mining. This approach involves estimating sector-specific gravity equations, where bilateral trade flows are drawn from ITPD-S, MFN tariffs from \citet{teti2024missing}, and standard gravity controls from the Dynamic Gravity Dataset \citep{gurevich2018dynamic}. The elasticities are estimated for the year 2019.
+
+
+Table~\ref{tab:elasticities} presents the estimated trade elasticities by sector. We do not estimate the trade elasticity for services, as they are not subject to tariffs. In the counterfactual analysis, we apply the Liberation Day tariffs uniformly across agriculture, manufacturing, and mining, but exclude services from any tariff imposition.
+
+
+
+\begin{table}[htbp]
+\caption{Estimation Results: Sector-Level Trade Elasticities}\label{tab:elasticities}
+\centering
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\toprule
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{Agriculture}&\multicolumn{1}{c}{Manufacturing}&\multicolumn{1}{c}{Mining}\\
+\midrule
+$ \ln (1+ t_{ni}) $ &      -3.339\sym{***}&      -3.801\sym{***}&      -4.056\sym{*}  \\
+                    &     (0.529)         &     (0.170)         &     (2.198)         \\
+\addlinespace
+$ \ln (1+ \text{Dist}_{ni}) $&      -1.079\sym{***}&      -1.438\sym{***}&      -1.090\sym{***}\\
+                    &     (0.027)         &     (0.008)         &     (0.052)         \\
+[2em]
+Observations        &     109,617         &     864,844         &     137,411         \\
+Exporters           &         202         &         210         &         202         \\
+Importers           &         208         &         212         &         210         \\
+Exporter Product FE &         Yes         &         Yes         &         Yes         \\
+Importer Product FE &         Yes         &         Yes         &         Yes         \\
+Control for Common Border&         Yes         &         Yes         &         Yes         \\
+Control for Common Language&         Yes         &         Yes         &         Yes         \\
+Control for Trade Agreement&         Yes         &         Yes         &         Yes         \\
+Control for Colonial Links&         Yes         &         Yes         &         Yes         \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize{\textit{Notes}: Each column reports the estimated elasticity of trade flows with respect to tariffs for agriculture (1), manufacturing (2), and mining (3),  based on the approach in \citet{fontagne2022tariff}. Bilateral trade flows are drawn from ITPD-S, MFN tariffs from \citet{teti2024missing}, and standard gravity controls (trade agreement, common language, common border, colonial links, and distance) from the Dynamic Gravity Dataset \citep{gurevich2018dynamic}. All data are for 2019. All specifications include exporter-product and importer-product fixed effects. Robust standard errors in parentheses. \sym{*}, \sym{**}, and \sym{***} denote significance at the 10, 5, and 1 percent levels, respectively.}
+\end{flushleft}
+}
+\end{table}
+
+\subsection{Calculation of the Liberation Day Tariffs}\label{calculation_tariffs}
+Following the USTR formula, we calculate the Liberation Day Tariffs as:
+\begin{equation}
+    \tilde{t}_{ni}=\frac{D_{in}}{\varepsilon\times\varphi\times X_{ni}},\qquad \text{with} \qquad D_{in}\equiv X_{in}-X_{ni}
+\end{equation}
+The tariff rate is 10\%  for partners that run a trade deficit or a low surplus vis-\`{a}-vis the U.S., and is equal to the rate implied by the USTR formula otherwise:
+\begin{equation} \label{eq: LD} t_{ni}\times 100=\max\left\{-\frac{1}{2}\tilde{t}_{ni}\times 100,\,10\%\right\}
+\end{equation}
+These calculations reproduce the tariff rates announced on Liberation Day, with a few exceptions, which we discuss in Section \ref{sec: simulation}.
+
+
+
+\subsection{Calibration of $\nu$}\label{calibration_nu}
+
+We have data on GDP ($Y_{i}$) and trade flows ($X_{ni}$). We want
+to calibrate $\nu$ to mach the share of Selling, General \& Administrative
+(SG\&A) expenses in total sales among firms in each location. The
+identifying assumption is that $\nu$ is common across all countries
+other than the US. Let $E_{\text{non-US}}=\sum_{i\neq\text{US}} E_{i}$ denote total expenditure in the rest of the world. By accounting, $E_{\text{non-US}}=\sum_{i\neq\text{US}}Y_{i} - \bar{T}_{US}$ and $E_{\text{US}}=Y_{\text{US}} + \bar{T}_{US}$, which appealing to the expression for the deficit and implied transfers, yields:
+\begin{align} 
+\label{eq:nu_1} E_{\text{US}}&=Y_{\text{US}}+\sum_{i\neq\text{US}}\left[(1-\nu_{\text{non-US}})X_{\text{US},i}-(1-\nu_{\text{US}})X_{i,\text{US}}\right]\\E_{\text{non-US}}&=\sum_{i\neq\text{US}}Y_{i}+\sum_{i\neq\text{US}}\left[(1-\nu_{\text{non-US}})X_{\text{US},i}-(1-\nu_{US})X_{i,\text{US}}\right]
+\end{align}
+where $X_{i,US}$ and $X_{US,i}$ denote international trade flows to and from the US and, and $Y_{i}$ are GDP levels, all of which are observable in the data. Subtracting imports from aggregate expenditure, we can compute the domestic flows for each region. The ratio of total SG\&A to sales among US firms and among those in the rest of the world is
+\begin{align}
+\frac{\nu_{\text{US}}\cdot X_{\text{US},\text{US}}\ +\,\nu_{\text{non-US}}\cdot\sum_{i\neq\text{US}}X_{\text{US},i}}{\sum_{i}X_{\text{US},i}} & =\left(\frac{\text{SG\&A}}{\text{Sales}}\right)_{\text{US}}\\
+\frac{\nu_{\text{US}}\cdot\sum_{i\neq\text{US}}X_{i,\text{US}}+\nu_{\text{non-US}}\cdot\sum_{i,n\neq\text{US}}X_{i,n}}{\sum_{i\neq\text{US}}\sum_{n}X_{i,n}} & =\left(\frac{\text{SG\&A}}{\text{Sales}}\right)_{\text{non-US} \label{eq:nu_2}} 
+\end{align}
+The equation above indicates that the SG\&A-to-sales ratios in each region represent a weighted average of the $\nu$ values across the markets served by the firms, with greater weight assigned to the domestic market, which accounts for the majority of total sales. We calibrate $\nu$ to match $\left(\frac{\text{SG\&A}}{\text{Sales}}\right)_{\text{US}}=0.24$
+and $\left(\frac{\text{SG\&A}}{\text{Sales}}\right)_{\text{non-US}}=0.13$ based
+on balance-sheet data for manufacturing firms in \textsc{Compustat} North America
+and \textsc{Worldscope} for year 2020. To this end, we solve the system of Equations specified by Equations \ref{eq:nu_1}-\ref{eq:nu_2}. Doing so delivers $\nu_{\text{US}}=0.270$ for the US and $\nu_{\text{non-US}}=0.114$ for non-US markets. Table \ref{tab: WS} summarizes these calibrated values as well as other summary statistics from the firm balance-sheet data.
+
+\begin{table}[htbp]
+\caption{Summary Statistics: World-Scope Data}\label{tab: WS}
+\centering
+\begin{tabular}{lccccc}
+\toprule
+Region    &  $\text{SG\&A}/\text{Sales}$ & $\text{CoGS}/\text{Sales}$ & \# Firms & source &  $\nu$ (inferred) \\
+\midrule
+USA      &      0.24  &      0.54  &        2,226 & \textsc{Compustat} & 0.27\\
+non-USA  &      0.13  &      0.74  &       20,879 &   \textsc{Worldscope} & 0.11 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\footnotesize{\textit{Notes}: This table reports the mean ratios of selling, general, and administrative expenses (SG\&A) to sales and cost of goods sold (CoGS) to sales for U.S. and non-U.S. firms. Data are drawn from \textsc{Compustat} for the U.S. and \textsc{Worldscope} for non-U.S. countries; the third column shows the number of firms in each sample. The final column gives the implied parameter $\nu$, inferred from the SG\&A cost shares and aggregate trade flows as described in the text.}
+\end{flushleft}
+\end{table}
+\section{U.S.-EU-China Trade War}
+\label{app:regional}
+In this Appendix, we explore a scenario where the U.S. manages to make a trade truce with other countries, apart from the EU and China. In particular:
+\begin{itemize}
+    \item USTR tariffs are applied to goods imported from the EU and China, with reciprocal retaliation from both partners.
+    %\item Tariffs between U.S., Canada, and Mexico revert to baseline 2023 levels after sorting out compliance issues under the United States-Mexico-Canada Agreement (USMCA).
+    \item Tariff levels between the United States and all other countries settle at the 10\% minimum threshold under the USTR scheme.
+\end{itemize}
+The results for this scenario are reported in the top panel of Table \ref{tab: T6}. Comparing these results to the baseline scenario, where all countries face the USTR tariffs and retaliate reciprocally, reveals important differences. In the new scenario, the U.S., China and the rest of the world experience smaller welfare losses, while the EU suffers a marginally more pronounced loss.
+
+\begin{table}[htbp]
+\caption{Outcome under regional U.S.-China-EU trade wars}\label{tab: T6}
+\centering
+\begin{tabular}{lcccccc}
+\toprule
+\multicolumn{4}{l}{\textbf{Case 1: US trade war with EU \& China}}  \\
+\midrule
+Country &
+\specialcell{$\Delta$ welfare} &
+\specialcell{$\Delta$ deficit} &
+\specialcell{$\Delta$ employment} &
+\specialcell{$\Delta$ prices} \\
+\midrule
+USA & -0.19\% & -22.3\% & -0.13\% & 4.5\% \\  \addlinespace[3pt]
+CHN & -0.69\% & 6.1\% & -0.16\% & -2.4\% \\  \addlinespace[3pt]
+EU & -0.25\%  & 17.8\% & -0.10\% & -1.6\% \\  \addlinespace[3pt]
+RoW & -0.16\%  & 19.8\% & -0.07\% & -1.3\% \\ \midrule
+\addlinespace[10pt]
+\multicolumn{4}{l}{\textbf{Case 2: US trade war with China}}  \\ 
+\midrule
+USA & -0.09\% & -20.5\% & -0.10\% & 3.9\% \\  \addlinespace[3pt]
+CHN & -0.67\% & 6.1\% & -0.16\% & -2.2\% \\  \addlinespace[3pt]
+EU  & -0.06\%  & 9.4\% & -0.03\% & -1.2\% \\  \addlinespace[3pt]
+RoW & -0.17\%  & 21.0\% & -0.07\% & -1.2\% \\ \midrule
+\addlinespace[10pt]
+\multicolumn{4}{l}{\textbf{Case 3: US trade war with China (108\% tariff)}} \\ 
+\midrule
+USA & -0.29\% & -20.8\% & -0.16\% & 4.1\% \\  \addlinespace[3pt]
+CHN & -0.79\% & 6.5\% & -0.19\% & -2.3\% \\  \addlinespace[3pt]
+EU & -0.06\%  & 9.2\% & -0.03\% & -1.3\% \\  \addlinespace[3pt]
+RoW& -0.16\%  & 20.7\% & -0.07\% & -1.2\% \\  \bottomrule
+\end{tabular}
+\vspace{-5pt}
+\begin{flushleft}
+\footnotesize{\textit{Notes}: This table reports changes in economic variables (relative to pre-Liberation Day) under regional U.S.-China-EU trade wars, assuming 10\% tariffs on US imports from all other countries. The ``RoW'' reflects GDP-weighted averages across countries other than U.S., China, and EU. In all scenarios, tariff revenues are used to reduce income taxes. The change in ``prices'' represents the change in the CES price index $P_i$ relative to the global GDP-weighted average price index.}
+\end{flushleft}
+\end{table}
+
+This pattern emerges because some EU countries benefit from trade diversion effects under the full-fledged trade war, but these benefits evaporate once the U.S. makes a truce with other countries. The U.S. welfare loss shrinks (from $-0.36\%$ to $-0.19\%$), which speaks to the benefits of freer trade. Interestingly, China also experiences fewer losses compared to the full-fledged war case, because the originally-applied USTR tariffs depress wages in small Southeast Asian countries competing with China in global markets. These wage effects encourage global buyers to shift from Chinese suppliers to Southeast Asian suppliers. When these countries are granted tariff reductions, their wages recover to some extent, and so does China's loss of market access. 
+
+In the second panel of Table \ref{tab: T6}, we examine a scenario in which the United States reduces tariffs on the European Union to 10\% to match the minimum tariff applied to other countries, while maintaining the USTR tariff on China and facing reciprocal retaliation from the Chinese government. Both the U.S. and the EU benefit from this scenario, compared to the case in which the U.S. engages in a trade war with EU and China, while China's welfare losses remain as high as before.
+
+Moreover, as the bottom panel in Table \ref{tab: T6} reveals, the losses for both U.S. and China are amplified when two-way tariffs are further escalated from 54\% under the initial USTR tariffs to 108\%, in line with recent developments.  However, China's marginal loss from U.S. tariffs diminishes rapidly, with the cost to China increasing by only 0.1 percentage point when Chinese tariffs are doubled from 54\% to 108\%. 
+
+\section{Robustness Checks\label{section: alt models}}
+In this Appendix, we explore four alternative model specifications to check the sensitivity of our results to model and parameter selection. 
+\subsection*{(1) Multiple Sectors}
+We simulate the effects of USTR tariffs using the multi-sector model described in Appendix \ref{app:multisectors}. The calibrated model includes four broad sectors: agriculture, mining, manufacturing, and services. In our simulation, USTR tariffs are applied uniformly across all non-service sectors but excluded from traded services. 
+
+As reported in the second panel of Table \ref{tab: T7}, the multi-sector model produces smaller gains for the U.S. and smaller losses for the rest of the world. Part of the diminished U.S. gains reflects narrower tariff coverage, as tariffs now apply only to non-service goods. But more importantly, excluding services causes the tariff to deviate further from the unilaterally optimal rate. Although taxing services is difficult in practice due to administrative constraints, doing so could yield additional terms-of-trade gains before retaliation. In line with the smaller welfare gains, the associated deficit reduction and employment gains for the U.S. are also notably lower in the multi-sector model. 
+\subsection*{(2) Alternative Parameter Selection}
+Next, we experiment with alternative parameterizations of the single sector model. We consider the following cases:
+\begin{enumerate}
+    \item We consider a model with incomplete pass-through at the firm level. Specifically, we set $\tilde{\varphi} = 0.25$, consistent with the assumptions used in the USTR report on tariff calculations. Under this calibration, the pass-through to the price index increases but remains below one. All other parameter assignments are the same as in our baseline model.
+\item Since the trade elasticity is critical for welfare effects, we run a robustness exercise where $\varepsilon$ is set to 8, closer to the cross-sectoral average of 7.3 used by \citet{CALIENDO_JIE_tariff}, but still below the long-run trade elasticity of 14 in \citet{alessandria2025recovering}. We keep all other parameters at their baseline values.
+\item We compute results under the Eaton-Kortum-Krugman interpretation of the model, where the pass-through to the price index equals the complete pass-through at the firm level. Specifically, $\varphi_i = \tilde{\varphi} = 1$ for all $i$ , because there are no firm-selection effects and $\nu_i=0$  for all $i$ since there are no overhead costs.
+\end{enumerate}
+
+The results are presented in Table \ref{tab: T7}. Relative to the baseline, unilateral gains from the USTR tariffs are larger under an incomplete pass-through assumption, while the associated price increases are smaller. However, these differences remain modest. Importantly, the outcomes are highly sensitive to the assumed trade elasticity. Doubling the trade elasticity eliminates approximately 75\% of the U.S. gains from the USTR tariffs in the pre-retaliation scenario. The Eaton-Kortum-Krugman specification yields larger gains, but these are artificially inflated due to the assumption that the entire deficit is financed through fixed transfers. We explore this issue in greater detail in the following subsection.
+\begin{table}[htbp]
+\caption{Tariff impacts under alternative parametrization}\label{tab: T7}
+\centering
+\begin{tabular}{lcccccccc}
+\toprule
+\multicolumn{6}{l}{\textbf{Baseline model:($\tilde{\varphi}=1$, $\varphi>1$, $\varepsilon=4$)}}  \\
+\midrule
+Country &
+\specialcell{$\Delta$ welfare} &
+\specialcell{$\Delta$ deficit} &
+\specialcell{$\Delta$ $\frac{\textrm{exports}}{\textrm{GDP}}$} & 
+\specialcell{$\Delta$ $\frac{\textrm{imports}}{\textrm{GDP}}$} &
+\specialcell{$\Delta$ employment} &
+\specialcell{$\Delta$ prices} \\
+\midrule
+USA & 1.13\% & -18.1\% & -52.7\% &-43.6\% & 0.32\% & 12.8\% \\  \addlinespace[3pt]
+non-US (average) & -0.58\%  & 11.6\% & -3.2\% & -3.3\% & -0.14\% & -4.7\% \\ \midrule
+\addlinespace[10pt]
+\multicolumn{6}{l}{\textbf{Alternative 1: multiple sectors}}  \\ 
+\midrule
+USA & 0.68\% & -16.8\% & -30.5\% &-28.6\% & 0.12\% & 8.3\% \\  \addlinespace[3pt]
+non-US (average) & -0.38\%  & 5.4\% & -2.5\% & -2.5\% & -0.10\% & -2.6\% \\ \midrule
+\addlinespace[10pt]
+\multicolumn{6}{l}{\textbf{Alternative 2: incomplete passthrough to firm-level prices ($\tilde{\varphi}=0.25$)}}  \\ 
+\midrule
+USA & 1.36\% & -11.8\% & -35.0\% &-28.8\% & 0.30\% & 7.9\% \\  \addlinespace[3pt]
+non-US (average) & -0.23\%  & 7.1\% & -2.1\% & -2.2\% & -0.04\% & -2.9\% \\ \midrule
+\addlinespace[10pt]
+\multicolumn{6}{l}{\textbf{Alternative 3: higher trade elasticity ($\varepsilon=8$)}}  \\ 
+\midrule
+USA & 0.33\% & -26.3\% & -71.6\% &-58.0\% & 0.10\% & 11.8\% \\  \addlinespace[3pt]
+non-US (average) & -0.44\%  & 18.6\% & -5.3\% & -4.9\% & -0.11\% & -4.3\% \\ \midrule
+\addlinespace[10pt]
+\multicolumn{6}{l}{\textbf{Alternative 4: Eaton-Kortum-Krugman model ($\varphi=1$, $\nu=0$)}} \\ 
+\midrule
+USA & 1.24\% & -0.4\% & -46.3\% &-33.3\% & 0.41\% & 10.9\% \\  \addlinespace[3pt]
+non-US (average) & -0.50\%  & 0.1\% & -1.9\% & -2.9\% & -0.10\% & -4.0\% \\  \bottomrule
+\end{tabular}
+\vspace{-5pt}
+\begin{flushleft}
+\footnotesize{\textit{Notes}: This table reports changes in economic variables (relative to pre-Liberation Day) before and after retaliation to the USTR tariffs, under alternative parametrization. The ``non-US (average)'' reflects GDP-weighted averages across non-U.S. countries. In all scenarios, tariff revenues are used to reduce income taxes. The change in ``prices'' represents the change in the CES price index $P_i$ relative to the global GDP-weighted average price index.}
+\end{flushleft}
+\end{table}
+
+\subsection*{(3) Alternative Deficit Treatment}
+
+The treatment of trade deficits in static quantitative trade models remains a topic of ongoing debate. Early generations of these models typically treated the deficit as exogenously fixed. However, \cite{Ossa} underscores two major drawbacks of this approach. First, it tends to generate unrealistically large trade responses and preserves transfers even under autarky. Second, the results become sensitive to the choice of numeraire, i.e., the currency in which initial transfers are denominated. More recent quantitative models address trade deficits using one of two alternative approaches that are less susceptible to these issues:
+
+\begin{enumerate}
+    \item The first approach, exemplified by the method in \cite{DEK}, attributes the entire deficit to lump-sum transfers $\bar{T}_i$. When running counterfactual tariff simulations, it is assumed that the transfer remains constant as a share of global GDP.
+   \item The second approach, used by \cite{Ossa} and \cite{Lashkaripour_tariff_war}, eliminates trade imbalances entirely, and computes tariff effects starting from a counterfactual baseline scenario without deficits.
+\end{enumerate}
+
+Before turning to these alternative modeling approaches, it is useful to clarify why they are not well suited to the type of analysis we aim to carry out in this paper. A central motivation behind the Liberation Day tariffs was to reduce, or even eliminate, the U.S. trade deficit. The second approach is not suitable in this context, as it removes the trade deficit by assumption. The first approach has its own drawbacks: it yields a mechanical reduction in the trade deficit through a contraction in global GDP. However, it preserves the ratio of deficit-related transfers to global GDP even under autarky. These considerations led us to develop a framework in which the trade deficit emerges endogenously from claims on foreign profits that are funneled via fixed overhead cost payments. These claims reflect international income flows not captured by standard trade accounting, as they occur between the domestic labor force and local affiliates of foreign-owned firms.
+
+Nonetheless, it is instructive to experiment with these alternative models and compare their predictions to those generated by our framework. In this appendix, we examine the outcomes of tariffs under both methodologies outlined above. These earlier approaches are generally based on the Eaton-Kortum and Krugman models, both of which are nested by our model as special cases where $\varphi = 1$ and $\nu = 0$. For the sake of clarity and exposition, we carry out the following analysis under this specific parameterization.
+
+Table \ref{tab: T8} presents the results obtained from both modeling approaches prior to any retaliation. Compared to our benchmark results, the welfare gains for the U.S. appear more pronounced under the fixed-deficit framework (the \cite{DEK} approach), but more muted in the balanced trade scenario (\cite{Ossa}).\footnote{To balance U.S. trade, we set the counterfactual deficit for the U.S. to zero, i.e., $D_i^{'}=0$  if $i=US$. To balance the global budget, we set $D_n^{'}=D_n-D_{in}$  for all $n\neq US$ , where $i$  is the US. Doing so ensures that $\sum_n D_n^{'} = 0$.} 
+
+The larger welfare gains under the fixed-deficit specification arise because there is no longer a trade-off between improving the terms of trade through trade contraction and the welfare loss from shrinking the deficit. After all, the trade deficit represents a net income transfer from the rest of the world to the U.S. economy. Taken together, the results suggest that deficit reduction dampens the welfare gains from unilateral tariffs. Put differently, the goal of reducing the trade deficit may fundamentally conflict with the pursuit of terms-of-trade improvements through tariff policy.
+
+\begin{table}[htbp]
+\caption{Tariff impacts under alternative modeling of deficits}\label{tab: T8}
+\centering
+\begin{tabular}{lccccccc}
+\toprule
+\multicolumn{6}{l}{\textbf{(1) Pre-retaliation: fixed transfers to global GDP (Dekle et al., 2008) }}  \\
+\midrule
+Country &
+\specialcell{$\Delta$ welfare} &
+\specialcell{$\Delta$ $\frac{\textrm{exports}}{\textrm{GDP}}$} & 
+\specialcell{$\Delta$ $\frac{\textrm{imports}}{\textrm{GDP}}$} &
+\specialcell{$\Delta$ employment} &
+\specialcell{$\Delta$ prices} \\
+\midrule
+USA & 1.24\% & -46.3\% &-33.3\% & 0.41\% & 10.9\% \\  \addlinespace[3pt]
+non-US (average) & -0.35\%  & -1.9\% & -2.95\% & -0.10\% & -4.0\% \\ \midrule
+\addlinespace[10pt]
+\multicolumn{6}{l}{\textbf{(2) Pre-retaliation: balanced trade (Ossa, 2014) }} \\ 
+\midrule
+USA & 0.92\% & -54.9\% &-42.7\% & 0.18\% & 11.2\% \\  \addlinespace[3pt]
+non-US (average) & -0.26\%  & -3.0\% & -3.25\% & -0.13\% & -4.1\% \\ \midrule
+\addlinespace[25pt]
+\multicolumn{6}{l}{\textbf{(3) Post-retaliation: fixed transfers to global GDP (Dekle et al., 2008) }} \\ 
+\midrule
+USA & 0.05\% & -73.8\% &-49.0\% & -0.04\% & 5.3\% \\  \addlinespace[3pt]
+non-US (average) & -0.26\%  & -4.8\% & -5.64\% & -0.10\% & -1.9\% \\ \midrule
+\addlinespace[10pt]
+\multicolumn{6}{l}{\textbf{(4) Post-retaliation: balanced trade (Ossa, 2014) }} \\ 
+\midrule
+USA & -0.84\% & -72.8\% &-56.6\% & -0.39\% & 4.4\% \\  \addlinespace[3pt]
+non-US (average) & -0.26\%  & -6.1\% & -5.38\% & -0.09\% & -1.6\% \\  \bottomrule
+\end{tabular}
+\vspace{-5pt}
+\begin{flushleft}
+\footnotesize{\textit{Notes}: This table reports changes in economic variables (relative to pre-Liberation Day) before retaliation to the USTR tariffs, under alternative ways of modeling trade deficits. The ``non-US (average)'' reflects GDP-weighted averages across non-U.S. countries. In all scenarios, tariff revenues are used to reduce income taxes. The change in ``prices'' represents the change in the CES price index $P_i$ relative to the global GDP-weighted average price index.}
+\end{flushleft}\end{table}
+
+
+The bottom two panels of Table \ref{tab: T8} present economic outcomes under a scenario of retaliation. Compared to our baseline, the fixed-deficit model produces more favorable welfare outcomes for the U.S., while the balanced trade model results in more adverse outcomes. Our framework can be seen as an intermediate case between these two polar cases. Notably, the trade war does not cause a net welfare loss for the U.S. under the fixed-deficit model. This can perhaps be understood through the argument underscored in \cite{Ossa}: since US GDP contracts more sharply than global GDP during the trade conflict, the fixed transfer constitutes a larger share of U.S. national income. This amplification effect is sufficient to offset the efficiency loss from reduced trade. However, it is crucial to recognize that this outcome is highly sensitive to how the transfers are normalized. If transfers are instead specified as a constant share of U.S. GDP, the favorable welfare outcomes for the U.S. would largely dissipate. In this sense, there is a degree of arbitrariness in the resulting welfare implications---which may explain why studies of trade wars (e.g., \cite{Ossa}, \cite{Lashkaripour_tariff_war}) often favor the balanced trade approach.
+
+
+\section{Global Effects of USTR Tariffs}
+Previously, we reported the effects separately for the U.S. and the rest of the world. For completeness, Table \ref{tab: global} also presents the aggregate impacts on global employment and trade. The first row shows the decline in global trade-to-GDP under the USTR tariffs, both with and without reciprocal retaliation. The second row reports the reduction in global employment. Since we do not observe employment shares by country, we construct global employment effects using GDP weights. The first column ``main'' reports results from the baseline one-sector model without input-output linkages. The second column ``multi'' shows outcomes from the multi-sector model. The third column ``IO'' adds input-output linkages to the one-sector model. The final column ``multi + IO'' combines both the multi-sector structure and input-output linkages.
+
+
+\begin{table}[htbp]
+\caption{\emph{Global} trade and employment impacts of USTR tariffs}\label{tab: global}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lcccccccccc}
+\toprule
+& \multicolumn{4}{c}{before retaliation} && \multicolumn{4}{c}{after retaliation} \\
+\cmidrule(lr){2-5} \cmidrule(lr){7-10}
+& main & IO & multi & multi + IO  && main & IO & multi & multi + IO \\
+\midrule
+$\Delta$  trade-to-GDP &-9.4\% & -10.8\% &-5.5\% & -4.1\% && -11.6\% & -12.4\% &-6.9\% & -4.9\% \\  \addlinespace[3pt]
+$\Delta$  employment &-0.02\% & -0.12\% &-0.05\% & -0.08\% && -0.15\% & -0.58\% &-0.05\% & -0.26\% \\  \addlinespace[3pt]
+ \bottomrule
+\end{tabular}}
+\vspace{-5pt}
+\begin{flushleft}
+\footnotesize{\textit{Notes}: This table reports changes in global trade (relative to GDP) and employment before and after retaliation to the USTR tariffs, under various modeling approaches.}
+\end{flushleft}
+\end{table}
+
+The results reveal two general patterns. First, incorporating input-output linkages increases the global employment losses from tariffs. This is expected, as tariff distortions are magnified through input-output connections. Second, introducing multiple sectors reduces the predicted global trade contraction. This is due to the inclusion of an explicit service sector that is traded but not subject to tariffs. Since services make up a large share of the economy and are less affected by the tariffs, they dampen the overall decline in trade.
+
+\bibliographystyle{ecta}
+\bibliography{maga_bib}
+\end{document}
+
+
+\end{document}
+
+\end{document}

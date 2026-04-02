@@ -1,0 +1,2368 @@
+%% LyX 2.4.3 created this file.  For more info, see https://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[11pt,english,a4paper, 11pt]{article}
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\synctex=-1
+\usepackage{xcolor}
+\usepackage{babel}
+\usepackage{refstyle}
+\usepackage{units}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\PassOptionsToPackage{normalem}{ulem}
+\usepackage{ulem}
+\usepackage[bookmarks=false,
+ breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=true]
+ {hyperref}
+\hypersetup{
+ linkcolor=blue,filecolor=green,urlcolor=cyan, citecolor=blue}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+
+\AtBeginDocument{\providecommand\fnref[1]{\ref{fn:#1}}}
+\RS@ifundefined{subsecref}
+  {\newref{subsec}{name = \RSsectxt}}
+  {}
+\RS@ifundefined{thmref}
+  {\def\RSthmtxt{theorem~}\newref{thm}{name = \RSthmtxt}}
+  {}
+\RS@ifundefined{lemref}
+  {\def\RSlemtxt{lemma~}\newref{lem}{name = \RSlemtxt}}
+  {}
+
+\providecolor{lyxadded}{rgb}{0,0,1}
+\providecolor{lyxdeleted}{rgb}{1,0,0}
+%% Change tracking with ulem and xcolor: base macros
+\DeclareRobustCommand{\mklyxadded}[1]{\textcolor{lyxadded}\bgroup#1\egroup}
+\DeclareRobustCommand{\mklyxdeleted}[1]{\textcolor{lyxdeleted}\bgroup\mklyxsout{#1}\egroup}
+\DeclareRobustCommand{\mklyxsout}[1]{\ifx\\#1\else\sout{#1}\fi}
+%% Change tracking with ulem, xcolor, and hyperref: ct markup
+\DeclareRobustCommand{\lyxadded}[4][]{\texorpdfstring{\mklyxadded{#4}}{#4}}
+\DeclareRobustCommand{\lyxdeleted}[4][]{\texorpdfstring{\mklyxdeleted{#4}}{}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{definition}
+\newtheorem*{defn*}{\protect\definitionname}
+\theoremstyle{plain}
+\newtheorem{assumption}{\protect\assumptionname}
+\theoremstyle{plain}
+\newtheorem{prop}{\protect\propositionname}
+\newenvironment{lyxlist}[1]
+	{\begin{list}{}
+		{\settowidth{\labelwidth}{#1}
+		 \setlength{\leftmargin}{\labelwidth}
+		 \addtolength{\leftmargin}{\labelsep}
+		 \renewcommand{\makelabel}[1]{##1\hfil}}}
+	{\end{list}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{xr-hyper}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=red,      
+    urlcolor=blue,
+}
+
+\date{January 2025}
+
+% Margin
+\usepackage[a4paper,left=0.9in,right=0.9in,top=1.25in,bottom=1.25in]{geometry}
+
+% Linespacing
+\usepackage[nodisplayskipstretch]{setspace}
+\setstretch{1.25}
+%\onehalfspacing
+
+% Footnote
+\usepackage[hang,splitrule]{footmisc}
+\addtolength{\footskip}{0.5cm}
+\setlength{\footnotemargin}{0.3cm}
+\setlength{\footnotesep}{0.4cm}
+\interfootnotelinepenalty=2147483647
+
+\usepackage{bbm} 
+
+\usepackage{booktabs}
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+\usepackage{multirow}
+\usepackage{adjustbox}
+
+\usepackage{setspace}
+\usepackage{multirow}
+
+
+\usepackage[toc,page,header]{appendix}
+\usepackage{minitoc}
+
+\renewcommand \thepart{}
+\renewcommand \partname{}
+
+\everypar{\looseness=-1 }
+
+%\externaldocument{FL2021_supplementary_appendix}
+
+%\usepackage[style=alphabetic, backend=biber]{biblatex}
+%\addbibresource{FL2025.bib}
+%\usepackage{savetrees}
+
+\AtBeginDocument{
+  \def\labelitemi{\normalfont\bfseries{--}}
+}
+
+\makeatother
+
+\usepackage[style=authoryear,refsection=part,uniquename=false, backend=biber, maxnames=2]{biblatex}
+\providecommand{\assumptionname}{Assumption}
+\providecommand{\definitionname}{Definition}
+\providecommand{\propositionname}{Proposition}
+
+\addbibresource{FL2025.bib}
+\begin{document}
+\title{Can Trade Policy Mitigate Climate Change?}
+\author{Farid Farrokhi\\
+Boston College \and Ahmad Lashkaripour\\
+Indiana University\thanks{We dedicate this paper to the memory of Jonathan Eaton, our mentor,
+and advisor, whose guidance and insights truly inspired us. This paper
+has previously circulated as \textquotedblleft Trade, Firm Delocation,
+and Optimal Climate Policy.\textquotedblright{} We are grateful to
+Vernon Henderson, Sam Kortum, Volodymyr Lugovskyy, Ishan Nath, William
+Nordhaus, Ralph Ossa, Heitor Pellegrina, Robert Staiger, John Sturm
+Becko, and Maksym Chepeliev for their valuable comments, and participants
+in many seminars and conferences for their helpful discussions and
+feedback. Email: farid.farrokhi@bc.edu and alashkar@iu.edu.}}
+
+\maketitle
+Trade policy is often cast as a solution to the free-riding problem
+in international climate agreements. This paper examines the extent
+to which trade policy can deliver on this promise. We incorporate
+global supply chains of carbon and climate externalities into a multi-country,
+multi-industry general equilibrium trade model. By deriving theoretical
+formulas for optimal carbon and border taxes, we quantify the maximum
+efficacy of two trade policy solutions to the free-riding problem.
+Adding optimal \emph{carbon border taxes} to existing tariffs proves
+largely ineffective, delivering only 3.4\% of what could be achieved
+under globally optimal carbon pricing. In contrast, \citeauthor{nordhaus2015climate}'s
+\parencite*{nordhaus2015climate} \emph{climate club} framework, in
+which border taxes are used as contingent penalties to deter free-riding,
+can achieve 33-68\% of the globally optimal carbon reduction, depending
+on the initial coalition (EU, EU+US, or EU+US+China). In all cases,
+the climate club ensures universal compliance, thereby preserving
+free trade.
+
+\setstretch{1.5}
+
+\newpage\begin{refsection}
+
+\section{\label{sec: Section 1 - Introduction}Introduction}
+
+Climate change is accelerating at an alarming rate, yet governments
+have been unsuccessful in forging an agreement to effectively tackle
+this pressing issue. Major climate agreements, like the 1997 \textsc{Kyoto
+Protocol} and the 2015 \textsc{Paris Climate Accord}, have failed
+to deliver a meaningful reduction in global carbon emissions. This
+failure is often attributed to the \emph{free-riding} problem: Countries
+have an incentive to free-ride on the rest of the world\textquoteright s
+reduction in carbon emissions without undertaking proportionate abatement
+themselves.
+
+The shortcoming of existing climate agreements has led experts to
+propose alternative solutions that are resistant to free-riding. Two
+canonical trade policy proposals have emerged:
+\begin{description}
+\item [{Proposal$\ $1:}] Climate-conscious governments use \emph{carbon
+border taxes} as a second-best policy to curb untaxed carbon emissions
+beyond their jurisdiction.
+\item [{Proposal$\ $2:}] Climate-conscious governments form a \emph{climate
+club, }using collective and contingent trade penalties to incentivize
+climate cooperation by reluctant governments.
+\end{description}
+While both proposals combine carbon pricing with trade policy, they
+differ starkly in their approach. Proposal 1 is grounded in unilateralism.
+It presumes that global climate cooperation is improbable, but unilateral
+policies can serve as a viable second best solution. Proposal 2 relies
+on the premise that unilateral action is insufficient and that the
+failure of past multilateral agreements could be reversed through
+better institutional design.
+
+The maximal efficacy of these proposals remains unclear due to the
+challenges in characterizing their \emph{optimal} design within \emph{quantitative}
+frameworks. Traditional theories of optimal trade and environmental
+policy are limited to stylized models that preclude quantitatively
+important considerations. Existing quantitative studies examine simplified
+variants of these proposals that are not optimal, sidestepping the
+computational challenges associated with optimal policy analysis.
+Thus, they reveal only a fraction of what these proposals could potentially
+achieve.
+
+We overcome these challenges by combining optimal policy analysis
+with quantitative general equilibrium modeling. First, we incorporate
+global carbon supply chains and climate externalities into a multi-country,
+multi-industry general equilibrium trade model. Second, we derive
+theoretical formulas for optimal carbon border taxes and climate club
+penalties that internalize climate damage from carbon emissions and
+terms-of-trade effects under rich general equilibrium considerations.
+Third, we map our model and optimal policy formulas to data on trade,
+production, and emissions to evaluate the maximal effectiveness of
+carbon border taxes and climate clubs.
+
+Section \ref{sec: Section 2 - Framework} presents our theoretical
+framework, that is a general equilibrium semi-parametric model of
+international trade with many countries and industries. Our framework
+incorporates production, distribution, and utilization of fossil fuel
+energy which gives rise to international climate externalities. The
+resulting framework is particularly attractive as it tractably combines
+the carbon externality and terms-of-trade rationales for policy intervention.
+Section \ref{sec: Section 3 - Optimal Policy} derives theoretical
+formulas for optimal carbon and border taxes in our general equilibrium
+framework. Our optimal policy formulas represent a notable advance
+over traditional theories. In addition to internalizing multilateral
+leakage and ripple effects through carbon supply chains, our formulas
+pave the way for an in depth quantitative analysis of the above canonical
+climate policy proposals.
+
+We derive computationally efficient formulas for optimal policy using
+a dual decomposition method that breaks down the general equilibrium
+optimal policy problem into independent sub-problems. Specifically,
+the optimal policy problem consists of a system of first-order conditions
+involving complex derivatives, representing the general equilibrium
+response of non-policy variables to policy. These derivatives are
+challenging to characterize, making optimal policy derivation difficult
+in general equilibrium settings. Our decomposition method simplifies
+this by dividing the problem into independent sub-problems that can
+be solved without calculating such complex derivatives.\footnote{Our decomposition method relies on the simplifying assumption that
+policy-induced changes to relative wages among foreign countries have
+no first-order effect on domestic welfare.} This approach mirrors the logic of the envelope theorem, in which
+the optimal policy for each instrument sets the marginal effect of
+a subset of variables to zero, making changes in those variables irrelevant
+when optimizing across other instruments.
+
+Our analytical formulas indicate that the \emph{unilaterally} optimal
+domestic carbon tax equals the disutility from carbon emissions for
+domestic households. This policy choice is inefficient from a global
+standpoint as it does not internalize the home country's carbon externality
+on foreign residents. Unilaterally optimal import tariffs and export
+subsidies are composed of two components: a conventional terms-of-trade-driven
+component and carbon border adjustments. Relevant to Proposal 1, these
+carbon adjustments impose a tax on imported goods based on the carbon
+content per dollar value and provide a subsidy to exported goods based
+on the carbon intensity of competing foreign varieties. Relevant to
+Proposal 2, the unilaterally optimal border taxes represent the trade
+penalties that maximize welfare transfers from free-riders to climate
+club members.
+
+To better understand these non-cooperative policy choices and elucidate
+the free-riding problem, we compare them with optimal policy under
+global cooperation. The first-best policy from a global standpoint
+features zero border taxes/subsidies and a globally optimal carbon
+tax that equals the \emph{global} disutility from carbon emissions.
+Importantly, the globally optimal carbon tax rate greatly exceeds
+the unilaterally optimal rate as it penalizes a country's carbon externality
+on not only its own residents but also foreign households. Governments
+acting in their own self-interest, therefore, have incentives to deviate
+from the globally optimal rate, thus perpetuating the free-riding
+problem in climate action.
+
+Sections \ref{sec: Section 4 - Quantification} and \ref{sec: Section 5 - Quantitative Analyses}
+leverage our optimal tax formulas for counterfactual analysis to determine
+the maximal efficacy of carbon border taxes and the climate club proposal
+in reducing carbon emissions. The required data for counterfactual
+policy analysis are obtained as follows: First, observable shares
+are constructed from national and environmental accounts data. Second,
+the governments\textquoteright{} perceived disutility from climate
+change is inferred from their applied environmentally-related taxes.
+Third, structural parameters including the industry-level trade elasticities
+and the energy demand elasticity are estimated using cross-sectional
+tax and expenditure data, utilizing conventional identification strategies.
+The required data on trade, production, carbon emissions, and taxes
+are primarily taken from the GTAP Database for 2014 augmented by several
+auxiliary data sources. Our final database covers 18 broadly defined
+industries, including energy, representing the entire vector of production
+across 13 major countries, the European Union, and five aggregate
+regions containing neighboring blocs of countries.
+
+Our analysis reveals that adding border taxes to unilaterally optimal
+domestic carbon taxes yields limited carbon reduction. Introducing
+optimally-designed border taxes reduces global emissions by an additional
+1.3\%---addressing merely 3.4\% of the excess emissions caused by
+free-riding behavior. Border taxes' inefficacy as an indirect form
+of carbon taxation stems from three factors. First, carbon border
+taxes fail to incentivize abatement among foreign firms because they
+tax firms based on industry-wide national averages rather than the
+firm-specific carbon intensity. Since individual firms cannot meaningfully
+influence these broad averages, they have no incentive to reduce their
+carbon intensity in response to these taxes. Second, carbon border
+taxes cannot target emissions from non-traded goods, which account
+for a significant share of global emissions. Third, carbon border
+taxes cannot prevent carbon leakage through general equilibrium price
+changes. As pre-tax energy prices fall in response to border taxes,
+energy use and carbon emissions tend to increase in countries without
+a domestic carbon tax.
+
+To examine the climate club, we solve a sequential game where \emph{core}
+members move first, followed by other countries. Core members and
+non-core countries that join the club abide by the rules of membership:
+they impose unilaterally optimal trade penalties against non-members
+and commit to free trade among members. Furthermore, they raise domestic
+carbon prices to meet a specified \emph{carbon tax target}. Non-members
+can use their trade taxes to retaliate against club members but keep
+their other taxes unchanged. When considering joining the club, countries
+weigh the cost of higher domestic carbon taxes against the benefits
+of evading the climate club's collective trade penalties.\footnote{Analyzing the climate club proposal quantitatively poses two major
+challenges. First, computing optimal trade penalties in a strategic
+game involving many players is practically infeasible with numerical
+optimization methods. We circumvent this issue by leveraging our theoretical
+formulas for optimal trade penalties. Second, solving the climate
+club game suffers from the curse of dimensionality, requiring that
+one searches over an excessively large number of possible outcomes.
+To overcome this challenge, we shrink the space of possible outcomes
+using a procedure that closely mimics the iterative elimination of
+dominated strategies.}
+
+In setting the climate club\textquoteright s carbon tax target, we
+balance two considerations. The first is a trade-off reminiscent of
+the \emph{Laffer} curve. Higher taxes encourage greater emission cuts
+per member, but also discourage participation---yielding an inverted
+U-shape relationship between global carbon reduction and the carbon
+tax target. The second consideration is upholding free trade. Trade
+penalties against non-members are intended as deterrent threats, so
+the ideal target must be set at a level that elicits universal participation,
+rendering the imposition of such penalties unnecessary. Considering
+these dual objectives, our analysis sets the carbon tax target at
+the maximal rate that results in an inclusive club of all nations.
+
+The climate club framework can effectively reduce global carbon emissions,
+but its success hinges on the makeup of core members. If the EU and
+US initiate a climate club as core members, universal participation
+will be attained at a maximal carbon tax target of 53 (\$/t$\text{CO}_{2}$),
+yielding a 18.6\% reduction in global carbon emissions. Though substantial,
+the EU-US alliance lacks the necessary market power to elicit a higher
+tax target. However, by incorporating China as a core member, the
+maximal carbon tax target can be raised to 89 (\$/t$\text{CO}_{2}$)
+leading to a 28.0\% reduction in global carbon emissions. This figure
+represents 68\% of the emissions reduction achievable under globally
+first-best carbon taxes, based on a social cost of carbon of 156 (\$/t$\text{CO}_{2}$).
+Overall, the climate club's efficacy in mitigating climate change
+relies on assembling an influential group of core members and setting
+an appropriate carbon tax target. Moreover, comparing the efficacy
+of the climate club to carbon border taxes reveals that trade policy
+is more effective when used as a contingent penalty at deterring free-riding
+than an indirect mechanism for carbon taxation.
+
+Climate clubs outperform non-coordinated, unilateral policies for
+two reasons. First, they employ trade penalties as an enforcement
+tool rather than a means of indirect carbon taxation. These penalties
+are specifically designed to compel governments to increase their
+domestic carbon taxes. Domestic taxes are more effective than indirect
+border taxes because they induce abatement among local firms and can
+cover both traded and non-traded goods. Second, the multilateral structure
+of climate clubs amplifies the impact of trade penalties compared
+to unilateral measures. By leveraging their collective market power,
+club members can impose more consequential penalties on free-riders,
+generating stronger pressure for compliance.
+
+\subsection*{Related Literature}
+
+Our work contributes to several areas of literature. First, we contribute
+to \emph{theoretical }analyses of trade and environmental policy.
+Early works such as \textcite{markusen1975international,copeland1996pollution,hoel1996should},
+use partial equilibrium or two-country models to study how unilaterally-applied
+trade taxes can mitigate transboundary environmental damages. More
+recent research by \textcite{kortum2021optimal} and \textcite{weisbach2023trade}
+characterizes unilaterally-optimal carbon policy in a two-country
+\textcite{dornbusch1977comparative} model, emphasizing the effectiveness
+of combining supply and demand-side carbon taxes. Another body of
+literature examines international agreements that link trade and climate
+policy, wherein free trade is \emph{contingent} on climate action
+\parencite{barrett1997strategy,nordhaus2015climate,maggi2016issue,nordhaus2021dynamic,harstad2024trade,iverson2024tiered}.
+Our work advances this literature by characterizing optimal policy
+in a multi-country and industry general equilibrium model amenable
+to rich quantitative analysis.
+
+Second, our analysis is related to \emph{quantitative} examinations
+of environmental and energy-related policies in open economies, e.g.,
+\textcite{babiker2005climate,elliott2010trade,taheripour2019market,farrokhi2020global}.
+Our paper is especially relevant to studies analyzing the efficacy
+of carbon border adjustment policies, including \textcite{bohringer2016strategic,larch2017carbon,shapiro2021environmental}.
+Although these studies feature rich specifications of the global economy,
+they lack a concept of optimal policy design. Consequently, they do
+not reveal the full potential of trade policy for reducing carbon
+emissions. We complement this literature by utilizing optimal policy
+formulas to uncover the frontier of trade and climate policy outcomes.
+
+Third, our work relates to an emerging literature characterizing optimal
+policy in modern quantitative trade models, e.g., \textcite{costinot2015comparative,bartelme2019textbook,beshkar2020cost,lashkaripour2021cost,caliendo2022trade,lashkaripour2016profits}.
+These studies have bridged a longstanding divide between classic partial
+equilibrium trade policy frameworks and modern general equilibrium
+trade theories. Our dual decomposition technique advances this effort
+towards closing the gap. It shows that optimal policy formulas can
+be derived without characterizing complex general equilibrium elasticities,
+removing a primary impediment to general equilibrium optimal policy
+analysis. This particular result sharpens and extends the result in
+\textcite{lashkaripour2016profits} to settings with global carbon
+supply chains and international consumption externalities, an example
+of which is climate change damage.
+
+Lastly, we contribute to research on trade and the environment by
+examining trade policy as a tool to mitigate climate change. This
+literature incorporates environmental issues, from local pollution
+to global deforestation, into trade models, e.g., \textcite{shapiro2018pollution}
+and \textcite{farrokhideforestation}, with key advances reviewed
+by \textcite{desmet2023climate}. For broader reviews, see \textcite{copeland2004trade}
+and \textcite{GlobalizationEnvironment} , and for a discussion on
+integrating climate change into the existing world trade system, see
+\textcite{staiger2021world}.
+
+\section{\label{sec: Section 2 - Framework}Theoretical Framework}
+
+The global economy consists of multiple countries indexed by $i,j,n\in\mathbb{\ensuremath{C}}\equiv\{1,...,N\}$
+and multiple industries indexed by $k,g\in\{0,1,...,K\}$. Each country
+$i$ is endowed by $\bar{L}_{i}$ workers and $\bar{R}_{i}$ carbon
+reserves. Workers are perfectly mobile across industries but immobile
+across countries, and each worker supplies one unit of labor inelastically.
+Production in the global economy can be thought of as a two stage
+process. First, each country's energy industry (indexed by $k=0$)
+employs labor and carbon reserves---as a specific input---to produce
+energy. Second, other industries (indexed by $k=1,...,K$) employ
+labor and energy to produce final goods. Markets are perfectly competitive\footnote{In Section \ref{subsec:Extensions}, we consider a more general case
+with monopolistic competition and firm entry.} and goods in all industries are internationally traded.
+
+We denote quantities of energy in terms of their $\text{CO}_{2}$
+emission content. Along the carbon supply chain, we count $\text{CO}_{2}$
+emissions when energy is used by final good producers and households.
+Since every individual producer or consumer is infinitesimally small,
+they do not internalize the impact of their production or consumption
+choices on $\text{CO}_{2}$ emissions.\footnote{Throughout the paper, we use ``energy'' as a shorthand for ``fossil
+fuel energy'' and we use ``carbon emissions'' interchangeably with
+``$\text{CO}_{2}$ emissions''.}
+
+\subsection{\label{subsec: Framework - Policy Instruments}Prices and Tax Instruments}
+
+Subscript $(ji,k)$ indexes a variety corresponding to \emph{origin
+$j-$destination $i-$industry $k$}---i.e., a variety of industry
+$k$ that is produced in origin $j$ and shipped to destination $i$.
+Country $i$'s government has access to the following tax instruments:
+\begin{enumerate}
+\item Import tax, $t_{ji,k}$, applied to imported variety $ji,k$ ($t_{ii,k}=0$
+by design);
+\item Export subsidy, $x_{ij,k}$, applied to exported variety $ij,k$ ($x_{ii,k}=0$
+by design);
+\item Carbon tax, $\tau_{i,k}$, applied to the carbon content of energy
+use;
+\end{enumerate}
+Border taxes/subsidies create a wedge between the after-tax \emph{consumer
+price}, $\tilde{P}_{ji,k}$, and the before-tax \emph{producer price},
+$P_{ji,k}$, of each variety $(ji,k)$,
+\begin{equation}
+\tilde{P}_{ji,k}=\frac{\left(1+t_{ji,k}\right)}{\left(1+x_{ji,k}\right)}\times P_{ji,k},\qquad k=0,1,...,K.\label{eq:price_wedges}
+\end{equation}
+A representative ``energy distributer'' in country $i$ purchases
+varieties of energy from international suppliers $j=1,...,N$, at
+prices $\left\{ \tilde{P}_{ji,0}\right\} _{j}$, and aggregates them
+into a composite energy bundle with price $\tilde{P}_{i,0}=\tilde{\textrm{P}}_{i,0}\left(\tilde{P}_{1i,0},...,\tilde{P}_{Ni,0}\right)$.
+This bundle is sold to domestic producers after the inclusion of an
+end-use-specific carbon tax, which creates a wedge between $\tilde{P}_{i,0}$
+and the final price paid by producers for use in industry $k$:\vspace{-5pt}
+\begin{equation}
+\tilde{P}_{i,0k}=\tilde{P}_{i,0}+\tau_{i,k},\qquad k=1,...,K.\label{eq: carbon tax}
+\end{equation}
+where $\tilde{P}_{i,0k}$ denotes the price of energy input for use
+in industry $k=1,...,K$ (after the inclusion of all taxes) and $\tau_{i,k}$
+is the carbon tax. The above-listed tax instruments are sufficient
+for obtaining the first-best policy outcome under cooperative and
+non-cooperative scenarios. Additional tax instruments (e.g., production
+or consumption taxes) are redundant as their effects can be perfectly
+mimicked with the appropriate choice of existing instruments.
+
+\subsection{\label{subsec: Framework - Consumption}Consumption}
+
+The representative household in country $i$ maximizes a non-parametric
+utility function $\text{U}_{i}(\boldsymbol{C}_{i})$ by choosing the
+vector of consumption quantities, $\boldsymbol{C}_{i}=\left\{ C_{ji,k}\right\} _{j,k\geq1}$
+subject to the budget constraint,
+\begin{equation}
+E_{i}=\sum_{j=1}^{N}\sum_{k=1}^{K}\tilde{P}_{ji,k}C_{ji,k},\label{eq:National_Expenditure}
+\end{equation}
+where $E_{i}$ denotes national household expenditure, and $\tilde{P}_{ji,k}$
+is the consumer price index of variety $ji,k$ (Equation \ref{eq:price_wedges}).
+Let $\tilde{\boldsymbol{P}}_{i}=\left\{ \tilde{P}_{ji,k}\right\} _{j\in\mathbb{\ensuremath{C}},\,k\geq1}$
+denote the entire vector of consumer prices in country $i$. The household's
+utility maximization implies an indirect utility function, $\text{V}_{i}\left(E_{i},\tilde{\boldsymbol{P}}_{i}\right)$,
+and a Marshallian demand function for each variety $ji,k$,
+\begin{equation}
+C_{ji,k}=\text{D}_{ji,k}\left(E_{i},\tilde{\boldsymbol{P}}_{i}\right),\qquad k=1,...,K.\label{eq:hhd_demand}
+\end{equation}
+ We denote the elasticity of demand for variety $(ji,k)$ with respect
+to the price of variety $(ni,g)$ by: 
+\begin{equation}
+\varepsilon_{ji,k}^{(ni,g)}\equiv\frac{\partial\ln\text{D}_{ji,k}(E_{i},\tilde{\boldsymbol{P}}_{i})}{\partial\ln\tilde{P}_{ni,g}},\qquad\qquad\varepsilon_{ji,k}\sim\varepsilon_{ji,k}^{\left(ji,k\right)};\label{eq: demand elasticity}
+\end{equation}
+with the \emph{own} price elasticity of demand compactly denoted as:
+$\varepsilon_{ji,k}\sim\varepsilon_{ji,k}^{(ji,k)}\leq-1$.
+
+We use $\beta$ and $\lambda$ to denote household expenditure shares.
+The within-industry expenditure share on variety $ji,k$ (origin $j$--destination
+$i$--industry $k$) is denoted by $\lambda_{ji,k}$, and the overall
+expenditure share of country $i$ on industry $k\neq0$ is denoted
+by $\beta_{i,k}$,
+\begin{equation}
+\lambda_{ji,k}\equiv\frac{\tilde{P}_{ji,k}C_{ji,k}}{\sum_{n=1}^{N}\tilde{P}_{ni,k}C_{ni,k}},\qquad\beta_{i,k}\equiv\frac{\sum_{n=1}^{N}\tilde{P}_{ni,k}C_{ni,k}}{\sum_{n=1}^{N}\sum_{g=1}^{K}\tilde{P}_{ni,g}C_{ni,g}}=\frac{\sum_{n=1}^{N}\tilde{P}_{ni,k}C_{ni,k}}{E_{i}}.\label{eq:Expenditure_Shares}
+\end{equation}
+A familiar special case is the Cobb-Douglas-CES form, where a constant
+fraction of expenditure, $\beta_{i,k}$, is spent on industry $k$
+whose varieties are differentiated by source countries under a constant
+elasticity of substitution, $\sigma_{k}$. The demand function in
+this special case is:
+\[
+\left[\text{special case: Cobb-Douglas-CES}\right]\qquad\qquad\text{D}_{ji,k}\left(E_{i},\tilde{\boldsymbol{P}}_{i}\right)=\frac{b_{ji,k}\tilde{P}_{ji,k}^{-\sigma_{k}}}{\sum_{n}b_{ni,k}\tilde{P}_{ni,k}^{1-\sigma_{k}}}\beta_{i,k}E_{i},
+\]
+with demand elasticities given by $\varepsilon_{ji,k}^{\left(ni,k\right)}=-\sigma_{k}\mathbbm{1}_{n=j}+\left(\sigma_{k}-1\right)\lambda_{ni,k}$
+and $\varepsilon_{ji,k}^{\left(ni,g\right)}=0$ if $g\neq k$.
+
+\subsection{\label{subsec: Framework - Production}Production}
+
+\paragraph*{Energy Extraction.}
+
+The extraction industry ($k=0$) in each country $j$ produces energy
+by employing exogenously-given carbon reserves, $\bar{R}_{j}$, as
+specific input and labor, $L_{j,0}$, as variable input under a Cobb-Douglas
+technology:
+\begin{equation}
+Q_{j,0}=\bar{\varphi}_{j,0}\left(\frac{L_{j,0}}{1-\phi_{j}}\right)^{1-\phi_{j}}\left(\frac{\bar{R}_{j}}{\phi_{j}}\right)^{\phi_{j}}.\label{eq:Q_j0}
+\end{equation}
+Here, $\bar{\varphi}_{j,0}$ is an exogenous productivity parameter
+and $Q_{j,0}$ is the output quantity of energy which can be thought
+of as \emph{carbon supply} from each economy $j$. Extracted energy
+varieties are traded internationally subject to border taxes but \emph{without}
+incurring iceberg trade costs. The producer price of the energy variety
+extracted in country $j$ equalizes across destinations $i$,\footnote{This specification implies an energy supply curve, $P_{jj,0}=\bar{p}_{j,0}\times w_{j}\times Q_{j,0}^{\tilde{\phi}_{j}}$,
+where $\bar{p}_{j,0}=\left(\bar{\varphi}_{j,0}\times\left[\bar{R}_{j}/\phi_{j}\right]^{\phi_{j}}\right)^{-1/\left(1-\phi_{j}\right)}$
+is an exogenous shifter and $\tilde{\phi}_{j}\equiv\phi_{j}/\left(1-\phi_{j}\right)>0$
+is the inverse energy supply elasticity.}
+\begin{equation}
+P_{ji,0}=P_{jj,0}=\frac{1}{\bar{\varphi}_{j,0}}w_{j}^{1-\phi_{j}}r_{j}^{\phi_{j}},\label{eq: P_jj0}
+\end{equation}
+Here, $w_{j}$ is the wage rate in country $j$, and $r_{j}$ represents
+the rental rate of carbon reserves in that country. Similar to other
+goods, energy varieties are subject to border taxes, resulting in
+a destination-specific consumer price, $\tilde{P}_{ji,0}=\frac{1+t_{ji,0}}{1+x_{ji,0}}P_{jj,0}$.\vspace{-10pt}
+
+
+\paragraph*{Energy Distribution.}
+
+A representative energy distributer in each country $i$ purchases
+varieties of energy $\left\{ C_{ji,0}\right\} _{i}$ from international
+suppliers $j=1,..,N$, aggregates them into a bundle of energy, $Z_{i}=\textrm{Z}_{i}\left(C_{1i,0},...,C_{Ni,0}\right)$,
+and sells this energy bundle to domestic final-good producers. The
+price of the energy bundle, $\tilde{P}_{i,0}$, is determined by a
+homogeneous-of-degree-one aggregator:
+\begin{equation}
+\tilde{P}_{i,0}=\tilde{\text{P}}_{i,0}\left(\tilde{P}_{1i,0},...,\tilde{P}_{Ni,0}\right).\label{eq:e_i}
+\end{equation}
+The energy price aggregator, $\tilde{P}_{i,0}$, is implied by a homothetic
+demand system for international energy varieties. The distributor's
+demand for variety ($ji,0$) is a function of total expenditure on
+energy varieties, $E_{i,0}=\sum_{j}\tilde{P}_{ji,0}C_{ji,0}$, and
+the vector of energy prices, $\tilde{\boldsymbol{P}}_{i,0}=\left\{ \tilde{P}_{1i,0},...,\tilde{P}_{Ni,0}\right\} $,
+which includes border taxes but excludes the carbon tax applied post-distribution.
+Namely,
+\begin{equation}
+C_{ji,0}=\text{D}_{ji,0}\left(E_{i,0},\tilde{\boldsymbol{P}}_{i,0}\right).\label{eq:lambda_ji0}
+\end{equation}
+As earlier, we use $\varepsilon_{ji,0}^{\left(ni,0\right)}=\partial\ln\text{D}_{ji,0}\left(.\right)/\ln\tilde{P}_{ni,0}$
+as the price elasticity of demand for energy varieties. A special
+case of the above specification is the CES aggregator, which implies
+the following price and quantity equations:\footnote{The finite elasticity of substitution between energy sources, as shown
+in \textcite{farrokhi2020global}, can be micro-founded via aggregation
+over sourcing choices of input-users who face variability in transport
+costs vis-a-vis exporters.}\vspace{-5pt}
+\begin{align*}
+\left[\textrm{special case: CES}\right]\qquad & \tilde{\text{P}}_{i,0}\left(\tilde{\boldsymbol{P}}_{i,0}\right)=\left[\sum_{j}b_{ji,0}\tilde{P}_{ji,0}^{1-\sigma_{0}}\right]^{\frac{1}{1-\sigma_{0}}};\quad\text{D}_{ji,0}\left(E_{i,0},\tilde{\boldsymbol{P}}_{i,0}\right)=\frac{b_{ji,0}\tilde{P}_{ji,0}^{-\sigma_{0}}E_{i,0}}{\sum_{n}b_{ni,0}\tilde{P}_{ni,0}^{1-\sigma_{0}}}.
+\end{align*}
+Note that $\tilde{P}_{ji,0}$ includes border taxes on energy but
+not the carbon tax. The latter is applied after bundling of energy
+varieties, so that the final price of the energy bundle paid by final-good
+producers $k$ is $\tilde{P}_{i,0k}=\tilde{P}_{i,0}+\tau_{i,k}$.\vspace{-10pt}
+
+
+\paragraph{Household Energy Consumption.}
+
+Our setup accommodates energy use by households, which we model by
+making use of a fictitious industry $k_{0}\in\left\{ 1,...,K\right\} $
+that purchases the energy bundle, at price $\tilde{P}_{i,0}+\tau_{i,k_{0}}$,
+and converts it without generating any value added into a final good
+of the same price. This fictitious industry is nontradeable and sells
+exclusively to domestic households.\footnote{This is equivalent to the standard specification where households
+buy energy directly from the energy distributor, subject to a household-specific
+carbon tax, $\tau_{i,k_{0}}$.} Therefore, households' consumption of final good $k_{0}$ corresponds
+to their energy consumption and their associated $\text{CO}_{2}$
+emission.
+
+\vspace{-5pt}
+
+
+\paragraph*{Production of Final Goods.}
+
+Production of final good $k=1,...,K$ in country $i$ is conducted
+by symmetric competitive firms that combine labor and the energy input.
+Total production in each industry is represented by an aggregate constant-reruns-to-scale
+production function:
+\begin{equation}
+Q_{i,k}=\bar{\varphi}_{i,k}\,\text{F}_{i,k}\left(L_{i,k},Z_{i,k}\right).\label{eq:Q_jik}
+\end{equation}
+The arguments $\text{\ensuremath{L_{i,k}}}$ and $Z_{i,k}$ denote
+the quantity of labor and energy inputs, and $\bar{\varphi}_{i,k}>0$
+is a Hick-neutral productivity shifter. International trade in final
+goods is subject to iceberg trade costs, $\bar{d}_{in,k}\geq1$, with
+$\bar{d}_{ii,k}=1$. Per cost minimization, the competitive producer
+price of variety $in,k$ is:
+\begin{equation}
+P_{in,k}=\frac{\bar{d}_{in,k}}{\bar{\varphi}_{i,k}}\times\text{c}_{i,k}\left(w_{i},\tilde{P}_{i,0k}\right),\label{eq:P_jik}
+\end{equation}
+where $\text{c}_{i,k}\left(.\right)$ is a homogeneous-of-degree-one
+aggregator of input prices: the wage rate, $w_{i}$, and the after-tax
+price of the energy, $\tilde{P}_{i,0k}=\tilde{P}_{i,0}+\tau_{i,k}$.
+Assuming that the demand for inputs is homothetic, the cost share
+of energy, $\alpha_{i,k}\equiv\tilde{P}_{i,0k}Z_{i,k}/Y_{i,k}$, is
+also fully-determined by $w_{i}$ and $\tilde{P}_{i,0k}$, with $Y_{i,k}=P_{ii,k}Q_{i,k}$
+denoting the total value of sales of origin $i$--industry $k$.
+
+A canonical special case of our setup is the case of CES production
+function, with
+\[
+\text{F}_{i,k}\left(L_{i,k},Z_{i,k}\right)=\left[\left(1-\bar{\kappa}_{i,k}\right)^{\frac{1}{\varsigma}}L_{i,k}^{\frac{\varsigma-1}{\varsigma}}+\left(\bar{\kappa}_{i,k}\right)^{\frac{1}{\varsigma}}Z_{i,k}^{\frac{\varsigma-1}{\varsigma}}\right]^{\frac{\varsigma}{\varsigma-1}},
+\]
+where $\bar{\kappa}_{i,k}\in[0,1]$ represents exogenous energy intensity,
+and $\varsigma>0$ is the elasticity of substitution between labor
+and energy inputs. In this special case, the input cost aggregator
+becomes:
+\[
+\left[\textrm{special case: CES}\right]\qquad c_{i,k}=\text{c}_{i,k}\left(w_{i},\tilde{P}_{i,0k}\right)\equiv\left[(1-\bar{\kappa}_{i,k})w_{i}^{1-\varsigma}+\bar{\kappa}_{i,k}\tilde{P}_{i,0k}^{1-\varsigma}\right]^{\frac{1}{1-\varsigma}};
+\]
+where $\varsigma$ regulates the ``energy demand elasticity,'' implying
+$\alpha_{i,k}=\bar{\kappa}_{i,k}\left(\tilde{P}_{i,0,k}/c_{i,k}\right)^{1-\varsigma}$.
+
+\subsection{\label{subsec: Framework - Emissions}$\text{CO}_{2}$ Emissions}
+
+Aggregate $\text{CO}_{2}$ emission from each industry $k=1,...,K$
+can be decomposed as:
+\begin{equation}
+Z_{i,k}=z_{i,k}\,Q_{i,k},\label{eq:Z_jk}
+\end{equation}
+where $z_{i,k}$ represents the emissions per unit quantity and $Q_{i,k}$
+is output quantity.\footnote{In \textcite{copeland2004trade} terminology, $z_{i,k}$ represents
+\emph{technique}, $Q_{i,k}$ is \emph{scale}, and $\left\{ Z_{i,k}\right\} _{k}$
+represents \emph{composition}.} The emission per quantity is determined by the after-tax energy input
+price, $\tilde{P}_{n,0k}$, and the wage rate:
+\[
+z_{i,k}=\text{z}_{i,k}\left(\tilde{P}_{i,0k},w_{i}\right).
+\]
+A carbon tax, $\tau_{i,k}$, raises the consumer price of energy,
+$\tilde{P}_{i,0k}$, resulting in a lower energy use $Z_{i,k}$ per
+unit of final good production. Country $i$'s total $\text{CO}_{2}$
+emissions, $Z_{i}$, and the distributor's total energy expenditure,
+$E_{i,0}$, are:
+\begin{equation}
+Z_{i}=\sum_{k=1}^{K}Z_{i,k},\qquad\qquad E_{i,0}=\tilde{P}_{i,0}Z_{i}.\label{eq:National_Emission}
+\end{equation}
+Under the special case with CES production, the emission per quantity
+takes the following parametric representation,
+\[
+\left[\textrm{special case: CES}\right]\qquad\qquad\text{z}_{i,k}\left(\tilde{P}_{i,0k},w_{i}\right)=\overline{z}_{i,k}\left[\frac{\bar{\kappa}_{i,k}\tilde{P}_{i,0k}^{1-\varsigma}}{(1-\bar{\kappa}_{i,k})w_{i}^{1-\varsigma}+\bar{\kappa}_{i,k}\tilde{P}_{i,0k}^{1-\varsigma}}\right]^{\frac{\varsigma}{\varsigma-1}},
+\]
+where $\bar{z}_{i,k}\equiv\bar{\kappa}_{i,k}^{\frac{1}{1-\varsigma}}/\bar{\varphi}_{i,k}$
+is a constant shifter. Lastly, global $\text{CO}_{2}$ emission can
+be calculated by summing over national $\text{CO}_{2}$ emissions:
+\begin{equation}
+Z^{\left(global\right)}\equiv\sum_{i}Z_{i}\label{eq:Global_Emission}
+\end{equation}
+
+
+\subsection{\label{subsec: Framework - General Equilibrium}General Equilibrium}
+
+\paragraph*{Tax Revenues and National Income.}
+
+We denote by $T_{i}$ the tax revenues collected by country $i$'s
+government from imports, exports, and carbon taxes and rebated to
+consumers in that country,
+\[
+\begin{array}{cl}
+T_{i}= & \underbrace{\sum_{k=1}^{K}\left[\tau_{i,k}Z_{i,k}\right]}_{\text{carbon tax}}\,+\,\underbrace{\sum_{k=0}^{K}\sum_{n\neq i}\left[\frac{t_{ni,k}}{1+t_{ni,k}}\tilde{P}_{ni,k}C_{ni,k}\right]}_{\text{import taxes}}\,-\,\underbrace{\sum_{k=0}^{K}\sum_{n\neq i}\left[\frac{x_{in,k}}{1+t_{in,k}}\tilde{P}_{in,k}C_{in,k}\right]}_{\text{export subsidies}}\end{array}
+\]
+Let $Y_{i,k}$ denote sales of country $i-$industry $k$,
+\begin{equation}
+Y_{i,k}=P_{ii,k}Q_{i,k}.\label{eq:Y_i,k}
+\end{equation}
+Industry sales, on aggregate, generate an income level of $\sum_{k=0}^{K}Y_{i,k}=w_{i}\bar{L}_{i}+r_{i}\bar{R}_{i}$
+in each country $i$. We assume trade is balanced, so that national
+income is the sum of the wage bill, rental payments to carbon reserves,
+and tax revenues:
+\begin{equation}
+Y_{i}=w_{i}\bar{L}_{i}+\Pi_{i}+T_{i},\qquad\text{where}\qquad\Pi_{i}=r_{i}\bar{R}_{i}.\label{eq:Nationa_Income}
+\end{equation}
+
+
+\paragraph*{General Equilibrium.}
+
+\noindent For a given set of taxes $\left\{ t_{ji,k},x_{ij,k},\tau_{i,k}\right\} $,
+a \emph{general equilibrium} is a vector of consumption, production
+and input use, $\left\{ C_{ji,k},Q_{i,k},L_{i,k},Z_{i,k}\right\} $,
+final goods and energy input prices, $\left\{ P_{ji,k},\tilde{P}_{ji,k},\tilde{P}_{i,0},\tilde{P}_{i,0k}\right\} $,
+wage and rental rates, $\left\{ w_{i},r_{i}\right\} $, and income,
+sales and expenditure levels, $\left\{ Y_{i},Y_{i,k},E_{i},E_{i,0}\right\} $,
+such that equations (\ref{eq:price_wedges})-(\ref{eq:Nationa_Income})
+hold; goods market clear, equating national consumption expenditure
+with income, $E_{i}=Y_{i}$, and each industry's total output with
+demand,
+\begin{equation}
+Q_{i,k}=\sum_{n=1}^{N}\bar{d}_{in,k}C_{in,k}\label{eq: MCC - goods}
+\end{equation}
+and the factor markets clear according to:
+\begin{equation}
+w_{i}\bar{L}_{i}=\sum_{k=1}^{K}\left[\left(1-\alpha_{i,k}\right)Y_{i,k}\right]+\left(1-\phi_{i}\right)Y_{i,0},\qquad\Pi_{i}\equiv r_{i}\bar{R}_{i}=\phi_{i}Y_{i,0};\label{eq:MCC - factors}
+\end{equation}
+where the wage rate in each country clears the labor market and the
+rental rate of carbon reserves clears the market for energy extraction.
+
+\section{\label{sec: Section 3 - Optimal Policy}Optimal Policy and the Free-Riding
+Problem}
+
+Our analysis builds on the realization that the globally optimal climate
+outcome is politically infeasible due to free-riding incentives, but
+climate-conscious countries can use trade policies to target global
+emissions. In this section, we first characterize the unilaterally
+optimal carbon and border taxes, elucidating the two rationales for
+policy intervention from a unilateral standpoint. Next, we characterize
+the globally optimal policy to highlight the free-riding problem in
+climate agreements. Finally, we discuss two trade policy remedies
+for the free-riding problem: carbon border taxes and the climate club.
+We explain how our theoretical optimal policy results provide the
+groundwork for quantitatively evaluating these policies. To set the
+stage, we begin with a formal definition of policy objectives.
+
+\paragraph*{Social Welfare with Climate Damage.}
+
+The welfare of the representative consumer in country $i$ is the
+utility from consumption net of the disutility from $\text{CO}_{2}$
+emissions.\footnote{\label{fn:We-exclude-political-economy}We exclude political economy
+factors for two reasons. First, they predominantly influence the within-national
+rather than cross-national distribution of welfare or rents, which
+is not the focus of our analysis---see \textcite{ossa2016quantitative}.
+Second, quantifying political economy weights is infeasible due to
+over-identification issues. For any hypothetical tax schedule, there
+exists a set of political weights that would rationalize it as optimal.} Namely,
+\begin{equation}
+W_{i}=\text{V}_{i}\left(E_{i},\tilde{\boldsymbol{P}}_{i}\right)-\delta_{i}\times Z^{\left(global\right)}.\label{eq:welfare}
+\end{equation}
+The first component represents the indirect utility from consumption
+and the second component is the disutility from global $\text{CO}_{2}$
+emissions. $\delta_{i}$ is a parameter that represents the disutility
+per unit of $\text{CO}_{2}$ emissions for country $i$'s residents.
+However, since individual producers or consumers, take $Z^{\left(global\right)}$
+as given, they do not internalize the associated externality in their
+energy consumption decisions. Governments, meanwhile, can influence
+$\text{CO}_{2}$ emissions and internalize them in their policy choice.
+So, for all practical purposes, $\delta_{i}$ hereafter represents
+the disutility from $\text{CO}_{2}$ emissions as \emph{perceived}
+by governments---meaning that our analysis does not rule out that
+$\delta_{i}$ may be disconnected from the actual climate cost facing
+country $i$'s residents.\footnote{We also examine an alternative specification where $\delta_{i}$ maps
+to estimates of country-level climate change damage.} With this in mind, we turn to characterizing optimal policy under
+various scenarios.
+
+\subsection{\label{subsec: Optimal Policy - Unilateral}Unilaterally Optimal
+Policy Problem}
+
+Unilaterally optimal policies apply to non-cooperative settings, where
+governments choose policies to maximize national welfare as specified
+by Equation (\ref{eq:welfare}) without considering effects on foreign
+households. The government in country $i$ can utilize a comprehensive
+set of tax instruments denoted by $\mathbb{I}_{i}\equiv\left\{ t_{ji,k},x_{ij,k},\tau_{i,k}\right\} _{j,k}$.
+The unilateral optimal policy choice is formally defined below, with
+an expansive formulation of the optimal policy problem provided in
+Appendix B.1.
+\begin{defn*}
+\noindent The\emph{ Unilaterally Optimal Policy} for country $i$
+consists of taxes, $\mathbb{I}_{i}^{*}\equiv\{t_{ji,k}^{*},x_{ij,k}^{*},\tau_{i,k}^{*}\}_{j,k}$,
+that maximize country $i$'s welfare in general equilibrium:
+\[
+\mathbb{I}_{i}^{*}=\arg\max\ \ W_{i}\left(\mathbb{I}_{i},\bar{\mathbb{I}}_{-i}\right)\quad\text{subject to general equilibrium Equations }(\ref{eq:price_wedges})-(\ref{eq:MCC - factors});
+\]
+where $W_{i}$ is described by Equation (\ref{eq:welfare}) and $\bar{\mathbb{I}}_{-i}$
+denotes policy choices in the rest of the world, which country $i$
+takes as given.
+\end{defn*}
+The unilaterally optimal policy seeks to correct the two sources of
+inefficiency in the decentralized equilibrium from country $i$'s
+\emph{unilateral} standpoint: First, private energy production and
+consumption decisions fail to internalize the associated climate externality
+on country $i$'s residents (as measured by $\delta_{i}$). Second,
+country $i$'s producers fail to internalize their collective market
+power when pricing the goods, so there is unexploited market power
+which country $i$'s government can exploit to improve its terms of
+trade vis-a-vis the rest of the world.\footnote{Similarly, domestic consumers fail to internalize their collective
+monopsony power when buying foreign varieties.}
+
+The \emph{targeting principle} provides some guidance on the unilaterally
+optimal policy choices. Domestic carbon taxes are the first-best remedy
+for correcting carbon emissions from domestic economic activity. Border
+taxes (based on the carbon content of goods) are the unilaterally
+optimal instrument for correcting foreign emissions. And border taxes
+(based on national-level market power) are the first-best instrument
+for manipulating the terms-of-trade. However, characterizing the optimal
+policy is complicated in multi-country, multi-industry general equilibrium
+models. Below, we introduce a method to bypass some of these complexities.
+
+Before beginning our analysis, it is useful to conceptualize an equilibrium
+under optimal policy as the joint solution to two mappings: $(a)$
+the equilibrium allocation given optimal taxes, and $(b)$ the optimal
+taxes given an equilibrium allocation. The following section provides
+a unique representation for mapping $(b)$, with Section \ref{subsec: Quantification - Hat Algebra}
+detailing how we jointly solve \emph{(a)} and \emph{(b)}.\footnote{Note that mapping $\left(b\right)$ is unique up to the multiplicity
+introduced by the Lerner symmetry. Moreover, if mapping \emph{(a)}
+admits multiple solutions, this multiplicity will extend to the joint
+solution of \emph{(a)} and \emph{(b)}. In the presence of multiple
+equilibria, our optimal policy results do not offer guidance on how
+to choose between the multiple joint solutions.}
+
+\subsection{Dual Decomposition Technique for Optimal Policy Derivation\label{subsec:Dual-Technique}}
+
+To derive the unilaterally optimal policy, we first reformulate the
+problem of selecting taxes, $\mathbb{I}_{i}\equiv\left\{ t_{ji,k},x_{ij,k},\tau_{i,k}\right\} _{j,k}$,
+into an equivalent problem where the government directly selects after-tax
+prices: $\mathbb{P}_{i}=\left\{ \tilde{P}_{ji,k},\tilde{P}_{ij,k},\tau_{i,k}\right\} _{j,k}$.
+Optimal import tariffs and export subsidies can be derived from optimal
+prices, $\mathbb{P}_{i}^{*}$, using $1+t_{ji,k}^{*}=\frac{\tilde{P}_{ji,k}^{*}}{P_{ji,k}}$
+and $\left(1+x_{ij,k}^{*}\right)^{-1}=\frac{\tilde{P}_{ij,k}^{*}}{P_{ij,k}}$.
+The reformulated optimal policy problem can be expressed as:
+\[
+\max_{\tilde{\mathbb{P}}_{i}}\ \text{V}_{i}\left(E_{i},\tilde{\boldsymbol{P}}_{i}\right)-\delta_{i}Z^{\left(global\right)}.
+\]
+The first-order condition (F.O.C.) \emph{w.r.t.} to a generic policy
+instrument $\tilde{P}\in\tilde{\mathbb{P}}_{i}$ is:
+\[
+\frac{\partial\text{V}_{i}\left(.\right)}{\partial E_{i}}\frac{\partial E_{i}}{\partial\tilde{P}}+\frac{\partial\text{V}_{i}\left(.\right)}{\partial\tilde{P}}-\delta_{i}\frac{\partial Z^{\left(global\right)}}{\partial\tilde{P}}=0.
+\]
+A critical aspect of our approach is specifying $E_{i}$ and $Z^{\left(global\right)}$
+as functions of select variables and expressing $\frac{\partial E_{i}}{\partial\tilde{P}}$
+and $\frac{\partial Z_{n,k}}{\partial\tilde{P}}$ in terms of their
+derivatives. Total expenditure is equal to national income, given
+by the following function:
+\[
+E_{i}=Y_{i}=\text{Y}_{i}\left(\mathbb{P}_{i},\boldsymbol{w},\boldsymbol{C},\boldsymbol{Z}_{i},\boldsymbol{P}_{0}\right).
+\]
+The function, $\text{Y}_{i}\left(.\right)$, is a unique mapping \emph{from}
+policy $\mathbb{P}_{i}$, wages $\boldsymbol{w}\equiv[w_{i},\boldsymbol{w}_{-i}]$,
+consumption quantities $\boldsymbol{C}\equiv[\boldsymbol{C}_{i},\boldsymbol{C}_{-i},\boldsymbol{C}_{i,0},\boldsymbol{C}_{-i,0}]$,
+local emissions $\boldsymbol{Z}_{i}$, and energy producer prices
+$\boldsymbol{P}_{0}$ \emph{to} national income, $Y_{i}$, which is
+the sum of factor rewards and tax revenues. Using the vector notation
+for compactness, the function $\text{Y}_{i}\left(.\right)$ is defined
+as
+\begin{align*}
+\text{Y}_{i}\left(\mathbb{P}_{i},\boldsymbol{w},\boldsymbol{P}_{0},\boldsymbol{C},\boldsymbol{Z}_{i}\right)=\: & w_{i}L_{i}+\Pi_{i}\left(P_{i,0},w_{i}\right)+\boldsymbol{\tau}_{i}^{\intercal}\boldsymbol{Z}_{i}\\
+ & +\left(\tilde{\boldsymbol{P}}_{i,0}-\boldsymbol{P}_{i,0}\right)^{\intercal}\boldsymbol{C}_{i,0}+\left(\tilde{\boldsymbol{P}}_{-i,0}-\boldsymbol{P}_{-i,0}\right)^{\intercal}\boldsymbol{C}_{-i,0}\\
+ & +\left(\tilde{\boldsymbol{P}}_{i}-\boldsymbol{\text{P}}_{i}\left(.\right)\right)^{\intercal}\boldsymbol{C}_{i}+\left(\tilde{\boldsymbol{P}}_{-i}-\boldsymbol{\text{P}}_{-i}\left(.\right)\right)^{\intercal}\boldsymbol{C}_{-i};
+\end{align*}
+Here, $\Pi_{i}\left(P_{ii,0},w_{i}\right)$ is a function that maps
+wage and producer price in the energy extraction sector to the surplus,
+$\varPi_{i}$, paid to fixed reserves, following cost minimization.
+The column vector $\boldsymbol{Z}_{i}=\left[Z_{i,k}\right]_{k}$ contains
+\emph{local} industry-level emissions and $\boldsymbol{\tau}_{i}^{\intercal}=\left[\tau_{i,k}\right]_{k}^{\intercal}$
+is the corresponding row vector of carbon taxes. $\boldsymbol{C}_{i,0}\equiv\left\{ C_{ni,0}\right\} _{n}$
+denotes \emph{local} energy consumption quantities with corresponding
+after- and pre-tax prices $\tilde{\boldsymbol{P}}_{i,0}$ and $\boldsymbol{P}_{i,0}$;
+$\boldsymbol{C}_{-i,0}\equiv\left\{ C_{in,0}\right\} _{n\neq i}$
+denotes energy \emph{export} quantities with corresponding prices
+$\tilde{\boldsymbol{P}}_{-i,0}$ and $\boldsymbol{P}_{-i,0}$. Similarly,
+$\boldsymbol{C}_{i}$ and $\tilde{\boldsymbol{P}}_{i}$ denote the
+consumption quantity and after-tax price of \emph{locally-consumed}
+final goods, and $\boldsymbol{C}_{-i}$ and $\tilde{\boldsymbol{P}}_{-i}$
+denote the quantity and after-tax price of \emph{exported} final goods.
+The functions $\text{\ensuremath{\boldsymbol{\text{P}}_{i}}}\left(.\right)=\left[\text{P}_{ni,k}\left(.\right)\right]_{j,\:k>0}$
+and $\boldsymbol{\text{P}}_{-i}\left(.\right)=\left[\text{P}_{ij,k}\left(.\right)\right]_{j\neq i,\:k>0}$
+represent the producer prices of locally-consumed and exported final
+goods, where $\text{P}_{in,k}\left(\mathbb{P}_{i},w_{i}\right)$ for
+all $n$ and $\text{P}_{ni,k}\left(\mathbb{P}_{i},\boldsymbol{P}_{-i,0},w_{n}\right)$
+for $n\neq i$, map policy, wages, and energy prices to producer prices
+that satisfy cost minimization.
+
+Global emissions are the sum of domestic and foreign emissions, $Z^{\left(global\right)}=\sum_{k}Z_{i,k}+\sum_{k}\sum_{n\neq i}Z_{n,k},$
+where emissions for home ($i$) and foreign countries ($n\neq i$)
+are described by
+\[
+Z_{i,k}=\text{z}_{i,k}\left(\mathbb{P}_{i},w_{i}\right)Q_{n,k},\qquad Z_{n,k}=\text{z}_{n,k}\left(\tilde{P}_{in,0},\boldsymbol{P}_{-i,0},w_{n}\right)Q_{n,k}.
+\]
+The functions $\text{z}_{i,k}\left(.\right)$ and $\text{z}_{n,k}\left(.\right)$
+for $n\neq i$ map input prices to the intensity of energy use (i.e.,
+carbon emission per unit of output) as implied by cost minimization.\footnote{Recall that carbon emissions intensities are fully determined by energy
+and labor input prices: $z_{n,k}=\text{z}_{n,k}\left(\tilde{P}_{n,0k},w_{n}\right)$
+for all $n$. The energy price, $\tilde{P}_{i,0k}=\tilde{\text{P}}_{i,0}\left(\{\tilde{P}_{ji,0}\}_{j}\right)+\tau_{i,k}$,
+in home country $i$ is fully determined by policy, $\left\{ \{\tilde{P}_{ji,0}\}_{j},\tau_{i,k}\right\} \in\mathbb{P}_{i}$.
+In foreign country $n\neq i$, the energy price is determined by foreign
+energy prices, $\boldsymbol{P}_{-i,0}$, and price of home's energy
+variety, $\tilde{P}_{in,0}$, which is set by home's export policy.
+So, we can reformulate the emission intensity function as:
+\[
+\text{z}_{n,k}\left(\tilde{P}_{n,0k},w_{n}\right)=\begin{cases}
+\text{z}_{n,k}\left(\tilde{P}_{in,0},\boldsymbol{P}_{-i,0},w_{n}\right) & n\neq i\\
+\text{z}_{i,k}\left(\mathbb{P}_{i},w_{i}\right) & n=i
+\end{cases}
+\]
+A similar consideration applies to the above definition of producer
+prices of final goods ($k>0$), $\text{P}_{in,k}\left(\mathbb{P}_{i},w_{i}\right)$
+for all $n$ and $\text{P}_{ni,k}\left(\mathbb{P}_{i},\boldsymbol{P}_{-i,0},w_{n}\right)$
+for $n\neq i$.} Total output $Q_{n,k}$ is given by the function $\text{Q}_{n,k}\left(.\right)$,
+which maps demand quantities for country $n$'s varieties in industry
+$k$ to total output:
+\[
+Q_{n,k}=\text{Q}_{n,k}\left(\left[C_{nj,k}\right]_{j}\right)\equiv\sum_{j=1}^{N}d_{nj,k}C_{nj,k}
+\]
+
+
+\paragraph{Generic First-Order Condition.}
+
+For expositional purposes, we present the logic of our dual decomposition
+method disregarding foreign energy price effects, $\frac{\partial\boldsymbol{P}_{-i,0}}{\partial\tilde{P}}$.
+However, our actual derivation in the appendix accounts for these
+effects. Under this simplification, the F.O.C. with respect to policy
+instrument $\tilde{P}\in\tilde{\mathbb{P}}_{i}$, can be expanded
+as\footnote{To maintain compact notation, we omit the transpose sign hereafter,
+with the understanding that each product in the F.O.C. represents
+compatible row and column vectors, e.g.,$\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\boldsymbol{w}}\frac{\partial\boldsymbol{w}}{\partial\tilde{P}}=\sum_{n}\frac{\partial\text{Y}_{i}\left(.\right)}{\partial w_{n}}\frac{\partial w_{n}}{\partial\tilde{P}}$.}
+\begin{align}
+\frac{\partial\text{V}_{i}\left(.\right)}{\partial E_{i}} & \underbrace{\left[\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\tilde{P}}+\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\boldsymbol{w}}\frac{\partial\boldsymbol{w}}{\partial\tilde{P}}+\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\boldsymbol{C}}\frac{\partial\boldsymbol{C}}{\partial\tilde{P}}+\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\boldsymbol{Z}_{i}}\frac{\partial\boldsymbol{Z}_{i}}{\partial\tilde{P}}\right]}_{\partial E_{i}/\partial\tilde{P}}+\frac{\partial\text{V}_{i}\left(.\right)}{\partial\tilde{P}}\nonumber \\
+- & \delta_{i}\underbrace{\left(\frac{\partial\boldsymbol{Z}_{i}}{\partial\tilde{P}}\textbf{1}+\boldsymbol{z}_{-i}\frac{\partial\boldsymbol{Q}_{-i}}{\partial\tilde{P}}+\sum_{n\neq i}\left(\frac{\partial\text{\textbf{z}}_{n}\left(.\right)}{\partial\tilde{P}}+\frac{\partial\text{\textbf{z}}_{n}\left(.\right)}{\partial w_{n}}\frac{\partial w_{n}}{\partial\tilde{P}}\right)\boldsymbol{Q}_{n}\right)}_{\partial Z^{\left(global\right)}/\partial\tilde{P}}=0\label{eq: generic FOC}
+\end{align}
+Terms such as $\frac{\partial\text{V}_{i}\left(.\right)}{\partial\tilde{P}}$,
+$\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\tilde{P}}$ and
+$\frac{\partial\text{\textbf{z}}_{n}\left(.\right)}{\partial\tilde{P}}$
+represent the partial derivative of known functions with respect to
+a specific argument. In contrast, $\frac{\partial\boldsymbol{w}}{\partial\tilde{P}}$,
+$\frac{\partial\boldsymbol{C}}{\partial\tilde{P}}$, $\frac{\partial\boldsymbol{Z}_{i}}{\partial\tilde{P}}$,
+and $\frac{\partial\boldsymbol{Q}_{-i}}{\partial\tilde{P}}$ are general
+equilibrium (GE) derivatives, which are difficult to characterize.
+They result from the implicit differentiation of a complex and interdependent
+system of equilibrium conditions. Traditionally, optimal policy formulas
+are either presented in terms of these complex derivatives \parencite{dixit1985tax}
+or they are simplified through strong parametric assumptions that
+remove equilibrium interdependencies, reducing the noted derivatives
+into partial equilibrium objects.\footnote{For instance, consider a quasi-linear and separable utility function,
+$U=C_{0}+\Sigma_{k}u(C_{k})$, where $u(C_{k})=\frac{\eta}{\eta-1}(C_{k}^{\frac{\eta-1}{\eta}}-1)$
+for each good $k$. Here, $C_{k}=\text{D}_{k}\left(\tilde{P}_{k}\right)=\tilde{P}_{k}^{-\eta}$
+depends only on the own price $\tilde{P}_{k}$, given the choice of
+numeraire, $\tilde{P}_{0}=1$. In particular, the GE elasticity $\frac{\partial C_{k}}{\partial\tilde{P}}$
+reduces to a constant parameter, $-\eta$, if $\tilde{P}=\tilde{P}_{k}$
+and is zero otherwise.} Our method takes a different approach. We use less restrictive assumptions,
+which allow us to bypass the task of calculating complex GE derivatives
+while maintaining the model's rich GE structure.\footnote{Our approach advances the dual technique from \textcite{lashkaripour2016profits}
+in two ways. First, we enhance their approach by recasting it as a
+dual decomposition method that partitions the optimal policy problem
+into independent sub-problems. This reformulation enables standardized
+application across a broad range of optimal policy problems. Second,
+we extend their approach by incorporating international externalities,
+such as climate change, that operate through cross-border consumption
+and production effects, independently of terms-of-trade externalities.
+Our analysis introduces new lemmas (E1, E2, and E3, in Appendix B)
+that characterize endogenous energy price changes throughout the global
+carbon supply chain.}
+\begin{assumption}
+\label{assu:foreign_income}Policy-induced changes to relative wages
+between foreign countries ($w_{n}/w_{j},$ for all $n,j\neq i$) and
+changes to the fraction of wage to total income in foreign countries
+($w_{n}L_{n}/Y_{n}$ for all $n\neq i$) have no first-order effect
+on country $i$'s welfare in the neighborhood of the optimum.
+\end{assumption}
+Normalizing the wage rate in one of the foreign countries per Walras'
+Law, we can invoke Assumption \ref{assu:foreign_income} (henceforth,
+A\ref{assu:foreign_income}) to solve the F.O.C.s, disregarding changes
+to wages and income in the rest of the world. In other words, A\ref{assu:foreign_income}
+effectively converts the generic system of F.O.C.s into one that can
+be solved as if there is a single foreign wage. Quantitatively, we
+confirm in Appendix D that A\ref{assu:foreign_income}
+provides an accurate approximation and relaxing it has a negligible
+effect on optimal policy outcomes.\footnote{In Appendix D, we validate the accuracy
+of our optimal policy formulas through extensive numerical testing,
+focusing particularly on the implications of A\ref{assu:foreign_income}.
+First, we show that the welfare gains predicted by our formulas are
+almost identical to those from numerical optimization. Second, we
+show that A\ref{assu:foreign_income} provides an accurate approximation:
+perturbing a country's taxes around their optimal levels, has negligible
+effects on foreign wages and wage-to-income ratios. Importantly, our
+method offers substantial computational advantages: while direct numerical
+optimizations require 108 minutes to find a country's optimal unilateral
+policy, our algorithm accomplishes this in just 3.5 seconds. This
+dramatic improvement in computational speed is crucial for conducting
+our climate club analysis.} The reason is that each country's policy exerts a negligible influence
+on relative foreign wages. Additionally, changes to relative foreign
+wages have an insignificant effect on home's welfare, as they represent
+transfers between foreign nations. Likewise, changes in foreign wage-to-income
+ratios represent transfers between agents within those countries,
+with minimal consequences for country $i$'s welfare. A\ref{assu:foreign_income}
+becomes redundant in a standard trade policy framework, involving
+two countries, a single production factor, and a laissez-faire foreign
+country.
+
+Beyond a two-country model, A\ref{assu:foreign_income} simplifies
+the generic first-order condition (\ref{eq: generic FOC}) in two
+ways. First, the terms including foreign wage effects, $\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\boldsymbol{w}_{-i}}\frac{\boldsymbol{w}_{-i}}{\partial\tilde{P}}-\delta_{i}\sum_{n\neq i}\frac{\partial\text{\textbf{z}}_{n}\left(.\right)}{\partial w_{n}}\frac{\partial w_{n}}{\partial\tilde{P}}\boldsymbol{Q}_{n}$,
+can be disregarded at the optimum. Second, the GE derivatives of foreign
+demand with respect to policy reduce to Marshallian price elasticities
+of demand, $\frac{\partial\boldsymbol{C}_{-i}}{\partial\tilde{P}}=\frac{\partial\textbf{D}_{-i}\left(.\right)}{\partial\tilde{P}}$,
+which are easier to characterize.\footnote{The derivative of demand in foreign location $n\neq i$ can be expressed
+as $\frac{\partial\boldsymbol{C}_{n}}{\partial\tilde{P}}=\frac{\partial\textbf{D}_{n}\left(.\right)}{\partial\tilde{P}}+\frac{\partial\textbf{D}_{n}\left(.\right)}{\partial E_{n}}\frac{\partial E_{n}}{\partial\tilde{P}}$,
+where by invoking A\ref{assu:foreign_income} the second term can
+be disregarded near $\mathbb{P}_{i}^{*}$. The reason is that changes
+in $E_{n}=\left(\frac{Y_{n}}{w_{n}L_{n}}\right)w_{n}L_{n}$ are driven
+solely by changes in country $n$'s wage ($w_{n}$) and wage-to-income
+ratio ($w_{n}L_{n}/Y_{n}$), neither of which has first-order effects
+on country $i$'s welfare around the optimum, per A\ref{assu:foreign_income}.
+However, in the general case considered in the appendix, we also account
+for GE effects related to foreign energy prices, i.e., $\frac{\partial\boldsymbol{C}_{n}}{\partial\tilde{P}}=\frac{\partial\textbf{D}_{n}\left(.\right)}{\partial\tilde{P}}+\frac{\partial\textbf{D}_{n}\left(.\right)}{\partial\tilde{\boldsymbol{P}}_{-in}}\frac{\partial\text{P}_{-in}\left(.\right)}{\partial\boldsymbol{P}_{-i,0}}\frac{\partial\boldsymbol{P}_{-i,0}}{\partial\tilde{P}}$.} Nevertheless, the F.O.C.s still involve the GE derivatives of local
+variables, such as $\frac{\partial w_{i}}{\partial\tilde{P}}$, $\frac{\partial\boldsymbol{C}_{i}}{\partial\tilde{P}}$,
+$\frac{\partial\boldsymbol{Z}_{i}}{\partial\tilde{P}}$, and $\frac{\partial\boldsymbol{Q}_{-i}}{\partial\tilde{P}},$
+which remain the main obstacles to deriving streamlined optimal policy
+formulas.
+
+Building on several intermediate results, we demonstrate that the
+optimal policy problem can be decomposed into \emph{independent sub-problems}
+and solved without characterizing these GE derivatives.\footnote{Appendix B contains the
+details of these intermediate results and their proofs.} The first intermediate result (Lemma 1) shows that the terms containing
+the GE derivatives of local factor prices, $\frac{\partial w_{i}}{\partial\tilde{P}}$,
+and $\frac{\partial P_{ii,0}}{\partial\tilde{P}}$ drop out of the
+first-order condition:
+\[
+\frac{\partial\text{Y}_{i}\left(.\right)}{\partial w_{i}}=\frac{\partial\text{Y}_{i}\left(.\right)}{\partial P_{ii,0}}=0.\qquad\qquad\qquad\left[\text{Lemma 1}\right]
+\]
+Based on the above result, the optimal policy could be derived without
+specifying the GE derivatives, $\frac{\partial w_{i}}{\partial\tilde{P}}$,
+and $\frac{\partial P_{ii,0}}{\partial\tilde{P}}$. The logic is that
+any welfare gains from perturbing local factor prices will be fully
+internalized by the price instruments in $\mathbb{P}_{i}$. Conditional
+on $\mathbb{P}_{i}$, changing local factor prices merely redistributes
+income between primary factors and government revenues, leaving total
+expendable income, $Y_{i}$, unchanged.
+
+\paragraph*{Optimal local prices.}
+
+The F.O.C. with respect to local consumer prices, $\tilde{P}\in\left\{ \tilde{\boldsymbol{P}}_{i},\boldsymbol{\tau}_{i}\right\} $,
+can be simplified by appealing to utility maximization and cost minimization---namely,
+Roy's identity and Shephard's lemma. This point constitutes our second
+intermediate result (Lemma 2):\footnote{For instance, consider the imported price of industry $k$ from origin
+$j$, $\tilde{P}=\tilde{P}_{ji,k}$. When $i$'s government raises
+$\tilde{P}_{ji,k}$, $i$'s income increases proportional to its imported
+quantity $\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\tilde{P}_{ji,k}}=C_{ji,k}$,
+whereas Roy's identity implies $\frac{\partial\text{V}_{i}\left(.\right)}{\partial\tilde{P}_{ji,k}}=-\frac{\partial\text{V}_{i}\left(.\right)}{\partial E_{i}}\times C_{ji,k}$.
+Together, $\frac{\partial\text{V}_{i}\left(.\right)}{\partial\tilde{P}_{ji,k}}+\frac{\partial\text{V}_{i}\left(.\right)}{\partial E_{i}}\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\tilde{P}_{ji,k}}=0$.}
+\[
+\frac{\partial\text{V}_{i}\left(.\right)}{\partial E_{i}}\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\tilde{P}}+\frac{\partial\text{V}_{i}\left(.\right)}{\partial\tilde{P}}=0,\qquad\forall\tilde{P}\in\left\{ \tilde{\boldsymbol{P}}_{i},\boldsymbol{\tau}_{i}\right\} \qquad\qquad\left[\text{Lemma 2}\right]
+\]
+Moreover, local prices do not directly enter the functions that regulate
+foreign emissions and demand, indicating that $\frac{\partial\text{\textbf{z}}_{n}\left(.\right)}{\partial\tilde{P}}=0$
+and $\frac{\partial\boldsymbol{C}_{-i}}{\partial\tilde{P}}=\frac{\partial\textbf{D}_{-i}\left(.\right)}{\partial\tilde{P}}=0$
+for all $\tilde{P}\in\left\{ \tilde{\boldsymbol{P}}_{i},\boldsymbol{\tau}_{i}\right\} $.
+Considering this point and Lemma 2, and invoking A\ref{assu:foreign_income}
+to discard the terms involving foreign wages, the first-order condition
+(equation \ref{eq: generic FOC}), reduces to
+\[
+\left[\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\boldsymbol{C}_{i}}-\tilde{\delta}_{i}\boldsymbol{z}_{-i}\frac{\partial\textbf{Q}_{-i}\left(.\right)}{\partial\boldsymbol{C}_{i}}\right]\frac{\partial\boldsymbol{C}_{i}}{\partial\tilde{P}}+\left[\boldsymbol{\tau}_{i}-\tilde{\delta}_{i}\textbf{1}\right]\frac{\partial\boldsymbol{Z}_{i}}{\partial\tilde{P}}=0,
+\]
+where $\tilde{\delta}_{i}\equiv\delta_{i}\tilde{P}_{i}$ is the carbon
+disutility adjusted for the consumer price index, $\tilde{P}_{i}\equiv\left(\frac{\partial\text{V}_{i}\left(.\right)}{\partial E_{i}}\right)^{-1}$.
+In the above equation, the terms in the bracket are easy to evaluate
+as they involve the derivative of known functions w.r.t. specific
+arguments. The GE derivatives, $\frac{\partial\boldsymbol{C}_{i}}{\partial\tilde{P}}$,
+and $\frac{\partial\boldsymbol{Z}_{i}}{\partial\tilde{P}}$, however,
+are difficult to characterize. But as hinted above, they need not
+be characterized to obtain the optimal policy formulas. This point
+is formalized by another intermediate result (Lemma 3), which states
+that local price optimality entails that
+\[
+\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\boldsymbol{C}_{i}}-\tilde{\delta}_{i}\boldsymbol{z}_{-i}\frac{\partial\textbf{Q}_{-i}\left(.\right)}{\partial\boldsymbol{C}_{i}}=0,\qquad\qquad\boldsymbol{\tau}_{i}-\tilde{\delta}_{i}\textbf{1}=0,\qquad\qquad\left[\text{Lemma 3}\right]
+\]
+The above result decomposes the optimal \emph{local} price problem
+into independent sub-problems that merely involve the derivative of
+functions, $\textbf{Q}_{-i}\left(.\right)$ and $\text{Y}_{i}\left(.\right)$
+with respect to specific arguments. As we elaborate shortly, Lemma
+3 also serves as an envelope-like result that simplifies the characterization
+of optimal export prices.
+
+\paragraph*{Optimal export prices.}
+
+Now, consider the policy instrument, $\tilde{P}\in\tilde{\boldsymbol{P}}_{in}\subset\tilde{\boldsymbol{P}}_{-i}$,
+which regulates export prices to country $n\neq i$. Notice that $\frac{\partial\text{V}_{i}\left(.\right)}{\partial\tilde{P}}=0$,
+since $\tilde{P}$ is not a local price. Moreover, $\tilde{P}\in\tilde{\boldsymbol{P}}_{in}$
+influences demand in foreign market $n$ through $\frac{\partial\boldsymbol{C}_{n}}{\partial\tilde{P}}=\frac{\partial\textbf{D}_{n}\left(.\right)}{\partial\tilde{P}}$,
+and demand and emissions in the local market $i$ through general
+equilibrium effects, i.e., $\frac{\partial\boldsymbol{C}_{i}}{\partial\tilde{P}}\sim\frac{\partial\textbf{D}_{i}\left(.\right)}{\partial E_{i}}\frac{\partial E_{i}}{\partial\tilde{P}}$.
+Considering these points, the F.O.C. \emph{w.r.t.} $\tilde{P}\in\tilde{\boldsymbol{P}}_{in}$
+becomes:
+\begin{align*}
+\text{}\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\tilde{P}}+\left[\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\boldsymbol{C}_{n}}-\tilde{\delta}_{i}\boldsymbol{z}_{-i}\frac{\partial\textbf{Q}_{-i}\left(.\right)}{\partial\boldsymbol{C}_{n}}\right]\frac{\partial\text{\textbf{D}}_{n}\left(.\right)}{\partial\tilde{P}}-\tilde{\delta}_{i}\frac{\partial\textbf{z}_{n}\left(.\right)}{\partial\tilde{P}}\mathbf{1}\left(\tilde{P}=\tilde{P}_{in,0}\right)\\
++\left[\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\boldsymbol{C}_{i}}-\tilde{\delta}_{i}\boldsymbol{z}_{-i}\frac{\partial\textbf{Q}_{-i}\left(.\right)}{\partial\boldsymbol{C}_{i}}\right]\frac{\partial\boldsymbol{C}_{i}}{\partial\tilde{P}}+\left[\boldsymbol{\tau}_{i}-\tilde{\delta}_{i}\textbf{1}\right]\frac{\partial\boldsymbol{Z}_{i}}{\partial\tilde{P}} & =0.
+\end{align*}
+Following Lemma 3, the second line collapses to zero if local prices
+are set optimally. This makes Lemma 3 akin to an \emph{envelope} result,
+allowing us to solve for the optimal export prices without considering
+their impact on local consumption and emissions. In other words, the
+export price problem simplifies into another independent sub-problem.
+
+Altogether our dual approach breaks down the initial optimal policy
+problem into a set of independent sub-problems, that are free from
+GE derivatives (e.g., $\frac{\partial\boldsymbol{C}_{i}}{\partial\tilde{P}},\frac{\partial\boldsymbol{Z}_{i}}{\partial\tilde{P}},\frac{\partial w_{i}}{\partial\tilde{P}}$).\footnote{\cite{costinot2015comparative} present an alternative method for
+optimal policy derivation in a general equilibrium Ricardian model.
+Their primal approach breaks down the optimal policy problem into
+an inner problem involving good-specific and independent cell problems,
+and an outer problem that determines the economy-wide wage rate.} We present this result under the following proposition.
+\begin{prop}
+\label{prop:Sub-problems}Country $i$'s unilaterally optimal policy
+can be obtained by solving three independent sub-problems\emph{:\vspace{-10pt}
+\[
+\begin{cases}
+\boldsymbol{\tau}_{i}-\tilde{\delta}_{i}\textbf{1}=\textbf{0} & \left[\text{SP 1}\right]\\
+\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\boldsymbol{C}_{i}}-\tilde{\delta}_{i}\boldsymbol{z}_{-i}\frac{\partial\textbf{Q}_{-i}\left(.\right)}{\partial\boldsymbol{C}_{i}}=\textbf{0} & \left[\text{SP 2}\right]\\
+\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\tilde{P}}+\left[\frac{\partial\text{Y}_{i}\left(.\right)}{\partial\boldsymbol{C}_{n}}-\tilde{\delta}_{i}\boldsymbol{z}_{-i}\frac{\partial\textbf{Q}_{-i}\left(.\right)}{\partial\boldsymbol{C}_{n}}\right]\frac{\partial\text{\textbf{D}}_{n}\left(.\right)}{\partial\tilde{P}}-\tilde{\delta}_{i}\frac{\partial\textbf{z}_{n}\left(.\right)}{\partial\tilde{P}}\mathbf{1}\left(\tilde{P}=\tilde{P}_{in,0}\right)=0 & \left[\text{SP 3}\right]
+\end{cases}
+\]
+}Solving these sub-problems involves taking partial derivatives of
+known functions w.r.t. to their arguments, without specifying complex
+general equilibrium derivatives such as $\frac{\partial\boldsymbol{C}_{i}}{\partial\tilde{P}}$,
+$\frac{\partial\boldsymbol{Z}_{i}}{\partial\tilde{P}}$, and $\frac{\partial w_{i}}{\partial\tilde{P}}$.
+\end{prop}
+As mentioned earlier, our presentation here abstracted away from
+foreign energy price effects, $\frac{\partial\boldsymbol{P}_{-i,0}}{\partial\tilde{P}}$.
+Our main derivation in Appendix B
+accounts for these effects showing that energy price effects can be
+specified as the product of a matrix of equilibrium variables and
+demand effects $\frac{\partial\boldsymbol{C}}{\partial\tilde{P}}$
+(Lemmas E1, E2 and E3 in the appendix). This result allows absorbing
+the energy price effects into Sub-problems 2 and 3, while preserving
+the modularity and independence of these sub-problems.
+
+\subsection{Unilaterally Optimal Policy Formulas\label{subsec:Unilaterally-Optimal-Policy-Formulas}}
+
+We build on Proposition \ref{prop:Sub-problems} to derive the unilaterally
+optimal policy formulas. To present our formulas, we denote by $v_{n,k}$
+the $\text{CO}_{2}$ emission per unit value of output in country
+$n-$industry $k$, and let $\rho_{ni,k}$ denote market $i$'s share
+from that industry's total sales, $Y_{n,k}$,
+\begin{equation}
+v_{n,k}=\frac{Z_{n,k}}{Y_{n,k}},\qquad\qquad\rho_{ni,k}=\frac{P_{ni,k}C_{ni,k}}{Y_{n,k}}\label{eq: v_nk, rho_nik}
+\end{equation}
+Additionally, we denote the elasticities of demand for the composite
+energy input (equivalently, $\text{CO}_{2}$ emissions) with respect
+to the energy input price at the industry and national levels as\footnote{The function $\text{Z}_{n,k}\left(.\right)$ is defined based on Equation
+(\ref{eq:Z_jk}) as $Z_{n,k}=\text{Z}_{n,k}\left(\tilde{P}_{n,0k},w_{n},Q_{n,k}\right)\equiv\text{z}_{n,k}\left(\tilde{P}_{n,0k},w_{n}\right)Q_{n,k}$.}
+\begin{equation}
+\zeta_{n,k}\equiv\frac{\partial\ln\text{Z}_{n,k}\left(.\right)}{\partial\ln\tilde{P}_{n,0k}},\qquad\qquad\zeta_{n}\equiv\frac{\partial\ln\sum_{k}\text{Z}_{n,k}\left(.\right)}{\partial\ln\tilde{P}_{n,0k}}=\sum_{k\neq0}\left(\frac{Z_{n,k}}{Z_{n}}\right)\zeta_{n,k}.\label{eq: emission elast}
+\end{equation}
+In the special case with CES production functions, $\zeta_{n,k}=-\varsigma\left(1-\alpha_{n,k}\right)$,
+with ($\varsigma$) as the elasticity of substitution between energy
+and labor inputs. Below, we present formulas for the unilaterally
+optimal policy , which by the Lerner symmetry is unique up to an arbitrary
+tax shifter.\footnote{For a clearer presentation, the export subsidy formulas are reported
+for additively separable preferences across industries and generalized
+separability within industries. General formulas are provided in Appendix B.7}
+\begin{prop}
+\label{prop: Unilaterally Optimal Policy Formulas (general)}Country
+$i$'s unilaterally optimal policy consists of (i) uniform carbon
+taxes ($\tau_{i,k}^{*}=\tau_{i}^{*}$),
+\[
+\tau_{i}^{*}=\tilde{\delta}_{i}\equiv\delta_{i}\tilde{P}_{i},
+\]
+(ii) import tariffs and export subsidies on final goods ($k\geq1$)
+that are unique up to a uniform and arbitrary tax-shifter, $\bar{t}_{i}\geq0$,
+augmented by a carbon border adjustment based on the $CO_{2}$ content
+per unit value of imported goods $v_{n,k}$ (Eq. \ref{eq: v_nk, rho_nik}),
+\begin{align*}
+1+t_{ni,k}^{*} & =\left(1+\bar{t}_{i}\right)+\tau_{i}^{*}v_{n,k}\\
+1+x_{in,k}^{*} & =\frac{1+\varepsilon_{in,k}}{\varepsilon_{in,k}}\sum_{j\neq i}\left[\left(1+t_{ji,k}^{*}\right)\frac{\lambda_{jn,k}}{1-\lambda_{in,k}}\right]
+\end{align*}
+(iii) import tariffs and export subsidies on energy,
+\begin{align*}
+1+t_{ni,0}^{*} & =\left(1+\bar{t}_{i}\right)\left(1+\omega_{ni,0}\right)+\tau_{i}^{*}\sum_{\ell\neq i}\sum_{j\neq i}\left[\tilde{\psi}_{jn}^{\left(i,0\right)}\rho_{j\ell,0}\frac{\zeta_{\ell}}{\tilde{P}_{\ell,0}}\right]\\
+1+x_{in,0}^{*} & =\frac{1+\varepsilon_{in,0}}{\varepsilon_{in,0}}\sum_{j\neq i}\left[\left(1+t_{ji,0}^{*}\right)\frac{\lambda_{jn,0}}{1-\lambda_{in,0}}\right]-\left(\Lambda_{in,0}+\tau_{i}^{*}\frac{\zeta_{n}}{\tilde{P}_{n,0}}\right)\frac{\left(1+\bar{t}_{i}\right)}{\varepsilon_{in,0}},
+\end{align*}
+where $\Lambda_{in,0}=\frac{\sum_{k}\alpha_{n,k}Y_{n,k}\rho_{ni,k}}{\sum_{k}\alpha_{n,k}Y_{n,k}}$
+is the fraction of energy exports re-imported via the carbon supply
+chain; $\omega_{ni,0}=\sum_{j\neq i}\tilde{\psi}_{jn}^{\left(i,0\right)}\rho_{ji,0}$
+is the inverse export supply elasticity of energy (for flows from
+$n$ to $i)$, where $\tilde{\psi}_{jn}^{\left(i,0\right)}\equiv\frac{\phi_{j}}{1-\phi_{j}}\psi_{jn}^{\left(i,0\right)}\frac{Y_{j,0}}{Y_{n,0}}$
+represents backward linkages in the energy sector;\footnote{Specifically, $\psi_{jn}^{\left(i,0\right)}$is entry $\left(j,n\right)$
+of matrix $\boldsymbol{\Psi}^{\left(i,0\right)}\equiv\text{inv}\left(\textbf{I}_{N}-\left[\mathbbm{1}_{j\neq i}\sum_{\ell\neq i}\frac{\phi_{n}}{1-\phi_{n}}\rho_{j\ell,0}\varepsilon_{j\ell,0}^{\left(n\ell,0\right)}\right]_{j,n}\right)$,
+measuring the exposure of country $j$'s energy output to demand for
+country $n$'s energy, as detailed in Appendix B.} $\lambda$ and $\rho$ represent international expenditure and sales
+shares (Eqs. \ref{eq:Expenditure_Shares} and \ref{eq: v_nk, rho_nik});
+$\zeta$ is the demand elasticity of composite energy input (Eq. \ref{eq: emission elast}),
+and $\varepsilon$ denotes the Marshallian demand elasticities (Eq.
+\ref{eq: demand elasticity}).
+\end{prop}
+Proposition \ref{prop: Unilaterally Optimal Policy Formulas (general)}
+characterizes the unilaterally optimal policy as a function of non-policy
+variables, such as demand elasticities ($\varepsilon$) and trade
+shares ($\lambda$). Section \ref{subsec: Quantification - Hat Algebra}
+explains how to solve for equilibrium under the optimal policy, accounting
+for the dependence of non-policy variables on the policy itself.
+
+The unilaterally optimal carbon tax, $\tau_{i}^{*}$, corrects only
+the carbon externality imposed on households in country $i$.\footnote{Alternatively, the carbon tax could be applied at the point of energy
+extraction with appropriate adjustments to energy border taxes. See
+Appendix E.3 for optimal policy formulas
+featuring an explicit extraction tax. In our framework, extraction
+taxes are non-essential due to product differentiation in energy markets,
+where border taxes serve as a more direct instrument for regulating
+foreign emissions. However, when energy is a homogeneous commodity,
+the distinction between border and extraction taxes becomes irrelevant,
+making extraction taxes an essential component of the optimal policy
+schedule, as in \textcite{kortum2021optimal}.} Specifically, it equals the welfare cost per unit of $\text{CO}_{2}$
+emissions to residents of country $i$ adjusted for the consumer price
+index, i.e., $\tilde{\delta}_{i}\sim\delta_{i}\tilde{P}_{i,0}$. The
+unilaterally optimal border taxes, however, pursue two objectives.
+First, they seek to manipulate the terms of trade in country $i$'s
+favor. Second, they include a carbon border tax component that indirectly
+taxes the carbon externality of foreign production and consumption.
+
+To better understand carbon border taxes, it is helpful to examine
+a small open economy under Cobb-Douglass CES preferences.\footnote{Our definition of a small open economy differs from the conventional
+definition, which is based on a lack of influence over world prices.
+Instead, we define a country a small open economy if it accounts for
+a vanishingly small share of foreign sales and expenditure (see also
+\cite{caliendo2024foundation}).} Under the CES assumption, the import demand elasticity takes the
+form $\varepsilon_{in,k}=-\sigma_{k}+\left(\sigma_{k}-1\right)\lambda_{in,k}$.
+The small open economy assumption sets $\lambda_{in,k}\approx\rho_{ni,k}\approx0$.
+Plugging these into our general optimal policy formulas yields a simplified
+representation:
+\[
+\begin{cases}
+\tau_{i}^{*}=\tilde{\delta}_{i}\sim\delta_{i}\tilde{P}_{i} & \left[\textrm{carbon tax}\right]\\
+t_{ni,k}^{*}=\bar{t}_{i}+\tau_{i}^{*}v_{n,k}\quad\qquad t_{ni,0}^{*}=\bar{t}_{i} & \left[\text{import tax}\right]\\
+1+x_{in,k}^{*}=\left(1+\bar{t}_{i}\right)\frac{\sigma_{k}-1}{\sigma_{k}}+\tau_{i}^{*}\sum_{j\neq i}\left[\lambda_{jn,k}v_{j,k}\right]\frac{\sigma_{k}-1}{\sigma_{k}} & \text{\ensuremath{\left[\text{export subsidy (non-energy)}\right]}}\\
+1+x_{in,0}^{*}=\left(1+\bar{t}_{i}\right)\frac{\sigma_{0}-1}{\sigma_{0}}+\tau_{i}^{*}\frac{1}{\sigma_{0}}\frac{\zeta_{n}}{\tilde{P}_{n,0}} & \left[\text{export subsidy (energy)}\right]
+\end{cases}
+\]
+The optimal import tax on final-good variety $ni,k$, which is \emph{unaffected}
+by the CES and small open economy simplification, can be decomposed
+as:\vspace{-5pt}
+\begin{equation}
+t_{ni,k}^{*}=\ \bar{t}_{i}\ +\underbrace{\ \tau_{i}^{*}\times v_{n,k}\ }_{\textrm{Carbon Border Tax }}.\label{eq: t* decomposition}
+\end{equation}
+The uniform tariff component $\bar{t}_{i}$ reflects the standard
+terms-of-trade rationale for import taxation.\footnote{This element of our formula echoes the familiar result that, absent
+climate externalities, optimal tariffs are uniform across differentiated
+constant-returns-to scale industries.} The carbon border tax component mimics the unilaterally-optimal domestic
+carbon tax.\textit{ }\textit{\emph{It taxes the carbon content per
+dollar value of imports, $v_{n,k}$, at the unilaterally optimal rate,
+$\tau_{i}^{*}$.}}\textit{ }\textit{\emph{Remarkably, the unilaterally
+optimal border tax rate coincides with the accounting border adjustment
+that neutralizes the domestic cost disadvantage caused by carbon-pricing.
+Our formula presents a welfare rationale for these widely-used border
+adjustment schemes.}}\footnote{\textit{\emph{The above carbon border tax configuration does not account
+for origin country carbon tax rates, therefore risking double taxation.
+This is due to the non-cooperative nature of these taxes since governments
+may doubly tax the carbon externality to generate revenue. As shown
+in Appendix C, double taxation
+is avoided in a cooperative setting. The optimal cooperative carbon
+border tax is $\left(\tau^{\APLstar}-\tau_{n}\right)\times v_{n,k}$,
+taxing the difference between the globally optimal rate $\tau^{\APLstar}$
+and the rate applied in the origin country, thus preventing double
+taxation.}}}
+
+The unilaterally optimal export subsidy on final-good variety $in,k$
+can be decomposed as\vspace{-5pt}
+\begin{equation}
+1+x_{in,k}^{*}=\ \left(1+\bar{t}_{i}\right)\frac{\sigma_{k}-1}{\sigma_{k}}\ +\ \underbrace{\tau_{i}^{*}\times\sum_{j\neq i}\left[\lambda_{jn,k}v_{j,k}\right]\frac{\sigma_{k}-1}{\sigma_{k}}}_{\textrm{Carbon Border Subsidy}},\label{eq:  x* decomposition}
+\end{equation}
+where the first component corresponds to the optimal markup on exports
+from the terms-of-trade standpoint.\footnote{Since $\frac{\sigma_{k}-1}{\sigma_{k}}<1$, the optimal export policy
+in the absence of climate externalities would involve an export tax
+under the normalization $\bar{t}_{i}=0$.} The carbon border subsidy depends on the average carbon intensity
+of competing foreign varieties in market $n$, namely, $\sum_{j\neq i}\left[\lambda_{jn,k}v_{j,k}\right]$.
+This differs from accounting border adjustment schemes that simply
+rebate the carbon taxes toward exports. The optimal carbon border
+subsidy seeks to mimic a carbon tax, $\tau_{i}^{*}$, on foreign varieties
+sold to market $n\neq i$. It accomplishes this by subsidizing the
+price of domestically produced exports varieties. Since domestically
+produced and foreign varieties are substitutable, the subsidy lowers
+demand for foreign goods in market $n\neq i$, imitating the demand
+drop if those goods were taxed directly.
+
+Turning to border taxes on energy varieties, the uniform tariff, $\bar{t}_{i}$,
+on energy imports is motivated by terms-of-trade considerations.\footnote{A small open economy's optimal energy import tax has no climate-driven
+element, since imported energy varieties face a carbon tax after bundling
+and distribution. However, for a large economy, the optimal energy
+import tax internalizes climate impacts arising from general equilibrium
+linkages, as Proposition \ref{prop: Unilaterally Optimal Policy Formulas (general)}
+indicates. We elaborate on these general equilibrium linkages in the
+next paragraph.} Since imported energy varieties, after bundling and distribution,
+are subjected to a domestic carbon tax $\tau_{i}^{*}$, no additional
+import duty on energy is needed. The optimal policy, however, includes
+a carbon-based tax on energy exports equal to $\tau_{i}^{*}\times\frac{1}{\sigma_{0}}\left(\zeta_{n}/\tilde{P}_{n,0}\right)$.
+The rationale is that country $i$ would ideally levy a tax on country
+$n$'s composite energy input at an ad valorem rate of $\tau_{i}^{*}/\tilde{P}_{n,0}$.
+This policy is infeasible, but the energy export tax is passed on
+to foreign's energy price, imitating this intended tax. Echoing this
+logic, the optimal export tax rate depends on the magnitude of tax
+passthrough, which is determined by the foreign countries's energy
+input demand elasticity, $\zeta_{n}\equiv\frac{\partial\ln\sum_{k}\text{Z}_{n,k}\left(.\right)}{\partial\ln\tilde{P}_{n,0}}<0$,
+and the elasticity of substitution between international energy varieties,
+$\sigma_{0}$.
+
+Building on the intuition from the small open economy case, let us
+revisit the general formulas presented under Proposition \ref{prop: Unilaterally Optimal Policy Formulas (general)}.
+The optimal export subsidy for non-energy goods depends on foreign
+demand elasticity $\varepsilon$, which is determined by structural
+parameters (like $\sigma$ in the case of CES) and endogenous expenditure
+shares. The optimal border taxes on energy, meanwhile, account for
+GE linkages, which are non-trivial for large economies (as shown by
+lemmas E1, E2, E3 in Appendix B).
+Import taxes on energy contract export supply and increase the marginal
+cost of energy extraction abroad. This triggers price changes that
+alter global energy demand, prompting further energy price shifts
+worldwide. These GE ripple effects are captured by the backward linkage
+matrix, $\boldsymbol{\Psi}^{\left(i,0\right)}$, whose elements determine
+the optimal import tariff. Energy export subsidies, meanwhile, influence
+the cost of foreign goods using the subsidized or taxed input. Some
+of these goods are imported by country $i$ and face a carbon border
+tax upon importation. The optimal energy export subsidy is, thus,
+adjusted to prevent double marginalization. The optimal adjustment
+depends on the fraction $\Lambda_{in,0}$ of energy exports re-imported
+via the energy supply chain.
+
+\subsection{\label{subsec: Optimal Policy - Global}Globally Optimal Carbon-Pricing
+and Free-Riding}
+
+This section characterizes the optimal carbon policy from a global
+standpoint. Comparing the globally optimal policy with the unilaterally
+optimal policy, derived earlier, elucidates the free-riding problem
+that impedes cooperation on climate action. We obtain the globally
+optimal policy by solving a \emph{global} planning problem, where
+the planner selects tax instruments $\text{\ensuremath{\mathbb{I}\equiv\{\mathbb{I}_{i}\}_{i\in\mathbb{N}}}}$
+and lump-sum international transfers, $\boldsymbol{\Delta}\equiv\left\{ \Delta_{i}\right\} _{i}$,
+to maximize an internationally representative social welfare function.
+Letting $\tilde{\mathbb{I}}\equiv\left\{ \mathbb{I},\boldsymbol{\Delta}\right\} $
+denote the policy set, the planing problem can be formulated compactly
+as\vspace{-5pt}
+\[
+\max_{\tilde{\mathbb{I}}}\sum\vartheta_{i}\ln W_{i}\left(\tilde{\mathbb{I}}\right)\quad\text{subject to General Equilibrium Equations }(\ref{eq:price_wedges})-(\ref{eq:MCC - factors}),
+\]
+where $W_{i}\sim\text{V}_{i}\left(E_{i}+\Delta_{i},\mathbf{\tilde{P}}_{i}\right)-\delta_{i}\times Z^{\left(global\right)}$
+is country $i$'s climate-adjusted welfare under policy, with $\sum_{i}\Delta_{i}=0$,
+and $\vartheta_{i}$ is country $i$'s weight in the planner's problem.
+The inclusion of income transfers is essential, as it separates redistribution,
+addressed via transfers, from climate-related externalities, addressed
+via taxes.
+
+Capitalizing on a variation of Proposition \ref{prop: Unilaterally Optimal Policy Formulas (general)},
+we derive the globally optimal policy in Appendix C.
+The optimal policy from a global perspective involves carbon taxes
+that correct the worldwide externality of carbon emissions, along
+with zero trade taxes\footnote{Transfers, $\Delta_{i}=\left(\pi_{i}\times\sum_{i}E_{i}\right)-E_{i}$,
+are pinned down by the optimal income shares: $\pi_{i}^{\APLstar}=\left(\vartheta_{i}\frac{V_{i}}{W_{i}}\right)/\left(\sum_{n}\left[\vartheta_{n}\frac{V_{n}}{W_{n}}\right]\right)$.}:
+\begin{equation}
+\tau_{i,k}^{\APLstar}=\sum_{i}\tilde{\delta}_{i}\sim\tau^{\APLstar},\qquad\qquad\qquad t_{i,k}^{\APLstar}=x_{i,k}^{\APLstar}=0\qquad\left(\forall i,k\right).\label{eq:Globally Optimal Policy Formulas}
+\end{equation}
+The globally optimal border taxes are zero because border taxes are
+an inefficient policy for reducing carbon emissions compared to directly
+targeted carbon taxes. In the unilateral case, carbon border taxes
+were justified since country $i$'s government could not directly
+tax foreign carbon inputs. This missing policy limitation no longer
+applies in the globally optimal context.
+
+The \emph{free-riding problem} stems from the gap between the unilaterally
+optimal and globally optimal carbon tax rates. Specifically,\vspace{-5pt}
+\[
+\tau_{i}^{*}=\tilde{\delta}_{i}\,<\ \tau^{\APLstar}=\sum_{n}\tilde{\delta}_{n}.
+\]
+This means that if all other countries commit to $\tau^{\APLstar}$,
+country $i$'s welfare-maximizing government will be inclined to lower
+its carbon tax rate from $\tau^{\APLstar}$ to $\tau_{i}^{*}$. Strategic
+behavior by all governments in this manner triggers a race to the
+bottom in climate action. In the next section, we discuss two potential
+solutions to the free-riding problem.
+
+\subsection{\label{subsec: Optimal Policy - Two Remedies}Two Remedies for the
+Free-Riding Problem}
+
+Two types of policies can mitigate the free-riding problem, both involving
+border tax measures:
+\begin{description}
+\item [{Proposal$\ $1.}] Governments use border taxes as a \emph{second-best}
+policy to correct the climate externality of foreign emissions on
+their citizens. The maximal efficacy of this proposal will be realized
+if carbon border tax rates are set to the optimal rate specified by
+Proposition \ref{prop: Unilaterally Optimal Policy Formulas (general)}.
+\item [{Proposal$\ $2.}] Climate-conscious governments forge a climate
+club and leverage \emph{contingent} trade penalties to deter free-riding.
+The maximal efficacy of this proposal will be realized if the trade
+penalties are applied based on the unilaterally optimal import and
+export tax rates ($t^{*}$ and $x^{*}$) specified by Proposition
+\ref{prop: Unilaterally Optimal Policy Formulas (general)}.
+\end{description}
+While Proposal 1 is rooted in unilateral action Proposal 2 seeks to
+revive multilateral climate efforts through better policy design.
+In theory, Proposal 2 could achieve first-best carbon pricing together
+with free trade. However, poorly-designed trade penalties and carbon
+tax targets for club members could decouple the climate club from
+the rest of the world. Here, our notion of optimal trade penalties
+refers to penalties that maximize welfare transfers from free-riders
+to climate club members, that coincide with the unilaterally optimal
+trade tax/subsides specified by Proposition \ref{prop: Unilaterally Optimal Policy Formulas (general)}..
+In Section \ref{subsec:Alternative-Policy-Designs}, we discuss policy
+designs when free-riding is not a concern or trade penalties are chosen
+differently.
+
+\section{\label{sec: Section 4 - Quantification}Mapping Theory to Data}
+
+This section describes how our model is mapped to data to simulate
+counterfactual policy outcomes. We first outline our strategy for
+computing counterfactual optimal policy outcomes, followed by a discussion
+of our data and estimation. For our quantitative analyses, we assume
+that the production function of final goods and the energy distributor
+has a CES form and the households' demand function takes a Cobb-Douglas-CES
+form. The \emph{baseline equilibrium,} to which we introduce the optimal
+policy interventions, corresponds to the status quo in 2014, as explained
+in Section \ref{subsec: Quantification - Sufficient Stat}. We are
+interested in counterfactual outcomes when taxes are revised from
+their applied levels to their optimal rates under the non-cooperative
+and climate club scenarios.
+
+\subsection{\label{subsec: Quantification - Hat Algebra}Quantitative Strategy}
+
+\paragraph*{Required Data and Parameters.}
+
+The baseline equilibrium under the status quo is characterized by
+the following statistics: expenditure shares $\left\{ \lambda_{ni,k},\beta_{i,k}\right\} $
+and employment shares $\left\{ \ell_{i,k}\right\} $, where $\ell_{i,k}\equiv L_{i,k}/\bar{L}_{i}$
+is country $i$'s share of employment in industry $k$; $\text{CO}_{2}$
+emissions, energy input cost shares, and $\text{CO}_{2}$ intensity
+values, $\left\{ Z_{i,k},\alpha_{i,k},v_{i,k}\right\} $; pre-carbon-tax
+price of energy $\left\{ \tilde{P}_{i,0}\right\} $; and, national
+income accounting variables, $\left\{ w_{i}\bar{L}_{i},r_{i}\bar{R}_{i},Y_{i}\right\} $.
+
+Let $\mathscr{B}^{V}$ stack the above-mentioned \textit{baseline
+}variables, and let $\mathscr{B}^{T}\equiv\left\{ x_{in,k},t{}_{ni,k},\tau{}_{i,k}\right\} $
+contain the applied policy variables---both of which are observable.
+Also, let $\mathscr{B}^{\Theta}=\left\{ \tilde{\delta}_{i},\phi_{i},\varsigma,\sigma_{k}\right\} $
+denote the carbon disutility parameters, cost share of carbon reserves,
+energy input demand elasticity, and trade elasticities; with $\mathscr{B}\equiv\left\{ \mathscr{B}^{V},\mathscr{B}^{T},\mathscr{B}^{\Theta}\right\} $
+denoting the required set of observable data and estimable parameters
+for conducting counterfactual policy analyses.
+
+\paragraph*{Counterfactual Policy Scenarios.}
+
+Counterfactual outcomes under each policy scenario solve a system
+of equations consisting of equilibrium conditions and optimal tax
+formulas. The joint solution to this system determines optimal policy,
+$\mathscr{R}^{T}=\left\{ x'_{in,k},t'_{ni,k},\tau'{}_{i,k}\right\} $,
+as well as \emph{changes} to non-policy variables, $\mathscr{R}^{V}=\left\{ \hat{\lambda}_{ni,k},\hat{\ell}_{i,k},\hat{Z}_{i,k},\hat{\alpha}_{i,k},\hat{v}_{i,k},\hat{\tilde{P}}_{i,0},\hat{\tilde{P}}_{i},\hat{w}_{i},\hat{r}_{i},\hat{Y}_{i}\right\} $.
+The prime notation denotes variables in the counterfactual equilibrium,
+with $\widehat{z}\equiv z'/z$ denoting the change in a generic variable
+$z$.
+
+We evaluate Proposal 1 by simulating the \emph{non-cooperative} equilibrium
+in which each country adopts its unilaterally-optimal policy. Under
+this scenario, country $i$'s policy, $\mathscr{R}_{i}^{T}\equiv\left\{ x'_{in,k},t'{}_{ni,k},\tau'{}_{i,k}\right\} $
+is determined by the optimal policy formulas presented under Proposition
+\ref{prop: Unilaterally Optimal Policy Formulas (general)}. These
+formulas express $\mathscr{R}^{T}=\left\{ \mathscr{R}_{i}^{T}\right\} _{i}$
+as a function of $\mathscr{B}$ and $\mathscr{R}^{V}$, which we refer
+to as $\mathscr{R}^{T}=f\left(\mathscr{R}^{V};\mathscr{B}\right)$
+or mapping \emph{(b)}. In turn, the change in non-policy variables,
+$\mathscr{R}^{V}$, is described by general equilibrium conditions
+as a function of $\mathscr{R}^{T}$ and $\mathscr{B}$, as outlined
+in Appendix G.1. We refer to
+this relationship as $\mathscr{R}^{V}=g\left(\mathscr{R}^{T};\mathscr{B}\right)$
+or mapping \emph{(a). }Jointly solving mappings \emph{(a)} and \emph{(b)},
+$\mathscr{R}^{V}=g\left(\mathscr{R}^{T};\mathscr{B}\right)$ and $\mathscr{R}^{T}=f\left(\mathscr{R}^{V};\mathscr{B}\right)$,
+determines optimal policy $\mathscr{R}^{T}$ and counterfactual non-policy
+outcomes $\mathscr{R}^{V}$ as a function of the data and parameters
+in $\mathscr{B}$. Appendix G.2
+details the numerical algorithm used to solve this system, which starts
+with a guess of $\mathscr{R}^{T}$ and iterates between $\mathscr{R}^{V}=g\left(\mathscr{R}^{T};\mathscr{B}\right)$
+and $\mathscr{R}^{T}=f\left(\mathscr{R}^{V};\mathscr{B}\right)$ to
+find a joint solution. While we have not been able to prove convergence
+properties of this algorithm, it performs quickly in all the settings
+where we have examined, as reported in Appendix D.2.\footnote{The resulting equilibrium constitutes the Nash equilibrium of a one-shot
+game, wherein every country selects their best policy response given
+policies in the rest of world. \textcite{lashkaripour2021cost} and
+\textcite{lashkaripour2016profits} use a similar logic to quantify
+the counterfactual impact of non-cooperative trade policies.} Likewise, our analysis of the climate club uses the unilaterally
+optimal trade taxes described by Proposition \ref{prop: Unilaterally Optimal Policy Formulas (general)}
+as contingent trade penalties, and simulates counterfactual policy
+outcomes using the same logic.\footnote{Two clarifications are needed for interpreting our counterfactual
+policy outcomes. First, our counterfactual analyses measure long-run
+outcomes based on whether governments maintain a non-cooperative policy
+stance or form a climate club. Proposal 1 examines outcomes if heightened
+climate concerns lead governments to abandon shallow trade cooperation
+while raising domestic carbon taxes to the unilaterally optimal rate.
+Proposal 2 evaluates outcomes when climate considerations are integrated
+into free trade agreements. Second, the goal of our optimal policy
+framework is to outline the policy outcome frontier, not to necessarily
+explain government behavior. Actual policies often fall short of this
+frontier due to various obstacles, but it remains a useful tool for
+assessing long-term policy efficacy---a point we come back in Section
+\ref{subsec:Alternative-Policy-Designs} when discussing the EU's
+unilateral policy frontier.}
+
+\subsection{\label{subsec: Quantification - Sufficient Stat} Data and Parameters}
+
+In this section, we describe the required data and parameters for
+conducting counterfactual policy analysis, which include data on trade,
+production, and $\text{CO}_{2}$ emissions (labeled as $\mathscr{B}^{V}$),
+applied taxes ($\mathscr{B}^{T}$), and the structural parameters
+of our model ($\mathscr{B}^{\Theta}$). \vspace{-10pt}
+
+
+\paragraph*{Trade, Production, and Expenditure.}
+
+We use data on international trade and production from the Global
+Trade Analysis Project (GTAP) database \parencite{aguiar2019gtap},
+which provides international trade flows by country-industry origin
+and destination for 2014. We consolidate our sample into ($K+1=18$)
+``industries,'' comprising $K=17$ non-energy ISIC-level industries
+and one composite energy industry, and ($N=19$) ``countries,'' consisting
+of the 13 countries with the largest GDP plus 6 aggregate regions.
+Tables \ref{tab: Industries} and \ref{tab:Countries} list the industries
+and countries in our sample, along with their key characteristics.
+Our final sample forms a $19\times19\times18$ matrix of free-on-board
+flows, with element $\ensuremath{X_{ij,k}^{\left(fob\right)}=\tilde{P}_{ji,k}C_{ji,k}/\left(1+t_{ij,k}\right)}$
+corresponding to origin $j$--destination $i$--industry $k$.\footnote{To be consistent with our framework, we purge the data from trade
+imbalances following \textcite{ossa2016quantitative}.}\vspace{-5pt}
+
+
+\paragraph*{$\text{CO}_{2}$ Emissions and Carbon Accounting.}
+
+We obtain $\text{CO}_{2}$ emissions associated with use of fossil
+fuels from the GTAP database, counting $\text{CO}_{2}$ emissions
+at the location of energy use by end-users (i.e., non-energy industries
+and households). All energy types are consolidated into a composite
+energy industry, denoted as industry ``0,'' with $\text{CO}_{2}$
+emissions calculated from both direct and indirect purchases of energy.
+Appendix F.1 details our carbon accounting
+procedure. Table A.2 reports total emissions
+(as the sum of direct and indirect emissions) by industries and households.
+
+\medskip{}
+Let us highlight key statistics that will help interpret our quantitative
+results in Section \ref{sec: Section 5 - Quantitative Analyses}.
+First, emissions from production constitute three-fourths of global
+$\text{CO}_{2}$ emissions, with the remaining one-fourth generated
+by households (Appendix Table A.2). Second,
+most production-related $\text{CO}_{2}$ emissions are embedded goods
+that never cross international borders (Appendix Figure A.2).
+For instance, highly tradeable industries like Electronics \& Machinery,
+Textiles, and Motor Vehicles collectively account for only 6\% of
+global $\text{CO}_{2}$ emissions from production (Table \ref{tab: Industries}).
+Lastly, low and middle-income countries are largest contributors to
+global $\text{CO}_{2}$ emissions, with China alone accounting for
+over a quarter of these emissions. This proportion reaches 60\% when
+considering all non-OECD countries (Table \ref{tab:Countries}).\vspace{-10pt}
+
+
+\paragraph*{Input Cost Shares.}
+
+ We construct energy input cost shares for final-good industries,
+$\alpha_{n,k},$ using data on their sales and energy input expenditures,
+with global averages shown in Table \ref{tab: Industries}. For the
+energy extraction industry, the carbon reserve cost share, $\phi_{i}$,
+is determined based on the value-added share of natural resources
+in each country's primary energy sector, which has an average of 0.37.
+See Appendix F.2 for more details.\vspace{-10pt}
+
+
+\paragraph*{Baseline Taxes.}
+
+ We use 2014 tariff data from the GTAP database, accessed through
+the Market Access Map of the International Trade Centre, and set energy
+import tariffs to zero in the baseline. Consistent with World Trade
+Organization rules, we assume export subsidies are negligible and
+set $x_{ij,k}=0$ in the baseline. Carbon taxes, which are negligible
+in most countries in 2014, are derived from the World Bank's Carbon
+Pricing Dashboard. See Appendix F.3
+for more details.
+
+\begin{table}[tbh]
+\caption{\label{tab: Industries}Industry-Level Statistics}
+
+\begin{centering}
+\vspace*{-0.1in}
+\include{../Replication_FL_Ecta/Quantitative/code/CRS_Calibration/Table_Industry_SumStat}\vspace*{-0.1in}
+\par\end{centering}
+\noindent\begin{minipage}[t]{1\columnwidth}%
+{\footnotesize\textit{Note:}}{\footnotesize{} This table shows for every
+of the 17 non-energy industries the share from world industrial $\text{CO}_{2}$
+emission (not including households' emission), world-level trade-to-GDP
+ratio, global average carbon intensity ($\mbox{CO}_{2}$ emissions
+per dollar of output) normalized by that of agriculture, energy cost
+shares reported as unweighted mean across countries within each industry,
+and estimated trade elasticities.}%
+\end{minipage}
+\end{table}
+
+\vspace{-5pt}
+\begin{table}[tbh]
+\caption{\label{tab:Countries}Country-Level Statistics}
+
+\begin{centering}
+\vspace*{-0.1in}
+\include{../Replication_FL_Ecta/Quantitative/code/CRS_Calibration/Table_Country_SumStat}\vspace*{-0.1in}
+\par\end{centering}
+\noindent\begin{minipage}[t]{1\columnwidth}%
+{\footnotesize\textit{Note:}}{\footnotesize{} This table shows for every
+of the 19 regions (13 countries + the EU + Africa + 4 ``Rest Of''
+regions as collection of neighboring countries), their share from
+world output, $\text{CO}_{2}$ emission, and population, and carbon
+intensity ($\text{CO}_{2}$ emissions per dollar of output) normalized
+by that of the EU, and CPI-adjusted disutility from one tonne of $\text{CO}_{2}$
+emission, which sum to the social cost of carbon.}%
+\end{minipage}
+\end{table}
+\vspace{-5pt}
+
+
+\paragraph*{Perceived Disutility from Carbon Emissions.}
+
+We recover the perceived national disutility from $\text{CO}_{2}$
+emissions ($\tilde{\delta}_{i}$) through governments' revealed preferences
+for tackling environmental issues. Specifically, we postulate that
+$\tilde{\delta}_{i}$ is proportional to applied environmentally-related
+taxes per unit of $\text{CO}_{2}$ emissions, adjusted for country
+size. If perceptions of climate damage were symmetric across governments,
+$\tilde{\delta}_{i}$ would scale solely with country size. To account
+for the size effect, we impose $\left(\tilde{\delta}_{i}/\tilde{\delta}_{j}\right)\propto\left(L_{i}/L_{j}\right)$,
+where $L_{i}$ is country $i$'s population. However, governments'
+attitudes towards climate change are markedly diverse---even after
+accounting for size effects. These considerations lead to the following
+proportionality condition:
+\[
+\text{(a)\ensuremath{\qquad}}\frac{\tilde{\delta}_{i}/L_{i}}{\tilde{\delta}_{j}/L_{j}}=\frac{T_{i}^{\left(env\right)}/Z_{i}}{T_{j}^{\left(env\right)}/Z_{j}}.
+\]
+where $T_{i}^{\left(env\right)}$ is the environmentally-related taxes
+collected by country $i$, sourced from \textsc{Oecd-Pine}. Moreover,
+the sum of disutility from $\text{CO}_{2}$ emissions equates the
+global Social Cost of $\text{CO}_{2}$:
+\[
+\text{(b)}\qquad\sum_{i}\tilde{\delta}_{i}=\text{SC-CO}_{2}.
+\]
+We calibrate $\text{SC-CO}_{2}$ based on the latest release of the
+United States Environmental Protection Agency (EPA)'s Final Report
+on the Social Cost of Greenhouse Gases. From this report, we adopt
+the middle scenario discount rate, yielding a $\text{SC-CO}_{2}$
+of \$156.2 per tonne of $\text{CO}_{2}$ in 2014.\footnote{Table A.5 of the EPA's publication reports 193 (\$/t$\text{CO}_{2}$)
+for 2020 and 230 (\$/t$\text{CO}_{2}$) for 2030, in dollars of 2020,
+based on a 2\% annual discount rate.. Using a linear projection to
+the year 2014, and adjusting for the inflation, we obtain a $\text{SC-CO}_{2}$
+of 156.2 (\$/t$\text{CO}_{2}$) for 2014 in terms of dollars of 2014.} By consolidating conditions, (a) and (b), we recover the CPI-adjusted
+disutility from carbon emissions, $\tilde{\delta}_{i}$. Table \ref{tab:Countries}
+reports our calibrated values of $\tilde{\delta}_{i}$ for each country
+in the sample.\footnote{We alternatively calibrate $\tilde{\delta}_{i}$ based on country-level
+social costs of carbon (see Figure A.5 and
+Section \ref{subsec:Sensitivity-Analysis}).}\vspace{-5pt}
+
+
+\paragraph*{Trade Elasticities.}
+
+We estimate the industry-level trade elasticities, $\left(\sigma_{k}-1\right)$,
+using an identification strategy resembling that of \textcite{caliendo2015estimates}.
+Our estimation procedure is reported in Appendix F.4,
+with point estimates replicated in Table \ref{tab: Industries}.\footnote{The table does not list the energy industry, as $\text{CO}_{2}$ emissions
+are assigned to energy consumption rather than production. The global
+energy trade-to-GDP ratio is 24.6\%, with an energy trade elasticity
+of $(\sigma_{0}-1)=10.16$, estimated by pooling energy flow observations
+with Other Mining}\vspace{-10pt}
+
+
+\paragraph{Energy Demand Elasticity.}
+
+The following equation describes the quantity of energy inputs relative
+to total input cost, $Z_{i,k}/TC_{i,k}$, in country $i-$industry
+$k$:
+
+\begin{equation}
+\ln\left(\frac{Z_{i,k}}{TC_{i,k}}\right)=-\varsigma\ln\tilde{P}_{i,0k}+\underbrace{\ \left(1-\varsigma\right)\ln mc_{i,k}+\ln\bar{\kappa}_{i,k}\ }_{=\Phi_{i}^{\left(energy\right)}+\Phi_{k}^{\left(energy\right)}+\epsilon_{i,k}^{\left(energy\right)}}.\label{eq: estimating varsigma}
+\end{equation}
+The right-hand side variables include the after-tax price of energy,
+$\tilde{P}_{i,0k}$,\footnote{{\footnotesize The after-tax price of energy which we use here includes
+fuel taxes that are not related to climate change. In our quantitative
+analysis, these non-climate-related fuel taxes are captured by exogenous
+energy demand shifters.}} the marginal cost, $mc_{i,k}$, and the exogenous input demand parameter,
+$\bar{\kappa}_{i,k}$. We allow the combined effect of the latter
+two terms to systematically vary by country and industry through the
+fixed effects, $\Phi_{i}^{\left(energy\right)}$ and $\Phi_{k}^{\left(energy\right)}$,
+with $\epsilon_{i,k}^{\left(energy\right)}$ denoting the unobserved
+energy demand residual.
+
+Our identification strategy relies on two assumptions. First, an
+individual industry's energy demand residual in a given country has
+a negligible effect on global pre-tax energy prices, as each industry
+is small relative to the global energy market. Second, the unobserved
+energy demand residual is assumed to be uncorrelated with energy tax
+rates after accounting for country and industry fixed effects. Table
+A.4 reports our estimation
+results, with our preferred specification in Column (3) showing an
+energy demand elasticity of 0.65\footnote{Our elasticity parameters align with the \emph{long-run} estimates
+in the literature, reflecting our focus on long-term outcomes. \textcite{labandeira2017meta}
+report an average long-run energy demand elasticity of 0.59, compared
+to our 0.65. Our calibration implies a greater-than-one energy supply
+elasticity consistent with the literature review in \textcite{kotchen2021producer}.
+Lastly, our trade elasticity, ranging between 3.8 and 8.6 across manufacturing
+industries, is in line with larger and long-run estimates in the literature
+\parencite{alessandria2021trade}.\label{fn: long-run estimates}}
+
+\vspace{-5pt}
+
+
+\paragraph*{Magnitudes of Optimal Border Taxes.}
+
+To evaluate Proposals 1 and 2, we calculate unilaterally optimal
+border policies (which combine import tariffs and export subsidies)
+in our calibrated model. Absent climate externalities, these policies
+are driven solely by terms-of-trade considerations. Per Lerner's symmetry,
+only the ratio of the optimal tariff ($t^{*}$) to export subsidy
+($x^{*}$) is determined, with a median of 17\% across non-energy
+product varieties, i.e., $\left(1+t^{*}\right)/\left(1+x^{*}\right)\simeq0.17$.
+The 10th and 90th percentiles of these ratios are 12\% and 26\%, respectively.
+These ratios vary inversely with the industry-level trade elasticity
+but modestly across countries.\footnote{Our optimal border taxes are broadly consistent with, but on the lower
+side of existing estimates obtained from models without carbon externalities,
+e.g., \textcite{ossa2014trade,lashkaripour2021cost}. The terms-of-trade
+component of optimal border taxes largely depend on the industry-level
+trade elasticity, $(\sigma_{k}-1)$, with a higher trade elasticity
+implying a lower degree of national-level market power. Our estimates
+of trade elasticity are on average 5.9, which is higher than the estimates
+of trade elasticity in \textcite{ossa2014trade,lashkaripour2021cost}.} Carbon border taxes/subsidies represent a modest share of the optimal
+border tax/subsidy rate and vary significantly across countries, reflecting
+each country's unilaterally optimal carbon tax, $\tau_{i}^{*}=\tilde{\delta}_{i}$.
+They also differ across industries, being more punitive in sectors
+with higher carbon intensities.\footnote{Appendix Figure A.3 illustrates
+this in the case of the EU's unilaterally optimal carbon import taxes.}
+
+\section{\label{sec: Section 5 - Quantitative Analyses}Quantitative Assessment
+of Climate Proposals 1 and 2}
+
+In this section, we provide a quantitative assessment of two prominent
+climate proposals that combine carbon taxes with border measures to
+address the free-riding problem. We examine the efficacy of each proposal
+by reporting the changes in carbon emissions and welfare resulting
+from these policies, compared to the status quo.
+
+\subsection{\label{subsec: Quantitative Analyses - Proposal 1}Proposal\textit{\emph{
+1: Non-Cooperative Carbon Border Taxes}}}
+
+Under Proposal 1, border taxes are employed as a second-best policy
+to cut (under-taxed) carbon emissions by non-cooperative trading partners.
+To gauge maximal efficacy, we simulate a non-cooperative Nash equilibrium
+in which each government enacts its best policy response consisting
+of unilaterally optimal border and carbon taxes. The resulting change
+in $\text{CO}_{2}$ emissions ($Z$), real consumption ($V$), and
+climate-adjusted welfare ($W)$ are reported in Table \ref{tab: Noncooperative_CRS}.
+
+The first panel (titled ``Noncooperative: Carbon + Border Tax'')
+reports changes in outcomes relative to the status quo when all governments
+adopt their unilaterally optimal carbon and border tax measures non-cooperatively.
+To understand these results, note that domestic carbon taxes are small
+or virtually zero under the status quo. Therefore, the carbon reduction
+reported in this panel represents the combined reduction from both
+elevating the domestic carbon tax and border tax rates to their unilaterally
+optimal rates.
+
+To isolate the net contribution of border taxes, the middle panel
+in Table \ref{tab: Noncooperative_CRS} (titled ``Noncooperative:
+Carbon Tax'') reports outcomes under unilaterally optimal domestic
+carbon taxes that are not supplemented with any carbon border taxes.
+The difference between the numbers presented in the first and middle
+panels represents the net contribution of non-cooperative border taxes.
+To put the non-cooperative outcomes in perspective, the panel \textquotedblleft Globally
+Cooperative\textquotedblright{} presents the effects of globally optimal
+(first-best) carbon taxes.\footnote{The outcomes presented in the last panel exclude the lump-sum inter-country
+transfers necessary for ensuring Pareto improvements. The country
+weights in the global planner's problem could be chosen to ensure
+such Pareto improvements. Here, we simply set these weights based
+on GDP share of countries in status quo.}
+
+The results in Table \ref{tab: Noncooperative_CRS} suggest that optimally-designed
+non-cooperative border taxes deliver a 1.3\% reduction in global $\text{CO}_{2}$
+emissions (i.e., $\nicefrac{(1-0.066)}{(1-0.054)}-1=1.3$\%), complementing
+the 5.4\% reduction attained through unilaterally optimal domestic
+carbon taxes.\footnote{Let $\Delta x_{A}=(\widehat{x}_{A}-1)$ be the percent change in $x$
+under policy ``$A$,'' where $\widehat{x}_{A}\equiv x_{A}/x$. The
+percent change from counterfactual policy $A$ to $B$ is: $\left(\widehat{x}_{B}/\widehat{x}_{A}-1\right)=\left([1+\Delta x_{A}]/[1+\Delta x_{B}]-1\right)$.} This stands in contrast to the additional 37.6\% reduction in global
+$\text{CO}_{2}$ emissions when domestic carbon prices are elevated
+to their first-best level (i.e., $\nicefrac{(1-0.410)}{(1-0.054)}-1=37.6$\%).
+To rephrase, non-cooperative border taxes replicate only 3.4\% of
+the potential $\text{CO}_{2}$ reduction under global cooperation
+(i.e., $\nicefrac{1.3}{37.6}=3.4$\%)---highlighting the limited
+effectiveness of non-contingent carbon border taxes at addressing
+the free-riding problem.
+
+\setstretch{1}
+\begin{table}[tbh]
+\caption{\label{tab: Noncooperative_CRS} The Impact of Non-cooperative and
+Cooperative Tax Policies}
+
+\begin{centering}
+\vspace*{-0.1in}
+\include{../Replication_FL_Ecta/Quantitative/code/CRS_Noncooperative/Table_CRS_3panels}\vspace*{-0.1in}
+\par\end{centering}
+\raggedright{}%
+\noindent\begin{minipage}[t]{1\columnwidth}%
+{\footnotesize\textit{Note:}}{\footnotesize{} This table shows for every
+country the change to $\text{CO}_{2}$ emission, real consumption,
+and welfare from the baseline to noncooperative and cooperative equilibrium.
+In the baseline, each country's tariffs and carbon taxes are set at
+their applied rates in 2014 and export subsidies are zero. Optimal
+policy formulas for the noncooperative and cooperative outcomes are
+detailed in Sections \ref{subsec: Optimal Policy - Unilateral}and
+\ref{subsec: Optimal Policy - Global} and our quantitative implementation
+is described in Sections \ref{subsec: Quantification - Hat Algebra}
+and \ref{subsec: Quantification - Sufficient Stat}.}%
+\end{minipage}
+\end{table}
+
+\setstretch{1.25}
+
+The inefficacy of carbon border taxes at mitigating the free-riding
+problem stems from three factors. First, they fail to incentivize
+abatement by individual firms because the taxes are based on the average
+carbon intensity of all firms within a country and industry, rather
+than the firm-specific carbon intensity. As individual firms cannot
+meaningfully influence these broad averages, they have no motivation
+to reduce their carbon inputs and emissions in response to the taxes.
+
+Second, border taxes cannot cut the $\text{CO}_{2}$ emissions from
+non-traded goods, which constitute a significant portion of worldwide
+emissions. The ``Transportation'' sector, for example, is responsible
+for over 25\% of global industrial $\text{CO}_{2}$ emissions, yet
+it has a trade-to-GDP ratio of just 0.10 (see Table \ref{tab: Industries}).
+Appendix Figure A.2 compares the tradeability
+of industries to their global emissions share. Notably, the industries
+that have a trade-to-GDP ratio below 0.15 are responsible for over
+80\% of global $\text{CO}_{2}$ emissions from production.
+
+Third, border taxes are not immune to leakage via general equilibrium
+energy price adjustments. They reduce global demand for energy, which
+leads to lower pre-tax energy prices worldwide. This in turn causes
+a drop in the after-tax price of energy in countries like Russia and
+Saudi Arabia, which have lesser care for climate change. As a result,
+their $\text{CO}_{2}$ emissions rise with carbon border taxes, dampening
+the overall reduction in global emissions.\footnote{\label{fn: CBAM}Our carbon border tax specification exhibits similarities
+and differences with the EU's carbon border adjustment mechanism (CBAM).
+Both unilaterally levy duties on the carbon content of imports. However,
+the CBAM aims to target firm-level emissions when possible, exempting
+exporters who demonstrate abatement through monitoring. Thus, while
+the CBAM faces the second and third limitations highlighted above,
+the extent to which the first limitation applies is unclear. Additionally,
+the CBAM allows deduction of carbon taxes already paid in the origin
+country. This bears similarity to the globally-optimal carbon border
+taxes analyzed in Appendix E.1.}
+
+The modest $\text{CO}_{2}$ reduction achieved with non-cooperative
+border taxes is offset by sizable consumption losses in most countries.
+Overall, global real consumption declines by 0.5\% under these taxes,
+yielding only a negligible benefit in terms of emissions reduction.
+By comparison, globally optimal carbon taxes deliver a 41.0\% reduction
+in global $\text{CO}_{2}$ emissions, paired with mere 0.6\% loss
+to real consumption, which translates to a 1.1\% increase in \emph{climate-adjusted}
+welfare.
+
+\subsection{\label{subsec: Quantitative Analyses - Proposal 2}Proposal 2: \textit{\emph{Climate
+Club with Contingent Trade Penalties}}}
+
+Under \citeauthor{nordhaus2015climate}'s \parencite*{nordhaus2015climate}
+climate club proposal, border taxes are used as a \emph{contingent}
+penalty device to deter free-riding. We begin by specifying the climate
+club as a sequential game. A group of ``core'' countries move first
+and all countries simultaneously play afterwards. The game is characterized
+by a given set of core countries, denoted by $\mathbb{N}^{\left(\text{core}\right)}$,
+and a ``carbon tax target,'' denoted by $\tau^{\left(\text{target}\right)}$.
+Given $\left(\mathbb{N}^{\left(\text{core}\right)},\tau^{\left(\text{target}\right)}\right)$,
+governments play according to the following rules:
+\begin{lyxlist}{00.00.0000}
+\item [{\emph{Members}.}] A member country must raise its domestic carbon
+tax to $\tau^{\left(\text{target}\right)}$, set zero border taxes
+against other members, and impose unilaterally optimal trade taxes,
+as penalty, against non-members. By design, core countries adhere
+to these rules, while others conform only if they opt to join the
+club.
+\item [{\textit{Non-members}.}] Non-member nations retaliate by imposing
+their unilaterally optimal trade taxes against member countries. Other
+than this, non-member countries retain their status quo tax policies---preserving
+existing tariffs against other non-member countries and maintaining
+their zero or near-zero carbon taxes.
+\end{lyxlist}
+For a game $\left(\mathbb{N}^{\left(\text{core}\right)},\tau^{\left(\text{target}\right)}\right)$,
+a partitioning of countries into non-core club members $\mathbb{N}^{\left(\text{member}\right)}$,
+and non-members $\mathbb{N}^{\left(\text{non-member}\right)}$ constitutes
+a Nash equilibrium if \emph{(i)} No non-core country has an incentive
+to deviate from the partition to which it belongs. \emph{(ii)} Each
+core country's welfare improves (compared to the baseline) under this
+partition\vspace{0.05in}\\
+\emph{Quantitative Challenges.---$\quad$}Analyzing the climate club
+game in-depth poses significant challenges for two main reasons. First,
+iteratively determining optimal trade penalties for various countries
+across all conceivable partitions is practically infeasible with brute-force
+numerical optimization techniques. Our formulas for optimal border
+taxes, however, offer an analytical representation of these penalties,
+effectively circumventing this issue. Second, identifying all possible
+equilibria of the climate club game is complicated by the curse of
+dimensionality. Without a technique to shrink the outcome space, our
+analysis would involve examining $2^{N-N^{\left(\text{core}\right)}}$
+combinations of national strategies.\footnote{With nineteen countries in our sample and supposing one core member,
+we would be required to solve for 4.7 million general equilibrium
+outcomes. Each partitioning of non-core countries, $\left(\mathbb{N}^{\left(\text{member}\right)},\mathbb{N}^{\left(\text{non-member}\right)}\right)$,
+maps to a different general equilibrium outcome, amounting to $2^{18}$
+cases. Additionally, for a given partitioning, checking whether any
+of the eighteen non-core countries has an incentive to unilaterally
+deviate corresponds to a new general equilibrium outcome. Therefore,
+in total, there are $18\times2^{18}\approx$ 4.7 million general equilibrium
+outcomes to check.\label{fn:club_computation}} We address this challenge by noting that the severity of climate
+club penalties increases with the club's size. Consequently, the pay-off
+from joining the club rises with size, allowing us to shrink the outcome
+space via iterative elimination of dominated strategies.\footnote{\label{fn: non-pecuniary cost}This procedure requires that the benefits
+of membership increase as the climate club grows larger. This typically
+holds since a bigger club can impose harsher trade penalties on non-members.
+However, the relationship may not hold universally due to a caveat:
+As the climate club expands, global energy demand decreases, lowering
+the pre-tax price of energy worldwide. These general equilibrium price
+effects can diminish the desirability\textcolor{black}{{} of club membership
+by raising the opportunity cost of carbon pricing. We cannot theoretically
+preclude scenarios where these general equilibrium forces undermine
+the link between club size and membership benefits. Instead, in the
+spirit of irreversible actions in theories of gradual coalition formation
+\parencite{seidmann1998theory}, we} assume that exiting the climate
+club damages reputation and carries a non-pecuniary cost that intensifies
+with the club's size. Therefore, even if escalating trade sanctions
+prove insufficient, the non-pecuniary cost of existing ensures that
+the benefits of maintaining membership rise as the club grows.}\vspace{0.05in}\\
+\emph{Carbon Tax Target.}---$\quad$The selection of the carbon
+tax target $\tau^{\left(target\right)}$is based on two key considerations.
+First, there is an inverted U-shaped relationship between the club's
+emission reduction and the carbon tax target, akin to the \emph{Laffer
+curve}. When weighing club membership, non-core countries compare
+the costs of raising their carbon tax against trade penalties from
+club members. While a higher carbon tax target prompts more emission
+reduction per member, it also deters participation due to higher costs.
+This creates a trade-off: an excessively high tax target reduces membership
+limiting global emission cuts, while an overly low target delivers
+a limited reduction in global emissions despite maximal participation.
+Second, the climate club's aim is to cut emissions without triggering
+decoupling between club members and the rest of the world. That is,
+trade penalties are meant to deter free-riding without being exercised
+in equilibrium. To achieve this, $\tau^{\left(\text{target}\right)}$
+must be ideally set to the maximal carbon tax target that supports
+an inclusive club of all nations as the Nash equilibrium.\footnote{In our quantitative exercises, this maximal target typically aligns
+with the peak of the emission reduction along the Laffer curve. The
+maximum emission reduction can be attained only when large developing
+countries such as India or Indonesia are in the club. At the same
+time, these countries are nearly marginal in joining the club or staying
+out. As a result, although that is not theoretically the case, in
+practice aiming for an inclusive club of all nations typically aligns
+with achieving the maximum emission reduction.}\vspace{0.05in}\\
+\emph{Solution Algorithm.}---$\quad$We employ the following two-tier
+procedure to identify the maximal carbon tax target. In the inner
+tier, we use the following iterative procedure for a given carbon
+tax target: In the first iteration, climate club penalties are applied
+only by core members. We identify non-core countries that would benefit
+from unilaterally joining the club, adding them to the club in the
+subsequent rounds. In the second iteration, climate club penalties
+are applied by core members plus those added from the previous round.
+We re-evaluate the gains from unilateral club membership under the
+new penalties and update the club accordingly. We repeat this procedure
+until we achieve convergence. The resulting outcome is an equilibrium
+club of all nations if: \emph{(i)} the converged set corresponds to
+the set of all non-core countries who have no incentive to unilaterally
+withdraw, \emph{(ii)} the welfare of core countries has increased
+relative to the status quo.\footnote{The second stage among non-core countries constitutes a \emph{coalition-proof
+}equilibrium under the assumption referenced in Footnote \fnref{{ non-pecuniary cost}}.
+Specifically, suppose that once a country joins the club, the increasing
+costs of exiting prevent it from leaving in subsequent rounds. Under
+this assumption as a universal feature, our procedure coincides with
+the \emph{iterative elimination of dominated strategies}, allowing
+us to narrow the set of potential outcomes. Moreover, the resulting
+outcome is a coalition-proof equilibrium provided that the iterative
+elimination of dominated strategies converges to a unique outcome,
+which is the case in our analysis \parencite{moreno1996coalition}.
+Lastly, we highlight that, for completeness, we always verify that
+the resulting outcome constitutes a Nash equilibrium even without
+the assumption in Footnote \fnref{{ non-pecuniary cost}}.} In the outer tier, we incrementally increase the carbon tax target
+from a small initial value until we identify the maximum target at
+which the club of all nations is formed.
+
+While we specify the climate club as a static one-shot game, our procedure
+offers a glimpse into the club's potential expansion trajectory. For
+example, consider a club with the EU and US as core members and a
+carbon tax target of 53 (\$/t$\text{CO}_{2}$), as detailed in Table
+\ref{tab: Climate-Club-Rounds (Core: EU+US - Target:53)}. In Round
+1, five countries with stronger trade ties to the EU and US find it
+beneficial to join. Given this outcome, two additional countries opt
+to join in Round 2 to evade penalties by the EU, US, and the five
+other members that joined in Round 1. Following this iterative process,
+the club eventually includes all non-core countries after eight rounds.
+At this point, we assess the benefits for the first movers---the
+EU and US---and find that their core membership has improved their
+national welfare compared to the status quo. It is worth noting this
+example uses the maximal carbon tax target of 53 (\$/t$\text{CO}_{2}$),
+as a higher target fails to deliver global participation.
+
+\begin{table}
+\caption{\label{tab: Climate-Club-Rounds (Core: EU+US - Target:53)}Climate
+Club Game with the EU \& US as Core and Carbon Tax Target of 53 (\$/t$\text{CO}_{2}$)}
+
+\centering{}\vspace*{-0.1in}
+\include{../Replication_FL_Ecta/Quantitative/code/CRS_ClimateClub/ClimateClub_Table_scenario2}\vspace*{-0.1in}
+\noindent\begin{minipage}[t]{1\columnwidth}%
+{\footnotesize\textit{Note:}}{\footnotesize{} This table shows the convergence
+of our solution method via successive rounds to a club of all nations,
+for the case in which the EU and US are core members and the carbon
+tax target is at its maximal value of 53 \$/t}$\text{CO}_{2}${\footnotesize .
+A country unilaterally evaluates to join or leave at each round given
+the club configuration at its previous round.}%
+\end{minipage}
+\end{table}
+
+The progression of country memberships in the above example reflects
+the \emph{gravity} structure of trade relations. Nations like Turkiye
+and Canada join early given their strong trade ties with the EU and
+US. As the club expands, it attracts more distant countries with strong
+trade connections with the evolving club's collective body. Accordingly,
+the club's expansion occurs by the membership from the West toward
+the East.\vspace{0.05in}\\
+\emph{Outcomes Under Various Makeup of Core Members.}---$\quad$We
+analyze three climate club scenarios, each with a distinct composition
+of core countries. Initially, we consider the European Union (EU)
+as the sole core member, recognizing its status as a leader in environmental
+commitment. Subsequently, we explore a scenario where the United States
+joins the EU, forming a larger core. Our final scenario includes the
+EU, US, and China as the core members of the club.
+
+For each scenario, Table \ref{tab: Climate Club - Summary} reports
+the maximal carbon tax target and the resulting global $\text{CO}_{2}$
+reduction. With the EU as the only core member, the maximal carbon
+price target is 36 (\$/t$\text{CO}_{2}$), leading to a 13.4\% decrease
+in global emissions. When the EU and US unite as core members, the
+maximal target rises to 53 (\$/t$\text{CO}_{2}$), delivering a 18.6\%
+reduction in global emissions. The addition of China as a core member
+further amplifies the club's impact: it allows for a maximal carbon
+price target of 89 (\$/t$\text{CO}_{2}$), culminating in a 28.0\%
+reduction in global emissions. This is substantial when contrasted
+with the 41.0\%, obtainable under first-best carbon pricing.\footnote{Tables A.5 and
+A.6 in
+the appendix show the rounds of accession with the EU and EU+US+China
+as core members. In addition, Figure A.4
+compares welfare gains between participation and withdrawal for non-core
+countries, and shows core members' welfare improvements relative to
+status quo.}
+
+\begin{table}[!tbh]
+\begin{centering}
+\caption{\label{tab: Climate Club - Summary}Climate Club Outcomes}
+\vspace*{-0.1in}
+\include{../Replication_FL_Ecta/Quantitative/code/CRS_ClimateClub/ClimateClub_summary}\vspace*{-0.1in}
+\par\end{centering}
+\centering{}%
+\noindent\begin{minipage}[t]{1\columnwidth}%
+{\footnotesize\textit{Note:}}{\footnotesize{} This table shows the climate
+club outcomes of the maximal carbon price target and the corresponding
+reduction in global $\text{CO}_{2}$ emissions for each scenario of
+the core countries}%
+\end{minipage}
+\end{table}
+
+These findings suggest that a well-structured climate club could achieve
+more than two-thirds of the first-best reduction in global carbon
+emissions (28.0/41.0\ensuremath{\approx}0.68). The extent of this
+success, however, hinges critically on the initial composition of
+core members and the appropriate selection of the carbon tax target.
+
+\section{Discussions\label{sec:Discussion}}
+
+In this section, we examine the robustness of our results to alternative
+parameterizations, characterize alternative policy designs, and discuss
+extensions to our framework.
+
+\subsection{Sensitivity Analysis and External Validity\label{subsec:Sensitivity-Analysis}}
+
+We redo our analysis under five alternative specifications, with results
+reported in Tables A.7
+and A.8. First, we set
+the social cost of carbon at 92 (\$/t$\text{CO}_{2}$) compared to
+156 (\$/t$\text{CO}_{2}$) in our main analysis. This choice is consistent
+with the EPA\textquoteright s estimate under a 2.5\% (instead of 2\%)
+annual discount rate. Second, we leverage \emph{country-level} estimates
+for the social cost of carbon from \textcite{ricke2018country} to
+re-calibrate the carbon disutility parameters, $\tilde{\delta}_{i}$.\footnote{Specifically, we calibrate the disutility parameters by assuming that
+the relative disutility is proportional to the\emph{ }country-level
+cost of carbon and that the disutility parameters add up to $\text{SC-CO}_{2}=156$.} Third, we assign a common trade elasticity, $\sigma_{k}\equiv\sigma=6.7$,
+to all industries, estimated using the pooled sample. In this case,
+export market power varies solely with export market share across
+industries. Fourth, we consider a Cobb-Douglas production function
+for final goods, representing a unitary substitution elasticity between
+energy and labor inputs (i.e., $\varsigma\rightarrow1$), compared
+to $\varsigma=0.65$ in our main specification. Lastly, we consider
+an alternative (inverse) energy supply elasticity by setting $\phi_{i}/(1-\phi_{i})$
+to 2.0 for all countries, compared to an average of 0.6 in our main
+specification. Following \textcite{kortum2021optimal}, this choice
+aligns with data on the distribution of extraction costs among oil
+fields.\footnote{Our specification of energy production, Equation (\ref{eq:Q_j0}),
+is isomorphic to the one in \textcite{kortum2021optimal}. The latter
+assumes a continuum of fields that are heterogenous in their extraction
+costs, as captured by the unit labor requirement, $a$. Let $Q_{0}=E(\bar{a})=\text{constant}\times\bar{a}^{\epsilon}$
+represent the amount of energy that can be extracted with a unit labor
+requirement $a<\bar{a}$. This formulation is equivalent to the production
+function, $Q_{0}=\text{constant}\times L_{0}^{1-\phi}$, assumed in
+this paper by setting $(1-\phi)=\epsilon/(\epsilon+1)$. The choice
+of $\epsilon=0.5$ implied by the empirical distribution of extraction
+costs, yields $\phi=2/3$, which corresponds to an inverse energy
+supply elasticity of $\phi/(1-\phi)=2$.} For each specification, Table A.7
+reports the effects of non-cooperative border taxes, while Table A.8
+reports outcomes associated with the climate club. Across all scenarios
+tested, the qualitative results remain identical and quantitative
+results are similar to our main specification.
+
+We additionally conduct two external validation checks on our model.
+First, we conduct an IV-based test in the spirit of \textcite{adao2023putting}.
+To this end, we use our model to simulate countries' emission response
+to \emph{observed} changes in carbon taxes from 2014 to 2022, holding
+all parameters of the model constant at their 2014 values. We then
+check whether the difference between the vector of model-implied and
+observed emission changes is uncorrelated with the vector of carbon
+tax changes. Following \textcite{adao2023putting}, and provided that
+carbon tax changes are independent of other changes in model fundamentals,
+a significant non-zero correlation would suggest that our model is
+misspecified. Encouragingly, as Figure A.8
+shows, the noted correlation is statistically indistinguishable from
+zero in our case.\footnote{We view the test outcome as merely suggestive since applying that
+procedure in this context, with only one policy shifter, requires
+\emph{(a)} the assumption that countries are approximately independent
+markets and \emph{(b)} the asymptotic formula provided by \parencite{adao2023putting}
+may be inaccurate with our small number of countries ($N=19$).} Second, we compare our model's predicted emissions reductions from
+globally-applied carbon taxes to estimates from other modeling approaches,
+including integrated assessment models, computable general equilibrium
+models, and ex-post empirical studies. Figure A.9
+plots our model's projected global emission reductions against the
+global carbon tax rate, benchmarked against projections from leading
+studies in the literature. Despite differences in underlying assumptions,
+our results fall within the range reported across these previous analyses,
+providing additional support for the credibility of our model.
+
+\subsection{Alternative Policy Designs\label{subsec:Alternative-Policy-Designs}}
+
+Our main analysis focused on policies that address the \emph{free-riding}
+problem. Our analysis of Proposal 1 considered the most effective
+carbon border tax design that is resilient to free-riding, as characterized
+by Proposition \ref{prop: Unilaterally Optimal Policy Formulas (general)}.
+For Proposal 2, we focused on optimal penalties that maximize welfare
+transfers from non-members to members of the climate club. However,
+border taxes can deliver even greater emission reductions when free-riding
+is \emph{not} the main obstacle to carbon pricing. These taxes can
+also be more punitive than the unilaterally-optimal taxes used in
+our climate club analysis. Below, we explore alternative border tax
+designs, which are relevant when free-riding is less of a concern
+or when countries are willing to exert harsher sanctions on free-riders.
+
+First, consider a global economy where governments are willing to
+cooperate on climate issues but face political pressures that prevent
+them from implementing \emph{first-best} carbon taxes. In this scenario,
+border taxes could serve as a \emph{second-best} cooperative solution.
+We characterize the globally optimal border taxes under this scenario
+in Appendix C. Quantitatively,
+we find that this policy reduces global carbon emissions by only 0.9\%,
+which is comparable to the non-cooperative border taxes examined earlier.
+The main takeaway here is that carbon border taxes have limited efficacy
+in reducing global emissions regardless of whether they address international
+free-riding or domestic political constraints. Instead, their ineffectiveness
+stems from the three structural limitations discussed in Section \ref{subsec: Quantitative Analyses - Proposal 1}.
+
+Second, envision a scenario where the home country's government assigns
+a non-zero weight to foreign welfare when designing its policy. The
+resulting optimal policy choices in that case trace out the home country's
+\emph{unilateral policy frontier}. Each point on this frontier corresponds
+to a specific set of weights assigned to foreign countries' welfare.
+As detailed in Appendix C, placing
+more importance on foreign welfare dilutes the terms-of-trade component
+of the optimal border taxes. And when the weights on foreign welfare
+are sufficiently large, the home country's optimal policy has no negative
+externality on other countries---aligning with the optimal policy
+framework in \textcite{kortum2021optimal}.
+
+Figure A.6 in the appendix illustrates
+the EU's unilateral policy frontier. As the EU assigns a greater weight
+to non-EU countries, its optimal policy moves along the frontier to
+a point where it preserves non-EU's welfare. This policy, labeled
+``Externality-Free'', elevates the EU's welfare by 0.19\% compared
+to 0.32\% under our baseline Unilaterally-Optimal policy. Moreover,
+global emissions drop by 3.4\% under the Externality-Free policy compared
+to around 2\% under the Unilaterally-Optimal policy. The Externality-Free
+policy, however, is difficult to implement due to free-riding incentives.
+It effectively raises non-EU welfare to the detriment of EU countries
+compared to other policies on the frontier (top panel of Figure A.7).
+Additionally, policies that assign a greater weight to non-EU welfare
+trigger more carbon leakage, as displayed in the bottom panel of Figure
+A.7. The reason is that
+a higher non-EU weight prompts the EU to raise its domestic carbon
+tax, bringing it closer to the social cost of carbon. This increase
+in tax reduces the EU's energy demand and consequently lowers global
+pre-tax energy prices, prompting higher energy use and carbon emissions
+in non-EU regions.\footnote{The unilateral policy frontier, moreover, identifies the range of
+penalties a country could impose on its trade partners, for instance
+by assigning a negative weight to foreign welfare, as in \textcite{sturm2022theory}.
+Under one such weighting scheme, a country could achieve the maximal
+reduction in foreign welfare without reducing its own welfare. The
+noted policy lies on the westernmost point of the frontier, labeled
+as ``Maximal Sanction'' in Figure A.6.
+In the context of a climate club, applying these extreme trade sanctions
+would have ambiguous effects on the club's efficacy. On one hand,
+the sanctions would make non-membership more costly. On the other
+hand, they would dilute the benefits of membership by prioritizing
+harm to foreign countries over domestic welfare.}
+
+Lastly, the unilateral policy frontier shows the limitations of unilateral
+policy, regardless of whether governments implement optimal policies
+or not. The frontier shown in Figure A.6
+determines the range of potential welfare outcomes possible under
+unilateral policy. Suboptimal policy decisions would result in outcomes
+inside the frontier. The maximum welfare increase realizable for the
+EU under unilateral policy is less than 0.4\%, contrasting with the
+0.7\% increase feasible under the climate club led by the EU. Similarly,
+emissions reductions are capped at around 5\% under the EU's unilateral
+policy, compared to more than 13\% with the climate club initiated
+by the EU (Figure A.7
+and Table \ref{tab: Climate Club - Summary}). Essentially, even if
+governments do not optimize policies, the climate club's frontier
+remains far more promising.
+
+\subsection{Extensions to Richer Settings\label{subsec:Extensions}}
+
+\paragraph*{$\left(a\right)$ Increasing-returns to scale.}
+
+We introduce increasing-returns to scale in final-good industries
+as in \textcite{krugman1980scale}, with details provided in Appendix
+H.1. In this setting, scale economies
+arise from love-for-variety, governed by the elasticity of substitution,
+$\gamma_{k}$, between firm varieties.\footnote{As shown in Appendix H.1, this
+extended model is isomorphic to a setting with \emph{external} economies
+of scale.} Firms' entry decisions do not internalize the full benefits of introducing
+new varieties, leading to inefficient entry and output across industries.
+Consequently, optimal policy aims to address inter-industry scale
+distortions while also managing the terms of trade and reducing emissions.
+For a small open economy under Cobb-Douglas-CES preferences, the unilaterally
+optimal policy formulas become:
+\begin{equation}
+\begin{cases}
+\tau_{i}^{*}=\tilde{\delta}_{i}\sim\delta_{i}\tilde{P}_{i},\qquad\qquad s_{i,k}^{*}=\frac{1}{\gamma_{k}-1} & \left[\textrm{carbon tax \& domestic subsidy}\right]\\
+t_{ni,k}^{*}=\bar{t}_{i}+\frac{\gamma_{k}-1}{\gamma_{k}}\tau_{i}^{*}v_{n,k}\quad\qquad t_{ni,0}^{*}=\bar{t}_{i} & \left[\text{import tax (energy and non-energy)}\right]\\
+1+x_{in,k}^{*}=\left(1+\bar{t}_{i}\right)\frac{\sigma_{k}-1}{\sigma_{k}}+\frac{\gamma_{k}-1}{\gamma_{k}}\tau_{i}^{*}\sum_{j\neq i}\left[\lambda_{jn,k}v_{j,k}\right]\frac{\sigma_{k}-1}{\sigma_{k}} & \text{\ensuremath{\left[\text{export subsidy (non-energy)}\right]}}\\
+1+x_{in,0}^{*}=\left(1+\bar{t}_{i}\right)\frac{\sigma_{0}-1}{\sigma_{0}}+\tau_{i}^{*}\frac{1}{\sigma_{0}}\frac{\zeta_{n}}{\tilde{P}_{n,0}} & \left[\text{export subsidy (energy)}\right]
+\end{cases}\label{eq: Krugman SOE formula}
+\end{equation}
+The above policy differs from the constant-returns to scale variant
+in two ways. First, it includes production subsidies, denoted by $s_{i,k}$.
+The optimal production subsidy is carbon-blind and corrects scale
+distortions by favoring high-returns-to-scale (low-$\gamma$) industries.
+Second, carbon border taxes are adjusted to account for scale economies,
+as they exert two countervailing effects on foreign emissions: they
+lower emissions by reducing output ($Q$), but concurrently, raise
+the per-unit emissions ($Z/Q$). The latter effect occurs because
+per unit emissions decline with output scale at an elasticity, $\left(\gamma_{k}-1\right)^{-1}$.
+To balance this trade-off, the optimal carbon border tax is revised
+downwards by a factor of $\frac{\gamma_{k}-1}{\gamma_{k}}$. In the
+limit where $\gamma_{k}\rightarrow\infty$, industry $k$ operates
+under constant-returns to scale and the above formulas reduce to the
+baseline formulas presented earlier.
+
+Tables A.9 and A.10
+in the appendix show the impacts of Proposals 1 (non-cooperative carbon
+border taxes) and 2 (climate club) under increasing-returns to scale.
+The analysis uses scale elasticities derived from the estimates in
+\textcite{lashkaripour2016profits}.\footnote{In this extension of our model, a necessary condition for uniqueness
+is $\mu_{k}\equiv\left(\sigma_{k}-1\right)/\left(\gamma_{k}-1\right)\leq1$.
+Therefore, we use the estimates of $\mu_{k}$ from \textcite{lashkaripour2016profits},
+which guarantee $\mu_{k}\leq1$, together with our estimates of trade
+elasticity $\sigma_{k}$ to recover the love-of-variety parameters,
+$\gamma_{k}$.\label{fn: LL scale elasticity}} The results indicate that carbon pricing policies deliver smaller
+reductions in \emph{global} emissions due to the same trade-off highlighted
+earlier. Specifically, under increasing-returns to scale (IRS), contractions
+in output, $Q$, coincide with an increase in per-unit emissions ($Z/Q$).
+While this trade-off moderates the overall impact of policy on emissions,
+the relative efficacy of Proposals 1 and 2 is virtually unchanged
+compared to the baseline constant-returns-to-scale (CRS) scenario.\footnote{Despite similar aggregate results, some differences are noticeable
+at the level of individual countries. For example, Figure A.10
+compares the change in $\text{CO}_{2}$ emissions under Proposal 1
+between our main model (CRS) and extended model (IRS). Under the IRS
+model, when firms are subjected to border tax hikes, they tend to
+relocate to larger markets to evade such taxes. These delocation effects
+can raise the scale of production and $\text{CO}_{2}$ emissions even
+in climate-conscious regions like the EU that charge a relatively
+high carbon tax.}\vspace{-10pt}
+
+
+\paragraph*{$\left(b\right)$ Firm heterogeneity.}
+
+We consider two sources of firm heterogeneity: differences in (1)
+total factor productivity and (2) carbon intensity across firms. The
+Krugman extension of our framework can readily handle the former,
+but modeling heterogeneity in carbon intensity is more challenging
+due to data limitations. Specifically, the formulas described in Equation
+\ref{eq: Krugman SOE formula} remain valid if there is firm heterogeneity
+only in total factor productivity. The formulas apply without qualification
+if serving new markets does not require paying a fixed overhead cost.
+In the presence of fixed costs, however, the optimal policy must account
+for self-selection of the most productive firms into export markets,
+\`a la \textcite{melitz2003impact}. Following \textcite{kucheryavyy2023grounded},
+it can be shown that the Krugman extension of our model is isomorphic
+to the Melitz model when firm-level productivity follows a Pareto
+distribution. See Appendix H.2
+for details. Therefore, Equation \ref{eq: Krugman SOE formula} describes
+optimal policy in the Melitz-Pareto case, albeit with a reinterpretation
+of parameters---indicating our quantitative results would be unchanged.
+
+A richer extension could incorporate firm heterogeneity in both productivity
+and carbon intensity (see \textcite{cherniwchan2017trade}). Here,
+border taxes could alter the average carbon intensity of exporting
+firms. This consideration lends itself to policy designs that target
+firm-level abatement, such as the Carbon Border Adjustment Mechanism
+(CBAM) referenced in footnote \ref{fn: CBAM}. But how this consideration
+affects optimal policy design depends on information asymmetry between
+governments and foreign firms. For instance, if governments know that
+more productive firms tend to be less carbon intensive, they could
+set a higher carbon border tax to deter entry by small, carbon-intensive
+firms. Yet with only industry-level data on carbon intensities, governments
+may implement voluntary certification schemes that incentivize low-emissions
+firms to disclose their output and emission levels \parencite{cicala2022adverse}.
+Quantifying the global impacts of border taxes in either case requires
+international firm-level emissions data, which is presently unavailable.
+
+\section{\label{sec: Section 6 - Conclusion}Conclusion}
+
+We analyzed two major climate policy proposals that use trade policy
+to address free-riding in climate action. One involves carbon border
+taxes as a second-best tool to limit transboundary emissions, while
+the other, the climate club, uses border taxes to incentivize cooperation
+from reluctant governments. Our results show that even optimally designed
+carbon border taxes achieve only modest global emissions reductions,
+whereas the climate club can be highly effective under appropriate
+composition of core members and the carbon tax target.
+
+Our analysis puts forth methods with broader implications. For instance,
+carbon border taxes could target individual firms with proper monitoring,
+and collecting firm-level emissions data offers a promising research
+direction. Future work could also explore distributional considerations,
+such as international climate funds, technology transfers to developing
+nations, or supply-side carbon policies. Additionally, our analysis
+omits factors like adoption and innovation in renewable energy, which
+justify policies such as green technology subsidies.
+
+\singlespacing
+
+\printbibliography
+\end{refsection}
+\end{document}
