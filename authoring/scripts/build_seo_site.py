@@ -1618,10 +1618,52 @@ def link_href_from(output_path: Path, target: str) -> str:
     return href_from(output_path, target)
 
 
+PAPER_PDF_URL_CACHE: dict[str, str] | None = None
+
+
+def load_paper_pdf_url_cache() -> dict[str, str]:
+    global PAPER_PDF_URL_CACHE
+    if PAPER_PDF_URL_CACHE is None:
+        cache: dict[str, str] = {}
+        for source_path in sorted(PAPERS_CONTENT_DIR.glob("*.md")):
+            try:
+                meta, _ = load_front_matter(source_path)
+            except Exception:
+                continue
+            slug = str(meta.get("slug") or "").strip()
+            pdf_url = str(meta.get("pdf_url") or "").strip()
+            if slug and pdf_url:
+                cache[slug] = pdf_url
+        PAPER_PDF_URL_CACHE = cache
+    return PAPER_PDF_URL_CACHE
+
+
+def resolve_paper_pdf_target(target: str) -> str | None:
+    stripped = target.strip()
+    match = re.match(r"^/?papers/([^/?#]+?)(?:\.html)?([?#].*)?$", stripped)
+    if not match:
+        return None
+    slug, suffix = match.groups()
+    pdf_url = load_paper_pdf_url_cache().get(slug)
+    if not pdf_url:
+        return None
+    if pdf_url.startswith(("http://", "https://", "/")):
+        return f"{pdf_url}{suffix or ''}"
+    return f"/{pdf_url}{suffix or ''}"
+
+
+def paper_primary_href_from(output_path: Path, paper: dict) -> str:
+    return href_from(output_path, paper["pdf_url"])
+
+
 def normalize_markdown_link_target(target: str) -> str:
     stripped = target.strip()
     if not stripped or stripped.startswith(("http://", "https://", "#", "mailto:", "tel:", "javascript:", "data:")):
         return stripped
+
+    paper_pdf_target = resolve_paper_pdf_target(stripped)
+    if paper_pdf_target:
+        return paper_pdf_target
 
     match = re.match(r"^(/?(?:papers|topics|replication)/[^?#]+?)(\.[A-Za-z0-9]+)?([?#].*)?$", stripped)
     if not match:
@@ -3620,7 +3662,7 @@ def render_topics(topics: list[dict], papers_by_slug: dict, topic_by_slug: dict)
     for topic in topics:
         output_path = TOPICS_OUTPUT_DIR / f"{topic['slug']}.html"
         related_papers_html = "".join(
-            f'<article class="paper-card"><h3><a href="{href_from(output_path, "papers/" + slug + ".html")}">{html.escape(papers_by_slug[slug]["title"])}</a></h3><p>{html.escape(papers_by_slug[slug]["summary"])}</p></article>'
+            f'<article class="paper-card"><h3><a href="{paper_primary_href_from(output_path, papers_by_slug[slug])}">{html.escape(papers_by_slug[slug]["title"])}</a></h3><p>{html.escape(papers_by_slug[slug]["summary"])}</p></article>'
             for slug in topic.get("related_papers", [])
             if slug in papers_by_slug
         )
@@ -3777,7 +3819,7 @@ def render_replication_pages(items: list[dict], papers_by_slug: dict, topic_by_s
             [
                 ("Home", "index.html"),
                 ("Research", "Research.html"),
-                (paper["title"], f"papers/{paper['slug']}.html"),
+                (paper["title"], paper["pdf_url"]),
                 ("Replication files", None),
             ]
         )
@@ -3814,11 +3856,7 @@ def render_research_hub(papers: list[dict], hubs: list[dict], queries: list[dict
 
     def render_paper_listing(paper: dict, index: int) -> str:
         has_source_html = paper.get("body_source") == "latex"
-        primary_href = (
-            href_from(PUBLIC_ROOT / "Research.html", "papers/" + paper["slug"] + ".html")
-            if has_source_html
-            else href_from(PUBLIC_ROOT / "Research.html", paper["pdf_url"])
-        )
+        primary_href = paper_primary_href_from(PUBLIC_ROOT / "Research.html", paper)
         assets = [
             '<a href="#" onclick="toggleAbstract(this); return false;">[Abstract]</a>',
             f'<a href="{href_from(PUBLIC_ROOT / "Research.html", paper["pdf_url"])}">[PDF]</a>',
