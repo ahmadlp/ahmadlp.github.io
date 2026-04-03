@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "can-trade-policy-mitigate-climate-change",
+    "status": "success",
+    "notes": [
+      "Disabled external appendix cross-references for HTML compilation.",
+      "Rewrote external include for Table_Industry_SumStat to local Tables/Table_Industry_SumStat.tex.",
+      "Rewrote external include for Table_Country_SumStat to local Tables/Table_Country_SumStat.tex.",
+      "Rewrote external include for Table_CRS_3panels to local Tables/Table_CRS_3panels.tex.",
+      "Rewrote external include for ClimateClub_Table_scenario2 to local Tables/ClimateClub_Table_scenario2.tex.",
+      "Rewrote external include for ClimateClub_summary to local Tables/ClimateClub_summary.tex.",
+      "Ran biber for bibliography resolution."
+    ],
+    "asset_count": 0,
+    "footnote_count": 56,
+    "cache_used": false,
+    "keywords_text": null
+  },
+  {
+    "slug": "can-trade-taxes-be-a-major-source-of-government-revenue",
+    "status": "success",
+    "notes": [
+      "Replaced JEEA class with article for HTML compilation stability.",
+      "Replaced JEEA Author macro with article author command.",
+      "Replaced JEEA Abstract macro with standard abstract environment."
+    ],
+    "asset_count": 5,
+    "footnote_count": 28,
+    "cache_used": false,
+    "keywords_text": null
+  },
+  {
+    "slug": "discrete-trade",
+    "status": "success",
+    "notes": [
+      "Removed PDF/backend-specific driver options from documentclass for HTML compilation.",
+      "Simplified hyperref package options for HTML compilation.",
+      "Disabled dcolumn package for HTML compilation.",
+      "Replaced dcolumn alignment specs with right-aligned columns for HTML compilation.",
+      "make4ht reported errors during the first pass; attempting to use any generated TeX4ht outputs.",
+      "Ran bibtex for bibliography resolution.",
+      "make4ht reported errors during the second pass; attempting to use any generated HTML/CSS outputs."
+    ],
+    "asset_count": 0,
+    "footnote_count": 59,
+    "cache_used": false,
+    "keywords_text": null
+  },
+  {
+    "slug": "economic-impacts-of-liberation-day-tariffs",
+    "status": "success",
+    "notes": [
+      "Simplified hyperref package options for HTML compilation."
+    ],
+    "asset_count": 1,
+    "footnote_count": 13,
+    "cache_used": false,
+    "keywords_text": null
+  },
+  {
+    "slug": "integrating-climate-goals-into-trade-agreements",
+    "status": "success",
+    "notes": [
+      "Disabled sourceserifpro for HTML compilation to avoid TeX4ht ligature corruption.",
+      "Simplified hyperref package options for HTML compilation.",
+      "Rewrote external include ../Quantitative/code/Main_delta/simulation/Table_delta2 to local Quantitative/code/Main_delta/simulation/Table_delta2.tex.",
+      "Rewrote external figure ../Quantitative/code/Main_delta2/output/dC_vs_dZ_tradeagr_Multi to local Quantitative/code/Main_delta2/output/dC_vs_dZ_tradeagr_Multi.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta2/output/dC_vs_DES_UniformCarbonPrice to local Quantitative/code/Main_delta2/output/dC_vs_DES_UniformCarbonPrice.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta2/output/dC_vs_DES_UniformCarbonPrice_Extraction to local Quantitative/code/Main_delta2/output/dC_vs_DES_UniformCarbonPrice_Extraction.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta/output/coalition_evolution_Wglobal_DESPrimaryEnergy to local Quantitative/code/Main_delta/output/coalition_evolution_Wglobal_DESPrimaryEnergy.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta/output/coalition_evolution_Objglobal_DESPrimaryEnergy to local Quantitative/code/Main_delta/output/coalition_evolution_Objglobal_DESPrimaryEnergy.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta/output/coalition_evolution_Zglobal_DESPrimaryEnergy to local Quantitative/code/Main_delta/output/coalition_evolution_Zglobal_DESPrimaryEnergy.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta/output/coalition_evolution_size_DESPrimaryEnergy to local Quantitative/code/Main_delta/output/coalition_evolution_size_DESPrimaryEnergy.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main/output/Coal_CO2_Content to local Quantitative/code/Main/output/Coal_CO2_Content.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main/output/Crudeoil_CO2_Content to local Quantitative/code/Main/output/Crudeoil_CO2_Content.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main/output/Naturalgas_CO2_Content to local Quantitative/code/Main/output/Naturalgas_CO2_Content.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta/output/delta_local_EU to local Quantitative/code/Main_delta/output/delta_local_EU.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta/output/delta_global_EU to local Quantitative/code/Main_delta/output/delta_global_EU.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main/output/CSCC_vs_Delta to local Quantitative/code/Main/output/CSCC_vs_Delta.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta2/output/dC_vs_dZ_Autarky_cf1 to local Quantitative/code/Main_delta2/output/dC_vs_dZ_Autarky_cf1.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta2/output/dC_vs_dZ_tradeagr_Multi_B2 to local Quantitative/code/Main_delta2/output/dC_vs_dZ_tradeagr_Multi_B2.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta_S4/output/Correlation_PValue to local Quantitative/code/Main_delta_S4/output/Correlation_PValue.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta2/output/dC_vs_DES_UniformCarbonPrice2 to local Quantitative/code/Main_delta2/output/dC_vs_DES_UniformCarbonPrice2.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta2/output/dC_vs_DES_UniformCarbonPrice_Extraction2 to local Quantitative/code/Main_delta2/output/dC_vs_DES_UniformCarbonPrice_Extraction2.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main/output/Tax_Share_to_Fund to local Quantitative/code/Main/output/Tax_Share_to_Fund.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta/output/coalition_evolution_Wglobal_Uni_DESMfg to local Quantitative/code/Main_delta/output/coalition_evolution_Wglobal_Uni_DESMfg.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta/output/coalition_evolution_Objglobal_Uni_DESMfg to local Quantitative/code/Main_delta/output/coalition_evolution_Objglobal_Uni_DESMfg.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta/output/coalition_evolution_Zglobal_Uni_DESMfg to local Quantitative/code/Main_delta/output/coalition_evolution_Zglobal_Uni_DESMfg.jpg.",
+      "Rewrote external figure ../Quantitative/code/Main_delta/output/coalition_evolution_size_Uni_DESMfg to local Quantitative/code/Main_delta/output/coalition_evolution_size_Uni_DESMfg.jpg.",
+      "Repaired malformed differential notation in an appendix price-change equation for HTML compilation.",
+      "Normalized appendix differential notation before MathJax rendering.",
+      "make4ht reported errors during the first pass; attempting to use any generated TeX4ht outputs.",
+      "Ran bibtex for bibliography resolution.",
+      "make4ht reported errors during the second pass; attempting to use any generated HTML/CSS outputs."
+    ],
+    "asset_count": 25,
+    "footnote_count": 34,
+    "cache_used": false,
+    "keywords_text": null
+  },
+  {
+    "slug": "markups-as-shadow-tariffs",
+    "status": "success",
+    "notes": [
+      "Replaced starred captions with centered text for HTML compilation.",
+      "Ran bibtex for bibliography resolution.",
+      "Re-rendered the textbook TikZ figure directly from LaTeX for the HTML page."
+    ],
+    "asset_count": 30,
+    "footnote_count": 29,
+    "cache_used": false,
+    "keywords_text": null
+  },
+  {
+    "slug": "new-industrial-policy",
+    "status": "success",
+    "notes": [
+      "Disabled sourceserifpro for HTML compilation to avoid TeX4ht ligature corruption.",
+      "Ran biber for bibliography resolution.",
+      "Used the provided Lane_QJE JPEG source for the HTML page.",
+      "Re-rendered the ex ante model TikZ figure through a standalone PDF build for the HTML page."
+    ],
+    "asset_count": 2,
+    "footnote_count": 0,
+    "cache_used": false,
+    "keywords_text": "industrial policy, trade, misallocation, externality, distortion, subsidy, tariffs, import restriction, export promotion, optimal policy, input-output, network, economies of scale, R&D, profits, welfare, coordination"
+  },
+  {
+    "slug": "profits-scale-economies-and-the-gains-from-trade-and-industrial-policy",
+    "status": "success",
+    "notes": [
+      "Injected vendored AEA template files into the temp build.",
+      "Replaced AEA class with article for HTML compilation stability.",
+      "Disabled xr package for HTML compilation.",
+      "Disabled external appendix cross-references for HTML compilation.",
+      "Disabled strictpagecheck for HTML compilation.",
+      "Simplified hyperref package options for HTML compilation."
+    ],
+    "asset_count": 5,
+    "footnote_count": 63,
+    "cache_used": false,
+    "keywords_text": null
+  },
+  {
+    "slug": "the-cost-of-a-global-tariff-war",
+    "status": "success",
+    "notes": [
+      "Disabled strictpagecheck for HTML compilation.",
+      "Simplified hyperref package options for HTML compilation.",
+      "make4ht reported errors during the first pass; attempting to use any generated TeX4ht outputs."
+    ],
+    "asset_count": 7,
+    "footnote_count": 44,
+    "cache_used": false,
+    "keywords_text": null
+  },
+  {
+    "slug": "trade-and-technology-adoption-in-distorted-economies",
+    "status": "success",
+    "notes": [
+      "make4ht reported errors during the first pass; attempting to use any generated TeX4ht outputs.",
+      "Ran bibtex for bibliography resolution.",
+      "make4ht reported errors during the second pass; attempting to use any generated HTML/CSS outputs."
+    ],
+    "asset_count": 26,
+    "footnote_count": 37,
+    "cache_used": false,
+    "keywords_text": null
+  }
+]

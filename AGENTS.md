@@ -40,7 +40,7 @@ This file records repo-specific guardrails for future agents working on
 
 ## Canonical Paper Page Rule
 
-- Treat `papers/*.html` as the canonical reading surface for papers.
+- Treat `public/papers/*.html` as the canonical reading surface for papers.
 - When changing paper pages, optimize first for on-screen reading quality and only then for crawlability or metadata.
 - Do not assume that a successful LaTeX-to-HTML build implies an acceptable reading layout. Always inspect the generated HTML and CSS for layout artifacts introduced by TeX4ht.
 
@@ -133,7 +133,7 @@ This file records repo-specific guardrails for future agents working on
 - The source image files themselves may be correct. Check the real pixel dimensions before blaming the asset.
 - Do not fix this by hand-editing individual generated HTML pages. Fix it in the shared pipeline and shared stylesheet.
 - The correct fix has two parts:
-  - in the shared asset-rewrite step inside `scripts/build_seo_site.py`, strip TeX4ht-generated `width` and `height` attributes from paper-body `<img>` tags
+  - in the shared asset-rewrite step inside `authoring/scripts/build_seo_site.py`, strip TeX4ht-generated `width` and `height` attributes from paper-body `<img>` tags
   - in the shared paper stylesheet, ensure figure images use `height: auto` so the browser preserves the natural aspect ratio when width is constrained
 - Keep the override scoped to paper-body figures so unrelated site images are unaffected.
 - Validate the result after rebuild:
@@ -146,7 +146,7 @@ This file records repo-specific guardrails for future agents working on
 - Mistake to avoid: assuming a copied paper asset is valid just because the file exists and the HTML path resolves.
 - In this repo, some Tariff War figures were copied with `.svg` filenames even though their actual bytes were PNG image data. The browser then failed to render them as SVG, making the figures appear missing even though the paths were correct.
 - Do not diagnose this as a missing-file problem until you verify the real file type.
-- Do not fix this by hand-renaming generated files or patching individual paper pages. Fix it in the shared asset-rewrite step inside `scripts/build_seo_site.py`.
+- Do not fix this by hand-renaming generated files or patching individual paper pages. Fix it in the shared asset-rewrite step inside `authoring/scripts/build_seo_site.py`.
 - The correct fix is:
   - inspect the source asset header or magic bytes when copying TeX4ht assets
   - detect the real format for common exported asset types such as PNG, JPEG, GIF, PDF, and SVG
@@ -268,7 +268,7 @@ This file records repo-specific guardrails for future agents working on
   - empty text wrappers such as `\text{}` collapsing into broken command chains like `\text\frac`
   - text-mode wrappers around bold math such as `\textrm{\textbf{T}}` being normalized into MathJax-hostile hybrids like `\textrm{\mathbf{T}}`
 - These failures can leave equations visibly broken even when the surrounding HTML and CSS are correct.
-- Do not patch broken equations by hand in generated paper HTML. Fix them in the shared math-normalization step inside `scripts/build_seo_site.py`.
+- Do not patch broken equations by hand in generated paper HTML. Fix them in the shared math-normalization step inside `authoring/scripts/build_seo_site.py`.
 - The correct fix is:
   - when normalizing `\text{...}`-style wrappers, return an empty string for empty arguments rather than leaving a stray text command behind
   - normalize `\textrm{...}` through the same wrapper logic used for `\text{...}` so text-only content stays text and math-heavy content sheds the unnecessary text-mode shell
@@ -281,13 +281,13 @@ This file records repo-specific guardrails for future agents working on
 ## Reader Math Preservation Rule
 
 - Mistake to avoid: trying to improve `reader view` equations only by swapping MathJax output modes such as `chtml` to `svg`.
-- In this repo, that renderer swap can be visually irrelevant if `paper-reader-data/*/paper.xml` has already lost the math structure during generation.
+- In this repo, that renderer swap can be visually irrelevant if `public/paper-reader-data/*/paper.xml` has already lost the math structure during generation.
 - The failure mode already seen here was:
   - canonical LaTeX-backed paper pages preserved math in the compiled TeX4ht HTML
   - `build_modernpapers_xml_document(...)` rebuilt `paper.xml` from flattened `body_markdown`
   - the resulting reader XML contained no `<MATH>` or `<FULL_LINE_EQUATION>` tags, so MathJax had nothing meaningful to improve
 - The correct fix belongs in the shared build pipeline:
-  - for papers with `body_source: latex`, build `paper-reader-data/<slug>/paper.xml` from `compiled_body_html`, not from flattened markdown
+  - for papers with `body_source: latex`, build `public/paper-reader-data/<slug>/paper.xml` from `compiled_body_html`, not from flattened markdown
   - preserve inline math as `<MATH>...</MATH>`
   - preserve display math as `<FULL_LINE_EQUATION ...><MATH>...</MATH></FULL_LINE_EQUATION>`
   - only after math survives into `paper.xml` should you tune MathJax output mode, spacing, or CSS
