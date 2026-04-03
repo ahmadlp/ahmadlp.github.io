@@ -1,5 +1,8 @@
 ---
 title: 'Markups as Shadow Tariffs: How Market Power Skews Trade Reciprocity'
+display_title_lines:
+- 'Markups as Shadow Tariffs:'
+- How Market Power Skews Trade Reciprocity
 slug: markups-as-shadow-tariffs
 status: working-paper
 date: '2026-01-01'
@@ -51,6 +54,10 @@ online_appendix_url: null
 dashboard_url: null
 replication_slug: null
 raw_replication_url: null
+body_source: latex
+latex_dir: latex-src/markups-as-shadow-tariffs
+latex_main: DLL2025.tex
+latex_engine: pdflatex
 ---
 
 ## Machine-readable full text

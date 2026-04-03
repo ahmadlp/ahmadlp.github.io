@@ -437,36 +437,50 @@ WORK_IN_PROGRESS = [
 AUTHOR_AFFILIATION_OVERRIDES = {
     "can-trade-policy-mitigate-climate-change": {
         "Farid Farrokhi": "Boston College",
-        "Ahmad Lashkaripour": "Indiana University",
+        "Ahmad Lashkaripour": "Indiana University, CESifo, CEPR",
     },
     "can-trade-taxes-be-a-major-source-of-government-revenue": {
-        "Ahmad Lashkaripour": "Indiana University",
+        "Ahmad Lashkaripour": "Indiana University, CESifo, CEPR",
     },
     "discrete-trade": {
-        "Ahmad Lashkaripour": "Indiana University",
+        "Ahmad Lashkaripour": "Indiana University, CESifo, CEPR",
     },
     "economic-impacts-of-liberation-day-tariffs": {
         "Anna Ignatenko": "Norwegian School of Economics",
-        "Ahmad Lashkaripour": "Indiana University, CESIfo",
+        "Ahmad Lashkaripour": "Indiana University, CESifo, CEPR",
         "Luca Macedoni": "University of Milan, CESIfo",
         "Ina Simonovska": "UC Davis, NBER, CEPR, CESIfo",
     },
+    "integrating-climate-goals-into-trade-agreements": {
+        "Farid Farrokhi": "Boston College",
+        "Ahmad Lashkaripour": "Indiana University, CESifo, CEPR",
+        "Homa Taheri": "Indiana University",
+    },
+    "markups-as-shadow-tariffs": {
+        "Siying Ding": "UIBE",
+        "Ahmad Lashkaripour": "Indiana University, CESifo, CEPR",
+        "Volodymyr Lugovskyy": "Indiana University",
+    },
     "new-industrial-policy": {
-        "Ahmad Lashkaripour": "Indiana University",
+        "Ahmad Lashkaripour": "Indiana University, CESifo, CEPR",
         "Po-Shyan Wu": "Indiana University",
     },
     "profits-scale-economies-and-the-gains-from-trade-and-industrial-policy": {
-        "Ahmad Lashkaripour": "Indiana University",
+        "Ahmad Lashkaripour": "Indiana University, CESifo, CEPR",
         "Volodymyr Lugovskyy": "Indiana University",
     },
     "the-cost-of-a-global-tariff-war": {
-        "Ahmad Lashkaripour": "Indiana University",
+        "Ahmad Lashkaripour": "Indiana University, CESifo, CEPR",
     },
     "trade-and-technology-adoption-in-distorted-economies": {
         "Farid Farrokhi": "Purdue University",
-        "Ahmad Lashkaripour": "Indiana University",
+        "Ahmad Lashkaripour": "Indiana University, CESifo, CEPR",
         "Heitor S. Pellegrina": "University of Notre Dame",
     },
+}
+
+CANONICAL_AUTHOR_AFFILIATIONS = {
+    "Ahmad Lashkaripour": "Indiana University, CESifo, CEPR",
 }
 
 GRANTS = [
@@ -1876,7 +1890,11 @@ def clean_affiliation_text(value: str) -> str:
 def extract_author_affiliations(paper: dict) -> dict[str, str]:
     lines = [normalize_text(line.strip()) for line in paper["body_markdown"].splitlines()[:140] if line.strip()]
     if not lines:
-        return dict(AUTHOR_AFFILIATION_OVERRIDES.get(paper["slug"], {}))
+        affiliations = dict(AUTHOR_AFFILIATION_OVERRIDES.get(paper["slug"], {}))
+        for author, affiliation in CANONICAL_AUTHOR_AFFILIATIONS.items():
+            if author in paper["authors"]:
+                affiliations[author] = affiliation
+        return affiliations
 
     joined = "\n".join(lines)
     affiliations: dict[str, str] = {}
@@ -1915,6 +1933,9 @@ def extract_author_affiliations(paper: dict) -> dict[str, str]:
 
     for author, affiliation in AUTHOR_AFFILIATION_OVERRIDES.get(paper["slug"], {}).items():
         affiliations[author] = affiliation
+    for author, affiliation in CANONICAL_AUTHOR_AFFILIATIONS.items():
+        if author in paper["authors"]:
+            affiliations[author] = affiliation
     return affiliations
 
 
@@ -1924,6 +1945,13 @@ def format_author_display_name(paper: dict, author: str) -> str:
     if affiliation:
         return f"{author} ({affiliation})"
     return author
+
+
+def render_visible_paper_title_html(paper: dict) -> str:
+    title_lines = paper.get("display_title_lines")
+    if title_lines:
+        return "<br>".join(html.escape(str(line)) for line in title_lines if str(line).strip())
+    return html.escape(paper["title"])
 
 
 def natural_sort_key(path: Path) -> list[int | str]:
@@ -2111,6 +2139,9 @@ def strip_wrapped_math_dollars(text: str) -> str:
 
 def normalize_math_tex(math_text: str) -> str:
     normalized = math_text
+    primed_atom_pattern = re.compile(
+        r"((?:\\[A-Za-z]+(?:\s*\{[^{}]*\})*|[A-Za-z]+(?:\s*\{[^{}]*\})*))'(?=\s*[_^])"
+    )
     previous = None
     while normalized != previous:
         previous = normalized
@@ -2126,6 +2157,10 @@ def normalize_math_tex(math_text: str) -> str:
         normalized = replace_tex_macro(normalized, "text", 1, normalize_text_wrapper)
         normalized = replace_tex_macro(normalized, "textrm", 1, normalize_text_wrapper)
         normalized = replace_tex_macro(normalized, "mbox", 1, lambda arg: arg)
+        normalized = re.sub(r"\^\s*\{\s*\}", "", normalized)
+        normalized = re.sub(r"_\s*\{\s*\}", "", normalized)
+        normalized = re.sub(r"\^\{([^{}]*?)'\}", lambda m: "^{" + m.group(1) + r"\prime}", normalized)
+        normalized = primed_atom_pattern.sub(lambda m: "{" + m.group(1) + "'}", normalized)
         normalized = re.sub(r"([A-Za-z])_\^", r"\1^", normalized)
     normalized = re.sub(r"\{\s*\}", "", normalized)
     if normalized.strip() in {"\\", r"\\"}:
@@ -2296,6 +2331,45 @@ def fix_missing_inline_spacing(fragment_html: str) -> str:
     return "".join(str(child) for child in container.contents)
 
 
+def apply_custom_paper_body_overrides(paper: dict, fragment_html: str) -> str:
+    if paper.get("slug") != "markups-as-shadow-tariffs":
+        return fragment_html
+
+    soup = BeautifulSoup(fragment_html, "html.parser")
+    anchor = soup.find("span", id="the-welfare-loss-from-market-power-closed-vs-open-economies")
+    if anchor is None:
+        container = soup.body if soup.body else soup
+        return "".join(str(child) for child in container.contents)
+
+    figure = anchor.find_parent("figure")
+    if figure is None:
+        container = soup.body if soup.body else soup
+        return "".join(str(child) for child in container.contents)
+
+    caption = figure.find("figcaption", recursive=False)
+    note = figure.find("div", class_="minipage", recursive=False)
+    if caption is None:
+        container = soup.body if soup.body else soup
+        return "".join(str(child) for child in container.contents)
+
+    replacement_img = soup.new_tag(
+        "img",
+        src=f"../paper-assets/{paper['slug']}/textbook-figure-rendered.png",
+        alt="Closed and open economy markup diagram",
+    )
+    replacement_img["class"] = ["paper-figure-override-image"]
+
+    figure.clear()
+    figure.append(anchor)
+    figure.append(caption)
+    figure.append(replacement_img)
+    if note is not None:
+        figure.append(note)
+
+    container = soup.body if soup.body else soup
+    return "".join(str(child) for child in container.contents)
+
+
 def flatten_sidenote_root(root: Tag | BeautifulSoup) -> str:
     for node in root.select(".footnote-mark"):
         node.decompose()
@@ -2440,6 +2514,13 @@ def extract_leading_keywords_text(soup: BeautifulSoup) -> str | None:
 
 def sanitize_latex_for_html(tex_text: str, work_dir: Path) -> tuple[str, list[str]]:
     notes: list[str] = []
+
+    def normalize_external_target(target: str) -> str:
+        normalized = target
+        while normalized.startswith("../"):
+            normalized = normalized[3:]
+        return normalized
+
     if r"\documentclass[english,AER, finalmode]{AEA}" in tex_text:
         tex_text = tex_text.replace(
             r"\documentclass[english,AER, finalmode]{AEA}",
@@ -2468,6 +2549,18 @@ def sanitize_latex_for_html(tex_text: str, work_dir: Path) -> tuple[str, list[st
     if updated != tex_text:
         tex_text = updated
         notes.append("Replaced JEEA Abstract macro with standard abstract environment.")
+    updated = replace_tex_macro(
+        tex_text,
+        "caption*",
+        1,
+        lambda body: rf"\par\smallskip{{\centering {body}\par}}",
+    )
+    if updated != tex_text:
+        tex_text = updated
+        notes.append("Replaced starred captions with centered text for HTML compilation.")
+    if r"\usepackage{sourceserifpro}" in tex_text:
+        tex_text = tex_text.replace(r"\usepackage{sourceserifpro}", r"% \usepackage{sourceserifpro}")
+        notes.append("Disabled sourceserifpro for HTML compilation to avoid TeX4ht ligature corruption.")
     if r"\usepackage{xr}" in tex_text:
         tex_text = tex_text.replace(r"\usepackage{xr}", r"% \usepackage{xr}")
         notes.append("Disabled xr package for HTML compilation.")
@@ -2519,18 +2612,67 @@ def sanitize_latex_for_html(tex_text: str, work_dir: Path) -> tuple[str, list[st
         notes.append("Replaced dcolumn alignment specs with right-aligned columns for HTML compilation.")
 
     def replace_external_include(match: re.Match[str]) -> str:
-        basename = match.group(1)
+        include_target = match.group(1)
+        basename = Path(include_target).name
         candidate = work_dir / "Tables" / f"{basename}.tex"
         if candidate.exists():
             notes.append(f"Rewrote external include for {basename} to local Tables/{basename}.tex.")
             return rf"\input{{Tables/{basename}}}"
+        if include_target.startswith("../"):
+            local_target = normalize_external_target(include_target)
+            local_candidate = work_dir / f"{local_target}.tex"
+            if local_candidate.exists():
+                notes.append(f"Rewrote external include {include_target} to local {local_target}.tex.")
+                return rf"\input{{{local_target}}}"
+            notes.append(f"Disabled missing external include {include_target} for HTML compilation.")
+            return f"% {match.group(0)}"
         return match.group(0)
 
     tex_text = re.sub(
-        r"\\include\{\.\./Replication_[^/]+/[^}]+/([^}]+)\}",
+        r"\\include\{([^}]+)\}",
         replace_external_include,
         tex_text,
     )
+
+    def replace_missing_external_graphic(match: re.Match[str]) -> str:
+        graphic_command = match.group(1)
+        graphic_target = match.group(2)
+        if not graphic_target.startswith("../"):
+            return match.group(0)
+        local_target = normalize_external_target(graphic_target)
+        candidate = work_dir / local_target
+        if candidate.exists():
+            notes.append(f"Rewrote external figure {graphic_target} to local {local_target}.")
+            return f"{graphic_command}{local_target}}}"
+        for suffix in ("", ".pdf", ".png", ".jpg", ".jpeg", ".eps", ".svg"):
+            if (work_dir / f"{local_target}{suffix}").exists():
+                notes.append(f"Rewrote external figure {graphic_target} to local {local_target}{suffix}.")
+                return f"{graphic_command}{local_target}}}"
+        notes.append(f"Disabled missing external figure {graphic_target} for HTML compilation.")
+        return r"\mbox{}"
+
+    tex_text = re.sub(
+        r"(\\includegraphics(?:\[[^\]]*\])?\{([^}]+)\})",
+        replace_missing_external_graphic,
+        tex_text,
+    )
+
+    manual_repairs = [
+        (
+            r"\text{d}\ln\tau_{i,k}^{\left(Q\right)}+\alpha_{i,k}^{(\tilde{L})}d\ln\tilde{w}_{i}+\sum_{g}\alpha_{i,gk}^{\left(I\right)}\tilde{P}_{i,g},",
+            r"\text{d}\ln\tau_{i,k}^{\left(Q\right)}+\alpha_{i,k}^{(\tilde{L})}\text{d}\ln\tilde{w}_{i}+\sum_{g}\alpha_{i,gk}^{\left(I\right)}\text{d}\ln\tilde{P}_{i,g},",
+            "Repaired malformed differential notation in an appendix price-change equation for HTML compilation.",
+        ),
+        (
+            r"+\frac{1}{\sigma_{g}-1}d\ln\lambda_{ii,g}",
+            r"+\frac{1}{\sigma_{g}-1}\text{d}\ln\lambda_{ii,g}",
+            "Normalized appendix differential notation before MathJax rendering.",
+        ),
+    ]
+    for old, new, note in manual_repairs:
+        if old in tex_text:
+            tex_text = tex_text.replace(old, new)
+            notes.append(note)
     return tex_text, notes
 
 
@@ -2636,6 +2778,57 @@ def render_tikz_fragment_to_png(tikz_fragment: str, build_dir: Path, basename: s
     render_source_to_png(cropped_pdf, target_path, dpi=dpi)
 
 
+def render_latex_fragment_to_png(
+    latex_fragment: str,
+    build_dir: Path,
+    basename: str,
+    target_path: Path,
+    *,
+    preamble_lines: list[str] | None = None,
+    dpi: int = 600,
+) -> None:
+    tex_file = build_dir / f"{basename}.tex"
+    pdf_file = build_dir / f"{basename}.pdf"
+    cropped_pdf = build_dir / f"{basename}-crop.pdf"
+    preamble = "\n".join(
+        preamble_lines
+        or [
+            r"\usepackage[T1]{fontenc}",
+            r"\usepackage[utf8]{inputenc}",
+            r"\usepackage{amsmath}",
+            r"\usepackage{amssymb}",
+            r"\usepackage{mathrsfs}",
+            r"\usepackage{graphicx}",
+            r"\usepackage{subcaption}",
+            r"\usepackage{tikz}",
+            r"\usetikzlibrary{patterns,decorations.pathreplacing}",
+            r"\usepackage{pgfplots}",
+            r"\pgfplotsset{compat=1.18}",
+            r"\usepackage[scaled=1]{helvet}",
+            r"\usepackage{mathpazo}",
+            r"\usepackage{palatino}",
+            r"\usepackage[scr=boondox,cal=cm]{mathalpha}",
+            r"\usepackage[active,tightpage]{preview}",
+        ]
+    )
+    tex_source = textwrap.dedent(
+        f"""
+        \\documentclass[12pt]{{article}}
+        {preamble}
+        \\pagestyle{{empty}}
+        \\begin{{document}}
+        \\begin{{preview}}
+        {latex_fragment}
+        \\end{{preview}}
+        \\end{{document}}
+        """
+    ).strip() + "\n"
+    tex_file.write_text(tex_source, encoding="utf-8")
+    run_command(["pdflatex", "-interaction=nonstopmode", tex_file.name], build_dir, f"pdflatex for {basename}", timeout=180)
+    run_command(["pdfcrop", pdf_file.name, cropped_pdf.name], build_dir, f"pdfcrop for {basename}", timeout=180)
+    render_source_to_png(cropped_pdf, target_path, dpi=dpi)
+
+
 def build_custom_latex_figure_overrides(
     paper: dict,
     tex_text: str,
@@ -2643,49 +2836,80 @@ def build_custom_latex_figure_overrides(
 ) -> tuple[dict[str, dict[str, Path | str]], list[str]]:
     overrides: dict[str, dict[str, Path | str]] = {}
     notes: list[str] = []
-    if paper.get("slug") != "new-industrial-policy":
+    if paper.get("slug") not in {"new-industrial-policy", "markups-as-shadow-tariffs"}:
         return overrides, notes
 
     custom_dir = work_dir / ".codex-figure-overrides"
     custom_dir.mkdir(parents=True, exist_ok=True)
 
-    lane_jpeg = ROOT / "Tex" / "IP" / "Lane_QJE.jpg"
-    lane_eps = work_dir / "Lane_QJE.eps"
-    if lane_jpeg.exists():
-        overrides["Lane_QJE.svg"] = {
-            "source_path": lane_jpeg,
-            "target_relative_path": "Lane_QJE-source.jpg",
-        }
-        notes.append("Used the provided Lane_QJE JPEG source for the HTML page.")
-    elif lane_eps.exists():
-        try:
-            lane_png = custom_dir / "Lane_QJE-rendered.png"
-            render_source_to_png(lane_eps, lane_png, crop_eps=True)
+    if paper.get("slug") == "new-industrial-policy":
+        lane_jpeg = ROOT / "Tex" / "IP" / "Lane_QJE.jpg"
+        lane_eps = work_dir / "Lane_QJE.eps"
+        if lane_jpeg.exists():
             overrides["Lane_QJE.svg"] = {
-                "source_path": lane_png,
-                "target_relative_path": "Lane_QJE-rendered.png",
+                "source_path": lane_jpeg,
+                "target_relative_path": "Lane_QJE-source.jpg",
             }
-            notes.append("Re-rendered Lane_QJE directly from the EPS source for the HTML page.")
-        except Exception as exc:
-            notes.append(f"Lane_QJE EPS override failed: {exc}")
+            notes.append("Used the provided Lane_QJE JPEG source for the HTML page.")
+        elif lane_eps.exists():
+            try:
+                lane_png = custom_dir / "Lane_QJE-rendered.png"
+                render_source_to_png(lane_eps, lane_png, crop_eps=True)
+                overrides["Lane_QJE.svg"] = {
+                    "source_path": lane_png,
+                    "target_relative_path": "Lane_QJE-rendered.png",
+                }
+                notes.append("Re-rendered Lane_QJE directly from the EPS source for the HTML page.")
+            except Exception as exc:
+                notes.append(f"Lane_QJE EPS override failed: {exc}")
 
-    tikz_fragment = extract_tex_block(tex_text, r"\begin{tikzpicture}", r"\end{tikzpicture}")
-    if tikz_fragment:
+        tikz_fragment = extract_tex_block(tex_text, r"\begin{tikzpicture}", r"\end{tikzpicture}")
+        if tikz_fragment:
+            try:
+                tikz_png = custom_dir / "New_Industrial_policy_R10x-rendered.png"
+                render_tikz_fragment_to_png(
+                    tikz_fragment,
+                    custom_dir,
+                    "new-industrial-policy-figure-2",
+                    tikz_png,
+                )
+                overrides["New_Industrial_policy_R10x.svg"] = {
+                    "source_path": tikz_png,
+                    "target_relative_path": "New_Industrial_policy_R10x-rendered.png",
+                }
+                notes.append("Re-rendered the ex ante model TikZ figure through a standalone PDF build for the HTML page.")
+            except Exception as exc:
+                notes.append(f"New Industrial Policy TikZ override failed: {exc}")
+
+    if paper.get("slug") == "markups-as-shadow-tariffs":
         try:
-            tikz_png = custom_dir / "New_Industrial_policy_R10x-rendered.png"
-            render_tikz_fragment_to_png(
-                tikz_fragment,
-                custom_dir,
-                "new-industrial-policy-figure-2",
-                tikz_png,
-            )
-            overrides["New_Industrial_policy_R10x.svg"] = {
-                "source_path": tikz_png,
-                "target_relative_path": "New_Industrial_policy_R10x-rendered.png",
-            }
-            notes.append("Re-rendered the ex ante model TikZ figure through a standalone PDF build for the HTML page.")
+            figure_fragment = extract_tex_block(tex_text, r"\begin{figure}[!tbh]", r"\end{figure}", occurrence=1)
+            if figure_fragment:
+                figure_body = figure_fragment.replace(r"\begin{figure}[!tbh]", "", 1).replace(r"\end{figure}", "", 1)
+                figure_body = replace_tex_macro(figure_body, "caption", 1, lambda _body: "")
+                figure_body = replace_tex_macro(figure_body, "caption*", 1, lambda body: rf"\par{{\centering {body}\par}}")
+                figure_body = figure_body.replace(
+                    r"\begin{subfigure}{0.4\textwidth}",
+                    r"\begin{minipage}[t]{0.4\textwidth}\centering",
+                ).replace(
+                    r"\end{subfigure}",
+                    r"\end{minipage}",
+                )
+                if r"\vspace{-7.5pt}" in figure_body:
+                    figure_body = figure_body.split(r"\vspace{-7.5pt}", 1)[0].rstrip()
+                textbook_png = custom_dir / "textbook-figure-rendered.png"
+                render_latex_fragment_to_png(
+                    figure_body,
+                    custom_dir,
+                    "markups-textbook-figure",
+                    textbook_png,
+                )
+                target_dir = PAPER_ASSETS_DIR / paper["slug"]
+                target_dir.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(textbook_png, target_dir / "textbook-figure-rendered.png")
+                notes.append("Re-rendered the textbook TikZ figure directly from LaTeX for the HTML page.")
         except Exception as exc:
-            notes.append(f"New Industrial Policy TikZ override failed: {exc}")
+            notes.append(f"Markups textbook figure override failed: {exc}")
 
     return overrides, notes
 
@@ -2784,6 +3008,57 @@ def rewrite_and_copy_tex4ht_assets(
     asset_root.mkdir(parents=True, exist_ok=True)
     asset_overrides = asset_overrides or {}
 
+    def resolve_asset(relative_path: Path, override: dict[str, Path | str] | None = None) -> tuple[Path, Path] | None:
+        if override:
+            override_source = Path(str(override["source_path"]))
+            source_path = override_source if override_source.is_absolute() else (work_dir / override_source).resolve()
+            if not source_path.exists():
+                return None
+            target_relative_path = Path(str(override.get("target_relative_path", relative_path.with_suffix(source_path.suffix))))
+            return source_path, target_relative_path
+
+        source_path = (work_dir / relative_path).resolve()
+        if not source_path.exists():
+            for suffix in ("", ".pdf", ".png", ".jpg", ".jpeg", ".eps", ".svg", ".gif"):
+                candidate = (work_dir / f"{relative_path.as_posix()}{suffix}").resolve()
+                if candidate.exists():
+                    source_path = candidate
+                    break
+            else:
+                return None
+        target_relative_path = relative_path
+        detected_extension = detect_asset_extension(source_path)
+        if detected_extension and relative_path.suffix.lower() != detected_extension:
+            target_relative_path = relative_path.with_suffix(detected_extension)
+        return source_path, target_relative_path
+
+    def copy_asset(source_path: Path, target_relative_path: Path) -> str:
+        public_target = asset_root / target_relative_path
+        public_target.parent.mkdir(parents=True, exist_ok=True)
+        copy_key = target_relative_path.as_posix()
+        if copy_key not in copied:
+            shutil.copy2(source_path, public_target)
+            copied.add(copy_key)
+        return f"../paper-assets/{slug}/{target_relative_path.as_posix()}"
+
+    for figure in soup.find_all("figure"):
+        figcaption = figure.find("figcaption")
+        alt_text = figcaption.get_text(" ", strip=True) if figcaption else ""
+        for child in list(figure.children):
+            if not isinstance(child, NavigableString):
+                continue
+            candidate_text = child.strip()
+            if not candidate_text or "/" not in candidate_text or candidate_text.startswith(("Figure", "Table")):
+                continue
+            relative_path = Path(candidate_text)
+            resolved = resolve_asset(relative_path, asset_overrides.get(candidate_text))
+            if not resolved:
+                continue
+            source_path, target_relative_path = resolved
+            img_tag = soup.new_tag("img", src=copy_asset(source_path, target_relative_path), alt=alt_text)
+            img_tag["loading"] = "lazy"
+            child.replace_with(img_tag)
+
     for tag in soup.find_all(True):
         if tag.name == "img":
             tag.attrs.pop("width", None)
@@ -2800,27 +3075,11 @@ def rewrite_and_copy_tex4ht_assets(
                 continue
             relative_path = Path(value)
             override = asset_overrides.get(value)
-            if override:
-                override_source = Path(str(override["source_path"]))
-                source_path = override_source if override_source.is_absolute() else (work_dir / override_source).resolve()
-                if not source_path.exists():
-                    continue
-                target_relative_path = Path(str(override.get("target_relative_path", relative_path.with_suffix(source_path.suffix))))
-            else:
-                source_path = (work_dir / relative_path).resolve()
-                if not source_path.exists():
-                    continue
-                target_relative_path = relative_path
-                detected_extension = detect_asset_extension(source_path)
-                if detected_extension and relative_path.suffix.lower() != detected_extension:
-                    target_relative_path = relative_path.with_suffix(detected_extension)
-            public_target = asset_root / target_relative_path
-            public_target.parent.mkdir(parents=True, exist_ok=True)
-            copy_key = target_relative_path.as_posix()
-            if copy_key not in copied:
-                shutil.copy2(source_path, public_target)
-                copied.add(copy_key)
-            tag[attribute] = f"../paper-assets/{slug}/{target_relative_path.as_posix()}"
+            resolved = resolve_asset(relative_path, override)
+            if not resolved:
+                continue
+            source_path, target_relative_path = resolved
+            tag[attribute] = copy_asset(source_path, target_relative_path)
     container = soup.body if soup.body else soup
     return "".join(str(child) for child in container.contents), len(copied)
 
@@ -2960,8 +3219,13 @@ def build_latex_fragment(paper: dict) -> tuple[dict, dict]:
                 run_command(["biber", jobname], work_dir, "biber")
                 report["notes"].append("Ran biber for bibliography resolution.")
             elif r"\bibliography{" in tex_text and not (work_dir / f"{jobname}.bbl").exists():
-                run_command(["bibtex", jobname], work_dir, "bibtex")
-                report["notes"].append("Ran bibtex for bibliography resolution.")
+                aux_path = work_dir / f"{jobname}.aux"
+                aux_text = aux_path.read_text(errors="ignore") if aux_path.exists() else ""
+                if "\\bibdata" in aux_text and "\\bibstyle" in aux_text:
+                    run_command(["bibtex", jobname], work_dir, "bibtex")
+                    report["notes"].append("Ran bibtex for bibliography resolution.")
+                else:
+                    report["notes"].append("Skipped bibtex because the first HTML pass did not produce a bibliography-ready AUX file.")
             second_code, _second_output = run_make4ht_pass(latex_main, work_dir, latex_engine, allow_failure=True)
             if second_code != 0:
                 report["notes"].append("make4ht reported errors during the second pass; attempting to use any generated HTML/CSS outputs.")
@@ -3009,6 +3273,7 @@ def build_latex_fragment(paper: dict) -> tuple[dict, dict]:
             rewritten_body = fix_small_caps_spacing(rewritten_body)
             rewritten_body = fix_missing_inline_spacing(rewritten_body)
             rewritten_body = normalize_math_markup(rewritten_body)
+            rewritten_body = apply_custom_paper_body_overrides(paper, rewritten_body)
             scoped_css = scope_tex4ht_css(main_css_path.read_text(errors="ignore"), ".tex4ht-fragment")
             scoped_css = strip_problematic_tex4ht_css(scoped_css)
             stylesheet_target = PAPER_ASSETS_DIR / slug / "tex4ht.css"
@@ -3272,7 +3537,7 @@ def render_papers(papers: list[dict], topic_by_slug: dict) -> list[str]:
 </nav>
 
 <article class="paper-article">
-  <h1><span>{html.escape(paper['title'])}</span></h1>
+  <h1><span>{render_visible_paper_title_html(paper)}</span></h1>
   {author_lines_html}
   <p class="subtitle paper-citation-line">{venue_line_html}</p>
   <p class="paper-links-line">{actions_html}</p>
@@ -3530,11 +3795,18 @@ def render_research_hub(papers: list[dict], hubs: list[dict], queries: list[dict
         return f"({leading})"
 
     def render_paper_listing(paper: dict, index: int) -> str:
+        has_source_html = paper.get("body_source") == "latex"
+        primary_href = (
+            href_from(ROOT / "Research.html", "papers/" + paper["slug"] + ".html")
+            if has_source_html
+            else href_from(ROOT / "Research.html", paper["pdf_url"])
+        )
         assets = [
             '<a href="#" onclick="toggleAbstract(this); return false;">[Abstract]</a>',
-            f'<a href="{href_from(ROOT / "Research.html", "papers/" + paper["slug"] + ".html")}">[HTML]</a>',
             f'<a href="{href_from(ROOT / "Research.html", paper["pdf_url"])}">[PDF]</a>',
         ]
+        if has_source_html:
+            assets.insert(1, f'<a href="{href_from(ROOT / "Research.html", "papers/" + paper["slug"] + ".html")}">[HTML]</a>')
         if paper.get("published_url"):
             assets.append(f'<a href="{paper["published_url"]}">[published version]</a>')
         if paper.get("working_paper_url"):
@@ -3554,7 +3826,7 @@ def render_research_hub(papers: list[dict], hubs: list[dict], queries: list[dict
 <div class="paper">
   <div class="paper-title">
     <span class="paper-number">[{index}]</span>
-    <a href="{href_from(ROOT / "Research.html", "papers/" + paper["slug"] + ".html")}">{html.escape(paper['title'])}</a>
+    <a href="{primary_href}">{html.escape(paper['title'])}</a>
   </div>
   <div class="paper-meta">{render_paper_meta(paper)}</div>
   <div class="paper-links">{' '.join(assets)}</div>
