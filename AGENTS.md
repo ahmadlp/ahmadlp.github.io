@@ -126,6 +126,22 @@ This file records repo-specific guardrails for future agents working on
   - align the caption to the left edge of the table block
 - Validate the result in a browser by comparing the first paragraph column and the first table block. Their left edges should match exactly. If the paragraph starts around `left: 180px`, the table block and caption should start there too.
 
+## Nested Table Wrapper Rule
+
+- Mistake to avoid: assuming TeX4ht table wrappers are only one level deep.
+- In this repo, some papers use chains such as `div.table > figure.float > .ajdustwidth > .center > .tabular > table.tabular`.
+- If the stylesheet only targets immediate-child patterns such as `.ajdustwidth > .tabular > table.tabular`, the outer wrappers may look correct while the real top-level table collapses to a narrow strip or only part of the final table is visible.
+- This failure already occurred on `public/papers/the-cost-of-a-global-tariff-war.html`, where the last table (`#TBL-8`) rendered at a much narrower width than its wrapper.
+- Do not patch these cases by hand in generated HTML. Fix them in the shared paper-page stylesheet.
+- The correct fix is:
+  - normalize `.tabular`, `.center`, `.ajdustwidth`, and `.adjustwidth` wrappers at multiple nesting depths inside `div.table > figure.float`
+  - apply the full-width and overflow rules to those wrapper chains, not only to one exact hierarchy
+  - keep nested helper tables inside `td` and `th` exempt so header sub-tables and similar constructs can remain `width: auto`
+- Validate the result in a browser:
+  - compare the top-level `table.tabular` width to its immediate wrapper width
+  - check both desktop and mobile
+  - confirm that a table like `#TBL-8` no longer collapses inside a correctly sized outer wrapper
+
 ## Figure Aspect Ratio Rule
 
 - Mistake to avoid: trusting TeX4ht-generated image `width` and `height` attributes on exported paper figures.
@@ -261,6 +277,22 @@ This file records repo-specific guardrails for future agents working on
   - inline math inside a paragraph and a representative standalone equation should be visually equivalent in scale
   - if inline math is around the paragraph size, display math should be essentially the same size, not the smaller body default
 
+## MathJax Overflow Fitting Rule
+
+- Mistake to avoid: deciding that display equations fit just because the outer `.mathjax-env`, `.mathjax-block`, or `.displaymath` wrapper reports no overflow.
+- In this repo, the real overflow can live inside MathJax’s generated descendants such as `mjx-container[display='true']`, `mjx-math`, `mjx-mtable`, `mjx-table`, or `mjx-itable`, even when the wrapper’s own `clientWidth` and `scrollWidth` look fine.
+- This failure already caused an incomplete fix: many front-facing papers still had clipped display equations, including `public/papers/the-cost-of-a-global-tariff-war.html`, because the fitter measured only the outer wrapper layer.
+- Do not patch individual equations in generated HTML. Fix this in the shared MathJax fitting logic inside `authoring/scripts/build_seo_site.py`.
+- The correct fix is:
+  - compute required width from the rendered inner MathJax descendants, not only from the wrapper’s `scrollWidth`
+  - compare that required width to the owning text column or theorem block width
+  - rerun the fit pass after MathJax startup, page load, font readiness, pageshow, and resize, because late font metrics can change equation width
+  - keep sidenotes and margin notes out of the main fit pass unless you are intentionally changing margin-note math
+- Validate the result in a browser using actual rendered overflow:
+  - inspect `mjx-container[display='true']` elements, not only wrapper metrics
+  - verify at both desktop and mobile widths
+  - confirm that previously bad pages no longer have overwide display MathJax outside sidenotes
+
 ## Math Normalization Rule
 
 - Mistake to avoid: assuming every TeX4ht-emitted math string is already safe for MathJax after extraction.
@@ -370,6 +402,17 @@ This file records repo-specific guardrails for future agents working on
   - abstract at the same text-column width as the body
   - sidenotes in the margin rather than endnotes below the paper
 - Do not approximate these traits from memory when the reference is available.
+
+## Paper Layout Verification Rule
+
+- Mistake to avoid: declaring a shared paper-layout fix complete after spot-checking only one or two papers or only one viewport.
+- In this repo, a change can fix the sampled page while many other front-facing papers linked from `public/Research.html` still have clipped equations or collapsed tables.
+- For shared paper-page layout fixes, verify the full front-facing set at both desktop and mobile after MathJax has settled.
+- At minimum, the browser audit should check:
+  - overwide display `mjx-container[display='true']` nodes outside sidenotes and margin notes
+  - collapsed top-level tables where the wrapper is much wider than the actual `table.tabular`
+- Treat `public/papers/the-cost-of-a-global-tariff-war.html` as a regression canary, because it previously exposed both lingering display-math overflow and a collapsed final table after an earlier “fix”.
+- Do not rely only on a successful cache-backed rebuild, a CSS diff, or one representative page. Use rendered-browser evidence before telling the user the problem is fixed.
 
 ## SEO Separation Rule
 

@@ -266,6 +266,7 @@ div.center div.minipage {
   margin-bottom: 2rem;
   font-size: 1.4rem;
   line-height: 2rem;
+  box-sizing: border-box;
 }
 
 .tex4ht-fragment .tcolorbox {
@@ -331,6 +332,13 @@ div.center div.minipage {
 
 .tex4ht-fragment .mathjax-inline {
   white-space: normal;
+}
+
+.tex4ht-fragment .newtheorem .mathjax-inline,
+.tex4ht-fragment .tcolorbox .mathjax-inline {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: baseline;
 }
 
 .tex4ht-fragment mjx-container {
@@ -416,19 +424,29 @@ figure figcaption,
   text-align: left;
 }
 
-.tex4ht-fragment div.table > figure.float > .tabular > table.tabular,
-.tex4ht-fragment div.table > figure.float > .center > .tabular > table.tabular,
-.tex4ht-fragment div.table > figure.float > .ajdustwidth > .tabular > table.tabular,
-.tex4ht-fragment div.table > figure.float > .adjustwidth > .tabular > table.tabular {
+.tex4ht-fragment div.table > figure.float :is(.tabular, .center, .ajdustwidth, .adjustwidth) {
+  width: 100% !important;
+  max-width: none;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  overflow-x: auto;
+  text-align: left;
+}
+
+.tex4ht-fragment div.table > figure.float :is(.tabular, .center, .ajdustwidth, .adjustwidth) > table.tabular,
+.tex4ht-fragment div.table > figure.float :is(.tabular, .center, .ajdustwidth, .adjustwidth) > :is(.tabular, .center, .ajdustwidth, .adjustwidth) > table.tabular,
+.tex4ht-fragment div.table > figure.float :is(.tabular, .center, .ajdustwidth, .adjustwidth) > :is(.tabular, .center, .ajdustwidth, .adjustwidth) > :is(.tabular, .center, .ajdustwidth, .adjustwidth) > table.tabular {
   width: max-content;
   min-width: 100%;
   margin-left: 0;
   margin-right: 0;
 }
 
-.tex4ht-fragment div.table td table.tabular {
+.tex4ht-fragment div.table td table.tabular,
+.tex4ht-fragment div.table th table.tabular {
   width: auto;
   min-width: 0;
+  table-layout: auto;
 }
 
 table,
@@ -533,6 +551,8 @@ table {
   .tex4ht-fragment .displaymath,
   .tex4ht-fragment .center,
   .tex4ht-fragment .minipage,
+  .tex4ht-fragment .newtheorem,
+  .tex4ht-fragment .tcolorbox,
   .tex4ht-footnotes,
   .tex4ht-footnotes p,
   .tex4ht-footnotes .article-subheading,
@@ -556,8 +576,44 @@ table {
   .tex4ht-fragment div.table > figure.float > .tabular,
   .tex4ht-fragment div.table > figure.float > .center,
   .tex4ht-fragment div.table > figure.float > .ajdustwidth,
-  .tex4ht-fragment div.table > figure.float > .adjustwidth {
+  .tex4ht-fragment div.table > figure.float > .adjustwidth,
+  .tex4ht-fragment div.table > figure.float :is(.tabular, .center, .ajdustwidth, .adjustwidth) {
     width: 100% !important;
+  }
+
+  .tex4ht-fragment div.table > figure.float > .tabular > table.tabular,
+  .tex4ht-fragment div.table > figure.float > .center > .tabular > table.tabular,
+  .tex4ht-fragment div.table > figure.float > .ajdustwidth > .tabular > table.tabular,
+  .tex4ht-fragment div.table > figure.float > .adjustwidth > .tabular > table.tabular,
+  .tex4ht-fragment div.table > figure.float :is(.tabular, .center, .ajdustwidth, .adjustwidth) > table.tabular,
+  .tex4ht-fragment div.table > figure.float :is(.tabular, .center, .ajdustwidth, .adjustwidth) > :is(.tabular, .center, .ajdustwidth, .adjustwidth) > table.tabular,
+  .tex4ht-fragment div.table > figure.float :is(.tabular, .center, .ajdustwidth, .adjustwidth) > :is(.tabular, .center, .ajdustwidth, .adjustwidth) > :is(.tabular, .center, .ajdustwidth, .adjustwidth) > table.tabular {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed;
+  }
+
+  .tex4ht-fragment div.table td,
+  .tex4ht-fragment div.table th,
+  .tex4ht-fragment div.table td *,
+  .tex4ht-fragment div.table th * {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .tex4ht-fragment div.table td,
+  .tex4ht-fragment div.table th {
+    font-size: 1.12rem;
+    line-height: 1.45;
+    vertical-align: top;
+  }
+
+  .tex4ht-fragment div.table td table.tabular,
+  .tex4ht-fragment div.table th table.tabular {
+    width: auto !important;
+    min-width: 0 !important;
+    table-layout: auto !important;
   }
 
   figure,

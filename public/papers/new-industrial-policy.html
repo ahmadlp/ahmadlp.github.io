@@ -29,6 +29,71 @@
   <link href="../paper-assets/new-industrial-policy/tex4ht.css" rel="stylesheet">
   <link href="../tufte-style/paperpages.css" rel="stylesheet">
   <script>
+    window.__fitPaperMath = function __fitPaperMath() {
+      const selectors = [
+        '.paper-body .mathjax-block',
+        '.paper-body .mathjax-env',
+        '.paper-body .displaymath',
+        '.paper-body table.equation',
+        '.paper-body table.equation-star',
+        '.paper-body div.equation',
+        '.paper-body div.equation-star',
+        '.paper-body .newtheorem .mathjax-inline',
+        '.paper-body .tcolorbox .mathjax-inline'
+      ];
+      const requiredWidth = (container) => {
+        let required = container.scrollWidth;
+        const descendants = container.querySelectorAll(
+          "mjx-container[display='true'], .mathjax-inline mjx-container, mjx-math, mjx-mtable, mjx-table, mjx-itable"
+        );
+        for (const child of descendants) {
+          required = Math.max(
+            required,
+            child.scrollWidth || 0,
+            Math.round(child.getBoundingClientRect().width || 0)
+          );
+        }
+        return required;
+      };
+      const containers = document.querySelectorAll(selectors.join(','));
+      for (const container of containers) {
+        if (container.closest('.sidenote, .marginnote')) {
+          continue;
+        }
+        const baseFontSize =
+          Number.parseFloat(container.dataset.baseFontSize || '') ||
+          Number.parseFloat(window.getComputedStyle(container).fontSize);
+        if (!Number.isFinite(baseFontSize) || baseFontSize <= 0) {
+          continue;
+        }
+        container.dataset.baseFontSize = String(baseFontSize);
+        container.style.fontSize = `${baseFontSize}px`;
+        const widthOwner = container.classList.contains('mathjax-inline')
+          ? container.closest('.newtheorem, .tcolorbox, p, li, dd')
+          : container;
+        const availableWidth = widthOwner ? widthOwner.clientWidth : container.clientWidth;
+        if (!availableWidth) {
+          continue;
+        }
+        let overflowWidth = requiredWidth(container);
+        if (overflowWidth <= availableWidth + 2) {
+          continue;
+        }
+        let scale = (availableWidth - 2) / overflowWidth;
+        if (!Number.isFinite(scale) || scale >= 1) {
+          continue;
+        }
+        for (let pass = 0; pass < 4; pass += 1) {
+          container.style.fontSize = `${(baseFontSize * scale).toFixed(4)}px`;
+          overflowWidth = requiredWidth(container);
+          if (overflowWidth <= availableWidth + 2) {
+            break;
+          }
+          scale *= (availableWidth - 2) / overflowWidth;
+        }
+      }
+    };
+
     window.MathJax = {
       tex: {
         tags: "ams",
@@ -40,6 +105,17 @@
           nicefrac: ['\\frac{' + '#1' + '}{' + '#2' + '}', 2]
         }
       },
+      startup: {
+        ready() {
+          MathJax.startup.defaultReady();
+          window.requestAnimationFrame(() => {
+            if (window.__fitPaperMath) {
+              window.__fitPaperMath();
+            }
+            window.dispatchEvent(new Event('paper-math-ready'));
+          });
+        }
+      },
       chtml: {
         matchFontHeight: false,
         scale: 1.02
@@ -47,6 +123,34 @@
     };
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+  <script>
+    (() => {
+      let resizeTimer = null;
+      const runFit = () => {
+        if (!window.__fitPaperMath) {
+          return;
+        }
+        window.__fitPaperMath();
+      };
+      const scheduleFit = () => {
+        window.requestAnimationFrame(() => {
+          runFit();
+          window.setTimeout(runFit, 120);
+          window.setTimeout(runFit, 700);
+        });
+      };
+      window.addEventListener('load', scheduleFit);
+      window.addEventListener('pageshow', scheduleFit);
+      window.addEventListener('paper-math-ready', scheduleFit);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(scheduleFit).catch(() => {});
+      }
+      window.addEventListener('resize', () => {
+        window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout(scheduleFit, 120);
+      });
+    })();
+  </script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="e9e22272-901c-4ce2-be5a-fddb6a9340fa"></script>
   <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -131,7 +235,7 @@
   <div id="abstract">
     <p><strong>Abstract.</strong> Industrial policy, once dismissed as a relic of mercantilism, has reemerged in response to geopolitical tensions, environmental crises, and skepticism about unregulated markets. Advocates highlight its potential to address market failures arising from scale economies, market power, and externalities, while critics caution that real-world effectiveness remains uncertain. This essay develops a framework suited to today&#x27;s globally integrated economies, where industrial policy must balance domestic gains with unintended international consequences, especially in areas like climate change. It reviews both retrospective evaluations of past policies, such as South Korea&#x27;s HCI drive and China&#x27;s interventions, and forward-looking, model-based analyses estimating potential gains from optimal policy design. Evidence suggests that while some historical cases highlight successes, the broader record is mixed, with outcomes often complicated by spillovers and global integration. In a world of deep interdependence, unilateral efforts appear less likely to replicate past successes, strengthening the case for regional or international coordination in industrial policy.</p>
   </div>
-  <p class="paper-keywords-line"><span class="paper-keywords-label">Keywords</span> industrial policy, trade, misallocation, externality, distortion, subsidy, tariffs, import restriction, export promotion, optimal policy, input-output, network, economies of scale, R&amp;D, profits, welfare, coordination</p>
+  
   <section class="paper-body">
     <div class="tex4ht-fragment">
 <h3 class="likesectionHead" id="summary"><a id="x1-1000"></a>Summary</h3><p class="noindent">Once dismissed as a relic of mercantilist economic thinking, industrial policy has made a notable comeback. The
