@@ -3637,8 +3637,6 @@ def render_papers(papers: list[dict], topic_by_slug: dict) -> list[str]:
             ("Markdown source", f"sources/{paper['slug']}.md"),
             ("Reader view", reader_view_href_from(output_path, paper["slug"])),
         ]
-        if paper.get("published_url"):
-            action_links.append(("Published version", paper["published_url"]))
         if paper.get("working_paper_url"):
             action_links.append(("Working paper", paper["working_paper_url"]))
         if paper.get("slides_url"):
@@ -3967,8 +3965,6 @@ def render_research_hub(papers: list[dict], hubs: list[dict], queries: list[dict
         ]
         if has_source_html:
             assets.insert(1, f'<a href="{href_from(PUBLIC_ROOT / "Research.html", "papers/" + paper["slug"] + ".html")}">[HTML]</a>')
-        if paper.get("published_url"):
-            assets.append(f'<a href="{paper["published_url"]}">[published version]</a>')
         if paper.get("working_paper_url"):
             assets.append(f'<a href="{href_from(PUBLIC_ROOT / "Research.html", paper["working_paper_url"])}">[working paper]</a>')
         if paper.get("slides_url"):
