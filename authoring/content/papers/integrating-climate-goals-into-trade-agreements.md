@@ -48,7 +48,7 @@ latex_main: FLT_Spring2026.tex
 latex_engine: pdflatex
 sort_order: 2
 published_url: null
-slides_url: BL_Slides_ASSA_2022.pdf
+slides_url: FLT_slides.pdf
 working_paper_url: null
 online_appendix_url: null
 dashboard_url: null
