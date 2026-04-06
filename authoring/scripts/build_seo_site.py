@@ -45,6 +45,7 @@ RESEARCH_SOCIAL_IMAGE = "photos/research.jpg"
 ABOUT_SOCIAL_IMAGE = "photos/about.jpg"
 CURRENT_YEAR = 2026
 TODAY = date.today().isoformat()
+ICON_VERSION = "20260406"
 MONTH_NAMES = (
     "January",
     "February",
@@ -1117,9 +1118,10 @@ BASE_TEMPLATE = ENV.from_string(
   <meta name="description" content="{{ meta_description }}">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="Ahmad Lashkaripour">
-  <link rel="icon" type="image/png" href="{{ rel('favicon.png') }}">
-  <link rel="shortcut icon" href="{{ rel('favicon.png') }}">
-  <link rel="apple-touch-icon" href="{{ rel('apple-touch-icon.png') }}">
+  <link rel="icon" type="image/x-icon" href="{{ icon_ico_href }}" sizes="any">
+  <link rel="shortcut icon" href="{{ icon_ico_href }}">
+  <link rel="icon" type="image/png" href="{{ icon_png_href }}" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ apple_touch_icon_href }}" sizes="180x180">
   <link rel="canonical" href="{{ canonical_url }}">
   <meta property="og:type" content="{{ og_type }}">
   <meta property="og:title" content="{{ meta_title }}">
@@ -3568,6 +3570,9 @@ def render_page(
         active_nav=active_nav,
         scholar_meta=scholar_meta or [],
         current_year=CURRENT_YEAR,
+        icon_ico_href=f"/favicon.ico?v={ICON_VERSION}",
+        icon_png_href=f"/favicon.png?v={ICON_VERSION}",
+        apple_touch_icon_href=f"/apple-touch-icon.png?v={ICON_VERSION}",
         extra_stylesheets=extra_stylesheets or [],
         include_mathjax=include_mathjax,
         base_stylesheet=base_stylesheet,
