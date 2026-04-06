@@ -1117,7 +1117,9 @@ BASE_TEMPLATE = ENV.from_string(
   <meta name="description" content="{{ meta_description }}">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="Ahmad Lashkaripour">
-  <link rel="shortcut icon" href="{{ rel('header.png') }}">
+  <link rel="icon" type="image/png" href="{{ rel('favicon.png') }}">
+  <link rel="shortcut icon" href="{{ rel('favicon.png') }}">
+  <link rel="apple-touch-icon" href="{{ rel('apple-touch-icon.png') }}">
   <link rel="canonical" href="{{ canonical_url }}">
   <meta property="og:type" content="{{ og_type }}">
   <meta property="og:title" content="{{ meta_title }}">
