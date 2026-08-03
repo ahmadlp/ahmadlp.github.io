@@ -3,9 +3,8 @@ title: Industrial Policy under Scale Economies
 slug: industrial-policy-under-scale-economies
 page_kind: query
 parent_topic: industrial-policy
-summary: Scale economies create a textbook rationale for industrial policy, but international
-  equilibrium effects, especially immiserizing growth, limit what unilateral action
-  can achieve.
+summary: Scale economies provide a standard rationale for industrial policy, but
+  international price effects can limit or reverse the gains from unilateral action.
 primary_keywords:
 - industrial policy scale economies
 - scale economies and industrial policy
@@ -18,20 +17,21 @@ related_topics:
 - trade-policy
 faq_items:
 - question: Do scale economies automatically justify industrial policy?
-  answer: 'They justify considering it, not adopting it. Scale economies mean that a
-    firm operating below efficient scale imposes a cost on the economy: unit costs are
-    higher than they need to be. A well-placed subsidy can push output to the efficient
-    point. But in an open economy the subsidy also changes world prices. If the subsidized
-    sector is export-oriented, the terms-of-trade deterioration can offset or exceed
-    the production-side gain. The net effect depends on trade shares, demand elasticities,
-    and the response of foreign competitors; these are parameters, not principles.'
+  answer: 'No. A firm operating below efficient scale leaves unit costs above their
+    efficient level, so a well-placed subsidy can raise output and lower costs. In an
+    open economy, however, the subsidy also changes world prices. If the subsidized
+    sector exports, the terms-of-trade deterioration can offset or exceed the production
+    gain. The net effect depends on trade shares, demand elasticities, and the response
+    of foreign competitors.'
 updated_at: '2026-04-02'
 ---
 
-Scale economies make the private return to expanding output lower than the social return. A firm weighing whether to invest in capacity does not internalize the fact that higher output would reduce unit costs for the entire sector. This wedge between private and social incentives is the textbook case for [industrial policy](/topics/industrial-policy).
+With increasing returns, additional output can lower average cost throughout a sector. A firm deciding whether to invest in capacity does not capture this sector-wide cost reduction, so its private return to expansion lies below the social return. This wedge supplies the standard case for [industrial policy](/topics/industrial-policy).
 
-The difficulty arises in open economies. When a country subsidizes a scale-intensive industry, domestic output rises, but so does the country's supply to world markets. The resulting decline in world prices transfers part of the production gain to foreign buyers. [Lashkaripour and Lugovskyy (AER 2023)](/papers/profits-scale-economies-and-the-gains-from-trade-and-industrial-policy) formalize this mechanism and show it can be severe: unilateral industrial policy can produce immiserizing growth, where the terms-of-trade loss exceeds the efficiency gain from moving down the cost curve.
+International price effects can reverse this welfare argument. When a country subsidizes a scale-intensive industry, domestic output and world supply both rise. The resulting decline in world prices transfers part of the production gain to foreign buyers. [Lashkaripour and Lugovskyy (AER 2023)](/papers/profits-scale-economies-and-the-gains-from-trade-and-industrial-policy) show that the terms-of-trade loss can exceed the efficiency gain from moving down the cost curve. National welfare then falls even as output rises, an outcome they describe as immiserizing growth.
 
-The problem is compounded by [markups](/topics/markups-scale-economies-and-trade). Firms with market power already restrict output below the socially efficient level. A subsidy that expands output in one country may simply shift profits abroad rather than correct the underlying distortion. Trade policy alone (tariffs, export subsidies) turns out to be remarkably weak at fixing misallocation when both scale economies and markups are present.
+[Markups](/topics/markups-scale-economies-and-trade) add a second wedge. Firms with market power restrict output below its socially efficient level. A subsidy that expands output in one country may shift profits across borders without correcting the underlying distortion. Tariffs and export subsidies alone are weak instruments for correcting misallocation when scale economies and markups coexist.
 
-What does work, at least in the quantitative models, is coordinated policy. [Lashkaripour and Wu (Oxford RE 2025)](/papers/new-industrial-policy) argue that deep trade agreements which jointly discipline subsidies and reduce tariffs can deliver the efficiency gains that unilateral policy promises but cannot reliably achieve. The logic is that coordination internalizes the terms-of-trade externality: when all countries expand scale-intensive sectors simultaneously under agreed rules, no single country bears a disproportionate price decline. The historical cases (Korea's HCI drive, China's manufacturing push) succeeded partly because they operated in a less integrated global economy where the terms-of-trade feedback was weaker. Replicating those outcomes today, with tighter trade linkages and faster retaliation, is a harder proposition.
+The quantitative models yield a stronger case for coordinated policy. [Lashkaripour and Wu (Oxford RE 2025)](/papers/new-industrial-policy) argue that deep trade agreements that jointly discipline subsidies and reduce tariffs can deliver efficiency gains that unilateral policy cannot reliably secure. By internalizing the terms-of-trade externality, common rules allow countries to expand scale-intensive production without leaving one country to absorb a disproportionate price decline.
+
+The historical cases of Korea's HCI drive and China's manufacturing push operated in a less integrated global economy, where terms-of-trade feedback was weaker. Tighter trade linkages and faster retaliation make those outcomes harder to reproduce today.

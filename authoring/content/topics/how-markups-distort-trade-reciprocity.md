@@ -3,8 +3,8 @@ title: How Markups Distort Trade Reciprocity
 slug: how-markups-distort-trade-reciprocity
 page_kind: query
 parent_topic: markups-scale-economies-and-trade
-summary: Market power functions as a shadow tariff, shifting surplus across borders
-  and undermining reciprocity metrics that count only observed tariff rates.
+summary: Market power acts as a shadow tariff by shifting surplus across borders,
+  so observed tariff concessions provide an incomplete measure of reciprocity.
 primary_keywords:
 - markups distort trade reciprocity
 - shadow tariffs
@@ -17,20 +17,19 @@ related_topics:
 - trade-policy
 faq_items:
 - question: Why call a markup a shadow tariff?
-  answer: 'A tariff inserts a wedge between the world price and the domestic price,
-    creating deadweight loss at home and transferring surplus from foreign exporters
-    to the domestic treasury. A markup does something analytically parallel: it inserts
-    a wedge between marginal cost and the sale price, creating deadweight loss and transferring
-    surplus to the firm''s owners, who may be domestic or foreign. When the firm exports,
-    part of the surplus extraction falls on foreign consumers, just as a tariff would.
-    The term "shadow tariff" captures this welfare equivalence.'
+  answer: 'A tariff places a wedge between the world and domestic prices, creating
+    deadweight loss at home and transferring surplus from foreign exporters to the
+    domestic treasury. A markup places a parallel wedge between marginal cost and
+    the sale price. It creates deadweight loss and transfers surplus to the firm''s
+    owners, who may be domestic or foreign. When the firm exports, foreign consumers
+    bear part of this transfer. The term "shadow tariff" refers to this welfare equivalence.'
 updated_at: '2026-04-02'
 ---
 
-Trade reciprocity, as practiced in WTO negotiations, is measured in tariff concessions. Country A lowers its tariff on steel; Country B lowers its tariff on automobiles. The implicit accounting assumes that tariffs are the principal wedge distorting market access. But firms with market power impose their own wedge, the markup, and this wedge transfers surplus across borders in much the same way a tariff does.
+Reciprocity in WTO negotiations is usually recorded as an exchange of tariff concessions. Country A lowers its tariff on steel, while Country B lowers its tariff on automobiles. This accounting treats tariffs as the main wedge governing market access. Firms with market power impose another wedge, the markup, which transfers surplus across borders much as a tariff does.
 
-[Ding, Lashkaripour, and Lugovskyy (2026)](/papers/markups-as-shadow-tariffs) formalize the analogy. They compute the tariff-equivalent of markup-driven surplus transfers and find that high-income countries enjoy an average shadow tariff of 17.6 percent. This is not a metaphor: it is a quantitative statement about how much additional surplus these countries extract from trading partners through market power, over and above whatever their statutory tariffs impose. The mechanism runs through [within-industry specialization](/papers/within-industry-specialization-and-global-market-power). Rich economies concentrate in product segments where substitution elasticities are low and markups are high, so every unit they export carries a larger rent extraction.
+[Ding, Lashkaripour, and Lugovskyy (2026)](/papers/markups-as-shadow-tariffs) formalize this equivalence. They compute the tariff-equivalent of markup-driven surplus transfers and estimate an average shadow tariff of 17.6 percent for high-income countries. This figure measures the additional surplus these countries extract from trading partners through market power, beyond the effect of their statutory tariffs. The mechanism runs through [within-industry specialization](/papers/within-industry-specialization-and-global-market-power). Rich economies concentrate in product segments with low substitution elasticities and high markups, so their exports extract more rent per unit sold.
 
-The consequences for trade agreements are concrete. If two countries negotiate tariff reductions and declare the result reciprocal, they have equalized one wedge while ignoring another that may be larger. A country whose firms charge high markups on exports is extracting surplus that does not appear in any tariff schedule. A country whose firms face intense competition and charge low markups is, in effect, granting market access more generously than its tariff rates suggest. Reciprocity computed only from tariff data is incomplete, and the error is systematic: it favors countries with more market power.
+Tariff concessions can therefore appear reciprocal while leaving another markup wedge, perhaps a larger one, untouched. A country whose exporters charge high markups extracts surplus that appears in no tariff schedule. A country whose firms face stronger competition and charge lower markups grants more market access than its tariff rates alone suggest. Reciprocity computed only from tariff data is incomplete, and the error systematically favors countries with greater market power.
 
-This does not mean markups should be regulated through trade agreements; competition policy and trade policy raise different institutional questions. But it does mean that the welfare accounting of trade agreements is wrong if it ignores markups. Any assessment of whether a deal is balanced must consider the full set of wedges between price and marginal cost, not only the wedge that governments directly control.
+This conclusion does not by itself make a case for regulating markups through trade agreements. Competition policy and trade policy raise different institutional questions. It does imply that welfare accounting based only on tariffs is incomplete. An assessment of whether an agreement is balanced must account for all wedges between price and marginal cost, including those that governments do not directly control.

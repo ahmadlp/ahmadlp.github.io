@@ -2,9 +2,9 @@
 title: WTO and Trade Agreements
 slug: wto-and-trade-agreements
 page_kind: hub
-summary: Trade agreements do more than cut tariffs. They constrain retaliation, protect
-  value chains, coordinate industrial policy, and internalize cross-border externalities
-  including carbon.
+summary: Trade agreements restrain retaliation, support global value chains, and
+  coordinate policy spillovers arising from market power, scale economies, and carbon
+  emissions.
 primary_keywords:
 - WTO
 - trade agreements
@@ -23,36 +23,34 @@ related_topics:
 - tariffs-and-retaliation
 faq_items:
 - question: Why do trade agreements matter more in a world of global value chains?
-  answer: Value chains mean that a tariff on an intermediate input cascades through
-    every downstream stage of production. The WTO dissolution paper estimates that
-    46 percent of the institution's economic value comes from facilitating these cross-border
-    production linkages. Without cooperative rules, each country's unilateral barriers
-    compound through the network, and the aggregate welfare loss is far larger than
-    any final-goods calculation would suggest.
+  answer: A tariff on an intermediate input raises costs at each downstream stage
+    of production. The WTO dissolution paper estimates that 46 percent of the institution's
+    economic value comes from supporting these cross-border production linkages. Without
+    cooperative rules, unilateral barriers compound through the network, so a calculation
+    based only on final-goods trade understates the aggregate welfare loss.
 - question: What does reciprocity miss when markups matter?
-  answer: Standard reciprocity negotiations focus on statutory tariffs, but firms with
-    market power charge markups that function as implicit trade barriers. The markups-as-shadow-tariffs
-    research shows that once these profit wedges are accounted for, the conventional
-    view that advanced economies made outsized tariff concessions in past GATT/WTO
-    rounds needs revision. Effective protection depends on the sum of policy and market-power
-    distortions, not tariffs alone.
+  answer: Standard reciprocity negotiations focus on statutory tariffs, while firms
+    with market power also restrict trade through markups. Research on markups as shadow
+    tariffs finds that accounting for these profit wedges changes the conventional
+    view that advanced economies made unusually large concessions in past GATT/WTO
+    rounds. Effective protection reflects both policy barriers and market-power distortions.
 updated_at: '2026-04-02'
 ---
 
 ## Why agreements exist
 
-Trade agreements solve a coordination problem. Every government has an incentive to tilt the terms of trade in its own favor through tariffs, subsidies, or regulatory barriers. Acting alone, each country ignores the cost its policy imposes abroad. The result, absent cooperation, is a noncooperative equilibrium where barriers are too high and global income is too low. The [WTO dissolution paper](/papers/the-cost-of-dissolving-the-wto) puts a number on this: reverting to noncooperative tariffs would erase roughly 30 percent of the gains from trade, a loss on the order of $2.8 trillion in global GDP. Nearly half of that value, 46 percent, traces to the disruption of [global value chains](/topics/wto-and-global-value-chains) rather than final-goods trade.
+Trade agreements address a coordination problem. Each government can improve its terms of trade through tariffs, subsidies, or regulatory barriers, but it does not account for the cost imposed on other countries. When governments act independently, the resulting barriers are too high and global income is too low. The [WTO dissolution paper](/papers/the-cost-of-dissolving-the-wto) estimates that a return to noncooperative tariffs would eliminate roughly 30 percent of the gains from trade, equivalent to about $2.8 trillion in global GDP. Of the WTO's estimated economic value, 46 percent comes from supporting [global value chains](/topics/wto-and-global-value-chains) rather than final-goods trade.
 
-Agreements also matter because policy instruments interact. The [interdependence paper](/papers/interdependence-of-trade-policies-in-general-equilibrium) shows that restricting one instrument, say export subsidies, can induce governments to liberalize on others, while leaving certain instruments unconstrained can provoke wasteful non-tariff barriers. The practical lesson is that a trade agreement's value depends on what it covers, not just on the tariff averages it achieves.
+Policy instruments also interact. The [interdependence paper](/papers/interdependence-of-trade-policies-in-general-equilibrium) shows that constraining one instrument, such as export subsidies, can lead governments to liberalize others. Leaving some instruments unconstrained can instead induce wasteful non-tariff barriers. The value of an agreement therefore depends on the instruments it covers, not only on the tariff reductions it secures.
 
 ## Markups, profits, and hidden protection
 
-A separate strand of work challenges the standard framing of reciprocal concessions. [Markups as shadow tariffs](/papers/markups-as-shadow-tariffs) argues that market power in exporting industries functions much like a tariff: it restricts trade volumes and shifts rents across borders. When these markup wedges are measured alongside statutory tariffs, the conventional narrative that advanced economies gave up more than they received in GATT/WTO negotiations looks less secure. Effective trade barriers are the sum of policy and market-structure distortions, and agreements that ignore the latter are incomplete.
+[Markups as shadow tariffs](/papers/markups-as-shadow-tariffs) revisits the measurement of reciprocal concessions. Market power in exporting industries acts much like a tariff: markups restrict trade volumes and shift rents across borders. Measuring these wedges alongside statutory tariffs weakens the conventional claim that advanced economies gave up more than they received in GATT/WTO negotiations. Effective trade barriers reflect both policy and market structure, so reciprocity based on tariffs alone is incomplete.
 
 ## Industrial policy and scale
 
-Deep agreements do more than lower barriers; they can coordinate industrial policy. The [AER 2023 paper on profits, scale economies, and gains from trade](/papers/profits-scale-economies-and-the-gains-from-trade-and-industrial-policy) shows that in industries with increasing returns and positive profits, coordinated policy interventions through agreements are far more effective than unilateral alternatives. The mechanism is straightforward: scale economies generate externalities that cross borders, and only a cooperative framework can internalize them.
+Trade agreements can also coordinate industrial policy. The [AER 2023 paper on profits, scale economies, and gains from trade](/papers/profits-scale-economies-and-the-gains-from-trade-and-industrial-policy) shows that, in industries with increasing returns and positive profits, coordinated interventions are more effective than unilateral policies. Scale economies create cross-border externalities that individual governments do not internalize, whereas a cooperative policy can account for them.
 
 ## Climate and the next generation of agreements
 
-Trade agreements are also the natural vehicle for internalizing carbon externalities. The [climate-trade integration framework](/papers/integrating-climate-goals-into-trade-agreements) embeds carbon pricing into trade agreements through a Global Climate Fund mechanism, arriving at an optimal carbon price around $119 per ton of CO2. The key insight is that climate policy and trade policy are not separate domains. Carbon border adjustments, production subsidies, and tariff schedules interact, and an agreement that handles them jointly dominates piecemeal approaches.
+Carbon policy creates another set of cross-border spillovers. The [climate-trade integration framework](/papers/integrating-climate-goals-into-trade-agreements) places carbon pricing inside a trade agreement and redistributes revenues through a Global Climate Fund. The model implies an optimal carbon price of around $119 per ton of CO2. Carbon border adjustments, production subsidies, and tariff schedules interact, and coordinating them within one agreement performs better than setting each instrument separately.

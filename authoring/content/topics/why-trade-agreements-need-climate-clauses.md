@@ -3,9 +3,8 @@ title: Why Trade Agreements Need Climate Clauses
 slug: why-trade-agreements-need-climate-clauses
 page_kind: query
 parent_topic: wto-and-trade-agreements
-summary: Trade agreements need climate clauses because market access is the strongest
-  available enforcement lever for climate commitments, and carbon pricing creates
-  terms-of-trade externalities that uncoordinated policy cannot resolve.
+summary: Trade agreements can use market access to enforce climate commitments and
+  coordinate the terms-of-trade spillovers created by carbon pricing.
 primary_keywords:
 - trade agreements and climate policy
 - climate clauses
@@ -18,34 +17,33 @@ related_topics:
 - trade-policy
 faq_items:
 - question: Why not keep climate policy separate from trade agreements?
-  answer: Because the two policy domains are already linked through prices. When one
-    country imposes a carbon tax, the resulting changes in goods prices spill onto
-    its trading partners, a pecuniary externality that purely domestic climate policy
-    ignores. Moreover, countries that gain the most from trade liberalization tend to
-    generate higher trade-related emissions. Farrokhi, Lashkaripour, and Taheri (2025)
-    show that integrating carbon-pricing obligations into trade agreements, with revenue
-    redistribution through a Global Climate Fund, can sustain a carbon price near $119
-    per ton and cut emissions by roughly half. Separate climate treaties have no comparable
+  answer: The two policies are already linked through prices. A carbon tax changes
+    the prices faced by trading partners, creating a pecuniary externality that domestic
+    climate policy ignores. Countries that gain more from trade liberalization also
+    tend to generate more trade-related emissions. Farrokhi, Lashkaripour, and Taheri
+    (2025) show that placing carbon-pricing commitments in trade agreements, with revenue
+    redistributed through a Global Climate Fund, can sustain a carbon price near $119
+    per ton and cut emissions by roughly half. Separate climate treaties lack a comparable
     enforcement mechanism.
 updated_at: '2026-04-02'
 ---
 
-Climate treaties ask governments to bear domestic costs for a global benefit. That structure invites defection, and defection is what we observe: voluntary pledges under the Paris Agreement carry no binding enforcement. Trade agreements, by contrast, allocate market access, one of the few things governments value enough to change behavior for. The case for embedding climate clauses in trade agreements rests on this asymmetry in enforcement capacity.
+Climate policy asks each government to bear domestic costs for a global benefit, giving countries an incentive to defect. Voluntary pledges under the Paris Agreement carry no binding enforcement. Trade agreements, by contrast, can make market access conditional on compliance. The case for climate clauses rests on this difference in enforcement.
 
 ## The structural link between trade gains and emissions
 
-The connection is not incidental. [Farrokhi, Lashkaripour, and Taheri (2025)](/papers/integrating-climate-goals-into-trade-agreements) document that countries benefiting most from trade agreements also tend to generate higher trade-related emissions. Comparative advantage often runs through carbon-intensive sectors: heavy manufacturing, resource extraction, energy-intensive chemicals. Trade liberalization expands precisely the sectors where the emissions externality is largest. Ignoring this correlation means designing trade deals that systematically widen the gap between private gains and social costs.
+[Farrokhi, Lashkaripour, and Taheri (2025)](/papers/integrating-climate-goals-into-trade-agreements) document that countries gaining more from trade agreements also tend to generate more trade-related emissions. Comparative advantage often lies in carbon-intensive sectors such as heavy manufacturing, resource extraction, and energy-intensive chemicals. Trade liberalization can therefore expand the sectors in which the emissions externality is largest. An agreement that ignores emissions leaves part of the social cost of liberalization unaddressed.
 
 ## Carbon taxes create cross-border externalities
 
-When country A imposes a carbon tax, it raises the price of its carbon-intensive exports. Country B, which imports those goods, faces higher costs. Simultaneously, A's reduced demand for fossil inputs may lower global energy prices, partially offsetting carbon-pricing incentives elsewhere. These are pecuniary terms-of-trade externalities: they operate through prices rather than through physical spillovers, but they are real and they are large. Uncoordinated carbon pricing ignores them. Trade agreements, which already manage terms-of-trade effects, are the natural institutional home for internalizing them.
+When country A imposes a carbon tax, the price of its carbon-intensive exports rises, increasing costs for importers in country B. At the same time, lower demand for fossil inputs in A may reduce world energy prices and weaken carbon-pricing incentives elsewhere. These pecuniary terms-of-trade externalities operate through prices rather than physical spillovers, but they still affect welfare and policy incentives abroad. Domestic carbon pricing does not account for them. Trade agreements already coordinate terms-of-trade effects and can internalize these additional spillovers.
 
 ## The mechanism: contingent access and redistribution
 
-The framework proposed in Farrokhi, Lashkaripour, and Taheri (2025) has two components. First, market access is made contingent on adoption of an agreed carbon price; countries that fail to price carbon face reduced access, creating an enforcement incentive structurally similar to a [climate club](/topics/climate-clubs-and-carbon-border-adjustments). Second, revenues from [border carbon adjustments](/topics/what-is-a-carbon-border-adjustment) are pooled in a Global Climate Fund and redistributed to compensate countries whose trade gains would otherwise be eroded by carbon pricing.
+The framework in Farrokhi, Lashkaripour, and Taheri (2025) has two components. First, market access is conditional on adopting an agreed carbon price. Countries that do not comply face reduced access, as in a [climate club](/topics/climate-clubs-and-carbon-border-adjustments). Second, revenues from [border carbon adjustments](/topics/what-is-a-carbon-border-adjustment) enter a Global Climate Fund and are redistributed to countries whose gains from trade would otherwise be reduced by carbon pricing.
 
-The quantitative result is substantial: the mechanism can sustain a carbon price of roughly $119 per ton of CO2 and reduce global emissions by approximately 50 percent. The redistribution is not incidental to the design; it is what makes universal participation incentive-compatible. Without it, carbon-intensive exporters bear disproportionate costs and have strong incentives to defect.
+In the model, this mechanism sustains a carbon price of roughly $119 per ton of CO2 and reduces global emissions by approximately 50 percent. Redistribution makes universal participation incentive-compatible by compensating carbon-intensive exporters that would otherwise bear a disproportionate cost and prefer to defect.
 
 ## Why standalone instruments fall short
 
-[Farrokhi and Lashkaripour (2025)](/papers/can-trade-policy-mitigate-climate-change) show that border carbon adjustments alone, without the participation and redistribution architecture of a trade agreement, deliver only 3.4 percent of the globally optimal emissions reduction. The lesson is that price corrections at the border cannot substitute for the institutional machinery that trade agreements provide: binding commitments, dispute resolution, and conditional market access.
+[Farrokhi and Lashkaripour (2025)](/papers/can-trade-policy-mitigate-climate-change) find that border carbon adjustments alone, without the participation and redistribution provisions of a trade agreement, deliver only 3.4 percent of the globally optimal emissions reduction. A border charge corrects an import price; it does not provide binding commitments, dispute resolution, or conditional market access.

@@ -2,9 +2,9 @@
 title: Quantitative Trade Models
 slug: quantitative-trade-models
 page_kind: hub
-summary: Quantitative trade models connect theory to data through calibration and counterfactual
-  analysis. This hub links papers and lecture notes that develop the toolkit, from
-  gravity estimation to optimal policy formulas.
+summary: Quantitative trade models use calibration and counterfactual analysis to
+  connect theory with data. The material ranges from gravity estimation to optimal-policy
+  formulas.
 primary_keywords:
 - quantitative trade models
 - general equilibrium trade model
@@ -21,37 +21,34 @@ related_topics:
 - markups-scale-economies-and-trade
 faq_items:
 - question: What kind of model material is available here?
-  answer: The site hosts both graduate-level lecture notes covering model primitives,
-    gravity estimation, and counterfactual methods, and research papers that extend
-    the standard framework to handle scale economies, discrete industries, labor-market
-    distortions, and optimal tariff computation. The lecture notes provide the scaffolding;
-    the papers show where the scaffolding breaks and what replaces it.
+  answer: Graduate lecture notes cover model primitives, gravity estimation, and
+    counterfactual methods. The research papers extend the standard framework to
+    scale economies, discrete industries, labor-market distortions, and optimal-tariff
+    computation.
 - question: Who is this hub for?
-  answer: PhD students learning the quantitative trade toolkit, researchers looking
-    for analytic optimal-tariff formulas or structural estimation strategies, and policy
-    analysts who need to understand what a counterfactual trade-model exercise can
-    and cannot deliver.
+  answer: The material is intended for PhD students learning quantitative trade,
+    researchers seeking analytic optimal-tariff formulas or structural estimation
+    strategies, and policy analysts assessing what trade-model counterfactuals can
+    and cannot establish.
 updated_at: '2026-04-02'
 ---
 
 ## What quantitative trade models do
 
-A quantitative trade model takes a general-equilibrium theory of trade, disciplines it with data on bilateral flows, tariffs, and production, and uses the calibrated structure to evaluate counterfactual policies. The workhorse framework descends from Armington and Eaton-Kortum: countries differ in productivity, goods are differentiated by origin, and trade costs drive a wedge between production and consumption patterns. Gravity estimation identifies the key elasticities; the calibrated model then answers questions like "what happens to welfare if tariffs rise by 10 percentage points?" or "what is the optimal tariff schedule?"
-
-The papers linked here push this framework in several directions.
+A quantitative trade model combines a general-equilibrium theory with data on bilateral trade, tariffs, and production, then uses the calibrated equilibrium to evaluate counterfactual policies. In the workhorse frameworks associated with Armington and Eaton-Kortum, countries differ in productivity, goods are differentiated by origin, and trade costs create a wedge between production and consumption. Gravity estimation identifies key elasticities used to compute, for example, the welfare effect when tariffs rise by 10 percentage points and the optimal tariff schedule.
 
 ## Nesting and generality
 
-The [WTO dissolution paper](/papers/the-cost-of-dissolving-the-wto) builds a non-parametric neoclassical model that nests a wide class of quantitative trade models. It derives analytic formulas for optimal tariffs that depend on observable sufficient statistics rather than on a particular parametric assumption about demand or supply. The practical value is that the formulas can be applied across model variants without re-solving each one, and they deliver the $2.8 trillion dissolution-cost estimate that anchors the [trade agreements hub](/topics/wto-and-trade-agreements).
+The [WTO dissolution paper](/papers/the-cost-of-dissolving-the-wto) develops a non-parametric neoclassical model that nests a broad class of quantitative trade models. Its analytic optimal-tariff formulas depend on observable sufficient statistics rather than a particular parametric specification of demand or supply. As a result, the formulas apply across model variants without requiring each one to be solved anew. They also deliver the $2.8 trillion estimate of the cost of WTO dissolution reported in the [trade agreements hub](/topics/wto-and-trade-agreements).
 
 ## Discrete industries and non-traded goods
 
-Standard models treat the number of traded varieties as continuous, which works well for differentiated manufactures but poorly for industries where entry is lumpy. [Discrete Trade](/papers/discrete-trade) generalizes the framework to accommodate both discrete and continuous industries. The model introduces affordability constraints and non-traded service prices as determinants of the trade pattern, producing gains-from-trade estimates that differ from continuous benchmarks and generating big-push effects where small policy changes trigger discrete entry.
+Standard models treat the number of traded varieties as continuous, an approximation that is less suitable when entry occurs in discrete units. [Discrete Trade](/papers/discrete-trade) allows for both discrete and continuous industries. Affordability constraints and the prices of non-traded services help determine trade patterns, yielding gains-from-trade estimates that differ from continuous benchmarks. The model also generates big-push effects in which a small policy change induces discrete entry.
 
 ## Technology adoption and distortions
 
-The [trade and technology adoption paper](/papers/trade-and-technology-adoption-in-distorted-economies) embeds firm-level technology choice and labor-market distortions into a quantitative trade model. The central finding is that distortions erode roughly one-third of the productivity gains from trade liberalization. The mechanism runs through misallocation: when labor markets are distorted, firms adopt technologies that are privately optimal but socially inefficient, and trade amplifies those choices. This matters for [gains-from-trade calculations](/topics/gains-from-trade-with-scale-economies) because it means that standard models, which assume undistorted factor markets, overstate the welfare benefits of openness in economies where distortions are large.
+The [trade and technology adoption paper](/papers/trade-and-technology-adoption-in-distorted-economies) adds firm-level technology choice and labor-market distortions to a quantitative trade model. The model implies that these distortions erode roughly one-third of the productivity gains from trade liberalization. The mechanism is misallocation: firms facing distorted labor markets adopt technologies that are privately optimal but socially inefficient, and trade amplifies these choices. Standard [gains-from-trade calculations](/topics/gains-from-trade-with-scale-economies), which assume undistorted factor markets, therefore overstate the benefits of openness in economies with large distortions.
 
 ## Trade costs and quality
 
-[Weight-based quality specialization](/papers/weight-based-quality-specialization) validates the iceberg trade-cost assumption by showing that quality specialization occurs along the weight margin: heavier goods bear higher per-unit shipping costs, so distant exporters specialize in lighter, higher-quality varieties. The paper provides micro-level evidence that the functional form used in nearly every quantitative trade model is not merely convenient but empirically grounded.
+[Weight-based quality specialization](/papers/weight-based-quality-specialization) evaluates the iceberg trade-cost assumption using specialization along the weight margin. Heavier goods face higher per-unit shipping costs, so distant exporters specialize in lighter, higher-quality varieties. This micro-level evidence supports the trade-cost specification used in nearly every quantitative trade model.
