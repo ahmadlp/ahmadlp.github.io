@@ -46,7 +46,7 @@ body_source: latex
 latex_dir: latex-src/integrating-climate-goals-into-trade-agreements
 latex_main: FLT_Spring2026.tex
 latex_engine: pdflatex
-sort_order: 2
+sort_order: 3
 published_url: null
 slides_url: FLT_slides.pdf
 working_paper_url: null
