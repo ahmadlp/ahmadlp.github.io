@@ -1388,17 +1388,17 @@ A notable result from our Ricardian theory is that all workers can gain from AI-
 
 <li>Figure 8. Jagged AI Adoption Lifts Average Real Wages Faster But has stronger Distributional Effects</li>
 
+A Annual growth of average real wages B Five-year change in sector real wages
+
+WORKERS FIXED IN THEIR SECTOR
+
 10%
 
-| |Five-year horizon| |---|---| | |The gap reaches 2.9 points by year 40| | | | | | |
-
-Jagged AI adoption 8.9% a year
+| |Five-year horizon&lt;br&gt;&lt;br&gt;Jagged AI adoption&lt;br&gt;&lt;br&gt;8.9% a year| |---|---| | |Gap of 2.9 points by year 40| | |5.7% a year| | |Balanced AI adoption|
 
 8
 
 6
-
-Balanced AI adoption 5.7% a year
 
 4
 
@@ -1406,13 +1406,27 @@ Balanced AI adoption 5.7% a year
 
 Today 10 20 30 40 50 years
 
-Notes: Each line is the annual growth rate of average real wages, the percentage change from the previous year. Aggregate real wages are the mean of the three education groups&#x27; real wages, weighted by baseline wage bills, in units of the model&#x27;s final expenditure bundle for the full set of industries. The figure shows the gap between the two profiles, and the rule shows the five-year horizon of the main results. Both profiles continue the central cost path in Figure 6 for 50 years, hold the stock of AI capacity fixed, and set the change in each sector&#x27;s AI technology as in equation (41). Our calculation uses the Epoch AI–Ipsos survey, ONET, the BEA industry accounts, BLS employment, the 2024 American Community Survey, and occupation exposure ratings (Epoch AI, 2026b; National Center for ONET Development, 2026; U.S. Bureau of Economic Analysis, 2026; U.S. Bureau of Labor Statistics, 2026c; U.S. Census Bureau, 2024; Eloundou et al., 2024).
++50%
+
++25
+
+0
+
+−25
+
+−50
+
+|Forestry and fishing|Jagged AI adoption Balanced AI adoption| |---|---| | |Housing&lt;br&gt;&lt;br&gt;| | | | | | | | |Insurance| | | |
+
+20 30 40 50 60% Exposure to AI progress
+
+Notes: In panel A, each line is the annual growth rate of average real wages, the percentage change from the previous year. Aggregate real wages are the mean of the three education groups&#x27; real wages, weighted by baseline wage bills, in units of the model&#x27;s final expenditure bundle for the full set of industries. The panel shows the gap between the two profiles, and the rule shows the five-year horizon of the main results. Panel B, plots a sector&#x27;s change in real wages after five year against the sector&#x27;s exposure to AI progress when workers remain in their original sectors. The area of each dot is proportional to the sector&#x27;s value added, and the dotted line marks the weighted average exposure across sectors. Both the jagged and balanced scenarios use the cost reduction path in Figure 6 for 50 years, and set the change in each sector&#x27;s AI technology as in equation (41). Our calculation uses the Epoch AI–Ipsos survey, ONET, the BEA industry accounts, BLS employment, the 2024 American Community Survey, and occupation exposure ratings (Epoch AI, 2026b; National Center for ONET Development, 2026; U.S. Bureau of Economic Analysis, 2026; U.S. Bureau of Labor Statistics, 2026c; U.S. Census Bureau, 2024; Eloundou et al., 2024).
 
 sufficiently different across tasks. Here we test this using the full-fledged quantitative model with three groups of workers based on educational levels: (1) high school or less, (2) some college, and (3) Bachelor&#x27;s degree or higher. We simulate the average real wage for each group under our 5-year AI-driven growth scenario.
 
-Panel A in Figure 9 shows that average real earnings rise among each education group even when workers cannot move sectors. Panel A compares the five-year real wage gains in two scenarios: in the first scenario workers remain in their original sectors, which corresponds to κ ↓ 1. In the second scenario, workers move across sectors, governed by the Roy parameter κ = 1.5. Without sectoral mobility, real earnings rise by 31.2 percent among workers with high school degrees or
+Panel A in Figure 9 shows that average real earnings rise among each education group even when workers cannot move sectors. Panel A compares the five-year real wage gains in two scenarios: in the first scenario workers remain in their original sectors, which corresponds to κ ↓ 1. In the second scenario, workers move across sectors, governed by the Roy parameter κ = 1.5. Without sectoral mobility, real earnings rise by 31.2 percent among workers with high school degrees or less, 24.1 percent for those with some college or an associate degree, and 12.5 percent for those
 
-less, 24.1 percent for those with some college or an associate degree, and 12.5 percent for those with a bachelor&#x27;s degree or higher. When workers can move between sectors, the corresponding real wage gains are 28.1 percent, 22.9 percent, and 14.1 percent, respectively.35
+with a bachelor&#x27;s degree or higher. When workers can move between sectors, the corresponding real wage gains are 28.1 percent, 22.9 percent, and 14.1 percent, respectively.35
 
 <li>Figure 9. All Education Groups Gain from AI-Driven Growth by Switching Tasks rather than Sectors</li>
 
