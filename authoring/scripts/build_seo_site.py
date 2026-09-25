@@ -457,8 +457,8 @@ AUTHOR_AFFILIATION_OVERRIDES = {
         "Ina Simonovska": "UC Davis, NBER, CEPR, CESIfo",
     },
     "integrating-climate-goals-into-trade-agreements": {
-        "Farid Farrokhi": "Boston College",
-        "Ahmad Lashkaripour": "Indiana University, CESifo, CEPR",
+        "Farid Farrokhi": "Boston College, NBER",
+        "Ahmad Lashkaripour": "Indiana University, CEPR, CESifo",
         "Homa Taheri": "Indiana University",
     },
     "markups-as-shadow-tariffs": {
@@ -2058,10 +2058,11 @@ def clean_affiliation_text(value: str) -> str:
 def extract_author_affiliations(paper: dict) -> dict[str, str]:
     lines = [normalize_text(line.strip()) for line in paper["body_markdown"].splitlines()[:140] if line.strip()]
     if not lines:
-        affiliations = dict(AUTHOR_AFFILIATION_OVERRIDES.get(paper["slug"], {}))
+        affiliations = {}
         for author, affiliation in CANONICAL_AUTHOR_AFFILIATIONS.items():
             if author in paper["authors"]:
                 affiliations[author] = affiliation
+        affiliations.update(AUTHOR_AFFILIATION_OVERRIDES.get(paper["slug"], {}))
         return affiliations
 
     joined = "\n".join(lines)
@@ -2099,11 +2100,11 @@ def extract_author_affiliations(paper: dict) -> dict[str, str]:
             if remainder:
                 affiliations[author] = remainder
 
-    for author, affiliation in AUTHOR_AFFILIATION_OVERRIDES.get(paper["slug"], {}).items():
-        affiliations[author] = affiliation
     for author, affiliation in CANONICAL_AUTHOR_AFFILIATIONS.items():
         if author in paper["authors"]:
             affiliations[author] = affiliation
+    for author, affiliation in AUTHOR_AFFILIATION_OVERRIDES.get(paper["slug"], {}).items():
+        affiliations[author] = affiliation
     return affiliations
 
 
@@ -2314,12 +2315,16 @@ def normalize_math_tex(math_text: str) -> str:
     while normalized != previous:
         previous = normalized
         normalized = re.sub(r"\\(?:vspace|hspace)\s*\*?\s*\{[^{}]*\}", "", normalized)
+        normalized = re.sub(r"\\relax(?![A-Za-z@])\s*", "", normalized)
         normalized = normalized.replace(r"\APLstar", r"\star")
         normalized = replace_tex_macro(normalized, "ensuremath", 1, lambda arg: arg)
         normalized = replace_tex_macro(
             normalized, "nicefrac", 2, lambda numerator, denominator: rf"\frac{{{numerator}}}{{{denominator}}}"
         )
         normalized = replace_tex_macro(normalized, "mathbbm", 1, lambda arg: rf"\mathbf{{{arg}}}")
+        normalized = replace_tex_macro(normalized, "mathds", 1, lambda arg: rf"\mathbb{{{arg}}}")
+        normalized = replace_tex_macro(normalized, "E", 0, lambda: r"\mathbb{E}")
+        normalized = replace_tex_macro(normalized, "Cov", 0, lambda: r"\operatorname{Cov}")
         normalized = replace_tex_macro(normalized, "scalebox", 2, lambda _scale, arg: strip_wrapped_math_dollars(arg))
         normalized = replace_tex_macro(normalized, "textbf", 1, lambda arg: rf"\mathbf{{{arg}}}")
         normalized = replace_tex_macro(normalized, "text", 1, normalize_text_wrapper)
@@ -2799,6 +2804,28 @@ def sanitize_latex_for_html(tex_text: str, work_dir: Path) -> tuple[str, list[st
     tex_text = re.sub(
         r"\\include\{([^}]+)\}",
         replace_external_include,
+        tex_text,
+    )
+
+    def replace_lyx_quoted_external_path(match: re.Match[str]) -> str:
+        command, target, extension = match.group(1), match.group(2), match.group(3) or ""
+        local_target = normalize_external_target(target)
+        local_path = work_dir / f"{local_target}{extension}"
+        if local_path.exists():
+            notes.append(f"Rewrote external path {target}{extension} to local {local_target}{extension}.")
+            if command.startswith(r"\input"):
+                input_text = local_path.read_text(encoding="latin-1")
+                updated_input = re.sub(r"D\{[^}]*\}\{[^}]*\}\{[^}]*\}", "r", input_text)
+                if updated_input != input_text:
+                    local_path.write_text(updated_input, encoding="latin-1")
+                    notes.append(f"Replaced dcolumn alignment specs in {local_target}{extension} with right-aligned columns.")
+            return rf'{command}\string"{local_target}\string"{extension}}}'
+        notes.append(f"Disabled missing external path {target}{extension} for HTML compilation.")
+        return r"\mbox{}" if command.startswith(r"\includegraphics") else f"% {match.group(0)}"
+
+    tex_text = re.sub(
+        r'(\\(?:input|includegraphics)(?:\[[^\]]*\])?\{)\\string"(\.\./[^"]+)\\string"(\.[A-Za-z0-9]+)?\}',
+        replace_lyx_quoted_external_path,
         tex_text,
     )
 
@@ -3310,6 +3337,27 @@ def strip_redundant_heading_number_paragraphs(soup: BeautifulSoup) -> None:
             paragraph.decompose()
 
 
+def repair_misplaced_multicolumn_cells(soup: BeautifulSoup) -> None:
+    # TeX4ht closes the cell of a wide \multicolumn before its content and caps the colspan,
+    # so browsers would hoist the content above the table.
+    for row in soup.select("tr"):
+        misplaced = row.find_all("div", class_="multicolumn", recursive=False)
+        repaired = []
+        for content in misplaced:
+            cell = content.find_previous_sibling()
+            if cell is None or cell.name != "td" or cell.get_text(strip=True):
+                continue
+            cell.append(content.extract())
+            repaired.append(cell)
+        if len(misplaced) != 1 or len(repaired) != 1:
+            continue
+        cell = repaired[0]
+        column_count = len(row.find_parent("table").select(":scope > colgroup > col"))
+        other_span = sum(int(td.get("colspan", "1")) for td in row.find_all("td", recursive=False) if td is not cell)
+        if column_count - other_span > int(cell.get("colspan", "1")):
+            cell["colspan"] = str(column_count - other_span)
+
+
 LEADING_FRONT_MATTER_PATTERNS = (
     re.compile(r"^part\b", re.IGNORECASE),
     re.compile(r"^first draft\s*:", re.IGNORECASE),
@@ -3420,6 +3468,7 @@ def build_latex_fragment(paper: dict) -> tuple[dict, dict]:
             strip_duplicate_leading_abstract(soup, paper["abstract"])
             strip_redundant_heading_number_paragraphs(soup)
             strip_redundant_leading_front_matter(soup)
+            repair_misplaced_multicolumn_cells(soup)
             keywords_text = extract_leading_keywords_text(soup)
             asset_overrides, asset_notes = build_custom_latex_figure_overrides(paper, tex_text, work_dir)
             report["notes"].extend(asset_notes)

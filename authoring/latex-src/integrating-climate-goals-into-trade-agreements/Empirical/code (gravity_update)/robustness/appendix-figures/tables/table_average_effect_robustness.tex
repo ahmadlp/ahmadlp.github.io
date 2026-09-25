@@ -1,0 +1,39 @@
+\begingroup
+\def\sym#1{\rlap{\ensuremath{{}^{#1}}}}
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{0.96}
+\begin{tabular}{l d{1.3} d{1.3} c d{1.3} d{1.3} c d{1.3} d{1.3}}
+\toprule
+ & \multicolumn{2}{c}{Agriculture \& Mining} & & \multicolumn{2}{c}{Manufacturing} & & \multicolumn{2}{c}{Energy} \\
+\cmidrule(lr){2-3}\cmidrule(lr){5-6}\cmidrule(lr){8-9}
+ & \multicolumn{1}{c}{$\tilde{t}=0$} & \multicolumn{1}{c}{$\tilde{t}=-2$} & & \multicolumn{1}{c}{$\tilde{t}=0$} & \multicolumn{1}{c}{$\tilde{t}=-2$} & & \multicolumn{1}{c}{$\tilde{t}=0$} & \multicolumn{1}{c}{$\tilde{t}=-2$} \\
+\midrule
+\multicolumn{9}{l}{\textit{Panel A. Average treatment estimates}} \\
+\addlinespace[2pt]
+Main & 0.506\sym{***} & 0.552\sym{***} & & 0.633\sym{***} & 0.664\sym{***} & & 0.277\sym{*} & 0.308\sym{*} \\
+\quad Standard error & \multicolumn{1}{c}{(0.093)} & \multicolumn{1}{c}{(0.100)} & & \multicolumn{1}{c}{(0.091)} & \multicolumn{1}{c}{(0.101)} & & \multicolumn{1}{c}{(0.146)} & \multicolumn{1}{c}{(0.159)} \\
+\addlinespace[3pt]
+Never-treated comparisons & 0.294\sym{***} & 0.414\sym{***} & & 0.477\sym{***} & 0.700\sym{***} & & 0.225 & 0.126 \\
+\quad Standard error & \multicolumn{1}{c}{(0.098)} & \multicolumn{1}{c}{(0.121)} & & \multicolumn{1}{c}{(0.098)} & \multicolumn{1}{c}{(0.136)} & & \multicolumn{1}{c}{(0.140)} & \multicolumn{1}{c}{(0.165)} \\
+\addlinespace[3pt]
+Domestic flow \(\times\) year FE & 0.524\sym{***} & 0.579\sym{***} & & 0.469\sym{***} & 0.482\sym{***} & & 0.182 & 0.207 \\
+\quad Standard error & \multicolumn{1}{c}{(0.108)} & \multicolumn{1}{c}{(0.116)} & & \multicolumn{1}{c}{(0.095)} & \multicolumn{1}{c}{(0.104)} & & \multicolumn{1}{c}{(0.161)} & \multicolumn{1}{c}{(0.176)} \\
+\addlinespace[3pt]
+\(\operatorname{asinh}(X_{ij,k,t})\) & 0.564\sym{***} & 0.618\sym{***} & & 0.668\sym{***} & 0.701\sym{***} & & 0.316\sym{**} & 0.355\sym{**} \\
+\quad Standard error & \multicolumn{1}{c}{(0.099)} & \multicolumn{1}{c}{(0.107)} & & \multicolumn{1}{c}{(0.097)} & \multicolumn{1}{c}{(0.107)} & & \multicolumn{1}{c}{(0.155)} & \multicolumn{1}{c}{(0.170)} \\
+\addlinespace[3pt]
+\addlinespace[2pt]
+\cmidrule(lr){1-9}
+\addlinespace[2pt]
+ETWFE--PPML & 0.740\sym{***} & 0.769\sym{***} & & 0.364\sym{***} & 0.282\sym{*} & & 1.550\sym{***} & 1.824\sym{***} \\
+\quad Standard error & \multicolumn{1}{c}{(0.070)} & \multicolumn{1}{c}{(0.107)} & & \multicolumn{1}{c}{(0.106)} & \multicolumn{1}{c}{(0.166)} & & \multicolumn{1}{c}{(0.156)} & \multicolumn{1}{c}{(0.198)} \\
+\addlinespace[6pt]
+\multicolumn{9}{l}{\textit{Panel B. Estimation support}} \\
+\addlinespace[2pt]
+Common input observations & \multicolumn{2}{c}{310,313} & & \multicolumn{2}{c}{331,646} & & \multicolumn{2}{c}{189,342} \\
+PPML effective-sample observations & \multicolumn{1}{c}{308,795} & \multicolumn{1}{c}{308,795} & & \multicolumn{1}{c}{324,935} & \multicolumn{1}{c}{324,935} & & \multicolumn{1}{c}{180,200} & \multicolumn{1}{c}{180,200} \\
+\bottomrule
+\end{tabular}
+\endgroup

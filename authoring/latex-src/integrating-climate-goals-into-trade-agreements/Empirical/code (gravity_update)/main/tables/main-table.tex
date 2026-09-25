@@ -1,0 +1,29 @@
+\begingroup
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{0.98}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l *{6}{d{1.6}}@{}}
+\toprule
+ & \multicolumn{2}{c}{Agriculture \& Mining} & \multicolumn{2}{c}{Manufacturing} & \multicolumn{2}{c}{Energy} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Treatment onset & \multicolumn{1}{c}{\(t=0\)} & \multicolumn{1}{c}{\(t=-2\)} & \multicolumn{1}{c}{\(t=0\)} & \multicolumn{1}{c}{\(t=-2\)} & \multicolumn{1}{c}{\(t=0\)} & \multicolumn{1}{c}{\(t=-2\)} \\
+ & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} & \multicolumn{1}{c}{(6)} \\
+\midrule
+\(\widehat{\delta}^{\mathrm{WTO}}_{k}\) & 0.506\sym{***} & 0.552\sym{***} & 0.633\sym{***} & 0.664\sym{***} & 0.277\sym{*} & 0.308\sym{*} \\
+  & (0.093) & (0.100) & (0.091) & (0.101) & (0.146) & (0.159) \\
+\addlinespace[5pt]
+Observations & \multicolumn{1}{c}{310,313} & \multicolumn{1}{c}{310,313} & \multicolumn{1}{c}{331,646} & \multicolumn{1}{c}{331,646} & \multicolumn{1}{c}{189,342} & \multicolumn{1}{c}{189,342} \\
+Exporters & \multicolumn{1}{c}{148} & \multicolumn{1}{c}{148} & \multicolumn{1}{c}{147} & \multicolumn{1}{c}{147} & \multicolumn{1}{c}{146} & \multicolumn{1}{c}{146} \\
+Importers & \multicolumn{1}{c}{148} & \multicolumn{1}{c}{148} & \multicolumn{1}{c}{147} & \multicolumn{1}{c}{147} & \multicolumn{1}{c}{147} & \multicolumn{1}{c}{147} \\
+Years & \multicolumn{1}{c}{34} & \multicolumn{1}{c}{34} & \multicolumn{1}{c}{32} & \multicolumn{1}{c}{32} & \multicolumn{1}{c}{32} & \multicolumn{1}{c}{32} \\
+\addlinespace[5pt]
+Exporter \(\times\) importer FE & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+Exporter \(\times\) year FE & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+Importer \(\times\) year FE & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+RTA control & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+Sanctions controls (12) & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+\bottomrule
+\end{tabular*}
+\endgroup
