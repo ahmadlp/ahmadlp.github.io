@@ -39,7 +39,7 @@ pdf_url: BL2020_Interdependence.pdf
 markdown_url: sources/interdependence-of-trade-policies-in-general-equilibrium.md
 canonical_url: https://alashkar.pages.iu.edu/papers/interdependence-of-trade-policies-in-general-equilibrium.html
 updated_at: '2026-04-01'
-sort_order: 5
+sort_order: 4
 published_url: null
 slides_url: null
 working_paper_url: null

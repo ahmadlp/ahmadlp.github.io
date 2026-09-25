@@ -38,7 +38,7 @@ pdf_url: BL2020_Production_Networks.pdf
 markdown_url: sources/the-cost-of-dissolving-the-wto.md
 canonical_url: https://alashkar.pages.iu.edu/papers/the-cost-of-dissolving-the-wto.html
 updated_at: '2026-04-01'
-sort_order: 4
+sort_order: 5
 published_url: null
 slides_url: BL_Slides_ASSA_2022.pdf
 working_paper_url: null

@@ -46,7 +46,7 @@ pdf_url: DLL2026.pdf
 markdown_url: sources/markups-as-shadow-tariffs.md
 canonical_url: https://alashkar.pages.iu.edu/papers/markups-as-shadow-tariffs.html
 updated_at: '2026-04-01'
-sort_order: 2
+sort_order: 3
 published_url: null
 slides_url: DLL2025_slides.pdf
 working_paper_url: null
