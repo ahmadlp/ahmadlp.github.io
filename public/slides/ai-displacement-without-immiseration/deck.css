@@ -71,6 +71,12 @@ html[data-example="chair"] .panorama-mobile span:last-child { background-positio
 html[data-example="chair"] .good-unit { --good-width: clamp(94px, 9.5vw, 130px); --good-height: clamp(94px, 9.5vw, 130px); }
 
 html[data-horse-concept="02"] .r12-opener h2 { width: min(740px, 57%); font-size: clamp(48px, 5vw, 76px); }
+/* Round 31: the subtitle under "AI vs. Engines", in the cover subtitle's plum italic. */
+.r12-opener__subtitle {
+  display: block; margin-top: 0.45em; color: #72374b;
+  font-family: "Iowan Old Style", "Baskerville", var(--serif); font-size: max(18px, 0.42em); font-style: italic;
+  font-variation-settings: normal; font-weight: 400; letter-spacing: 0; line-height: 1.35;
+}
 
 .deck-end {
   padding: 32px 24px 42px; text-align: center; background: var(--paper);
