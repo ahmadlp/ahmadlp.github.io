@@ -374,6 +374,10 @@ figure img {
   max-height: none;
 }
 
+.tex4ht-fragment figure .minipage {
+  text-align: start;
+}
+
 .tex4ht-fragment figure .minipage > p {
   width: 100%;
 }
