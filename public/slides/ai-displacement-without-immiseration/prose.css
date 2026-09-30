@@ -1,0 +1,11 @@
+/* Round 27: natural title wrapping at the inherited type sizes. */
+h1, h2 { text-wrap: balance; }
+.headline-line { display: inline; white-space: normal; }
+.stage-copy { width: 100%; max-width: none; }
+.stage-title,
+.r12-opener h2, .trade-header h2 { max-width: 100%; }
+
+.title-cover h1 { font-size: clamp(40px, 3.65vw, 66px); }
+@media (max-width: 760px) {
+  .title-cover h1 { font-size: clamp(29px, 9vw, 38px); }
+}

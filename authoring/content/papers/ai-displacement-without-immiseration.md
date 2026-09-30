@@ -49,7 +49,7 @@ canonical_url: https://alashkar.pages.iu.edu/papers/ai-displacement-without-immi
 updated_at: '2026-09-25'
 sort_order: 1
 published_url: null
-slides_url: null
+slides_url: slides/ai-displacement-without-immiseration/index.html
 working_paper_url: null
 online_appendix_url: Lashkaripour_AI_Displacement_Online_Appendix.pdf
 dashboard_url: null

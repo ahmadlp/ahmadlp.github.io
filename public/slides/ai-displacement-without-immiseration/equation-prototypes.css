@@ -1,0 +1,303 @@
+/* Equation studies inherit the approved typefaces and graph pigments. */
+html[data-equation-option] .story-stage[data-state="11"] > .stage-frame { visibility: hidden; pointer-events: none; }
+.eq-study {
+  position: absolute; inset: 0; z-index: 60; display: flex; flex-direction: column;
+  padding: clamp(38px, 5.2vh, 56px) max(5vw, calc((100vw - 1120px) / 2)) 30px;
+  background: var(--paper); color: var(--ink); text-align: left; isolation: isolate;
+}
+.eq-study[hidden] { display: none; }
+.eq-study *, .eq-gallery * { box-sizing: border-box; }
+.eq-study h2, .eq-study h3, .eq-study p { margin: 0; }
+.eq-study-header { flex: 0 0 auto; }
+.eq-study-header h2 { font-family: var(--serif); font-size: clamp(38px, 4vw, 56px); font-weight: 620; line-height: 1.03; letter-spacing: -.045em; }
+.eq-study-header h2 span { display: block; }
+.eq-study-header > p { margin-top: 15px; max-width: 900px; font-family: var(--serif); color: var(--copy); font-size: clamp(18px, 1.65vw, 23px); line-height: 1.35; }
+.eq-study-body { flex: 1; min-height: 0; display: flex; align-items: center; padding: 30px 0; }
+.eq-study h3 { font-family: var(--serif); font-size: 23px; font-weight: 600; line-height: 1.2; letter-spacing: -.022em; }
+.eq-wage, .eq-study math.eq-wage { color: var(--palette-purchase); }
+.eq-tasks, .eq-study math.eq-tasks { color: var(--palette-human); }
+.eq-dispersion, .eq-study math.eq-dispersion { color: var(--palette-output); }
+.eq-equation { display: flex; align-items: center; justify-content: center; gap: .23em; font-family: var(--math); font-size: 44px; line-height: 1; white-space: nowrap; }
+.eq-equation math { display: block; font-size: inherit; }
+.eq-operator { color: var(--ink); font-family: var(--math); }
+.eq-small-label { font-family: var(--sans); font-size: 10px; letter-spacing: .11em; color: var(--muted); font-weight: 600; }
+.eq-workers { display: flex; justify-content: center; }
+.eq-person { display: block; width: 60px; aspect-ratio: 1; background-image: url('./assets/humans-vibrant-gouache-r19-alpha.png'); background-size: 300% 200%; background-position: calc(var(--col) * 50%) calc(var(--row) * 100%); mix-blend-mode: multiply; }
+.eq-medicines { display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; justify-content: center; }
+.eq-medicines img { width: 100%; aspect-ratio: 1; object-fit: contain; }
+.eq-clock { width: 43px; height: 43px; fill: none; stroke: var(--palette-human); stroke-width: 1.5; stroke-linecap: round; }
+.eq-clock-tick { stroke-width: 1; }
+.eq-task-strip { display: flex; gap: 5px; }
+.eq-task-strip i { flex: 1; display: block; height: 12px; }
+.eq-task-strip .is-ai { background: var(--palette-machine-wash); }
+.eq-task-strip .is-human { background: var(--palette-human-mark); }
+
+/* 01 — Terms and their meaning share one vertical alignment. */
+.eq-anatomy { width: 100%; display: grid; grid-template-columns: 1.1fr 40px .78fr 40px 1.1fr; align-items: start; column-gap: 15px; }
+.eq-term { min-width: 0; }
+.eq-term > math { display: flex; align-items: center; justify-content: center; height: 132px; font-size: clamp(40px, 4.35vw, 62px); }
+.eq-term--psi > math { font-size: 68px; }
+.eq-join { font-family: var(--math); font-size: 48px; line-height: 132px; text-align: center; }
+.eq-term-reading { padding-top: 24px; margin-top: 16px; border-top: 2px solid; }
+.eq-term--wage .eq-term-reading { border-color: var(--palette-purchase-mark); }
+.eq-term--psi .eq-term-reading { border-color: var(--palette-output-mark); }
+.eq-term--tasks .eq-term-reading { border-color: var(--palette-human-mark); }
+.eq-term-reading h3 { font-size: 21px; }
+.eq-term-reading p { margin-top: 10px; font-size: 14px; color: var(--copy); line-height: 1.65; }
+.eq-anatomy-reading { grid-column: 1/-1; margin-top: 55px; display: flex; align-items: center; justify-content: center; gap: 22px; }
+.eq-anatomy-reading img { width: 85px; height: 85px; object-fit: contain; transform: rotate(-10deg); }
+.eq-anatomy-reading p { font-family: var(--serif); font-size: 25px; line-height: 1.35; color: var(--copy); }
+.eq-anatomy-reading strong { font-weight: 560; color: var(--ink); }
+
+/* 02 — Keep the curve in view while explaining its equation. */
+.eq-mechanism { width: 100%; display: grid; grid-template-columns: 1.18fr 1fr; gap: 56px; align-items: center; }
+.eq-profile { min-width: 0; margin: 0; }
+.eq-profile > svg { width: 100%; display: block; overflow: visible; }
+.eq-profile text { font-family: var(--sans); fill: var(--copy); font-size: 16px; }
+.eq-profile .eq-svg-heading { font-size: 18px; fill: var(--ink); font-weight: 600; }
+.eq-profile .eq-svg-small { font-size: 13px; }
+.eq-profile .eq-svg-ai { fill: var(--palette-machine); }
+.eq-profile .eq-svg-human { fill: var(--palette-human); }
+.eq-axis { fill: none; stroke: var(--palette-rule-dark); stroke-width: 1.25; }
+.eq-cost-profile { fill: none; stroke: var(--palette-machine); stroke-width: 3.3; stroke-linecap: round; }
+.eq-cutoff, .eq-old-cutoff { fill: none; stroke: var(--palette-human); stroke-width: 1.4; stroke-dasharray: 5 5; }
+.eq-old-cutoff { stroke: var(--palette-context); }
+.eq-cutoff-dot { fill: var(--palette-human); }
+.eq-cutoff-arrow { fill: none; stroke: var(--palette-output); stroke-width: 1.8; }
+.eq-human-band { stroke: var(--palette-human-mark); stroke-width: 7; stroke-linecap: round; }
+.eq-profile-people { display: flex; flex-direction: column; align-items: flex-end; margin-top: -10px; }
+.eq-profile-people .eq-person { width: 45px; }
+.eq-profile-people > p { margin: 8px 0 0; color: var(--copy); font-size: 13px; }
+.eq-mechanism-reading .eq-equation { justify-content: flex-start; font-size: clamp(28px, 2.8vw, 41px); margin-bottom: 35px; }
+.eq-reading-point { display: grid; grid-template-columns: 26px 1fr; gap: 14px; margin-top: 24px; }
+.eq-point-mark { font-size: 10px; padding-top: 5px; letter-spacing: .04em; }
+.eq-reading-point h3 { font-size: 22px; }
+.eq-reading-point p { font-size: 14px; line-height: 1.6; color: var(--copy); margin-top: 7px; }
+
+/* 03 — The illustrated story remains primary; notation follows it. */
+.eq-story { width: 100%; }
+.eq-story-flow { display: grid; grid-template-columns: 1fr .8fr 1fr; gap: 35px; align-items: end; text-align: center; }
+.eq-story .eq-workers { margin: 35px 0 28px; }
+.eq-story .eq-person { width: 55px; flex: 1; }
+.eq-story-workers .eq-task-strip { margin: 0 12px 32px; }
+.eq-story-flow h3 { font-size: 23px; }
+.eq-story-flow h3 + p { color: var(--copy); font-size: 14px; line-height: 1.6; margin-top: 10px; }
+.eq-story-link { position: relative; padding-top: 72px; }
+.eq-story-link > svg { position: absolute; width: 100%; height: 90px; top: 0; left: 0; fill: none; stroke: var(--palette-output-mark); stroke-width: 1.7; }
+.eq-story-link > math { display: block; width: max-content; font-size: 64px; margin: 0 auto 18px; }
+.eq-clock-row { display: flex; align-items: center; justify-content: center; gap: 8px; color: var(--copy); font-family: var(--serif); font-size: 17px; margin-top: 18px; }
+.eq-story .eq-medicines { max-width: 270px; margin: 8px auto 14px; }
+.eq-story .eq-medicines img { max-height: 58px; }
+.eq-story-equation { margin-top: 45px; padding-top: 26px; border-top: 1px solid var(--palette-rule); text-align: center; }
+.eq-story-equation .eq-equation { font-size: 41px; }
+.eq-story-equation > p { margin-top: 20px; color: var(--copy); font-family: var(--serif); font-size: 17px; }
+
+/* 04 — A worked example, using the estimate rather than an invented parameter. */
+.eq-example { width: 100%; }
+.eq-example-rule { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding-bottom: 28px; border-bottom: 1px solid var(--palette-rule); }
+.eq-example-rule .eq-equation { font-size: 42px; }
+.eq-example-rule > p { max-width: 245px; font-family: var(--serif); color: var(--copy); font-size: 18px; line-height: 1.45; }
+.eq-example-body { display: grid; grid-template-columns: 1fr .66fr 1fr; gap: 28px; align-items: center; padding-top: 32px; text-align: center; }
+.eq-big-number { font-family: var(--serif); font-size: clamp(76px, 7.5vw, 108px); line-height: 1; letter-spacing: -.075em; margin-top: 14px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.eq-number-unit { font-size: .42em; margin-left: 7px; letter-spacing: -.04em; }
+.eq-number-plus { font-size: .58em; letter-spacing: -.04em; }
+.eq-stat-caption { margin-top: 10px !important; font-family: var(--serif); font-size: 20px; color: var(--copy); }
+.eq-example-tasks { margin: 28px 0 22px; }
+.eq-example-tasks .eq-task-strip { gap: 4px; }
+.eq-example-tasks i { height: 18px; }
+.eq-slider-label { display: block; color: var(--copy); font-size: 11px; text-align: left; margin-bottom: 10px; }
+.eq-study input[type="range"] { appearance: none; display: block; width: 100%; height: 4px; border: none; border-radius: 0; margin: 14px 0; background: linear-gradient(to right,var(--palette-human) var(--range-progress,33.3%),var(--palette-rule) var(--range-progress,33.3%)); cursor: pointer; }
+.eq-study input[type="range"]::-webkit-slider-thumb { appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--palette-human); border: 3px solid var(--paper); box-shadow: 0 0 0 1px var(--palette-human); }
+.eq-study input[type="range"]::-moz-range-thumb { width: 12px; height: 12px; border-radius: 50%; background: var(--palette-human); border: 2px solid var(--paper); }
+.eq-study input[type="range"]:focus-visible { outline: 2px solid var(--palette-human); outline-offset: 9px; }
+.eq-range-labels { display: flex; justify-content: space-between; color: var(--muted); font-size: 10px; }
+.eq-example-calc > svg { width: 85%; fill: none; stroke: var(--palette-output-mark); stroke-width: 1.5; }
+.eq-example-calc > p { font-family: var(--math); font-size: 28px; color: var(--palette-output); margin-top: 10px; }
+.eq-example-calc sup { font-size: .6em; }
+.eq-example-calc strong { font-weight: 400; }
+.eq-example-calc > span { display: block; color: var(--copy); font-size: 11px; margin-top: 8px; }
+.eq-example-medicines { display: flex; justify-content: center; gap: 4px; height: 76px; margin: 28px 0 10px; }
+.eq-example-medicines > span { width: 74px; height: 74px; }
+.eq-example-medicines img { width: 100%; height: 100%; object-fit: contain; --edge: calc(5.74% + 90.19% * var(--fraction)); mask-image: linear-gradient(to right,#000 var(--edge),#0002 var(--edge)); }
+.eq-example-unit { color: var(--copy); font-size: 12px; }
+.eq-example-unit strong { font-weight: 600; }
+.eq-example-interpretation { text-align: center; font-family: var(--serif); font-size: 22px; margin-top: 38px !important; color: var(--ink); }
+
+/* Animation builds the explanation in reading order, and replays on re-entry. */
+.eq-study.is-playing [data-reveal] { animation: eq-reveal .65s both; animation-delay: calc((var(--step) - 1) * .2s); }
+.eq-study [data-reveal="1"] { --step: 1; }
+.eq-study [data-reveal="2"] { --step: 2; }
+.eq-study [data-reveal="3"] { --step: 3; }
+.eq-study [data-reveal="4"] { --step: 4; }
+.eq-study--2.is-playing .eq-cost-profile { animation: eq-draw 1.2s .15s both; stroke-dasharray: 1; }
+@keyframes eq-reveal { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes eq-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .eq-study.is-playing [data-reveal], .eq-study--2.is-playing .eq-cost-profile { animation: none; } }
+
+@media (max-height: 780px) and (min-width: 901px) {
+  .eq-study { padding-top: 32px; padding-bottom: 20px; }
+  .eq-study-header h2 { font-size: 46px; }
+  .eq-study-header > p { font-size: 19px; margin-top: 12px; }
+  .eq-study-body { padding: 20px 0; }
+  .eq-term > math { height: 110px; }
+  .eq-join { line-height: 110px; }
+  .eq-term-reading { margin-top: 8px; padding-top: 16px; }
+  .eq-anatomy-reading { margin-top: 24px; }
+  .eq-anatomy-reading img { width: 65px; height: 65px; }
+  .eq-anatomy-reading p { font-size: 22px; }
+  .eq-story .eq-workers { margin-top: 22px; margin-bottom: 20px; }
+  .eq-story-workers .eq-task-strip { margin-bottom: 22px; }
+  .eq-story-equation { margin-top: 25px; padding-top: 18px; }
+  .eq-example-rule { padding-bottom: 18px; }
+  .eq-example-body { padding-top: 20px; }
+  .eq-big-number { font-size: 88px; }
+  .eq-example-interpretation { margin-top: 20px !important; font-size: 20px; }
+}
+
+@media (max-width: 900px) {
+  .eq-study { padding: 36px 30px 24px; }
+  .eq-study-header h2 { font-size: clamp(31px,5vw,43px); }
+  .eq-study-header > p { font-size: 19px; }
+  .eq-study-body { padding: 30px 0; }
+  .eq-anatomy { column-gap: 8px; grid-template-columns: 1fr 22px .85fr 22px 1fr; }
+  .eq-term > math { font-size: 38px; height: 110px; }
+  .eq-term--psi > math { font-size: 50px; }
+  .eq-join { font-size: 32px; line-height: 110px; }
+  .eq-term-reading h3 { font-size: 20px; }
+  .eq-term-reading p { font-size: 12px; }
+  .eq-term-reading br { display: none; }
+  .eq-anatomy-reading { margin-top: 58px; }
+  .eq-anatomy-reading p { font-size: 23px; }
+  .eq-mechanism { grid-template-columns: 1fr; gap: 28px; }
+  .eq-profile { width: 90%; margin: 0 auto; }
+  .eq-profile-people .eq-person { width: 36px; }
+  .eq-profile-people > p { font-size: 12px; }
+  .eq-mechanism-reading { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .eq-mechanism-reading > div:first-child { grid-column: 1/-1; }
+  .eq-mechanism-reading .eq-equation { justify-content: center; font-size: 42px; margin: 0 0 8px; }
+  .eq-reading-point { display: block; margin: 0; }
+  .eq-point-mark { display: block; margin-bottom: 10px; }
+  .eq-reading-point h3 { font-size: 20px; }
+  .eq-reading-point p { font-size: 12px; }
+  .eq-story-flow { gap: 16px; grid-template-columns: 1fr .7fr 1fr; }
+  .eq-story-flow h3 { font-size: 21px; }
+  .eq-story-flow h3 + p { font-size: 12px; }
+  .eq-story .eq-person { width: 35px; }
+  .eq-story-link > math { font-size: 52px; }
+  .eq-story-equation { margin-top: 50px; padding-top: 30px; }
+  .eq-story-equation > p { font-size: 18px; max-width: 550px; margin-left: auto; margin-right: auto; }
+  .eq-story .eq-medicines img { max-height: 50px; }
+  .eq-example-rule { flex-direction: column; gap: 18px; }
+  .eq-example-rule > p { max-width: none; font-size: 17px; }
+  .eq-example-body { grid-template-columns: 1fr .45fr 1fr; gap: 12px; }
+  .eq-big-number { font-size: 80px; }
+  .eq-stat-caption { font-size: 18px; }
+  .eq-example-calc > p { font-size: 23px; }
+  .eq-example-calc > span { font-size: 10px; }
+  .eq-example-interpretation { font-size: 21px; }
+}
+
+@media (max-width: 540px) {
+  .eq-study { padding: 28px 20px 18px; }
+  .eq-study-header h2 { font-size: clamp(26px,7.65vw,36px); line-height: 1.06; }
+  .eq-study-header > p { margin-top: 12px; font-size: 16px; line-height: 1.35; }
+  .eq-study-body { padding: 22px 0; align-items: center; }
+  .eq-anatomy { display: flex; flex-direction: column; gap: 0; }
+  .eq-term { display: grid; grid-template-columns: 45% 1fr; gap: 17px; align-items: center; width: 100%; padding: 16px 0; border-top: 1px solid var(--palette-rule); }
+  .eq-term > math { font-size: 32px; height: 68px; justify-content: flex-start; }
+  .eq-term--psi > math { font-size: 41px; padding-left: 35px; }
+  .eq-term-reading { margin: 0; padding: 0; border: none; }
+  .eq-term-reading h3 { font-size: 19px; }
+  .eq-term-reading p { font-size: 11px; line-height: 1.5; margin-top: 5px; }
+  .eq-join { height: 20px; line-height: 20px; padding-left: 52px; font-size: 24px; }
+  .eq-anatomy-reading { margin-top: 25px; gap: 12px; align-self: flex-start; }
+  .eq-anatomy-reading img { width: 52px; height: 52px; }
+  .eq-anatomy-reading p { font-size: 17px; }
+  .eq-study--2 .eq-study-body { padding-top: 14px; }
+  .eq-mechanism { gap: 18px; }
+  .eq-profile { width: 100%; }
+  .eq-profile > svg { max-height: 235px; }
+  .eq-profile .eq-svg-heading { font-size: 20px; }
+  .eq-profile .eq-svg-ai, .eq-profile .eq-svg-human { font-size: 18px; }
+  .eq-profile-people { margin-top: -3px; }
+  .eq-profile-people .eq-person { width: 27px; }
+  .eq-profile-people > p { font-size: 10px; margin-top: 3px; }
+  .eq-mechanism-reading { display: block; }
+  .eq-mechanism-reading .eq-equation { font-size: 27px; margin-bottom: 15px; }
+  .eq-reading-point { display: grid; grid-template-columns: 20px 1fr; gap: 9px; margin-top: 12px; }
+  .eq-point-mark { margin: 0; padding-top: 2px; }
+  .eq-reading-point h3 { font-size: 17px; }
+  .eq-reading-point p { font-size: 11px; line-height: 1.45; margin-top: 4px; }
+  .eq-story-flow { grid-template-columns: 1fr 1fr; gap: 22px 20px; align-items: start; }
+  .eq-story-link { grid-column: 1/-1; grid-row: 2; display: grid; grid-template-columns: 55px 1fr; align-items: center; padding: 14px 0; border-top: 1px solid var(--palette-rule); border-bottom: 1px solid var(--palette-rule); text-align: left; }
+  .eq-story-link > svg { display: none; }
+  .eq-story-link > math { font-size: 39px; grid-row: 1/3; margin: 0 auto; }
+  .eq-story-link > h3 + p { margin-top: 3px; }
+  .eq-story-link br { display: none; }
+  .eq-story-flow h3 { font-size: 19px; }
+  .eq-story-flow h3 + p { font-size: 11px; line-height: 1.45; }
+  .eq-story-flow h3 + p br { display: none; }
+  .eq-story .eq-workers { display: grid; grid-template-columns: repeat(3, 1fr); margin: 14px 0 12px; }
+  .eq-story .eq-person { width: 100%; }
+  .eq-story-workers .eq-task-strip { gap: 2px; margin: 0 0 16px; }
+  .eq-story-workers .eq-task-strip i { height: 8px; }
+  .eq-small-label { font-size: 8px; letter-spacing: .05em; }
+  .eq-clock-row { margin-top: 15px; font-size: 12px; gap: 4px; }
+  .eq-clock { width: 26px; height: 26px; }
+  .eq-story .eq-medicines { grid-template-columns: repeat(4, 1fr); margin: 6px 0 15px; }
+  .eq-story .eq-medicines img { max-height: 39px; }
+  .eq-story-equation { border: none; padding: 0; margin-top: 25px; }
+  .eq-story-equation .eq-equation { font-size: 27px; }
+  .eq-story-equation > p { font-size: 16px; line-height: 1.4; margin-top: 18px; }
+  .eq-example-rule { border: none; padding: 0; gap: 13px; }
+  .eq-example-rule .eq-equation { font-size: 27px; }
+  .eq-example-rule > p { font-size: 14px; }
+  .eq-example-body { grid-template-columns: 1fr 1fr; gap: 22px 20px; padding-top: 25px; }
+  .eq-example-input { grid-column: 1; }
+  .eq-example-result { grid-column: 2; grid-row: 1; }
+  .eq-big-number { font-size: 62px; }
+  .eq-number-unit { margin-left: 3px; }
+  .eq-stat-caption { font-size: 16px; line-height: 1.25; }
+  .eq-example-tasks { margin: 22px 0 18px; }
+  .eq-example-tasks .eq-task-strip { gap: 2px; }
+  .eq-example-tasks i { height: 13px; }
+  .eq-slider-label { font-size: 10px; line-height: 1.4; }
+  .eq-example-medicines { height: 65px; margin-top: 25px; gap: 0; }
+  .eq-example-medicines > span { width: 54px; height: 54px; }
+  .eq-example-unit { font-size: 10px; line-height: 1.5; }
+  .eq-example-calc { grid-row: 2; grid-column: 1/-1; border-top: 1px solid var(--palette-rule); padding-top: 18px; }
+  .eq-example-calc > svg { display: none; }
+  .eq-example-calc > p { margin: 0; font-size: 26px; }
+  .eq-example-calc > span { margin-top: 5px; }
+  .eq-example-interpretation { font-size: 18px; margin-top: 24px !important; line-height: 1.4; }
+}
+@media (max-width: 360px) {
+  .eq-study { padding: 22px 16px 14px; }
+  .eq-study-header h2 { font-size: 26px; }
+  .eq-study-header > p { font-size: 14px; }
+  .eq-study-body { padding: 17px 0; }
+  .eq-term { grid-template-columns: 43% 1fr; gap: 14px; padding: 12px 0; }
+  .eq-term > math { font-size: 27px; }
+  .eq-term--psi > math { font-size: 37px; }
+  .eq-term-reading h3 { font-size: 17px; }
+  .eq-term-reading p { font-size: 10px; }
+  .eq-anatomy-reading { margin-top: 20px; }
+  .eq-anatomy-reading p { font-size: 15px; }
+  .eq-anatomy-reading img { width: 44px; height: 44px; }
+  .eq-mechanism { gap: 12px; }
+  .eq-profile > svg { max-height: 188px; }
+  .eq-reading-point { margin-top: 10px; }
+  .eq-reading-point h3 { font-size: 16px; }
+  .eq-reading-point p { font-size: 10px; }
+  .eq-mechanism-reading .eq-equation, .eq-story-equation .eq-equation, .eq-example-rule .eq-equation { font-size: 24px; }
+  .eq-story-flow { gap: 20px 15px; }
+  .eq-story-flow h3 { font-size: 17px; }
+  .eq-story .eq-medicines img { max-height: 33px; }
+  .eq-story-equation > p { font-size: 14px; }
+  .eq-big-number { font-size: 51px; }
+  .eq-stat-caption { font-size: 14px; }
+  .eq-example-body { gap: 16px 15px; padding-top: 18px; }
+  .eq-example-calc { padding-top: 14px; }
+  .eq-example-interpretation { font-size: 16px; margin-top: 16px !important; }
+  .eq-example-medicines > span { width: 45px; height: 50px; }
+}

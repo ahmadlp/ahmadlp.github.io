@@ -1,0 +1,141 @@
+/* Slide arrows (slide-nav.js), prototype A of prototypes/slide-nav/: arrows centred in the side
+   margins and a counter just left of the autoplay ring, where no slide puts text. Strokes, chevrons
+   and corners follow the ring (autoplay-cue.css). A paper fill, unseen on the plain slides, keeps
+   the arrows and the counter legible over the paintings on slides 14, 34 and 47. */
+
+.snav {
+  position: absolute;
+  z-index: 80;
+  inset: 0;
+  color: var(--ink);
+  font-family: var(--sans);
+  pointer-events: none;
+  transition: opacity 500ms var(--ease), visibility 0s;
+}
+
+html[data-cover-visible="true"] .snav {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 500ms var(--ease), visibility 0s 500ms;
+}
+
+.snav__pager {
+  display: contents;
+}
+
+.snav__arrow {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  padding: 0;
+  border: 1.6px solid var(--rule);
+  border-radius: 50%;
+  background: var(--paper);
+  color: inherit;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: border-color 200ms var(--ease), opacity 300ms var(--ease);
+}
+
+.snav__arrow--back {
+  left: calc((100vw - 1240px) / 4 - 22px);
+}
+
+.snav__arrow--next {
+  right: calc((100vw - 1240px) / 4 - 22px);
+}
+
+.snav__arrow:hover {
+  border-color: var(--ink);
+}
+
+.snav__arrow:focus-visible {
+  outline: 1.6px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.snav__arrow:disabled {
+  border-color: var(--rule);
+  opacity: 0.3;
+  cursor: default;
+}
+
+.snav__chevron {
+  width: 10px;
+  height: 10px;
+  border-right: 1.6px solid currentColor;
+  border-bottom: 1.6px solid currentColor;
+}
+
+.snav__arrow--back .snav__chevron {
+  transform: translateX(2px) rotate(135deg);
+}
+
+.snav__arrow--next .snav__chevron {
+  transform: translateX(-2px) rotate(-45deg);
+}
+
+.snav__count {
+  position: absolute;
+  right: calc(max(30px, (100vw - 1240px) / 2) + 38px);
+  bottom: 18px;
+  margin: 0;
+  padding: 0 8px;
+  border-radius: 15px;
+  background: var(--paper);
+  color: var(--muted);
+  font: 500 13px/30px var(--sans);
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.snav__count b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Where the side margins get narrow the arrows join the counter beside the ring. */
+@media (max-width: 1399px) {
+  .snav__pager {
+    position: absolute;
+    right: calc(max(30px, (100vw - 1240px) / 2) + 42px);
+    bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .snav__arrow {
+    position: static;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+  }
+
+  .snav__chevron {
+    width: 8px;
+    height: 8px;
+  }
+
+  .snav__count {
+    position: static;
+  }
+}
+
+/* On a phone the counter sits beside the ring, 6 px from the bottom; a note on slides 16–21 leaves
+   no room for the arrows, and the page is paged by swiping. */
+@media (max-width: 760px) {
+  .snav__pager {
+    right: 58px;
+    bottom: 6px;
+  }
+
+  .snav__arrow {
+    display: none;
+  }
+}

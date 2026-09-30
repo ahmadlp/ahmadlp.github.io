@@ -1,0 +1,39 @@
+/* Round 30, frames 47 to 51: the fate of horses (prototype A1, "Hairlines"), laid out as a trade
+   slide (trade.css, trade-blocks.css) and drawn by horses-chart.js. It fades in over the opener on
+   its own paper (--hz-in, set by horses.js). It keeps .done: the trade slides' builds would replay
+   here, where the scroll builds the chart. */
+.hz { background: var(--paper); opacity: var(--hz-in, 0); }
+.hz .trade-deck { max-width: none; }
+/* The title keeps to one line on wider screens (horses-chart.js sets it smaller if it must); step
+   sentences wrap without a lone last word. */
+@media (min-width: 761px) { .hz .trade-header h2 { white-space: nowrap; } }
+.hz .line-steps > span { text-wrap: pretty; }
+/* The row heads, larger than the trade slides', each clear of its panel by the same gap. */
+.hz .blocks-head strong { font-size: 31px; }
+.hz .pile-wrap { margin-top: 22px; }
+/* AI's dots are highest at the right, so its head sits level with them, on their left. */
+@media (min-width: 761px) { .hz [data-row="ai"] .pile-wrap { margin-top: -33px; } }
+
+/* A painting: a crop of one of the panoramas in a box on the page, its edges feathered into the
+   page. The image multiplies with the page, so the painting's paper disappears; opacity goes on
+   the image itself, never on its box, or the blend would stop. */
+.hz-pic { position: absolute; overflow: hidden; pointer-events: none; }
+.hz-pic img {
+  position: absolute; max-width: none; height: auto; opacity: 0;
+  mix-blend-mode: multiply; filter: brightness(1.015);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent), linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent), linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-composite: source-in; mask-composite: intersect;
+}
+
+/* On phones the row heads are too long to share a line with the counts, so each count takes its
+   own line under its head. */
+@media (max-width: 760px) {
+  .hz .blocks-head strong { font-size: 23px; }
+  .hz .pile-wrap { margin-top: 36px; }
+  .hz .line-count { left: 0; right: auto; margin-bottom: 10px; text-align: left; }
+  /* AI's count sits level with its highest dots, as its head does on wider screens. */
+  .hz [data-row="ai"] .pile-wrap { margin-top: 8px; }
+  .hz [data-row="ai"] .line-count { top: 0; bottom: auto; margin: 0; }
+}

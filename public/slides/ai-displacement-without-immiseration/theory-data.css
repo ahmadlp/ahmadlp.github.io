@@ -1,0 +1,243 @@
+/* Theory Meets Data (Round 28, prototype D): frames 12–32.
+   Copied from the prototype's proto.css and protos.css, scoped to the data module.
+   The module resets the deck's inherited text settings so the frames render as in the prototype. */
+.r28-data {
+  --paper: #f2f6f8; --paper-light: #f8fafb; --ink: #1d315a; --copy: #545e74; --muted: #6f7d92;
+  --rule: #cdd3df; --machine: #435586; --human: #80526f;
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Libre Franklin", "Helvetica Neue", sans-serif;
+  --math: "STIX Two Math", "Cambria Math", serif;
+  --ease: cubic-bezier(0.22, 0.72, 0.2, 1);
+  position: absolute; inset: 0; overflow: hidden;
+  color: var(--ink); font-family: var(--sans); background: var(--paper);
+  -webkit-font-smoothing: antialiased; font-synthesis: initial; text-rendering: auto; color-scheme: normal;
+}
+.r28-data h2, .r28-data h3, .r28-data p, .r28-data figure { margin: 0; }
+.r28-data h2 { text-wrap: wrap; }
+.r28-data .human { color: var(--human); } .r28-data .machine { color: var(--machine); }
+
+/* ---------- Frames and steps ---------- */
+.r28-data .frame {
+  position: absolute; inset: 0; overflow: hidden; visibility: hidden; pointer-events: none;
+  background: radial-gradient(circle at 15% 12%, rgb(255 255 255 / 48%), transparent 30%), var(--paper);
+}
+.r28-data .frame.is-active { visibility: visible; pointer-events: auto; animation: r28-frame-in 220ms cubic-bezier(.22, .61, .36, 1) both; }
+@keyframes r28-frame-in { from { opacity: 0; } to { opacity: 1; } }
+.r28-data .st {
+  --from: 0; --until: 99;
+  opacity: min(clamp(0, calc(var(--step) - var(--from) + 1), 1), clamp(0, calc(var(--until) - var(--step)), 1));
+  transition: opacity .5s var(--ease);
+}
+.r28-data .swap { display: grid; }
+.r28-data .swap > * { grid-area: 1 / 1; }
+
+/* ---------- Charts ---------- */
+.r28-data .chart { position: relative; min-width: 0; min-height: 0; }
+.r28-data .chart > svg { position: absolute; inset: 0; display: block; width: 100%; height: 100%; overflow: visible; }
+.r28-data .chart text { font-family: var(--sans); }
+.r28-data .halo { paint-order: stroke; stroke: var(--paper); stroke-width: 5px; stroke-linejoin: round; }
+
+/* ---------- Painting ---------- */
+.r28-data .paint { position: absolute; inset: 0; overflow: hidden; background: var(--paper); }
+.r28-data .paint .theory-data-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.r28-data .paint h2 {
+  position: absolute; z-index: 1; top: 29%; left: 6%; color: var(--ink); white-space: nowrap;
+  font: 560 clamp(44px, 4.55vw, 68px)/1.08 var(--serif); letter-spacing: -.045em;
+}
+@media (max-aspect-ratio: 6/5) {
+  .r28-data .paint h2 { top: 12%; left: 5%; right: 5%; text-align: center; font-size: clamp(28px, 6.1vw, 53px); }
+}
+@media (max-width: 540px) { .r28-data .paint h2 { font-size: clamp(27px, 7.9vw, 39px); } }
+
+/* ---------- Evidence slides ---------- */
+.r28-data .ev-slide {
+  height: 100%; padding: 44px max(5vw, calc((100vw - 1160px) / 2)) 30px;
+  display: grid; grid-template-rows: auto minmax(0, 1fr) auto;
+}
+.r28-data .ev-slide header h2 { font: 620 clamp(35px, 3.75vw, 54px)/1.06 var(--serif); letter-spacing: -.045em; }
+.r28-data .ev-slide header > p, .r28-data .ev-slide header > .swap > p { font: 400 clamp(18px, 1.55vw, 22px)/1.4 var(--serif); color: var(--copy); margin-top: 14px; max-width: 1120px; }
+.r28-data .ev-body { min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 28px; padding: 30px 0 32px; }
+.r28-data .ev-body > .chart { flex: 1 1 auto; }
+/* The validation slide: the calendar, folded into a strip at the top, and the sector chart below it share
+   one cell with the test results, which take the space under the test's title at the last step. Lines and
+   dots are painted on a canvas under the chart's text. */
+.r28-data .ev-slide--validation .ev-body.stage { --strip: 190px; --gap: 72px; --head: 110px; display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr); }
+.r28-data .ev-slide--validation .ev-body.stage > * { grid-area: 1 / 1; }
+.r28-data .ev-slide--validation .ev-body.stage > canvas.brush { align-self: start; justify-self: start; pointer-events: none; }
+.r28-data .ev-slide--validation .ev-body.stage > .results { align-self: end; height: calc(100% - var(--strip) - var(--head)); opacity: 0; transition: opacity .6s var(--ease); }
+.r28-data .ev-slide--validation[data-step="6"] .ev-body.stage > .results { opacity: 1; }
+.r28-data .ev-slide--validation .results.sweep {
+  -webkit-mask: linear-gradient(90deg, #000 46.7%, transparent 53.3%) 20% 0 / 300% 100% no-repeat;
+  mask: linear-gradient(90deg, #000 46.7%, transparent 53.3%) 20% 0 / 300% 100% no-repeat;
+  animation: r30-sweep 1.9s cubic-bezier(.4, 0, .3, 1) .6s both;
+}
+@media (max-height: 780px) and (min-width: 901px) { .r28-data .ev-slide--validation .ev-body.stage { --strip: 160px; --gap: 40px; --head: 78px; } }
+@media (max-width: 540px) { .r28-data .ev-slide--validation .ev-body.stage { --strip: 150px; --gap: 36px; --head: 80px; } }
+.r28-data .ev-slide h3 { font: 600 25px/1.2 var(--serif); letter-spacing: -.022em; }
+.r28-data .ev-slide footer { font: 400 11px/1.5 var(--sans); color: var(--muted); }
+
+/* The formula */
+.r28-data .eq {
+  display: flex; justify-content: center;
+  font-size: clamp(34px, 4.3vw, 58px); padding-bottom: .2em;
+}
+/* Typeset math: an SVG sized in em of its font size. The formula has a wide and a phone version. */
+.r28-data .tex { display: block; max-width: 100%; height: auto; }
+.r28-data .eq .tex-narrow { display: none; }
+
+/* ---------- Result scenes ---------- */
+.r28-data .results-scene {
+  height: 100%; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; row-gap: clamp(20px, 3svh, 30px);
+  padding: clamp(28px, 5svh, 52px) calc(max(30px, (100vw - 1240px) / 2) + max(0px, (100vw - 1320px) / 2)) clamp(26px, 4.5svh, 46px);
+}
+.r28-data .r-caption { min-width: 0; }
+.r28-data .r-title { font: 535 clamp(38px, 4vw, 57px)/1.01 var(--serif); letter-spacing: -.037em; color: var(--ink); }
+/* Slides 28–29: the title runs into the right margin so it stays on one line. */
+.r28-data .results-scene:has([data-chart="fig8a"]) .r-title { margin-right: calc(-1 * max(0px, (100vw - 1320px) / 2)); }
+.r28-data .r-deck { margin-top: 12px; max-width: 750px; font: 400 clamp(17px, 1.55vw, 21px)/1.36 var(--serif); color: var(--copy); }
+.r28-data .r-deck p + p { margin-top: 8px; }
+.r28-data .r-chart { position: relative; min-height: 0; }
+.r28-data .r-chart > .chart { position: absolute; inset: 0; }
+.r28-data .r-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; min-height: 12px; }
+.r28-data .r-concl { font: 600 clamp(20px, 1.9vw, 26px)/1.25 var(--serif); letter-spacing: -.028em; color: var(--ink); max-width: 860px; }
+.r28-data .r-scope { margin-left: auto; font: 400 11px/1.35 var(--sans); color: var(--muted); text-align: right; white-space: nowrap; }
+
+/* ---------- One chart that builds, with the equation card at its last state ---------- */
+.r28-data .m { font-family: var(--math); font-style: normal; }
+.r28-data .build-stage { position: relative; flex: 1 1 auto; min-height: 0; }
+.r28-data .build-stage > .chart {
+  position: absolute; inset: 0;
+  opacity: calc(1 - .75 * clamp(0, calc(var(--step) - 4), 1)); transition: opacity .5s var(--ease);
+}
+.r28-data .eq-card {
+  position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%);
+  width: fit-content; max-width: 100%; margin-inline: auto;
+  padding: 22px 40px 26px; background: var(--paper-light); border: 1px solid var(--rule); border-radius: 4px;
+  box-shadow: 0 12px 32px rgb(29 49 90 / 10%);
+}
+.r28-data .eq-card .eq { padding-bottom: 0; }
+
+/* ---------- Breakpoints ---------- */
+@media (max-height: 780px) and (min-width: 901px) {
+  .r28-data .ev-slide { padding-top: 30px; padding-bottom: 25px; }
+  .r28-data .ev-slide header h2 { font-size: 44px; }
+  .r28-data .ev-slide header > p, .r28-data .ev-slide header > .swap > p { font-size: 20px; margin-top: 10px; }
+  .r28-data .ev-body { gap: 20px; padding: 20px 0 22px; }
+  .r28-data .eq { font-size: 46px; }
+}
+@media (max-height: 720px) and (min-width: 761px) {
+  .r28-data .r-title { font-size: 38px; }
+  .r28-data .r-deck { font-size: 16px; }
+}
+@media (max-width: 900px) {
+  .r28-data .ev-slide { padding: 32px 30px 28px; }
+  .r28-data .ev-slide header h2 { font-size: 38px; }
+  .r28-data .ev-slide header > p, .r28-data .ev-slide header > .swap > p { font-size: 20px; }
+  .r28-data .ev-body { gap: 26px; }
+  .r28-data .ev-slide footer { font-size: 10.5px; }
+}
+@media (max-width: 760px) {
+  .r28-data .results-scene { padding: 24px 20px; }
+  .r28-data .r-title { font-size: clamp(25px, 7.4vw, 33px); }
+  .r28-data .r-deck { font-size: 14px; }
+  .r28-data .r-concl { font-size: 16px; }
+  .r28-data .r-scope { font-size: 10.5px; white-space: normal; }
+}
+@media (max-width: 540px) {
+  .r28-data .ev-slide { padding: 27px 20px 24px; }
+  .r28-data .ev-slide header h2 { font-size: 28px; }
+  .r28-data .ev-slide header > p, .r28-data .ev-slide header > .swap > p { font-size: 16px; margin-top: 12px; }
+  .r28-data .ev-body { padding: 22px 0; gap: 18px; }
+  .r28-data .eq { font-size: clamp(22px, 7.6vw, 30px); }
+  .r28-data .eq .tex-wide { display: none; }
+  .r28-data .eq .tex-narrow { display: block; }
+  .r28-data .eq-card { padding: 14px 14px 18px; }
+}
+
+/* ---------- Worker and AI costs (cost slide D, prototypes/costs): the two costs, the relative cost, each count under what it counts ---------- */
+.r28-data .cs { grid-template-rows: auto minmax(0, 1fr); --t-h: .2; --t-a: .8; --t-fly: 1.5; --t-eq: 2.35; --t-data: 3; --dt: .05; }
+.r28-data .cs .ev-body { gap: clamp(20px, 3.6svh, 40px); padding: clamp(20px, 3.4svh, 34px) 0 0; }
+.r28-data .cs-scene {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); grid-template-rows: repeat(4, auto);
+  column-gap: clamp(20px, 3vw, 48px); row-gap: 12px;
+}
+.r28-data .cs-side, .r28-data .cs-ratio { display: grid; grid-template-rows: subgrid; grid-row: 1 / -1; justify-items: center; text-align: center; }
+.r28-data .cs-side { grid-template-columns: minmax(0, 1fr); }
+.r28-data .cs-side--human { grid-column: 1; }
+.r28-data .cs-side--ai { grid-column: 3; }
+.r28-data .cs-ratio { grid-column: 2; position: relative; z-index: 2; }
+.r28-data .cs .cs-scene h3 { font: 600 clamp(20px, 2vw, 29px)/1.2 var(--serif); letter-spacing: -.022em; white-space: nowrap; align-self: end; }
+.r28-data .cs-ratio h3 { color: var(--ink); }
+.r28-data .cs-sym { display: inline-block; height: auto; margin-left: .3em; vertical-align: calc(var(--d) * -1em); }
+.r28-data .cs-art { position: relative; width: min(100%, clamp(120px, 28svh, 250px) * 1.5); aspect-ratio: 3 / 2; overflow: hidden; }
+.r28-data .cs-art img { position: absolute; top: -23.08%; width: 278.46%; max-width: none; }
+.r28-data .cs-art--human img { left: -7.05%; }
+.r28-data .cs-art--ai img { left: -171.79%; }
+.r28-data .cs-side > p { font: 400 clamp(14px, 1.3vw, 19px)/1.42 var(--serif); color: var(--copy); max-width: 23em; }
+.r28-data .cs-side > p span { display: block; text-wrap: balance; }
+.r28-data .cs-side > p span + span { white-space: nowrap; }
+@media (max-width: 900px) { .r28-data .cs-side > p span + span { white-space: normal; } }
+.r28-data .cs-eq { align-self: center; font-size: clamp(28px, 3vw, 44px); line-height: 0; }
+.r28-data .cs-eq svg { display: block; width: 100%; height: auto; overflow: visible; }
+.r28-data .cs-eq .num, .r28-data .cs-eq .den { transform-box: fill-box; transform-origin: 0 0; }
+.r28-data .cs-tag { display: grid; justify-items: center; row-gap: 8px; padding-top: 14px; border-top: 1px solid var(--rule); width: min(100%, 320px); }
+.r28-data .cs-ratio .cs-tag { grid-row: 4; }
+.r28-data .cs-tag .chart { width: 100%; height: 52px; }
+.r28-data .cs-tag p { font: 400 clamp(13px, 1.1vw, 16px)/1.4 var(--sans); color: var(--copy); }
+.r28-data .cs-tag strong { font: 600 1.25em/1 var(--serif); color: var(--ink); font-variant-numeric: lining-nums; }
+.r28-data .cs-tag [data-count] { display: inline-block; text-align: right; }
+.r28-data .epoch { font: 600 1em/1 var(--sans); letter-spacing: .01em; color: var(--ink); white-space: nowrap; }
+.r28-data .wf rect { fill: var(--human); }
+.r28-data .wf .alt rect { fill: #b08aa2; }
+.r28-data .tl-dot { fill: var(--machine); }
+.r28-data .sp-bar { fill: var(--ink); transform-box: fill-box; transform-origin: 50% 100%; }
+
+/* Entrance: the human side, the AI side, c_L(i) and c_M(i) travel into D(i), then the data points by release date */
+@keyframes cs-in { from { opacity: 0; } }
+@keyframes cs-fly { from { transform: translate(var(--dx), var(--dy)) scale(var(--s)); } }
+@keyframes cs-grow { from { transform: scaleY(0); } }
+.r28-data .frame.is-active:not(.done) .cs-side--human { animation: cs-in .6s var(--ease) calc(var(--t-h) * 1s) both; }
+.r28-data .frame.is-active:not(.done) .cs-side--ai { animation: cs-in .6s var(--ease) calc(var(--t-a) * 1s) both; }
+.r28-data .frame.is-active:not(.done) .cs-eq .num {
+  animation: cs-in .6s var(--ease) calc(var(--t-h) * 1s) both, cs-fly .95s cubic-bezier(.62, 0, .24, 1) calc(var(--t-fly) * 1s) both;
+}
+.r28-data .frame.is-active:not(.done) .cs-eq .den {
+  animation: cs-in .6s var(--ease) calc(var(--t-a) * 1s) both, cs-fly .95s cubic-bezier(.62, 0, .24, 1) calc(var(--t-fly) * 1s) both;
+}
+.r28-data .frame.is-active:not(.done) .cs-eq .rest,
+.r28-data .frame.is-active:not(.done) .cs-ratio h3 { animation: cs-in .55s var(--ease) calc(var(--t-eq) * 1s) both; }
+.r28-data .frame.is-active:not(.done) .cs-ratio .cs-tag { animation: cs-in .5s var(--ease) calc(var(--t-eq) * 1s) both; }
+.r28-data .frame.is-active:not(.done) .cs-side--human .wf rect { animation: cs-in .3s var(--ease) calc((var(--t-h) + .35 + var(--i) * .03) * 1s) both; }
+.r28-data .frame.is-active:not(.done) .cs-side--ai .tl-dot { animation: cs-in .3s var(--ease) calc((var(--t-a) + .35 + var(--i) * .035) * 1s) both; }
+.r28-data .frame.is-active:not(.done) .sp-bar { animation: cs-grow .4s var(--ease) calc((var(--t-data) + var(--i) * var(--dt)) * 1s) both; }
+
+/* Phone: the two costs side by side, the relative cost below */
+@media (max-width: 720px) {
+  .r28-data .cs .ev-body { justify-content: flex-start; gap: 18px; padding-top: 18px; }
+  .r28-data .cs-scene { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 14px; row-gap: 8px; }
+  .r28-data .cs-side { grid-row: 1 / span 4; }
+  .r28-data .cs-side--ai { grid-column: 2; }
+  .r28-data .cs-ratio { grid-column: 1 / -1; grid-row: auto; display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 8px; }
+  .r28-data .cs .cs-scene h3 { font-size: 17px; }
+  .r28-data .cs .cs-ratio h3 { align-self: center; font-size: 16px; }
+  .r28-data .cs-art { width: 100%; }
+  .r28-data .cs-side > p { font-size: 12.5px; line-height: 1.4; }
+  .r28-data .cs-side > p span + span { white-space: normal; }
+  .r28-data .cs-eq { font-size: 25px; }
+  .r28-data .cs-tag { padding-top: 10px; row-gap: 6px; }
+  .r28-data .cs-tag p { font-size: 12px; }
+  .r28-data .cs-tag .chart { height: 40px; }
+}
+
+/* ---------- The other frames build in at the cost slide's pace: the chart sweeps in from the left, then the conclusion ---------- */
+@keyframes r30-sweep { from { -webkit-mask-position: 80% 0; mask-position: 80% 0; } }
+.r28-data .frame.is-active:not(.done) :is(.r-chart, .build-stage) > .chart {
+  -webkit-mask: linear-gradient(90deg, #000 46.7%, transparent 53.3%) 20% 0 / 300% 100% no-repeat;
+  mask: linear-gradient(90deg, #000 46.7%, transparent 53.3%) 20% 0 / 300% 100% no-repeat;
+  animation: r30-sweep 1.9s cubic-bezier(.4, 0, .3, 1) .25s both;
+}
+.r28-data .frame.is-active:not(.done) .paint h2 { animation: cs-in .8s var(--ease) .5s both; }
+.r28-data .frame.is-active:not(.done) .r-concl:not(.st) { animation: cs-in .6s var(--ease) 2.35s both; }
+/* Frame 32: the bar after five years follows today's, then the conclusion. */
+.r28-data .frame.is-active:not(.done) .f9b-later { animation: cs-in .7s var(--ease) 2.2s both; }
+.r28-data .frame.is-active:not(.done) .results-scene:has(.f9b-later) .r-concl:not(.st) { animation-delay: 3.2s; }

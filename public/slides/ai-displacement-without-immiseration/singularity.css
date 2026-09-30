@@ -1,0 +1,3 @@
+/* Round 31, state 66: the prediction chart. The panel and its header use the equation's styles. */
+.sg-chart { position: relative; flex: 1; align-self: stretch; min-height: 0; }
+.sg-chart canvas { position: absolute; left: 0; top: 50%; transform: translateY(-50%); }

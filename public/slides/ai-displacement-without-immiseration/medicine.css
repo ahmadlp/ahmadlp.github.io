@@ -1,0 +1,65 @@
+/* Approved gouache cover, retaining the inherited title typography and layout. */
+html[data-example="medicine"] .title-cover {
+  color: #223149;
+  background: #c8cbd2;
+}
+html[data-example="medicine"] .title-cover__veil { background: none; }
+html[data-example="medicine"] .title-cover__subtitle { color: #72374b; }
+html[data-example="medicine"] .title-cover__byline,
+html[data-example="medicine"] .cover-switcher a { color: #223149; }
+html[data-example="medicine"] .cover-switcher a:focus-visible,
+html[data-example="medicine"] .title-cover__enter:focus-visible { outline-color: #72374b; }
+@media (max-width: 1100px), (max-aspect-ratio: 3/2) {
+  html[data-example="medicine"] .title-cover__art {
+    height: 60%;
+    object-position: 20% center;
+  }
+  html[data-example="medicine"] .title-cover__veil {
+    background: linear-gradient(180deg, transparent 54%, #c8cbd2 60%);
+  }
+}
+/* Round 31: on wide screens the cover is the finished slide picture, words included; the live words stay
+   for screen readers. The picture is anchored right so the words are never cropped. The picture has no
+   painted Scroll down; the live button sits where it was, its top left at 988, 627 of the picture's
+   1649 by 954, and --k (one picture pixel) scales it with the picture. */
+@media (min-width: 1101px) and (min-aspect-ratio: 1501/1000) {
+  html[data-example="medicine"] .title-cover__art { object-position: right center; }
+  html[data-example="medicine"] .title-cover__copy {
+    inset: 0;
+    width: auto;
+    max-width: none;
+    transform: none;
+    container-type: size;
+    pointer-events: none;
+  }
+  html[data-example="medicine"] .title-cover__copy > :not(.title-cover__enter) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  html[data-example="medicine"] .title-cover__enter {
+    --k: max(100cqw / 1649, 100cqh / 954);
+    position: absolute;
+    top: calc(50% + var(--k) * 150);
+    left: calc(100% - var(--k) * 661);
+    margin: 0;
+    pointer-events: auto;
+  }
+}
+
+/* Eight medicines share the inherited four columns, arranged in two rows. */
+html[data-example="medicine"] .good-unit {
+  --good-width: clamp(90px, 8.5vw, 122px);
+  --good-height: 58px;
+}
+/* Square source art must shrink to the existing grid cell's height. */
+html[data-example="medicine"] .good-unit img { min-width: 0; min-height: 0; }
+@media (max-width: 760px) {
+  html[data-example="medicine"] .good-unit {
+    --good-width: 64px;
+    --good-height: 44px;
+  }
+}

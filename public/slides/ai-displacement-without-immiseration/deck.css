@@ -1,0 +1,85 @@
+/* Round 23: one palette and explicit ownership of the three story chapters. */
+html[data-palette-study="19"] {
+  color-scheme: light;
+
+  /* Cool blue-white paper with the brighter cobalt/coral/plum evidence colors
+     established by the lounge-chair workshop panorama. */
+  --surface: #f2f6f8;
+  --surface-light: #f8fafb;
+  --palette-ink: #1d315a;
+  --palette-copy: #545e74;
+  --palette-muted: #6f7d92;
+  --palette-rule: #c8d6e0;
+  --palette-rule-dark: #718ca7;
+  --palette-context: #adc9d4;
+  --palette-machine: #2c6097;
+  --palette-machine-mark: #3f4fb7;
+  --palette-machine-wash: #dce9f0;
+  --palette-human: #9c2f80;
+  --palette-human-mark: #cf3f72;
+  --palette-human-wash: #f3d9e8;
+  --palette-purchase: #e05d47;
+  --palette-purchase-mark: #f26c4f;
+  --palette-purchase-wash: #f7ded8;
+  --palette-output: #9c6298;
+  --palette-output-mark: #cf7295;
+  --palette-output-wash: #efe0ec;
+  --palette-horse: #713885;
+  --palette-horse-mark: #713885;
+  --palette-horse-wash: #eaddef;
+
+  color: var(--palette-ink);
+  background: var(--surface);
+
+  /* Conceptual framework. */
+  --paper: var(--surface);
+  --ink: var(--palette-ink);
+  --copy: var(--palette-copy);
+  --muted: var(--palette-muted);
+  --rule: var(--palette-rule);
+  --rule-dark: var(--palette-rule-dark);
+  --ai: var(--palette-machine);
+  --ai-wash: var(--palette-machine-wash);
+  --human: var(--palette-human);
+  --human-wash: var(--palette-human-wash);
+  --result: var(--palette-ink);
+  --result-deep: var(--palette-purchase);
+  --horse: var(--palette-horse);
+  --horse-wash: var(--palette-horse-wash);
+  --profile: var(--palette-machine);
+  --profile-ghost: var(--palette-context);
+  --purchase-clock: var(--palette-human);
+  --purchase-before: var(--palette-purchase);
+  --purchase-after: var(--palette-purchase);
+  --purchase-ghost: var(--palette-purchase-wash);
+
+  /* The fate of horses. */
+  --r12-ink: var(--palette-ink);
+}
+
+.r12-horse-story, .r13-horse-story { background: var(--paper); }
+.story-stage[data-chapter="results"] > .stage-frame,
+.story-stage[data-chapter="horses"] > .stage-frame { opacity: 0; visibility: hidden; pointer-events: none; }
+.story-beats { padding-bottom: 45svh; }
+/* Opacity is already interpolated from the scroll position. A second timed
+   CSS transition makes old headings linger when the reader scrolls back. */
+.stage-header, .stage-copy, .panorama-scene, .mechanism-scene,
+.formula-scene { transition: none; }
+.task-node--single-art .task-art { background-size: cover; background-position: center 50%; }
+html[data-example="chair"] .panorama-mobile span { background-size: 100% 200%; background-position: center top; }
+html[data-example="chair"] .panorama-mobile span:last-child { background-position: center bottom; }
+html[data-example="chair"] .good-unit { --good-width: clamp(94px, 9.5vw, 130px); --good-height: clamp(94px, 9.5vw, 130px); }
+
+html[data-horse-concept="02"] .r12-opener h2 { width: min(740px, 57%); font-size: clamp(48px, 5vw, 76px); }
+
+.deck-end {
+  padding: 32px 24px 42px; text-align: center; background: var(--paper);
+  color: var(--copy); font: 14px/1.5 var(--sans);
+}
+.deck-end a { text-decoration: none; border-bottom: 1px solid var(--rule-dark); padding-bottom: 4px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 760px) {
+  html[data-example="chair"] .good-unit { --good-width: 62px; --good-height: 62px; }
+  html[data-horse-concept="02"] .r12-opener h2 { left: 20px; width: calc(100% - 40px); top: 8%; font-size: clamp(30px, 8.4vw, 45px); }
+}

@@ -1,0 +1,91 @@
+/* Selected Figure 1 and two retained alternatives, scoped to the equation frame. */
+.eq-arrow-study .eq-study-body { position: relative; display: block; padding: 0; margin: 32px 0; }
+.arrow-composition { position: absolute; inset: 0; }
+.eq-arrow-study .eq-profile { position: absolute; margin: 0; }
+.eq-arrow-study .arrow-equation { position: absolute; transform: translateY(-50%); }
+.eq-arrow-study .arrow-equation .eq-equation { justify-content: center; margin: 0; font-size: var(--arrow-math); }
+.eq-arrow-study .eq-profile [data-reveal] { animation: none; }
+.arrow-note { position: absolute; }
+.eq-arrow-study .arrow-note h3 { font-family: var(--serif); font-size: 22px; line-height: 1.22; font-weight: 550; letter-spacing: -.02em; }
+.eq-arrow-study .arrow-note p { font-family: var(--sans); font-size: 13px; line-height: 1.6; margin-top: 9px; color: var(--copy); }
+.arrow-note--wage { color: var(--palette-purchase); }
+.arrow-note--dispersion { color: var(--palette-machine); }
+.arrow-note--tasks { color: var(--palette-human); }
+.arrow-leaders { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.arrow-leader, .arrow-head { fill: none; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
+.arrow-leader--wage, .arrow-head--wage { stroke: var(--palette-purchase); }
+.arrow-leader--dispersion, .arrow-head--dispersion { stroke: var(--palette-machine); }
+.arrow-leader--tasks, .arrow-head--tasks { stroke: var(--palette-human); }
+.eq-arrow-study.is-playing [data-reveal] { animation-name: arrow-appear; }
+/* The build keeps the cost slide's pace: figure and equation, then each note with its leader. */
+.eq-arrow-study.is-playing .arrow-composition > [data-reveal] { animation-duration: .8s; animation-delay: calc(.2s + (var(--step) - 1) * .7s); }
+.eq-arrow-study.is-playing .eq-cost-profile { animation-duration: 1.5s; animation-delay: .4s; }
+.eq-arrow-study.is-playing .arrow-leader { animation: arrow-appear .6s both; }
+.eq-arrow-study.is-playing .arrow-leader--wage { animation-delay: 1.1s; }
+.eq-arrow-study.is-playing .arrow-leader--dispersion { animation-delay: 1.8s; }
+.eq-arrow-study.is-playing .arrow-leader--tasks { animation-delay: 2.5s; }
+@keyframes arrow-appear { from { opacity: 0; } to { opacity: 1; } }
+.arrow-review-links { display: inline-flex; gap: 12px; margin-left: 20px; }
+.eq-arrow-study .eq-study-footer a { text-decoration: none; padding-block: 8px; }
+.eq-arrow-study .eq-study-footer a:hover, .eq-arrow-study .eq-study-footer [aria-current] { color: var(--palette-purchase); }
+.eq-arrow-study a:focus-visible { outline: 2px solid var(--palette-purchase); outline-offset: 4px; }
+
+/* 01: the inherited side-by-side composition, with precise elbow leaders. */
+.eq-arrow-study--1 { --arrow-math: clamp(42px, 3.2vw, 50px); }
+.eq-arrow-study--1 .eq-profile { left: -3%; top: 14%; width: 62.5%; }
+.eq-arrow-study--1 .arrow-equation { left: 60%; top: 40%; width: 47%; }
+.eq-arrow-study--1 .arrow-note--wage { left: 61%; top: 12%; width: 17%; }
+.eq-arrow-study--1 .arrow-note--tasks { right: -6%; top: 9%; width: 24%; text-align: right; }
+.eq-arrow-study--1 .arrow-note--dispersion { left: 66%; top: 70%; width: 38%; }
+
+/* 02: a wider equation with curved annotations and the figure below. */
+.eq-arrow-study--2 { --arrow-math: clamp(54px, 4.7vw, 70px); }
+.eq-arrow-study--2 .arrow-equation { left: 11%; top: 31%; width: 80%; }
+.eq-arrow-study--2 .eq-profile { left: 3%; top: 51%; width: 40%; }
+.eq-arrow-study--2 .arrow-note--wage { left: 5%; top: 7%; width: 23%; }
+.eq-arrow-study--2 .arrow-note--dispersion { left: 45%; top: 0; width: 35%; text-align: center; }
+.eq-arrow-study--2 .arrow-note--tasks { right: 5%; top: 65%; width: 30%; }
+
+/* 03: annotations also connect to the slope and the human task interval. */
+.eq-arrow-study--3 { --arrow-math: clamp(54px, 4.7vw, 70px); }
+.eq-arrow-study--3 .arrow-equation { left: 10%; top: 20%; width: 80%; }
+.eq-arrow-study--3 .eq-profile { left: 17%; top: 48%; width: 43%; }
+.eq-arrow-study--3 .arrow-note--wage { left: 0; top: 1%; width: 23%; }
+.eq-arrow-study--3 .arrow-note--dispersion { left: 0; top: 35%; width: 29%; }
+.eq-arrow-study--3 .arrow-note--tasks { right: 0; top: 59%; width: 29%; }
+.eq-arrow-study--3 .arrow-figure-link { stroke-dasharray: 3 5; opacity: .7; }
+
+@media (max-height: 780px) and (min-width: 901px) {
+  .eq-arrow-study .eq-study-body { margin: 22px 0; }
+  .eq-arrow-study--1 { --arrow-math: 46px; }
+  .eq-arrow-study--2, .eq-arrow-study--3 { --arrow-math: 57px; }
+  .eq-arrow-study--2 .eq-profile { width: 34%; }
+  .eq-arrow-study--3 .eq-profile { width: 35%; left: 23%; top: 50%; }
+  .eq-arrow-study .arrow-note h3 { font-size: 21px; }
+  .eq-arrow-study .arrow-note p { font-size: 12px; }
+}
+@media (max-width: 900px) {
+  .eq-arrow-study { --arrow-math: 52px; }
+  .eq-arrow-study .eq-study-body { margin: 26px 0; }
+  .eq-arrow-study .arrow-equation { left: 0; width: 100%; top: 23%; }
+  .eq-arrow-study .eq-profile { left: 27%; top: 49%; width: 70%; }
+  .eq-arrow-study .arrow-note--wage { left: 3%; top: 4%; width: 27%; }
+  .eq-arrow-study .arrow-note--tasks { right: 3%; top: 2%; width: 37%; text-align: right; }
+  .eq-arrow-study .arrow-note--dispersion { left: 3%; top: 39%; width: 48%; text-align: left; }
+  .eq-arrow-study .arrow-figure-link { display: none; }
+}
+@media (max-width: 540px) {
+  .eq-arrow-study { --arrow-math: clamp(28px, 8.2vw, 34px); }
+  .eq-arrow-study .eq-study-body { margin: 30px 0 22px; }
+  .eq-arrow-study .arrow-equation { top: 23%; }
+  .eq-arrow-study .eq-profile { left: 0; top: 57%; width: 100%; }
+  .eq-arrow-study .arrow-note--wage { left: 0; top: 5%; width: 33%; }
+  .eq-arrow-study .arrow-note--tasks { right: 0; top: 0; width: 46%; }
+  .eq-arrow-study .arrow-note--dispersion { left: 26%; top: 40%; width: 74%; }
+  .eq-arrow-study .arrow-note h3 { font-size: 17px; }
+  .eq-arrow-study .arrow-note p { font-size: 10px; line-height: 1.55; margin-top: 6px; }
+  .arrow-leader { stroke-width: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .eq-arrow-study.is-playing .arrow-leader { animation: none; }
+}

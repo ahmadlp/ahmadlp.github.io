@@ -1,0 +1,24 @@
+/* Inactive chapters keep their measured layout but cannot paint through an
+   incoming slide. Opacity also contains children with explicit visibility. */
+.story-stage > [data-deck-module]:not([data-scene-active="true"]) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: none !important;
+}
+
+/* A tiny nonzero duration still lets visibility paint one stale browser frame.
+   Reduced-motion and static previews need immediate, atomic updates. */
+html[data-force-reduced="true"] .story-stage,
+html[data-force-reduced="true"] .story-stage *,
+html[data-force-reduced="true"] .story-stage *::before,
+html[data-force-reduced="true"] .story-stage *::after {
+  animation: none !important;
+  transition: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-stage, .story-stage *, .story-stage *::before, .story-stage *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

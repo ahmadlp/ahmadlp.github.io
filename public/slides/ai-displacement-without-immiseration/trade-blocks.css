@@ -1,0 +1,46 @@
+/* The two block slides after the concentration of the shock (trade states 61 to 65, then 35 to
+   39). Frame, kicker, title and deck line come from trade.css (.trade-blocks). */
+.blocks-stage { position: relative; flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; justify-content: center; margin-top: 26px; }
+
+/* Panel heads: "Trade" or "AI" and the live count. */
+.blocks-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 2px 14px; margin: 0; }
+.blocks-head strong { font: 600 25px/1.1 var(--serif); letter-spacing: -.02em; color: var(--ink); }
+.blocks-count { color: var(--copy); font: 15px/1.3 var(--sans); }
+.blocks-count b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* States 35 to 39: the pile of tasks. All step sentences share one cell, so the line's height
+   never changes; the current one shows. */
+.pile-stage { gap: 18px; }
+.pile-row { display: flex; flex-direction: column; }
+.pile-wrap { position: relative; margin-top: 4px; }
+.pile-wrap canvas { position: absolute; inset: 0; display: block; }
+.pile-steps { display: grid; }
+.pile-steps > span { grid-area: 1 / 1; opacity: 0; transition: opacity .3s ease; }
+.pile-steps > span.on { opacity: 1; }
+
+/* States 61 to 65: AI versus trade, the tasks on a production line. The block names head both
+   rows; each row's count sits at the end of its workers' lane (--lane, set by trade-line.js). The
+   step sentence is set in ink, a little heavier, and rises a little as it changes. */
+.line-names { display: block; }
+.line-count { position: absolute; right: 0; top: var(--lane, 0); transform: translateY(-50%); margin: 0; color: var(--copy); font: 13px/1.25 var(--sans); text-align: right; }
+.line-count b { color: var(--palette-human); font: 600 26px/1.05 var(--serif); font-variant-numeric: tabular-nums; }
+.line-steps { color: var(--ink); font-weight: 450; }
+.line-steps > span { transform: translateY(6px); transition: opacity .35s ease, transform .35s ease; }
+.line-steps > span.on { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .line-steps > span { transform: none; transition: none; }
+}
+
+@media (max-height: 760px) and (min-width: 761px) {
+  .blocks-stage { margin-top: 18px; }
+  .pile-stage { gap: 10px; }
+}
+@media (max-width: 760px) {
+  .blocks-stage { margin-top: 18px; justify-content: flex-start; }
+  .blocks-head strong { font-size: 20px; }
+  .blocks-count { font-size: 13px; }
+  .line-count { top: auto; bottom: 100%; transform: none; margin-bottom: 6px; font-size: 12px; }
+  .line-count br { display: none; }
+  .line-count b { font-size: 17px; }
+  .pile-stage { gap: 20px; }
+}

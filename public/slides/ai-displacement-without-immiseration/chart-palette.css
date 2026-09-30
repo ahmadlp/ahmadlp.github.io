@@ -1,0 +1,28 @@
+/* Round 26: chart pigments follow the approved indigo, coral and ochre cover.
+   Small colored labels use darker pigments than the corresponding marks. */
+html[data-palette-study="19"] {
+  --palette-rule: #cdd3df;
+  --palette-rule-dark: #7f8ba2;
+  --palette-context: #abb5c9;
+  --palette-machine: #435586;
+  --palette-machine-mark: #586ba5;
+  --palette-machine-wash: #dfe4ef;
+  --palette-human: #80526f;
+  --palette-human-mark: #a56883;
+  --palette-human-wash: #ecdee6;
+  --palette-purchase: #b94d3a;
+  --palette-purchase-mark: #d96045;
+  --palette-purchase-wash: #f3ddd5;
+  --palette-output: #90611e;
+  --palette-output-mark: #b7832a;
+  --palette-output-wash: #f1e5cb;
+  --palette-horse: #80526f;
+  --palette-horse-mark: #a56883;
+  --palette-horse-wash: #ecdee6;
+
+  --machine: var(--palette-machine);
+  --machine-mark: var(--palette-machine-mark);
+  --human-mark: var(--palette-human-mark);
+  --purchase: var(--palette-purchase);
+  --context: var(--palette-context);
+}

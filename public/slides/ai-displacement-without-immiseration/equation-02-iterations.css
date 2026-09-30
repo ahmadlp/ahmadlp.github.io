@@ -1,0 +1,99 @@
+/* Preserve option 02's composition while making the curve carry both definitions. */
+@font-face {
+  font-family: "TeX Gyre Pagella Math";
+  src: url("./fonts/texgyrepagella-math.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+.eq-iteration {
+  --math: "TeX Gyre Pagella Math", "STIX Two Math", serif;
+  --equation-size: clamp(36px, 3.6vw, 52px);
+}
+.eq-iteration .eq-study-header h2 { white-space: nowrap; }
+.eq-iteration .eq-dispersion, .eq-iteration math.eq-dispersion { color: var(--palette-machine); }
+.eq-iteration .eq-mechanism { grid-template-columns: 1.14fr 1fr; gap: 50px; }
+.eq-iteration .eq-profile > svg { width: 100%; max-height: none; }
+.eq-iteration .eq-profile text { font-size: 21px; }
+.eq-iteration .eq-profile .ei-axis-title { fill: var(--ink); font-size: 22px; font-weight: 600; }
+.eq-iteration .eq-profile .ei-label { font-size: 23px; font-weight: 550; }
+.eq-iteration .eq-profile .ei-note { font-size: 20px; }
+.eq-iteration .eq-profile .ei-order { font-size: 16px; fill: var(--muted); }
+.eq-iteration .eq-profile .ei-symbol { font-family: var(--math); font-size: 39px; }
+.eq-iteration .eq-profile .ei-sub { font-family: var(--math); font-size: .65em; }
+.eq-iteration .eq-profile .ei-psi { fill: var(--palette-machine); }
+.eq-iteration .eq-profile .ei-pi { fill: var(--palette-human); }
+.eq-iteration .eq-profile .ei-ai { fill: var(--palette-machine); }
+.eq-iteration .eq-profile .ei-context { fill: var(--palette-rule-dark); }
+.eq-iteration .ei-share-bracket { stroke: var(--palette-human); stroke-width: 1.6; fill: none; }
+.eq-iteration .ei-leader { fill: none; stroke: var(--palette-machine); stroke-width: 1.4; }
+.eq-iteration .ei-psi-dot { fill: var(--palette-machine); }
+.eq-iteration .ei-flatter-profile { fill: none; stroke: var(--palette-rule-dark); stroke-width: 2.5; stroke-dasharray: .018 .014; }
+.eq-iteration .ei-steeper-profile { stroke: var(--palette-machine); }
+.eq-iteration .ei-before-cutoff { fill: none; stroke: var(--palette-context); stroke-width: 1.4; stroke-dasharray: 5 5; }
+.eq-iteration .ei-before-dot { fill: var(--palette-context); }
+.eq-iteration .ei-before-bracket { fill: none; stroke: var(--palette-context); stroke-width: 1.4; }
+.eq-iteration .eq-profile .ei-before-label { fill: var(--palette-rule-dark); font-size: 22px; }
+.eq-iteration .eq-profile .ei-after-label { fill: var(--palette-human); font-size: 25px; }
+.eq-iteration .ei-move-arrow { fill: none; stroke: var(--palette-human); stroke-width: 1.7; }
+.eq-iteration .ei-move-label { paint-order: stroke fill; stroke: var(--paper); stroke-width: 5px; stroke-linejoin: round; }
+/* Frame 11: old levels dashed with hollow dots, new levels solid; plum on the steeper profile. */
+.eq-iteration .ei-was-level { fill: none; stroke: var(--palette-rule-dark); stroke-width: 1.4; stroke-dasharray: 5 5; }
+.eq-iteration .ei-level { fill: none; stroke: var(--palette-rule-dark); stroke-width: 1.6; }
+.eq-iteration .ei-rise { fill: none; stroke: var(--palette-rule-dark); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.eq-iteration .ei-was-dot { fill: var(--paper); stroke: var(--palette-rule-dark); stroke-width: 1.6; }
+.eq-iteration :is(.ei-was-level, .ei-level, .ei-rise, .ei-was-dot).ei-steep { stroke: var(--palette-human); }
+.eq-iteration .eq-profile .ei-rise-tag { fill: var(--palette-rule-dark); font-size: 20px; font-weight: 600; }
+.eq-iteration .eq-profile .ei-rise-tag.ei-steep { fill: var(--palette-human); }
+.eq-iteration .eq-reading-point { grid-template-columns: 64px 1fr; align-items: center; gap: 18px; margin-top: 24px; }
+.eq-iteration .ei-point-symbol { display: flex; align-items: center; justify-content: center; font-family: var(--math); font-size: var(--equation-size); letter-spacing: 0; padding-top: 0; line-height: 1; white-space: nowrap; }
+.eq-iteration .ei-point-symbol math { font-size: inherit; math-style: normal; }
+.eq-iteration .ei-point-symbol sub { font-size: .65em; }
+.eq-iteration .eq-reading-point h3 { font-size: 22px; }
+.eq-iteration .eq-reading-point p { font-size: 14px; line-height: 1.6; }
+.eq-iteration .eq-reading-point sup { font-family: var(--math); }
+.eq-iteration .eq-mechanism-reading .eq-equation { font-size: var(--equation-size); }
+.eq-iteration .eq-study-header > p { max-width: none; }
+@media (min-width: 901px) {
+  .eq-iteration--b .eq-study-body { padding-bottom: clamp(76px, 12vh, 110px); }
+  .eq-iteration--b .eq-mechanism { flex: none; width: calc(100% + 56px); margin-inline: -28px; }
+  .eq-iteration--b .eq-reading-point h3 { font-size: 23px; }
+  .eq-iteration--b .eq-reading-point p { font-size: 15px; }
+}
+@media (max-height:780px) and (min-width:901px) {
+  .eq-iteration .eq-reading-point { margin-top: 24px; }
+}
+@media (max-width: 900px) {
+  .eq-iteration { --equation-size: 44px; }
+  .eq-iteration .eq-mechanism { grid-template-columns: 1fr; gap: 23px; }
+  .eq-iteration .eq-profile { width: 85%; }
+  .eq-iteration .eq-mechanism-reading { gap: 20px; }
+  .eq-iteration .eq-mechanism-reading .eq-equation { margin-bottom: 6px; }
+  .eq-iteration .eq-reading-point { display: block; margin: 0; }
+  .eq-iteration .ei-point-symbol { min-height: 2.5em; margin-bottom: 10px; }
+  .eq-iteration .eq-reading-point h3 { font-size: 20px; }
+  .eq-iteration .eq-reading-point p { font-size: 12px; }
+}
+@media (max-width: 540px) {
+  .eq-iteration { --equation-size: clamp(28px, 8.2vw, 34px); }
+  .eq-iteration .eq-study-header h2 { font-size: clamp(20px, 5.6vw, 30px); }
+  .eq-iteration .eq-study-header > p { font-size: 16px; }
+  .eq-iteration .eq-study-body { padding: 14px 0; }
+  .eq-iteration .eq-mechanism { gap: 14px; }
+  .eq-iteration .eq-profile { width: 100%; }
+  .eq-iteration .eq-mechanism-reading .eq-equation { margin-bottom: 17px; }
+  .eq-iteration .eq-reading-point { display: grid; grid-template-columns: 44px 1fr; gap: 12px; margin-top: 13px; }
+  .eq-iteration .ei-point-symbol { min-height: 0; margin: 0; }
+  .eq-iteration .eq-reading-point h3 { font-size: 17px; }
+  .eq-iteration .eq-reading-point p { font-size: 11px; line-height: 1.45; margin-top: 5px; }
+}
+@media (max-width: 360px) {
+  .eq-iteration .eq-study-header > p { font-size: 14px; }
+  .eq-iteration .eq-mechanism { gap: 9px; }
+  .eq-iteration .eq-mechanism-reading .eq-equation { margin-bottom: 13px; }
+  .eq-iteration .eq-reading-point { margin-top: 10px; }
+  .eq-iteration .eq-reading-point h3 { font-size: 16px; }
+  .eq-iteration .eq-reading-point p { font-size: 10px; }
+}
+/* Round 31: equation-02-iterations.js paints these lines with gouache.js; the crisp strokes are the fallback. */
+.eq-iteration .eq-profile svg.is-painted :is(.ei-flatter-profile, .ei-steeper-profile, .eq-human-band) { visibility: hidden; }

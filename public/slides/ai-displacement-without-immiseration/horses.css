@@ -1,0 +1,195 @@
+/* The fate of horses: the opener (frame 46), then the chart (frames 47 to 51, horses-chart.css). */
+
+:root {
+  --r12-ink: #121212;
+  --r12-opener-in: 1;
+}
+
+.story-beats { padding-bottom: 160svh; }
+
+.r12-horse-story {
+  position: absolute;
+  z-index: 12;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--r12-ink);
+  background: var(--paper);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.story-stage[data-state="24"] .r12-horse-story,
+.story-stage[data-state="25"] .r12-horse-story,
+.story-stage[data-state="26"] .r12-horse-story,
+.story-stage[data-state="27"] .r12-horse-story,
+.story-stage[data-state="28"] .r12-horse-story {
+  opacity: 1;
+  visibility: visible;
+}
+
+.story-stage[data-state="24"] .stage-cue,
+.story-stage[data-state="25"] .stage-cue,
+.story-stage[data-state="26"] .stage-cue,
+.story-stage[data-state="27"] .stage-cue,
+.story-stage[data-state="28"] .stage-cue {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+.beat--horse h2 {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Question opener */
+
+.r12-opener {
+  position: absolute;
+  inset: 0;
+  background: var(--paper);
+  opacity: var(--r12-opener-in);
+}
+
+.r12-opener__image {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+html[data-horse-concept="01"] .r12-opener__image--harness,
+html[data-horse-concept="02"] .r12-opener__image--dockside,
+html[data-horse-concept="03"] .r12-opener__image--panorama {
+  display: block;
+}
+
+.r12-opener__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.r12-opener h2 {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  color: var(--r12-ink);
+  font-family: var(--serif);
+  font-size: clamp(66px, 5.7vw, 86px);
+  font-variation-settings: "opsz" 72;
+  font-weight: 540;
+  letter-spacing: -0.048em;
+  line-height: 0.94;
+  text-wrap: balance;
+}
+
+html[data-horse-concept="01"] .r12-opener h2 {
+  top: 18%;
+  left: 50%;
+  width: min(600px, 44%);
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+html[data-horse-concept="02"] .r12-opener h2 {
+  top: 15%;
+  left: clamp(42px, 7vw, 86px);
+  width: min(610px, 41%);
+}
+
+html[data-horse-concept="03"] .r12-opener__image--panorama {
+  inset: 29% clamp(18px, 2.4vw, 34px) 3%;
+}
+
+html[data-horse-concept="03"] .r12-opener__image--panorama img {
+  object-position: center bottom;
+}
+
+html[data-horse-concept="03"] .r12-opener h2 {
+  top: 8%;
+  left: clamp(42px, 7vw, 86px);
+  width: min(780px, 58%);
+}
+
+/* On phones the opener title sits centered above the painting. */
+
+@media (max-width: 680px) {
+  .story-beats { padding-bottom: 180svh; }
+
+  .r12-opener__image img {
+    object-position: center bottom;
+  }
+
+  .r12-opener h2,
+  html[data-horse-concept="01"] .r12-opener h2,
+  html[data-horse-concept="02"] .r12-opener h2,
+  html[data-horse-concept="03"] .r12-opener h2 {
+    top: 11.5%;
+    left: 50%;
+    width: 84%;
+    font-size: clamp(43px, 12.6vw, 51px);
+    line-height: 0.96;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+
+  html[data-horse-concept="03"] .r12-opener__image--panorama {
+    inset: 25% 2% 2%;
+  }
+
+  html[data-horse-concept="02"] .r12-opener h2 { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .r12-opener {
+    transition: none !important;
+  }
+}
+
+:root {
+  --r13-opener-in: 1;
+}
+
+.story-beats {
+  padding-bottom: 170svh;
+}
+
+.story-stage[data-state="29"] .r13-horse-story {
+  visibility: visible;
+  opacity: 1;
+}
+
+.story-stage[data-state="29"] .stage-cue {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+.r13-horse-story .r12-opener {
+  opacity: var(--r13-opener-in);
+}
+
+.r13-horse-story .r12-opener__image--dockside {
+  display: block;
+}
+
+@media (max-width: 680px) {
+  .story-beats {
+    padding-bottom: 190svh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .r13-horse-story *,
+  .r13-horse-story *::before,
+  .r13-horse-story *::after {
+    transition: none !important;
+  }
+}
+
+/* Round 30: the opener's title fades in after the painting, like the other title slides. */
+@keyframes r30-title-in { from { opacity: 0; } }
+.r13-horse-story[data-scene-active="true"] .r12-opener h2 { animation: r30-title-in .8s cubic-bezier(.22, .72, .2, 1) .5s both; }

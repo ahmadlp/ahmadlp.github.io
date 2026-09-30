@@ -1,0 +1,90 @@
+/* The autoplay cue. autoplay-cue.js adds it to the stage and sets the stage's data-cue-state:
+   play (the autoplay is playing), rest (stopped inside a graphic after a scroll back),
+   end (played to the end, waiting), done (the nudge to scroll on) or off. */
+
+.cue {
+  position: absolute;
+  z-index: 80;
+  right: max(30px, calc((100vw - 1240px) / 2));
+  bottom: 18px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms var(--ease);
+}
+
+.cue > * {
+  grid-area: 1 / 1;
+}
+
+.story-stage:is([data-cue-state="play"], [data-cue-state="rest"], [data-cue-state="end"], [data-cue-state="done"]) .cue {
+  opacity: 1;
+}
+
+.cue svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+  overflow: visible;
+  transform: rotate(-90deg);
+}
+
+.cue circle {
+  fill: none;
+  stroke-width: 1.6;
+}
+
+.cue__track {
+  stroke: var(--rule);
+}
+
+.cue__arc {
+  stroke: currentColor;
+}
+
+.cue__nudge {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  transition: opacity 600ms var(--ease);
+}
+
+.story-stage[data-cue-state="done"] .cue__nudge {
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.cue__chevron {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-right: 1.6px solid currentColor;
+  border-bottom: 1.6px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+/* The chevron dips twice when the nudge appears. */
+.story-stage[data-cue-state="done"] .cue__chevron {
+  animation: cue-dip 1.8s var(--ease) 500ms 1 both;
+}
+
+@keyframes cue-dip {
+  0%, 50%, 100% { translate: 0 0; }
+  25%, 75% { translate: 0 3px; }
+}
+
+@media (max-width: 760px) {
+  .cue {
+    right: 20px;
+    bottom: 6px;
+  }
+}

@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en" data-equation-arrows="1" data-equation-option="2" data-equation-iteration="b" data-example="medicine" data-product="capsule" data-palette-study="19" data-horse-concept="02">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <meta
+      name="description"
+      content="Displacement is not immiseration. A Ricardian assignment model with jagged frontier."
+    />
+    <title>AI Displacement without Immiseration</title>
+    <script>
+      (() => {
+        const query = new URLSearchParams(window.location.search);
+        if (query.has("state")) {
+          document.documentElement.dataset.preview = "true";
+          document.documentElement.dataset.forceReduced = "true";
+        }
+        if (query.get("motion") === "reduced") document.documentElement.dataset.forceReduced = "true";
+      })();
+    </script>
+    <link rel="preload" href="./assets/title-gouache-future-v8.png" as="image" media="(max-width: 1100px), (max-aspect-ratio: 3/2)" />
+    <link rel="preload" href="./assets/title-slide-pale-wash-v1.png" as="image" media="(min-width: 1101px) and (min-aspect-ratio: 1501/1000)" />
+    <link rel="stylesheet" href="./styles.css?v=round31-7" />
+    <link rel="stylesheet" href="./horses.css?v=round30-2" />
+    <link rel="stylesheet" href="./deck.css?v=round31-1" />
+    <link rel="stylesheet" href="./trade.css?v=round31-2" />
+    <link rel="stylesheet" href="./medicine.css?v=round31-cover-2" />
+    <link rel="stylesheet" href="./trade-equation.css?v=round31-2" />
+    <link rel="stylesheet" href="./round26.css?v=round27-transitions-1" />
+    <link rel="stylesheet" href="./chart-palette.css?v=round30-1" />
+    <link rel="stylesheet" href="./autoplay-cue.css?v=round31-3" />
+    <link rel="stylesheet" href="./slide-nav.css?v=round31-2" />
+    <script src="./data/r28-data.js?v=round28-1" defer></script>
+    <script src="./data/costs-data.js?v=round28-2" defer></script>
+    <script src="./medicine.js?v=round31-9" defer></script>
+    <script src="./autoplay-cue.js?v=round31-1" defer></script>
+    <script src="./slide-nav.js?v=round31-1" defer></script>
+    <script src="./story.js?v=round31-12" defer></script>
+    <script src="./horses.js?v=round30-1" defer></script>
+    <script src="./trade.js?v=round30-1" defer></script>
+    <link rel="stylesheet" href="./trade-blocks.css?v=round30-2" />
+    <link rel="stylesheet" href="./horses-chart.css?v=round30-2" />
+    <script src="./gouache.js?v=round31-2" defer></script>
+    <script src="./trade-equation.js?v=round31-1" defer></script>
+    <script src="./trade-line.js?v=round31-2" defer></script>
+    <script src="./trade-pile.js?v=round30-2" defer></script>
+    <script src="./horses-chart.js?v=round30-2" defer></script>
+    <link rel="stylesheet" href="./equation-prototypes.css?v=round30-1" />
+    <script src="./equation-prototypes.js?v=round30-2" defer></script>
+    <link rel="stylesheet" href="./equation-02-iterations.css?v=round31-3" />
+    <script src="./equation-02-iterations.js?v=round31-6" defer></script>
+    <link rel="stylesheet" href="./singularity.css?v=round31-3" />
+    <script src="./singularity.js?v=round31-3" defer></script>
+    <link rel="stylesheet" href="./prose.css?v=round30-1" />
+    <link rel="stylesheet" href="./transitions.css?v=round27-transitions-1" />
+    <script src="./transitions.js?v=round31-2" defer></script>
+    <link rel="stylesheet" href="./equation-arrows.css?v=round31-3" />
+    <script src="./equation-arrows.js?v=round27-arrows-selected-1" defer></script>
+    <link rel="preload" href="./assets/theory-data-02-v1.png" as="image" media="(min-aspect-ratio: 6/5)" />
+    <link rel="preload" href="./assets/theory-data-02-portrait-v1.png" as="image" media="(max-aspect-ratio: 6/5)" />
+    <link rel="stylesheet" href="./theory-data.css?v=round31-4" />
+    <script src="./src/core.js?v=round30-2" defer></script>
+    <script src="./src/charts/fig3.js?v=round31-4" defer></script>
+    <script src="./src/charts/fig5.js?v=round31-4" defer></script>
+    <script src="./src/charts/fig6_7.js?v=round31-4" defer></script>
+    <script src="./src/charts/fig8.js?v=round31-2" defer></script>
+    <script src="./src/charts/fig9.js?v=round31-4" defer></script>
+    <script src="./src/charts/costs.js?v=round31-1" defer></script>
+    <script src="./data/retro-data.js?v=round31-1" defer></script>
+    <script src="./src/charts/validation.js?v=round31-2" defer></script>
+    <script src="./src/tex.js?v=round28-2" defer></script>
+    <script src="./src/cost-tex.js?v=round28-2" defer></script>
+    <script src="./src/frames.js?v=round31-10" defer></script>
+    <script src="./theory-data.js?v=round30-1" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="title-cover" aria-labelledby="cover-title">
+        <picture>
+          <source media="(min-width: 1101px) and (min-aspect-ratio: 1501/1000)" srcset="./assets/title-slide-pale-wash-v1.png" />
+          <img class="title-cover__art" data-cover-art src="./assets/title-gouache-future-v8.png" width="1586" height="992" alt="Many workers fear AI is coming for their jobs." />
+        </picture>
+        <div class="title-cover__veil" aria-hidden="true"></div>
+        <header class="title-cover__copy">
+          <h1 id="cover-title">AI Displacement without Immiseration</h1>
+          <p class="title-cover__subtitle">A Ricardian Perspective on Jagged AI Growth</p>
+          <p class="title-cover__author">Ahmad Lashkaripour</p>
+          <p class="title-cover__byline"><span>Indiana University</span><span>CEPR</span><span>CESifo</span></p>
+          <a class="title-cover__enter" href="#example-story"><span data-cover-example>Scroll down</span><span aria-hidden="true"> ↓</span></a>
+        </header>
+      </section>
+      <section id="example-story" class="story" data-story aria-label="A Ricardian assignment model with jagged frontier">
+        <div class="story-stage" data-stage data-story-stage data-state="0" data-chapter="mechanism">
+          <div class="stage-frame" data-deck-module="mechanism">
+            <header class="stage-header" data-stage-header>
+              <div class="stage-copy">
+                <h2 class="stage-title" data-title></h2>
+                <p class="stage-deck" data-deck></p>
+              </div>
+            </header>
+
+            <div class="stage-visual" data-visual>
+              <figure class="panorama-scene" data-panorama-scene>
+                <img data-panorama alt="Producing medicine involves many tasks." draggable="false" />
+                <div class="panorama-mobile" data-panorama-mobile aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                </div>
+                <figcaption data-panorama-caption></figcaption>
+              </figure>
+
+              <div
+                class="mechanism-scene"
+                data-mechanism-scene
+                role="img"
+                aria-label="Each task can be handled by humans or agentic AI. Human and AI output are indistinguishable apart from cost. Each task goes to whoever produces it at lower cost. Unit cost is the factor’s price divided by its productivity. AI first takes the tasks where its cost advantage is greatest. Cost parity shifts as AI improves. Workers take up tasks that fall in the AI’s blind spots. Even if AI is better at everything, its relative advantage is smaller in these tasks. Fewer tasks, but the ones where workers are most exceptional. No task is reserved for humans."
+              >
+                <svg
+                  class="horizontal-geometry"
+                  viewBox="0 0 1200 650"
+                  preserveAspectRatio="xMidYMid meet"
+                  aria-hidden="true"
+                >
+                  <line class="horizontal-axis" x1="92" x2="1108" y1="338" y2="338" />
+                  <line class="horizontal-machine-axis" data-horizontal-machine-axis x1="92" x2="408" y1="338" y2="338" />
+                  <g class="horizontal-cutoff" data-horizontal-cutoff>
+                    <line x1="0" x2="0" y1="174" y2="510" />
+                    <circle cx="0" cy="338" r="7" />
+                  </g>
+                  <path class="horizontal-human-bracket" data-horizontal-human-bracket d="M408 542 V528 H1108 V542" />
+                </svg>
+
+                <div class="horizontal-labels" aria-hidden="true">
+                  <p class="relative-cost-title">Relative cost</p>
+                  <p class="horizontal-side horizontal-side--machine">AI cost advantage</p>
+                  <p class="horizontal-side horizontal-side--human">Human cost advantage</p>
+                  <p class="horizontal-same" data-horizontal-same>Cost parity</p>
+                  <p class="horizontal-niche" data-horizontal-niche>niche tasks</p>
+                </div>
+
+                <svg
+                  class="curve-geometry"
+                  viewBox="0 0 1200 650"
+                  preserveAspectRatio="xMidYMid meet"
+                  aria-hidden="true"
+                >
+                  <path
+                    class="curve-profile curve-profile--underlay"
+                    data-curve-profile
+                    d="M82 333 C250 329 382 309 487 267 C570 233 626 179 676 103"
+                  />
+                  <path
+                    class="curve-profile curve-profile--machine"
+                    data-curve-machine-profile
+                    pathLength="1"
+                    d="M82 333 C250 329 382 309 487 267 C570 233 626 179 676 103"
+                  />
+                  <line class="curve-axis" x1="82" x2="676" y1="338" y2="338" />
+                  <line class="curve-labor-share" data-curve-labor-share x1="640" x2="676" y1="338" y2="338" />
+                  <g class="curve-cutoff" data-curve-cutoff>
+                    <line x1="0" x2="0" y1="86" y2="535" />
+                    <circle cx="0" cy="208" r="7" />
+                  </g>
+                </svg>
+
+                <p class="curve-label curve-label--ai">Tasks assigned to AI</p>
+                <p class="curve-label curve-label--growth">Jagged AI growth →</p>
+                <p class="curve-label curve-label--human">Workers retreat to AI’s blind spots</p>
+                <p class="curve-label curve-label--pay"><strong>purchasing power</strong></p>
+
+                <div class="task-layer" data-task-layer aria-hidden="true"></div>
+
+                <div class="worker-layer" data-worker-layer aria-hidden="true">
+                  <div class="worker worker--1" data-worker>
+                    <img src="./assets/humans-vibrant-gouache-r19-alpha.png" alt="" draggable="false" />
+                  </div>
+                  <div class="worker worker--2" data-worker>
+                    <img src="./assets/humans-vibrant-gouache-r19-alpha.png" alt="" draggable="false" />
+                  </div>
+                  <div class="worker worker--3" data-worker>
+                    <img src="./assets/humans-vibrant-gouache-r19-alpha.png" alt="" draggable="false" />
+                  </div>
+                  <div class="worker worker--4" data-worker>
+                    <img src="./assets/humans-vibrant-gouache-r19-alpha.png" alt="" draggable="false" />
+                  </div>
+                  <div class="worker worker--5" data-worker>
+                    <img src="./assets/humans-vibrant-gouache-r19-alpha.png" alt="" draggable="false" />
+                  </div>
+                  <div class="worker worker--6" data-worker>
+                    <img src="./assets/humans-vibrant-gouache-r19-alpha.png" alt="" draggable="false" />
+                  </div>
+                  <p class="worker-caption worker-caption--spread">The set of tasks workers perform.</p>
+                  <p class="worker-caption worker-caption--selected">Workers sort into a narrower range of tasks.</p>
+                </div>
+
+                <div class="hour-mark" data-hour-mark aria-hidden="true">
+                  <svg viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="27" />
+                    <path d="M32 15 V32 L43 39" />
+                    <path d="M32 7 V11 M57 32 H53 M32 57 V53 M7 32 H11" />
+                  </svg>
+                  <span>one hour</span>
+                </div>
+
+                <div class="goods" data-goods aria-hidden="true"></div>
+
+                <div class="model-keys" aria-hidden="true">
+                  <p class="model-key model-key--psi" data-model-key="psi">The slope represents AI frontier jaggedness</p>
+                  <p class="model-key model-key--labor" data-model-key="labor">Share of tasks humans perform</p>
+                  <p class="model-key model-key--buys" data-model-key="buys">buys</p>
+                  <p class="model-key model-key--wage" data-model-key="wage">
+                    <strong>Wages</strong>
+                    <span>what one hour of work buys</span>
+                  </p>
+                </div>
+
+                <svg class="notation-geometry" data-notation-geometry aria-hidden="true">
+                  <path class="notation-bracket notation-bracket--psi" data-psi-leader />
+                  <path class="notation-bracket notation-bracket--labor" data-labor-bracket />
+                  <path class="notation-bracket notation-bracket--wage" data-wage-bracket />
+                  <path class="notation-bracket notation-bracket--wage" data-hour-arrow />
+                </svg>
+              </div>
+            </div>
+          </div>
+            <section class="r28-data" data-deck-module="data" aria-label="Theory Meets Data"></section>
+
+            <section
+              class="horse-coda r12-horse-story r13-horse-story"
+              data-deck-module="horses"
+              data-horse-coda
+              role="img"
+              aria-label="The fate of horses. Engines are non-jagged across physical tasks. Horses plowed fields, hauled freight and carried passengers. Engines beat horses by about the same factor at every task, so as engines got cheaper, horses lost every task at once: horses keep 0% of the tasks. AI may beat workers at every task, but by a different factor at each. AI is jagged and leaves workers niches to retreat to: humans keep 21% of the tasks, those where AI’s lead is smallest."
+            >
+              <div class="r12-opener" aria-hidden="true">
+                <picture class="r12-opener__image r12-opener__image--dockside">
+                  <source media="(max-width: 680px)" srcset="./assets/horse-opener-mobile-r17.png" />
+                  <img src="./assets/horse-opener-landscape-r17.png" alt="" width="1672" height="941" />
+                </picture>
+                <h2 data-horse-caption="24">The fate of horses</h2>
+              </div>
+
+              <article class="trade-frame trade-blocks hz done" data-active="true" aria-hidden="true">
+                <header class="trade-header">
+                  <h2>Engines are non-jagged across physical tasks</h2>
+                  <p class="trade-deck pile-steps line-steps">
+                    <span>Horses plowed fields, hauled freight and carried passengers.</span>
+                    <span>Engines beat horses by about the same factor at every task.</span>
+                    <span>As engines got cheaper, horses lost every task at once.</span>
+                    <span>AI may beat workers at every task, but by a different factor at each.</span>
+                    <span>AI is jagged and leaves workers niches to retreat to.</span>
+                  </p>
+                </header>
+                <section class="blocks-stage pile-stage hz-stage">
+                  <div class="pile-row" data-row="horses">
+                    <div class="blocks-head"><strong>Engines vs horses</strong></div>
+                    <div class="pile-wrap"><canvas aria-hidden="true"></canvas><p class="line-count">Horses keep <br /><b data-count>100%</b> <br />of the tasks</p></div>
+                  </div>
+                  <div class="pile-row" data-row="ai">
+                    <div class="blocks-head"><strong>AI vs humans</strong></div>
+                    <div class="pile-wrap"><canvas aria-hidden="true"></canvas><p class="line-count">Humans keep <br /><b data-count>100%</b> <br />of the tasks</p></div>
+                  </div>
+                </section>
+              </article>
+            </section>
+
+          <section class="trade-scene" data-trade-scene data-deck-module="trade" aria-label="AI displacement vs trade-driven displacement">
+            <article class="trade-frame trade-transition" data-trade-frame="30" aria-labelledby="trade-question">
+              <img class="trade-transition__art" src="./assets/trade-port-gouache-v1.png" width="1672" height="941" alt="International trade in tasks" />
+              <header>
+                <h2 id="trade-question">AI vs Trade Displacement</h2>
+              </header>
+            </article>
+
+            <article class="trade-frame trade-exposure" data-trade-frame="31" aria-labelledby="trade-exposure-title">
+              <header class="trade-header">
+                <h2 id="trade-exposure-title">Jagged adoption: trade was concentrated in manufacturing</h2>
+                <p class="trade-deck">1× means an industry’s share of the shock matches its share of the economy.</p>
+              </header>
+
+              <div class="trade-streets" role="img" aria-label="The same street of five industries, twice: two factories, making medicine and clothing, then a clinic, a restaurant and a barber. Trade hits the two factories alone: manufacturing, 15% of the economy, takes the whole shock, 6.7 times its share: the concentration of the shock. AI hits all five; the most exposed industry takes 1.6 times its share.">
+                <div class="trade-street trade-street--trade" aria-hidden="true">
+                  <p class="trade-street-name"><strong>Trade</strong><span>Manufacturing only</span></p>
+                  <div class="trade-street-art">
+                    <img class="trade-street-missed" src="./assets/medicine-trade-sectors-v1.png" alt="" width="1774" height="887" />
+                    <img class="trade-street-lit" src="./assets/medicine-trade-sectors-v1.png" alt="" width="1774" height="887" />
+                  </div>
+                  <p class="trade-street-number"><b>6.7×<i class="trade-street-note">Concentration of the shock</i><svg class="trade-street-arrow" viewBox="0 0 10 32"><path d="M5 1v30M1.5 27.5 5 31l3.5-3.5" /></svg></b><span>the whole shock on 15% of the economy</span></p>
+                </div>
+                <div class="trade-street trade-street--ai" aria-hidden="true">
+                  <p class="trade-street-name"><strong>AI</strong><span>Every industry</span></p>
+                  <div class="trade-street-art"><img src="./assets/medicine-trade-sectors-v1.png" alt="" width="1774" height="887" /></div>
+                  <p class="trade-street-number"><b>1.6×</b><span>in the most exposed industry</span></p>
+                </div>
+              </div>
+            </article>
+
+            <article class="trade-frame trade-blocks trade-line" data-trade-frame="61 62 63 64 65" aria-labelledby="trade-line-title">
+              <header class="trade-header">
+                <h2 id="trade-line-title">Trade displacement is bulky</h2>
+                <p class="trade-deck pile-steps line-steps" aria-hidden="true">
+                  <span>Each dot is a task, in production order. Workers do all 24.</span>
+                  <span>Trade will generally involve performing a bundle of consecutive tasks in one location to minimize intermediate border crossing.</span>
+                  <span>Every block does the same.</span>
+                  <span>Productivity grows: AI takes single tasks, trade whole blocks.</span>
+                  <span>AI leaves workers some niche tasks. Trade leaves none.</span>
+                </p>
+              </header>
+              <section class="blocks-stage pile-stage line-stage" aria-label="The 24 tasks in production order along a thread, in six blocks of four: drug discovery, lab testing, clinical trials, regulatory filing, manufacturing and sales. Workers above, AI or abroad below. Under trade a lid folds over each block of four and whole boxes drop across the border. Under AI single dots drop, and workers keep five.">
+                <canvas class="line-names" aria-hidden="true"></canvas>
+                <div class="pile-row" data-row="ai">
+                  <div class="blocks-head"><strong>AI</strong></div>
+                  <div class="pile-wrap"><canvas aria-hidden="true"></canvas><p class="line-count">Workers keep <br /><b data-count>24</b> of 24 tasks</p></div>
+                </div>
+                <div class="pile-row" data-row="trade">
+                  <div class="blocks-head"><strong>Trade</strong></div>
+                  <div class="pile-wrap"><canvas aria-hidden="true"></canvas><p class="line-count">Workers keep <br /><b data-count>24</b> of 24 tasks</p></div>
+                </div>
+              </section>
+            </article>
+
+            <article class="trade-frame trade-blocks trade-pile" data-trade-frame="35 36 37 38 39" aria-labelledby="trade-pile-title">
+              <header class="trade-header">
+                <p class="trade-kicker">International trade in tasks</p>
+                <h2 id="trade-pile-title">Bulky displacement translates to less jaggedness</h2>
+                <p class="trade-deck pile-steps" aria-hidden="true">
+                  <span>Each dot is a task. Workers keep the tasks left of the line.</span>
+                  <span>Trade moves tasks in blocks of four.</span>
+                  <span>A block sits at the average of its four tasks.</span>
+                  <span>Every block does the same.</span>
+                  <span>The pile narrows: less jagged, as if <math><mn>4</mn><mi>ψ</mi></math>.</span>
+                  <span>Productivity grows. The line moves left.</span>
+                  <span>AI leaves workers a few niches. Trade leaves none.</span>
+                </p>
+              </header>
+              <section class="blocks-stage pile-stage" aria-label="Two piles of dots, one dot per task; workers keep the tasks left of the line. Under AI tasks move one at a time. Under trade every four tasks gather into one larger dot at their average, and the pile narrows. As productivity grows the line moves left: under AI workers keep a few niche tasks far to the left, under trade none.">
+                <div class="pile-row" data-row="ai">
+                  <div class="blocks-head"><strong>AI</strong><span class="blocks-count">Workers keep <b data-count>25%</b> of tasks</span></div>
+                  <div class="pile-wrap"><canvas aria-hidden="true"></canvas></div>
+                </div>
+                <div class="pile-row" data-row="trade">
+                  <div class="blocks-head"><strong>Trade</strong><span class="blocks-count">Workers keep <b data-count>25%</b> of tasks</span></div>
+                  <div class="pile-wrap"><canvas aria-hidden="true"></canvas></div>
+                </div>
+              </section>
+            </article>
+
+<article class="trade-frame trade-blocks trade-equation-frame" data-trade-frame="32" aria-labelledby="trade-blocks-title">
+  <header class="trade-header">
+    <h2 id="trade-blocks-title">AI displacement is less immiserizing</h2>
+    <p class="trade-deck">AI frontier is more jagged and AI adoption is more even than trade.</p>
+  </header>
+  <div class="we-body">
+    <div class="wf-eq" role="math" aria-label="Wage growth over output growth tends to 1 minus adoption jaggedness divided by 1 plus frontier jaggedness. Adoption jaggedness is 1 if adoption is even and higher if it is jagged.">
+      <span class="wf" aria-hidden="true"><span><span class="wf-wage">Wage growth</span></span><span>Output growth</span></span>
+      <span class="wf-op" aria-hidden="true">⟶ 1 −</span>
+      <span class="wf" aria-hidden="true">
+        <span><span class="wf-term wf-term--adopt">Adoption jaggedness<span class="wf-scale wf-scale--above">1 if even<svg viewBox="0 0 64 10"><path d="M1 5h62M58.5 1.5 62 5l-3.5 3.5" /></svg>higher if jagged</span></span></span>
+        <span class="wf-term--frontier"><span class="wf-op">1 + </span>Frontier jaggedness</span>
+      </span>
+    </div>
+    <div class="tr-rows" role="img" aria-label="Trade: adoption jaggedness 6.7, far above 1 plus frontier jaggedness, 1.25, so wages fall. AI: adoption jaggedness 1.6, below 1 plus frontier jaggedness, 1.7, so wages rise.">
+      <div class="tr tr--trade" style="--line: 10.73%; --at: 91.47%" aria-hidden="true">
+        <div class="tr-head">
+          <p class="tr-name"><strong>Trade</strong></p>
+          <div class="tr-art tr-art--port"><img src="./assets/trade-port-gouache-v1.png" alt="" /></div>
+        </div>
+        <div class="tr-track">
+          <canvas class="tr-bar"></canvas>
+          <canvas class="tr-tick"></canvas>
+          <svg class="tr-arrow" viewBox="0 0 12 20"><path d="M1.5 2 10.5 10l-9 8" /></svg>
+          <span class="tr-mark tr-mark--adopt"><b>6.7</b><span class="tr-label">Adoption jaggedness</span></span>
+          <span class="tr-mark tr-mark--line"><b>1.25</b><span class="tr-label">1 + Frontier jaggedness</span></span>
+        </div>
+        <p class="tr-verdict tr-verdict--fall"><canvas class="tr-verdict-arrow"></canvas>Wages fall</p>
+      </div>
+      <div class="tr tr--ai" style="--line: 26.64%; --at: 23.5%" aria-hidden="true">
+        <div class="tr-head">
+          <p class="tr-name"><strong>AI</strong></p>
+          <div class="tr-art tr-art--desk"><img src="./assets/evidence-cost-art.png" alt="" /></div>
+        </div>
+        <div class="tr-track">
+          <canvas class="tr-bar"></canvas>
+          <canvas class="tr-tick"></canvas>
+          <svg class="tr-arrow" viewBox="0 0 12 20"><path d="M1.5 2 10.5 10l-9 8" /></svg>
+          <span class="tr-mark tr-mark--adopt"><b>1.6</b></span>
+          <span class="tr-mark tr-mark--line"><b>1.7</b></span>
+        </div>
+        <p class="tr-verdict tr-verdict--rise"><canvas class="tr-verdict-arrow"></canvas>Wages rise</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+          </section>
+        </div>
+
+        <div class="story-beats" aria-hidden="true">
+          <div class="beat" data-beat="0"></div>
+          <div class="beat" data-beat="1"></div>
+          <div class="beat" data-beat="2"></div>
+          <div class="beat beat--long" data-beat="3"></div>
+          <div class="beat" data-beat="4"></div>
+          <div class="beat" data-beat="5"></div>
+          <div class="beat beat--long" data-beat="6"></div>
+          <div class="beat" data-beat="7"></div>
+          <div class="beat" data-beat="8"></div>
+          <div class="beat" data-beat="9"></div>
+          <div class="beat" data-beat="10"></div>
+          <div class="beat" data-beat="11" id="equation"></div>
+          <div class="beat" data-beat="66" data-chapter="mechanism" id="singularity"></div>
+          <div class="beat" data-beat="40" data-chapter="results" id="theory-data"></div>
+          <div class="beat" data-beat="41" data-chapter="results" id="results"></div>
+          <div class="beat" data-beat="42" data-chapter="results" id="estimation"></div>
+          <div class="beat" data-beat="43" data-chapter="results"></div>
+          <div class="beat" data-beat="44" data-chapter="results"></div>
+          <div class="beat" data-beat="45" data-chapter="results"></div>
+          <div class="beat" data-beat="46" data-chapter="results"></div>
+          <div class="beat" data-beat="47" data-chapter="results"></div>
+          <div class="beat" data-beat="48" data-chapter="results" id="validation"></div>
+          <div class="beat" data-beat="49" data-chapter="results"></div>
+          <div class="beat" data-beat="50" data-chapter="results"></div>
+          <div class="beat" data-beat="51" data-chapter="results"></div>
+          <div class="beat" data-beat="52" data-chapter="results"></div>
+          <div class="beat" data-beat="53" data-chapter="results"></div>
+          <div class="beat" data-beat="54" data-chapter="results"></div>
+          <div class="beat" data-beat="55" data-chapter="results"></div>
+          <div class="beat" data-beat="56" data-chapter="results"></div>
+          <div class="beat" data-beat="57" data-chapter="results"></div>
+          <div class="beat" data-beat="58" data-chapter="results"></div>
+          <div class="beat" data-beat="59" data-chapter="results"></div>
+          <div class="beat" data-beat="30" id="trade"></div>
+          <div class="beat" data-beat="31"></div>
+          <div class="beat" data-beat="61"></div>
+          <div class="beat" data-beat="62"></div>
+          <div class="beat" data-beat="63"></div>
+          <div class="beat" data-beat="64"></div>
+          <div class="beat" data-beat="65"></div>
+          <div class="beat" data-beat="35"></div>
+          <div class="beat" data-beat="36"></div>
+          <div class="beat" data-beat="37"></div>
+          <div class="beat" data-beat="38"></div>
+          <div class="beat" data-beat="39"></div>
+          <div class="beat" data-beat="32"></div>
+          <div class="beat" data-beat="24"></div>
+          <div class="beat" data-beat="25"></div>
+          <div class="beat" data-beat="26"></div>
+          <div class="beat" data-beat="27"></div>
+          <div class="beat" data-beat="28"></div>
+          <div class="beat" data-beat="29"></div>
+        </div>
+      </section>
+      <ol class="sr-only">
+        <li>Producing medicine involves many tasks. Tasks such as R&amp;D, manufacturing, sales and marketing.</li>
+        <li>Each task can be handled by humans or agentic AI. Human and AI output are indistinguishable apart from cost. Drug discovery, manufacturing, lab testing, clinical trials, sales, regulatory filing.</li>
+        <li>Each task goes to whoever produces it at lower cost. Unit cost is the factor’s price divided by its productivity.</li>
+        <li>AI first takes the tasks where its cost advantage is greatest. Cost parity shifts as AI improves.</li>
+        <li>Workers take up tasks that fall in the AI’s blind spots. Even if AI is better at everything, its relative advantage is smaller in these tasks.</li>
+        <li>Fewer tasks, but the ones where workers are most exceptional. No task is reserved for humans.</li>
+        <li>Specialization raises the marginal product of labor. An hour of work produces more.</li>
+        <li>Each niche task buys a growing basket of AI-produced goods: 1 → 8 units. AI makes the goods workers buy cheaper.</li>
+        <li>Jaggedness of AI capabilities. A steeper slope means the AI capability frontier is more jagged, with more blind spots. The slope represents AI frontier jaggedness.</li>
+        <li>The worker task share: the fraction of tasks produced by workers. The solid line is the share of tasks humans perform.</li>
+        <li>The real wage grows. What an hour of work buys. One hour of work buys the basket of goods: wages.</li>
+        <li>More jaggedness: smaller ψ. Less jagged: larger ψ. 1/ψ measures the jaggedness of the AI capability frontier relative to humans. AI-driven growth raises the real wage in inverse proportion to labor’s share of economic tasks, with elasticity 1/ψ. Δln w = −(1/ψ) Δln π_L.</li>
+        <li>What the model predicts. Under jagged AI-driven growth, the labor share falls while real wages rise. Over time, the real wage rises above today's level while the labor share falls below it.</li>
+        <li>Theory Meets Data</li>
+        <li>Worker and AI costs task by task. We estimate ψ using data on 484 software engineering tasks drawn from 12 open-source repositories in SWE-bench Verified. Human cost: the time needed to complete the same task × hourly wage. AI cost: the API charge for the tokens used in a successful attempt × 175: deployment costs beyond tokens. 484 tasks, 26 release dates, 6,589 task–date sample. Incomplete tasks provide no AI cost observation.</li>
+        <li>Distribution of the human-to-AI cost ratio. By the end of the sample, AI completes 75.2 percent of the tasks below human cost, and for the median such task, human cost is 4 times AI cost.</li>
+        <li>Estimating the jaggedness of the AI frontier. A smaller ψ means greater differences in labor-vs-AI productivity profiles. Less jagged frontier: high ψ.</li>
+        <li>A smaller ψ means greater differences in labor-vs-AI productivity profiles.</li>
+        <li>Jagged frontier: low ψ.</li>
+        <li>The fit implied by each estimate of ψ closely mimics the empirical distribution. Task-level regression ψ = 1.36. Release-level regression ψ = 1.14.</li>
+        <li>Estimation results. Our two estimation methods yield ψ = 1.14 and ψ = 1.36, so each percent decline in labor’s share of GDP raises the real wage by 0.7 to 0.9 percent.</li>
+        <li>Historical validation. May 2022: a national survey records wages in 61 sectors. November 2022: ChatGPT is released. May 2025: more businesses use AI, and the survey records wages again. The model explains 2022–25 labor market effects. Each dot is one of 61 sectors: how much its wages grew between the two surveys. Wages grew less in the sectors more exposed to AI growth. Given only AI growth, the model predicts nearly the same slope. The effects of AI growth on sectoral wages were not targeted in the calibration. Goodness-of-fit test (Adão, Costinot, Donaldson, 2025). Goodness-of-fit measure: 0 means a perfect fit. IV coefficient: 1 means a perfect fit. Zero labor mobility: 0.8. Imperfect labor mobility (baseline calibration): 1.15.</li>
+        <li>AI token costs continue to fall. The annual rate of decline slows from 79.1 percent initially to about 45.8 percent after five years.</li>
+        <li>Task costs fall by 99.2 percent after five years.</li>
+        <li>Model’s 5-year Prediction: Real wage rises, labor share falls. Over the next five years, average real wages rise by 18.5 percent while labor’s share of GDP falls from 54.1 to 39.9 percent.</li>
+        <li>With an AI frontier five times less jagged, real wages barely change.</li>
+        <li>Jagged adoption is better for workers with mobility. Jagged AI adoption: 8.9% a year. Balanced AI adoption: 5.7% a year.</li>
+        <li>If AI adoption is jagged, mobile workers will retreat to lagging sectors and demand higher wages.</li>
+        <li>Jagged adoption can trigger the Baumol effect. Workers in fast-adopting sectors lose purchasing power with respect to lagging sectors.</li>
+        <li>Every education group gains. Even when workers face large mobility frictions. Five-year real wage gains, no sectoral mobility: high school or less +31.2%, some college +24.1%, bachelor’s or more +12.5%.</li>
+        <li>Partial sectoral mobility: +28.1%, +22.9% and +14.1%.</li>
+        <li>Within-sector reassignment. Workers simply sort into niche tasks without leaving their sector. Among the 18 sectors with the highest AI exposure: today, workers 85.2% and AI 14.8% of tasks; after five years, workers 53.8% and AI 46.2%. Even the most AI-exposed sectors retain human tasks.</li>
+        <li>AI displacement vs trade-driven displacement. Trade is often invoked as an example of a large-scale technological change that led to massive displacement.</li>
+        <li>Jagged adoption: trade was concentrated in manufacturing. 1× means an industry’s share of the shock matches its share of the economy. The concentration of the shock: trade put the whole shock on manufacturing, 15% of the economy, 6.7×; AI reaches every industry, and the most exposed takes 1.6×.</li>
+        <li>Trade displacement is bulky. Each dot is a task, in production order: research, development, production, assessment, demand and discussion, four tasks each. Workers do all 24.</li>
+        <li>Trade will generally involve performing a bundle of consecutive tasks in one location to minimize intermediate border crossing. A lid folds over the first block of four tasks and locks them together.</li>
+        <li>Every block does the same.</li>
+        <li>Productivity grows: AI takes single tasks, trade whole blocks. Midway, workers keep 13 of the 24 tasks under AI and 16 under trade.</li>
+        <li>AI leaves workers some niche tasks: choose a candidate, recruit patients, meet the regulators, brief doctors, hear their concerns; they keep 5 of the 24. Trade leaves none.</li>
+        <li>Bulky displacement translates to less jaggedness. Each dot is a task. Workers keep the tasks left of the line.</li>
+        <li>Trade moves tasks in blocks of four. A block sits at the average of its four tasks.</li>
+        <li>Every block does the same. The pile narrows: less jagged, as if 4ψ.</li>
+        <li>Productivity grows. The line moves left.</li>
+        <li>AI leaves workers a few niches: they keep 1% of tasks. Trade leaves none.</li>
+        <li>Trade will generally involve performing a bundle of consecutive tasks in one location to minimize intermediate border crossing. Real wage growth: g_(w_s)/g_Y → 1 − [k_s ψ/(1 + k_s ψ)] × [ν_s/ν̄]. The product k_s ψ is the trade elasticity.</li>
+        <li>Engines displaced horses, rendering them economically irrelevant and unraveling a rapid decline in the horse population.</li>
+        <li>Engines are non-jagged across physical tasks. Horses plowed fields, hauled freight and carried passengers.</li>
+        <li>Engines beat horses by about the same factor at every task.</li>
+        <li>As engines got cheaper, horses lost every task at once: horses keep 0% of the tasks.</li>
+        <li>AI may beat workers at every task, but by a different factor at each.</li>
+        <li>AI is jagged and leaves workers niches to retreat to: humans keep 21% of the tasks, those where AI’s lead is smallest.</li>
+      </ol>
+      <footer class="deck-end">
+        <a href="./index.html#example-story" data-replay>Introduction</a>
+      </footer>
+    </main>
+  </body>
+</html>
