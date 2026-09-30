@@ -55,6 +55,10 @@ online_appendix_url: Lashkaripour_AI_Displacement_Online_Appendix.pdf
 dashboard_url: null
 replication_slug: null
 raw_replication_url: null
+body_source: latex
+latex_dir: latex-src/ai-displacement-without-immiseration
+latex_main: paper.tex
+latex_engine: pdflatex
 ---
 
 ## Machine-readable full text
