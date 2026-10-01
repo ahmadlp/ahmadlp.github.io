@@ -1,8 +1,8 @@
 ---
-title: "AI's Blind Spots: Comparative Advantage and Wage Growth under Jagged AI"
+title: "AI's Blind Spots: Comparative Advantage and Wage Growth under Jagged AGI"
 display_title_lines:
 - "AI's Blind Spots: Comparative Advantage"
-- and Wage Growth under Jagged AI
+- and Wage Growth under Jagged AGI
 slug: ai-displacement-without-immiseration
 status: working-paper
 date: '2026-09-01'
