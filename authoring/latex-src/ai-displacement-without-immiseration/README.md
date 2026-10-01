@@ -1,4 +1,4 @@
-# AI Displacement without Immiseration
+# AI's Blind Spots: Comparative Advantage and Wage Growth under Jagged AI
 
 This folder contains the self-contained HTML source for the September 2026
 paper. It uses the site's existing TeX4ht, MathJax, and Tufte pipeline.
