@@ -1190,27 +1190,20 @@ html[data-preview="true"] .formula-scene {
     display: none;
   }
 
-  .panorama-scene {
-    container-type: size;
-  }
-
   .panorama-scene img {
     display: none;
   }
 
-  /* Each strip shows the bottom 56% of its half of the painting, so the people keep their heads;
-     the width is capped so both strips fit the scene's height. */
   .panorama-mobile {
     display: grid;
     width: min(100%, 460px);
-    width: min(100%, 460px, 89cqh);
+    grid-template-rows: repeat(2, min(23svh, 210px));
     align-content: end;
     mix-blend-mode: multiply;
   }
 
   .panorama-mobile span {
     display: block;
-    aspect-ratio: 1 / 0.56;
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 200% auto;
