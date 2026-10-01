@@ -21,7 +21,7 @@ html[data-example="medicine"] .title-cover__enter:focus-visible { outline-color:
 /* Round 31: on wide screens the cover is the finished slide picture, words included; the live words stay
    for screen readers. The picture is anchored right so the words are never cropped. The picture has no
    painted Scroll down; the live button sits where it was, its top left at 988, 627 of the picture's
-   1649 by 954, and --k (one picture pixel) scales it with the picture. */
+   1648 by 954, and --k (one picture pixel) scales it with the picture. */
 @media (min-width: 1101px) and (min-aspect-ratio: 1501/1000) {
   html[data-example="medicine"] .title-cover__art { object-position: right center; }
   html[data-example="medicine"] .title-cover__copy {
@@ -41,10 +41,10 @@ html[data-example="medicine"] .title-cover__enter:focus-visible { outline-color:
     white-space: nowrap;
   }
   html[data-example="medicine"] .title-cover__enter {
-    --k: max(100cqw / 1649, 100cqh / 954);
+    --k: max(100cqw / 1648, 100cqh / 954);
     position: absolute;
     top: calc(50% + var(--k) * 150);
-    left: calc(100% - var(--k) * 661);
+    left: calc(100% - var(--k) * 660);
     margin: 0;
     pointer-events: auto;
   }
