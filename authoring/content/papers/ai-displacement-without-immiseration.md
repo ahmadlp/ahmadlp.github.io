@@ -11,26 +11,24 @@ venue: Working paper
 authors:
 - Ahmad Lashkaripour
 coauthors: []
-abstract: 'We develop and estimate a Ricardian model of labor displacement under explosive
-  AI growth. A key feature of the model is that agentic AI, though jagged, can hold
-  an absolute advantage over humans in every task. Yet wages rise as AI displaces
-  labor, with an elasticity governed by the jaggedness of the AI capability frontier.
-  At the macro level, explosive but jagged AI growth generates unbounded growth in
-  the average wage. At the micro level, every worker can gain without switching sectors,
-  provided AI capabilities are jagged but adoption is sufficiently even across sectors
-  to prevent Baumol''s cost disease. We estimate the jaggedness of the AI frontier
-  from micro data comparing human and AI costs on similar tasks, and calibrate the
-  jaggedness of adoption to occupation-level measures of AI exposure. The estimated
-  model matches the untargeted wage effects of AI growth observed over 2022–25. If
-  AI capabilities keep growing at their current pace but remain jagged, the model
-  predicts that average real wages will rise 3.5% per year over the next five years,
-  even as labor is displaced from 30% of tasks. If the AI frontier were five times
-  less jagged than estimated, displacement would be larger and real wage gains would
-  all but vanish. Distributional effects are modest: every education group gains,
-  even without switching sectors, simply by taking over tasks in AI''s blind spots.
-  These results suggest that AI growth, despite its scale, may be less immiserizing
-  than earlier labor-saving technologies such as trade or engines, because its capability
-  frontier is more jagged and its adoption more even across the economy.'
+abstract: 'We develop and estimate a Ricardian model of labor displacement under jagged
+  AI growth. Even as agentic AI grows to outperform humans at every task, wages rise
+  despite displacement, with an elasticity governed by the jaggedness of the AI capability
+  frontier. At the micro level, every worker can gain without switching sectors, provided
+  AI capabilities are jagged but adoption is sufficiently even across sectors to prevent
+  Baumol''s cost disease. We estimate the jaggedness of the AI frontier from micro
+  data comparing human and AI costs on similar tasks, and calibrate the jaggedness
+  of adoption to occupation-level measures of AI exposure. The estimated model matches
+  the observed but untargeted wage effects of AI growth over 2022–25. If AI capabilities
+  keep growing at their current pace but remain jagged, the model predicts that average
+  real wages will rise 3.5% per year over the next five years, even as labor is displaced
+  from 30% of tasks. If the AI frontier were five times less jagged than estimated,
+  displacement would be larger and real wage gains would all but vanish. Distributional
+  effects are modest: every education group gains, even without switching sectors,
+  simply by taking over tasks in AI''s blind spots. These results suggest that AI
+  growth, despite its scale, may be less immiserizing than earlier labor-saving technologies
+  such as trade or engines, because its capability frontier is more jagged and its
+  adoption more even across the economy.'
 summary: This paper asks whether explosive AI growth immiserates workers. It shows
   that when AI capabilities are jagged, comparative advantage keeps labor employed
   in AI's blind spots and real wages rise even as AI displaces most tasks.
@@ -45,7 +43,7 @@ topics: []
 pdf_url: Lashkaripour_AI_Displacement.pdf
 markdown_url: sources/ai-displacement-without-immiseration.md
 canonical_url: https://alashkar.pages.iu.edu/papers/ai-displacement-without-immiseration.html
-updated_at: '2026-09-25'
+updated_at: '2026-10-01'
 sort_order: 1
 published_url: null
 slides_url: slides/ai-blind-spots/index.html
@@ -66,7 +64,7 @@ This section was extracted with OpenDataLoader PDF from the hosted PDF so the fu
 
 ## Abstract
 
-We develop and estimate a Ricardian model of labor displacement under explosive AI growth. A key feature of the model is that agentic AI, though jagged, can hold an absolute advantage over humans in every task. Yet wages rise as AI displaces labor, with an elasticity governed by the jaggedness of the AI capability frontier. At the macro level, explosive but jagged AI growth generates unbounded growth in the average wage. At the micro level, every worker can gain without switching sectors, provided AI capabilities are jagged but adoption is sufficiently even across sectors to prevent Baumol's cost disease. We estimate the jaggedness of the AI frontier from micro data comparing human and AI costs on similar tasks, and calibrate the jaggedness of adoption to occupation-level measures of AI exposure. The estimated model matches the untargeted wage effects of AI growth observed over 2022–25. If AI capabilities keep growing at their current pace but remain jagged, the model predicts that average real wages will rise 3.5% per year over the next five years, even as labor is displaced from 30% of tasks. If the AI frontier were five times less jagged than estimated, displacement would be larger and real wage gains would all but vanish. Distributional effects are modest: every education group gains, even without switching sectors, simply by taking over tasks in AI's blind spots. These results suggest that AI growth, despite its scale, may be less immiserizing than earlier labor-saving technologies such as trade or engines, because its capability frontier is more jagged and its adoption more even across the economy.
+We develop and estimate a Ricardian model of labor displacement under jagged AI growth. Even as agentic AI grows to outperform humans at every task, wages rise despite displacement, with an elasticity governed by the jaggedness of the AI capability frontier. At the micro level, every worker can gain without switching sectors, provided AI capabilities are jagged but adoption is sufficiently even across sectors to prevent Baumol's cost disease. We estimate the jaggedness of the AI frontier from micro data comparing human and AI costs on similar tasks, and calibrate the jaggedness of adoption to occupation-level measures of AI exposure. The estimated model matches the observed but untargeted wage effects of AI growth over 2022–25. If AI capabilities keep growing at their current pace but remain jagged, the model predicts that average real wages will rise 3.5% per year over the next five years, even as labor is displaced from 30% of tasks. If the AI frontier were five times less jagged than estimated, displacement would be larger and real wage gains would all but vanish. Distributional effects are modest: every education group gains, even without switching sectors, simply by taking over tasks in AI's blind spots. These results suggest that AI growth, despite its scale, may be less immiserizing than earlier labor-saving technologies such as trade or engines, because its capability frontier is more jagged and its adoption more even across the economy.
 
 ## 1 Introduction
 
