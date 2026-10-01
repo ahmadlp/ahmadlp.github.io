@@ -611,10 +611,10 @@
     panoramaScene.style.opacity = String(1 - panoramaOut);
     panoramaScene.style.transform = `translateY(${lerp(0, 7, panoramaOut) - panoramaLift}px) scale(${lerp(1, 0.988, panoramaOut)})`;
     mechanismScene.style.opacity = String(Math.max(tasksIn, horizontalIn, curveTransition));
-    stage.style.setProperty("--horizontal-opacity", String(horizontalOpacity));
-    stage.style.setProperty("--curve-opacity", String(curveOpacity));
-    stage.style.setProperty("--task-opacity", String(tasksIn * mechanismVisibility));
-    stage.style.setProperty("--plain-label-opacity", String(plainLabelOpacity));
+    mechanismScene.style.setProperty("--horizontal-opacity", String(horizontalOpacity));
+    mechanismScene.style.setProperty("--curve-opacity", String(curveOpacity));
+    mechanismScene.style.setProperty("--task-opacity", String(tasksIn * mechanismVisibility));
+    mechanismScene.style.setProperty("--plain-label-opacity", String(plainLabelOpacity));
     const curveLabelBase = curveOpacity * plainLabelOpacity;
     document.querySelector(".curve-label--ai").style.opacity = String(curveLabelBase);
     document.querySelector(".curve-label--human").style.opacity = String(
@@ -634,9 +634,9 @@
     const horizontalCutoffCss = svgPointToPercent(horizontalGeometry, horizontalCutoffX, 338);
     const horizontalLabelCss = svgPointToPercent(horizontalGeometry, horizontalCutoffX, 174);
     const horizontalEndCss = svgPointToPercent(horizontalGeometry, 1108, 338);
-    stage.style.setProperty("--horizontal-cutoff-left", `${horizontalCutoffCss.x}%`);
-    stage.style.setProperty("--horizontal-cutoff-label-top", `${horizontalLabelCss.y}%`);
-    stage.style.setProperty(
+    mechanismScene.style.setProperty("--horizontal-cutoff-left", `${horizontalCutoffCss.x}%`);
+    mechanismScene.style.setProperty("--horizontal-cutoff-label-top", `${horizontalLabelCss.y}%`);
+    mechanismScene.style.setProperty(
       "--horizontal-niche-left",
       `${(horizontalCutoffCss.x + horizontalEndCss.x) / 2}%`,
     );
@@ -647,8 +647,8 @@
     const cutoffPoint = curveProfile.getPointAtLength(profileLength * profileShare);
     curveCutoff.setAttribute("transform", `translate(${cutoffPoint.x.toFixed(2)} 0)`);
     const curveCutoffLabelCss = svgPointToPercent(curveGeometry, cutoffPoint.x, 86);
-    stage.style.setProperty("--curve-cutoff-left", `${curveCutoffLabelCss.x}%`);
-    stage.style.setProperty("--curve-cutoff-label-top", `${curveCutoffLabelCss.y}%`);
+    mechanismScene.style.setProperty("--curve-cutoff-left", `${curveCutoffLabelCss.x}%`);
+    mechanismScene.style.setProperty("--curve-cutoff-label-top", `${curveCutoffLabelCss.y}%`);
     if (curveCutoffCircle) curveCutoffCircle.setAttribute("cy", cutoffPoint.y.toFixed(2));
     curveLaborShare.setAttribute("x1", cutoffPoint.x.toFixed(2));
     curveLaborShare.setAttribute("x2", "676");
@@ -702,7 +702,7 @@
     const curveWorkerIn =
       smoothstep(4.05, 4.3, position) * (1 - mechanismOut);
     const workerOpacity = Math.max(horizontalWorkerIn, curveWorkerIn);
-    stage.style.setProperty("--worker-opacity", String(workerOpacity));
+    mechanismScene.style.setProperty("--worker-opacity", String(workerOpacity));
     const workerStart = mobile ? horizontalWorkerStartMobile : horizontalWorkerStartDesktop;
     const workerEnd = mobile ? horizontalWorkerEndMobile : horizontalWorkerEndDesktop;
     const hingeStart = mobile ? hingeWorkerStartMobile : hingeWorkerStartDesktop;
@@ -734,7 +734,7 @@
     workerLayer.querySelector(".worker-caption--selected").style.opacity = String(selectedCaption);
 
     const payOpacity = smoothstep(4.72, 5.02, position) * curveOpacity;
-    stage.style.setProperty("--pay-opacity", String(payOpacity));
+    mechanismScene.style.setProperty("--pay-opacity", String(payOpacity));
     hourMark.style.opacity = String(payOpacity);
     goods.style.opacity = String(payOpacity);
     document.querySelector(".curve-label--pay").style.opacity = String(
@@ -763,9 +763,9 @@
       smoothstep(8.55, 8.92, position) * (1 - smoothstep(9.35, 9.62, position));
     const wageKey =
       smoothstep(9.55, 9.92, position) * (1 - smoothstep(10.35, 10.66, position));
-    stage.style.setProperty("--psi-key", String(psiKey));
-    stage.style.setProperty("--labor-key", String(laborKey));
-    stage.style.setProperty("--wage-key", String(wageKey));
+    mechanismScene.style.setProperty("--psi-key", String(psiKey));
+    mechanismScene.style.setProperty("--labor-key", String(laborKey));
+    mechanismScene.style.setProperty("--wage-key", String(wageKey));
     if (position >= 7.3 && position <= 10.82) layoutNotations(mobile);
 
     // The exhibit playing, which a lead-in reaches before its first title shows.
