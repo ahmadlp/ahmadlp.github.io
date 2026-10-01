@@ -198,7 +198,7 @@
   let playTime = 0;
   let entered = { start: -1, time: 0 };
 
-  document.title = `AI's Blind Spots: Comparative Advantage and Wage Growth under Jagged AI`;
+  document.title = `AI's Blind Spots: Comparative Advantage and Wage Growth under Jagged AGI`;
   const coverArt = document.querySelector("[data-cover-art]");
   coverArt.src = content.cover;
   coverArt.alt = content.coverAlt;
