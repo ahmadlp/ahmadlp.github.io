@@ -1,9 +1,8 @@
 ---
-title: 'AI Displacement without Immiseration: A Ricardian Perspective on Jagged AI
-  Growth'
+title: "AI's Blind Spots: Comparative Advantage and Wage Growth under Jagged AI"
 display_title_lines:
-- 'AI Displacement without Immiseration:'
-- A Ricardian Perspective on Jagged AI Growth
+- "AI's Blind Spots: Comparative Advantage"
+- and Wage Growth under Jagged AI
 slug: ai-displacement-without-immiseration
 status: working-paper
 date: '2026-09-01'
