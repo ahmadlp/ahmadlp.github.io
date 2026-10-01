@@ -1197,7 +1197,7 @@ html[data-preview="true"] .formula-scene {
   .panorama-mobile {
     display: grid;
     width: min(100%, 460px);
-    grid-template-rows: repeat(2, min(23svh, 210px));
+    grid-template-rows: repeat(2, 30svh);
     align-content: end;
     mix-blend-mode: multiply;
   }

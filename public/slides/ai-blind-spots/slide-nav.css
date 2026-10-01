@@ -127,15 +127,10 @@ html[data-cover-visible="true"] .snav {
   }
 }
 
-/* On a phone the counter sits beside the ring, 6 px from the bottom; a note on slides 16–21 leaves
-   no room for the arrows, and the page is paged by swiping. */
+/* On a phone the arrows and the counter sit beside the ring, 6 px from the bottom. */
 @media (max-width: 760px) {
   .snav__pager {
     right: 58px;
     bottom: 6px;
-  }
-
-  .snav__arrow {
-    display: none;
   }
 }

@@ -144,7 +144,7 @@
   .r28-data .r-scope { font-size: 10.5px; white-space: normal; }
 }
 @media (max-width: 540px) {
-  .r28-data .ev-slide { padding: 27px 20px 24px; }
+  .r28-data .ev-slide { padding: 27px 20px 42px; }
   .r28-data .ev-slide header h2 { font-size: 28px; }
   .r28-data .ev-slide header > p, .r28-data .ev-slide header > .swap > p { font-size: 16px; margin-top: 12px; }
   .r28-data .ev-body { padding: 22px 0; gap: 18px; }
