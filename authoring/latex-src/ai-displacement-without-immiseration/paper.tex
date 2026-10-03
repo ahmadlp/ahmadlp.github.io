@@ -13,6 +13,7 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{sectiontheorem}[theorem]{Theorem}
 \newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
 \begin{document}
 
 
@@ -439,9 +440,9 @@ AI techniques $T_{M,t}$ improve through knowledge accumulation. Substituting
 the relative factor price back into \eqref{eq:assignment-prices}
 gives the task shares directly in terms of technologies and factor
 supplies:
-\begin{align}
-\pi_{L,t} & =\frac{[T_{L}L^{\psi}]^{1/(1+\psi)}}{[T_{L}L^{\psi}]^{1/(1+\psi)}+\widetilde{M}_{t}},\qquad\qquad\pi_{M,t}=\frac{\widetilde{M}_{t}}{[T_{L}L^{\psi}]^{1/(1+\psi)}+\widetilde{M}_{t}}.\label{eq:static-shares}
-\end{align}
+\begin{equation}
+\pi_{L,t}=\frac{[T_{L}L^{\psi}]^{1/(1+\psi)}}{[T_{L}L^{\psi}]^{1/(1+\psi)}+\widetilde{M}_{t}},\qquad\qquad\pi_{M,t}=\frac{\widetilde{M}_{t}}{[T_{L}L^{\psi}]^{1/(1+\psi)}+\widetilde{M}_{t}}.\label{eq:static-shares}
+\end{equation}
 It remains to aggregate tasks given the optimal assignment into aggregate
 output and price indexes. The derivation is presented in Appendix
 \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=1}{A} yielding the following representation
@@ -501,14 +502,19 @@ grows, it consumes the share of tasks assigned to labor, given by
 \end{equation}
 And as $\widetilde{M}_{t}$ grows infinitely large, $\pi_{L,t}$ goes
 to zero. And the real wage paid to workers grows with the decline
-of $\pi_{L,t}$ at an elasticity $1/\psi$. The joint productivity
-law then makes every percentile of productivity among the tasks retained
-by workers a fixed multiple of the real wage. In other words, worker
-productivity also explodes. An distinct feature of the Ricardian assignment
-model, is that the niche tasks left to the workers are not \emph{expensive
-bottlenecks}. To formalize this, let $s_{L,t}\equiv w_{t}L/Y_{t}$
-denote labor's share of GDP. Factor-market clearing then implies the
-following.
+of $\pi_{L,t}$ at an elasticity $1/\psi$.\footnote{The limits in~\eqref{eq:selection-limits} also hold when AI growth
+is recursive and reaches a singularity in finite time. If fixed shares
+of output finance AI installation and research, AI capabilities diverge
+at a finite date; as that date approaches, labor’s task share vanishes
+and the real wage rises without bound, at a rate that does not depend
+on jaggedness. Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=24}{B.4} states the result
+and Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=25}{B.5} proves it.} The joint productivity law then makes every percentile of productivity
+among the tasks retained by workers a fixed multiple of the real wage.
+In other words, worker productivity also explodes. An distinct feature
+of the Ricardian assignment model, is that the niche tasks left to
+the workers are not \emph{expensive bottlenecks}. To formalize this,
+let $s_{L,t}\equiv w_{t}L/Y_{t}$ denote labor's share of GDP. Factor-market
+clearing then implies the following.
 
 \begin{corollary}[Task and income shares]\label{cor:task-income-shares}
 ~At every date, labor's share of GDP equals its share of tasks:
@@ -671,9 +677,9 @@ $\psi$:
 \frac{\partial\ln w_{t}}{\partial\ln\widetilde{M}_{t}}=\frac{\pi_{M,t}}{\psi}.\label{eq:leverage-elasticity}
 \end{equation}
 The corresponding wage and output growth rates are
-\begin{align}
-g_{w,t} & =\frac{\pi_{M,t}}{\psi}g_{\widetilde{M},t},\qquad\qquad g_{Y,t}=\frac{1+\psi}{\psi}\pi_{M,t}g_{\widetilde{M},t}\label{eq:leverage-wage-growth}
-\end{align}
+\begin{equation}
+g_{w,t}=\frac{\pi_{M,t}}{\psi}g_{\widetilde{M},t},\qquad\qquad g_{Y,t}=\frac{1+\psi}{\psi}\pi_{M,t}g_{\widetilde{M},t}\label{eq:leverage-wage-growth}
+\end{equation}
 The proof follows from the Ricardian assessment model written in growth
 algebra. Ricardian task assignment, per Equation \eqref{eq: Ricardian-assignment},
 implies $g_{\pi_{L},t}=-\pi_{M,t}g_{\widetilde{M},t}$, indicating
@@ -705,63 +711,101 @@ in small pockets of GDP, their wages have high purchasing power because
 growth in AI capabilities lowers the cost of performing most tasks,
 making consumer goods cheaper.}
 
-\subsection{Unbounded Real Wage Growth under Singularity}\label{sec:singularity}
+\subsection{Task Displacement and Unemployment}\label{sec:unemployment}
 
-Next, we examine a recursive self improvement loop that leads to economic
-singularity in finite time.  To this end, suppose a fixed fractions
-$s_{I}>0$ and $s_{R}>0$ of output is respectively allotted to AI
-installation and research, with $s_{I}+s_{R}<1$. Pre-existing AI
-stock depreciates at rate $\delta\geq0$, while each unit of research
-spending replenishes the stock through improved capabilities, raising
-it by $\eta>0$ units. For expositional purposes, we keep the mode
-purposely simple here, treating $s_{R}$ and $s_{I}$ as fixed primitives
-rather than deriving them from equilibrium investment decisions. The
-two factors contributing to the AI stock evolve according to
+Theorem~\ref{thm:selection} shows that the real wage rises as AI
+displaces labor from tasks. The result is about the value of labor,
+not about jobs: it takes a wage rate that adjusts so that all $L$
+workers are employed. This section asks what happens to employment
+when the nominal wage cannot fall.
+
+We keep the single sector economy of Section~\ref{sec:model}, with
+$L$ workers and AI capacity $M_{t}$, but no longer assign the final
+good as the numeraire. Let $P_{t}$ denote the price index of final
+output, and write $W_{t}=P_{t}w_{t}$ for the nominal wage rate, $R_{t}=P_{t}r_{t}$
+for the nominal rental rate, and $X_{t}=P_{t}Y_{t}$ for nominal GDP.
+All $L$ workers are willing to work, but only $N_{t}=e_{t}L$ of
+them are employed, where $e_{t}\in(0,1]$ is the employment rate and
+$u_{t}=1-e_{t}$ the unemployment rate. In equilibrium the nominal
+wage equals the value of the marginal product of labor, and labor's
+share of GDP equals its share of tasks as in Corollary~\ref{cor:task-income-shares}.
+The factor market clearing condition~\eqref{eq:factor-clearing-main}
+becomes
 \begin{equation}
-\dot{M}_{t}=s_{I}Y_{t}-\delta M_{t},\qquad\dot{T}_{M,t}=\eta s_{R}Y_{t}.\label{eq:two-state-closure}
+W_{t}e_{t}L=\pi_{L,t}X_{t},\qquad X_{t}=W_{t}e_{t}L+R_{t}M_{t},\label{eq:ue-wage-bill}
 \end{equation}
-The first equation describes the growth in AI capacity through installation;
-the second describes growth in AI techniques through R\&D. Output
-and prices at each date are determined by the same competitive equilibrium
-described in Section \ref{sec:model}.
+where $\pi_{L,t}$ is the share of tasks performed by the $e_{t}L$
+employed workers.
 
-This simple recursive self improvement reiterate the same labor enrichment
-result but over a finite time horizon. Because a fixed share of output
-is allocated to expanding AI capacity, investment eventually exceeds
-depreciation, and the resulting feedback drives the AI stock to infinity
-at a finite date (i.e., the singularity). In the process, AI takes
-over nearly all tasks and workers retreat to the few niche tasks where
-their productivity relative to AI is greatest. And following the same
-mechanism outlined earlier, their real wage rises without bound on
-the path to the singularity.\footnote{For positive $f$ and $h$, $f_{t}\asymp h_{t}$ as $t\uparrow\tau<\infty$
-means that $f_{t}/h_{t}$ is bounded above and bounded below by a
-positive constant for all $t$ sufficiently close to $\tau$.} The following theorem formalizes this point.
+With a flexible nominal wage, every worker is employed. Setting $e_{t}=1$
+in~\eqref{eq:ue-wage-bill} gives the full employment wage $W^{F}_{t}=\pi_{L,t}(1)X_{t}/L$,
+where $\pi_{L,t}(1)$ denotes labor's task share at full employment,
+given by~\eqref{eq:static-shares}. As the effective AI stock grows,
+$\pi_{L,t}(1)$ falls. At given nominal GDP, the nominal wage must
+fall to keep every worker employed, even though the real wage rises
+by Theorem~\ref{thm:selection}.
 
-\begin{theorem}[The singularity pays workers]\label{thm:singularity}
-~Under recursive AI growth, the AI capabilities diverge at a finite
-date $t_{\infty}$. Moreover, the wage grows without bound while the
-labor share vanishes:
+Following \citet{ruv2025}, we suppose that the nominal wage cannot
+fall below a floor set by last period's wage, $\underline{W}_{t}=\delta_{w}W_{t-1}$
+with $0\leq\delta_{w}\leq1$, and that employment adjusts instead:
 \begin{equation}
-\pi_{L,t}\asymp(t_{\infty}-t)^{\psi},\qquad w_{t}\asymp(t_{\infty}-t)^{-1},\label{eq:singularity-main}
+W_{t}\geq\underline{W}_{t},\qquad0<e_{t}\leq1,\qquad(1-e_{t})(W_{t}-\underline{W}_{t})=0.\label{eq:ue-floor}
 \end{equation}
-As $t$ approaches $t_{\infty}$, the real wage rises at a rate that
-is proportional to the inverse time remaining to singularity but independent
-of jaggedness, $\psi$. \end{theorem}
+If the full employment wage is below the floor, fewer than $L$ workers
+are employed at $W_{t}=\underline{W}_{t}$; if it is at or above the
+floor, every worker is employed. The floor applies to all workers,
+so the unemployed cannot offer to work for less than the employed,
+and unemployment is involuntary. Nominal GDP $X_{t}$ is the nominal
+anchor: the model determines real output and the price level, and
+$X_{t}$ pins down the nominal scale.
 
-The intuition behind singularity happening over a finite time horizon
-is simple. More AI stock raises output, a fixed share of which finances
-additional AI stock. Once recursive AI growth dwarfs depreciation,
-we get $Y_{t}\asymp\widetilde{M}^{1+1/\psi}_{t}$, so $\dot{\widetilde{M}}_{t}\asymp\widetilde{M}^{1+1/\psi}_{t}$.
-Since the exponent exceeds one, the percentage growth rate rises with
-the level: each doubling takes less time than the last, and the total
-time required for infinitely many doublings is finite, denoted by
-$t_{\infty}$. The noted growth equation implies $\widetilde{M}_{t}\asymp(t_{\infty}-t)^{-\psi}$,
-which combined with the fact that labor’s task share is inversely
-proportional to $\widetilde{M}_{t}$, implies $\pi_{L,t}\asymp(t_{\infty}-t)^{\psi}$.
-Accordingly, since $w_{t}\propto\pi^{-1/\psi}_{L,t}$, we obtain $w_{t}\asymp(t_{\infty}-t)^{-1}$
-as stated in Theorem \eqref{thm:singularity}. The bottomline is that
-jaggedness $1/\psi$ determines how quickly labor is displaced from
-tasks but is irrelevant for the rate at which the real wage explodes.
+Dividing~\eqref{eq:ue-wage-bill} at date $t$ by the same equation
+at date $0$ gives
+\begin{equation}
+\frac{e_{t}}{e_{0}}=\frac{\pi_{L,t}}{\pi_{L,0}}\times\frac{X_{t}/X_{0}}{W_{t}/W_{0}}.\label{eq:ue-employment}
+\end{equation}
+When nominal GDP and the nominal wage are unchanged, the last fraction
+equals one, and employment falls in proportion to labor's task share:
+a one percent decline in labor's task share means a one percent decline
+in employment. Employment falls because labor's share of a fixed nominal
+GDP falls while the nominal wage cannot, not because each displaced
+task is a job.
+
+\begin{proposition}[Task displacement and employment]\label{prop:unemployment}
+~Start from full employment, $e_{0}=1$, and let the effective AI stock
+$\widetilde{M}_{t}$ grow between dates $0$ and $1$, with $T_{L}$
+and $L$ fixed. If nominal GDP is unchanged, $X_{1}=X_{0}$, and the
+nominal wage cannot fall, so that~\eqref{eq:ue-floor} holds with
+$\delta_{w}=1$, then the unique equilibrium has $W_{1}=W_{0}$ and
+\begin{equation}
+\frac{e_{1}}{e_{0}}=\frac{\pi_{L,1}}{\pi_{L,0}}<1.\label{eq:ue-prop-employment}
+\end{equation}
+
+Let $E_{t}\equiv e_{t}w_{t}$ denote average real earnings per worker,
+including the unemployed. The real wage of the employed and average
+earnings satisfy
+\begin{equation}
+\frac{w_{1}}{w_{0}}=\left(\frac{\pi_{L,1}}{\pi_{L,0}}\right)^{-1/\psi},\qquad\frac{E_{1}}{E_{0}}=\left(\frac{\pi_{L,1}}{\pi_{L,0}}\right)^{1-1/\psi}.\label{eq:ue-prop-earnings}
+\end{equation}
+
+The real wage rises, but average earnings fall if $\psi>1$, are unchanged
+if $\psi=1$, and rise if $\psi<1$.\end{proposition}
+
+The derivation of these results and the proof of the proposition are
+in Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=30}{B.6}. In~\eqref{eq:ue-prop-employment},
+$\pi_{L,1}$ is labor's task share in the new equilibrium, with $e_{1}L$
+workers employed. It is below the full employment share $\pi_{L,1}(1)$,
+because fewer workers perform fewer tasks; using the full employment
+share in its place would understate the fall in employment.
+
+Ricardian selection still raises the real wage of the employed, but
+under nominal rigidity it does not imply higher average earnings.
+Average earnings $E_{t}$ exclude the rental income of AI stock owners
+and are not a welfare measure. And full employment returns only through
+nominal adjustment, not with time: if, after the shock, the technology
+and AI capacity stop changing and nominal GDP grows at a gross rate
+$G$, unemployment ends after a finite number of periods when $G>\delta_{w}$
+and remains unchanged when $G=\delta_{w}$ (Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=30}{B.6}).
 
 \section{Jagged Adoption Benefits Workers under Mobility}\label{sec:breadth}
 
@@ -819,7 +863,7 @@ for all $s$, the equation has a unique positive solution. Given that
 solution, Cobb--Douglas aggregation and the income accounting identity
 $Y_{t}=w_{t}L+r_{t}M_{t}$ yield the following expression for the
 real wage:\footnote{The specific details about sectoral employment and AI allocation in
-equilibrium are provided in Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=28}{B.5}.}
+equilibrium are provided in Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=36}{B.7}.}
 \begin{equation}
 w_{t}=\prod_{s}\left[\gamma^{-\beta_{s}}_{s}\left(\frac{T_{Ls}}{\pi_{Ls,t}}\right)^{\frac{\beta_{s}}{\psi_{s}}}\right].\label{eq:multisector-wage-output}
 \end{equation}
@@ -859,7 +903,7 @@ Labor's income share vanishes if AI advances in every sector ($\nu_{s}>0$
 for all $s$) and converges to a strictly positive limit if adoption
 is jagged ($\nu_{s}=0$ for some $s$). \end{theorem}
 
-Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=28}{B.5} provides the formal proof for this
+Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=36}{B.7} provides the formal proof for this
 theorem. The same logic underpins how employment evolves across sectors.
 If AI capabilities advance broadly across all sectors, employment
 concentrates in the slowest growing sectors for which $\min_{s}\nu_{s}$.
@@ -870,7 +914,7 @@ with $\sigma_{U}\in(0,1)$, the expenditure shares of sectors with
 AI progress fall to zero, $w_{t}/r_{t}$ is pinned down by sectors
 with fixed intensity, and $w_{t}$ and $Y_{t}$ approach finite positive
 limits, so this result does not determine the limiting ratio of real
-wage growth to output growth; Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=35}{B.6}
+wage growth to output growth; Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=42}{B.8}
 gives the equations, proof, and limiting real wage.}
 
 \begin{corollary}[Balanced vs jagged adoption]\label{cor:balanced-progress}
@@ -933,7 +977,7 @@ describes factor market clearing, with the value added shares $\alpha_{s}\lambda
 in place of $\beta_{s}$, and the aggregate labor share of GDP is
 $s_{L,t}=\sum_{s}\alpha_{s}\lambda_{s}\pi_{Ls,t}$, which is a value
 added weighted share of tasks done by workers. as shown in Appendix
-\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=54}{B.9}, the real wage continues to follow a simple
+\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=61}{B.11}, the real wage continues to follow a simple
 sufficient statistics formula:
 \begin{equation}
 w_{t}=\prod_{s}\left[\gamma^{-\lambda_{s}}_{s}\left(\frac{T_{Ls}}{\pi_{Ls,t}}\right)^{\frac{\lambda_{s}}{\psi}}\right].\label{eq:io-real-wage}
@@ -969,7 +1013,7 @@ under balanced adoption is higher with intermediate inputs than without
 them. The lower bound $\Lambda/(\Lambda+\psi)$ is strictly greater
 than the bound without input-output loops.\footnote{The worst case scenario is when the adoption rate $\nu_{s}$ is proportional
 to $1+\alpha_{s}\psi$. The best case is jagged adoption where $\ensuremath{\min_{s}\{\frac{\nu_{s}}{1+\alpha_{s}\psi}\}=0},$in
-which case $\frac{g_{w}}{g_{Y}}\longrightarrow1$. See Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=54}{B.9}
+which case $\frac{g_{w}}{g_{Y}}\longrightarrow1$. See Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=61}{B.11}
 for details.} Two factors contribute to the higher floor. First, input-output loops
 amplify the consumer gains from AI-driven growth, which manifests
 itself as a fall in the cost of goods relative to the wage rate. Moreover,
@@ -984,7 +1028,7 @@ assigned to humans versus agentic AI. The share will be still described
 by equation \eqref{eq:sectoral-ai-share}. Also, the change in the
 real wages will become $\Delta\ln w=-\frac{1}{\psi}\sum_{s}\alpha_{s}\lambda_{s}\,\Delta\ln\pi_{Ls}$.
 Since $\sum_{s}\alpha_{s}\lambda_{s}=1$, this case weakens the amplification
-effects of input-output linkages. See Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=68}{C.2}
+effects of input-output linkages. See Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=75}{C.2}
 for further details.}
 
 \section{ Universal Wage Growth Can Happen without Mobility}\label{sec:heterogeneity}
@@ -1057,7 +1101,7 @@ The first term captures the downward pressure on wages as AI performs
 more tasks in sector $s$, with better capabilities. The second term
 captures the increase in purchasing power through aggregate productivity
 growth. Greater AI capabilities raise aggregate output across all
-sectors, raising the purchasing power of wages. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=40}{B.7}
+sectors, raising the purchasing power of wages. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=47}{B.9}
 establishes a real wage floor per sector: there is a constant $c_{s}>0$,
 independent of $A_{t}$, such that $w_{s,t}\geq c_{s}A^{\frac{1}{\psi}\sum_{k}(\beta_{k}\nu_{k})-\frac{\nu_{s}}{1+\psi}}_{t}$.
 Moreover, even when frictions to labor mobility across sectors are
@@ -1104,7 +1148,7 @@ fixed or slowly growing sector-specific capital like machinery. In
 that case, increased demand raises the cost of capital intensive goods.
 This limits the gain in the purchasing power of wages and can lower
 the real wages of workers in some sectors even when the condition
-in Theorem \ref{thm:wage-divergence} holds. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=84}{C.9}
+in Theorem \ref{thm:wage-divergence} holds. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=91}{C.9}
 derives the formula describing real wage growth under fixed capital.}
 
 \subsection{The Jevons Paradox}\label{sec:jevons}
@@ -1138,7 +1182,7 @@ in \citet{ar2018} for the productivity effect to dominate displacement.
 The running assumption in all cases is that a sector is small enough
 that $Y$ and $r$ are unaffected.} In the limit $\kappa\downarrow1$, where labor is immobile across
 sectors, the relative wage across any two sectors is fully determined
-by the relative displacement effect as\footnote{See appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=50}{B.8} for the derivation.}
+by the relative displacement effect as\footnote{See appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=57}{B.10} for the derivation.}
 \begin{equation}
 \frac{\hat{w}_{s}}{\hat{w}_{k}}=\left(\frac{\hat{\pi}_{Lk}}{\hat{\pi}_{Ls}}\right)^{\frac{\eta-1-\psi}{\eta\psi}},\label{eq:jevons-ratio}
 \end{equation}
@@ -1176,7 +1220,7 @@ productivity profile is different from agentic AI. Even if AI performs
 every task better than humans, the relative difference between humans
 and agentic AI across tasks is not uniform.
 
-\subsection*{AI \emph{versus} Trade }
+\subsection*{AI \emph{versus} Trade}
 
 Trade is often invoked as an example of a large-scale technological
 change that led to massive displacement. It immiserated workers in
@@ -1197,7 +1241,7 @@ The trade shock would have benefited workers through Ricardian assignment
 iff $\psi<\frac{\beta_{\mathscr{T}}}{1-\beta_{\mathscr{T}}}$, but
 this condition was far from satisfied. Data from 2000 points to $\beta_{\mathscr{T}}\approx0.15$
 for the US economy, while the dispersion parameter in an international
-trade context is often estimated to be around $\psi=4$.\footnote{Compare this with agentic AI adoption which is spread more equally
+trade context is often estimated to be around four.\footnote{Compare this with agentic AI adoption which is spread more equally
 across all sectors of the economy. Our forthcoming analysis shows
 that $\max_{s}\nu_{s}/\bar{\nu}=1.63$, which is
 well below $\nu_{s}/\bar{\nu}=1/\beta_{\mathscr{T}}\approx6.7$.} Thus, the conditions were stacked against workers in the manufacturing
@@ -1212,14 +1256,14 @@ much and even rose because of the higher price of non-traded services.
 The fact that international trade in tasks is concentrated in select
 industries and operates under a high trade elasticity is a natural
 consequence of high inter-country trade costs. Some sectors are intrinsically
-not amenable to cross-country trade. The trade shock will be concentrated
+not amenable to cross-country trade. So, the trade shock will be concentrated
 in internationally traded sectors. For the same reasons, if producing
 goods requires performing a sequence of tasks, it is extremely costly
 to perform those tasks in different locations. Trade will generally
 involve performing a bundle of consecutive tasks in one location to
-minimize intermediate border crossing. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=62}{B.10}
-formalizes this point. Suppose tasks in sector $s$ are grouped in
-blocks of $k_{s}$ consecutive tasks.\footnote{We take blocks as given here. They emerge when tasks are performed
+minimize intermediate border crossing. To formalize this point, suppose
+tasks in sector $s$ are grouped in blocks of $k_{s}$ consecutive
+tasks.\footnote{We take blocks as given here. They emerge when tasks are performed
 in sequence and an intermediate good that changes country between
 two consecutive tasks requires $f\ge0$ units of border crossing services,
 produced with home and foreign labor in Cobb--Douglas shares of one-half
@@ -1227,10 +1271,15 @@ each. The country of each task is then chosen to minimize the cost
 of performing tasks plus the cost of border crossing, and a block
 is a full run of consecutive tasks in one country.} Instead of assigning countries to individual tasks, countries are
 assigned to blocks of tasks, with each block produced by the country
-that has lowest cost. Then, if labor is immobile, in the limit as
-foreign's relative productivity in sector $s$ grows without bound,
-a home worker employed in that sector receives a real wage growth
-characterized by
+that has lowest cost. As shown in Figure \ref{fig:task-bundling-jaggedness},
+the bundling of tasks attenuates the effective jaggedness of trade
+as a labor-saving technology. As a result, trade leaves fewer Ricardian
+crevasses for the workers to select into. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=69}{B.12}
+formalizes this point and the implications for wage growth are immediate
+from Theorem \ref{thm:breadth} and \ref{thm:wage-divergence}. If
+labor is immobile, in the limit as foreign's relative productivity
+in sector $s$ grows without bound, a home worker employed in that
+sector receives a real wage growth characterized by
 \begin{equation}
 \frac{g_{w_{s}}}{g_{Y}}\longrightarrow1-\frac{k_{s}\psi}{1+k_{s}\psi}\,\frac{\nu_{s}}{\sum_{s'}\beta_{s'}\nu_{s'}}.\label{eq:unit-of-reassignment}
 \end{equation}
@@ -1281,7 +1330,7 @@ Using the software-based estimate for $\psi$ would understate the
 real-wage gains generated by Ricardian selection, because a larger
 $\psi$ implies less scope for comparative advantage across tasks.\footnote{The parameter $\psi$ also sets the size of the implied improvement
 in AI capabilities given an observed average cost decline. So, a lower
-$\psi$ makes the counterfactual shock smaller. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=97}{D.3}
+$\psi$ makes the counterfactual shock smaller. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=104}{D.3}
 runs the model using lower estimates for $\psi$ and shows larger
 gains in real wages but smaller gains in real output.}
 
@@ -1297,7 +1346,7 @@ arrive on 26 distinct release dates, which is also
 the time dimension used throughout the paper. AI cost is the API charge
 for the tokens used in a successful attempt, scaled by a factor of
 175 that stands for deployment costs beyond tokens
-(Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=94}{D.1}). Human cost is based on a
+(Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=101}{D.1}). Human cost is based on a
 professional assessment of the time needed to complete the same task,
 multiplied by one of three hourly wage rates: the BLS mean software
 developer wage, an effect BLS wage scaled up by a fixed multiplier
@@ -1311,7 +1360,7 @@ human time requirements, we use the midpoint of that range and treat
 tasks marked as \textquotedbl more than four hours\textquotedbl{}
 to never exceed 16 hours. AI cost is calculated based
 on the cheapest rate available from any model that completed the task
-by June~2026. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=94}{D.1}
+by June~2026. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=101}{D.1}
 provides further details on the construction and provenance.
 
 \subsection{Estimating the Jaggedness of the AI Frontier ($1/\psi$)}
@@ -1400,7 +1449,7 @@ and task-level regression delivers $\widehat{\psi}=1.36$,
 both with narrow bootstrapped standard error bands.\footnote{The small bootstrapped standard errors capture only the random draw
 of repositories and not measurement error in human costs. Each draw
 changes which repositories are in the sample but keeps the assessed
-completion times and human cost conventions fixed. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=97}{D.3}
+completion times and human cost conventions fixed. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=104}{D.3}
 shows how much the estimate changes across human cost specifications
 and wage bases.} Figure \ref{fig:price-of-automation} reports the mechanics of each
 estimation strategy. Panel (a) shows the path of $\pi_{M}$ over release
@@ -1430,7 +1479,7 @@ the hourly wage shifts the relative human-to-AI cost, potentially
 affecting the release-level regression that depends on the sample
 median cost. The estimated $\psi$ stays between 0.99
 and 1.95 under all explored specifications. Appendix
-Figure \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=98}{B1} reports the full session sensitivity
+Figure \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=105}{B1} reports the full session sensitivity
 grid. The takeaway is that the estimated $\psi$ remains in a range
 of values that all predict qualitatively the same real-wage and displacement
 trajectory when inserted into the model.
@@ -1509,7 +1558,7 @@ hours, and the midpoint in logs of each range of hours. Panel~(a)
 and panel~(c) follow the frontier by release date; panel~(b) uses
 its June~2026 endpoint. Panel~(a) and panel~(b) show
 no fitted distribution. Our calculation uses the task-level cost and
-assignment data described in Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=94}{D.1}.}%
+assignment data described in Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=101}{D.1}.}%
 \end{minipage}
 \end{figure}
 
@@ -1572,11 +1621,11 @@ in AI's task share, which also depends on the level of assignment.
 
 For the counterfactuals, we use the task-level distribution estimate
 $\psi=1.36$ from Table \ref{tab:two-estimates} and impose this
-value in every sector. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=94}{D} discusses the
+value in every sector. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=101}{D} discusses the
 limits of applying the software-engineering estimate to other industries,
-and Appendix Figure \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=98}{B1} reports estimates
+and Appendix Figure \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=105}{B1} reports estimates
 under different wage bases and assessed-time conventions. Incomplete
-tasks provide no AI cost observation, as Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=99}{D.5}
+tasks provide no AI cost observation, as Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=106}{D.5}
 explains. These estimates describe observed comparative advantage
 and do not determine its ultimate range.
 
@@ -1584,7 +1633,7 @@ and do not determine its ultimate range.
 
 We use the full model with multiple sectors, multiple factors, and
 input-output linkages to run the simulations. As detailed in Appendix
-\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=67}{C}, counterfactual equilibria can be simulated
+\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=74}{C}, counterfactual equilibria can be simulated
 by calibrating the model to six sufficient statistics from the baseline
 equilibrium. Two of these statistics are industry-level share variables:
 (1) Final consumption shares, $\beta_{s}$, and input-output shares,
@@ -1599,14 +1648,14 @@ worker mobility across sectors.\footnote{To allow for capital income, the calibr
 combine the task bundle $Y_{s}$ with fixed sector-specific capital
 $K_{s}$. Namely, $\tilde{Y}_{s}=Y^{\theta_{s}}_{s}K^{1-\theta_{s}}_{s}$,
 where $\theta_{s}>0$ is an observable share.} The counterfactual equilibrium can be solved using these observable
-or estimable statistics by solving the system \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=80}{(C20)}--\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=82}{(C29)}
+or estimable statistics by solving the system \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=87}{(C20)}--\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=89}{(C29)}
 in changes.
 
 The consumption and input-output shares, $\beta_{s}$, $\Gamma_{ks}$,
 are calibrated to match the 2024 BEA accounts on input-output and
 value added shares \citep{bea2026io}. the sample covers $71$
 industries, with details about data construction provided in Appendix
-\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=68}{C.2}. We calibrate the employment shares
+\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=75}{C.2}. We calibrate the employment shares
 $\mu_{gs}$ to the 2024 American Community Survey \citep{census2024pums}.
 The sample includes employed adults aged 25--64 in private and government
 sectors, with the latter accounting for $16.9$
@@ -1618,7 +1667,7 @@ $21.4$, and $60.4$
 percent. We adjust the group-by-industry wage bills to match the model's
 sector wage bills while matching these group-level shares. We use
 $\psi=1.36$ and, following \citet{gry2023}, set $\kappa_{g}=1.5$
-for every group. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=67}{C} reports further
+for every group. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=74}{C} reports further
 details on the industry concordances and calibration method.\footnote{To allow for capital income, we calibrate the share of primary non
 capital inputs as $\theta_{s}=\min\left\{ \frac{w^{D}_{s}L^{D}_{s}}{\pi_{Ls}\alpha_{s}X_{s}},1\right\} $,
 where $w^{D}_{s}L^{D}_{s}$ is worker compensation in the data. In
@@ -1628,7 +1677,7 @@ capital receives $(1-\theta_{s})\alpha_{s}X_{s}$, where $X_{s}$
 is gross revenue. The share $\theta_{s}$ is set to one in 8 sectors,
 which leaves the aggregate model-predicted wage bill 1.29 percent
 below the BEA reported worker compensation. We retain this accounting.
-See Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=69}{C.3} for more details.}
+See Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=76}{C.3} for more details.}
 
 The share $\pi_{Ms}$ of tasks performed by AI in each industry is
 calibrated using the July 2026 survey of $1{,}103$
@@ -1685,12 +1734,12 @@ percent, with $\pi_{Ms}<e_{s}$ in every industry. The survey covers
 $10.25$ percent of tasks directly, weighted
 by employment, and drawing occupations at random gives an aggregate
 share between $11.8$ and $17.3$
-percent. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=86}{C.11} runs the counterfactuals
+percent. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=93}{C.11} runs the counterfactuals
 with Microsoft's lower share of $6.8$
 percent, where the five year real wage gain falls to $6.7$
 percent under balanced adoption and $7.7$
-percent under jagged adoption.} Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=67}{C} details the construction of these
-measures, and Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=86}{C.11} runs sensitivity
+percent under jagged adoption.} Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=74}{C} details the construction of these
+measures, and Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=93}{C.11} runs sensitivity
 analyses using the lower baseline exposure shares based on Microsoft's
 record of AI use.
 
@@ -1736,7 +1785,7 @@ test of the model using IV-based goodness-of-fit measure developed
 by \citet{adao2025test}. We ask whether the calibrated model reproduces
 the labor market effects that materialized between 2022 and 2025,
 but were not targeted in the calibration. As detailed in Appendix
-\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=86}{C.12}, we use changes to sectoral wages from
+\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=93}{C.12}, we use changes to sectoral wages from
 May 2022 to May 2025 as our validation test target.
 
 The test has a simple logic. Between 2022 and 2025, the economy was
@@ -1763,7 +1812,7 @@ in each sector $s$ is the sufficient statistics for constructing
 the instrument $z_{s}$ and simulating $\Delta x_{s}$. The change
 in task share is constructed based on each sector's May 2022 occupation
 mix with the measure of occupational exposure to agentic AI from \citet{emmr2024}.
-Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=86}{C.12} provides the details about the
+Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=93}{C.12} provides the details about the
 data construction and inference.
 
 Because we are analyzing a three years window, labor mobility is presumably
@@ -1797,7 +1846,7 @@ May 2025 with the changes the calibrated model predicts when AI use
 is scaled back to its May 2025 level. It does not test the average
 wage change, employment, or welfare, and the confidence sets are wide
 enough to allow sizable errors in the predicted changes. Appendix
-\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=86}{C.12} describes the construction and the checks
+\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=93}{C.12} describes the construction and the checks
 on the inference.}%
 \end{minipage}
 \end{figure}
@@ -1849,7 +1898,7 @@ is the estimated current growth rate and $g_{H}=\ln(2)/1.7$ is the
 rate implied by hardware improvements.} Under these assumptions, task costs fall by $99.2$
 percent after five years.\footnote{With the rate of decline held at its current level, the cost of performing
 tasks with agentic AI tools would fall by $99.96$
-percent.} Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=78}{C.4} unpacks more details about
+percent.} Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=85}{C.4} unpacks more details about
 the our extrapolation of the growth trajectory.
 
 \begin{figure}[!tbh]
@@ -2062,7 +2111,7 @@ percent for those with some college or an associate degree, and $12.5$
 percent for those with a bachelor's degree or higher. When workers
 can move between sectors, the corresponding real wage gains are $28.1$
 percent, $22.9$ percent, and $14.1$
-percent, respectively.\footnote{Appendix Figure \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=84}{C5} reports
+percent, respectively.\footnote{Appendix Figure \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=91}{C5} reports
 the group-level gains when AI adoption is set to be balanced across
 sectors.}
 
@@ -2155,7 +2204,7 @@ model of Section~\ref{sec:counterfactuals} with input--output linkages
 and fixed sector-specific capital; the same $\eta$ governs every
 use of a sector's output, final and intermediate. The figure reports
 the gains for five values of the elasticity of substitution across
-sector outputs $\eta$ of Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=53}{B.8}, equation~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=53}{(B178)},
+sector outputs $\eta$ of Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=60}{B.10}, equation~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=61}{(B206)},
 with $\eta=1$ the paper's Cobb--Douglas baseline. At $\eta\approx2.5$,
 workers with a bachelor's degree or more and workers with high school
 or less gain the same $28.9$ percent. If the
