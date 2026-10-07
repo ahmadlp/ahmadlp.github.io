@@ -293,7 +293,10 @@ units of the same task. Let $\ell_{t}(i)$ denote labor used on the
 task and let $m_{t}(i)$ denote the AI inputs used for it. Then total
 output is
 \begin{equation}
-y_{t}(i)=z_{L}(i)\ell_{t}(i)+z_{M,t}(i)m_{t}(i),\qquad\int^{1}_{0}\ell_{t}(i)\,\mathrm{d}i=L,\qquad\int^{1}_{0}m_{t}(i)\,\mathrm{d}i=M_{t}.\label{eq:task-technology-main}
+\begin{aligned}y_{t}(i) & =z_{L}(i)\ell_{t}(i)+z_{M,t}(i)m_{t}(i),\\
+\int^{1}_{0}\ell_{t}(i)\,\mathrm{d}i & =L,\qquad\int^{1}_{0}m_{t}(i)\,\mathrm{d}i=M_{t}.
+\end{aligned}
+\label{eq:task-technology-main}
 \end{equation}
 Under perfect competition, the task is produced by the factor with
 the lower unit cost, yielding a competitive price
@@ -395,7 +398,21 @@ grow exponentially.
 \begin{figure}
 \caption{Jaggedness of the AI capability frontier is regulated by $1/\psi$}\label{fig:task-level-jaggedness}
 
-\includegraphics[width=\textwidth]{figures/frontier-jaggedness.png}
+\includegraphics[width=1\textwidth]{jaggedness-figure/output/jaggedness.png}
+
+\vspace{0.25em}
+ %
+\begin{minipage}[c]{0.94\textwidth}%
+{\footnotesize\textit{Notes:}}{\footnotesize{}
+The circle is the human baseline, where a task costs the same whether
+humans or AI produce it. Each spike of the frontier is one task. Its
+distance from the center rises with the task's human-to-AI cost ratio,
+so it reaches beyond the circle where AI is cheaper and dips inside
+where humans are cheaper. The curves below plot the distribution of
+the log human-to-AI cost ratio across tasks, whose spread is proportional
+to $1/\psi$. Teal marks AI's blind spots, the tasks where humans
+are cheaper.}%
+\end{minipage}
 \end{figure}
 
 
@@ -549,7 +566,7 @@ over $\mathcal{H}_{t}$ gives labor's income, $w_{t}L=Y_{t}\,w^{1-\sigma}_{t}\,\p
 Writing in log differences, obtains the following expression for real
 wage growth:
 \begin{equation}
-\Delta\ln w_{t}\ \ =\underbrace{\ \frac{\sigma-1}{\sigma}\,\Delta\ln\bar{z}_{L,t}\ }_{\text{labor productivity on retained tasks}}-\ \underbrace{\ \frac{1}{\sigma}\Delta\ln(1/\pi_{L,t})\ }_{\text{dispalcement}}\ +\ \underbrace{\quad\frac{1}{\sigma}\Delta\ln(Y_{t}/L)\quad}_{\text{aggregate productivity}}.\label{eq:content-decomposition}
+\Delta\ln w_{t}\ \ =\underbrace{\ \frac{\sigma-1}{\sigma}\,\Delta\ln\bar{z}_{L,t}\ }_{\text{labor productivity on retained tasks}}-\ \underbrace{\ \frac{1}{\sigma}\Delta\ln(1/\pi_{L,t})\ }_{\text{dispalcement}}\ +\ \underbrace{\frac{1}{\sigma}\Delta\ln(Y_{t}/L)}_{\text{aggregate productivity}}.\label{eq:content-decomposition}
 \end{equation}
 With worker knowledge frontier $T_{L}$ fixed, \eqref{eq:aggregate-production}
 makes output per worker proportional to $(1/\pi_{L,t})^{(1+\psi)/\psi}$.
@@ -1085,7 +1102,9 @@ representing what is considered a \emph{specific factors economy}.
 As before, $\psi>0$ governs comparative advantage between workers
 and AI within sectors. The real income of workers in group $g$:
 \[
-\ensuremath{W_{g,t}=\Gamma\left(1-\frac{1}{\kappa_{g}}\right)Y_{t}\left[\sum_{s}a_{gs}\left(\frac{\beta_{s}\pi_{Ls,t}}{\ell_{s,t}}\right)^{\kappa_{g}}\right]^{1/\kappa_{g}},\qquad\qquad\ensuremath{Y_{t}=\prod_{s}\left[\Phi_{s}\ell_{s,t}\pi^{-\frac{1+\psi}{\psi}}_{Ls,t}\right]^{\beta_{s}}.}}
+\begin{aligned}W_{g,t} & =\Gamma\left(1-\frac{1}{\kappa_{g}}\right)Y_{t}\left[\sum_{s}a_{gs}\left(\frac{\beta_{s}\pi_{Ls,t}}{\ell_{s,t}}\right)^{\kappa_{g}}\right]^{1/\kappa_{g}},\\
+Y_{t} & =\prod_{s}\left[\Phi_{s}\ell_{s,t}\pi^{-\frac{1+\psi}{\psi}}_{Ls,t}\right]^{\beta_{s}}.
+\end{aligned}
 \]
 where $\Phi_{k}\equiv T^{\frac{1}{\psi}}_{Lk}/\gamma_{k}\beta_{k}$
 is a sector-level constant. AI capability grows according to $T_{Ms,t}=T_{Ms,0}A^{\nu_{s}}_{t},$,
@@ -1349,10 +1368,10 @@ for the tokens used in a successful attempt, scaled by a factor of
 (Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=101}{D.1}). Human cost is based on a
 professional assessment of the time needed to complete the same task,
 multiplied by one of three hourly wage rates: the BLS mean software
-developer wage, an effect BLS wage scaled up by a fixed multiplier
+developer wage, an effective BLS wage scaled up by a fixed multiplier
 1.4 to cover benefits and overhead, and a
 freelance rate of 100 dollars per hour \citep{bls2024oews,bls2023ecec,upwork2026}.
-All costs are chained to July~2026 dollars using the CPI-U
+All costs are converted to July~2026 dollars using the CPI-U
 deflator \citep{bls2026cpi}. Our baseline analysis constructs relative
 cost ratios using effective labor wages, adjusted for overhead. Since
 the experts report a range of hours rather than a single number for
@@ -1648,7 +1667,7 @@ worker mobility across sectors.\footnote{To allow for capital income, the calibr
 combine the task bundle $Y_{s}$ with fixed sector-specific capital
 $K_{s}$. Namely, $\tilde{Y}_{s}=Y^{\theta_{s}}_{s}K^{1-\theta_{s}}_{s}$,
 where $\theta_{s}>0$ is an observable share.} The counterfactual equilibrium can be solved using these observable
-or estimable statistics by solving the system \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=87}{(C20)}--\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=89}{(C29)}
+or estimable statistics by solving the system \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=88}{(C20)}--\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=89}{(C29)}
 in changes.
 
 The consumption and input-output shares, $\beta_{s}$, $\Gamma_{ks}$,
@@ -1757,20 +1776,20 @@ record of AI use.
 \vspace{0.25em}
  %
 \begin{minipage}[c]{0.94\textwidth}%
-{\footnotesize\textit{Notes:}}{\footnotesize{} Each circle represents
-one sector. Panel A plots the physical intensity index against the
-cognitive skill intensity index on the horizontal axis. The dashed
-lines report the employment weighted mean for each axis. Panel B plots
-the current AI task share against the exposure measure used to discipline
-adoption of growing AI capabilities. The dashed lines represent the
-value added weighted mean for each axis. In each panel, circle size
-shows the sector's value added share, and the colors report the share
-of its workers with a bachelor's degree or more. The calculations
-are based on the 2024 BEA input--output accounts, the Epoch AI--Ipsos
-survey, Anthropic Economic Index task data, May 2025 BLS employment,
-the 2024 BLS employment projection and skill scores, O{*}NET 30.3,
-the 2024 American Community Survey, and occupation exposure ratings
-\citep{bea2026io,epochpolling2026,bls2026oews,bls2026ep,onet2026,census2024pums,emmr2024}.}%
+{\footnotesize\textit{Notes:}}{\footnotesize{}
+Each circle represents one sector. Panel A plots the physical intensity
+index against the cognitive skill intensity index on the horizontal
+axis. The dashed lines report the employment weighted mean for each
+axis. Panel B plots the current AI task share against the exposure
+measure used to discipline adoption of growing AI capabilities. The
+dashed lines represent the value added weighted mean for each axis.
+In each panel, circle size shows the sector's value added share, and
+the colors report the share of its workers with a bachelor's degree
+or more. The calculations are based on the 2024 BEA input--output accounts,
+the Epoch AI--Ipsos survey, Anthropic Economic Index task data, May
+2025 BLS employment, the 2025 BLS employment projection and skill
+scores, O{*}NET 31.0, the 2024 American Community Survey, and occupation
+exposure ratings \citep{bea2026io,epochpolling2026,bls2026oews,bls2026ep,onet2026,census2024pums,emmr2024}.}%
 \end{minipage}
 \end{figure}
 
@@ -1821,7 +1840,8 @@ labor market response over a longer horizon. We therefore assess two
 cases: $\kappa\downarrow1$, in which workers are frozen in their
 original sectors, and $\kappa=1.5$, following the preferred
 estimation value of \citet{gry2023}. Figure \ref{fig:model-validation}
-reports the results. The goodness-of-fit statistic is $\widehat{\beta}_{z}=1.7\times 10^{-4}$
+reports the wage effects and the IV slope test. The goodness-of-fit
+statistic is $\widehat{\beta}_{z}=1.7\times 10^{-4}$
 under $\kappa\downarrow1$ and $\widehat{\beta}_{z}=-8.6\times 10^{-5}$
 with $\kappa=1.5$. The null of a zero discrepancy is not rejected
 at the 5 percent confidence level, in both cases. The corresponding
@@ -1840,14 +1860,22 @@ Both confidence sets contain one.
 \vspace{0.25em}
  %
 \begin{minipage}[c]{0.94\textwidth}%
-{\footnotesize\textit{Notes:}}{\footnotesize{} The test compares wage
-changes across sectors relative to one another between May 2022 and
-May 2025 with the changes the calibrated model predicts when AI use
-is scaled back to its May 2025 level. It does not test the average
-wage change, employment, or welfare, and the confidence sets are wide
-enough to allow sizable errors in the predicted changes. Appendix
-\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=93}{C.12} describes the construction and the checks
-on the inference.}%
+{\footnotesize\textit{Notes:}}{\footnotesize{}
+Panel (a) plots Census business AI use. The model task share is scaled
+from $14.2$ percent in July 2026 to $5.7$
+percent in May 2025. The scaling ratio, $0.087/0.217$,
+is approximate because the survey wording changed. The model compares
+the May 2025 equilibrium with near-zero AI use, which is assumed for
+May 2022. Panel (b) shows $61$ sectors.
+Nominal wage changes use fixed May 2022 occupation weights. Wage changes
+and exposure are demeaned across these sectors. The lines project
+observed and model-predicted wage changes on the same exposure instrument;
+the comparison concerns relative wage effects. In panel (c), the dashed
+line marks equal slopes, and the intervals are 95 percent Anderson--Rubin
+confidence sets. The comparison does not test the average wage change,
+employment, or welfare, and the confidence sets are wide enough to
+allow sizable errors in the predicted changes. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=93}{C.12}
+describes the construction and the checks on the inference.}%
 \end{minipage}
 \end{figure}
 

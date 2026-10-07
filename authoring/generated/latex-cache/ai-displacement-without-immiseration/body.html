@@ -98,9 +98,9 @@ exposure (<a href="#Xemmr2024">Eloundou et al.</a>, <a href="#Xemmr2024">2024<
 AI improvements each sector can absorb. Other sufficient statistics are
 consumption and input-output shares, the share of tasks performed by
 AI in each industry, and the allocation of workers across industries. We
-calibrate them to the BEA input-output accounts (<a href="#Xbea2026io">U.S. Bureau of Economic
-Analysis</a>, <a href="#Xbea2026io">2026</a>), a survey of US workers by Epoch AI and Ipsos (<a href="#Xepochpolling2026">Epoch
-AI</a>, <a href="#Xepochpolling2026">2026 <span class="ecti-1095">b</span></a>), and the American Community Survey (<a href="#Xcensus2024pums">U.S. Census Bureau</a>, <a href="#Xcensus2024pums">2024</a>),
+calibrate them to the BEA input-output accounts (<a href="#Xbea2026io">Bureau of Economic
+Analysis</a>, <a href="#Xbea2026io">2024</a>), a survey of US workers by Epoch AI and Ipsos (<a href="#Xepochpolling2026">Epoch
+AI</a>, <a href="#Xepochpolling2026">2026 <span class="ecti-1095">b</span></a>), and the American Community Survey (<a href="#Xcensus2024pums">US Census Bureau</a>, <a href="#Xcensus2024pums">2024</a>),
 respectively.
 </p><p class="indent">   We test the model against historical data, using the goodness-of-fit measure
 proposed by  <a href="#Xadao2025test">Adão, Costinot and Donaldson</a>  (<a href="#Xadao2025test">2025</a>). The yardstick is whether the
@@ -227,7 +227,7 @@ output.
 </p><p class="noindent"><span class="paragraphHead" id="ricardian-production-per-task"><a id="x1-5000"></a><span class="ecbx-1095">Ricardian production per task.</span></span>
    Production is linear within each task. One unit of labor produces <span class="mathjax-inline">\(z_{L}(i)&gt;0\)</span>  units of
 task <span class="mathjax-inline">\(i\)</span>, and one unit of AI produces <span class="mathjax-inline">\(z_{M,t}(i)&gt;0\)</span>  units of the same task. Let <span class="mathjax-inline">\(\ell _{t}(i)\)</span>  denote labor used
-on the task and let <span class="mathjax-inline">\(m_{t}(i)\)</span>  denote the AI inputs used for it. Then total output is </p><div class="mathjax-env mathjax-equation">\begin{equation}y_{t}(i)=z_{L}(i)\ell _{t}(i)+z_{M,t}(i)m_{t}(i),\qquad \int ^{1}_{0}\ell _{t}(i)\,\mathrm {d}i=L,\qquad \int ^{1}_{0}m_{t}(i)\,\mathrm {d}i=M_{t}.\label {eq:task-technology-main}\end{equation}</div><p><a id="x1-5001r2"></a> Under
+on the task and let <span class="mathjax-inline">\(m_{t}(i)\)</span>  denote the AI inputs used for it. Then total output is </p><div class="mathjax-env mathjax-equation">\begin{equation}\begin {aligned}y_{t}(i) &amp; =z_{L}(i)\ell _{t}(i)+z_{M,t}(i)m_{t}(i),\\ \int ^{1}_{0}\ell _{t}(i)\,\mathrm {d}i &amp; =L,\qquad \int ^{1}_{0}m_{t}(i)\,\mathrm {d}i=M_{t}. \end {aligned} \label {eq:task-technology-main}\end{equation}</div><p><a id="x1-5001r2"></a> Under
 perfect competition, the task is produced by the factor with the lower unit cost,
 yielding a competitive price </p><div class="mathjax-env mathjax-equation">\begin{equation}p_{t}(i)=\min \left \{ \frac {w_{t}}{z_{L}(i)},\frac {r_{t}}{z_{M,t}(i)}\right \}.\label {eq:task-price-main}\end{equation}</div><p><a id="x1-5002r3"></a> Thus, task <span class="mathjax-inline">\(i\)</span>  is assigned to workers if <span class="mathjax-inline">\(w_{t}/z_{L}(i)\leq r_{t}/z_{M,t}(i)\)</span>  and is assigned
 to AI otherwise.
@@ -295,7 +295,12 @@ between human and AI capabilities. Consequently, humans may retain more
                                                                      
 pockets of comparative advantage tasks, even as AI capabilities grow
 exponentially.
-</p><figure class="figure" id="x1-7001r1"><span id="jaggedness-of-the-ai-capability-frontier-is-regulated-by-"></span><figcaption class="caption"><span class="id">Figure 1: </span><span class="content">Jaggedness of the AI capability frontier is regulated by <span class="mathjax-inline">\(1/\psi\)</span></span></figcaption><img alt="PIC" src="../paper-assets/ai-displacement-without-immiseration/figures/frontier-jaggedness.png"/></figure><p class="noindent"><span class="paragraphHead" id="assignment-and-equilibrium"><a id="x1-8000"></a><span class="ecbx-1095">Assignment and equilibrium.</span></span>
+</p><figure class="figure" id="x1-7001r1"><span id="jaggedness-of-the-ai-capability-frontier-is-regulated-by-"></span><figcaption class="caption"><span class="id">Figure 1: </span><span class="content">Jaggedness of the AI capability frontier is regulated by <span class="mathjax-inline">\(1/\psi\)</span></span></figcaption><img alt="PIC" src="../paper-assets/ai-displacement-without-immiseration/jaggedness-figure/output/jaggedness.png"/><div class="minipage"><p class="noindent"><span class="ecti-0900">Notes: </span><span class="ecrm-0900">The circle is the human baseline, where a task costs the same whether humans
+or AI produce it. Each spike of the frontier is one task. Its distance from the center
+rises with the task’s human-to-AI cost ratio, so it reaches beyond the circle where
+AI is cheaper and dips inside where humans are cheaper. The curves below plot
+the distribution of the log human-to-AI cost ratio across tasks, whose spread is
+proportional to </span><span class="mathjax-inline">\(1/\psi\)</span><span class="ecrm-0900">. Teal marks AI’s blind spots, the tasks where humans are cheaper.</span></p></div></figure><p class="noindent"><span class="paragraphHead" id="assignment-and-equilibrium"><a id="x1-8000"></a><span class="ecbx-1095">Assignment and equilibrium.</span></span>
    Task assignment responds to technology and factor prices. Let <span class="mathjax-inline">\(\pi _{L,t}\)</span>  denote the
 fraction of tasks produced by workers and let <span class="mathjax-inline">\(\pi _{M,t}=1-\pi _{L,t}\)</span>  denote the fraction produced by
 AI. Applying the cutoff rule in (<a href="#x1-5002r3">3</a>) to the distribution in (<a href="#x1-6003r4">4</a>) yields </p><div class="mathjax-env mathjax-equation">\begin{equation}\pi _{L,t}=\frac {T_{L}w^{-\psi }_{t}}{T_{L}w^{-\psi }_{t}+T_{M,t}r^{-\psi }_{t}},\qquad \qquad \pi _{M,t}=\frac {T_{M,t}r^{-\psi }_{t}}{T_{L}w^{-\psi }_{t}+T_{M,t}r^{-\psi }_{t}}.\label {eq:assignment-prices}\end{equation}</div><p><a id="x1-8001r6"></a> The above
@@ -376,7 +381,7 @@ the set of tasks workers perform, of measure <span class="mathjax-inline">\(\pi 
 productivity on the tasks retained by workers. </p><div class="mathjax-block">\[\bar {z}_{L,t}\equiv \left [\int _{i\in \mathcal {H}_{t}}z_{L,t}(i)^{\sigma -1}\right ]^{\frac {1}{\sigma -1}}\]</div><p> Each task in <span class="mathjax-inline">\(\mathcal {H}_{t}\)</span>  costs <span class="mathjax-inline">\(w_{t}/z_{L}(i)\)</span>  and its
 demand is proportional to <span class="mathjax-inline">\(Y_{t}p_{t}(i)^{-\sigma }\)</span>, so summing revenue over <span class="mathjax-inline">\(\mathcal {H}_{t}\)</span>  gives labor’s income, <span class="mathjax-inline">\(w_{t}L=Y_{t}\,w^{1-\sigma }_{t}\,\pi _{L,t}\,\bar {z}^{\,\sigma -1}_{L,t}\)</span>.
 Writing in log differences, obtains the following expression for real wage
-growth: </p><div class="mathjax-env mathjax-equation">\begin{equation}\Delta \ln w_{t}\ \ =\underbrace {\ \frac {\sigma -1}{\sigma }\,\Delta \ln \bar {z}_{L,t}\ }_{\text{labor productivity on retained tasks}}-\ \underbrace {\ \frac {1}{\sigma }\Delta \ln (1/\pi _{L,t})\ }_{\text{dispalcement}}\ +\ \underbrace {\quad \frac {1}{\sigma }\Delta \ln (Y_{t}/L)\quad }_{\text{aggregate productivity}}.\label {eq:content-decomposition}\end{equation}</div><p><a id="x1-10001r14"></a> With worker knowledge frontier <span class="mathjax-inline">\(T_{L}\)</span>  fixed, (<a href="#x1-8005r10">10</a>) makes output per
+growth: </p><div class="mathjax-env mathjax-equation">\begin{equation}\Delta \ln w_{t}\ \ =\underbrace {\ \frac {\sigma -1}{\sigma }\,\Delta \ln \bar {z}_{L,t}\ }_{\text{labor productivity on retained tasks}}-\ \underbrace {\ \frac {1}{\sigma }\Delta \ln (1/\pi _{L,t})\ }_{\text{dispalcement}}\ +\ \underbrace {\frac {1}{\sigma }\Delta \ln (Y_{t}/L)}_{\text{aggregate productivity}}.\label {eq:content-decomposition}\end{equation}</div><p><a id="x1-10001r14"></a> With worker knowledge frontier <span class="mathjax-inline">\(T_{L}\)</span>  fixed, (<a href="#x1-8005r10">10</a>) makes output per
 worker proportional to <span class="mathjax-inline">\((1/\pi _{L,t})^{(1+\psi )/\psi }\)</span>. The realized labor productivity <span class="mathjax-inline">\(\bar {z}_{L,t}\)</span>  is, meanwhile,
 proportional to <span class="mathjax-inline">\((1/\pi _{L,t})^{1/\psi }\)</span>  because as workers sort into a narrower range of tasks, their
 productivity in these task would be greater than the displaced tasks.
@@ -689,7 +694,7 @@ labor in that sector: </p><div class="mathjax-block">\[\pi _{Ls,t}=\frac {T_{Ls}
 becomes frozen in their respective sectors in the limiting case where <span class="mathjax-inline">\(\kappa \downarrow 1\)</span>,
 representing what is considered a  <span class="ecti-1095">specific factors economy</span>. As before, <span class="mathjax-inline">\(\psi &gt;0\)</span> 
 governs comparative advantage between workers and AI within sectors. The
-real income of workers in group <span class="mathjax-inline">\(g\)</span>: </p><div class="mathjax-block">\[W_{g,t}=\Gamma \left (1-\frac {1}{\kappa _{g}}\right )Y_{t}\left [\sum _{s}a_{gs}\left (\frac {\beta _{s}\pi _{Ls,t}}{\ell _{s,t}}\right )^{\kappa _{g}}\right ]^{1/\kappa _{g}},\qquad \qquad Y_{t}=\prod _{s}\left [\Phi _{s}\ell _{s,t}\pi ^{-\frac {1+\psi }{\psi }}_{Ls,t}\right ]^{\beta _{s}}.\]</div><p> where <span class="mathjax-inline">\(\Phi _{k}\equiv T^{\frac {1}{\psi }}_{Lk}/\gamma _{k}\beta _{k}\)</span>  is a sector-level constant. AI
+real income of workers in group <span class="mathjax-inline">\(g\)</span>: </p><div class="mathjax-block">\[\begin {aligned}W_{g,t} &amp; =\Gamma \left (1-\frac {1}{\kappa _{g}}\right )Y_{t}\left [\sum _{s}a_{gs}\left (\frac {\beta _{s}\pi _{Ls,t}}{\ell _{s,t}}\right )^{\kappa _{g}}\right ]^{1/\kappa _{g}},\\ Y_{t} &amp; =\prod _{s}\left [\Phi _{s}\ell _{s,t}\pi ^{-\frac {1+\psi }{\psi }}_{Ls,t}\right ]^{\beta _{s}}. \end {aligned}\]</div><p> where <span class="mathjax-inline">\(\Phi _{k}\equiv T^{\frac {1}{\psi }}_{Lk}/\gamma _{k}\beta _{k}\)</span>  is a sector-level constant. AI
 capability grows according to <span class="mathjax-inline">\(T_{Ms,t}=T_{Ms,0}A^{\nu _{s}}_{t},\)</span>, with <span class="mathjax-inline">\(\nu _{s}\geq 0\)</span>  and positive average progress: <span class="mathjax-inline">\(\sum _{s}\beta _{s}\nu _{s}&gt;0\)</span>. An
 interesting special case emerges when labor is frozen to a given sector: <span class="mathjax-inline">\(\left.\hat {\ell }_{s}\right |_{\kappa \downarrow 1}=1\)</span>. In
 this case, the percent change in real wages from growing AI capabilities
@@ -865,11 +870,11 @@ paper. AI cost is the API charge for the tokens used in a successful attempt,
 scaled by a factor of 175 that stands for deployment costs beyond tokens
 (Appendix   <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=101">D.1</a>). Human cost is based on a professional assessment of the time
 needed to complete the same task, multiplied by one of three hourly wage rates:
-the BLS mean software developer wage, an effect BLS wage scaled up by a fixed
-multiplier 1.4 to cover benefits and overhead, and a freelance rate of 100 dollars
-per hour (<a href="#Xbls2024oews">U.S. Bureau of Labor Statistics</a>, <a href="#Xbls2024oews">2024</a>, <a href="#Xbls2023ecec">2023</a>; <a href="#Xupwork2026">Upwork</a>, <a href="#Xupwork2026">2026</a>). All
-costs are chained to July 2026 dollars using the CPI-U deflator (<a href="#Xbls2026cpi">U.S.
-Bureau of Labor Statistics</a>, <a href="#Xbls2026cpi">2026 <span class="ecti-1095">a</span></a>). Our baseline analysis constructs relative
+the BLS mean software developer wage, an effective BLS wage scaled up by a
+fixed multiplier 1.4 to cover benefits and overhead, and a freelance rate of 100
+dollars per hour (<a href="#Xbls2024oews">Bureau of Labor Statistics</a>, <a href="#Xbls2024oews">2023 <span class="ecti-1095">b</span></a>,<a href="#Xbls2023ecec"><span class="ecti-1095">a</span></a>; <a href="#Xupwork2026">Upwork</a>, <a href="#Xupwork2026">2026</a>).
+All costs are converted to July 2026 dollars using the CPI-U deflator
+(<a href="#Xbls2026cpi">Bureau of Labor Statistics</a>, <a href="#Xbls2026cpi">2026</a>). Our baseline analysis constructs relative
 cost ratios using effective labor wages, adjusted for overhead. Since the
 experts report a range of hours rather than a single number for human time
 requirements, we use the midpoint of that range and treat tasks marked as "more
@@ -1028,12 +1033,12 @@ sectors.<label class="margin-toggle sidenote-number" for="sn-fn29x0"></label><in
 
                                                                      
 The counterfactual equilibrium can be solved using these observable or estimable
-statistics by solving the system   <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=87">(C20)</a>– <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=89">(C29)</a>  in changes.
+statistics by solving the system   <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=88">(C20)</a>– <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=89">(C29)</a>  in changes.
 </p><p class="indent">   The consumption and input-output shares, <span class="mathjax-inline">\(\beta _{s}\)</span>, <span class="mathjax-inline">\(\Gamma _{ks}\)</span>, are calibrated to match the
-2024 BEA accounts on input-output and value added shares (<a href="#Xbea2026io">U.S. Bureau of
-Economic Analysis</a>, <a href="#Xbea2026io">2026</a>). the sample covers <span class="mathjax-inline">\(71\)</span>  industries, with details
+2024 BEA accounts on input-output and value added shares (<a href="#Xbea2026io">Bureau of
+Economic Analysis</a>, <a href="#Xbea2026io">2024</a>). the sample covers <span class="mathjax-inline">\(71\)</span>  industries, with details
 about data construction provided in Appendix   <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=75">C.2</a>. We calibrate the
-employment shares <span class="mathjax-inline">\(\mu _{gs}\)</span>  to the 2024 American Community Survey (<a href="#Xcensus2024pums">U.S. Census
+employment shares <span class="mathjax-inline">\(\mu _{gs}\)</span>  to the 2024 American Community Survey (<a href="#Xcensus2024pums">US Census
 Bureau</a>, <a href="#Xcensus2024pums">2024</a>). The sample includes employed adults aged 25–64 in private and
 government sectors, with the latter accounting for <span class="mathjax-inline">\(16.9\)</span>  percent of the wage bill. We
 group workers into (1) high school or less, (2) some college or an associate
@@ -1092,19 +1097,20 @@ absorb.<label class="margin-toggle sidenote-number" for="sn-fn33x0"></label><inp
 Appendix   <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=74">C</a>  details the construction of these measures, and Appendix   <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=93">C.11</a>  runs
 sensitivity analyses using the lower baseline exposure shares based on Microsoft’s
 record of AI use.
-</p><figure class="figure" id="x1-30011r5"><span id="sectoral-heterogeneity-in-cognitive-skill-intensity-and-ai-exposure"></span><figcaption class="caption"><span class="id">Figure 5: </span><span class="content">Sectoral heterogeneity in cognitive skill intensity and AI exposure</span></figcaption><img alt="PIC" src="../paper-assets/ai-displacement-without-immiseration/quantification/exhibits/sector_profiles/figure_sector_landscape.png"/><div class="minipage"><p class="noindent"><span class="ecti-0900">Notes: </span><span class="ecrm-0900">Each circle represents one sector. Panel A plots the physical intensity index
-against the cognitive skill intensity index on the horizontal axis. The dashed lines
-report the employment weighted mean for each axis. Panel B plots the current AI
-task share against the exposure measure used to discipline adoption of growing AI
-capabilities. The dashed lines represent the value added weighted mean for each axis.
-In each panel, circle size shows the sector’s value added share, and the colors report
-the share of its workers with a bachelor’s degree or more. The calculations are based
-on the 2024 BEA input–output accounts, the Epoch AI–Ipsos survey, Anthropic
-Economic Index task data, May 2025 BLS employment, the 2024 BLS employment
-projection and skill scores, O*NET 30.3, the 2024 American Community Survey,
-and occupation exposure ratings (</span><a href="#Xbea2026io"><span class="ecrm-0900">U.S. Bureau of Economic Analysis</span></a><span class="ecrm-0900">, </span><a href="#Xbea2026io"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xepochpolling2026"><span class="ecrm-0900">Epoch
-AI</span></a><span class="ecrm-0900">, </span><a href="#Xepochpolling2026"><span class="ecrm-0900">2026</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xbls2026oews"><span class="ecrm-0900">U.S. Bureau of Labor Statistics</span></a><span class="ecrm-0900">, </span><a href="#Xbls2026oews"><span class="ecrm-0900">2026</span> <span class="ecti-0900">c</span></a><span class="ecrm-0900">,</span><a href="#Xbls2026ep"><span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xonet2026"><span class="ecrm-0900">National Center for O*NET
-Development</span></a><span class="ecrm-0900">, </span><a href="#Xonet2026"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xcensus2024pums"><span class="ecrm-0900">U.S. Census Bureau</span></a><span class="ecrm-0900">, </span><a href="#Xcensus2024pums"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xemmr2024"><span class="ecrm-0900">Eloundou et al.</span></a><span class="ecrm-0900">, </span><a href="#Xemmr2024"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">).</span></p></div></figure><h4 class="subsectionHead" id="historical-validation-the-model-explains-labor-market-effects"><span class="titlemark">7.5   </span><a id="x1-310007.5"></a> Historical Validation: The Model Explains 2022-25 Labor Market
+</p><figure class="figure" id="x1-30011r5"><span id="sectoral-heterogeneity-in-cognitive-skill-intensity-and-ai-exposure"></span><figcaption class="caption"><span class="id">Figure 5: </span><span class="content">Sectoral heterogeneity in cognitive skill intensity and AI exposure</span></figcaption><img alt="PIC" src="../paper-assets/ai-displacement-without-immiseration/quantification/exhibits/sector_profiles/figure_sector_landscape.png"/><div class="minipage"><p class="noindent"><span class="ecti-0900">Notes:  </span><span class="ecrm-0900">Each  circle  represents  one  sector.  Panel  A  plots  the  physical  intensity
+index  against  the  cognitive  skill  intensity  index  on  the  horizontal  axis.  The
+dashed  lines  report  the  employment  weighted  mean  for  each  axis.  Panel  B
+plots the current AI task share against the exposure measure used to discipline
+adoption of growing AI capabilities. The dashed lines represent the value added
+weighted  mean  for  each  axis.  In  each  panel,  circle  size  shows  the  sector’s  value
+added  share,  and  the  colors  report  the  share  of  its  workers  with  a  bachelor’s
+degree  or  more.  The  calculations  are  based  on  the  2024  BEA  input–output
+accounts, the Epoch AI–Ipsos survey, Anthropic Economic Index task data, May
+2025  BLS  employment,  the  2025  BLS  employment  projection  and  skill  scores,
+O*NET  31.0,  the  2024  American  Community  Survey,  and  occupation  exposure
+ratings (</span><a href="#Xbea2026io"><span class="ecrm-0900">Bureau of Economic Analysis</span></a><span class="ecrm-0900">, </span><a href="#Xbea2026io"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xepochpolling2026"><span class="ecrm-0900">Epoch AI</span></a><span class="ecrm-0900">, </span><a href="#Xepochpolling2026"><span class="ecrm-0900">2026</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xbls2026oews"><span class="ecrm-0900">Bureau of Labor
+Statistics</span></a><span class="ecrm-0900">, </span><a href="#Xbls2026oews"><span class="ecrm-0900">2025</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">,</span><a href="#Xbls2026ep"><span class="ecti-0900">a</span></a><span class="ecrm-0900">; </span><a href="#Xonet2026"><span class="ecrm-0900">National  Center  for  O*NET  Development</span></a><span class="ecrm-0900">, </span><a href="#Xonet2026"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xcensus2024pums"><span class="ecrm-0900">US  Census
+Bureau</span></a><span class="ecrm-0900">, </span><a href="#Xcensus2024pums"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xemmr2024"><span class="ecrm-0900">Eloundou et al.</span></a><span class="ecrm-0900">, </span><a href="#Xemmr2024"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">).</span></p></div></figure><h4 class="subsectionHead" id="historical-validation-the-model-explains-labor-market-effects"><span class="titlemark">7.5   </span><a id="x1-310007.5"></a> Historical Validation: The Model Explains 2022-25 Labor Market
 Effects</h4><p class="noindent">Before deploying the estimated model for forward-looking counterfactual
 simulations, it is useful to test its explanatory power with respect to observed AI
 displacement effects. To this end, we perform a retrospective test of the model
@@ -1136,25 +1142,30 @@ Appendix   <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Onlin
 inference.
 </p><p class="indent">   Because we are analyzing a three years window, labor mobility is presumably
 less than implied by <span class="mathjax-inline">\(\kappa =1.5\)</span>, which estimated based on labor market response over a
-longer horizon. We therefore assess two cases: <span class="mathjax-inline">\(\kappa \downarrow 1\)</span>, in which workers are frozen
-in their original sectors, and <span class="mathjax-inline">\(\kappa =1.5\)</span>, following the preferred estimation value
-of  <a href="#Xgry2023">Galle, Rodríguez-Clare and Yi</a>  (<a href="#Xgry2023">2023</a>). Figure  <a href="#observed-wage-changes-are-consistent-with-the-model-predictions">6</a>  reports the results.
+longer horizon. We therefore assess two cases: <span class="mathjax-inline">\(\kappa \downarrow 1\)</span>, in which workers are frozen in
+their original sectors, and <span class="mathjax-inline">\(\kappa =1.5\)</span>, following the preferred estimation value of  <a href="#Xgry2023">Galle,
+Rodríguez-Clare and Yi</a>  (<a href="#Xgry2023">2023</a>). Figure  <a href="#observed-wage-changes-are-consistent-with-the-model-predictions">6</a>  reports the wage effects and the IV
                                                                      
 
                                                                      
-The goodness-of-fit statistic is <span class="mathjax-inline">\(\widehat {\beta }_{z}=1.7\times 10^{-4}\)</span>  under <span class="mathjax-inline">\(\kappa \downarrow 1\)</span>  and <span class="mathjax-inline">\(\widehat {\beta }_{z}=-8.6\times 10^{-5}\)</span>  with <span class="mathjax-inline">\(\kappa =1.5\)</span>. The null of a zero
+slope test. The goodness-of-fit statistic is <span class="mathjax-inline">\(\widehat {\beta }_{z}=1.7\times 10^{-4}\)</span>  under <span class="mathjax-inline">\(\kappa \downarrow 1\)</span>  and <span class="mathjax-inline">\(\widehat {\beta }_{z}=-8.6\times 10^{-5}\)</span>  with <span class="mathjax-inline">\(\kappa =1.5\)</span>. The null of a zero
 discrepancy is not rejected at the 5 percent confidence level, in both cases. The
 corresponding IV coefficient is <span class="mathjax-inline">\(\widehat {\beta }^{IV}=0.8\)</span>  when workers remain in their original
 sectors, with a 95 percent confidence set of <span class="mathjax-inline">\([0.43,1.21]\)</span>. With <span class="mathjax-inline">\(\kappa =1.5\)</span>, the IV coefficient
 is <span class="mathjax-inline">\(\widehat {\beta }^{IV}=1.15\)</span>, with a 95 percent confidence set of <span class="mathjax-inline">\([0.62,1.74]\)</span>. Both confidence sets contain
 one.
 </p><figure class="figure" id="x1-31001r6"><span id="observed-wage-changes-are-consistent-with-the-model-predictions"></span><figcaption class="caption"><span class="id">Figure 6: </span><span class="content">Observed 2022-25 Wage Changes Are Consistent with the Model
-Predictions                                                          </span></figcaption><img alt="PIC" src="../paper-assets/ai-displacement-without-immiseration/quantification/validation_acd/exhibits/figure_model_validation.png"/><div class="minipage"><p class="noindent"><span class="ecti-0900">Notes: </span><span class="ecrm-0900">The test compares wage changes across sectors relative to one another between
-May 2022 and May 2025 with the changes the calibrated model predicts when AI
-use is scaled back to its May 2025 level. It does not test the average wage change,
-employment, or welfare, and the confidence sets are wide enough to allow sizable
-errors in the predicted changes. Appendix  </span> <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=93"><span class="ecrm-0900">C.12</span></a> <span class="ecrm-0900">describes the construction and the
-checks on the inference.</span></p></div></figure><h3 class="sectionHead" id="forwardlooking-impacts-of-aidriven-growth"><span class="titlemark">8   </span><a id="x1-320008"></a>Forward-Looking Impacts of AI-Driven Growth</h3><p class="noindent">This section uses the calibrated model to simulate the prospective impacts of
+Predictions                                                          </span></figcaption><img alt="PIC" src="../paper-assets/ai-displacement-without-immiseration/quantification/validation_acd/exhibits/figure_model_validation.png"/><div class="minipage"><p class="noindent"><span class="ecti-0900">Notes: </span><span class="ecrm-0900">Panel (a) plots Census business AI use. The model task share is scaled from
+</span><span class="mathjax-inline">\(14.2\) </span> <span class="ecrm-0900">percent in July 2026 to </span><span class="mathjax-inline">\(5.7\) </span> <span class="ecrm-0900">percent in May 2025. The scaling ratio, </span><span class="mathjax-inline">\(0.087/0.217\)</span><span class="ecrm-0900">, is approximate
+because the survey wording changed. The model compares the May 2025 equilibrium
+with near-zero AI use, which is assumed for May 2022. Panel (b) shows </span><span class="mathjax-inline">\(61\) </span> <span class="ecrm-0900">sectors.
+Nominal  wage  changes  use  fixed  May  2022  occupation  weights.  Wage  changes
+and exposure are demeaned across these sectors. The lines project observed and
+model-predicted wage changes on the same exposure instrument; the comparison
+concerns relative wage effects. In panel (c), the dashed line marks equal slopes, and
+the intervals are 95 percent Anderson–Rubin confidence sets. The comparison does
+not test the average wage change, employment, or welfare, and the confidence sets
+are wide enough to allow sizable errors in the predicted changes. Appendix   </span> <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=93"><span class="ecrm-0900">C.12</span></a> <span class="ecrm-0900">describes the construction and the checks on the inference.</span></p></div></figure><h3 class="sectionHead" id="forwardlooking-impacts-of-aidriven-growth"><span class="titlemark">8   </span><a id="x1-320008"></a>Forward-Looking Impacts of AI-Driven Growth</h3><p class="noindent">This section uses the calibrated model to simulate the prospective impacts of
 AI-driven growth, assuming AI progress continues along its current trajectory.
 Our goal is to isolate the pure impact of AI-driven growth on the labor market
 through Ricardian comparative advantage. We therefore shut down all other
@@ -1232,18 +1243,18 @@ today.
 </p><figure class="figure" id="x1-34001r8"><span id="average-real-wages-rise-despite-the-sharp-drop-in-labors-share-of-gdp"></span><figcaption class="caption"><span class="id">Figure 8: </span><span class="content">Average Real Wages Rise Despite the Sharp Drop in Labor’s Share
 of GDP                                                              </span></figcaption><img alt="PIC" src="../paper-assets/ai-displacement-without-immiseration/quantification/exhibits/figure_aggregate_real_wage_labor_share.png"/><div class="minipage"><p class="noindent"><span class="ecti-0900">Notes:  </span><span class="ecrm-0900">Each  line  is  relative  to  its  value  today  and  equals  one  at  year  zero,  on
 a  log  scale.  The  darker  lines  use  the  estimated  jaggedness  of  the  AI  frontier,  </span><span class="mathjax-inline">\(\psi =1.36\)</span><span class="ecrm-0900">;
-the lighter lines repeat the simulation with a frontier five times less jagged, </span><span class="mathjax-inline">\(\psi =6.79\)</span><span class="ecrm-0900">, and
-everything else unchanged. Aggregate real wages are the mean of the three education
-groups’ real wages, weighted by baseline wage bills. The teal line is workers’ share
-of total value added. The figure reports it as a percentage of the share today. The
-numeraire is the model’s final expenditure bundle for the full set of industries. The
-simulation uses the central cost path in Figure </span> <a href="#the-cost-of-completing-the-same-ai-task-fell-by-about-percent-per-year"><span class="ecrm-0900">7</span></a><span class="ecrm-0900">, holds the stock of AI capacity
-fixed, and sets the change in each sector’s AI technology as in equation (</span><a href="#x1-33006r44"><span class="ecrm-0900">44</span></a><span class="ecrm-0900">). Our
-calculation uses the Epoch AI–Ipsos survey, O*NET, the BEA industry accounts,
-BLS employment, the 2024 American Community Survey, and occupation exposure
-ratings (</span><a href="#Xepochpolling2026"><span class="ecrm-0900">Epoch AI</span></a><span class="ecrm-0900">, </span><a href="#Xepochpolling2026"><span class="ecrm-0900">2026</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xonet2026"><span class="ecrm-0900">National Center for O*NET Development</span></a><span class="ecrm-0900">, </span><a href="#Xonet2026"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xbea2026io"><span class="ecrm-0900">U.S.
-Bureau of Economic Analysis</span></a><span class="ecrm-0900">, </span><a href="#Xbea2026io"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xbls2026oews"><span class="ecrm-0900">U.S. Bureau of Labor Statistics</span></a><span class="ecrm-0900">, </span><a href="#Xbls2026oews"><span class="ecrm-0900">2026</span> <span class="ecti-0900">c</span></a><span class="ecrm-0900">; </span><a href="#Xcensus2024pums"><span class="ecrm-0900">U.S.
-Census Bureau</span></a><span class="ecrm-0900">, </span><a href="#Xcensus2024pums"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xemmr2024"><span class="ecrm-0900">Eloundou et al.</span></a><span class="ecrm-0900">, </span><a href="#Xemmr2024"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">).</span></p></div></figure><p class="indent">   The more interesting explanation is derived from the Ricardian assignment
+the  lighter  lines  repeat  the  simulation  with  a  frontier  five  times  less  jagged,  </span><span class="mathjax-inline">\(\psi =6.79\)</span><span class="ecrm-0900">,
+and everything else unchanged. Aggregate real wages are the mean of the three
+education  groups’  real  wages,  weighted  by  baseline  wage  bills.  The  teal  line  is
+workers’ share of total value added. The figure reports it as a percentage of the
+share  today.  The  numeraire  is  the  model’s  final  expenditure  bundle  for  the  full
+set of industries. The simulation uses the central cost path in Figure </span> <a href="#the-cost-of-completing-the-same-ai-task-fell-by-about-percent-per-year"><span class="ecrm-0900">7</span></a><span class="ecrm-0900">, holds the
+stock  of  AI  capacity  fixed,  and  sets  the  change  in  each  sector’s  AI  technology
+as  in  equation (</span><a href="#x1-33006r44"><span class="ecrm-0900">44</span></a><span class="ecrm-0900">).  Our  calculation  uses  the  Epoch  AI–Ipsos  survey,  O*NET,
+the  BEA  industry  accounts,  BLS  employment,  the  2024  American  Community
+Survey, and occupation exposure ratings (</span><a href="#Xepochpolling2026"><span class="ecrm-0900">Epoch AI</span></a><span class="ecrm-0900">, </span><a href="#Xepochpolling2026"><span class="ecrm-0900">2026</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xonet2026"><span class="ecrm-0900">National Center for
+O*NET Development</span></a><span class="ecrm-0900">, </span><a href="#Xonet2026"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xbea2026io"><span class="ecrm-0900">Bureau of Economic Analysis</span></a><span class="ecrm-0900">, </span><a href="#Xbea2026io"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xbls2026oews"><span class="ecrm-0900">Bureau of Labor
+Statistics</span></a><span class="ecrm-0900">, </span><a href="#Xbls2026oews"><span class="ecrm-0900">2025</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xcensus2024pums"><span class="ecrm-0900">US Census Bureau</span></a><span class="ecrm-0900">, </span><a href="#Xcensus2024pums"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xemmr2024"><span class="ecrm-0900">Eloundou et al.</span></a><span class="ecrm-0900">, </span><a href="#Xemmr2024"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">).</span></p></div></figure><p class="indent">   The more interesting explanation is derived from the Ricardian assignment
 model. As labor gets displaced from 30% of the tasks two development
 follow. First, AI-performed tasks become more productive and their output
 becomes cheaper as a result. Labor sorts into more productive tasks, and the
@@ -1281,22 +1292,22 @@ faster, increasing the purchasing power of workers’ earnings, as in Theorem
 
                                                                      
 </p><figure class="figure" id="x1-35001r9"><span id="jagged-ai-adoption-lifts-average-real-wages-faster-but-has-stronger-distributional-effects"></span><figcaption class="caption"><span class="id">Figure 9: </span><span class="content">Jagged AI Adoption Lifts  <span class="ecti-1095">Average  </span> Real Wages Faster But has
-stronger Distributional Effects                                         </span></figcaption><img alt="PIC" src="../paper-assets/ai-displacement-without-immiseration/quantification/exhibits/figure_real_wage_growth.png"/><div class="minipage"><p class="noindent"><span class="ecti-0900">Notes: </span><span class="ecrm-0900">In panel A, each line is the annual growth rate of average real wages, the
-percentage change from the previous year. Aggregate real wages are the mean of
-the three education groups’ real wages, weighted by baseline wage bills, in units
-of the model’s final expenditure bundle for the full set of industries. The panel
-shows the gap between the two profiles, and the rule shows the five-year horizon
-of  the  main  results.  Panel  B,  plots  a  sector’s  change  in  real  wages  after  five
-year  against  the  sector’s  exposure  to  AI  progress  when  workers  remain  in  their
-original sectors. The area of each dot is proportional to the sector’s value added,
-and  the  dotted  line  marks  the  weighted  average  exposure  across  sectors.  Both
-the  jagged  and  balanced  scenarios  use  the  cost  reduction  path  in  Figure  </span> <a href="#the-cost-of-completing-the-same-ai-task-fell-by-about-percent-per-year"><span class="ecrm-0900">7</span></a> <span class="ecrm-0900">for  </span><span class="mathjax-inline">\(50\)
-</span> <span class="ecrm-0900">years, and set the change in each sector’s AI technology as in equation (</span><a href="#x1-33006r44"><span class="ecrm-0900">44</span></a><span class="ecrm-0900">). Our
-calculation uses the Epoch AI–Ipsos survey, O*NET, the BEA industry accounts,
-BLS employment, the 2024 American Community Survey, and occupation exposure
-ratings (</span><a href="#Xepochpolling2026"><span class="ecrm-0900">Epoch AI</span></a><span class="ecrm-0900">, </span><a href="#Xepochpolling2026"><span class="ecrm-0900">2026</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xonet2026"><span class="ecrm-0900">National Center for O*NET Development</span></a><span class="ecrm-0900">, </span><a href="#Xonet2026"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xbea2026io"><span class="ecrm-0900">U.S.
-Bureau of Economic Analysis</span></a><span class="ecrm-0900">, </span><a href="#Xbea2026io"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xbls2026oews"><span class="ecrm-0900">U.S. Bureau of Labor Statistics</span></a><span class="ecrm-0900">, </span><a href="#Xbls2026oews"><span class="ecrm-0900">2026</span> <span class="ecti-0900">c</span></a><span class="ecrm-0900">; </span><a href="#Xcensus2024pums"><span class="ecrm-0900">U.S.
-Census Bureau</span></a><span class="ecrm-0900">, </span><a href="#Xcensus2024pums"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xemmr2024"><span class="ecrm-0900">Eloundou et al.</span></a><span class="ecrm-0900">, </span><a href="#Xemmr2024"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">).</span></p></div></figure><h4 class="subsectionHead" id="all-skill-groups-gain-irrespective-of-mobility"><span class="titlemark">8.4   </span><a id="x1-360008.4"></a>All Skill Groups Gain Irrespective of Mobility</h4><p class="noindent">A notable result from our Ricardian theory is that all workers can gain from
+stronger Distributional Effects                                         </span></figcaption><img alt="PIC" src="../paper-assets/ai-displacement-without-immiseration/quantification/exhibits/figure_real_wage_growth.png"/><div class="minipage"><p class="noindent"><span class="ecti-0900">Notes:  </span><span class="ecrm-0900">In  panel  A,  each  line  is  the  annual  growth  rate  of  average  real  wages,
+the  percentage  change  from  the  previous  year.  Aggregate  real  wages  are  the
+mean of the three education groups’ real wages, weighted by baseline wage bills,
+in  units  of  the  model’s  final  expenditure  bundle  for  the  full  set  of  industries.
+The  panel  shows  the  gap  between  the  two  profiles,  and  the  rule  shows  the
+five-year  horizon  of  the  main  results.  Panel  B,  plots  a  sector’s  change  in  real
+wages after five year against the sector’s exposure to AI progress when workers
+remain  in  their  original  sectors.  The  area  of  each  dot  is  proportional  to  the
+sector’s  value  added,  and  the  dotted  line  marks  the  weighted  average  exposure
+across  sectors.  Both  the  jagged  and  balanced  scenarios  use  the  cost  reduction
+path  in  Figure  </span> <a href="#the-cost-of-completing-the-same-ai-task-fell-by-about-percent-per-year"><span class="ecrm-0900">7</span></a> <span class="ecrm-0900">for  </span><span class="mathjax-inline">\(50\)  </span> <span class="ecrm-0900">years,  and  set  the  change  in  each  sector’s  AI  technology
+as  in  equation  (</span><a href="#x1-33006r44"><span class="ecrm-0900">44</span></a><span class="ecrm-0900">).  Our  calculation  uses  the  Epoch  AI–Ipsos  survey,  O*NET,
+the  BEA  industry  accounts,  BLS  employment,  the  2024  American  Community
+Survey, and occupation exposure ratings (</span><a href="#Xepochpolling2026"><span class="ecrm-0900">Epoch AI</span></a><span class="ecrm-0900">, </span><a href="#Xepochpolling2026"><span class="ecrm-0900">2026</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xonet2026"><span class="ecrm-0900">National Center for
+O*NET Development</span></a><span class="ecrm-0900">, </span><a href="#Xonet2026"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xbea2026io"><span class="ecrm-0900">Bureau of Economic Analysis</span></a><span class="ecrm-0900">, </span><a href="#Xbea2026io"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xbls2026oews"><span class="ecrm-0900">Bureau of Labor
+Statistics</span></a><span class="ecrm-0900">, </span><a href="#Xbls2026oews"><span class="ecrm-0900">2025</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xcensus2024pums"><span class="ecrm-0900">US Census Bureau</span></a><span class="ecrm-0900">, </span><a href="#Xcensus2024pums"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xemmr2024"><span class="ecrm-0900">Eloundou et al.</span></a><span class="ecrm-0900">, </span><a href="#Xemmr2024"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">).</span></p></div></figure><h4 class="subsectionHead" id="all-skill-groups-gain-irrespective-of-mobility"><span class="titlemark">8.4   </span><a id="x1-360008.4"></a>All Skill Groups Gain Irrespective of Mobility</h4><p class="noindent">A notable result from our Ricardian theory is that all workers can gain from
 AI-driven growth, irrespective of which sector they work in, even if they cannot
 switch sectors. The prerequisite for this to happen is that AI adoption not be too
 jagged and the agentic AI and labor profiles be sufficiently different across
@@ -1328,8 +1339,8 @@ shares, and sector prices adjust in general equilibrium. Each panel holds the st
 of  AI  capacity  fixed.  Our  calculation  uses  the  Epoch  AI–Ipsos  survey,  O*NET,
 the  BEA  industry  accounts,  BLS  employment,  the  2024  American  Community
 Survey, and occupation exposure ratings (</span><a href="#Xepochpolling2026"><span class="ecrm-0900">Epoch AI</span></a><span class="ecrm-0900">, </span><a href="#Xepochpolling2026"><span class="ecrm-0900">2026</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xonet2026"><span class="ecrm-0900">National Center for
-O*NET Development</span></a><span class="ecrm-0900">, </span><a href="#Xonet2026"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xbea2026io"><span class="ecrm-0900">U.S. Bureau of Economic Analysis</span></a><span class="ecrm-0900">, </span><a href="#Xbea2026io"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xbls2026oews"><span class="ecrm-0900">U.S. Bureau
-of Labor Statistics</span></a><span class="ecrm-0900">, </span><a href="#Xbls2026oews"><span class="ecrm-0900">2026</span> <span class="ecti-0900">c</span></a><span class="ecrm-0900">; </span><a href="#Xcensus2024pums"><span class="ecrm-0900">U.S. Census Bureau</span></a><span class="ecrm-0900">, </span><a href="#Xcensus2024pums"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xemmr2024"><span class="ecrm-0900">Eloundou et al.</span></a><span class="ecrm-0900">, </span><a href="#Xemmr2024"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">).</span></div></figure><p class="indent">   The reason workers gain despite not being able to switch sectors reflects how
+O*NET Development</span></a><span class="ecrm-0900">, </span><a href="#Xonet2026"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xbea2026io"><span class="ecrm-0900">Bureau of Economic Analysis</span></a><span class="ecrm-0900">, </span><a href="#Xbea2026io"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xbls2026oews"><span class="ecrm-0900">Bureau of Labor
+Statistics</span></a><span class="ecrm-0900">, </span><a href="#Xbls2026oews"><span class="ecrm-0900">2025</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xcensus2024pums"><span class="ecrm-0900">US Census Bureau</span></a><span class="ecrm-0900">, </span><a href="#Xcensus2024pums"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xemmr2024"><span class="ecrm-0900">Eloundou et al.</span></a><span class="ecrm-0900">, </span><a href="#Xemmr2024"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">).</span></div></figure><p class="indent">   The reason workers gain despite not being able to switch sectors reflects how
 AI displacement works. Unlike trade-driven displacement, AI-driven displacement
 generally does not consume the entire task spectrum within a sector. Instead, it
 leaves some niche tasks to workers. So, rather than having to switch sectors to
@@ -1368,19 +1379,20 @@ Above this threshold we begin witnessing the Jevons paradox. Real wages go up
 the most for workers with Bachelor’s degrees or higher who are the most exposed
 to AI-driven displacement. However, as one may no
 </p><figure class="figure" id="x1-37003r11"><span id="workers-in-aiexposed-sectors-gain-the-most-only-when-demand-across-sectors-is-highly-elastic"></span><figcaption class="caption"><span class="id">Figure 11:  </span><span class="content">Workers  in  AI-Exposed  Sectors  Gain  the  Most  Only  When
-Demand Across Sectors Is Highly Elastic                               </span></figcaption><img alt="PIC" src="../paper-assets/ai-displacement-without-immiseration/jevons_tmp/prototype_jevons_figure_all_uses_paper.png"/><div class="minipage"><span class="ecti-0900">Notes: </span><span class="ecrm-0900">Five-year real wage gains by education group under jagged AI adoption, on
-the central cost path, with the stock of AI capacity held fixed and workers who move
-across sectors at the calibrated </span><span class="mathjax-inline">\(\kappa =1.5\)</span><span class="ecrm-0900">, calculated in the calibrated model of Section </span> <a href="#forwardlooking-impacts-of-aidriven-growth"><span class="ecrm-0900">8</span></a> <span class="ecrm-0900">with
-input–output linkages and fixed sector-specific capital; the same </span><span class="mathjax-inline">\(\eta\) </span> <span class="ecrm-0900">governs every use of
-a sector’s output, final and intermediate. The figure reports the gains for five values
-of the elasticity of substitution across sector outputs </span><span class="mathjax-inline">\(\eta\) </span> <span class="ecrm-0900">of Appendix  </span> <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=60"><span class="ecrm-0900">B.10</span></a><span class="ecrm-0900">, equation </span> <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=61"><span class="ecrm-0900">(B206)</span></a><span class="ecrm-0900">, with </span><span class="mathjax-inline">\(\eta =1\) </span> <span class="ecrm-0900">the paper’s Cobb–Douglas baseline. At </span><span class="mathjax-inline">\(\eta \approx 2.5\)</span><span class="ecrm-0900">, workers with a bachelor’s
-degree or more and workers with high school or less gain the same </span><span class="mathjax-inline">\(28.9\) </span> <span class="ecrm-0900">percent. If the
-same elasticity holds only for final demand, the two groups gain the same at </span><span class="mathjax-inline">\(\eta \approx 3.9\)</span><span class="ecrm-0900">. Our
-calculation uses the Epoch AI–Ipsos survey, O*NET, the BEA industry accounts,
-BLS employment, the 2024 American Community Survey, and occupation exposure
-ratings (</span><a href="#Xepochpolling2026"><span class="ecrm-0900">Epoch AI</span></a><span class="ecrm-0900">, </span><a href="#Xepochpolling2026"><span class="ecrm-0900">2026</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xonet2026"><span class="ecrm-0900">National Center for O*NET Development</span></a><span class="ecrm-0900">, </span><a href="#Xonet2026"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xbea2026io"><span class="ecrm-0900">U.S.
-Bureau of Economic Analysis</span></a><span class="ecrm-0900">, </span><a href="#Xbea2026io"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xbls2026oews"><span class="ecrm-0900">U.S. Bureau of Labor Statistics</span></a><span class="ecrm-0900">, </span><a href="#Xbls2026oews"><span class="ecrm-0900">2026</span> <span class="ecti-0900">c</span></a><span class="ecrm-0900">; </span><a href="#Xcensus2024pums"><span class="ecrm-0900">U.S.
-Census Bureau</span></a><span class="ecrm-0900">, </span><a href="#Xcensus2024pums"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xemmr2024"><span class="ecrm-0900">Eloundou et al.</span></a><span class="ecrm-0900">, </span><a href="#Xemmr2024"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">).</span></div></figure><h3 class="sectionHead" id="conclusion"><span class="titlemark">9   </span><a id="x1-380009"></a>Conclusion</h3><p class="noindent">This paper offers a pro-labor view of explosive AI-driven growth. The
+Demand Across Sectors Is Highly Elastic                               </span></figcaption><img alt="PIC" src="../paper-assets/ai-displacement-without-immiseration/jevons_tmp/prototype_jevons_figure_all_uses_paper.png"/><div class="minipage"><span class="ecti-0900">Notes:  </span><span class="ecrm-0900">Five-year real wage gains by education group under jagged AI adoption,
+on  the  central  cost  path,  with  the  stock  of  AI  capacity  held  fixed  and  workers
+who move across sectors at the calibrated </span><span class="mathjax-inline">\(\kappa =1.5\)</span><span class="ecrm-0900">, calculated in the calibrated model of
+Section </span> <a href="#forwardlooking-impacts-of-aidriven-growth"><span class="ecrm-0900">8</span></a> <span class="ecrm-0900">with input–output linkages and fixed sector-specific capital; the same </span><span class="mathjax-inline">\(\eta\)
+</span> <span class="ecrm-0900">governs every use of a sector’s output, final and intermediate. The figure reports
+the gains for five values of the elasticity of substitution across sector outputs </span><span class="mathjax-inline">\(\eta\) </span> <span class="ecrm-0900">of
+Appendix  </span> <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=60"><span class="ecrm-0900">B.10</span></a><span class="ecrm-0900">, equation  </span> <a href="https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf#page=61"><span class="ecrm-0900">(B206)</span></a><span class="ecrm-0900">, with </span><span class="mathjax-inline">\(\eta =1\) </span> <span class="ecrm-0900">the paper’s Cobb–Douglas baseline. At
+</span><span class="mathjax-inline">\(\eta \approx 2.5\)</span><span class="ecrm-0900">, workers with a bachelor’s degree or more and workers with high school or less
+gain the same </span><span class="mathjax-inline">\(28.9\) </span> <span class="ecrm-0900">percent. If the same elasticity holds only for final demand, the two
+groups gain the same at </span><span class="mathjax-inline">\(\eta \approx 3.9\)</span><span class="ecrm-0900">. Our calculation uses the Epoch AI–Ipsos survey, O*NET,
+the  BEA  industry  accounts,  BLS  employment,  the  2024  American  Community
+Survey, and occupation exposure ratings (</span><a href="#Xepochpolling2026"><span class="ecrm-0900">Epoch AI</span></a><span class="ecrm-0900">, </span><a href="#Xepochpolling2026"><span class="ecrm-0900">2026</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xonet2026"><span class="ecrm-0900">National Center for
+O*NET Development</span></a><span class="ecrm-0900">, </span><a href="#Xonet2026"><span class="ecrm-0900">2026</span></a><span class="ecrm-0900">; </span><a href="#Xbea2026io"><span class="ecrm-0900">Bureau of Economic Analysis</span></a><span class="ecrm-0900">, </span><a href="#Xbea2026io"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xbls2026oews"><span class="ecrm-0900">Bureau of Labor
+Statistics</span></a><span class="ecrm-0900">, </span><a href="#Xbls2026oews"><span class="ecrm-0900">2025</span> <span class="ecti-0900">b</span></a><span class="ecrm-0900">; </span><a href="#Xcensus2024pums"><span class="ecrm-0900">US Census Bureau</span></a><span class="ecrm-0900">, </span><a href="#Xcensus2024pums"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">; </span><a href="#Xemmr2024"><span class="ecrm-0900">Eloundou et al.</span></a><span class="ecrm-0900">, </span><a href="#Xemmr2024"><span class="ecrm-0900">2024</span></a><span class="ecrm-0900">).</span></div></figure><h3 class="sectionHead" id="conclusion"><span class="titlemark">9   </span><a id="x1-380009"></a>Conclusion</h3><p class="noindent">This paper offers a pro-labor view of explosive AI-driven growth. The
 view draws on Ricardo’s theory of comparative advantage. An interesting
 implication of the theory is that AI displacement coincides with real wage gains
 at the aggregate level as long as humans and agentic AI have different
@@ -1502,7 +1514,32 @@ of AI capabilities outside software engineering, are left for future work.
   </p><p class="bibitem"><span class="biblabel"><a id="Xbaumol1967"></a><span class="bibsp"></span></span><span class="ecbx-1095">Baumol,                           William J.                        </span>1967.
   “Macroeconomics of Unbalanced Growth: The Anatomy of Urban Crisis.”
    <span class="ecti-1095">American Economic Review</span>, 57(3): 415–426.
+  </p><p class="bibitem"><span class="biblabel"><a id="Xbea2026io"></a><span class="bibsp"></span></span><span class="ecbx-1095">Bureau               of               Economic               Analysis.</span>
+  2024. <span class="ecti-1095">Input-Output Accounts Data. </span>Washington, DC: US Department of
+  Commerce.   <a class="url" href="https://www.bea.gov/industry/input-output-accounts-data">https://www.bea.gov/industry/input-output-accounts-data</a> 
+  (accessed July 7, 2026).
+  </p><p class="bibitem"><span class="biblabel"><a id="Xbls2023ecec"></a><span class="bibsp"></span></span><span class="ecbx-1095">Bureau of Labor Statistics. </span>2023 <span class="ecti-1095">a</span>. “Employer Costs for Employee
+  Compensation—March  2023.”  US  Department  of  Labor  News  Release
+  USDL-23-1305.
+  </p><p class="bibitem"><span class="biblabel"><a id="Xbls2024oews"></a><span class="bibsp"></span></span><span class="ecbx-1095">Bureau of Labor Statistics. </span>2023 <span class="ecti-1095">b</span>. <span class="ecti-1095">Occupational Employment and
+  Wage Statistics, May 2023. </span>Washington, DC: US Department of Labor.
+  <a class="url" href="https://www.bls.gov/oes/2023/may/oes151252.htm">https://www.bls.gov/oes/2023/may/oes151252.htm</a>  (accessed August 13,
+  2026).
+  </p><p class="bibitem"><span class="biblabel"><a id="Xbls2026ep"></a><span class="bibsp"></span></span><span class="ecbx-1095">Bureau of Labor Statistics. </span>2025 <span class="ecti-1095">a</span>. <span class="ecti-1095">Employment Projections, 2025–35:
+  Industry-Occupation  Matrix  and  Skills  Data.  </span>Washington,  DC:  US
+  Department of Labor. <a class="url" href="https://www.bls.gov/emp/">https://www.bls.gov/emp/</a> (accessed September 6,
+  2026).
+  </p><p class="bibitem"><span class="biblabel"><a id="Xbls2026oews"></a><span class="bibsp"></span></span><span class="ecbx-1095">Bureau of Labor Statistics. </span>2025 <span class="ecti-1095">b</span>. <span class="ecti-1095">Occupational Employment and
+  Wage Statistics, May 2025. </span>Washington, DC: US Department of Labor.
+  <a class="url" href="https://www.bls.gov/oes/tables.htm">https://www.bls.gov/oes/tables.htm</a>  (accessed August 15, 2026).
+  </p><p class="bibitem"><span class="biblabel"><a id="Xbls2026cpi"></a><span class="bibsp"></span></span><span class="ecbx-1095">Bureau  of  Labor  Statistics.  </span>2026.  <span class="ecti-1095">Consumer  Price  Index  for
+  All  Urban  Consumers  (CPI-U).  </span>Washington,  DC:  US  Department  of
+  Labor. <a class="url" href="https://data.bls.gov/timeseries/CUUR0000SA0">https://data.bls.gov/timeseries/CUUR0000SA0</a>  (accessed August
+  13, 2026).
   </p><p class="bibitem"><span class="biblabel"><a id="Xcp2015"></a><span class="bibsp"></span></span><span class="ecbx-1095">Caliendo, Lorenzo, and Fernando Parro. </span>2015. “Estimates of the
+                                                                     
+
+                                                                     
   Trade  and  Welfare  Effects  of  NAFTA.”   <span class="ecti-1095">Review  of  Economic  Studies</span>,
   82(1): 1–44.
   </p><p class="bibitem"><span class="biblabel"><a id="Xcdp2019"></a><span class="bibsp"></span></span><span class="ecbx-1095">Caliendo, Lorenzo, Maximiliano Dvorkin, and Fernando Parro.</span>
@@ -1525,16 +1562,13 @@ of AI capabilities outside software engineering, are left for future work.
   45(4–6): 742–755.
   </p><p class="bibitem"><span class="biblabel"><a id="Xek2002"></a><span class="bibsp"></span></span><span class="ecbx-1095">Eaton,   Jonathan,   and   Samuel   Kortum.  </span>2002.   “Technology,
   Geography, and Trade.”  <span class="ecti-1095">Econometrica</span>, 70(5): 1741–1779.
-                                                                     
-
-                                                                     
   </p><p class="bibitem"><span class="biblabel"><a id="Xemmr2024"></a><span class="bibsp"></span></span><span class="ecbx-1095">Eloundou, Tyna, Sam Manning, Pamela Mishkin, and Daniel
   Rock. </span>2024. “GPTs Are GPTs: Labor Market Impact Potential of LLMs.”
    <span class="ecti-1095">Science</span>, 384(6702): 1306–1308.
-  </p><p class="bibitem"><span class="biblabel"><a id="Xepoch2026"></a><span class="bibsp"></span></span><span class="ecbx-1095">Epoch AI. </span>2026 <span class="ecti-1095">a</span>. “AI Benchmarking Hub.” July 2026. Accessed August
-  13, 2026. <a class="url" href="https://epoch.ai/benchmarks/use-this-data">https://epoch.ai/benchmarks/use-this-data</a>.
-  </p><p class="bibitem"><span class="biblabel"><a id="Xepochpolling2026"></a><span class="bibsp"></span></span><span class="ecbx-1095">Epoch AI. </span>2026 <span class="ecti-1095">b</span>. “Polling on AI Usage (July 2026).” Accessed August
-  15, 2026. <a class="url" href="https://epoch.ai/data/polling">https://epoch.ai/data/polling</a>.
+  </p><p class="bibitem"><span class="biblabel"><a id="Xepoch2026"></a><span class="bibsp"></span></span><span class="ecbx-1095">Epoch    AI.    </span>2026 <span class="ecti-1095">a</span>.    <span class="ecti-1095">AI    Benchmarking    Hub.    </span>Epoch    AI.
+  <a class="url" href="https://epoch.ai/benchmarks">https://epoch.ai/benchmarks</a>  (accessed August 13, 2026).
+  </p><p class="bibitem"><span class="biblabel"><a id="Xepochpolling2026"></a><span class="bibsp"></span></span><span class="ecbx-1095">Epoch  AI.  </span>2026 <span class="ecti-1095">b</span>.  <span class="ecti-1095">Polling  on  AI  Usage  (July  2026).  </span>Epoch  AI.
+  <a class="url" href="https://epoch.ai/data/polling">https://epoch.ai/data/polling</a>  (accessed August 15, 2026).
   </p><p class="bibitem"><span class="biblabel"><a id="Xfm2026"></a><span class="bibsp"></span></span><span class="ecbx-1095">Freund, Lukas B., and Lukas F. Mann. </span>2026. “Job Transformation,
   Specialization, and the Labor Market Effects of AI.” Federal Reserve Bank
   of Minneapolis Opportunity &amp; Inclusive Growth Institute Working Paper
@@ -1549,9 +1583,6 @@ of AI capabilities outside software engineering, are left for future work.
   </p><p class="bibitem"><span class="biblabel"><a id="Xho2022"></a><span class="bibsp"></span></span><span class="ecbx-1095">Hémous,  David,  and  Morten  Olsen.  </span>2022.  “The  Rise  of  the
   Machines: Automation, Horizontal Innovation, and Income Inequality.”
    <span class="ecti-1095">American Economic Journal: Macroeconomics</span>, 14(1): 179–223.
-                                                                     
-
-                                                                     
   </p><p class="bibitem"><span class="biblabel"><a id="Xhicks1932"></a><span class="bibsp"></span></span><span class="ecbx-1095">Hicks, John R. </span>1932. <span class="ecti-1095">The Theory of Wages. </span>London: Macmillan.
   </p><p class="bibitem"><span class="biblabel"><a id="Xjevons1865"></a><span class="bibsp"></span></span><span class="ecbx-1095">Jevons,   William Stanley.  </span>1865.   <span class="ecti-1095">The   Coal   Question.   </span>London:
   Macmillan.
@@ -1572,6 +1603,9 @@ of AI capabilities outside software engineering, are left for future work.
   </p><p class="bibitem"><span class="biblabel"><a id="Xkortum1997"></a><span class="bibsp"></span></span><span class="ecbx-1095">Kortum,  Samuel S. </span>1997.  “Research,  Patenting,  and  Technological
   Change.”  <span class="ecti-1095">Econometrica</span>, 65(6): 1389–1419.
   </p><p class="bibitem"><span class="biblabel"><a id="Xllqt2026"></a><span class="bibsp"></span></span><span class="ecbx-1095">Lashkari, Danial, Wensu Li, Christina Qiu, and Neil Thompson.</span>
+                                                                     
+
+                                                                     
   2026. “AI, Scale, and Task-Based Theories of Automation.” Working paper,
   July 2026. Federal Reserve Bank of New York and MIT FutureTech.
   </p><p class="bibitem"><span class="biblabel"><a id="Xlorv2026"></a><span class="bibsp"></span></span><span class="ecbx-1095">Lindenlaub, Ilse, Ryungha Oh, María Alejandra Rodríguez,
@@ -1592,12 +1626,13 @@ of AI capabilities outside software engineering, are left for future work.
   </p><p class="bibitem"><span class="biblabel"><a id="Xmr2022"></a><span class="bibsp"></span></span><span class="ecbx-1095">Mookherjee, Dilip, and Debraj Ray. </span>2022. “Growth, Automation
   and  the  Long-Run  Share  of  Labor.”   <span class="ecti-1095">Review  of  Economic  Dynamics</span>,
   46: 1–26.
-  </p><p class="bibitem"><span class="biblabel"><a id="Xonet2026"></a><span class="bibsp"></span></span><span class="ecbx-1095">National                                                              Center
+  </p><p class="bibitem"><span class="biblabel"><a id="Xonet2026"></a><span class="bibsp"></span></span><span class="ecbx-1095">National  Center  for  O*NET  Development. </span>2026.  <span class="ecti-1095">O*NET  31.0
+  Database.  </span>Washington,  DC:  US  Department  of  Labor,  Employment
+  and Training Administration. <a class="url" href="https://www.onetcenter.org/database.html">https://www.onetcenter.org/database.html</a> 
+  (accessed September 6, 2026).
                                                                      
 
                                                                      
-  for O*NET Development. </span>2026. “O*NET 31.0 Database.”  Accessed
-  September 6, 2026. <a class="url" href="https://www.onetcenter.org/database.html">https://www.onetcenter.org/database.html</a>.
   </p><p class="bibitem"><span class="biblabel"><a id="Xnordhaus2021"></a><span class="bibsp"></span></span><span class="ecbx-1095">Nordhaus,  William D. </span>2021.  “Are  We  Approaching  an  Economic
   Singularity?  Information  Technology  and  the  Future  of  Economic
   Growth.”  <span class="ecti-1095">American Economic Journal: Macroeconomics</span>, 13(1): 299–332.
@@ -1616,38 +1651,17 @@ of AI capabilities outside software engineering, are left for future work.
   </p><p class="bibitem"><span class="biblabel"><a id="Xtk2023"></a><span class="bibsp"></span></span><span class="ecbx-1095">Trammell, Philip, and Anton Korinek. </span>2023. “Economic Growth
   under  Transformative  AI.”   National  Bureau  of  Economic  Research
   Working Paper 31815.
-  </p><p class="bibitem"><span class="biblabel"><a id="Xupwork2026"></a><span class="bibsp"></span></span><span class="ecbx-1095">Upwork. </span>2026. “Software Developer Hourly Rates.” Accessed August 13,
-  2026. <a class="url" href="https://www.upwork.com/hire/software-developers/cost/">https://www.upwork.com/hire/software-developers/cost/</a>.
+  </p><p class="bibitem"><span class="biblabel"><a id="Xupwork2026"></a><span class="bibsp"></span></span><span class="ecbx-1095">Upwork.              </span>2026.                 “Software                 Developer
+  Hourly Rates.”  <a class="url" href="https://www.upwork.com/hire/software-developers/cost/">https://www.upwork.com/hire/software-developers/cost/</a>
+  (accessed August 13, 2026).
                                                                      
 
                                                                      
-  </p><p class="bibitem"><span class="biblabel"><a id="Xbea2026io"></a><span class="bibsp"></span></span><span class="ecbx-1095">U.S. Bureau of Economic Analysis. </span>2026. “Input-Output Accounts
-  Data:  Supply-Use  and  Make-Use  Tables.”   Accessed  July  7,  2026.
-  <a class="url" href="https://www.bea.gov/industry/input-output-accounts-data">https://www.bea.gov/industry/input-output-accounts-data</a>.
-  </p><p class="bibitem"><span class="biblabel"><a id="Xbls2023ecec"></a><span class="bibsp"></span></span><span class="ecbx-1095">U.S.                   Bureau                   of                   Labor
-  Statistics. </span>2023. “Employer Costs for Employee Compensation—March
-  2023.” Employer Costs for Employee Compensation news release, June 16,
-  2023. <a class="url" href="https://www.bls.gov/news.release/archives/ecec_06162023.htm">https://www.bls.gov/news.release/archives/ecec_06162023.htm</a>.
-  </p><p class="bibitem"><span class="biblabel"><a id="Xbls2024oews"></a><span class="bibsp"></span></span><span class="ecbx-1095">U.S. Bureau of Labor Statistics. </span>2024. “Occupational Employment
-  and  Wages,  May  2023:  Software  Developers  (15-1252).”  Occupational
-  Employment   and   Wage   Statistics.   Last   modified   April   3,   2024.
-  <a class="url" href="https://www.bls.gov/oes/2023/may/oes151252.htm">https://www.bls.gov/oes/2023/may/oes151252.htm</a>.
-  </p><p class="bibitem"><span class="biblabel"><a id="Xbls2026cpi"></a><span class="bibsp"></span></span><span class="ecbx-1095">U.S.    Bureau    of    Labor    Statistics.    </span>2026 <span class="ecti-1095">a</span>.    “Consumer
-  Price    Index    for    All    Urban    Consumers:    All    Items    in    U.S.
-  City     Average,     Not     Seasonally     Adjusted     (CUUR0000SA0).”
-  BLS     Public     Data     API.     Accessed     August     13,     2026.
-  <a class="url" href="https://api.bls.gov/publicAPI/v2/timeseries/data/CUUR0000SA0?startyear=2023&amp;endyear=2026">https://api.bls.gov/publicAPI/v2/timeseries/data/CUUR0000SA0?startyear=2023&amp;endyear=2026</a>.
-  </p><p class="bibitem"><span class="biblabel"><a id="Xbls2026ep"></a><span class="bibsp"></span></span><span class="ecbx-1095">U.S.        Bureau        of        Labor        Statistics.       </span>2026 <span class="ecti-1095">b</span>.
-  “Industry–Occupation       Matrix       Data,       2025.”       Employment
-  Projections.           Accessed           September           6,            2026.
-  <a class="url" href="https://www.bls.gov/emp/tables/industry-occupation-matrix-industry.htm">https://www.bls.gov/emp/tables/industry-occupation-matrix-industry.htm</a>.
-  </p><p class="bibitem"><span class="biblabel"><a id="Xbls2026oews"></a><span class="bibsp"></span></span><span class="ecbx-1095">U.S. Bureau of Labor Statistics. </span>2026 <span class="ecti-1095">c</span>. “Occupational Employment
-  and Wage Statistics, May 2025: Industry-Specific Estimates.”  Accessed
-  August 15, 2026. <a class="url" href="https://www.bls.gov/oes/tables.htm">https://www.bls.gov/oes/tables.htm</a>.
-  </p><p class="bibitem"><span class="biblabel"><a id="Xcensus2024pums"></a><span class="bibsp"></span></span><span class="ecbx-1095">U.S.      Census      Bureau.     </span>2024.      “American      Community
-  Survey,     2024     One-Year     Public     Use     Microdata     Sample:
-  National      Person      File.”      Accessed      August      14,      2026.
-  <a class="url" href="https://www.census.gov/programs-surveys/acs/microdata/access/2024.html">https://www.census.gov/programs-surveys/acs/microdata/access/2024.html</a>.
+  </p><p class="bibitem"><span class="biblabel"><a id="Xcensus2024pums"></a><span class="bibsp"></span></span><span class="ecbx-1095">US      Census      Bureau.     </span>2024.      <span class="ecti-1095">American     Community
+  Survey     (ACS):     Public     Use     Microdata     Sample     (PUMS),
+  2024.     </span>Washington,     DC:     US     Department     of     Commerce.
+  <a class="url" href="https://www.census.gov/programs-surveys/acs/microdata/access/2024.html">https://www.census.gov/programs-surveys/acs/microdata/access/2024.html</a> 
+  (accessed August 14, 2026).
   </p><p class="bibitem"><span class="biblabel"><a id="Xzeira1998"></a><span class="bibsp"></span></span><span class="ecbx-1095">Zeira,  Joseph.  </span>1998.  “Workers,  Machines,  and  Economic  Growth.”
    <span class="ecti-1095">Quarterly Journal of Economics</span>, 113(4): 1091–1117.
 </p></div>
