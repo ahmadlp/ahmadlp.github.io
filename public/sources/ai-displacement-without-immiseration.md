@@ -47,7 +47,7 @@ topics: []
 pdf_url: Lashkaripour_AI_Displacement.pdf
 markdown_url: sources/ai-displacement-without-immiseration.md
 canonical_url: https://alashkar.pages.iu.edu/papers/ai-displacement-without-immiseration.html
-updated_at: '2026-10-06'
+updated_at: '2026-10-07'
 sort_order: 1
 published_url: null
 slides_url: slides/ai-blind-spots/index.html
@@ -498,7 +498,7 @@ E[lnmin{a∗/a,1}]}; all results below still hold, and E[z̃Mσ−1]1/(σ−1) b
 
 The theorem states that the real wage rises monotonically to a finite plateau if ā &lt; ∞ and diverges if the productivity distribution is unbounded, i.e., ā = ∞. Moreover, if AI has an absolute advantage in every task in the chosen baseline year, which would be the case under ā = 1, then the real wage converges to AI's average productivity in that baseline year under explosive AI growth. More generally, Theorem 1.b states that the distribution of comparative advantage governs the pace of wage gains and their eventual limit, but not the direction. The pace in (16) is the ratio of AI's share of income and the tail elasticity of G (the rate at which displacement exhausts labor's remaining advantage). The limit, meanwhile, (17) depends on the upper endpoint of G. If comparative advantage is bounded, the real wage climbs to a finite plateau rather than collapsing, even as AI absorbs every task; if it is unbounded, the real wage grows without bound.8 In Korinek and Suh (2024), a bound on task complexity lets AI automate every task and the real wage collapses; here, a hard bound on relative advantage makes the real wage plateau instead, because collapse would require price of AI services to become exactly zero.9
 
-- C. Displacement is Leverage
+- C. Displacement Gives Worker Leverage
 
 
 The previous section showed that real wages survive displacement and even grow without bound as AI capabilities improve. A natural worry is that the benefits of AI growth diminish as AI takes over more tasks. Here, we show the opposite: that more displacement amplifies the marginal wage gains from AI growth. To illustrate this point, let gX ≡ X/Ẋ denote the growth rate of a generic variable X, with gM,t ̃ denoting The growth in AI capabilities, M ̃t. When AI performs a narrow set of tasks, the growth in M ̃t has little bearing on real wages and consumption. But when AI performs many tasks, the reduction passes through more broadly to real wages. In particular, the elasticity of the real wage with respect to the stock of AI capabilities equals the AI-automated share of tasks over ψ:
@@ -540,31 +540,31 @@ gY,t.10 This differs from Korinek and Suh (2024), where automation reduces the n
 - D. Task Displacement and Unemployment
 
 
-Theorem 1.a shows that the real wage rises as AI displaces labor from tasks. The result is about the value of labor, not about jobs: it takes a wage rate that adjusts so that all L workers are employed. This section asks what happens to employment when the nominal wage cannot fall.
+Theorem 1.a shows that the real wage rises as AI displaces labor from tasks. In the framework, however, workers switch to other tasks and avoid unemployment in he transition. The transition assumes away nominal rigidities. It requires that the nominal wage rate adjusts so that all L workers remain employed on the remaining human tasks. Here, asks what happens to employment under nominal wage rigidities.
 
-We keep the single sector economy of Section II, with L workers and AI capacity Mt, but no longer assign the final good as the numeraire. Let Pt denote the price index of final output, and write Wt = Ptwt for the nominal wage rate, Rt = Ptrt for the nominal rental rate, and Xt = PtYt for nominal GDP. All L workers are willing to work, but only Nt = etL of them are employed, where
+We work within the same Ricardian economy, but no longer assign the final good as the numeraire to emphasize nominal rigidities. Let Pt̆ denote the price index of final output, and let w̆t = Pt̆wt denote the nominal wage rate, r̆t = Pt̆rt
 
 - 10Section (VII) estimates ψ = 1.36, which implies 1/(1 + ψ) ≈ 0.42. Based on these estimates, real wages grow by 0.42 percent for every 1 percent increase in output.
 - 11It is important to understand that this result is about the purchasing power of labor, not its income share. The labor share of income falls as AI performs more tasks. However, even though workers are stuck in small pockets of GDP, their wages have high purchasing power because growth in AI capabilities lowers the cost of performing most tasks, making consumer goods cheaper.
 
 
-et ∈ (0,1] is the employment rate and ut = 1 − et the unemployment rate. In equilibrium the nominal wage equals the value of the marginal product of labor, and labor's share of GDP equals its share of tasks as in Corollary 1. The factor market clearing condition (7) becomes
+represent the nominal rental rate, and Yt̆ = Pt̆Yt the nominal GDP. All L workers are willing to work, but only ntL of them are employed, where nt ∈ (0,1] is the employment rate and ut = 1 − nt the unemployment rate. In equilibrium the nominal wage equals the value of the marginal product of labor, and labor's share of GDP equals its share of tasks as in Corollary 1. The factor market clearing condition (7) becomes
 
-WtetL = πL,tXt, Xt = WtetL + RtMt, (20) where πL,t is the share of tasks performed by the etL employed workers.
+w̆tntL = πL,tYt̆ , Yt̆ = w̆tntL + r̆tMt, (20) where πL,t is the share of tasks performed by the ntL employed workers.
 
-With a flexible nominal wage, every worker is employed. Setting et = 1 in (20) gives the full employment wage WtF = πL,t(1)Xt/L, where πL,t(1) denotes labor's task share at full employment, given by (9). As the effective AI stock grows,
+With a flexible nominal wage, every worker is employed. Setting nt = 1 in (20) gives the full employment wage w̆Ft = πL,t(1)Yt̆ /L, where πL,t(1) denotes labor's task share at full employment, given by (9). As the effective AI stock grows,
 
 πL,t(1) falls. At given nominal GDP, the nominal wage must fall to keep every worker employed, even though the real wage rises by Theorem 1.a.
 
-nominal wage cannot fall below a floor set by last period's wage, Wt = δwWt−1 with 0 ≤ δw ≤ 1, and that employment adjusts instead:
+nominal wage cannot fall below a floor set by last period's wage, w̆t = δww̆t−1 with 0 ≤ δw ≤ 1, and that employment adjusts instead:
 
 Following Rodríguez-Clare, Ulate and Vasquez (2025), we suppose that the
 
-Wt ≥ Wt, 0 &lt; et ≤ 1, (1 − et)(Wt − Wt) = 0. (21) If the full employment wage is below the floor, fewer than L workers are employed at Wt = Wt; if it is at or above the floor, every worker is employed. The floor applies to all workers, so the unemployed cannot offer to work for less than the employed, and unemployment is involuntary. Nominal GDP Xt is the nominal anchor: the model determines real output and the price level, and Xt pins down the nominal scale.
+w̆t ≥ w̆t, 0 &lt; nt ≤ 1, (1 − nt)(w̆t − w̆t) = 0. (21) If the full employment wage is below the floor, fewer than L workers are employed at w̆t = w̆t; if it is at or above the floor, every worker is employed. The floor applies to all workers, so the unemployed cannot offer to work for less than the employed, and unemployment is involuntary. Nominal GDP Yt̆ is the nominal anchor: the model determines real output and the price level, and Yt̆ pins down the nominal scale.
 
 Dividing (20) at date t by the same equation at date 0 gives
 
-X/X0 Wt/W0
+Y/̆ Y0̆ w̆t/w̆0
 
 = L,t πL,0
 
@@ -572,31 +572,33 @@ X/X0 Wt/W0
 
 . (22)
 
-t e0
+t n0
 
 When nominal GDP and the nominal wage are unchanged, the last fraction equals one, and employment falls in proportion to labor's task share: a one percent decline in labor's task share means a one percent decline in employment. Employment falls because labor's share of a fixed nominal GDP falls while the nominal wage cannot, not because each displaced task is a job.
 
-Proposition 1 (Task displacement and employment). Start from full employment, e0 = 1, and let the effective AI stock M ̃t grow between dates 0 and 1, with TL and L fixed. If nominal GDP is unchanged, X1 = X0, and the nominal wage cannot fall, so that (21) holds with δw = 1, then the unique equilibrium has W1 = W0 and
+Proposition 1 (Task displacement and employment). Start from full employment, n0 = 1, and let the effective AI stock M ̃t grow between dates 0 and 1, with TL and L fixed. If
+
+nominal GDP is unchanged, Y1̆ = Y0̆ , and the nominal wage cannot fall, so that (21) holds with δw = 1, then the unique equilibrium has w̆1 = w̆0 and
 
 = L,1 πL,0
 
 &lt; 1. (23)
 
-1 e0
+1 n0
 
-Let Et ≡ etwt denote average real earnings per worker, including the unemployed. The real wage of the employed and average earnings satisfy
+Let Et ≡ ntwt denote average real earnings per worker, including the unemployed. The real wage of the employed and average earnings satisfy
 
 −1/ψ
 
 1−1/ψ
 
-=( L,1 πL,0
-
 , 1 E0
 
+. (24)
+
 =( L,1 πL,0
 
-. (24)
+=( L,1 πL,0
 
 )
 
@@ -606,15 +608,19 @@ Let Et ≡ etwt denote average real earnings per worker, including the unemploye
 
 The real wage rises, but average earnings fall if ψ &gt; 1, are unchanged if ψ = 1, and rise if ψ &lt; 1.
 
-The derivation of these results and the proof of the proposition are in Appendix B.6. In (23), πL,1 is labor's task share in the new equilibrium, with e1L workers employed. It is below the full employment share πL,1(1), because fewer workers perform fewer tasks; using the full employment share in its place would understate the fall in employment.
+The derivation of these results and the proof of the proposition are in Appendix B.6. In (23), πL,1 is labor's task share in the new equilibrium, with n1L workers employed. It is below the full employment share πL,1(1), because fewer workers perform fewer tasks; using the full employment share in its place would understate the fall in employment.
 
-Ricardian selection still raises the real wage of the employed, but under nominal rigidity it does not imply higher average earnings. Average earnings Et exclude the rental income of AI stock owners and are not a welfare measure. And full employment returns only through nominal adjustment, not with time: if, after the shock, the technology and AI capacity stop changing and nominal GDP grows at a gross rate G, unemployment ends after a finite number of periods when G &gt; δw and remains unchanged when G = δw (Appendix B.6).
+Ricardian selection still raises the real wage of the employed, but under nominal rigidity it does not imply higher average earnings. Average earnings Et exclude the rental income of AI stock owners and are not a welfare measure. And full employment returns only through nominal adjustment, not with time: if, after the shock, the technology and AI capacity stop changing and nominal GDP grows at a gross rate χ, unemployment ends after a finite number of periods when χ &gt; δw and remains unchanged when χ = δw (Appendix B.6).
 
 ## IV. Jagged Adoption Benefits Workers under Mobility
 
 Thus far we have modeled the economy as a single aggregate sector, which of course overlooks the possibility that AI adoption could be concentrated in a handful of sectors. Jagged AI adoption across sectors can have starkly different labor-market consequences than balanced adoption that affects the entire economy. It turns out that jagged adoption is, if anything, actually more enriching for workers.The intuition is straightforward. When AI adoption is concentrated in certain sectors, it simply creates more room for labor to gain from comparative advantage, not only across tasks within sectors but also across sectors themselves.
 
-We formalize this point by extending the baseline model, adding a finite number of sectors s ∈ {1,...,S}. Sector s produces Ys,t at price Ps,t by aggregating over a continuum of tasks similar to the baseline economy. Labor and AI productivity across tasks within a sector follow a Fréchet distribution, mirroring the single sector case. The Fréchet dispersion parameter ψ &gt; 0 is the same across sectors, but labor productivity TLs is sector-specific and fixed, and stock of AI techniques is also sector-specific TMs,t, but evolves over time.
+ber of sectors s ∈ {1,...,S}. Sector s produces Ys,t at price Ps,t by aggregating over a continuum of tasks similar to the baseline economy. Labor and AI pro-
+
+We formalize this point by extending the baseline model, adding a finite num-
+
+ductivity across tasks within a sector follow a Fréchet distribution, mirroring the single sector case. The Fréchet dispersion parameter ψ &gt; 0 is the same across sectors, but labor productivity TLs is sector-specific and fixed, and stock of AI techniques is also sector-specific TMs,t, but evolves over time.
 
 We assume no frictions to the mobility of labor and AI agents across sectors. Sector s uses Ls,t units of labor and Ms,t units of AI services, with market clearing conditions requiring ∑s Ls,t = L and ∑s Ms,t = Mt. The wage rate wt and AI rental rate rt is equalized across sectors as a result of perfect mobility. Final demand is a Cobb–Douglas aggregator over sector-level output, with βs &gt; 0 denoting sector s's expenditure weight, with ∑s βs = 1. Thus, aggregate output Yt and the unit price index are given by
 
@@ -630,13 +636,13 @@ S
 
 ∏
 
-Yt =
-
 , Pt =
 
-Pβ
+Yt =
 
 s,t ≡ 1. (25)
+
+Pβ
 
 (
 
@@ -676,23 +682,21 @@ TLs πLs,t
 
 wt =∏
 
-]. (28)
-
 [γs−βs (
+
+### ]. (28)
 
 )
 
 s
 
-Real output is given by Yt = wt (L + Mt
-
-### ). To compare broad and narrow AI progress, we introduce sectoral heterogeneity in AI progress as follows: let
-
-wt/rt
-
 12The specific details about sectoral employment and AI allocation in equilibrium are provided in Appendix B.7.
 
-At &gt; 0 be a common AI productivity index that grows without bound. Sector s follows the power path
+Real output is given by Yt = wt (L + Mt
+
+). To compare broad and narrow AI progress, we introduce sectoral heterogeneity in AI progress as follows: let At &gt; 0 be a common AI productivity index that grows without bound. Sector s follows the power path
+
+wt/rt
 
 TMs,t = TMs,0Aν
 
@@ -720,9 +724,9 @@ with A → ∞, then
 
 1 1 + ψ
 
-∈ [
-
 ⟶ 1 −
+
+∈ [
 
 , 1]. (30)
 
@@ -734,7 +738,7 @@ Labor's income share vanishes if AI advances in every sector (νs &gt; 0 for all
 
 Appendix B.7 provides the formal proof for this theorem. The same logic underpins how employment evolves across sectors. If AI capabilities advance broadly across all sectors, employment concentrates in the slowest growing sectors for which mins νs. And if mins νs = 0, employment in every growing sector converges to zero. Balanced AI adoption therefore creates an environment where real wages grow most slowly relative to output.13
 
-13The concentrated progress result depends on Cobb–Douglas demand: with σU ∈ (0,1), the expenditure shares of sectors with AI progress fall to zero, wt/rt is pinned down by sectors with fixed intensity, and wt and Yt approach finite positive limits, so this result does not determine the limiting ratio of real wage growth to output growth; Appendix B.8 gives the equations, proof, and limiting real wage.
+13The concentrated progress result depends on Cobb–Douglas demand: with σU ∈ (0,1), the expenditure shares of sectors with AI progress fall to zero, wt/rt is pinned down by sectors with fixed intensity, and wt and Yt approach finite positive limits, so this result does not determine the
 
 - Corollary 2 (Balanced vs jagged adoption). If labor is perfectly mobile across sectors: Balanced AI adoption across sectors is the worst-case scenario for labor wage growth. By contrast, strictly jagged adoption, in which some sectors see no AI gains at all, lets workers capture most of the growth surplus, with real wages rising proportionally with output.
 
@@ -780,6 +784,8 @@ ks
 k,t
 
 k
+
+limiting ratio of real wage growth to output growth; Appendix B.8 gives the equations, proof, and limiting real wage.
 
 ### Let λs be sector s's Domar weight, which is its final good plus intermediate output relative to GDP, with Λ ≡∑s λs.14 The share of tasks assigned to AI in equation (26) is given by
 

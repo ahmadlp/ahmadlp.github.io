@@ -1,7 +1,7 @@
 # AI's Blind Spots: Comparative Advantage and Wage Growth under Jagged AGI
 
 This folder contains the self-contained HTML source for the September 2026
-paper, matching the PDF posted on October 6, 2026. It uses the site's existing
+paper, matching the PDF posted on October 7, 2026. It uses the site's existing
 TeX4ht, MathJax, and Tufte pipeline.
 Rebuild from the repository root with:
 

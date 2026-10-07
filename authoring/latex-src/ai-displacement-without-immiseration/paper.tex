@@ -524,7 +524,7 @@ is recursive and reaches a singularity in finite time. If fixed shares
 of output finance AI installation and research, AI capabilities diverge
 at a finite date; as that date approaches, labor’s task share vanishes
 and the real wage rises without bound, at a rate that does not depend
-on jaggedness. Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=24}{B.4} states the result
+on jaggedness. Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=23}{B.4} states the result
 and Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=25}{B.5} proves it.} The joint productivity law then makes every percentile of productivity
 among the tasks retained by workers a fixed multiple of the real wage.
 In other words, worker productivity also explodes. An distinct feature
@@ -675,7 +675,7 @@ at which tasks shift to AI. That factor is close to one while the
 cutoff is well below $\bar{a}$ and falls to zero as the cutoff approaches
 $\bar{a}$, so a bound makes wage gains smaller rather than larger.}
 
-\subsection{Displacement is Leverage}\label{sec:leverage}
+\subsection{Displacement Gives Worker Leverage}\label{sec:leverage}
 
 The previous section showed that real wages survive displacement and
 even grow without bound as AI capabilities improve. A natural worry
@@ -730,32 +730,35 @@ making consumer goods cheaper.}
 
 \subsection{Task Displacement and Unemployment}\label{sec:unemployment}
 
-Theorem~\ref{thm:selection} shows that the real wage rises as AI
-displaces labor from tasks. The result is about the value of labor,
-not about jobs: it takes a wage rate that adjusts so that all $L$
-workers are employed. This section asks what happens to employment
-when the nominal wage cannot fall.
+Theorem \ref{thm:selection} shows that the real wage rises as AI
+displaces labor from tasks. In the framework, however, workers switch
+to other tasks and avoid unemployment in he transition. The transition
+assumes away nominal rigidities. It requires that the nominal wage
+rate adjusts so that all $L$ workers remain employed on the remaining
+human tasks. Here, asks what happens to employment under nominal wage
+rigidities.
 
-We keep the single sector economy of Section~\ref{sec:model}, with
-$L$ workers and AI capacity $M_{t}$, but no longer assign the final
-good as the numeraire. Let $P_{t}$ denote the price index of final
-output, and write $W_{t}=P_{t}w_{t}$ for the nominal wage rate, $R_{t}=P_{t}r_{t}$
-for the nominal rental rate, and $X_{t}=P_{t}Y_{t}$ for nominal GDP.
-All $L$ workers are willing to work, but only $N_{t}=e_{t}L$ of
-them are employed, where $e_{t}\in(0,1]$ is the employment rate and
-$u_{t}=1-e_{t}$ the unemployment rate. In equilibrium the nominal
+We work within the same Ricardian economy, but no longer assign the
+final good as the numeraire to emphasize nominal rigidities. A breve
+denotes a nominal variable. Let $\breve{P}_{t}$ denote the price
+index of final output, and let $\breve{w}_{t}=\breve{P}_{t}w_{t}$
+denote the nominal wage rate, $\breve{r}_{t}=\breve{P}_{t}r_{t}$
+represent the nominal rental rate, and $\breve{Y}_{t}=\breve{P}_{t}Y_{t}$
+the nominal GDP. All $L$ workers are willing to work, but only $n_{t}L$
+of them are employed, where $n_{t}\in(0,1]$ is the employment rate
+and $u_{t}=1-n_{t}$ the unemployment rate. In equilibrium the nominal
 wage equals the value of the marginal product of labor, and labor's
 share of GDP equals its share of tasks as in Corollary~\ref{cor:task-income-shares}.
 The factor market clearing condition~\eqref{eq:factor-clearing-main}
 becomes
 \begin{equation}
-W_{t}e_{t}L=\pi_{L,t}X_{t},\qquad X_{t}=W_{t}e_{t}L+R_{t}M_{t},\label{eq:ue-wage-bill}
+\breve{w}_{t}n_{t}L=\pi_{L,t}\breve{Y}_{t},\qquad\breve{Y}_{t}=\breve{w}_{t}n_{t}L+\breve{r}_{t}M_{t},\label{eq:ue-wage-bill}
 \end{equation}
-where $\pi_{L,t}$ is the share of tasks performed by the $e_{t}L$
+where $\pi_{L,t}$ is the share of tasks performed by the $n_{t}L$
 employed workers.
 
-With a flexible nominal wage, every worker is employed. Setting $e_{t}=1$
-in~\eqref{eq:ue-wage-bill} gives the full employment wage $W^{F}_{t}=\pi_{L,t}(1)X_{t}/L$,
+With a flexible nominal wage, every worker is employed. Setting $n_{t}=1$
+in~\eqref{eq:ue-wage-bill} gives the full employment wage $\breve{w}^{F}_{t}=\pi_{L,t}(1)\breve{Y}_{t}/L$,
 where $\pi_{L,t}(1)$ denotes labor's task share at full employment,
 given by~\eqref{eq:static-shares}. As the effective AI stock grows,
 $\pi_{L,t}(1)$ falls. At given nominal GDP, the nominal wage must
@@ -763,23 +766,23 @@ fall to keep every worker employed, even though the real wage rises
 by Theorem~\ref{thm:selection}.
 
 Following \citet{ruv2025}, we suppose that the nominal wage cannot
-fall below a floor set by last period's wage, $\underline{W}_{t}=\delta_{w}W_{t-1}$
+fall below a floor set by last period's wage, $\underline{\breve{w}}_{t}=\delta_{w}\breve{w}_{t-1}$
 with $0\leq\delta_{w}\leq1$, and that employment adjusts instead:
 \begin{equation}
-W_{t}\geq\underline{W}_{t},\qquad0<e_{t}\leq1,\qquad(1-e_{t})(W_{t}-\underline{W}_{t})=0.\label{eq:ue-floor}
+\breve{w}_{t}\geq\underline{\breve{w}}_{t},\qquad0<n_{t}\leq1,\qquad(1-n_{t})(\breve{w}_{t}-\underline{\breve{w}}_{t})=0.\label{eq:ue-floor}
 \end{equation}
 If the full employment wage is below the floor, fewer than $L$ workers
-are employed at $W_{t}=\underline{W}_{t}$; if it is at or above the
-floor, every worker is employed. The floor applies to all workers,
-so the unemployed cannot offer to work for less than the employed,
-and unemployment is involuntary. Nominal GDP $X_{t}$ is the nominal
-anchor: the model determines real output and the price level, and
-$X_{t}$ pins down the nominal scale.
+are employed at $\breve{w}_{t}=\underline{\breve{w}}_{t}$; if it
+is at or above the floor, every worker is employed. The floor applies
+to all workers, so the unemployed cannot offer to work for less than
+the employed, and unemployment is involuntary. Nominal GDP $\breve{Y}_{t}$
+is the nominal anchor: the model determines real output and the price
+level, and $\breve{Y}_{t}$ pins down the nominal scale.
 
 Dividing~\eqref{eq:ue-wage-bill} at date $t$ by the same equation
 at date $0$ gives
 \begin{equation}
-\frac{e_{t}}{e_{0}}=\frac{\pi_{L,t}}{\pi_{L,0}}\times\frac{X_{t}/X_{0}}{W_{t}/W_{0}}.\label{eq:ue-employment}
+\frac{n_{t}}{n_{0}}=\frac{\pi_{L,t}}{\pi_{L,0}}\times\frac{\breve{Y}_{t}/\breve{Y}_{0}}{\breve{w}_{t}/\breve{w}_{0}}.\label{eq:ue-employment}
 \end{equation}
 When nominal GDP and the nominal wage are unchanged, the last fraction
 equals one, and employment falls in proportion to labor's task share:
@@ -789,16 +792,17 @@ GDP falls while the nominal wage cannot, not because each displaced
 task is a job.
 
 \begin{proposition}[Task displacement and employment]\label{prop:unemployment}
-~Start from full employment, $e_{0}=1$, and let the effective AI stock
+~Start from full employment, $n_{0}=1$, and let the effective AI stock
 $\widetilde{M}_{t}$ grow between dates $0$ and $1$, with $T_{L}$
-and $L$ fixed. If nominal GDP is unchanged, $X_{1}=X_{0}$, and the
-nominal wage cannot fall, so that~\eqref{eq:ue-floor} holds with
-$\delta_{w}=1$, then the unique equilibrium has $W_{1}=W_{0}$ and
+and $L$ fixed. If nominal GDP is unchanged, $\breve{Y}_{1}=\breve{Y}_{0}$,
+and the nominal wage cannot fall, so that~\eqref{eq:ue-floor} holds
+with $\delta_{w}=1$, then the unique equilibrium has $\breve{w}_{1}=\breve{w}_{0}$
+and
 \begin{equation}
-\frac{e_{1}}{e_{0}}=\frac{\pi_{L,1}}{\pi_{L,0}}<1.\label{eq:ue-prop-employment}
+\frac{n_{1}}{n_{0}}=\frac{\pi_{L,1}}{\pi_{L,0}}<1.\label{eq:ue-prop-employment}
 \end{equation}
 
-Let $E_{t}\equiv e_{t}w_{t}$ denote average real earnings per worker,
+Let $E_{t}\equiv n_{t}w_{t}$ denote average real earnings per worker,
 including the unemployed. The real wage of the employed and average
 earnings satisfy
 \begin{equation}
@@ -810,7 +814,7 @@ if $\psi=1$, and rise if $\psi<1$.\end{proposition}
 
 The derivation of these results and the proof of the proposition are
 in Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=30}{B.6}. In~\eqref{eq:ue-prop-employment},
-$\pi_{L,1}$ is labor's task share in the new equilibrium, with $e_{1}L$
+$\pi_{L,1}$ is labor's task share in the new equilibrium, with $n_{1}L$
 workers employed. It is below the full employment share $\pi_{L,1}(1)$,
 because fewer workers perform fewer tasks; using the full employment
 share in its place would understate the fall in employment.
@@ -821,8 +825,8 @@ Average earnings $E_{t}$ exclude the rental income of AI stock owners
 and are not a welfare measure. And full employment returns only through
 nominal adjustment, not with time: if, after the shock, the technology
 and AI capacity stop changing and nominal GDP grows at a gross rate
-$G$, unemployment ends after a finite number of periods when $G>\delta_{w}$
-and remains unchanged when $G=\delta_{w}$ (Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=30}{B.6}).
+$\chi$, unemployment ends after a finite number of periods when $\chi>\delta_{w}$
+and remains unchanged when $\chi=\delta_{w}$ (Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=30}{B.6}).
 
 \section{Jagged Adoption Benefits Workers under Mobility}\label{sec:breadth}
 
@@ -1840,8 +1844,8 @@ labor market response over a longer horizon. We therefore assess two
 cases: $\kappa\downarrow1$, in which workers are frozen in their
 original sectors, and $\kappa=1.5$, following the preferred
 estimation value of \citet{gry2023}. Figure \ref{fig:model-validation}
-reports the wage effects and the IV slope test. The goodness-of-fit
-statistic is $\widehat{\beta}_{z}=1.7\times 10^{-4}$
+reports the observed wage effects, plus the mode's predicted effects
+and the IV slope test. The goodness-of-fit statistic is $\widehat{\beta}_{z}=1.7\times 10^{-4}$
 under $\kappa\downarrow1$ and $\widehat{\beta}_{z}=-8.6\times 10^{-5}$
 with $\kappa=1.5$. The null of a zero discrepancy is not rejected
 at the 5 percent confidence level, in both cases. The corresponding
