@@ -4031,8 +4031,6 @@ def render_research_hub(papers: list[dict], hubs: list[dict], queries: list[dict
             assets.append(f'<a href="{href_from(PUBLIC_ROOT / "Research.html", paper["online_appendix_url"])}">[online appendix]</a>')
         if paper.get("post_publication_note_url"):
             assets.append(f'<a href="{href_from(PUBLIC_ROOT / "Research.html", paper["post_publication_note_url"])}">[post-publication note]</a>')
-        if paper.get("post_publication_note_release_url"):
-            assets.append(f'<a href="{href_from(PUBLIC_ROOT / "Research.html", paper["post_publication_note_release_url"])}">[first release]</a>')
         if paper.get("replication_slug"):
             assets.append(f'<a href="{href_from(PUBLIC_ROOT / "Research.html", "replication/" + paper["replication_slug"] + ".html")}">[replication files]</a>')
         elif paper.get("raw_replication_url"):

@@ -47,7 +47,6 @@ slides_url: LL2023_AER_slides.pdf
 working_paper_url: null
 online_appendix_url: Online_Appendix_LL2023.pdf
 post_publication_note_url: Post_Publication_Note_LL2023.pdf
-post_publication_note_release_url: https://github.com/ahmadlp/ahmadlp.github.io/releases/tag/post-publication-note-v1.0
 dashboard_url: null
 replication_slug: null
 raw_replication_url: null
