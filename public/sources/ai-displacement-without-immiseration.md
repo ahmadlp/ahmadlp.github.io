@@ -47,6 +47,10 @@ topics: []
 pdf_url: Lashkaripour_AI_Displacement.pdf
 markdown_url: sources/ai-displacement-without-immiseration.md
 canonical_url: https://alashkar.pages.iu.edu/papers/ai-displacement-without-immiseration.html
+social_image: https://ahmadlp.github.io/paper-assets/ai-displacement-without-immiseration/share-preview-v1.png
+social_image_alt: "AI’s Blind Spots by Ahmad Lashkaripour, with a coral jagged AI frontier and teal comparative blind spots."
+social_image_width: 1200
+social_image_height: 630
 updated_at: '2026-10-22'
 sort_order: 1
 published_url: null

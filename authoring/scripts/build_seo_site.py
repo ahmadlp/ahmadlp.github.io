@@ -1128,10 +1128,20 @@ BASE_TEMPLATE = ENV.from_string(
   <meta property="og:description" content="{{ meta_description }}">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:image" content="{{ absolute_url(social_image) }}">
+  {% if social_image_width and social_image_height %}
+  <meta property="og:image:width" content="{{ social_image_width }}">
+  <meta property="og:image:height" content="{{ social_image_height }}">
+  {% endif %}
+  {% if social_image_alt %}
+  <meta property="og:image:alt" content="{{ social_image_alt }}">
+  {% endif %}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ meta_title }}">
   <meta name="twitter:description" content="{{ meta_description }}">
   <meta name="twitter:image" content="{{ absolute_url(social_image) }}">
+  {% if social_image_alt %}
+  <meta name="twitter:image:alt" content="{{ social_image_alt }}">
+  {% endif %}
   {% for meta_name, meta_content in scholar_meta %}
   <meta name="{{ meta_name }}" content="{{ meta_content }}">
   {% endfor %}
@@ -3595,6 +3605,9 @@ def render_page(
     schemas: list[dict],
     breadcrumbs: list[dict],
     social_image: str = DEFAULT_SOCIAL_IMAGE,
+    social_image_alt: str | None = None,
+    social_image_width: int | None = None,
+    social_image_height: int | None = None,
     active_nav: str = "research",
     scholar_meta: list[tuple[str, str]] | None = None,
     og_type: str = "article",
@@ -3612,6 +3625,9 @@ def render_page(
         meta_description=meta_description,
         canonical_url=public_url(to_relative_url(output_path)),
         social_image=social_image,
+        social_image_alt=social_image_alt,
+        social_image_width=social_image_width,
+        social_image_height=social_image_height,
         og_type=og_type,
         body_html=body_html,
         schemas=[json.dumps(schema, ensure_ascii=False, indent=2) for schema in schemas],
@@ -3654,7 +3670,7 @@ def build_paper_schema(paper: dict) -> dict:
         "about": paper["keywords"],
         "keywords": ", ".join(paper["keywords"]),
         "abstract": paper["abstract"],
-        "image": public_url(DEFAULT_SOCIAL_IMAGE),
+        "image": public_url(paper.get("social_image", DEFAULT_SOCIAL_IMAGE)),
         "encoding": {
             "@type": "MediaObject",
             "contentUrl": public_url(paper["pdf_url"]),
@@ -3783,7 +3799,10 @@ def render_papers(papers: list[dict], topic_by_slug: dict) -> list[str]:
             body_html=body_html,
             schemas=schemas,
             breadcrumbs=breadcrumbs,
-            social_image=RESEARCH_SOCIAL_IMAGE,
+            social_image=paper.get("social_image", RESEARCH_SOCIAL_IMAGE),
+            social_image_alt=paper.get("social_image_alt"),
+            social_image_width=paper.get("social_image_width"),
+            social_image_height=paper.get("social_image_height"),
             scholar_meta=build_scholar_meta(paper),
             extra_stylesheets=["tufte-style/tufte.css", *paper.get("extra_stylesheets", []), "tufte-style/paperpages.css"],
             include_mathjax=paper.get("include_mathjax", False),
