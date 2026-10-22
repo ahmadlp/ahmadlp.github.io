@@ -47,7 +47,7 @@ topics: []
 pdf_url: Lashkaripour_AI_Displacement.pdf
 markdown_url: sources/ai-displacement-without-immiseration.md
 canonical_url: https://alashkar.pages.iu.edu/papers/ai-displacement-without-immiseration.html
-updated_at: '2026-10-07'
+updated_at: '2026-10-22'
 sort_order: 1
 published_url: null
 slides_url: slides/ai-blind-spots/index.html
@@ -66,7 +66,11 @@ latex_engine: pdflatex
 
 This section was extracted with OpenDataLoader PDF from the hosted PDF so the full text is accessible in HTML and Markdown.
 
-## Abstract
+# AI's Blind Spots: Comparative Advantage and Wage Growth under Jagged AGI
+
+Ahmad Lashkaripour
+
+Indiana University, CEPR, CESifo September 2026 · Latest version
 
 Will human labor keep its value once AGI can outperform us at every task? We answer this question through the lens of comparative advantage. We develop and estimate a Ricardian assignment model in which agentic AI may have an absolute advantage over humans at every task, but its capability frontier is jagged: the size of AI's advantage over humans varies across tasks. As AI capabilities grow, it takes over more tasks and workers retreat to AI's comparative blind spots. Yet real wages rise as the labor share of income falls, with an elasticity that reflects the jaggedness of the AI frontier. Every worker can gain without changing sectors if adoption is sufficiently even across sectors. We estimate the jaggedness of the frontier from micro data comparing human and AI costs on similar tasks, and calibrate the model to observed adoption rates and the full input-output and employment structure of the US economy. The estimated model closely replicates the observed but untargeted wage effects of AI growth over 2022–25. If AI capabilities continue to grow at the same pace, our Ricardian model predicts that average real wages will rise 3.5% per year over the next five years, even as labor is displaced from 30% of tasks. Inequality between capital and labor rises, but all wages grow. Workers at all education levels gain despite limited mobility, with the least-educated gaining the most. If the AI frontier were five times less jagged, the same decline in AI costs would leave real wages virtually unchanged despite staggering GDP growth. Our framework suggests that AI may prove less harmful to labor wages than past labor-saving technologies such as trade or the steam engine, because its capability frontier is more jagged and its adoption more even across the economy.
 
@@ -78,6 +82,7 @@ Email: ahmadlp@gmail.com. Online appendix: [link].
 
 1
 
+
 technological progress. A vivid example is the fate of horses at the dawn of the twentieth century: engines displaced horses, rendering them economically irrelevant and unraveling a rapid decline in the horse population. Many worry that what engines did to horses, agentic AI will do to humans.
 
 While the pessimism towards AI is understandable, some economists have presented an optimistic counter-narrative in which labor is shielded, and even benefits from, explosive AI growth. These arguments generally share the same fingerprint: they reserve some sanctuary tasks for labor that are inherently infeasible for machines. These tasks often require a human touch, and more of them may emerge with further AI progress. In this view, human-only tasks become the bottleneck under explosive AI-driven growth and command extraordinary compensation.
@@ -87,6 +92,7 @@ This paper offers an alternative view that is equally optimistic but rooted in t
 We develop a dynamic Ricardian assignment model where each good is produced using a continuum of tasks that can be assigned to either labor or AI. There is nothing that distinguishes AI output from that of labor for a given task. However, AI capabilities are jagged, meaning that even though they could perform better than humans at every task, they have blind spots in which the relative difference is smaller. The optimal assignment is then determined purely by comparative advantage, whereby humans retreat into blind spots and retain economic value even as capabilities explode. The framework differs from existing pro-labor theories of AI in one key aspect: it does not reserve any tasks for humans, nor does it require that human labor maintain an absolute advantage over AI in some niche tasks.1
 
 1This differs from Korinek and Suh (2024), Artuç, Bastos and Rijkers (2023), and Jones and Tonetti (2026) who reserve some tasks for humans, and Acemoglu and Restrepo (2018), who assume that technological change creates new tasks in which labor has an absolute advantage. In these models, labor is shielded by sanctuary tasks reserved for humans at a given date. In our assignment model, however, AI can dominate humans in every task. Yet real wages are shielded by the selection of humans into niche tasks through the forces of comparative advantage.
+
 
 The model is used to examine the labor market impacts of explosive but jagged AI growth. We differentiate between two modes of jaggedness: (1) a jagged frontier, reflecting dissimilarity between labor and AI productivity profiles across tasks (Dell'Acqua et al., 2026), and (2) jagged adoption across sectors (Rinehart, 2026). A bold theoretical prediction is that jagged AI-driven growth will enrich workers without bound, even as agentic AI displaces humans in one task after another. More remarkably, the gains can materialize even if workers have limited mobility across sectors. All that is needed is that AI capabilities are sufficiently jagged but adoption is not too jagged across sectors. Data on early AI growth and adoption suggest that both conditions hold. If AI capabilities grow at the same pace but remain jagged, humans will be displaced from 30% of the tasks across all sectors of the economy, but their real wages will rise by about 18.5 percent in the process. And because AI adoption does not appear extremely jagged, the gains will materialize even if workers are frozen in their respective sectors and are unable to move.
 
@@ -107,11 +113,13 @@ Sectoral and occupational wages can be characterized similarly, in terms of fron
 
 fects of AI without estimating an aggregate production function. The required elasticity, 1/ψ, can be recovered from micro-level data on the cost of humans versus AI on similar tasks. We estimate ψ using data on 484 software engineering tasks drawn from 12 open-source repositories in SWE-bench Verified (Jimenez
 
+
 et al., 2024; OpenAI, 2024). AI cost is based on the tokens used by 32 AI system configurations, released from 2024 through 2026 and evaluated by Epoch AI (Epoch AI, 2026a). Human cost is based on a professional assessment of the time needed to complete the same task, multiplied by the hourly wage of a software developer. By the end of the sample, AI completes 75.2 percent of the tasks below human cost, and for the median such task, human cost is 4 times AI cost. Our two estimation methods yield ψ = 1.14 and ψ = 1.36, so each percent decline in labor's share of GDP raises the real wage by 0.7 to 0.9 percent. We calibrate the jaggedness of adoption using sectoral measures of AI exposure (Eloundou et al., 2024), which proxy for the share of future AI improvements each sector can absorb. Other sufficient statistics are consumption and input-output shares, the share of tasks performed by AI in each industry, and the allocation of workers across industries. We calibrate them to the BEA input-output accounts (Bureau of Economic Analysis, 2024), a survey of US workers by Epoch AI and Ipsos (Epoch AI, 2026b), and the American Community Survey (US Census Bureau, 2024), respectively.
 
 We test the model against historical data, using the goodness-of-fit measure proposed by Adão, Costinot and Donaldson (2025). The yardstick is whether the calibrated model can reproduce the effects of AI growth on sectoral wages from 2022 to 2025, which were not targeted in the calibration. Because many other shocks affected wages over this period, the test asks whether the gap between observed and predicted wage changes across sectors is orthogonal to the AI growth shock. The results are encouraging. The model is not rejected, whether workers remain in their original sectors or move across sectors. The IV coefficient is 0.8 in the first case and 1.15 in the second, and both 95 percent confidence sets contain one.
 
 Next, we use the model to simulate the forward-looking impacts of AI growth. We extrapolate the observed decline in the cost of completing software engineering tasks with AI, 79.1 percent a year, and assume that the annual rate of decline slows to about 45.8 percent after five years. We present four results. First, after five years, average real wages rise by 18.5 percent, while labor's share of GDP falls from 54.1 to 39.9 percent. With an AI frontier five times less jagged, real output rises by 102.8 percent, but average real wages rise by only 0.64 percent. Jaggedness is what turns AI-driven displacement into wage growth. Second, at about the same output growth, jagged adoption pays workers more than balanced adoption, in which AI improves at the same rate in every sector. After five years, the difference in annual wage growth increases every year: by year 50, real wages grow by 8.9 percent a year under jagged adoption and 5.7 percent under balanced adoption. Third, every education group gains, even when workers cannot move across sectors, with five-year gains that range from 12.5 percent
+
 
 for workers with a bachelor's degree or more to 31.2 percent for those with high school or less. The reason is that AI-driven displacement leaves niche tasks to workers within each sector rather than emptying it. Lastly, the Jevons paradox, in which the knowledge workers that AI displaces gain the most, emerges only if the elasticity of substitution across sectors exceeds about 2.5.
 
@@ -126,6 +134,7 @@ We contribute to this discourse by applying tools from trade theory (Eaton and K
 
 2The result holds exactly when comparative advantage is unbounded; with a bound on the relative cost advantage the real wage plateaus after an early rise, whereas Korinek and Suh (2024) obtain wage collapse; and a worker who cannot leave a sector where AI capability grows much faster than elsewhere can see real earning power fall.
 
+
 of AI displacement are determined by two sufficient statistics: (1) jaggedness of AI frontier, and (2) change in the labor share of income. This result opens the door for measurement using observed labor versus AI cost data, without estimating substitutability within and across tasks. Lastly, if the AI frontier is jagged all workers can gain from AI-driven growth even if they are stuck in more AI-exposed sectors or occupations.
 
 Finally, our work relates to a growing literature that quantifies the labor market effects of AI. Freund and Mann (2026) and Althoff and Reichardt (2026) build task-based models in which workers differ in task-specific skills. Freund and Mann (2026) estimate the distribution of task-specific skills and show that automating a task reshapes the jobs that bundle it: workers who chose an occupation for the automated task leave and lose, those skilled in the remaining tasks gain, and occupational exposure is a poor guide to individual wages. Althoff and Reichardt (2026) add occupational choice and skill accumulation and identify a third channel besides automation and augmentation, simplification, which lowers the skills a task requires and drives the fall in wage inequality in their AI counterfactual. Hampole et al. (2025) argue that occupations whose AI exposure is concentrated in a few tasks lose less labor demand because workers shift toward the remaining tasks. Lindenlaub et al. (2026) infer comparative advantage and the cost of using AI from adoption data, and Lashkari et al. (2026) measure AI training and inference costs. Our framework condenses all information about the jaggedness of the AI frontier into a single estimable parameter, which we identify from task costs. Exposure ratings (Eloundou et al., 2024) Then discipline the jaggedness of adoption across sectors. Our analysis yields two fresh results. First, a jagged frontier produces large aggregate wage gains. Second, because adoption is not too jagged, these gains extend to workers
@@ -136,6 +145,7 @@ Finally, our work relates to a growing literature that quantifies the labor mark
 ## II. A Ricardian Assignment Model with Jagged Frontier
 
 We consider a neoclassical economy populated with a fixed number of workers, L &gt; 0 , and endowed with a time-varying stock of AI capacity, Mt &gt; 0. Production in each date employs labor and AI capacity. Final production involves a continuum of tasks indexed by i ∈ [0,1], each of which can be assigned to labor or AI. Each task can be performed by either factor, and because labor and AI output are perfect substitutes within a task, assignment is governed entirely by comparative cost advantage. The two factors differ along two dimensions: their productivity profiles across tasks, and their unit prices. Labor commands a wage rate wt and AI stock owners earn a rental rate rt.
+
 
 tasks. Let yt(i) denote output of task i, and let σ &gt; 0 denote the constant elasticity of substitution between tasks. Final output is a CES aggregation over the outputs of all tasks in [0,1]:
 
@@ -193,6 +203,7 @@ Thus, task i is assigned to workers if wt/zL(i) ≤ rt/zM,t(i) and is assigned t
 
 Comparative advantage. For each task, there are alternative ideas for how to perform it. Each idea is specific to either labor or AI, and its productivity is the output produced by one unit of the corresponding input. We model the stock of worker ideas and the discovery of AI-improving ideas using Poisson processes. Worker ideas are drawn once and remain fixed, whereas AI-improving ideas arrive over time, offering a new way to perform the task. The two processes share a task-specific rate of arrival. Highly productive ideas are rare in both processes. Worker productivity zL(i) is the productivity of the best worker idea for task i. AI productivity zM,t(i) is the productivity of the best AI idea discovered by date
 
+
 t. A new AI idea raises productivity only if it is better than the best available alternative.3
 
 The Poisson process over ideas, together with the assumption that productivity is determined by the best available idea, implies a nested-Fréchet distribution for worker and AI productivity. For any x and y ∈ R+, Appendix A derives the joint distribution:
@@ -233,6 +244,7 @@ ative factor price changes. Because every positive productivity ratio zL/zM is
 - 4A smaller θ makes very high productivity more common and increases dispersion in absolute productivity. When ρ = 0, worker and AI productivity are independent and ψ = θ; as ρ rises, their productivity profiles become more similar task by task.
 
 
+
 realized, each factor produces some tasks whenever both factor prices are finite and positive.
 
 The joint distribution determines which tasks workers continue to perform. As AI becomes more productive, it takes over the tasks on which it has the greatest cost advantage. Workers sort into a narrower set niche tasks for which their relative productivity is higher. If workers are left performing only a fraction πL,t of all tasks, these will be the task for which they are most productive: median worker productivity among those niche tasks is higher by a factor of π−1/ψL,t than the median across all tasks.
@@ -254,6 +266,7 @@ TLw−ψt TLw−ψt + TM,trt−ψ
 The above equation states that a factor performs more tasks when its technology improves or its price falls.
 
 A competitive equilibrium consists of task quantities, factor allocations, task prices, a wage, and an AI rental rate such that final good producers minimize the cost of producing the final output bundle under (1); each task is assigned to the lower-cost factor per (3); and the aggregate resource constraints (2) are
+
 
 Figure 1. Jaggedness of the AI capability frontier is regulated by 1/ψ
 
@@ -303,6 +316,7 @@ TL TM,t
 
 Henceforth, let M ̃t ≡ [TM,tMtψ]1/(1+ψ) denote the effective AI stock meaning that the supply of AI raises if either the supply of compute Mt increases or the AI frontier AI techniques TM,t improve through knowledge accumulation.
 
+
 Substituting the relative factor price back into (6) gives the task shares directly in terms of technologies and factor supplies:
 
 M ̃t [TLLψ]1/(1+ψ) + M ̃t
@@ -337,6 +351,7 @@ The sufficient statistics formula (11) uncovers a surprising relationship betwee
 
 5Throughout, we assume that the primitives are positive and finite, and σ &lt; 1 + θ, so that the price index is finite.
 
+
 Theorem 1.a (Displacement is not immiseration). If AI capabilities are jagged, AI-driven growth raises the real wage in inverse proportion to labor's share of economic tasks, with elasticity 1/ψ, representing the degree of frontier jaggedness:
 
 1 ψ
@@ -369,6 +384,7 @@ This corollary contrasts with the essential task framework of Jones and Tonetti 
 6The limits in (12) also hold when AI growth is recursive and reaches a singularity in finite time. If fixed shares of output finance AI installation and research, AI capabilities diverge at a finite date; as that date approaches, labor's task share vanishes and the real wage rises without bound,
 
 - at a rate that does not depend on jaggedness. Appendix B.4 states the result and Appendix B.5 proves it.
+
 
 
 precisely the tasks in which human labor retains a much higher relative cost advantage.
@@ -446,6 +462,7 @@ Yt L
 
 ### The elasticity of substitution, σ, is absent from this expression because the extensive and intensive margins of displacement exactly offset each other. This feature of the model opens the door for measurement with micro-level data without aggregate production function estimation.
 
+
 - B. General Distribution
 
 
@@ -496,6 +513,7 @@ where sM(a∗) is AI's income share and η(a∗) ≡ −dln[1 − G(a∗)]/dlna�
 
 E[lnmin{a∗/a,1}]}; all results below still hold, and E[z̃Mσ−1]1/(σ−1) becomes exp{E[lnz̃M]}. See Appendix B.2.
 
+
 The theorem states that the real wage rises monotonically to a finite plateau if ā &lt; ∞ and diverges if the productivity distribution is unbounded, i.e., ā = ∞. Moreover, if AI has an absolute advantage in every task in the chosen baseline year, which would be the case under ā = 1, then the real wage converges to AI's average productivity in that baseline year under explosive AI growth. More generally, Theorem 1.b states that the distribution of comparative advantage governs the pace of wage gains and their eventual limit, but not the direction. The pace in (16) is the ratio of AI's share of income and the tail elasticity of G (the rate at which displacement exhausts labor's remaining advantage). The limit, meanwhile, (17) depends on the upper endpoint of G. If comparative advantage is bounded, the real wage climbs to a finite plateau rather than collapsing, even as AI absorbs every task; if it is unbounded, the real wage grows without bound.8 In Korinek and Suh (2024), a bound on task complexity lets AI automate every task and the real wage collapses; here, a hard bound on relative advantage makes the real wage plateau instead, because collapse would require price of AI services to become exactly zero.9
 
 - C. Displacement Gives Worker Leverage
@@ -513,6 +531,7 @@ lnwt ∂ lnM ̃t
 
 - 8A constant tail elasticity is not required for the latter: an unbounded G whose tail elasticity grows without bound still delivers unbounded growth, though at a lower rate than any power of 1/πL,t—see Appendix B.2.
 - 9Fréchet productivity is used because it delivers a closed form, not because it delivers an optimistic result. Under it the response of the real wage to displacement in (16) is the constant 1/ψ, so the real wage is an exact power function of 1/πL,t at every task share, while Theorem 1.b requires no such assumption. Appendix B.2 shows that limiting labor's comparative advantage to a finite upper bound ā multiplies that response by 1−(a∗t/ā)ψ at σ = 1, where a∗t is the cutoff comparative advantage at which tasks shift to AI. That factor is close to one while the cutoff is well below ā and falls to zero as the cutoff approaches ā, so a bound makes wage gains smaller rather than larger.
+
 
 
 The corresponding wage and output growth rates are
@@ -542,10 +561,11 @@ gY,t.10 This differs from Korinek and Suh (2024), where automation reduces the n
 
 Theorem 1.a shows that the real wage rises as AI displaces labor from tasks. In the framework, however, workers switch to other tasks and avoid unemployment in he transition. The transition assumes away nominal rigidities. It requires that the nominal wage rate adjusts so that all L workers remain employed on the remaining human tasks. Here, asks what happens to employment under nominal wage rigidities.
 
-We work within the same Ricardian economy, but no longer assign the final good as the numeraire to emphasize nominal rigidities. Let Pt̆ denote the price index of final output, and let w̆t = Pt̆wt denote the nominal wage rate, r̆t = Pt̆rt
+We work within the same Ricardian economy, but no longer assign the final good as the numeraire to emphasize nominal rigidities.Let Pt̆ denote the price index of final output, and let w̆t = Pt̆wt denote the nominal wage rate, r̆t = Pt̆rt
 
 - 10Section (VII) estimates ψ = 1.36, which implies 1/(1 + ψ) ≈ 0.42. Based on these estimates, real wages grow by 0.42 percent for every 1 percent increase in output.
 - 11It is important to understand that this result is about the purchasing power of labor, not its income share. The labor share of income falls as AI performs more tasks. However, even though workers are stuck in small pockets of GDP, their wages have high purchasing power because growth in AI capabilities lowers the cost of performing most tasks, making consumer goods cheaper.
+
 
 
 represent the nominal rental rate, and Yt̆ = Pt̆Yt the nominal GDP. All L workers are willing to work, but only ntL of them are employed, where nt ∈ (0,1] is the employment rate and ut = 1 − nt the unemployment rate. In equilibrium the nominal wage equals the value of the marginal product of labor, and labor's share of GDP equals its share of tasks as in Corollary 1. The factor market clearing condition (7) becomes
@@ -577,6 +597,7 @@ t n0
 When nominal GDP and the nominal wage are unchanged, the last fraction equals one, and employment falls in proportion to labor's task share: a one percent decline in labor's task share means a one percent decline in employment. Employment falls because labor's share of a fixed nominal GDP falls while the nominal wage cannot, not because each displaced task is a job.
 
 Proposition 1 (Task displacement and employment). Start from full employment, n0 = 1, and let the effective AI stock M ̃t grow between dates 0 and 1, with TL and L fixed. If
+
 
 nominal GDP is unchanged, Y1̆ = Y0̆ , and the nominal wage cannot fall, so that (21) holds with δw = 1, then the unique equilibrium has w̆1 = w̆0 and
 
@@ -619,6 +640,7 @@ Thus far we have modeled the economy as a single aggregate sector, which of cour
 ber of sectors s ∈ {1,...,S}. Sector s produces Ys,t at price Ps,t by aggregating over a continuum of tasks similar to the baseline economy. Labor and AI pro-
 
 We formalize this point by extending the baseline model, adding a finite num-
+
 
 ductivity across tasks within a sector follow a Fréchet distribution, mirroring the single sector case. The Fréchet dispersion parameter ψ &gt; 0 is the same across sectors, but labor productivity TLs is sector-specific and fixed, and stock of AI techniques is also sector-specific TMs,t, but evolves over time.
 
@@ -692,6 +714,7 @@ s
 
 12The specific details about sectoral employment and AI allocation in equilibrium are provided in Appendix B.7.
 
+
 Real output is given by Yt = wt (L + Mt
 
 ). To compare broad and narrow AI progress, we introduce sectoral heterogeneity in AI progress as follows: let At &gt; 0 be a common AI productivity index that grows without bound. Sector s follows the power path
@@ -740,6 +763,7 @@ Appendix B.7 provides the formal proof for this theorem. The same logic underpin
 
 13The concentrated progress result depends on Cobb–Douglas demand: with σU ∈ (0,1), the expenditure shares of sectors with AI progress fall to zero, wt/rt is pinned down by sectors with fixed intensity, and wt and Yt approach finite positive limits, so this result does not determine the
 
+
 - Corollary 2 (Balanced vs jagged adoption). If labor is perfectly mobile across sectors: Balanced AI adoption across sectors is the worst-case scenario for labor wage growth. By contrast, strictly jagged adoption, in which some sectors see no AI gains at all, lets workers capture most of the growth surplus, with real wages rising proportionally with output.
 
 
@@ -786,6 +810,7 @@ k,t
 k
 
 limiting ratio of real wage growth to output growth; Appendix B.8 gives the equations, proof, and limiting real wage.
+
 
 ### Let λs be sector s's Domar weight, which is its final good plus intermediate output relative to GDP, with Λ ≡∑s λs.14 The share of tasks assigned to AI in equation (26) is given by
 
@@ -857,6 +882,7 @@ min
 
 14Specifically, λ = (I − Γ)−1β where βs denotes the final expenditure shares. Thus, αsλs represents the value added share which add up to one.
 
+
 Since Λ &gt; 1, the share of output growth appearing as wage growth under balanced adoption is higher with intermediate inputs than without them. The lower bound Λ/(Λ + ψ) is strictly greater than the bound without input-output loops.15 Two factors contribute to the higher floor. First, input-output loops amplify the consumer gains from AI-driven growth, which manifests itself as a fall in the cost of goods relative to the wage rate. Moreover, as intermediate inputs become cheaper and more productive, the marginal productivity of labor indirectly benefits from AI-driven growth, putting upward pressure on wagesa force that is absent in the baseline model without intermediate input use.16
 
 ## V. Universal Wage Growth Can Happen without Mobility
@@ -898,6 +924,7 @@ zMs,t(i)
 ∑s αsλs ΔlnπLs. Since ∑s αsλs = 1, this case weakens the amplification effects of input-output linkages. See Appendix C.2 for further details.
 
 ψ
+
 
 ### income in a different sector.17 The Fréchet structure yields closed-form expressions for group-level earnings and employment shares across sectors. Namely, the share of group g workers employed in sector s and the group's average earnings are
 
@@ -989,6 +1016,7 @@ that for every group g, there is at least one sector for which agk &gt; 0 , and 
 
 17We do not assume that every education group can work in every sector. Instead we impose
 
+
 ### 1. In this case, the percent change in real wages from growing AI capabilities can be expressed as
 
 1 + ψ ψ
@@ -1071,6 +1099,7 @@ The flip side of the above result is that if max
 
 , AI adoption is so much faster in one sector than the rest of the economy that a worker who cannot leave that sector eventually sees their real earning power approach zero. The reason is that jagged adoption will produce a Baumol's cost disease effect. Sectors that are slow to adopt will become increasingly expensive relative to fast-adopting sectors. So, workers in fast-adopting sectors will see the purchas-
 
+
 ing power of their wage fall w.r.t. the consumer goods purchased from lagging sectors. That being said, the condition in Theorem 3 is satisfied based on our forthcoming estimation. The left-hand side is (maxs νs)/∑k(βkνk) ≤ 1.63 in every year of our counterfactual, compared with (1 + ψ)/ψ = 1.74. So, in this simple setting, even a worker stuck in the sector experiencing the fastest AI adoption will see their real wage grow at no less than 6.06 percent of the rate of output growth.18
 
 A. The Jevons Paradox
@@ -1097,6 +1126,7 @@ growing sector-specific capital like machinery. In that case, increased demand r
 
 
 strepo (2018) for the productivity effect to dominate displacement. The running assumption in all cases is that a sector is small enough that Y and r are unaffected.
+
 
 limit κ ↓ 1, where labor is immobile across sectors, the relative wage across any two sectors is fully determined by the relative displacement effect as20
 
@@ -1125,6 +1155,7 @@ A common example widely used to caution against the effects of AI-driven displac
 
 their income.
 
+
 AI versus Trade
 
 Trade is often invoked as an example of a large-scale technological change that led to massive displacement. It immiserated workers in import-competing sectors, and makes one wonder why AI-driven displacement would be any different? Theorem 3 sheds light on this exact question. It states that when sector s undergoes a technological change and workers cannot leave that sector, their real wage prospects depend on the concentration of the shock in that sector,
@@ -1145,7 +1176,9 @@ The fact that international trade in tasks is concentrated in select industries 
 - 23We take blocks as given here. They emerge when tasks are performed in sequence and an intermediate good that changes country between two consecutive tasks requires f ≥ 0 units of border crossing services, produced with home and foreign labor in Cobb–Douglas shares of onehalf each. The country of each task is then chosen to minimize the cost of performing tasks plus the cost of border crossing, and a block is a full run of consecutive tasks in one country.
 
 
-###### Figure 2. Task bundling and effective jaggedness
+
+- Figure 2. Task bundling and effective jaggedness
+
 
 - (a) Averaging within a block
 
@@ -1156,6 +1189,8 @@ One k-task block
 - (b) AI
 - (c) Trade
 
+
+⋯
 
 1 ψ
 
@@ -1204,17 +1239,21 @@ The worker's real wage rises without bound if νs/∑s
 
 This section estimates ψ, the parameter that reflects the jaggedness of AI frontier and regulates the strength of Ricardian comparative advantage. I use two methods for estimating ψ. The first method recover ψ from the share πM of tasks that AI can complete below human cost and the median cost gap between AI
 
+
 and humans. The second method identifies ψ from the curvature of the relative cost distribution. Both methods require data moments that are currently available only for software engineering (SWE) tasks. The reason is that software tasks have largely observable contexts and verifiable outputs, making them amenable to automation and benchmarking.
 
 A natural question is whether the value of ψ estimated from software engineering tasks is representative of the broader economy. I view these estimates as a plausible upper bound on the economy-wide ψ. The argument is that the same features that make software tasks amenable to AI automation are also likely to make AI productivity relatively uniform across tasks. The performance of AI would be arguably more varied across tasks that combine text-based and embodied elements. Take, for instance, tasks related to legal work, which range from drafting documents to appearing in court. The former is a standard AI task, but the latter is more difficult for AI to perfect. Extrapolating from this example, one could argue that AI's productivity is likely to be more dispersed across tasks outside software engineering.
 
 This interpretation makes our quantitative results that follow conservative, considering the paper's central premise. The paper argues that AI-driven growth can raise workers' real wages despite large-scale displacement. Using the software-based estimate for ψ would understate the real-wage gains generated by Ricardian selection, because a larger ψ implies less scope for comparative advantage across tasks.24
 
-Data. Our estimation uses data from 484 software-engineering drawn from 12 open-source repositories in SWE-bench Verified (Jimenez et al., 2024; OpenAI, 2024). The panel records 32 AI system configurations released from 2024 through 2026 and evaluated by Epoch AI, an independent research organization (Epoch AI, 2026a). The 32 configurations arrive on 26 distinct release dates, which is also the time dimension used throughout the paper. AI cost is the API charge for the tokens used in a successful attempt, scaled by a factor of 175 that stands for deployment costs beyond tokens (Appendix D.1). Human cost is based on a professional assessment of the time needed to complete the same task, multiplied by one of three hourly wage rates: the BLS mean software developer wage, an effective BLS wage scaled up by a fixed multiplier 1.4 to cover benefits and overhead, and a freelance rate of 100 dollars per hour (Bureau of Labor Statistics, 2023b,a; Upwork, 2026). All costs are converted to July 2026 dollars using the CPI-U deflator (Bureau of Labor Statistics, 2026).
+Data. Our estimation uses data from 484 software-engineering drawn from 12 open-source repositories in SWE-bench Verified (Jimenez et al., 2024; OpenAI, 2024). The panel records 32 AI system configurations released from 2024 through 2026 and evaluated by Epoch AI, an independent research organization (Epoch AI, 2026a). The 32 configurations arrive on 26 distinct release dates, which is also the time dimension used throughout the paper. AI cost is the API charge for the tokens used in a successful attempt, scaled by a factor of 175 that stands for deployment costs beyond tokens (Appendix D.1). Human cost is based on a professional assessment of the time needed to complete the same task, multiplied by one of three hourly wage rates: the BLS mean software developer wage, an effective BLS wage scaled up by a fixed multiplier 1.4 to cover benefits and overhead, and a freelance rate of 100 dollars per hour (Bureau of Labor Statistics, 2023b,a; Upwork, 2026). All costs are converted to July 2026 dollars using the CPI-U deflator (Bureau of Labor Statistics, 2026a).
 
 24The parameter ψ also sets the size of the implied improvement in AI capabilities given an observed average cost decline. So, a lower ψ makes the counterfactual shock smaller. Appendix D.3 runs the model using lower estimates for ψ and shows larger gains in real wages but smaller gains in real output.
 
+
 Our baseline analysis constructs relative cost ratios using effective labor wages, adjusted for overhead. Since the experts report a range of hours rather than a single number for human time requirements, we use the midpoint of that range and treat tasks marked as "more than four hours" to never exceed 16 hours. AI cost is calculated based on the cheapest rate available from any model that completed the task by June 2026. Appendix D.1 provides further details on the construction and provenance.
+
+We complement the data on software engineering tasks with data human versus aAI cost data from 1,565 tasks in six other domains: finance and accounting, cybersecurity, research and information retrieval, data analysis, machine learning research, and unspecified technical work. The tasks come from public benchmarks that record, for each task, the time a human needs, observed in baseline runs or assessed by experts, and the price of each AI attempt evaluated on it (METR, 2026; Olariu et al., 2026; Lyptus Research, 2026; Mialon et al., 2023; Patronus AI, 2025). Human cost is that time priced at the employer cost of the occupation that performs such tasks, computed from the mean hourly wage and the ratio of total compensation to wages (Bureau of Labor Statistics, 2025b, 2026b). AI cost is the price of the cheapest successful attempt by any evaluated system, scaled by a factor that stands for deployment costs beyond tokens; the factor is set for each domain so that the share of tasks AI completes below human cost matches survey and usage evidence on AI's share of the occupation's work (Epoch AI, 2026b; Massenkoff and McCrory, 2026; National Center for O*NET Development, 2026). These tasks are observed once, at the latest frontier, rather than over release dates. AI has completed 661 of them, and the 904 tasks it has never completed count as above human cost. All costs are in July 2026 dollars, and Appendix D.1 describes both samples.
 
 - A. Estimating the Jaggedness of the AI Frontier (1/ψ)
 
@@ -1241,21 +1280,20 @@ w r
 
 Pr[D(i) ≤ d] =[1 + Ωd−ψ]−1 , Ω ≡ M TL
 
-. (39)
+### . (39)
 
 (
 
 )
 
+
 The share of assignments for which agentic AI is cheaper than humans is therefore πM = Pr[D(i) &gt; 1]. Below I use the above expression to develop two methods for estimating ψ using data on SWE tasks.
 
 Release-Level Regression. Let m ≡ Med[D(i) ∣ D(i) &gt; 1] denote the median cost spread between humans and AI among tasks that AI performs cheaper. At cost parity, where d = 1, equation (39) gives Ω = πM/(1−πM). Since m divides the tasks above cost parity in half, it follows that Pr[D(i) ≤ m] = 1 − πM/2. Plugging these values back into Equation gives
 
-2 − π 1 − πM (40) If the productivity distribution follows a nested-Fréchet, Equation (40) holds at every release date with the same ψ. This equation will forms the basis of our first estimation method. Let πˆM,t denote the sample share of tasks completed by AI below human cost by date t, and let mˆt denote the corresponding condi-
+2 − π 1 − πM (40) If the productivity distribution follows a nested-Fréchet, Equation (40) holds at every release date with the same ψ. This equation will forms the basis of our first estimation method. Let πˆM,t denote the sample share of tasks completed by AI below human cost by date t, and let mˆt denote the corresponding conditional median.25 Rearranging equation (40) and taking logs gives the estimating equation across release dates:
 
 mψ =
-
-tional median.25 Rearranging equation (40) and taking logs gives the estimating equation across release dates:
 
 2 − πˆ 1 − πˆM,t
 
@@ -1273,7 +1311,12 @@ St(d) 1 − St(d)
 
 ln
 
-The left-hand side represents the log odds ratio that a task has a cost spread above d. Thus ψ is the constant elasticity at which the log odds ratio falls with lnd. The intercept lnΩt = ln[πM,t/(1 − πM,t)] is pinned down by πM,t, which is directly observable. Plugging the expression for lnΩt back into the above equation obtains our estimating equation
+The left-hand side represents the log odds ratio that a task has a cost spread above d. Thus ψ is the constant elasticity at which the log odds ratio falls with lnd. The intercept lnΩt = ln[πM,t/(1 − πM,t)] is pinned down by πM,t, which
+
+25To harmonize the sample across both methods, the tasks with the greatest AI cost advantage must be left out for every released date. However, mˆt is nearly unchanged without these tasks.
+
+
+is directly observable. Plugging the expression for lnΩt back into the above equation obtains our estimating equation
 
 Ŝi,t 1 − Ŝi,t
 
@@ -1290,48 +1333,31 @@ Here di,t is the cost spread of task i at date t, and Ŝi,t is the share of the 
 - B. Estimation Results
 
 
-Table 1 reports the estimated ψ under both methods. The release-level regression yields ψˆ = 1.14, and task-level regression delivers ψˆ = 1.36, both with
+Table 1 reports the estimated ψ under both methods. The release-level regression yields ψˆ = 1.14, and task-level regression delivers ψˆ = 1.36, both with narrow bootstrapped standard error bands.26 Figure 3 reports the mechanics of each estimation strategy. Panel (a) shows the path of πM over release dates, showing that the share of tasks AI completes below human cost increased to 75.2 percent by the end of the sample.27 Panel (b) plots the distribution of the human-to-AI cost ratio G(.) among tasks dominated by AI at the latest release. For the median such task, the human costs 4 times more than agentic AI. The release-level regression identifies ψ from these two data moments across the 26 release dates. Panel (c) plots the log odds ratio against the cost spread across all tasks. The slope of the fitted line corresponds to the ψ identified by the task-level estimation. Both methods, deliver comparable results which is encouraging.
 
-25To harmonize the sample across both methods, the tasks with the greatest AI cost advantage must be left out for every released date. However, mˆt is nearly unchanged without these tasks.
-
-narrow bootstrapped standard error bands.26 Figure 3 reports the mechanics of each estimation strategy. Panel (a) shows the path of πM over release dates, showing that the share of tasks AI completes below human cost increased to 75.2 percent by the end of the sample.27 Panel (b) plots the distribution of the human-to-AI cost ratio G(.) among tasks dominated by AI at the latest release. For the median such task, the human costs 4 times more than agentic AI. The release-level regression identifies ψ from these two data moments across the 26 release dates. Panel (c) plots the log odds ratio against the cost spread across all tasks. The slope of the fitted line corresponds to the ψ identified by the task-level estimation. Both methods, deliver comparable results which is encouraging.
-
-Robustness. A range of robustness checks is reported in the appendix. Specifically, I re-run the estimations under several alternative configurations. First, I re-run the task-level estimation on the full sample without winsorization, which leaves the estimated ψ mostly unchanged at 1.35. I also experiment with various proxies for the hourly wage drawn from different sources. Changing the hourly wage shifts the relative human-to-AI cost, potentially affecting the release-level regression that depends on the sample median cost. The estimated ψ stays between 0.99 and 1.95 under all explored specifications. Appendix Figure B1 reports the full session sensitivity grid. The takeaway is that the estimated ψ remains in a range of values that all predict qualitatively the same real-wage and displacement trajectory when inserted into the model.
-
-The relative cost distribution G(.) is continuous. Even though we fit a Fréchet distribution to the data, the headline result of the paper does not require Fréchet. AI-driven displacement coincides with real wage growth so long as the humanto-AI cost distribution G(.) is continuous, as Theorem 1.b demonstrated. Figure 4 plots the raw distribution G(.) over tasks from the latest release date. The plot visibly satisfies the continuity requirement posited by Theorem 1.b. Moreover, the Fréchet fit implied by each estimate of ψ closely mimics the empirical distribution, suggesting that our quantitative framework also provides a reasonable approximation of the data.
+Robustness. A range of robustness checks is reported in the appendix. Specifically, I re-run the estimations under several alternative configurations. First, I re-run the task-level estimation on the full sample without winsorization, which leaves the estimated ψ mostly unchanged at 1.35. I also experiment with various proxies for the hourly wage drawn from different sources. Changing the hourly wage shifts the relative human-to-AI cost, potentially affecting the release-level regression that depends on the sample median cost. The estimated ψ stays between 0.99 and 1.95 under all explored specifications. Appendix Figure B1 reports the full session sensitivity grid. The takeaway is that the estimated ψ
 
 - 26The small bootstrapped standard errors capture only the random draw of repositories and not measurement error in human costs. Each draw changes which repositories are in the sample but keeps the assessed completion times and human cost conventions fixed. Appendix D.3 shows how much the estimate changes across human cost specifications and wage bases.
 - 27A simple regression of AI cost on release date gives an annual coefficient of -1.57, which implies a 79.2 percent decline per year.
 
 
-Table 1. Estimation results: Productivity Dispersion Parameter ψ
 
-Release level Task level
+Table 1. Estimates of ψ, the inverse jaggedness of the AI frontier Panel A. Software engineering Panel B. Six other domains Release level Task level Release level Task level
 
-(1) (2) Dispersion parameter ψ 1.14 1.36
+(1) (2) (1) (2) ψ, all tasks 1.14 1.36 0.71 0.84
 
-(0.06) (0.04)
+(0.06) (0.04) (0.09) (0.07) ψ, tasks AI has completed 1.27 1.46 0.87 0.94
 
-Implied wage growth (percent of output growth) 47 42 Tasks 484 484 Release dates 26 26 Task–date observations 6,589 6,589
+(0.05) (0.04) (0.11) (0.08)
 
-Notes: Both estimates use the same sample: the 484 tasks observed over 26 release dates on the frontier, whose assigned cost ratios—other than the largest ratio at each date, for which the observed share above is zero—give one observation for each task and date, 6,589 in total. Estimate (1) is the release-level regression estimate of equation (41), which collapses the sample into two values per release date—the share of tasks AI completes below human cost and the median of the cost ratios at that date in the sample—with no intercept. Estimate (2) is the task-level regression estimate of equation (42) on each observation directly; the terms for each release date are not estimated but set to the observed log odds of assignment at that date, and we winsorize the log cost ratios at each release date at the 5% level. Standard errors, below each estimate, are calculated by selecting 12 repositories at random with replacement 400 times, keeping every task from a repository together, and recomputing both estimates each time. Implied wage growth is 100/(1+ψ)ˆ , the model's real-wage growth rate as a percent of the output growth rate. Both estimates use the BLS wage scaled up by 1.4, an upper limit of 16 hours, the midpoint in logs of each range of hours, and costs in July 2026 dollars.
+Tasks 484 1,565 Tasks AI has completed 448 661 Release dates 26 Task–date observations 6,589 Domains 6
 
-- C. Discussion
+Notes: ψ is the dispersion of AI's cost advantage across tasks; the jaggedness of the frontier is 1/ψ. Column (1), the release-level regression of equation (41), uses two values per release date, the share of tasks AI completes below human cost and the median cost ratio, with no intercept. Column (2), the task-level regression of equation (42), uses every task–date observation, with each date's term set to its observed log odds of assignment and log cost ratios winsorized at the 5% level; the largest ratio at each date is left out. Panel A: 484 software engineering tasks over 26 release dates; standard errors from 400 draws of the 12 repositories with replacement. Panel B: 1,565 tasks in finance and accounting, cybersecurity, research and information retrieval, data analysis, machine learning research, and unspecified technical work, each observed once at the latest frontier; standard errors from 2,000 resamples of the tasks. A task AI has never completed counts as above human cost; the second ψ in each panel keeps only the tasks AI had completed by each release date (Panel A) or has completed (Panel B). All costs are in July 2026 dollars.
 
+remains in a range of values that all predict qualitatively the same real-wage and displacement trajectory when inserted into the model.
 
-The parameter also governs the wage response to task displacement and the gross reassignment hidden behind net displacement. First, the model's realwage equation implies
+The relative cost distribution G(.) is continuous. Even though we fit a Fréchet distribution to the data, the headline result of the paper does not require Fréchet. AI-driven displacement coincides with real wage growth so long as the humanto-AI cost distribution G(.) is continuous, as Theorem 1.b demonstrated. Figure 4 plots the raw distribution G(.) over tasks, for software engineering at the latest release date and for the six other domains. The plot visibly satisfies the continuity requirement posited by Theorem 1.b. Moreover, the Fréchet fit implied by each estimate of ψ closely mimics the empirical distribution, suggesting that our quantitative framework also provides a reasonable approximation of the data.
 
-∂ lnwt ∂ ln(1/πL,t)
-
-1 ψ
-
-=
-
-. (43)
-
-At the two estimates of ψ, the local percentage increase in the real wage is 0.7 to 0.9 times the percentage contraction in labor's task share. This is an elasticity with respect to labor's task share, not the response to a unit change in AI's task share, which also depends on the level of assignment.
-
-For the counterfactuals, we use the task-level distribution estimate ψ = 1.36 from Table 1 and impose this value in every sector. Appendix D discusses the limits of applying the software-engineering estimate to other industries, and Appendix Figure B1 reports estimates under different wage bases and assessedtime conventions. Incomplete tasks provide no AI cost observation, as Appendix
 
 - Figure 3. Data Moments Used for Estimating ψ
 
@@ -1422,41 +1448,53 @@ Human-to-AI cost ratio (log scale)
 
 Notes: Panel (a) reports, by release date, the share of the 484 tasks completed at a cost below human cost. The final share is 75.2 percent. Three larger circle points show the shares of software written by AI that two large software producers reported, the three values to which the factor that stands for deployment costs beyond tokens is calibrated. Panel (b) plots the empirical distribution of the human-to-AI cost ratio among tasks assigned to AI. Its horizontal axis is on a log scale; the line and the point show that median human cost is 4 times AI cost. Panel (c) plots the 6,589 points behind equation (42), one for each task and date, before winsorization: for each assigned task, the log odds that the cost ratio of a task exceeds its observed ratio, net of the log odds of assignment at that date, against the log cost ratio. Each of the 26 release dates contributes one line; the point at d = 1 is cost parity, through which every line passes by construction, and the fitted line with no intercept, estimated after winsorization as in the text, has slope −1.36, the task-level estimate of −ψ. Each panel uses the BLS wage scaled up by 1.4, an upper limit of 16 hours, and the midpoint in logs of each range of hours. Panel (a) and panel (c) follow the frontier by release date; panel (b) uses its June 2026 endpoint. Panel (a) and panel (b) show no fitted distribution. Our calculation uses the task-level cost and assignment data described in Appendix D.1.
 
-- D.5 explains. These estimates describe observed comparative advantage and do not determine its ultimate range.
-
-
-- D. Macroeconomic Calibration
+- C. Macroeconomic Calibration
 
 
 We use the full model with multiple sectors, multiple factors, and input-output linkages to run the simulations. As detailed in Appendix C, counterfactual equilibria can be simulated by calibrating the model to six sufficient statistics from the baseline equilibrium. Two of these statistics are industry-level share variables: (1) Final consumption shares, βs, and input-output shares, Γks, and (2) the share of tasks πMs performed by AI in that industry. The two other statistics correspond to worker allocation under the status quo. Namely, (3) the share of each education group employed in each industry, μgs, and (4) each group's share of the aggregate wage bill, ωg. The final requirements two are structural parameters: (5) the productivity dispersion parameter, ψ, and (6) the Roy pa-
 
+
 ###### Figure 4. Distribution of the Human-to-AI Cost Ratio across Tasks and the Fréchet Fit
+
+Software engineering
 
 Humans cheaper AI cheaper
 
-Task-level regression ψ = 1.36
+Task-level regression ψ = 1.46
 
 40 tasks
+
+Release-level regression ψ = 1.27
 
 30
 
 20
 
-Release-level regression ψ = 1.14
-
 10
 
 0
 
-−3 −2 −1 0 1 2 3
+−6 −4 −2 0 2 4 6
 
 Log human-to-AI cost ratio, lnD
 
-Notes: The figure shows the distribution of the log human-to-AI cost ratio across the 484 tasks at the June 2026 endpoint of the AI frontier. The AI cost frontier is determined by the cheapest successful completion of each task. We treat uncompleted tasks as below cost parity but do not draw them. The line at D = 1 shows cost parity; the share of tasks to its right is 75.2 percent. Each fitted line is the density of the log cost ratio implied by the paper's Fréchet distribution based on estimates of ψ from Table 1: 1.36 (task-level regression) or 1.14 (release-level regression). Its calibrated so that its share above parity equals the observed share and scaled to the number of tasks. Costs use the BLS wage scaled up by 1.4, an upper limit of 16 hours, and the midpoint in logs of each range of hours.
+Six other domains
+
+Humans cheaper AI cheaper
+
+Task-level regression ψ = 0.94
+
+Release-level regression ψ = 0.87
+
+−6 −4 −2 0 2 4 6
+
+Log human-to-AI cost ratio, lnD
+
+Notes: Each panel shows the distribution of the log human-to-AI cost ratio across the tasks AI has completed: 448 software engineering tasks at the June 2026 endpoint of the AI frontier, and 661 tasks in the six other domains, observed once at the latest frontier. The AI cost frontier is determined by the cheapest successful completion of each task. Tasks AI has never completed count as above human cost and are not drawn. The line at D = 1 shows cost parity. Each fitted line is the density of the log cost ratio implied by the paper's Fréchet distribution based on the estimates of ψ for the tasks AI has completed from Table 1: 1.46 and 0.94 (task-level regression) or 1.27 and 0.87 (release-level regression). It is located so that its share above parity equals the share among the drawn tasks and scaled to their number. Software engineering costs use the BLS wage scaled up by 1.4, an upper limit of 16 hours, and the midpoint in logs of each range of hours; costs in the six other domains are constructed as described in Section VII.
 
 rameter κg, which regulates worker mobility across sectors.28 The counterfactual equilibrium can be solved using these observable or estimable statistics by solving the system (C20)–(C29) in changes.
 
-The consumption and input-output shares, βs, Γks, are calibrated to match the 2024 BEA accounts on input-output and value added shares (Bureau of Economic Analysis, 2024). the sample covers 71 industries, with details about data construction provided in Appendix C.2. We calibrate the employment shares μgs to the 2024 American Community Survey (US Census Bureau, 2024). The sample includes employed adults aged 25–64 in private and government sectors, with the latter accounting for 16.9 percent of the wage bill. We group workers into (1) high school or less, (2) some college or an associate degree, and (3) a bachelor's degree or more. Their share ωg, of the aggregate wage bill claimed by each group are respectively, 18.2, 21.4, and 60.4 percent. We adjust the group-by-industry wage bills to match the model's sector wage bills
+The consumption and input-output shares, βs, Γks, are calibrated to match the 2024 BEA accounts on input-output and value added shares (Bureau of Economic Analysis, 2024). the sample covers 71 industries, with details about data construction provided in Appendix C.2. We calibrate the employment shares μgs to the 2024 American Community Survey (US Census Bureau, 2024). The sample includes employed adults aged 25–64 in private and government sectors, with the latter accounting for 16.9 percent of the wage bill. We group workers into (1) high school or less, (2) some college or an associate degree, and (3) a bachelor's degree or more. Their share ωg, of the aggregate wage
 
 28To allow for capital income, the calibrated model lets final output combine the task bundle Ys with fixed sector-specific capital Ks. Namely, Ys̃ = Yθ
 
@@ -1464,13 +1502,14 @@ s s, where θs &gt; 0 is an observable share.
 
 s sK1−θ
 
-while matching these group-level shares. We use ψ = 1.36 and, following Galle, Rodríguez-Clare and Yi (2023), set κg = 1.5 for every group. Appendix C reports further details on the industry concordances and calibration method.29
+
+bill claimed by each group are respectively, 18.2, 21.4, and 60.4 percent. We adjust the group-by-industry wage bills to match the model's sector wage bills while matching these group-level shares. We use ψ = 1.36 and, following Galle, Rodríguez-Clare and Yi (2023), set κg = 1.5 for every group. Appendix C reports further details on the industry concordances and calibration method.29
 
 The share πMs of tasks performed by AI in each industry is calibrated using the July 2026 survey of 1,103 employed US adults by Epoch AI and Ipsos (Epoch AI, 2026b). We supplement this data the Anthropic Economic Index (Massenkoff and McCrory, 2026) to extend that measurement beyond the survey. The Epoch AI–Ipsos survey asks US workers how much they rely on AI for 10 types of tasks, such as reading documents and analyzing data. These tasks, however, represent only a fraction of the work people perform. So, we rely on the Anthropic Economic Index to extend coverage to further tasks. Anthropic covers a wider range of tasks scoring them based on Claude and assessed AI capability. The drawback is that these scores do not directly measure the percentage of work delegated to AI. Yet they can be used to impute the AI task share πMs across work that is not represented in the Epoch AI–Ipsos survey.
 
 We build each πMs from industry worker occupation mix in industry s as follows. The Epoch AI–Ipsos survey measures AI use across ten tasks, identifying each respondent's occupation group. Each occupation performs many tasks not included in the survey. So, we draw on O*NET's task descriptions to map tasks to occupation (National Center for O*NET Development, 2026). We then impute AI use on the remaining tasks per acceptation. For this, we leverage the fact that in the Anthropic Economic Index, the average score for tasks outside the Epoch AI–Ipsos survey is 0.66 times the surveyed tasks. We impose a proportionality assumption, whereby AI performs the non-surveyed tasks in each occupation at 0.66 times that occupation's surveyed rate.
 
-Figure 5 provides an overview of the 71 industries. Each circle represents one industry, with the size scaled with the industry's value added share, and the colors running from orange to teal based on the share of employees with college degrees or higher. Panel A displays the intensity by which production in industry uses cognitive versus physical tasks. Industries located in the bottom right of the plot rely more on cognitive skills, while industries located in top left involve more physical work.30 Panel B compares two measures of AI exposure. It plots the current AI task share πMs against the forward-looking exposure score es on
+Figure 5 provides an overview of the 71 industries. Each circle represents one industry, with the size scaled with the industry's value added share, and the colors running from orange to teal based on the share of employees with college degrees or higher. Panel A displays the intensity by which production in industry uses cognitive versus physical tasks. Industries located in the bottom right of the plot rely more on cognitive skills, while industries located in top left involve
 
 29To allow for capital income, we calibrate the share of primary non capital inputs as θs = min{ w
 
@@ -1480,19 +1519,20 @@ D s LDs
 
 πLsαsXs
 
-30The manual and cognitive task indexes are not input shares in production function aggregating over tasks. They are different indexes and do not add up to 100.
 
-the horizontal axis. The latter is constructed from (Eloundou et al., 2024) based on the assessment of whether large language models could reduce task completion time by one-half without reducing quality.31 The two exposure measures serve different purposes: the survey-based πMs determines the baseline AI task share in the calibrated model, while es is an ex-ante measure that proxies for the adoption rate, which is the share of future AI improvements a sector can absorb.32 Appendix C details the construction of these measures, and Appendix C.11 runs sensitivity analyses using the lower baseline exposure shares based on Microsoft's record of AI use.
+more physical work.30 Panel B compares two measures of AI exposure. It plots the current AI task share πMs against the forward-looking exposure score es on the horizontal axis. The latter is constructed from (Eloundou et al., 2024) based on the assessment of whether large language models could reduce task completion time by one-half without reducing quality.31 The two exposure measures serve different purposes: the survey-based πMs determines the baseline AI task share in the calibrated model, while es is an ex-ante measure that proxies for the adoption rate, which is the share of future AI improvements a sector can absorb.32 Appendix C details the construction of these measures, and Appendix C.11 runs sensitivity analyses using the lower baseline exposure shares based on Microsoft's record of AI use.
 
-- E. Historical Validation: The Model Explains 2022-25 Labor Market Effects
+- D. Historical Validation: The Model Explains 2022-25 Labor Market Effects
 
 
 Before deploying the estimated model for forward-looking counterfactual simulations, it is useful to test its explanatory power with respect to observed AI displacement effects. To this end, we perform a retrospective test of the model using IV-based goodness-of-fit measure developed by Adão, Costinot and Donaldson (2025). We ask whether the calibrated model reproduces the labor market effects that materialized between 2022 and 2025, but were not targeted in the calibration. As detailed in Appendix C.12, we use changes to sectoral wages from May 2022 to May 2025 as our validation test target.
 
-The test has a simple logic. Between 2022 and 2025, the economy was hit by many shocks, each of which may have affected wages. One such shock was the rapid improvement in agentic AI capabilities from near-zero levels to those observed in 2025. This rapid growth shock hit different sectors with various levels of intensity, represented by instrument zs. The idea behind the test is to use the calibrated model to simulate the wage changes {Δws} implied by AI growth. We then define the residual wage change as the difference between observed wage growth from 2022 to 2025 and the model-predicted wage change due to AI, ΔwsD − Δws. If the model correctly predicts the wage effects of AI growth, this residual should be orthogonal to the AI growth shock. Formally, the goodness of fit statistic βˆz = S−1 ∑s zs(ΔwsD − Δws) must have an expected value of zero.
+The test has a simple logic. Between 2022 and 2025, the economy was hit by many shocks, each of which may have affected wages. One such shock was the rapid improvement in agentic AI capabilities from near-zero levels to those observed in 2025. This rapid growth shock hit different sectors with various levels of intensity, represented by instrument zs. The idea behind the test is to use the calibrated model to simulate the wage changes {Δws} implied by AI growth. We then define the residual wage change as the difference between observed wage growth from 2022 to 2025 and the model-predicted wage change due to AI,
 
+- 30The manual and cognitive task indexes are not input shares in production function aggregating over tasks. They are different indexes and do not add up to 100.
 - 31A task receives an exposure score of 1 if a large language model by itself could deliver the time cost reduction. It receives a score of 0.5 if the time cost reduction requires additional software built around the model, and 0 otherwise. They map these task-level ratings into exposure scores for each occupation. We map these occupation scores to industry-level scores using employment shares.
 - 32Weighted by value added, the average AI adoption to date is 14.2 percent and the average exposure is 35.2 percent, with πMs &lt; es in every industry. The survey covers 10.25 percent of tasks directly, weighted by employment, and drawing occupations at random gives an aggregate share between 11.8 and 17.3 percent. Appendix C.11 runs the counterfactuals with Microsoft's lower share of 6.8 percent, where the five year real wage gain falls to 6.7 percent under balanced adoption and 7.7 percent under jagged adoption.
+
 
 
 ###### Figure 5. Sectoral heterogeneity in cognitive skill intensity and AI exposure
@@ -1558,7 +1598,11 @@ exposure to future AI progress (es)
 
 Notes: Each circle represents one sector. Panel A plots the physical intensity index against the cognitive skill intensity index on the horizontal axis. The dashed lines report the employment weighted mean for each axis. Panel B plots the current AI task share against the exposure measure used to discipline adoption of growing AI capabilities. The dashed lines represent the value added weighted mean for each axis. In each panel, circle size shows the sector's value added share, and the colors report the share of its workers with a bachelor's degree or more. The calculations are based on the 2024 BEA input–output accounts, the Epoch AI– Ipsos survey, Anthropic Economic Index task data, May 2025 BLS employment, the 2025 BLS employment projection and skill scores, O*NET 31.0, the 2024 American Community Survey, and occupation exposure ratings (Bureau of Economic Analysis, 2024; Epoch AI, 2026b;BureauofLaborStatistics,2025b,a;NationalCenterforO*NET Development,2026; US Census Bureau, 2024; Eloundou et al., 2024).
 
-### If so, the residual reflects other contemporaneous shocks hitting the economy, rather than omitted wage effects of AI growth the model failed to capture. The corresponding IV coefficient is
+ΔwsD − Δws. If the model correctly predicts the wage effects of AI growth, this residual should be orthogonal to the AI growth shock. Formally, the goodness
+
+of fit statistic βˆz = S−1 ∑s zs(ΔwsD − Δws) must have an expected value of zero. If so, the residual reflects other contemporaneous shocks hitting the economy,
+
+rather than omitted wage effects of AI growth the model failed to capture. The corresponding IV coefficient is
 
 βˆz S−1 ∑s zsΔws
 
@@ -1570,9 +1614,10 @@ S−1 s zs sD S−1 ∑s zsΔws
 
 ,
 
-### From the lens of the model, the change in the AI task share ΔπMs in each sector s is the sufficient statistics for constructing the instrument zs and simulating Δxs. The change in task share is constructed based on each sector's May 2022 occupation mix with the measure of occupational exposure to agentic AI from
+### From the lens of the model, the change in the AI task share ΔπMs in each sector s is the sufficient statistics for constructing the instrument zs and simulating
 
-Eloundou et al. (2024). Appendix C.12 provides the details about the data construction and inference.
+
+Δxs. The change in task share is constructed based on each sector's May 2022 occupation mix with the measure of occupational exposure to agentic AI from Eloundou et al. (2024). Appendix C.12 provides the details about the data construction and inference.
 
 Because we are analyzing a three years window, labor mobility is presumably less than implied by κ = 1.5, which estimated based on labor market response over a longer horizon. We therefore assess two cases: κ ↓ 1, in which workers are frozen in their original sectors, and κ = 1.5, following the preferred estimation value of Galle, Rodríguez-Clare and Yi (2023). Figure 6 reports the observed wage effects, plus the mode's predicted effects and the IV slope test. The goodness-of-fit statistic is βˆz = 1.7 × 10−4 under κ ↓ 1 and βˆz = −8.6 × 10−5 with κ = 1.5. The null of a zero discrepancy is not rejected at the 5 percent confidence level, in both cases. The corresponding IV coefficient is βˆIV = 0.8 when workers remain in their original sectors, with a 95 percent confidence set of [0.43,1.21]. With κ = 1.5, the IV coefficient is βˆIV = 1.15, with a 95 percent confidence set of [0.62,1.74]. Both confidence sets contain one.
 
@@ -1646,6 +1691,7 @@ Observed / model slope, β̂IV
 
 Notes: Panel (a) plots Census business AI use. The model task share is scaled from 14.2 percent in July 2026 to 5.7 percent in May 2025. The scaling ratio, 0.087/0.217, is approximate because the survey wording changed. The model compares the May 2025 equilibrium with near-zero AI use, which is assumed for May 2022. Panel (b) shows 61 sectors. Nominal wage changes use fixed May 2022 occupation weights. Wage changes and exposure are demeaned across these sectors. The lines project observed and model-predicted wage changes on the same exposure instrument; the comparison concerns relative wage effects. In panel (c), the dashed line marks equal slopes, and the intervals are 95 percent Anderson–Rubin confidence sets. The comparison does not test the average wage change, employment, or welfare, and the confidence sets are wide enough to allow sizable errors in the predicted changes. Appendix C.12 describes the construction and the checks on the inference.
 
+
 ## VIII. Forward-Looking Impacts of AI-Driven Growth
 
 This section uses the calibrated model to simulate the prospective impacts of AI-driven growth, assuming AI progress continues along its current trajectory. Our goal is to isolate the pure impact of AI-driven growth on the labor market through Ricardian comparative advantage. We therefore shut down all other engines of growth, including population growth and capital investment. This naturally comes with clear caveats: fertility rates and investment decisions are presumably influenced by AI-driven growth, which is not modeled here. Ricardian reassignment is also not the only force affecting labor market outcomes, though the retrospective test of the model's predictive power points to its ability to isolate AI-driven growth effects, at least over a shorter time horizon. We begin by describing how we model the prospective AI growth trajectory, then present four results tightly connected to our theoretical framework.
@@ -1661,6 +1707,7 @@ costs at fixed token prices fell at an annual rate of 79.1 percent 19 months of 
 
 
 33Specifically, we model the rate of decline in the task cost g(t) ≡ −d lnc(t)/dt as g(t) = gH + (g0 − gH)2−t/2, where g0 ≈ 1.57 is the estimated current growth rate and gH = ln(2)/1.7 is the rate implied by hardware improvements.
+
 
 ### five years.34 Appendix C.4 unpacks more details about the our extrapolation of the growth trajectory.
 
@@ -1715,11 +1762,12 @@ cM(i)di = Γ(1 +
 
 34With the rate of decline held at its current level, the cost of performing tasks with agentic AI tools would fall by 99.96 percent.
 
+
 costs, where es is an exposure measure obtained from interacting the occupation exposure ratings from (Eloundou et al., 2024) with BLS sectoral occupation employment weight. Thus, the sector's average AI cost and technology therefore change by
 
 TMŝ = ĉ−ψe
 
-M . (44) We also experiment with a balanced adoption scenario, which replaces es with the weighted mean exposure ē = ∑k αkλkek, where αkλk are value added shares.
+M . (43) We also experiment with a balanced adoption scenario, which replaces es with the weighted mean exposure ē = ∑k αkλkek, where αkλk are value added shares.
 
 s
 
@@ -1734,6 +1782,7 @@ The more interesting explanation is derived from the Ricardian assignment model.
 
 
 Our baseline simulation allows adoption to be jagged, in the sense that different sectors have different adoption rates. We proxy for adoption rates, based on exposure measures inferred from the mix of occupations a sector employs. It's motivated by evidence that the tasks performed by some occupations are more amenable to AI automation than others. A question worth exploring, here, is
+
 
 ###### Figure 8. Average Real Wages Rise Despite the Sharp Drop in Labor's Share of GDP
 
@@ -1767,11 +1816,12 @@ Labor share, 5× less jagged 50% of today's share
 
 Years from baseline calibration date (2026)
 
-Notes: Each line is relative to its value today and equals one at year zero, on a log scale. The darker lines use the estimated jaggedness of the AI frontier, ψ = 1.36; the lighter lines repeat the simulation with a frontier five times less jagged, ψ = 6.79, and everything else unchanged. Aggregate real wages are the mean of the three education groups' real wages, weighted by baseline wage bills. The teal line is workers' share of total value added. The figure reports it as a percentage of the share today. The numeraire is the model's final expenditure bundle for the full set of industries. The simulation uses the central cost path in Figure 7, holds the stock of AI capacity fixed, and sets the change in each sector's AI technology as in equation (44). Our calculation uses the Epoch AI–Ipsos survey, O*NET, the BEA industry accounts, BLS employment, the 2024 American Community Survey, and occupation exposure ratings (Epoch AI, 2026b; National Center for O*NET Development, 2026; Bureau of Economic Analysis, 2024; Bureau of Labor Statistics, 2025b; US Census Bureau, 2024; Eloundou et al., 2024).
+Notes: Each line is relative to its value today and equals one at year zero, on a log scale. The darker lines use the estimated jaggedness of the AI frontier, ψ = 1.36; the lighter lines repeat the simulation with a frontier five times less jagged, ψ = 6.79, and everything else unchanged. Aggregate real wages are the mean of the three education groups' real wages, weighted by baseline wage bills. The teal line is workers' share of total value added. The figure reports it as a percentage of the share today. The numeraire is the model's final expenditure bundle for the full set of industries. The simulation uses the central cost path in Figure 7, holds the stock of AI capacity fixed, and sets the change in each sector's AI technology as in equation (43). Our calculation uses the Epoch AI–Ipsos survey, O*NET, the BEA industry accounts, BLS employment, the 2024 American Community Survey, and occupation exposure ratings (Epoch AI, 2026b; National Center for O*NET Development, 2026; Bureau of Economic Analysis, 2024; Bureau of Labor Statistics, 2025b; US Census Bureau, 2024; Eloundou et al., 2024).
 
 how jagged adoption is contributing the real wage growth. Theorem 4 argued that jagged adoption is generally better for aggregate real wages. The intuition is that jagged adoption enables sizable efficiency gains in exposed sectors, which translate to lower prices for their goods, while also presenting labor with shelter in lagging sectors and occupations.
 
 Figure 9 compares the growth in aggregate real wage under balanced and jagged AI adoption over the 5-year horizon. Both cases use the same average cost decline projection, ĉM. However, the balanced adoption applied this cost
+
 
 reduction uniformly to all industries or occupations: TMŝ = ĉ−ψM ē where ē = ∑k αkλkek is the weighted average exposure. The results are similar over the first five years: under balanced adoption, average real wages rise by 16.8 percent and labor's share of value added falls to 39.6 percent. Real output rises by 59.5 percent under balanced adoption and 60.7 percent under jagged adoption, so jagged adoption pays workers more at about the same output growth. After five years, the difference in annual wage growth increases every year. By year 50, real wages grow by 5.7 percent a year under balanced adoption and 8.9 percent under jagged adoption. Workers move toward sectors where AI improves more slowly. The prices of goods produced in these sectors rise relative to prices in sectors where AI improves faster, increasing the purchasing power of workers' earnings, as in Theorem 2.
 
@@ -1785,6 +1835,7 @@ Panel A in Figure 10 shows that average real earnings rise among each education 
 The reason workers gain despite not being able to switch sectors reflects how AI displacement works. Unlike trade-driven displacement, AI-driven displacement generally does not consume the entire task spectrum within a sector. Instead, it leaves some niche tasks to workers. So, rather than having to switch sectors to find work, workers simply sort into those niche tasks within the same
 
 35Appendix Figure C5 reports the group-level gains when AI adoption is set to be balanced across sectors.
+
 
 ###### Figure 9. Jagged AI Adoption Lifts Average Real Wages Faster But has stronger Distributional Effects
 
@@ -1832,9 +1883,10 @@ Today 10 20 30 40 50 years
 
 20 30 40 50 60% Exposure to AI progress
 
-Notes: In panel A, each line is the annual growth rate of average real wages, the percentage change from the previous year. Aggregate real wages are the mean of the three education groups' real wages, weighted by baseline wage bills, in units of the model's final expenditure bundle for the full set of industries. The panel shows the gap between the two profiles, and the rule shows the five-year horizon of the main results. Panel B, plots a sector's change in real wages after five year against the sector's exposure to AI progress when workers remain in their original sectors. The area of each dot is proportional to the sector's value added, and the dotted line marks the weighted average exposure across sectors. Both the jagged and balanced scenarios use the cost reduction path in Figure 7 for 50 years, and set the change in each sector's AI technology as in equation (44). Our calculation uses the Epoch AI–Ipsos survey, O*NET, the BEA industry accounts, BLS employment, the 2024 American Community Survey, and occupation exposure ratings (Epoch AI, 2026b; National Center for O*NET Development, 2026; Bureau of Economic Analysis, 2024; Bureau of Labor Statistics, 2025b; US Census Bureau, 2024; Eloundou et al., 2024).
+Notes: In panel A, each line is the annual growth rate of average real wages, the percentage change from the previous year. Aggregate real wages are the mean of the three education groups' real wages, weighted by baseline wage bills, in units of the model's final expenditure bundle for the full set of industries. The panel shows the gap between the two profiles, and the rule shows the five-year horizon of the main results. Panel B, plots a sector's change in real wages after five year against the sector's exposure to AI progress when workers remain in their original sectors. The area of each dot is proportional to the sector's value added, and the dotted line marks the weighted average exposure across sectors. Both the jagged and balanced scenarios use the cost reduction path in Figure 7 for 50 years, and set the change in each sector's AI technology as in equation (43). Our calculation uses the Epoch AI–Ipsos survey, O*NET, the BEA industry accounts, BLS employment, the 2024 American Community Survey, and occupation exposure ratings (Epoch AI, 2026b; National Center for O*NET Development, 2026; Bureau of Economic Analysis, 2024; Bureau of Labor Statistics, 2025b; US Census Bureau, 2024; Eloundou et al., 2024).
 
 sector. Panel B in Figure 10 illustrates this point. Among the 18 sectors with the highest AI exposure, workers' share of tasks falls from 85.2 to 53.8 percent over the five year window, with AI's share rising from 14.8 to 46.2 percent. These results reveal that, unlike say past trade shocks, AI-driven growth would mostly affect labor market outcomes through within-sector rather than across-sector reassignment. Even the most AI-exposed sectors continue to offer a considerable range of tasks in which humans retains a comparative advantage.
+
 
 - Figure 10. All Education Groups Gain from AI-Driven Growth by Switching Tasks rather than Sectors
 
@@ -1882,6 +1934,7 @@ Next, we use the model to uncover the conditions under which the Jevons paradox 
 
 Figure 11 illustrates this point. It reports the real wage gains over the fiveyear window for each education group under different inter-sectoral substation
 
+
 elasticities, η. Under the baseline calibration, η = 1, the gains have the expected ordering, workers with high school education or less gains the most, and those with a bachelor's degree or higher gains the least for AI-driven growth. The gap closes as η rises and all groups experience the exact same real wage gains under η ≈ 2.5, standing at28.9 percent.36 Above this threshold we begin witnessing the Jevons paradox. Real wages go up the most for workers with Bachelor's degrees or higher who are the most exposed to AI-driven displacement. However, as one may no
 
 - Figure 11. Workers in AI-Exposed Sectors Gain the Most Only When Demand Across Sectors Is Highly Elastic
@@ -1911,6 +1964,7 @@ Notes: Five-year real wage gains by education group under jagged AI adoption, on
 
 36The elasticity at which the gap closes is a little above the threshold 1 + ψ ≈ 2.36 noted in Section V.A because the calibrated model is more general; it accounts for input-output linkages and sector-specific capital.
 
+
 ## IX. Conclusion
 
 This paper offers a pro-labor view of explosive AI-driven growth. The view draws on Ricardo's theory of comparative advantage. An interesting implication of the theory is that AI displacement coincides with real wage gains at the aggregate level as long as humans and agentic AI have different productivity profiles across tasks. More important, if the difference is sufficiently large and AI adoption is not too jagged and concentrated in select industries, then every worker can gain from AI-driven growth, even if they cannot switch sectors. One reason is a unique feature of AI-driven displacement that distinguishes it from trade-driven displacement and past episodes of automation: it leaves some niche tasks to workers within each sector. Engines displaced horses because they were uniformly more productive than horses at all tasks, which left horses no niche tasks to retreat to. Agentic AI may perform every task better than humans, but the relative difference between humans and agentic AI across tasks is not uniform.
@@ -1918,6 +1972,7 @@ This paper offers a pro-labor view of explosive AI-driven growth. The view draws
 Many commentators have made this argument informally. We formalize it in a dynamic Ricardian assignment model in which no task is reserved for humans. As AI becomes more productive, it takes over the tasks on which it has the greatest cost advantage, and workers retreat into a narrower set of niche tasks. The real wage then rises in inverse proportion to labor's share of economic tasks, with an elasticity that measures the jaggedness of AI capabilities. Because labor's share of GDP equals its share of tasks, the aggregate real wage effects of AI are determined by two sufficient statistics, the jaggedness of AI capabilities and the change in labor's share of GDP, which we can measure without estimating an aggregate production function. It follows that the niche tasks left to workers are not expensive bottlenecks; wages grow instead because workers become more productive on the tasks they retain and the wage buys a larger basket of goods. The distribution of comparative advantage governs the pace of wage gains and their eventual limit, but not the direction. More displacement also amplifies the marginal wage gains from AI growth, and when fixed shares of output are allotted to AI installation and research, the real wage rises without bound on the path to a singularity in finite time.
 
 Across sectors, balanced AI adoption is the worst case scenario for aggregate real wages, because workers have no lagging sector to retreat to. When adoption is jagged, labor concentrates in lagging sectors and commands a wage proportional to their price, which rises relative to the economy-wide price index through rapid AI-driven growth elsewhere. If adoption eludes some sectors, real wages grow at the same rate as output. Input-output linkages raise the share of output growth appearing as wage growth under balanced adoption. Even when workers cannot switch sectors, real wages benefit from AI growth across the
+
 
 board unless AI adoption is extremely jagged across industries. Trade-driven displacement immiserated workers in import-competing sectors because trade is concentrated in select industries and operates under a high trade elasticity.
 
@@ -1930,6 +1985,7 @@ Our analysis has several caveats. To isolate the pure impact of AI-driven growth
 ## References
 
 Acemoglu, Daron. 2025. "The Simple Macroeconomics of AI." Economic Policy, 40(121): 13–
+
 
 58.
 
@@ -1977,7 +2033,10 @@ Bureau of Economic Analysis. 2024. Input-Output Accounts Data. Washington, DC: U
 - Bureau of Labor Statistics. 2025b. Occupational Employment and Wage Statistics, May 2025. Washington, DC: US Department of Labor. https://www.bls.gov/oes/tables.htm (accessed August 15, 2026).
 
 
-Bureau of Labor Statistics. 2026. Consumer Price Index for All Urban Consumers (CPI-U). Washington, DC: US Department of Labor. https://data.bls.gov/timeseries/CUUR0000SA0 (accessed August 13, 2026).
+
+- Bureau of Labor Statistics. 2026a. Consumer Price Index for All Urban Consumers (CPI-U). Washington, DC: US Department of Labor. https://data.bls.gov/timeseries/CUUR 0000SA0 (accessed August 13, 2026).
+- Bureau of Labor Statistics. 2026b. "Employer Costs for Employee Compensation—June 2026." US Department of Labor News Release USDL-26-1494.
+
 
 ##### Caliendo, Lorenzo, and Fernando Parro. 2015. "Estimates of the Trade and Welfare
 
@@ -2015,9 +2074,10 @@ Hampole, Menaka, Dimitris Papanikolaou, Lawrence D. W. Schmidt, and Bryan Seegmi
 
 Hémous, David, and Morten Olsen. 2022. "The Rise of the Machines: Automation, Horizontal Innovation, and Income Inequality." American Economic Journal: Macroeconomics, 14(1): 179–223.
 
-Hicks, John R. 1932. The Theory of Wages. London: Macmillan. Jevons, William Stanley. 1865. The Coal Question. London: Macmillan. Jimenez, Carlos E., John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir
+Hicks, John R. 1932. The Theory of Wages. London: Macmillan. Jevons, William Stanley. 1865. The Coal Question. London: Macmillan.
 
-Press, and Karthik Narasimhan. 2024. "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?" International Conference on Learning Representations.
+
+Jimenez, Carlos E., John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir Press, and Karthik Narasimhan. 2024. "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?" International Conference on Learning Representations.
 
 Jones, Charles I., and Christopher Tonetti. 2026. "Past Automation and Future A.I.: How Weak Links Tame the Growth Explosion." Working paper, version 0.5, May 2026. Stanford University.
 
@@ -2041,9 +2101,19 @@ Lind, Nelson, and Natalia Ramondo. 2023. "Global Innovation and Knowledge Diffu-
 
 sion." American Economic Review: Insights, 5(4): 494–510.
 
+Lyptus Research. 2026. Cyber Task Horizons Data. Lyptus Research. https://github.com/l
+
+yptus-research/cyber-task-horizons-data (accessed October 3, 2026).
+
 Massenkoff, Maxim, and Peter McCrory. 2026. "Labor Market Impacts of AI: A New Measure and Early Evidence." Anthropic, March 5, 2026. https://www.anthropic.com/ research/labor-market-impacts. Accompanying data: Anthropic Economic Index, task scores, version 2ea58ff, https://huggingface.co/datasets/Anthropic/EconomicIndex/re solve/2ea58ff75e4247d26810c37f10c179edc2466cac/labor_market_impacts/task_penet ration.csv.
 
-##### Moll, Benjamin, Lukasz Rachel, and Pascual Restrepo. 2022. "Uneven Growth: Au-
+METR. 2026. METR Time Horizon Analysis: Evaluation Data and Analysis Code. METR. https:
+
+//github.com/METR/eval-analysis-public (accessed October 6, 2026).
+
+Mialon, Grégoire, Clémentine Fourrier, Craig Swift, Thomas Wolf, Yann LeCun, and Thomas Scialom. 2023. "GAIA: A Benchmark for General AI Assistants." arXiv:2311.12983.
+
+Moll, Benjamin, Lukasz Rachel, and Pascual Restrepo. 2022. "Uneven Growth: Au-
 
 tomation's Impact on Income and Wealth Inequality." Econometrica, 90(6): 2645–2683.
 
@@ -2055,9 +2125,16 @@ National Center for O*NET Development. 2026. O*NET 31.0 Database. Washington, DC
 
 Nordhaus, William D. 2021. "Are We Approaching an Economic Singularity? Information Technology and the Future of Economic Growth." American Economic Journal: Macroeconomics, 13(1): 299–332.
 
+
+Olariu, Maria-Ecaterina, Vlad-Gabriel Buinceanu, Cristian Simionescu, Octavian Dospinescu, Răzvan Georgescu, Cezar Tudor, Adrian Iftene, and AnaMaria Bores. 2026. "RO-FIN-LLM: A Benchmark with LLM-as-a-Judge and Human Evaluators for Romanian Tax and Accounting." Systems, 14(3): 244. Accompanying data: https://github.com/Nexus-Media/RO-FIN-LLM-Benchmark (accessed October 3, 2026).
+
 OpenAI. 2024. "Introducing SWE-bench Verified." August 13, 2024. https://openai.com
 
 /index/introducing-swe-bench-verified/.
+
+Patronus AI. 2025. TRAIL Benchmark. Patronus AI. https://github.com/patronus-ai/trail-b
+
+enchmark (accessed October 3, 2026).
 
 Rinehart, Will. 2026. "Jagged Intelligence, Jagged Adoption." American Enterprise Institute, January 23, 2026. https://www.aei.org/technology-and-innovation/jagged-intelli gence-jagged-adoption/.
 

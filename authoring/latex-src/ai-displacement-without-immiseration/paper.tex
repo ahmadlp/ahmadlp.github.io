@@ -16,17 +16,6 @@
 \newtheorem{proposition}{Proposition}
 \begin{document}
 
-
-
-
-
-
-
-
-
-
-
-
 \section{Introduction}\label{sec:introduction}
 
 As agentic AI models grow more powerful, many workers fear AI is
@@ -415,7 +404,6 @@ are cheaper.}%
 \end{minipage}
 \end{figure}
 
-
 \paragraph{Assignment and equilibrium.}
 
 Task assignment responds to technology and factor prices. Let $\pi_{L,t}$
@@ -459,6 +447,7 @@ gives the task shares directly in terms of technologies and factor
 supplies:
 \begin{equation}
 \pi_{L,t}=\frac{[T_{L}L^{\psi}]^{1/(1+\psi)}}{[T_{L}L^{\psi}]^{1/(1+\psi)}+\widetilde{M}_{t}},\qquad\qquad\pi_{M,t}=\frac{\widetilde{M}_{t}}{[T_{L}L^{\psi}]^{1/(1+\psi)}+\widetilde{M}_{t}}.\label{eq:static-shares}
+
 \end{equation}
 It remains to aggregate tasks given the optimal assignment into aggregate
 output and price indexes. The derivation is presented in Appendix
@@ -522,9 +511,9 @@ to zero. And the real wage paid to workers grows with the decline
 of $\pi_{L,t}$ at an elasticity $1/\psi$.\footnote{The limits in~\eqref{eq:selection-limits} also hold when AI growth
 is recursive and reaches a singularity in finite time. If fixed shares
 of output finance AI installation and research, AI capabilities diverge
-at a finite date; as that date approaches, labor’s task share vanishes
+at a finite date; as that date approaches, labor's task share vanishes
 and the real wage rises without bound, at a rate that does not depend
-on jaggedness. Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=23}{B.4} states the result
+on jaggedness. Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=24}{B.4} states the result
 and Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=25}{B.5} proves it.} The joint productivity law then makes every percentile of productivity
 among the tasks retained by workers a fixed multiple of the real wage.
 In other words, worker productivity also explodes. An distinct feature
@@ -618,7 +607,8 @@ structure with a formal proof provided in Appendix \href{https://ahmadlp.github.
 \renewcommand{\thetheorem}{\arabic{theorem}.b}
 \def\theHtheorem{\arabic{theorem}.b}
 
-\begin{theorem}\label{prop:general-displacement}~Suppose the relative
+\begin{theorem}\label{prop:general-displacement}
+~Suppose the relative
 productivity of labor to AI follows a general and potentially bounded
 distribution $G$: \begin{enumerate}
 \item[(i)] The real wage rises with displacement wherever $G(a^{*})>0$:
@@ -696,6 +686,7 @@ $\psi$:
 The corresponding wage and output growth rates are
 \begin{equation}
 g_{w,t}=\frac{\pi_{M,t}}{\psi}g_{\widetilde{M},t},\qquad\qquad g_{Y,t}=\frac{1+\psi}{\psi}\pi_{M,t}g_{\widetilde{M},t}\label{eq:leverage-wage-growth}
+
 \end{equation}
 The proof follows from the Ricardian assessment model written in growth
 algebra. Ricardian task assignment, per Equation \eqref{eq: Ricardian-assignment},
@@ -739,9 +730,8 @@ human tasks. Here, asks what happens to employment under nominal wage
 rigidities.
 
 We work within the same Ricardian economy, but no longer assign the
-final good as the numeraire to emphasize nominal rigidities. A breve
-denotes a nominal variable. Let $\breve{P}_{t}$ denote the price
-index of final output, and let $\breve{w}_{t}=\breve{P}_{t}w_{t}$
+final good as the numeraire to emphasize nominal rigidities. Let $\breve{P}_{t}$
+denote the price index of final output, and let $\breve{w}_{t}=\breve{P}_{t}w_{t}$
 denote the nominal wage rate, $\breve{r}_{t}=\breve{P}_{t}r_{t}$
 represent the nominal rental rate, and $\breve{Y}_{t}=\breve{P}_{t}Y_{t}$
 the nominal GDP. All $L$ workers are willing to work, but only $n_{t}L$
@@ -801,14 +791,12 @@ and
 \begin{equation}
 \frac{n_{1}}{n_{0}}=\frac{\pi_{L,1}}{\pi_{L,0}}<1.\label{eq:ue-prop-employment}
 \end{equation}
-
 Let $E_{t}\equiv n_{t}w_{t}$ denote average real earnings per worker,
 including the unemployed. The real wage of the employed and average
 earnings satisfy
 \begin{equation}
 \frac{w_{1}}{w_{0}}=\left(\frac{\pi_{L,1}}{\pi_{L,0}}\right)^{-1/\psi},\qquad\frac{E_{1}}{E_{0}}=\left(\frac{\pi_{L,1}}{\pi_{L,0}}\right)^{1-1/\psi}.\label{eq:ue-prop-earnings}
 \end{equation}
-
 The real wage rises, but average earnings fall if $\psi>1$, are unchanged
 if $\psi=1$, and rise if $\psi<1$.\end{proposition}
 
@@ -930,13 +918,13 @@ If AI capabilities advance broadly across all sectors, employment
 concentrates in the slowest growing sectors for which $\min_{s}\nu_{s}$.
 And if $\min_{s}\nu_{s}=0$, employment in every growing sector converges
 to zero. Balanced AI adoption therefore creates an environment where
-real wages grow most slowly relative to output.\footnote{The concentrated progress result depends on Cobb--Douglas demand:
-with $\sigma_{U}\in(0,1)$, the expenditure shares of sectors with
-AI progress fall to zero, $w_{t}/r_{t}$ is pinned down by sectors
-with fixed intensity, and $w_{t}$ and $Y_{t}$ approach finite positive
-limits, so this result does not determine the limiting ratio of real
-wage growth to output growth; Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=42}{B.8}
-gives the equations, proof, and limiting real wage.}
+real wages grow most slowly relative to output.\footnote{The concentrated progress result depends on Cobb--Douglas demand: with
+$\sigma_{U}\in(0,1)$, the expenditure shares of sectors with AI progress
+fall to zero, $w_{t}/r_{t}$ is pinned down by sectors with fixed
+intensity, and $w_{t}$ and $Y_{t}$ approach finite positive limits,
+so this result does not determine the limiting ratio of real wage
+growth to output growth; Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=42}{B.8} gives
+the equations, proof, and limiting real wage.}
 
 \begin{corollary}[Balanced vs jagged adoption]\label{cor:balanced-progress}
 ~If labor is perfectly mobile across sectors: Balanced AI adoption
@@ -1040,8 +1028,8 @@ amplify the consumer gains from AI-driven growth, which manifests
 itself as a fall in the cost of goods relative to the wage rate. Moreover,
 as intermediate inputs become cheaper and more productive, the marginal
 productivity of labor indirectly benefits from AI-driven growth, putting
-upward pressure on wages---a force that is absent in the baseline
-model without intermediate input use.\footnote{Our analysis assumes that productivity $z$ is Hicks-neutral. We could
+upward pressure on wages---a force that is absent in the baseline model
+without intermediate input use.\footnote{Our analysis assumes that productivity $z$ is Hicks-neutral. We could
 instead model productivity as a shifter specific to each primary factor:
 \[p_{s,t}(i)=\min\left\{ (\frac{w_{t}}{z_{Ls}(i)})^{\alpha_{s}},(\frac{r_{t}}{z_{Ms,t}(i)})^{\alpha_{s}}\right\} \times\prod_{k}P^{\Gamma_{ks}}_{k,t}.\]
 In this case, intermediate inputs do not influence the task share
@@ -1319,7 +1307,6 @@ in sector $s$ grows without bound.
 \includegraphics[width=1\textwidth]{task-bundling-figure/output/task-bundling.png}
 \end{figure}
 
-
 \section{Mapping Model to Data}\label{sec:measurement}
 
 This section estimates $\psi$, the parameter that reflects the jaggedness
@@ -1353,7 +1340,7 @@ Using the software-based estimate for $\psi$ would understate the
 real-wage gains generated by Ricardian selection, because a larger
 $\psi$ implies less scope for comparative advantage across tasks.\footnote{The parameter $\psi$ also sets the size of the implied improvement
 in AI capabilities given an observed average cost decline. So, a lower
-$\psi$ makes the counterfactual shock smaller. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=104}{D.3}
+$\psi$ makes the counterfactual shock smaller. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=105}{D.3}
 runs the model using lower estimates for $\psi$ and shows larger
 gains in real wages but smaller gains in real output.}
 
@@ -1385,6 +1372,26 @@ to never exceed 16 hours. AI cost is calculated based
 on the cheapest rate available from any model that completed the task
 by June~2026. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=101}{D.1}
 provides further details on the construction and provenance.
+
+We complement the data on software engineering tasks with data human
+versus aAI cost data from 1{,}565 tasks in six other domains:
+finance and accounting, cybersecurity, research and information retrieval, data analysis, machine learning research, and unspecified technical work. The tasks come from public benchmarks that
+record, for each task, the time a human needs, observed in baseline
+runs or assessed by experts, and the price of each AI attempt evaluated
+on it \citep{metr2026timehorizon,olariu2026rofinllm,lyptus2026cyber,mialon2023gaia,patronus2025trail}.
+Human cost is that time priced at the employer cost of the occupation
+that performs such tasks, computed from the mean hourly wage and the
+ratio of total compensation to wages \citep{bls2026oews,bls2026ecec}.
+AI cost is the price of the cheapest successful attempt by any evaluated
+system, scaled by a factor that stands for deployment costs beyond
+tokens; the factor is set for each domain so that the share of tasks
+AI completes below human cost matches survey and usage evidence on
+AI's share of the occupation's work \citep{epochpolling2026,massenkoffmccrory2026labor,onet2026}.
+These tasks are observed once, at the latest frontier, rather than
+over release dates. AI has completed 661 of
+them, and the 904 tasks it has never completed
+count as above human cost. All costs are in July~2026 dollars,
+and Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=101}{D.1} describes both samples.
 
 \subsection{Estimating the Jaggedness of the AI Frontier ($1/\psi$)}
 
@@ -1472,7 +1479,7 @@ and task-level regression delivers $\widehat{\psi}=1.36$,
 both with narrow bootstrapped standard error bands.\footnote{The small bootstrapped standard errors capture only the random draw
 of repositories and not measurement error in human costs. Each draw
 changes which repositories are in the sample but keeps the assessed
-completion times and human cost conventions fixed. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=104}{D.3}
+completion times and human cost conventions fixed. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=105}{D.3}
 shows how much the estimate changes across human cost specifications
 and wage bases.} Figure \ref{fig:price-of-automation} reports the mechanics of each
 estimation strategy. Panel (a) shows the path of $\pi_{M}$ over release
@@ -1502,46 +1509,37 @@ the hourly wage shifts the relative human-to-AI cost, potentially
 affecting the release-level regression that depends on the sample
 median cost. The estimated $\psi$ stays between 0.99
 and 1.95 under all explored specifications. Appendix
-Figure \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=105}{B1} reports the full session sensitivity
+Figure \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=106}{B1} reports the full session sensitivity
 grid. The takeaway is that the estimated $\psi$ remains in a range
 of values that all predict qualitatively the same real-wage and displacement
 trajectory when inserted into the model.
 
 \begin{table}[t]
-\centering  \caption{Estimation results: Productivity Dispersion Parameter $\psi$}
+\centering \caption{Estimates of $\psi$, the inverse jaggedness of the AI frontier}
 \label{tab:two-estimates} \input{empirics/exhibits/table_two_estimates.tex}
-
-
 
 \end{table}
 
-{\footnotesize{\footnotesize\textit{Notes:}}{\footnotesize{}
-Both estimates use the same sample: the 484 tasks observed
-over 26 release dates on the frontier, whose assigned
-cost ratios---other than the largest ratio at each date, for which
-the observed share above is zero---give one observation for each
-task and date, 6{,}589 in total. Estimate~(1) is the release-level
-regression estimate of equation~\eqref{eq:sm-regression}, which
-collapses the sample into two values per release date---the share
-of tasks AI completes below human cost and the median of the cost
-ratios at that date in the sample---with no intercept. Estimate~(2)
-is the task-level regression estimate of equation~\eqref{eq:task-regression}
-on each observation directly; the terms for each release date are
-not estimated but set to the observed log odds of assignment at that
-date, and we winsorize the log cost ratios at each release date at
-the 5\% level. Standard errors, below each estimate, are calculated
-by selecting 12 repositories at random with replacement
-400 times, keeping every task from a repository
-together, and recomputing both estimates each time. Implied wage growth
-is $100/(1+\widehat{\psi})$, the model's real-wage growth rate as
-a percent of the output growth rate. Both estimates use the BLS wage
-scaled up by 1.4, an upper limit of 16
-hours, the midpoint in logs of each range of hours, and costs in July~2026
-dollars.}{\footnotesize\par}
+{{\footnotesize\textit{Notes:}}{\footnotesize{}
+$\psi$ is the dispersion of AI's cost advantage across tasks; the
+jaggedness of the frontier is $1/\psi$. Column~(1), the release-level
+regression of equation \eqref{eq:sm-regression}, uses two values
+per release date, the share of tasks AI completes below human cost
+and the median cost ratio, with no intercept. Column~(2), the task-level
+regression of equation \eqref{eq:task-regression}, uses every task--date
+observation, with each date's term set to its observed log odds of
+assignment and log cost ratios winsorized at the 5\% level; the largest
+ratio at each date is left out. Panel A: 484 software engineering
+tasks over 26 release dates; standard errors from
+400 draws of the 12 repositories
+with replacement. Panel B: 1{,}565 tasks in finance and accounting, cybersecurity, research and information retrieval, data analysis, machine learning research, and unspecified technical work,
+each observed once at the latest frontier; standard errors from 2{,}000
+resamples of the tasks. A task AI has never completed counts as above
+human cost; the second $\psi$ in each panel keeps only the tasks
+AI had completed by each release date (Panel A) or has completed (Panel
+B). All costs are in July~2026 dollars.}{\footnotesize\par}
 
 }
-
-
 
 \begin{figure}[t]
 \centering \caption{ Data Moments Used for Estimating $\psi$}\label{fig:price-of-automation}
@@ -1557,9 +1555,9 @@ dollars.}{\footnotesize\par}
 \vspace{0.25em}
  %
 \begin{minipage}[c]{0.97\textwidth}%
-{\footnotesize\textit{Notes:}}{\footnotesize{} Panel~(a) reports, by
-release date, the share of the 484 tasks completed at a cost
-below human cost. The final share is 75.2
+{\footnotesize\textit{Notes:}}{\footnotesize{}
+Panel~(a) reports, by release date, the share of the 484
+tasks completed at a cost below human cost. The final share is 75.2
 percent. Three larger circle points show the shares of software written
 by AI that two large software producers reported, the three values
 to which the factor that stands for deployment costs beyond tokens
@@ -1585,7 +1583,6 @@ assignment data described in Appendix~\href{https://ahmadlp.github.io/Lashkaripo
 \end{minipage}
 \end{figure}
 
-
 \paragraph{The relative cost distribution $G(.)$ is continuous.}
 
 Even though we fit a Fréchet distribution to the data, the headline
@@ -1593,12 +1590,12 @@ result of the paper does not require Fréchet. AI-driven displacement
 coincides with real wage growth so long as the human-to-AI cost distribution
 $G(.)$ is continuous, as Theorem \ref{prop:general-displacement}
 demonstrated. Figure \ref{fig:cost-spread-distribution} plots the
-raw distribution $G(.)$ over tasks from the latest release date.
-The plot visibly satisfies the continuity requirement posited by Theorem
-\ref{prop:general-displacement}. Moreover, the Fréchet fit implied
-by each estimate of $\psi$ closely mimics the empirical distribution,
-suggesting that our quantitative framework also provides a reasonable
-approximation of the data.
+raw distribution $G(.)$ over tasks, for software engineering at the
+latest release date and for the six other domains. The plot visibly
+satisfies the continuity requirement posited by Theorem \ref{prop:general-displacement}.
+Moreover, the Fréchet fit implied by each estimate of $\psi$ closely
+mimics the empirical distribution, suggesting that our quantitative
+framework also provides a reasonable approximation of the data.
 
 \begin{figure}[t]
 \centering \caption{ Distribution of the Human-to-AI Cost Ratio across Tasks and the
@@ -1609,48 +1606,28 @@ Fréchet Fit}\label{fig:cost-spread-distribution}
 \vspace{0.25em}
  %
 \begin{minipage}[c]{0.97\textwidth}%
-{\footnotesize\textit{Notes:}}{\footnotesize{} The figure shows the
-distribution of the log human-to-AI cost ratio across the 484
-tasks at the June~2026 endpoint of the AI frontier.
-The AI cost frontier is determined by the cheapest successful completion
-of each task. We treat uncompleted tasks as below cost parity but
-do not draw them. The line at $D=1$ shows cost parity; the share
-of tasks to its right is 75.2 percent.
-Each fitted line is the density of the log cost ratio implied by the
-paper's Fréchet distribution based on estimates of $\psi$ from Table
-\ref{tab:two-estimates}: $1.36$ (task-level regression)
-or $1.14$ (release-level regression). Its calibrated
-so that its share above parity equals the observed share and scaled
-to the number of tasks. Costs use the BLS wage scaled up by 1.4,
-an upper limit of 16 hours, and the midpoint in logs
-of each range of hours.}%
+{\footnotesize\textit{Notes:}}{\footnotesize{}
+Each panel shows the distribution of the log human-to-AI cost ratio
+across the tasks AI has completed: 448 software
+engineering tasks at the June~2026 endpoint of the
+AI frontier, and 661 tasks in the six other
+domains, observed once at the latest frontier. The AI cost frontier
+is determined by the cheapest successful completion of each task.
+Tasks AI has never completed count as above human cost and are not
+drawn. The line at $D=1$ shows cost parity. Each fitted line is the
+density of the log cost ratio implied by the paper's Fréchet distribution
+based on the estimates of $\psi$ for the tasks AI has completed from
+Table~\ref{tab:two-estimates}: $1.46$ and
+$0.94$ (task-level regression) or $1.27$
+and $0.87$ (release-level regression).
+It is located so that its share above parity equals the share among
+the drawn tasks and scaled to their number. Software engineering costs
+use the BLS wage scaled up by 1.4, an upper
+limit of 16 hours, and the midpoint in logs of each
+range of hours; costs in the six other domains are constructed as
+described in Section~\ref{sec:measurement}.}%
 \end{minipage}
 \end{figure}
-
-
-\subsection{Discussion}
-
-The parameter also governs the wage response to task displacement
-and the gross reassignment hidden behind net displacement. First,
-the model's real-wage equation implies
-\begin{equation}
-\frac{\partial\ln w_{t}}{\partial\ln(1/\pi_{L,t})}=\frac{1}{\psi}.\label{eq:measured-wage-selection-elasticity}
-\end{equation}
-At the two estimates of $\psi$, the local percentage increase in
-the real wage is 0.7 to 0.9 times
-the percentage contraction in labor's task share. This is an elasticity
-with respect to labor's task share, not the response to a unit change
-in AI's task share, which also depends on the level of assignment.
-
-For the counterfactuals, we use the task-level distribution estimate
-$\psi=1.36$ from Table \ref{tab:two-estimates} and impose this
-value in every sector. Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=101}{D} discusses the
-limits of applying the software-engineering estimate to other industries,
-and Appendix Figure \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=105}{B1} reports estimates
-under different wage bases and assessed-time conventions. Incomplete
-tasks provide no AI cost observation, as Appendix \href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=106}{D.5}
-explains. These estimates describe observed comparative advantage
-and do not determine its ultimate range.
 
 \subsection{Macroeconomic Calibration}
 
@@ -1706,32 +1683,32 @@ The share $\pi_{Ms}$ of tasks performed by AI in each industry is
 calibrated using the July 2026 survey of $1{,}103$
 employed US adults by Epoch AI and Ipsos \citep{epochpolling2026}.
 We supplement this data the Anthropic Economic Index \citep{massenkoffmccrory2026labor}
-to extend that measurement beyond the survey. The Epoch AI--Ipsos
-survey asks US workers how much they rely on AI for 10 types of tasks,
-such as reading documents and analyzing data. These tasks, however,
-represent only a fraction of the work people perform. So, we rely
-on the Anthropic Economic Index to extend coverage to further tasks.
-Anthropic covers a wider range of tasks scoring them based on Claude
-and assessed AI capability. The drawback is that these scores do not
-directly measure the percentage of work delegated to AI. Yet they
-can be used to impute the AI task share $\pi_{Ms}$ across work that
-is not represented in the Epoch AI--Ipsos survey.
+to extend that measurement beyond the survey. The Epoch AI--Ipsos survey
+asks US workers how much they rely on AI for 10 types of tasks, such
+as reading documents and analyzing data. These tasks, however, represent
+only a fraction of the work people perform. So, we rely on the Anthropic
+Economic Index to extend coverage to further tasks. Anthropic covers
+a wider range of tasks scoring them based on Claude and assessed AI
+capability. The drawback is that these scores do not directly measure
+the percentage of work delegated to AI. Yet they can be used to impute
+the AI task share $\pi_{Ms}$ across work that is not represented
+in the Epoch AI--Ipsos survey.
 
 We build each $\pi_{Ms}$ from industry worker occupation mix in industry
 $s$ as follows. The Epoch AI--Ipsos survey measures AI use across
-ten tasks, identifying each respondent’s occupation group. Each occupation
-performs many tasks not included in the survey. So, we draw on O{*}NET’s
+ten tasks, identifying each respondent's occupation group. Each occupation
+performs many tasks not included in the survey. So, we draw on O{*}NET's
 task descriptions to map tasks to occupation \citep{onet2026}. We
 then impute AI use on the remaining tasks per acceptation. For this,
 we leverage the fact that in the Anthropic Economic Index, the average
 score for tasks outside the Epoch AI--Ipsos survey is $0.66$
 times the surveyed tasks. We impose a proportionality assumption,
 whereby AI performs the non-surveyed tasks in each occupation at $0.66$
-times that occupation’s surveyed rate.
+times that occupation's surveyed rate.
 
 Figure \ref{fig:sector-landscape} provides an overview of the $71$
 industries. Each circle represents one industry, with the size scaled
-with the industry’s value added share, and the colors running from
+with the industry's value added share, and the colors running from
 orange to teal based on the share of employees with college degrees
 or higher. Panel A displays the intensity by which production in industry
 uses cognitive versus physical tasks. Industries located in the bottom
@@ -1797,7 +1774,6 @@ exposure ratings \citep{bea2026io,epochpolling2026,bls2026oews,bls2026ep,onet202
 \end{minipage}
 \end{figure}
 
-
 \subsection{ Historical Validation: The Model Explains 2022-25 Labor Market
 Effects}\label{sec:model-validation}
 
@@ -1857,10 +1833,11 @@ with a 95 percent confidence set of $[0.62,1.74]$.
 Both confidence sets contain one.
 
 \begin{figure}[!tbh]
+\begin{centering}
 \centering \caption{Observed 2022-25 Wage Changes Are Consistent with the Model Predictions}
 \label{fig:model-validation} \vspace{0.25em}
- \includegraphics[width=0.98\textwidth]{quantification/validation_acd/exhibits/figure_model_validation.png}
-
+\hspace*{-10pt}\hspace*{-10pt}\hspace*{-10pt} \includegraphics[width=1.1\textwidth]{quantification/validation_acd/exhibits/figure_model_validation.png}
+\par\end{centering}
 \vspace{0.25em}
  %
 \begin{minipage}[c]{0.94\textwidth}%
@@ -1882,7 +1859,6 @@ allow sizable errors in the predicted changes. Appendix \href{https://ahmadlp.gi
 describes the construction and the checks on the inference.}%
 \end{minipage}
 \end{figure}
-
 
 \section{Forward-Looking Impacts of AI-Driven Growth}\label{sec:counterfactuals}
 
@@ -1948,17 +1924,18 @@ Year}
 \vspace{0.25em}
  %
 \begin{minipage}[c]{0.94\textwidth}%
-{\footnotesize\textit{Notes:}}{\footnotesize{} The observed cost index
-is calculated by release date from the frontier of the cheapest successful
-completion of each task, with task fixed effects, and equals 100 at
-the first release date. Every model uses the same fixed token prices.
-The solid projection assumes that the annual rate of decline slows
-toward the rate of improvements in computer hardware; the range above
-and below it uses the same assumption for the 95 percent confidence
-set. The line below the solid projection holds the estimated 79
-percent annual decline constant. The cost index is on a log scale.
-Section~\ref{sec:measurement} describes the task panel and the estimation.
-Our calculation uses SWE-bench Verified model task costs~\citep{jimenez2024,openai2024verified}.}%
+{\footnotesize\textit{Notes:}}{\footnotesize{}
+The observed cost index is calculated by release date from the frontier
+of the cheapest successful completion of each task, with task fixed
+effects, and equals 100 at the first release date. Every model uses
+the same fixed token prices. The solid projection assumes that the
+annual rate of decline slows toward the rate of improvements in computer
+hardware; the range above and below it uses the same assumption for
+the 95 percent confidence set. The line below the solid projection
+holds the estimated 79 percent annual
+decline constant. The cost index is on a log scale. Section~\ref{sec:measurement}
+describes the task panel and the estimation. Our calculation uses
+SWE-bench Verified model task costs~\citep{jimenez2024,openai2024verified}.}%
 \end{minipage}
 \end{figure}
 
@@ -1989,9 +1966,9 @@ where $\alpha_{k}\lambda_{k}$ are value added shares.
 Figure \ref{fig:aggregate-real-wage-labor-share} shows how average
 real wages and labor's share of GDP change under our projected AI-driven
 growth scenario. The picture shows a clear divergence, amplifying
-the view expressed at the outset of this paper---that displacement
-does not lead to immiserization. Our simulation predicts that after
-five years, average real wages rise by $18.5$
+the view expressed at the outset of this paper---that displacement does
+not lead to immiserization. Our simulation predicts that after five
+years, average real wages rise by $18.5$
 percent, while labor's share of value added falls from $54.1$
 to $39.9$ percent. On an
 accounting level the explanation is straightforward. After five years,
@@ -2013,27 +1990,27 @@ of its value today.
 \begin{centering}
 \centering \caption{Average Real Wages Rise Despite the Sharp Drop in Labor's Share of
 GDP}\label{fig:aggregate-real-wage-labor-share}
- \hspace*{-30pt}\includegraphics[width=1.1\textwidth]{quantification/exhibits/figure_aggregate_real_wage_labor_share.png}
+ \includegraphics[width=1\textwidth]{quantification/exhibits/figure_aggregate_real_wage_labor_share.png}
 \par\end{centering}
 \vspace{0.25em}
  %
 \begin{minipage}[c]{0.94\textwidth}%
-{\footnotesize\textit{Notes:}}{\footnotesize{} Each line is relative
-to its value today and equals one at year zero, on a log scale. The
-darker lines use the estimated jaggedness of the AI frontier, $\psi=1.36$;
-the lighter lines repeat the simulation with a frontier five times
-less jagged, $\psi=6.79$, and everything else unchanged.
-Aggregate real wages are the mean of the three education groups' real
-wages, weighted by baseline wage bills. The teal line is workers'
-share of total value added. The figure reports it as a percentage
-of the share today. The numeraire is the model's final expenditure
-bundle for the full set of industries. The simulation uses the central
-cost path in Figure~\ref{fig:ai-cost-path}, holds the stock of AI
-capacity fixed, and sets the change in each sector's AI technology
-as in equation~\eqref{eq:counterfactual-shocks}. Our calculation
-uses the Epoch AI--Ipsos survey, O{*}NET, the BEA industry accounts,
-BLS employment, the 2024 American Community Survey, and occupation
-exposure ratings~\citep{epochpolling2026,onet2026,bea2026io,bls2026oews,census2024pums,emmr2024}.}%
+{\footnotesize\textit{Notes:}}{\footnotesize{}
+Each line is relative to its value today and equals one at year zero,
+on a log scale. The darker lines use the estimated jaggedness of the
+AI frontier, $\psi=1.36$; the lighter lines repeat the simulation
+with a frontier five times less jagged, $\psi=6.79$,
+and everything else unchanged. Aggregate real wages are the mean of
+the three education groups' real wages, weighted by baseline wage
+bills. The teal line is workers' share of total value added. The figure
+reports it as a percentage of the share today. The numeraire is the
+model's final expenditure bundle for the full set of industries. The
+simulation uses the central cost path in Figure~\ref{fig:ai-cost-path},
+holds the stock of AI capacity fixed, and sets the change in each
+sector's AI technology as in equation~\eqref{eq:counterfactual-shocks}.
+Our calculation uses the Epoch AI--Ipsos survey, O{*}NET, the BEA industry
+accounts, BLS employment, the 2024 American Community Survey, and
+occupation exposure ratings~\citep{epochpolling2026,onet2026,bea2026io,bls2026oews,census2024pums,emmr2024}.}%
 \end{minipage}
 \end{figure}
 
@@ -2097,26 +2074,25 @@ stronger Distributional Effects}
 \vspace{0.25em}
  %
 \begin{minipage}[c]{0.94\textwidth}%
-{\footnotesize\textit{Notes:}}{\footnotesize{} In panel A, each line
-is the annual growth rate of average real wages, the percentage change
-from the previous year. Aggregate real wages are the mean of the three
-education groups' real wages, weighted by baseline wage bills, in
-units of the model's final expenditure bundle for the full set of
-industries. The panel shows the gap between the two profiles, and
-the rule shows the five-year horizon of the main results. Panel B,
-plots a sector's change in real wages after five year against the
-sector's exposure to AI progress when workers remain in their original
-sectors. The area of each dot is proportional to the sector's value
-added, and the dotted line marks the weighted average exposure across
-sectors. Both the jagged and balanced scenarios use the cost reduction
-path in Figure \ref{fig:ai-cost-path} for $50$
+{\footnotesize\textit{Notes:}}{\footnotesize{}
+In panel A, each line is the annual growth rate of average real wages,
+the percentage change from the previous year. Aggregate real wages
+are the mean of the three education groups' real wages, weighted by
+baseline wage bills, in units of the model's final expenditure bundle
+for the full set of industries. The panel shows the gap between the
+two profiles, and the rule shows the five-year horizon of the main
+results. Panel B, plots a sector's change in real wages after five
+year against the sector's exposure to AI progress when workers remain
+in their original sectors. The area of each dot is proportional to
+the sector's value added, and the dotted line marks the weighted average
+exposure across sectors. Both the jagged and balanced scenarios use
+the cost reduction path in Figure \ref{fig:ai-cost-path} for $50$
 years, and set the change in each sector's AI technology as in equation
 \eqref{eq:counterfactual-shocks}. Our calculation uses the Epoch
 AI--Ipsos survey, O{*}NET, the BEA industry accounts, BLS employment,
 the 2024 American Community Survey, and occupation exposure ratings~\citep{epochpolling2026,onet2026,bea2026io,bls2026oews,census2024pums,emmr2024}.}%
 \end{minipage}
 \end{figure}
-
 
 \subsection{All Skill Groups Gain Irrespective of Mobility}
 
@@ -2154,15 +2130,15 @@ rather than Sectors}
 \vspace{0.25em}
  %
 \begin{minipage}[c]{0.94\textwidth}%
-{\footnotesize\textit{Notes:}}{\footnotesize{} Panel A reports five-year
-gains in the average real income of each education group. Open points
-show the equilibrium in which workers remain in their original sectors,
-and solid points show the equilibrium in which workers move across
-sectors, at the calibrated $\kappa=1.5$. Panel B reports worker
-and AI task shares, weighted by baseline value added, at baseline
-and after five years for the $18$ sectors
-with the highest AI exposure. The weights are scaled to sum to one
-within this group. When workers remain in their original sectors,
+{\footnotesize\textit{Notes:}}{\footnotesize{}
+Panel A reports five-year gains in the average real income of each
+education group. Open points show the equilibrium in which workers
+remain in their original sectors, and solid points show the equilibrium
+in which workers move across sectors, at the calibrated $\kappa=1.5$.
+Panel B reports worker and AI task shares, weighted by baseline value
+added, at baseline and after five years for the $18$
+sectors with the highest AI exposure. The weights are scaled to sum
+to one within this group. When workers remain in their original sectors,
 the effective labor each education group supplies to each sector remains
 at its baseline level. Sector assignments are therefore fixed, but
 tasks may still shift between labor and AI within a sector; wages,
@@ -2228,16 +2204,17 @@ Sectors Is Highly Elastic}
 \vspace{0.25em}
  %
 \begin{minipage}[c]{0.94\textwidth}%
-{\footnotesize\textit{Notes:}}{\footnotesize{} Five-year real wage gains
-by education group under jagged AI adoption, on the central cost path,
-with the stock of AI capacity held fixed and workers who move across
-sectors at the calibrated $\kappa=1.5$, calculated in the calibrated
-model of Section~\ref{sec:counterfactuals} with input--output linkages
-and fixed sector-specific capital; the same $\eta$ governs every
-use of a sector's output, final and intermediate. The figure reports
-the gains for five values of the elasticity of substitution across
-sector outputs $\eta$ of Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=60}{B.10}, equation~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=61}{(B206)},
-with $\eta=1$ the paper's Cobb--Douglas baseline. At $\eta\approx2.5$,
+{\footnotesize\textit{Notes:}}{\footnotesize{}
+Five-year real wage gains by education group under jagged AI adoption,
+on the central cost path, with the stock of AI capacity held fixed
+and workers who move across sectors at the calibrated $\kappa=1.5$,
+calculated in the calibrated model of Section~\ref{sec:counterfactuals}
+with input--output linkages and fixed sector-specific capital; the
+same $\eta$ governs every use of a sector's output, final and intermediate.
+The figure reports the gains for five values of the elasticity of
+substitution across sector outputs $\eta$ of Appendix~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=60}{B.10},
+equation~\href{https://ahmadlp.github.io/Lashkaripour_AI_Displacement_Online_Appendix.pdf\#page=61}{(B206)}, with $\eta=1$ the
+paper's Cobb--Douglas baseline. At $\eta\approx2.5$,
 workers with a bachelor's degree or more and workers with high school
 or less gain the same $28.9$ percent. If the
 same elasticity holds only for final demand, the two groups gain the
@@ -2247,7 +2224,6 @@ BLS employment, the 2024 American Community Survey, and occupation
 exposure ratings~\citep{epochpolling2026,onet2026,bea2026io,bls2026oews,census2024pums,emmr2024}.}%
 \end{minipage}
 \end{figure}
-
 
 \section{Conclusion}\label{sec:conclusion}
 
