@@ -46,7 +46,9 @@ keywords:
 topics: []
 pdf_url: Lashkaripour_AI_Displacement.pdf
 markdown_url: sources/ai-displacement-without-immiseration.md
-canonical_url: https://alashkar.pages.iu.edu/papers/ai-displacement-without-immiseration.html
+canonical_url: https://ahmadlp.github.io/papers/ai-displacement-without-immiseration.html
+social_image: https://ahmadlp.github.io/paper-assets/ai-displacement-without-immiseration/share-card.png
+social_image_alt: "AI's Blind Spots: comparative advantage and wage growth under jagged AGI, with a jagged AI frontier around a smooth human frontier."
 updated_at: '2026-10-22'
 sort_order: 1
 published_url: null
